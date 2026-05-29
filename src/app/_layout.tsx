@@ -1,15 +1,108 @@
-import { DarkTheme, DefaultTheme, ThemeProvider } from 'expo-router';
-import { useColorScheme } from 'react-native';
+import { Tabs } from 'expo-router';
+import { Pressable, StyleSheet, Text, View } from 'react-native';
+import type { BottomTabBarProps } from '@react-navigation/bottom-tabs';
+import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
-import { AnimatedSplashOverlay } from '@/components/animated-icon';
-import AppTabs from '@/components/app-tabs';
+import { SelectedDateProvider } from '../state/SelectedDateContext';
 
-export default function TabLayout() {
-  const colorScheme = useColorScheme();
+export default function RootLayout() {
   return (
-    <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
-      <AnimatedSplashOverlay />
-      <AppTabs />
-    </ThemeProvider>
+    <SelectedDateProvider>
+      <Tabs
+        tabBar={(props) => <TextOnlyTabBar {...props} />}
+        screenOptions={{
+          headerShown: false,
+        }}>
+        <Tabs.Screen
+          name="index"
+          options={{
+            title: '\u4e3b\u9875',
+          }}
+        />
+        <Tabs.Screen
+          name="international"
+          options={{
+            title: '\u56fd\u9645',
+          }}
+        />
+        <Tabs.Screen
+          name="mine"
+          options={{
+            title: '\u6211\u7684',
+          }}
+        />
+      </Tabs>
+    </SelectedDateProvider>
   );
 }
+
+function TextOnlyTabBar({ state, descriptors, navigation }: BottomTabBarProps) {
+  const insets = useSafeAreaInsets();
+
+  return (
+    <View style={[styles.tabBar, { height: 50 + insets.bottom, paddingBottom: insets.bottom }]}>
+      {state.routes.map((route, index) => {
+        const focused = state.index === index;
+        const options = descriptors[route.key]?.options;
+        const label =
+          options?.tabBarLabel !== undefined
+            ? options.tabBarLabel
+            : options?.title !== undefined
+              ? options.title
+              : route.name;
+
+        function onPress() {
+          const event = navigation.emit({
+            type: 'tabPress',
+            target: route.key,
+            canPreventDefault: true,
+          });
+
+          if (!focused && !event.defaultPrevented) {
+            navigation.navigate(route.name, route.params);
+          }
+        }
+
+        return (
+          <Pressable
+            key={route.key}
+            accessibilityRole="button"
+            accessibilityState={focused ? { selected: true } : {}}
+            onPress={onPress}
+            style={styles.tabButton}>
+            <Text style={[styles.tabLabel, focused && styles.activeTabLabel]}>
+              {typeof label === 'string' ? label : options?.title}
+            </Text>
+          </Pressable>
+        );
+      })}
+    </View>
+  );
+}
+
+const styles = StyleSheet.create({
+  tabBar: {
+    alignItems: 'center',
+    backgroundColor: '#fbfcfc',
+    borderTopColor: '#dde3e4',
+    borderTopWidth: 1,
+    flexDirection: 'row',
+    justifyContent: 'space-around',
+  },
+  tabButton: {
+    alignItems: 'center',
+    flex: 1,
+    height: 50,
+    justifyContent: 'center',
+  },
+  tabLabel: {
+    color: '#7b8588',
+    fontSize: 16,
+    fontWeight: '700',
+    lineHeight: 22,
+    textAlign: 'center',
+  },
+  activeTabLabel: {
+    color: '#254f55',
+  },
+});
