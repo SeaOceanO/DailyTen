@@ -6,6 +6,7 @@ import { DateSelector, getRecentDateOptions } from './DateSelector';
 import { NewsCard } from './NewsCard';
 import { getMockNews, type NewsCategory } from '../data/mockNews';
 import { useSelectedDate } from '../state/SelectedDateContext';
+import { colors } from '../theme/colors';
 
 type NewsFeedScreenProps = {
   category: NewsCategory;
@@ -14,8 +15,8 @@ type NewsFeedScreenProps = {
 };
 
 export function NewsFeedScreen({ category, title, subtitle }: NewsFeedScreenProps) {
-  const dates = useMemo(() => getRecentDateOptions(7), []);
-  const { selectedDateKey, setSelectedDateKey } = useSelectedDate();
+  const { currentDateKey, selectedDateKey, setSelectedDateKey } = useSelectedDate();
+  const dates = useMemo(() => getRecentDateOptions(7, currentDateKey), [currentDateKey]);
   const [favoriteIds, setFavoriteIds] = useState<string[]>([]);
   const newsItems = useMemo(
     () => getMockNews(category, selectedDateKey),
@@ -36,6 +37,7 @@ export function NewsFeedScreen({ category, title, subtitle }: NewsFeedScreenProp
       </View>
 
       <DateSelector
+        currentDateKey={currentDateKey}
         dates={dates}
         selectedDateKey={selectedDateKey}
         onSelectDate={setSelectedDateKey}
@@ -59,7 +61,7 @@ export function NewsFeedScreen({ category, title, subtitle }: NewsFeedScreenProp
 const styles = StyleSheet.create({
   safeArea: {
     flex: 1,
-    backgroundColor: '#f6f8f8',
+    backgroundColor: colors.appBackground,
   },
   header: {
     paddingHorizontal: 18,
@@ -67,13 +69,13 @@ const styles = StyleSheet.create({
     paddingBottom: 12,
   },
   title: {
-    color: '#162326',
+    color: colors.text,
     fontSize: 28,
     fontWeight: '700',
     letterSpacing: 0,
   },
   subtitle: {
-    color: '#687578',
+    color: colors.textSecondary,
     fontSize: 14,
     marginTop: 6,
   },
@@ -84,7 +86,7 @@ const styles = StyleSheet.create({
     paddingTop: 14,
   },
   countText: {
-    color: '#687578',
+    color: colors.textSecondary,
     fontSize: 13,
     fontWeight: '700',
   },

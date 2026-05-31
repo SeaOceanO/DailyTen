@@ -1,13 +1,16 @@
 import { Tabs } from 'expo-router';
+import { StatusBar } from 'expo-status-bar';
 import { Pressable, StyleSheet, Text, View } from 'react-native';
 import type { BottomTabBarProps } from '@react-navigation/bottom-tabs';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
 import { SelectedDateProvider } from '../state/SelectedDateContext';
+import { colors } from '../theme/colors';
 
 export default function RootLayout() {
   return (
     <SelectedDateProvider>
+      <StatusBar style="light" backgroundColor={colors.appBackground} />
       <Tabs
         tabBar={(props) => <TextOnlyTabBar {...props} />}
         screenOptions={{
@@ -83,8 +86,8 @@ function TextOnlyTabBar({ state, descriptors, navigation }: BottomTabBarProps) {
 const styles = StyleSheet.create({
   tabBar: {
     alignItems: 'center',
-    backgroundColor: '#fbfcfc',
-    borderTopColor: '#dde3e4',
+    backgroundColor: colors.surface,
+    borderTopColor: colors.border,
     borderTopWidth: 1,
     flexDirection: 'row',
     justifyContent: 'space-around',
@@ -96,13 +99,13 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   tabLabel: {
-    color: '#7b8588',
+    color: colors.textSecondary,
     fontSize: 16,
     fontWeight: '700',
     lineHeight: 22,
     textAlign: 'center',
   },
   activeTabLabel: {
-    color: '#254f55',
+    color: colors.accentStrong,
   },
 });

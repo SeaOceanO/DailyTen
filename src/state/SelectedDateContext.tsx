@@ -1,7 +1,9 @@
-import { createContext, useContext, useMemo, useState } from 'react';
+import { createContext, useCallback, useContext, useEffect, useMemo, useRef, useState } from 'react';
 import type { ReactNode } from 'react';
+import { AppState } from 'react-native';
 
 type SelectedDateContextValue = {
+  currentDateKey: string;
   selectedDateKey: string;
   setSelectedDateKey: (dateKey: string) => void;
 };
@@ -19,10 +21,53 @@ function getTodayKey() {
 }
 
 export function SelectedDateProvider({ children }: { children: ReactNode }) {
-  const [selectedDateKey, setSelectedDateKey] = useState(getTodayKey);
+  const initialDateKey = useMemo(() => getTodayKey(), []);
+  const currentDateKeyRef = useRef(initialDateKey);
+  const selectedDateKeyRef = useRef(initialDateKey);
+  const [currentDateKey, setCurrentDateKey] = useState(initialDateKey);
+  const [selectedDateKey, setSelectedDateKeyState] = useState(initialDateKey);
+
+  const setSelectedDateKey = useCallback((dateKey: string) => {
+    selectedDateKeyRef.current = dateKey;
+    setSelectedDateKeyState(dateKey);
+  }, []);
+
+  useEffect(() => {
+    function refreshCurrentDate() {
+      const nextDateKey = getTodayKey();
+      const previousDateKey = currentDateKeyRef.current;
+
+      if (nextDateKey === previousDateKey) {
+        return;
+      }
+
+      currentDateKeyRef.current = nextDateKey;
+      setCurrentDateKey(nextDateKey);
+
+      if (selectedDateKeyRef.current === previousDateKey) {
+        selectedDateKeyRef.current = nextDateKey;
+        setSelectedDateKeyState(nextDateKey);
+      }
+    }
+
+    refreshCurrentDate();
+
+    const intervalId = setInterval(refreshCurrentDate, 60000);
+    const subscription = AppState.addEventListener('change', (state) => {
+      if (state === 'active') {
+        refreshCurrentDate();
+      }
+    });
+
+    return () => {
+      clearInterval(intervalId);
+      subscription.remove();
+    };
+  }, []);
+
   const value = useMemo(
-    () => ({ selectedDateKey, setSelectedDateKey }),
-    [selectedDateKey],
+    () => ({ currentDateKey, selectedDateKey, setSelectedDateKey }),
+    [currentDateKey, selectedDateKey, setSelectedDateKey],
   );
 
   return <SelectedDateContext.Provider value={value}>{children}</SelectedDateContext.Provider>;

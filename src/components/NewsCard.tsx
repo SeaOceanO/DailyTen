@@ -1,6 +1,8 @@
 import { Pressable, StyleSheet, Text, View } from 'react-native';
 
+import { CoverVisual } from './CoverVisual';
 import type { NewsItem } from '../data/mockNews';
+import { colors } from '../theme/colors';
 
 type NewsCardProps = {
   item: NewsItem;
@@ -11,20 +13,18 @@ type NewsCardProps = {
 export function NewsCard({ item, isFavorite, onToggleFavorite }: NewsCardProps) {
   return (
     <View style={styles.card}>
-      <View style={[styles.imagePlaceholder, { backgroundColor: item.placeholderColor }]}>
-        <Text style={styles.imageText}>图片占位</Text>
-      </View>
+      <CoverVisual visual={item.coverVisual} />
 
       <View style={styles.body}>
         <View style={styles.titleRow}>
           <Text style={styles.title}>{item.title}</Text>
           <Pressable
-            accessibilityLabel={isFavorite ? '取消收藏' : '收藏'}
+            accessibilityLabel={isFavorite ? '\u53d6\u6d88\u6536\u85cf' : '\u6536\u85cf'}
             accessibilityRole="button"
             onPress={() => onToggleFavorite(item.id)}
             style={[styles.favoriteButton, isFavorite && styles.favoriteButtonActive]}>
             <Text style={[styles.favoriteIcon, isFavorite && styles.favoriteIconActive]}>
-              {isFavorite ? '★' : '☆'}
+              {isFavorite ? '\u2605' : '\u2606'}
             </Text>
           </Pressable>
         </View>
@@ -32,11 +32,14 @@ export function NewsCard({ item, isFavorite, onToggleFavorite }: NewsCardProps) 
         <Text style={styles.summary}>{item.summary}</Text>
 
         <View style={styles.reasonBox}>
-          <Text style={styles.reasonLabel}>为什么重要</Text>
+          <Text style={styles.reasonLabel}>{'\u4e3a\u4ec0\u4e48\u91cd\u8981'}</Text>
           <Text style={styles.reasonText}>{item.whyItMatters}</Text>
         </View>
 
-        <Text style={styles.source}>来源：{item.source}</Text>
+        <Text style={styles.source}>
+          {'\u6765\u6e90\uff1a'}
+          {item.source}
+        </Text>
       </View>
     </View>
   );
@@ -44,21 +47,11 @@ export function NewsCard({ item, isFavorite, onToggleFavorite }: NewsCardProps) 
 
 const styles = StyleSheet.create({
   card: {
-    backgroundColor: '#ffffff',
-    borderColor: '#e1e7e7',
+    backgroundColor: colors.surface,
+    borderColor: colors.border,
     borderRadius: 8,
     borderWidth: 1,
     overflow: 'hidden',
-  },
-  imagePlaceholder: {
-    alignItems: 'center',
-    height: 132,
-    justifyContent: 'center',
-  },
-  imageText: {
-    color: '#ffffff',
-    fontSize: 14,
-    fontWeight: '700',
   },
   body: {
     gap: 10,
@@ -70,7 +63,7 @@ const styles = StyleSheet.create({
     gap: 12,
   },
   title: {
-    color: '#172326',
+    color: colors.text,
     flex: 1,
     fontSize: 18,
     fontWeight: '700',
@@ -78,7 +71,7 @@ const styles = StyleSheet.create({
   },
   favoriteButton: {
     alignItems: 'center',
-    borderColor: '#d2dada',
+    borderColor: colors.border,
     borderRadius: 18,
     borderWidth: 1,
     height: 36,
@@ -86,40 +79,40 @@ const styles = StyleSheet.create({
     width: 36,
   },
   favoriteButtonActive: {
-    backgroundColor: '#fff4cf',
-    borderColor: '#e4c45f',
+    backgroundColor: colors.favoriteBackground,
+    borderColor: colors.favoriteBorder,
   },
   favoriteIcon: {
-    color: '#6d777a',
+    color: colors.textSecondary,
     fontSize: 18,
     lineHeight: 20,
   },
   favoriteIconActive: {
-    color: '#9a7314',
+    color: colors.favoriteText,
   },
   summary: {
-    color: '#415053',
+    color: colors.textSecondary,
     fontSize: 14,
     lineHeight: 21,
   },
   reasonBox: {
-    backgroundColor: '#f4f7f7',
+    backgroundColor: colors.surfaceRaised,
     borderRadius: 8,
     padding: 12,
   },
   reasonLabel: {
-    color: '#254f55',
+    color: colors.accentStrong,
     fontSize: 12,
     fontWeight: '700',
     marginBottom: 4,
   },
   reasonText: {
-    color: '#465457',
+    color: colors.textSecondary,
     fontSize: 13,
     lineHeight: 19,
   },
   source: {
-    color: '#6b7679',
+    color: colors.textMuted,
     fontSize: 12,
   },
 });

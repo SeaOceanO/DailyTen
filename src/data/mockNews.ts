@@ -7,9 +7,40 @@ export type NewsItem = {
   whyItMatters: string;
   source: string;
   placeholderColor: string;
+  coverVisual: NewsCoverVisual;
 };
 
-type NewsTemplate = Omit<NewsItem, 'id'>;
+export type CoverPattern =
+  | 'routes'
+  | 'care'
+  | 'charge'
+  | 'travel'
+  | 'weather'
+  | 'school'
+  | 'culture'
+  | 'health'
+  | 'business'
+  | 'green'
+  | 'energy'
+  | 'payments'
+  | 'port'
+  | 'solar'
+  | 'agri'
+  | 'aviation'
+  | 'robotics'
+  | 'education'
+  | 'visa'
+  | 'event';
+
+export type NewsCoverVisual = {
+  label: string;
+  backgroundColor: string;
+  accentColor: string;
+  secondaryColor: string;
+  pattern: CoverPattern;
+};
+
+type NewsTemplate = Omit<NewsItem, 'id' | 'coverVisual'>;
 
 const colors = [
   '#5f7f86',
@@ -22,6 +53,152 @@ const colors = [
   '#85705d',
   '#5b7d9a',
   '#74805b',
+];
+
+const homeCoverVisuals: NewsCoverVisual[] = [
+  {
+    label: '\u57ce\u5e02\u4ea4\u901a',
+    backgroundColor: '#5f7f86',
+    accentColor: '#d8e6e8',
+    secondaryColor: '#395d64',
+    pattern: 'routes',
+  },
+  {
+    label: '\u793e\u533a\u517b\u8001',
+    backgroundColor: '#748468',
+    accentColor: '#eef3df',
+    secondaryColor: '#53664c',
+    pattern: 'care',
+  },
+  {
+    label: '\u5145\u7535\u7f51\u7edc',
+    backgroundColor: '#687999',
+    accentColor: '#e4ebff',
+    secondaryColor: '#465a80',
+    pattern: 'charge',
+  },
+  {
+    label: '\u6587\u65c5\u6d88\u8d39',
+    backgroundColor: '#8a7662',
+    accentColor: '#f3e8d6',
+    secondaryColor: '#6e5948',
+    pattern: 'travel',
+  },
+  {
+    label: '\u9632\u6c5b\u5e94\u6025',
+    backgroundColor: '#747f88',
+    accentColor: '#e7eef2',
+    secondaryColor: '#53606b',
+    pattern: 'weather',
+  },
+  {
+    label: '\u6821\u56ed\u4ea4\u901a',
+    backgroundColor: '#507b72',
+    accentColor: '#dff0ec',
+    secondaryColor: '#35645c',
+    pattern: 'school',
+  },
+  {
+    label: '\u6587\u5316\u7a7a\u95f4',
+    backgroundColor: '#786e91',
+    accentColor: '#ece6f5',
+    secondaryColor: '#5f5577',
+    pattern: 'culture',
+  },
+  {
+    label: '\u5bb6\u5ead\u5065\u5eb7',
+    backgroundColor: '#85705d',
+    accentColor: '#f1e7dd',
+    secondaryColor: '#665442',
+    pattern: 'health',
+  },
+  {
+    label: '\u6570\u5b57\u5546\u6237',
+    backgroundColor: '#5b7d9a',
+    accentColor: '#e4eef6',
+    secondaryColor: '#41647f',
+    pattern: 'business',
+  },
+  {
+    label: '\u7eff\u8272\u529e\u516c',
+    backgroundColor: '#74805b',
+    accentColor: '#edf3dc',
+    secondaryColor: '#566542',
+    pattern: 'green',
+  },
+];
+
+const internationalCoverVisuals: NewsCoverVisual[] = [
+  {
+    label: '\u80fd\u6e90\u50a8\u5907',
+    backgroundColor: '#687999',
+    accentColor: '#e8eeff',
+    secondaryColor: '#455a81',
+    pattern: 'energy',
+  },
+  {
+    label: '\u6570\u5b57\u652f\u4ed8',
+    backgroundColor: '#507b72',
+    accentColor: '#dff0ec',
+    secondaryColor: '#37655e',
+    pattern: 'payments',
+  },
+  {
+    label: '\u6e2f\u53e3\u7269\u6d41',
+    backgroundColor: '#5f7f86',
+    accentColor: '#d8e6e8',
+    secondaryColor: '#3e6269',
+    pattern: 'port',
+  },
+  {
+    label: '\u592a\u9633\u80fd',
+    backgroundColor: '#748468',
+    accentColor: '#eef3df',
+    secondaryColor: '#55694b',
+    pattern: 'solar',
+  },
+  {
+    label: '\u519c\u4e1a\u6c14\u5019',
+    backgroundColor: '#8a7662',
+    accentColor: '#f3e8d6',
+    secondaryColor: '#6d5846',
+    pattern: 'agri',
+  },
+  {
+    label: '\u822a\u7a7a\u67a2\u7ebd',
+    backgroundColor: '#5b7d9a',
+    accentColor: '#e4eef6',
+    secondaryColor: '#3f627f',
+    pattern: 'aviation',
+  },
+  {
+    label: 'AI\u79d1\u6280',
+    backgroundColor: '#786e91',
+    accentColor: '#ece6f5',
+    secondaryColor: '#5f5577',
+    pattern: 'robotics',
+  },
+  {
+    label: '\u5168\u7403\u6559\u80b2',
+    backgroundColor: '#747f88',
+    accentColor: '#e7eef2',
+    secondaryColor: '#53606b',
+    pattern: 'education',
+  },
+  {
+    label: '\u7b7e\u8bc1\u65c5\u884c',
+    backgroundColor: '#85705d',
+    accentColor: '#f1e7dd',
+    secondaryColor: '#665442',
+    pattern: 'visa',
+  },
+  {
+    label: '\u56fd\u9645\u8d5b\u4e8b',
+    backgroundColor: '#74805b',
+    accentColor: '#edf3dc',
+    secondaryColor: '#566542',
+    pattern: 'event',
+  },
 ];
 
 const homeTemplates: NewsTemplate[] = [
@@ -175,9 +352,43 @@ const templatesByCategory: Record<NewsCategory, NewsTemplate[]> = {
   international: internationalTemplates,
 };
 
+const coverVisualsByCategory: Record<NewsCategory, NewsCoverVisual[]> = {
+  home: homeCoverVisuals,
+  international: internationalCoverVisuals,
+};
+
 export function getMockNews(category: NewsCategory, dateKey: string): NewsItem[] {
-  return templatesByCategory[category].map((template, index) => ({
+  const templateIndexes = getDeterministicOrder(
+    templatesByCategory[category].length,
+    getDateSeed(`${category}-${dateKey}`),
+  );
+
+  return templateIndexes.map((templateIndex, index) => {
+    const template = templatesByCategory[category][templateIndex];
+
+    return {
     ...template,
+    coverVisual: coverVisualsByCategory[category][templateIndex],
     id: `${category}-${dateKey}-${index + 1}`,
-  }));
+    };
+  });
+}
+
+function getDateSeed(value: string) {
+  return value.split('').reduce((seed, character) => {
+    return Math.imul(seed ^ character.charCodeAt(0), 16777619) >>> 0;
+  }, 2166136261);
+}
+
+function getDeterministicOrder(length: number, seed: number) {
+  const order = Array.from({ length }, (_, index) => index);
+  let state = seed || 1;
+
+  for (let index = order.length - 1; index > 0; index -= 1) {
+    state = (Math.imul(state, 1664525) + 1013904223) >>> 0;
+    const swapIndex = state % (index + 1);
+    [order[index], order[swapIndex]] = [order[swapIndex], order[index]];
+  }
+
+  return order;
 }

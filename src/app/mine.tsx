@@ -1,6 +1,8 @@
 import { ScrollView, StyleSheet, Text, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
+import { colors } from '../theme/colors';
+
 const settingItems = [
   '兴趣设置',
   '收藏',
@@ -36,7 +38,7 @@ export default function MineScreen() {
 const styles = StyleSheet.create({
   safeArea: {
     flex: 1,
-    backgroundColor: '#f6f8f8',
+    backgroundColor: colors.appBackground,
   },
   content: {
     paddingBottom: 32,
@@ -47,13 +49,13 @@ const styles = StyleSheet.create({
     marginBottom: 18,
   },
   title: {
-    color: '#162326',
+    color: colors.text,
     fontSize: 28,
     fontWeight: '700',
     letterSpacing: 0,
   },
   subtitle: {
-    color: '#687578',
+    color: colors.textSecondary,
     fontSize: 14,
     marginTop: 6,
   },
@@ -62,8 +64,8 @@ const styles = StyleSheet.create({
   },
   row: {
     alignItems: 'center',
-    backgroundColor: '#ffffff',
-    borderColor: '#e4e8e8',
+    backgroundColor: colors.surface,
+    borderColor: colors.border,
     borderRadius: 8,
     borderWidth: 1,
     flexDirection: 'row',
@@ -71,13 +73,13 @@ const styles = StyleSheet.create({
     paddingHorizontal: 16,
   },
   rowText: {
-    color: '#1f2d30',
+    color: colors.text,
     flex: 1,
     fontSize: 16,
     fontWeight: '600',
   },
   chevron: {
-    color: '#8a9497',
+    color: colors.textMuted,
     fontSize: 24,
     lineHeight: 24,
   },
