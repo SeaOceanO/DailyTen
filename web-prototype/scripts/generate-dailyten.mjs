@@ -39,13 +39,14 @@ async function main() {
 
   const apiKey = process.env.OPENAI_API_KEY;
   const model = process.env.OPENAI_MODEL;
+  const reasoningEffort = process.env.OPENAI_REASONING_EFFORT ?? 'medium';
 
   if (!apiKey || !model) {
     throw new Error('Missing OPENAI_API_KEY or OPENAI_MODEL. Set them before running daily generation.');
   }
 
   const candidates = await fetchNewsCandidates(config);
-  const edition = await generateEdition({ apiKey, model, schema, config, candidates });
+  const edition = await generateEdition({ apiKey, model, reasoningEffort, schema, config, candidates });
   validateEdition(edition);
   await fs.writeFile(outputPath, `${JSON.stringify(edition, null, 2)}\n`, 'utf8');
   console.log(`Wrote ${edition.items.length} DailyTen items to ${outputPath}.`);
@@ -85,7 +86,7 @@ async function fetchNewsCandidates(config) {
   }));
 }
 
-async function generateEdition({ apiKey, model, schema, config, candidates }) {
+async function generateEdition({ apiKey, model, reasoningEffort, schema, config, candidates }) {
   const response = await fetch('https://api.openai.com/v1/responses', {
     method: 'POST',
     headers: {
@@ -94,6 +95,9 @@ async function generateEdition({ apiKey, model, schema, config, candidates }) {
     },
     body: JSON.stringify({
       model,
+      reasoning: {
+        effort: reasoningEffort,
+      },
       instructions: [
         'You are the editor of DailyTen, a calm personal daily briefing product.',
         'Select exactly ten important real news items from the candidate list.',
