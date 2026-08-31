@@ -4,10 +4,11 @@ import { fileURLToPath } from 'node:url';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const rootDir = path.resolve(__dirname, '..');
-const schemaPath = path.join(rootDir, 'schema', 'dailyten-edition.schema.json');
+const schemaPath = path.join(rootDir, 'schema', 'openai-dailyten-edition.schema.json');
 const configPath = path.join(rootDir, 'config', 'interests.json');
 const outputPath = path.join(rootDir, 'data', 'today.json');
 const validateOnly = process.argv.includes('--validate-only');
+const testSourcesOnly = process.argv.includes('--test-sources');
 
 const allowedIcons = new Set(['oil', 'chart', 'drone', 'quake', 'ai', 'alert', 'code', 'refinery', 'ship', 'eclipse']);
 const allowedVisuals = new Set(['chain', 'bars', 'trend']);
@@ -34,6 +35,13 @@ async function main() {
     const edition = await readJson(outputPath);
     validateEdition(edition);
     console.log(`Validated ${edition.items.length} DailyTen items for ${edition.dateKey}.`);
+    return;
+  }
+
+  if (testSourcesOnly) {
+    const candidates = await fetchNewsCandidates(config);
+    console.log(`Fetched ${candidates.length} candidate articles from GDELT.`);
+    console.log(candidates.slice(0, 3).map((candidate) => `- ${candidate.title} (${candidate.domain})`).join('\n'));
     return;
   }
 
@@ -65,17 +73,23 @@ async function fetchNewsCandidates(config) {
     sort: 'hybridrel',
     timespan: '24h',
   });
-  const url = `https://api.gdeltproject.org/api/v2/doc/doc?${params}`;
+  const url = `http://api.gdeltproject.org/api/v2/doc/doc?${params}`;
 
-  const response = await fetch(url, {
+  const response = await fetchWithContext(url, {
     headers: { accept: 'application/json' },
-  });
+  }, 'GDELT candidate fetch');
 
   if (!response.ok) {
     throw new Error(`GDELT candidate fetch failed: ${response.status}`);
   }
 
-  const data = await response.json();
+  const body = await response.text();
+  const data = parseJson(body, 'GDELT candidate response');
+
+  if (!Array.isArray(data.articles) || data.articles.length === 0) {
+    throw new Error(`GDELT returned no candidate articles. Response preview: ${body.slice(0, 180)}`);
+  }
+
   return (data.articles ?? []).map((article) => ({
     title: article.title,
     url: article.url,
@@ -87,7 +101,7 @@ async function fetchNewsCandidates(config) {
 }
 
 async function generateEdition({ apiKey, model, reasoningEffort, schema, config, candidates }) {
-  const response = await fetch('https://api.openai.com/v1/responses', {
+  const response = await fetchWithContext('https://api.openai.com/v1/responses', {
     method: 'POST',
     headers: {
       authorization: `Bearer ${apiKey}`,
@@ -115,8 +129,10 @@ async function generateEdition({ apiKey, model, reasoningEffort, schema, config,
           'impacts must contain two or three short label/text pairs.',
           'next may contain zero to two watch points.',
           'visual may be null, chain, bars, or trend.',
+          'If visual.type is bars, every bar must be [label, numericPercent, hexColor].',
         ],
       }),
+      max_output_tokens: 20000,
       text: {
         format: {
           type: 'json_schema',
@@ -126,7 +142,7 @@ async function generateEdition({ apiKey, model, reasoningEffort, schema, config,
         },
       },
     }),
-  });
+  }, 'OpenAI edition generation');
 
   if (!response.ok) {
     const errorText = await response.text();
@@ -140,7 +156,24 @@ async function generateEdition({ apiKey, model, reasoningEffort, schema, config,
     throw new Error('OpenAI response did not contain output text.');
   }
 
-  return JSON.parse(text);
+  return parseJson(text, 'OpenAI edition output');
+}
+
+async function fetchWithContext(url, options, label) {
+  try {
+    return await fetch(url, options);
+  } catch (error) {
+    const reason = error.cause?.message ?? error.cause?.code ?? error.message;
+    throw new Error(`${label} failed: ${reason}`);
+  }
+}
+
+function parseJson(value, label) {
+  try {
+    return JSON.parse(value);
+  } catch {
+    throw new Error(`${label} was not valid JSON. Preview: ${String(value).slice(0, 180)}`);
+  }
 }
 
 function extractOutputText(payload) {
