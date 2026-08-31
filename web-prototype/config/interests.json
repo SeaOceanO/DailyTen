@@ -17,5 +17,14 @@
     "纯流量争议",
     "无可靠来源的传闻"
   ],
+  "categoryRules": {
+    "全球经济": "Only use for cross-border macroeconomic, global market, international trade, inflation, central bank, supply chain, or multi-country economic stories. Do not use for one city, one province, or purely local Chinese policy stories.",
+    "中国经济": "Use for China national, provincial, municipal, local growth, employment, consumption, housing, finance, or industrial policy stories.",
+    "国际局势": "Use for diplomacy, security, conflict, alliances, elections, and cross-border political risk.",
+    "科技产业": "Use for technology companies, chips, software, devices, data infrastructure, platforms, and industrial technology.",
+    "能源": "Use for oil, gas, power grids, renewables, storage, mining, and energy security.",
+    "公共安全": "Use for health, disasters, cyber risk, infrastructure safety, food safety, and everyday public risk.",
+    "AI": "Use for AI models, AI products, AI regulation, AI labor impact, and AI infrastructure when AI itself is the main story."
+  },
   "sourceQuery": "(artificial intelligence OR economy OR energy OR supply chain OR technology OR geopolitics OR public safety)"
 }

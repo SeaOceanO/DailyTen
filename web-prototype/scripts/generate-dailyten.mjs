@@ -60,6 +60,7 @@ async function main() {
 
   const candidates = await fetchNewsCandidates(config);
   const edition = await generateEdition({ apiKey, model, reasoningEffort, schema, config, candidates });
+  normalizeEdition(edition);
   validateEdition(edition);
   await fs.writeFile(outputPath, `${JSON.stringify(edition, null, 2)}\n`, 'utf8');
   console.log(`Wrote ${edition.items.length} DailyTen items to ${outputPath}.`);
@@ -200,6 +201,9 @@ async function generateEdition({ apiKey, model, reasoningEffort, schema, config,
         'Select exactly ten important real news items from the candidate list.',
         'Write in Simplified Chinese for a smart general reader.',
         'Every item must explain why it matters to a person, not only to markets, governments, or industries.',
+        'Follow categoryRules exactly. Never label a city, provincial, or local policy story as 全球经济.',
+        'Use 全球经济 only for genuinely global, multi-country, or cross-border macroeconomic stories.',
+        'Use 中国经济 for China national, provincial, municipal, or local economic policy stories.',
         'Use sourceLinks from the provided candidates. Do not invent URLs.',
         'Return only JSON that matches the provided schema.',
       ].join('\n'),
@@ -240,6 +244,29 @@ async function generateEdition({ apiKey, model, reasoningEffort, schema, config,
   }
 
   return parseJson(text, 'OpenAI edition output');
+}
+
+function normalizeEdition(edition) {
+  for (const item of edition.items ?? []) {
+    item.cat = normalizeCategory(item);
+  }
+}
+
+function normalizeCategory(item) {
+  const text = [item.cat, item.title, item.take, item.meta, item.source]
+    .filter(Boolean)
+    .join(' ');
+
+  if (item.cat === '全球经济' && isLocalChinaEconomicStory(text)) {
+    return '中国经济';
+  }
+
+  return item.cat;
+}
+
+function isLocalChinaEconomicStory(text) {
+  return /中国|重庆|上海|北京|天津|广东|深圳|广州|浙江|江苏|山东|四川|陕西|河南|湖北|湖南|福建|安徽|河北|山西|辽宁|吉林|黑龙江|江西|云南|贵州|广西|海南|甘肃|青海|宁夏|新疆|西藏|内蒙古/.test(text)
+    && /经济|增长|就业|消费|融资|投资|政策|产业|稳增长/.test(text);
 }
 
 async function fetchWithContext(url, options, label) {
