@@ -4,24 +4,30 @@
     "slug": "DailyTen",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/images/icon.png",
+    "icon": "./assets/icon.png",
     "scheme": "dailyten",
     "userInterfaceStyle": "automatic",
     "ios": {
-      "icon": "./assets/expo.icon"
+      "icon": "./assets/icon.png"
     },
     "android": {
       "adaptiveIcon": {
-        "backgroundColor": "#E6F4FE",
-        "foregroundImage": "./assets/images/android-icon-foreground.png",
-        "backgroundImage": "./assets/images/android-icon-background.png",
-        "monochromeImage": "./assets/images/android-icon-monochrome.png"
+        "backgroundColor": "#0B0F0F",
+        "foregroundImage": "./assets/adaptive-icon.png"
       },
       "predictiveBackGestureEnabled": false
     },
     "web": {
       "output": "static",
-      "favicon": "./assets/images/favicon.png"
+      "favicon": "./assets/favicon.png",
+      "name": "DailyTen",
+      "shortName": "DailyTen",
+      "lang": "zh-CN",
+      "themeColor": "#0B0F0F",
+      "backgroundColor": "#0B0F0F",
+      "display": "standalone",
+      "startUrl": "/",
+      "scope": "/"
     },
     "plugins": [
       "expo-router",

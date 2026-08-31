@@ -1,16 +1,23 @@
 import { Pressable, StyleSheet, Text, View } from 'react-native';
+import { useMemo } from 'react';
 
 import { CoverVisual } from './CoverVisual';
 import type { NewsItem } from '../data/mockNews';
-import { colors } from '../theme/colors';
+import { useLanguage } from '../i18n/LanguageContext';
+import { useTheme } from '../theme/ThemeContext';
+import type { ThemeColors } from '../theme/colors';
 
 type NewsCardProps = {
   item: NewsItem;
   isFavorite: boolean;
-  onToggleFavorite: (id: string) => void;
+  onToggleFavorite: (item: NewsItem) => void;
 };
 
 export function NewsCard({ item, isFavorite, onToggleFavorite }: NewsCardProps) {
+  const { t } = useLanguage();
+  const { colors } = useTheme();
+  const styles = useMemo(() => createStyles(colors), [colors]);
+
   return (
     <View style={styles.card}>
       <CoverVisual visual={item.coverVisual} />
@@ -19,9 +26,9 @@ export function NewsCard({ item, isFavorite, onToggleFavorite }: NewsCardProps) 
         <View style={styles.titleRow}>
           <Text style={styles.title}>{item.title}</Text>
           <Pressable
-            accessibilityLabel={isFavorite ? '\u53d6\u6d88\u6536\u85cf' : '\u6536\u85cf'}
+            accessibilityLabel={isFavorite ? t('card.unfavorite') : t('card.favorite')}
             accessibilityRole="button"
-            onPress={() => onToggleFavorite(item.id)}
+            onPress={() => onToggleFavorite(item)}
             style={[styles.favoriteButton, isFavorite && styles.favoriteButtonActive]}>
             <Text style={[styles.favoriteIcon, isFavorite && styles.favoriteIconActive]}>
               {isFavorite ? '\u2605' : '\u2606'}
@@ -32,12 +39,13 @@ export function NewsCard({ item, isFavorite, onToggleFavorite }: NewsCardProps) 
         <Text style={styles.summary}>{item.summary}</Text>
 
         <View style={styles.reasonBox}>
-          <Text style={styles.reasonLabel}>{'\u4e3a\u4ec0\u4e48\u91cd\u8981'}</Text>
+          <Text style={styles.reasonLabel}>{t('card.whyItMatters')}</Text>
           <Text style={styles.reasonText}>{item.whyItMatters}</Text>
         </View>
 
         <Text style={styles.source}>
-          {'\u6765\u6e90\uff1a'}
+          {t('card.source')}
+          {': '}
           {item.source}
         </Text>
       </View>
@@ -45,7 +53,8 @@ export function NewsCard({ item, isFavorite, onToggleFavorite }: NewsCardProps) 
   );
 }
 
-const styles = StyleSheet.create({
+function createStyles(colors: ThemeColors) {
+  return StyleSheet.create({
   card: {
     backgroundColor: colors.surface,
     borderColor: colors.border,
@@ -115,4 +124,5 @@ const styles = StyleSheet.create({
     color: colors.textMuted,
     fontSize: 12,
   },
-});
+  });
+}

@@ -1,0 +1,21 @@
+{
+  "editionName": "DailyTen",
+  "language": "zh-CN",
+  "timezone": "Asia/Shanghai",
+  "dailyRunLocalTime": "05:00",
+  "interests": [
+    "AI",
+    "全球经济",
+    "国际局势",
+    "能源",
+    "科技产业",
+    "公共安全",
+    "影响普通人生活的政策变化"
+  ],
+  "blocked": [
+    "娱乐八卦",
+    "纯流量争议",
+    "无可靠来源的传闻"
+  ],
+  "sourceQuery": "(AI OR economy OR energy OR supply chain OR technology OR geopolitics OR public safety)"
+}

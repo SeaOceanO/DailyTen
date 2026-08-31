@@ -1,0 +1,38 @@
+name: Generate DailyTen Edition
+
+on:
+  workflow_dispatch:
+  schedule:
+    # 21:00 UTC is 05:00 the next day in Asia/Shanghai.
+    - cron: '0 21 * * *'
+
+permissions:
+  contents: write
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    env:
+      OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+      OPENAI_MODEL: ${{ vars.OPENAI_MODEL }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Generate daily edition
+        run: node web-prototype/scripts/generate-dailyten.mjs
+
+      - name: Commit generated edition
+        run: |
+          git config user.name "dailyten-bot"
+          git config user.email "dailyten-bot@users.noreply.github.com"
+          git add web-prototype/data/today.json
+          if git diff --cached --quiet; then
+            echo "No DailyTen edition changes to commit."
+          else
+            git commit -m "Update DailyTen daily edition"
+            git push
+          fi

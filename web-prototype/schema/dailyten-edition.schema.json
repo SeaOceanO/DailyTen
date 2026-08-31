@@ -1,0 +1,199 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://dailyten.local/schemas/dailyten-edition.schema.json",
+  "title": "DailyTen Edition",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "dateKey",
+    "generatedAt",
+    "title",
+    "subtitle",
+    "briefLabel",
+    "doneLabel",
+    "readTimeMinutes",
+    "items"
+  ],
+  "properties": {
+    "dateKey": {
+      "type": "string",
+      "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+    },
+    "generatedAt": {
+      "type": "string",
+      "description": "ISO timestamp for when the edition was generated."
+    },
+    "title": {
+      "type": "string",
+      "minLength": 1
+    },
+    "subtitle": {
+      "type": "string",
+      "minLength": 1
+    },
+    "briefLabel": {
+      "type": "string",
+      "minLength": 1
+    },
+    "doneLabel": {
+      "type": "string",
+      "minLength": 1
+    },
+    "readTimeMinutes": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 20
+    },
+    "items": {
+      "type": "array",
+      "minItems": 10,
+      "maxItems": 10,
+      "items": {
+        "$ref": "#/$defs/newsItem"
+      }
+    }
+  },
+  "$defs": {
+    "labelTextPair": {
+      "type": "array",
+      "minItems": 2,
+      "maxItems": 2,
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "sourceLink": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["title", "url", "publisher"],
+      "properties": {
+        "title": { "type": "string", "minLength": 1 },
+        "url": { "type": "string", "minLength": 1 },
+        "publisher": { "type": "string", "minLength": 1 }
+      }
+    },
+    "visual": {
+      "oneOf": [
+        {
+          "type": "null"
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["type", "label", "nodes"],
+          "properties": {
+            "type": { "const": "chain" },
+            "label": { "type": "string", "minLength": 1 },
+            "nodes": {
+              "type": "array",
+              "minItems": 3,
+              "maxItems": 6,
+              "items": { "type": "string", "minLength": 1 }
+            }
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["type", "label", "bars", "max"],
+          "properties": {
+            "type": { "const": "bars" },
+            "label": { "type": "string", "minLength": 1 },
+            "bars": {
+              "type": "array",
+              "minItems": 2,
+              "maxItems": 5,
+              "items": {
+                "type": "array",
+                "minItems": 3,
+                "maxItems": 3,
+                "prefixItems": [
+                  { "type": "string", "minLength": 1 },
+                  { "type": "number" },
+                  { "type": "string", "pattern": "^#[0-9A-Fa-f]{6}$" }
+                ]
+              }
+            },
+            "max": { "type": "number", "exclusiveMinimum": 0 },
+            "decimal": { "type": "boolean" }
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["type", "label", "big", "sub", "direction", "up", "points"],
+          "properties": {
+            "type": { "const": "trend" },
+            "label": { "type": "string", "minLength": 1 },
+            "big": { "type": "string", "minLength": 1 },
+            "sub": { "type": "string", "minLength": 1 },
+            "direction": { "type": "string", "minLength": 1 },
+            "up": { "type": "boolean" },
+            "points": {
+              "type": "array",
+              "minItems": 3,
+              "maxItems": 12,
+              "items": { "type": "number" }
+            }
+          }
+        }
+      ]
+    },
+    "newsItem": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "cat",
+        "icon",
+        "title",
+        "take",
+        "meta",
+        "facts",
+        "visual",
+        "impacts",
+        "next",
+        "source",
+        "updated",
+        "sourceLinks"
+      ],
+      "properties": {
+        "id": { "type": "string", "minLength": 1 },
+        "cat": { "type": "string", "minLength": 1 },
+        "icon": {
+          "type": "string",
+          "enum": ["oil", "chart", "drone", "quake", "ai", "alert", "code", "refinery", "ship", "eclipse"]
+        },
+        "title": { "type": "string", "minLength": 1 },
+        "take": { "type": "string", "minLength": 1 },
+        "meta": { "type": "string", "minLength": 1 },
+        "facts": {
+          "type": "array",
+          "minItems": 3,
+          "maxItems": 3,
+          "items": { "$ref": "#/$defs/labelTextPair" }
+        },
+        "visual": { "$ref": "#/$defs/visual" },
+        "impacts": {
+          "type": "array",
+          "minItems": 2,
+          "maxItems": 3,
+          "items": { "$ref": "#/$defs/labelTextPair" }
+        },
+        "next": {
+          "type": "array",
+          "maxItems": 2,
+          "items": { "type": "string", "minLength": 1 }
+        },
+        "source": { "type": "string", "minLength": 1 },
+        "updated": { "type": "string", "minLength": 1 },
+        "sourceLinks": {
+          "type": "array",
+          "maxItems": 4,
+          "items": { "$ref": "#/$defs/sourceLink" }
+        }
+      }
+    }
+  }
+}

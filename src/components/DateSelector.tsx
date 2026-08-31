@@ -10,7 +10,10 @@ import {
   View,
 } from 'react-native';
 
-import { colors } from '../theme/colors';
+import { useLanguage } from '../i18n/LanguageContext';
+import type { Language } from '../i18n/translations';
+import { useTheme } from '../theme/ThemeContext';
+import type { ThemeColors } from '../theme/colors';
 
 export type DateOption = {
   key: string;
@@ -28,19 +31,36 @@ type CalendarCell = {
   isToday: boolean;
 };
 
-const weekdays = [
-  '\u5468\u65e5',
-  '\u5468\u4e00',
-  '\u5468\u4e8c',
-  '\u5468\u4e09',
-  '\u5468\u56db',
-  '\u5468\u4e94',
-  '\u5468\u516d',
+const weekdays: Record<Language, string[]> = {
+  zh: ['周日', '周一', '周二', '周三', '周四', '周五', '周六'],
+  en: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'],
+};
+const calendarWeekdays: Record<Language, string[]> = {
+  zh: ['日', '一', '二', '三', '四', '五', '六'],
+  en: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'],
+};
+const englishMonths = [
+  'January',
+  'February',
+  'March',
+  'April',
+  'May',
+  'June',
+  'July',
+  'August',
+  'September',
+  'October',
+  'November',
+  'December',
 ];
-const calendarWeekdays = ['\u65e5', '\u4e00', '\u4e8c', '\u4e09', '\u56db', '\u4e94', '\u516d'];
 const calendarExpandedHeight = 360;
 
-export function getRecentDateOptions(days = 7, currentDateKey?: string): DateOption[] {
+export function getRecentDateOptions(
+  days = 7,
+  currentDateKey?: string,
+  language: Language = 'zh',
+  todayLabel?: string,
+): DateOption[] {
   const today = parseDateKey(currentDateKey ?? '') ?? getToday();
 
   return Array.from({ length: days }, (_, index) => {
@@ -49,8 +69,8 @@ export function getRecentDateOptions(days = 7, currentDateKey?: string): DateOpt
     return {
       key: formatDateKey(date),
       dayNumber: String(date.getDate()),
-      label: index === 0 ? '\u4eca\u5929' : `${date.getMonth() + 1}\u6708${date.getDate()}\u65e5`,
-      weekday: weekdays[date.getDay()],
+      label: index === 0 ? todayLabel ?? getDefaultTodayLabel(language) : formatDateChipLabel(date, language),
+      weekday: weekdays[language][date.getDay()],
     };
   });
 }
@@ -67,7 +87,10 @@ type ChevronButtonProps = {
   direction: 'down' | 'up';
   onPress: () => void;
   placement: 'row' | 'panel';
+  styles: DateSelectorStyles;
 };
+
+type DateSelectorStyles = ReturnType<typeof createStyles>;
 
 export function DateSelector({
   currentDateKey,
@@ -75,15 +98,18 @@ export function DateSelector({
   selectedDateKey,
   onSelectDate,
 }: DateSelectorProps) {
+  const { language, t } = useLanguage();
+  const { colors } = useTheme();
   const [expanded, setExpanded] = useState(false);
   const calendarProgress = useRef(new Animated.Value(0)).current;
+  const styles = useMemo(() => createStyles(colors), [colors]);
   const today = useMemo(() => parseDateKey(currentDateKey) ?? getToday(), [currentDateKey]);
   const selectedDate = useMemo(() => parseDateKey(selectedDateKey) ?? today, [selectedDateKey, today]);
   const calendarCells = useMemo(
     () => getCalendarCells(selectedDate, selectedDateKey, today),
     [selectedDate, selectedDateKey, today],
   );
-  const calendarTitle = `${selectedDate.getFullYear()}\u5e74${selectedDate.getMonth() + 1}\u6708`;
+  const calendarTitle = formatCalendarTitle(selectedDate, language);
   const collapsedPanResponder = useMemo(
     () =>
       PanResponder.create({
@@ -192,10 +218,11 @@ export function DateSelector({
     <View style={styles.wrapper}>
       <View style={styles.dateRow} {...collapsedPanResponder.panHandlers}>
         <ChevronButton
-          accessibilityLabel={expanded ? '\u6536\u8d77\u65e5\u5386' : '\u5c55\u5f00\u65e5\u5386'}
+          accessibilityLabel={expanded ? t('calendar.collapse') : t('calendar.expand')}
           direction={expanded ? 'up' : 'down'}
           onPress={toggleExpanded}
           placement="row"
+          styles={styles}
         />
 
         <ScrollView
@@ -241,20 +268,21 @@ export function DateSelector({
             <View>
               <Text style={styles.calendarTitle}>{calendarTitle}</Text>
               <Text style={styles.calendarSubtitle}>
-                {'\u53ef\u67e5\u770b\u4eca\u5929\u53ca\u4ee5\u524d\u7684\u65e5\u671f'}
+                {t('calendar.subtitle')}
               </Text>
             </View>
             <ChevronButton
-              accessibilityLabel="\u6536\u8d77\u65e5\u5386"
+              accessibilityLabel={t('calendar.collapse')}
               direction="up"
               onPress={() => setExpanded(false)}
               placement="panel"
+              styles={styles}
             />
           </View>
 
           <Animated.View style={[styles.calendarContent, calendarGridStyle]}>
             <View style={styles.weekdayGrid}>
-              {calendarWeekdays.map((weekday) => (
+              {calendarWeekdays[language].map((weekday) => (
                 <Text key={weekday} style={styles.calendarWeekday}>
                   {weekday}
                 </Text>
@@ -302,7 +330,13 @@ export function DateSelector({
   );
 }
 
-function ChevronButton({ accessibilityLabel, direction, onPress, placement }: ChevronButtonProps) {
+function ChevronButton({
+  accessibilityLabel,
+  direction,
+  onPress,
+  placement,
+  styles,
+}: ChevronButtonProps) {
   return (
     <Pressable
       accessibilityLabel={accessibilityLabel}
@@ -343,6 +377,26 @@ function formatDateKey(date: Date) {
     String(date.getMonth() + 1).padStart(2, '0'),
     String(date.getDate()).padStart(2, '0'),
   ].join('-');
+}
+
+function formatDateChipLabel(date: Date, language: Language) {
+  if (language === 'en') {
+    return `${englishMonths[date.getMonth()].slice(0, 3)} ${date.getDate()}`;
+  }
+
+  return `${date.getMonth() + 1}月${date.getDate()}日`;
+}
+
+function getDefaultTodayLabel(language: Language) {
+  return language === 'en' ? 'Today' : '今天';
+}
+
+function formatCalendarTitle(date: Date, language: Language) {
+  if (language === 'en') {
+    return `${englishMonths[date.getMonth()]} ${date.getFullYear()}`;
+  }
+
+  return `${date.getFullYear()}年${date.getMonth() + 1}月`;
 }
 
 function parseDateKey(dateKey: string) {
@@ -400,7 +454,8 @@ function getCalendarCells(selectedDate: Date, selectedDateKey: string, today: Da
   });
 }
 
-const styles = StyleSheet.create({
+function createStyles(colors: ThemeColors) {
+  return StyleSheet.create({
   wrapper: {
     marginBottom: 2,
   },
@@ -493,7 +548,7 @@ const styles = StyleSheet.create({
     fontWeight: '700',
   },
   selectedDayNumber: {
-    color: '#081111',
+    color: colors.accentText,
   },
   label: {
     color: colors.textMuted,
@@ -589,9 +644,10 @@ const styles = StyleSheet.create({
     color: colors.accentStrong,
   },
   selectedCalendarDayText: {
-    color: '#081111',
+    color: colors.accentText,
   },
   disabledDayText: {
     color: colors.textMuted,
   },
-});
+  });
+}

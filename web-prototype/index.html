@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#efe7d6" />
+    <title>DailyTen · 今日简报</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="shell" aria-labelledby="page-title">
+      <header class="topbar">
+        <p class="eyebrow">DAILYTEN · 今日简报</p>
+        <h1 id="page-title">每日十条</h1>
+        <p class="subtitle">替你筛掉大部分新闻，把今天值得知道的十件事讲清楚。</p>
+      </header>
+
+      <section class="progress-card" aria-label="阅读进度">
+        <div>
+          <strong id="progress-title">今日 10 条 · 约 8 分钟</strong>
+          <span id="progress-status">先扫读，再展开真正想看的。</span>
+        </div>
+        <div class="progress-dots" id="progress-dots" aria-hidden="true"></div>
+      </section>
+
+      <section class="feed" id="feed" aria-label="今日十条新闻"></section>
+
+      <section class="done-card" id="done-card" hidden>
+        今日简报已完成
+      </section>
+    </main>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
