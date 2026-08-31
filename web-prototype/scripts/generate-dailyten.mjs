@@ -12,6 +12,11 @@ const testSourcesOnly = process.argv.includes('--test-sources');
 
 const allowedIcons = new Set(['oil', 'chart', 'drone', 'quake', 'ai', 'alert', 'code', 'refinery', 'ship', 'eclipse']);
 const allowedVisuals = new Set(['chain', 'bars', 'trend']);
+const rssFeeds = [
+  { publisher: 'BBC News', url: 'https://feeds.bbci.co.uk/news/world/rss.xml' },
+  { publisher: 'NPR', url: 'https://feeds.npr.org/1001/rss.xml' },
+  { publisher: 'The Guardian', url: 'https://www.theguardian.com/world/rss' },
+];
 
 // Future production flow:
 // 1. RSS, NewsAPI, GDELT, or curated source feeds provide candidate real news.
@@ -40,7 +45,7 @@ async function main() {
 
   if (testSourcesOnly) {
     const candidates = await fetchNewsCandidates(config);
-    console.log(`Fetched ${candidates.length} candidate articles from GDELT.`);
+    console.log(`Fetched ${candidates.length} candidate articles.`);
     console.log(candidates.slice(0, 3).map((candidate) => `- ${candidate.title} (${candidate.domain})`).join('\n'));
     return;
   }
@@ -65,6 +70,19 @@ async function readJson(filePath) {
 }
 
 async function fetchNewsCandidates(config) {
+  try {
+    const candidates = await fetchGdeltCandidates(config);
+    console.log(`Fetched ${candidates.length} candidate articles from GDELT.`);
+    return candidates;
+  } catch (error) {
+    console.warn(`${error.message}; falling back to public RSS feeds.`);
+    const candidates = await fetchRssCandidates();
+    console.log(`Fetched ${candidates.length} candidate articles from RSS feeds.`);
+    return candidates;
+  }
+}
+
+async function fetchGdeltCandidates(config) {
   const params = new URLSearchParams({
     query: config.sourceQuery,
     mode: 'ArtList',
@@ -98,6 +116,71 @@ async function fetchNewsCandidates(config) {
     seenDate: article.seendate,
     language: article.language,
   }));
+}
+
+async function fetchRssCandidates() {
+  const batches = await Promise.all(rssFeeds.map(async (feed) => {
+    const response = await fetchWithContext(feed.url, {
+      headers: { accept: 'application/rss+xml, application/xml, text/xml' },
+    }, `${feed.publisher} RSS fetch`);
+
+    if (!response.ok) {
+      throw new Error(`${feed.publisher} RSS fetch failed: ${response.status}`);
+    }
+
+    const xml = await response.text();
+    return parseRssItems(xml, feed);
+  }));
+
+  const candidates = batches.flat();
+
+  if (candidates.length < 10) {
+    throw new Error(`RSS fallback returned only ${candidates.length} candidate articles.`);
+  }
+
+  return candidates.slice(0, 75);
+}
+
+function parseRssItems(xml, feed) {
+  return [...xml.matchAll(/<item\b[^>]*>([\s\S]*?)<\/item>/gi)].map((match) => {
+    const itemXml = match[1];
+    const title = readXmlTag(itemXml, 'title');
+    const url = readXmlTag(itemXml, 'link') || readXmlTag(itemXml, 'guid');
+    const publishedAt = readXmlTag(itemXml, 'pubDate') || readXmlTag(itemXml, 'updated');
+
+    return {
+      title,
+      url,
+      sourceCountry: '',
+      domain: domainFromUrl(url) || feed.publisher,
+      seenDate: publishedAt,
+      language: 'English',
+      publisher: feed.publisher,
+    };
+  }).filter((candidate) => candidate.title && candidate.url);
+}
+
+function readXmlTag(xml, tagName) {
+  const match = xml.match(new RegExp(`<${tagName}\\b[^>]*>([\\s\\S]*?)<\\/${tagName}>`, 'i'));
+  return match ? decodeXml(match[1].replace(/<!\[CDATA\[([\s\S]*?)\]\]>/g, '$1').trim()) : '';
+}
+
+function decodeXml(value) {
+  return value
+    .replaceAll('&amp;', '&')
+    .replaceAll('&lt;', '<')
+    .replaceAll('&gt;', '>')
+    .replaceAll('&quot;', '"')
+    .replaceAll('&#39;', "'")
+    .replaceAll('&apos;', "'");
+}
+
+function domainFromUrl(value) {
+  try {
+    return new URL(value).hostname.replace(/^www\./, '');
+  } catch {
+    return '';
+  }
 }
 
 async function generateEdition({ apiKey, model, reasoningEffort, schema, config, candidates }) {
