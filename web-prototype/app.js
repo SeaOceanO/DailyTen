@@ -29,6 +29,12 @@ const channels = {
     fallbackTitle: 'AI 行业十条',
     fallbackSubtitle: '模型、Agent、算力、芯片、产品与治理，一次看清今天的 AI 产业变化。',
   },
+  favorites: {
+    label: '收藏',
+    eyebrow: 'DAILYTEN · 收藏',
+    fallbackTitle: '我的收藏',
+    fallbackSubtitle: '把想回看的每日十条和 AI 行业内容集中放在这里。',
+  },
 };
 
 const storageKeys = {
@@ -82,6 +88,7 @@ const elements = {
 
 let items = [];
 let touchStartY = 0;
+let latestDailyEdition = null;
 
 init();
 
@@ -92,6 +99,7 @@ async function init() {
 
   try {
     const latestEdition = await fetchEdition('./data/today.json');
+    latestDailyEdition = latestEdition;
     setLatestDate(latestEdition.dateKey);
     state.selectedDateKey = readSavedDateKey();
     renderDateModule();
@@ -112,6 +120,9 @@ async function loadAndRender(preloadedLatestEdition = null) {
     const edition = canUsePreloaded
       ? preloadedLatestEdition
       : await loadEdition(state.channel, state.selectedDateKey);
+    if (state.channel === 'daily' && state.selectedDateKey === todayKey) {
+      latestDailyEdition = edition;
+    }
     items = edition.items;
     hydrateEdition(edition);
     renderChannelTabs();
@@ -132,6 +143,10 @@ function setLatestDate(dateKey) {
 }
 
 async function loadEdition(channel, dateKey) {
+  if (channel === 'favorites') {
+    return buildFavoritesEdition();
+  }
+
   if (channel === 'daily' && dateKey === todayKey) {
     return fetchEdition('./data/today.json');
   }
@@ -179,6 +194,13 @@ function renderChannelTabs() {
 }
 
 function renderDateModule() {
+  if (state.channel === 'favorites') {
+    elements.dateModule.hidden = true;
+    elements.dateModule.innerHTML = '';
+    return;
+  }
+
+  elements.dateModule.hidden = false;
   const monthDate = parseDateKey(state.selectedDateKey);
   elements.dateModule.classList.toggle('is-expanded', state.calendarExpanded);
   elements.dateModule.innerHTML = `
@@ -316,6 +338,22 @@ function showErrorState(error) {
 
 function render() {
   elements.feed.innerHTML = '';
+
+  if (!items.length) {
+    const emptyTitle = state.channel === 'favorites' ? '暂无收藏' : '暂无内容';
+    const emptyCopy = state.channel === 'favorites'
+      ? '在每日十条或 AI 行业里点击收藏，内容会出现在这里。'
+      : '这一天暂时没有可展示的内容。';
+    elements.feed.innerHTML = `
+      <article class="state-card">
+        <strong>${emptyTitle}</strong>
+        <span>${emptyCopy}</span>
+      </article>
+    `;
+    updateProgress();
+    return;
+  }
+
   let lastCategory = '';
 
   items.forEach((item, index) => {
@@ -368,9 +406,15 @@ function createCard(item) {
     }
   });
 
-  details.querySelector('[data-action="favorite"]').addEventListener('click', () => {
+  details.querySelector('[data-action="favorite"]').addEventListener('click', async () => {
     toggleSet(state.favorites, item.id);
     writeSet(storageKeys.favorites, state.favorites);
+
+    if (state.channel === 'favorites') {
+      await loadAndRender();
+      return;
+    }
+
     syncCardButtons(card, item.id);
   });
 
@@ -477,6 +521,55 @@ function buildLocalEdition(channel, dateKey) {
     readTimeMinutes: 8,
     items: topics.map((topic, index) => buildTopicItem(topic, channel, dateKey, index)),
   };
+}
+
+async function buildFavoritesEdition() {
+  const allItems = await collectAvailableFavoriteItems();
+  const favoriteItems = allItems.filter((item) => state.favorites.has(item.id));
+
+  return {
+    dateKey: 'favorites',
+    generatedAt: new Date().toISOString(),
+    title: '我的收藏',
+    subtitle: favoriteItems.length
+      ? '已收藏的内容会保留在本机浏览器里，方便之后回看。'
+      : channels.favorites.fallbackSubtitle,
+    briefLabel: favoriteItems.length ? `已收藏 ${favoriteItems.length} 条` : '暂无收藏',
+    doneLabel: '收藏已读完',
+    readTimeMinutes: Math.max(1, Math.ceil(favoriteItems.length * 0.8)),
+    items: favoriteItems,
+  };
+}
+
+async function collectAvailableFavoriteItems() {
+  const editions = [];
+
+  if (!latestDailyEdition) {
+    try {
+      latestDailyEdition = await fetchEdition('./data/today.json');
+    } catch {
+      latestDailyEdition = null;
+    }
+  }
+
+  if (latestDailyEdition) {
+    editions.push(latestDailyEdition);
+  }
+
+  editions.push(
+    buildLocalEdition('daily', yesterdayKey),
+    buildLocalEdition('ai', todayKey),
+    buildLocalEdition('ai', yesterdayKey),
+  );
+
+  const seen = new Set();
+  return editions
+    .flatMap((edition) => edition.items)
+    .filter((item) => {
+      if (seen.has(item.id)) return false;
+      seen.add(item.id);
+      return true;
+    });
 }
 
 function buildTopicItem(topic, channel, dateKey, index) {
@@ -692,6 +785,15 @@ function syncCardButtons(card, id) {
 }
 
 function updateProgress() {
+  if (!items.length) {
+    Array.from(elements.dots.children).forEach((dot) => dot.classList.remove('is-read'));
+    elements.progressStatus.textContent = state.channel === 'favorites'
+      ? '在每日十条或 AI 行业里点击收藏。'
+      : '暂无可读内容。';
+    elements.doneCard.hidden = true;
+    return;
+  }
+
   const readCount = items.filter((item) => state.read.has(item.id)).length;
   Array.from(elements.dots.children).forEach((dot, index) => {
     dot.classList.toggle('is-read', index < readCount);
