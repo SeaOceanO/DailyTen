@@ -377,9 +377,9 @@ button {
 
 h1 {
   color: var(--ink);
-  font-size: clamp(34px, 8vw, 52px);
+  font-size: clamp(30px, 6vw, 42px);
   letter-spacing: 0;
-  line-height: 1.02;
+  line-height: 1.08;
   margin: 0;
 }
 
@@ -953,7 +953,7 @@ h1 {
     margin: 0;
     max-width: none;
     min-height: calc(100svh - env(safe-area-inset-top, 0px) - env(safe-area-inset-bottom, 0px));
-    padding: 28px 12px 24px;
+    padding: 20px 12px 24px;
     width: 100%;
   }
 
@@ -964,11 +964,14 @@ h1 {
   }
 
   h1 {
-    font-size: clamp(36px, 12vw, 52px);
+    font-size: clamp(30px, 9vw, 38px);
+    line-height: 1.08;
   }
 
   .subtitle {
-    font-size: 17px;
+    font-size: 15px;
+    line-height: 1.55;
+    margin-top: 8px;
   }
 
   .channel-tabs {
