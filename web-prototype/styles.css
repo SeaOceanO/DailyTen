@@ -1,23 +1,23 @@
 :root {
-  --ink: #2b2a24;
-  --secondary: #6b685c;
-  --muted: #96917f;
-  --olive: #2f4a3a;
-  --olive-mid: #4a6b55;
-  --sage: #dce8da;
-  --sage-border: #8fae95;
-  --gold: #b99a54;
-  --gold-bg: #f1e8cf;
-  --gold-border: #cdb477;
-  --gold-text: #5a4716;
+  --ink: #18201d;
+  --secondary: #56605b;
+  --muted: #8a928d;
+  --olive: #245344;
+  --olive-mid: #3f745f;
+  --sage: #eef6f1;
+  --sage-border: #bfd8cc;
+  --gold: #a98232;
+  --gold-bg: #f4ead0;
+  --gold-border: #dcc98f;
+  --gold-text: #5f4610;
   --blue: #7e9ab8;
   --red: #b45a4a;
-  --paper: #efe7d6;
-  --frame: #f4efe4;
+  --paper: #f4f6f2;
+  --frame: #fbfbf7;
   --card: #ffffff;
-  --line: #e4dcc8;
-  --track: #ede6d4;
-  --shadow: rgba(47, 74, 58, 0.1);
+  --line: #e3e7de;
+  --track: #eef1ea;
+  --shadow: rgba(25, 48, 39, 0.09);
 }
 
 * {
@@ -35,8 +35,8 @@ body {
 
 body {
   background:
-    radial-gradient(circle at top left, rgba(220, 232, 218, 0.9), transparent 30rem),
-    linear-gradient(180deg, #efe7d6 0%, #e8dcc4 100%);
+    radial-gradient(circle at top left, rgba(219, 235, 226, 0.95), transparent 28rem),
+    linear-gradient(180deg, #f4f6f2 0%, #edf1ea 100%);
   color: var(--ink);
   font-family:
     -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB",
@@ -58,67 +58,34 @@ button {
   max-width: 720px;
   overflow: hidden;
   padding: 22px 18px;
-  view-transition-name: dailyten-shell;
   will-change: opacity, transform;
 }
 
-::view-transition-old(dailyten-shell),
-::view-transition-new(dailyten-shell) {
-  animation-duration: 220ms;
-  animation-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
-}
-
-html[data-channel-direction="forward"]::view-transition-old(dailyten-shell) {
-  animation-name: channel-old-forward;
-}
-
-html[data-channel-direction="forward"]::view-transition-new(dailyten-shell) {
-  animation-name: channel-new-forward;
-}
-
-html[data-channel-direction="back"]::view-transition-old(dailyten-shell) {
-  animation-name: channel-old-back;
-}
-
-html[data-channel-direction="back"]::view-transition-new(dailyten-shell) {
-  animation-name: channel-new-back;
-}
-
 .shell.is-entering-forward {
-  animation: channel-new-forward 210ms cubic-bezier(0.22, 1, 0.36, 1) both;
+  animation: channel-new-forward 170ms cubic-bezier(0.2, 0.8, 0.2, 1) both;
 }
 
 .shell.is-entering-back {
-  animation: channel-new-back 210ms cubic-bezier(0.22, 1, 0.36, 1) both;
-}
-
-@keyframes channel-old-forward {
-  from { opacity: 1; transform: translateX(0); }
-  to { opacity: 0.54; transform: translateX(-18px); }
+  animation: channel-new-back 170ms cubic-bezier(0.2, 0.8, 0.2, 1) both;
 }
 
 @keyframes channel-new-forward {
-  from { opacity: 0.6; transform: translateX(18px); }
+  from { opacity: 0.72; transform: translateX(12px); }
   to { opacity: 1; transform: translateX(0); }
 }
 
-@keyframes channel-old-back {
-  from { opacity: 1; transform: translateX(0); }
-  to { opacity: 0.54; transform: translateX(18px); }
-}
-
 @keyframes channel-new-back {
-  from { opacity: 0.6; transform: translateX(-18px); }
+  from { opacity: 0.72; transform: translateX(-12px); }
   to { opacity: 1; transform: translateX(0); }
 }
 
 .bottom-nav {
   align-items: center;
-  background: rgba(251, 248, 239, 0.96);
-  border: 1px solid rgba(205, 180, 119, 0.55);
+  background: rgba(255, 255, 252, 0.94);
+  border: 1px solid rgba(194, 204, 194, 0.72);
   border-radius: 18px;
   bottom: 18px;
-  box-shadow: 0 14px 36px rgba(47, 74, 58, 0.14);
+  box-shadow: 0 16px 40px rgba(25, 48, 39, 0.13);
   display: grid;
   gap: 6px;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -135,12 +102,12 @@ html[data-channel-direction="back"]::view-transition-new(dailyten-shell) {
 .bottom-nav-item {
   all: unset;
   align-items: center;
-  border-radius: 12px;
+  border-radius: 13px;
   color: var(--secondary);
   cursor: pointer;
   display: grid;
   font-size: 14px;
-  font-weight: 850;
+  font-weight: 760;
   min-height: 46px;
   place-items: center;
   text-align: center;
@@ -149,7 +116,7 @@ html[data-channel-direction="back"]::view-transition-new(dailyten-shell) {
 
 .bottom-nav-item.is-active {
   background: var(--olive);
-  color: #fffaf0;
+  color: #ffffff;
 }
 
 .topbar {
@@ -200,7 +167,7 @@ html[data-channel-direction="back"]::view-transition-new(dailyten-shell) {
 .calendar-toggle {
   all: unset;
   align-items: center;
-  background: #edf0e7;
+  background: #f8faf6;
   border: 1px solid var(--line);
   border-radius: 14px;
   box-sizing: border-box;
@@ -274,7 +241,7 @@ html[data-channel-direction="back"]::view-transition-new(dailyten-shell) {
 
 .date-chip {
   all: unset;
-  background: #edf0e7;
+  background: #f8faf6;
   border: 1px solid transparent;
   border-radius: 16px;
   box-sizing: border-box;
@@ -308,7 +275,7 @@ html[data-channel-direction="back"]::view-transition-new(dailyten-shell) {
 }
 
 .date-chip.is-selected {
-  background: #2f5b56;
+  background: var(--olive);
   border-color: rgba(47, 74, 58, 0.45);
   color: #eef7eb;
 }
@@ -319,7 +286,7 @@ html[data-channel-direction="back"]::view-transition-new(dailyten-shell) {
 }
 
 .calendar-panel {
-  background: rgba(251, 248, 239, 0.82);
+  background: rgba(255, 255, 252, 0.9);
   border: 1px solid var(--line);
   border-radius: 14px;
   margin-top: 8px;
@@ -447,8 +414,8 @@ h1 {
 
 .progress-card,
 .done-card {
-  background: #ead9ac;
-  border: 1px solid #d8c48e;
+  background: var(--gold-bg);
+  border: 1px solid var(--gold-border);
   border-radius: 14px;
   color: var(--gold-text);
 }
@@ -510,10 +477,16 @@ h1 {
 .news-card {
   background: var(--card);
   border: 1px solid var(--line);
-  border-radius: 16px;
-  margin-bottom: 10px;
+  border-radius: 18px;
+  box-shadow: 0 8px 22px rgba(25, 48, 39, 0.045);
+  margin-bottom: 12px;
   overflow: hidden;
-  transition: border-color 160ms ease, box-shadow 160ms ease, opacity 160ms ease;
+  transition: border-color 160ms ease, box-shadow 160ms ease, opacity 160ms ease, transform 160ms ease;
+}
+
+.news-card:has(.card-button:hover) {
+  border-color: rgba(63, 116, 95, 0.42);
+  box-shadow: 0 12px 28px rgba(25, 48, 39, 0.08);
 }
 
 .state-card {
@@ -559,6 +532,11 @@ h1 {
   justify-content: space-between;
   padding: 16px;
   transition: border-color 160ms ease, box-shadow 160ms ease, transform 160ms ease;
+}
+
+.settings-row:hover {
+  border-color: rgba(63, 116, 95, 0.38);
+  box-shadow: 0 10px 24px rgba(25, 48, 39, 0.06);
 }
 
 .settings-row:active {
@@ -807,8 +785,19 @@ h1 {
   box-sizing: border-box;
   cursor: pointer;
   display: block;
-  padding: 14px 18px;
+  padding: 16px 18px;
   width: 100%;
+}
+
+.card-button:focus-visible,
+.settings-row:focus-visible,
+.bottom-nav-item:focus-visible,
+.date-chip:focus-visible,
+.calendar-toggle:focus-visible,
+.pill-button:focus-visible,
+.term-token:focus-visible {
+  outline: 2px solid rgba(36, 83, 68, 0.35);
+  outline-offset: 3px;
 }
 
 .summary-row,
@@ -830,8 +819,8 @@ h1 {
   color: var(--ink);
   display: block;
   font-size: 15px;
-  font-weight: 800;
-  line-height: 1.55;
+  font-weight: 780;
+  line-height: 1.5;
 }
 
 .card-take {
@@ -856,23 +845,29 @@ h1 {
 .sketch-icon {
   color: var(--olive-mid);
   flex: 0 0 auto;
-  opacity: 0.86;
+  opacity: 0.72;
 }
 
-.chevron {
-  border-color: var(--muted);
-  border-style: solid;
-  border-width: 0 2px 2px 0;
+.summary-controls {
+  align-items: flex-end;
+  display: flex;
   flex: 0 0 auto;
-  height: 9px;
-  margin-top: 18px;
-  transform: rotate(-45deg);
-  transition: transform 160ms ease;
-  width: 9px;
+  flex-direction: column;
+  gap: 10px;
 }
 
-.news-card.is-open .chevron {
-  transform: rotate(45deg);
+.summary-action {
+  align-items: center;
+  background: var(--sage);
+  border: 1px solid var(--sage-border);
+  border-radius: 999px;
+  color: var(--olive);
+  display: inline-flex;
+  font-size: 12px;
+  font-weight: 760;
+  line-height: 1;
+  min-height: 28px;
+  padding: 0 12px;
 }
 
 .details {
@@ -1083,13 +1078,14 @@ h1 {
 
 .pill-button {
   all: unset;
+  background: #fffef9;
   border: 1px solid var(--olive-mid);
-  border-radius: 10px;
+  border-radius: 999px;
   color: var(--olive);
   cursor: pointer;
   font-size: 12px;
-  font-weight: 750;
-  padding: 6px 12px;
+  font-weight: 760;
+  padding: 7px 13px;
 }
 
 .pill-button.is-active {
@@ -1168,7 +1164,7 @@ h1 {
     margin: 0;
     max-width: none;
     min-height: 100svh;
-    padding: calc(16px + env(safe-area-inset-top, 0px)) 12px 24px;
+    padding: calc(14px + env(safe-area-inset-top, 0px)) 12px 24px;
     width: 100%;
   }
 
@@ -1211,6 +1207,8 @@ h1 {
 
   .bottom-nav-item {
     flex: 1 1 0;
+    font-size: 13px;
+    min-height: 48px;
     min-width: 0;
   }
 
@@ -1236,6 +1234,20 @@ h1 {
   .summary-row,
   .takeaway-row {
     gap: 10px;
+  }
+
+  .card-button {
+    padding: 15px 16px;
+  }
+
+  .summary-controls {
+    gap: 8px;
+  }
+
+  .summary-action {
+    font-size: 11px;
+    min-height: 26px;
+    padding: 0 10px;
   }
 
   .chain-diagram {

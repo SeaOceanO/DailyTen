@@ -73,6 +73,7 @@ const i18n = {
     readPrefix: '已读',
     favoriteOn: '已收藏',
     favoriteOff: '收藏',
+    expand: '展开',
     collapse: '收起',
     muteOn: '已记录偏好',
     muteOff: '少看这类',
@@ -113,6 +114,7 @@ const i18n = {
     readPrefix: 'Read',
     favoriteOn: 'Saved',
     favoriteOff: 'Favorite',
+    expand: 'Open',
     collapse: 'Collapse',
     muteOn: 'Preference saved',
     muteOff: 'Show less',
@@ -567,17 +569,6 @@ async function transitionChannel(direction, applyChange) {
     return;
   }
 
-  if (document.startViewTransition) {
-    document.documentElement.dataset.channelDirection = direction;
-    const transition = document.startViewTransition(() => applyChange());
-    try {
-      await transition.finished;
-    } finally {
-      delete document.documentElement.dataset.channelDirection;
-    }
-    return;
-  }
-
   await applyChange();
   animateChannelEnter(direction);
 }
@@ -701,8 +692,10 @@ function createCard(item) {
         <span class="card-take">${annotateTerms(brief, item)}</span>
         <span class="card-meta">${annotateTerms(displayItem.meta, item)}</span>
       </span>
-      <span class="sketch-icon">${sketchIcon(item.icon, 42)}</span>
-      <span class="chevron" aria-hidden="true"></span>
+      <span class="summary-controls">
+        <span class="sketch-icon">${sketchIcon(item.icon, 38)}</span>
+        <span class="summary-action">${escapeHtml(t('expand'))}</span>
+      </span>
     </span>
   `;
 
