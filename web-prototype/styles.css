@@ -161,8 +161,8 @@ button {
 }
 
 .calendar-toggle.in-panel {
-  flex-basis: 44px;
-  height: 44px;
+  flex-basis: 34px;
+  height: 34px;
 }
 
 .calendar-toggle:active {
@@ -267,8 +267,8 @@ button {
 .calendar-panel {
   background: rgba(251, 248, 239, 0.82);
   border: 1px solid var(--line);
-  border-radius: 18px;
-  margin-top: 10px;
+  border-radius: 14px;
+  margin-top: 8px;
   max-height: 0;
   opacity: 0;
   overflow: hidden;
@@ -282,9 +282,9 @@ button {
 }
 
 .date-module.is-expanded .calendar-panel {
-  max-height: 430px;
+  max-height: 315px;
   opacity: 1;
-  padding: 16px;
+  padding: 10px;
   pointer-events: auto;
   transform: translateY(0);
 }
@@ -292,9 +292,9 @@ button {
 .calendar-head {
   align-items: center;
   display: flex;
-  gap: 12px;
+  gap: 8px;
   justify-content: space-between;
-  margin-bottom: 14px;
+  margin-bottom: 8px;
 }
 
 .calendar-head strong,
@@ -304,15 +304,15 @@ button {
 
 .calendar-head strong {
   color: var(--ink);
-  font-size: 22px;
+  font-size: 17px;
   line-height: 1.25;
 }
 
 .calendar-head span {
   color: var(--muted);
-  font-size: 12px;
+  font-size: 11px;
   font-weight: 750;
-  margin-top: 3px;
+  margin-top: 1px;
 }
 
 .weekday-grid,
@@ -323,18 +323,18 @@ button {
 
 .weekday-grid {
   color: var(--muted);
-  font-size: 12px;
+  font-size: 11px;
   font-weight: 850;
-  margin-bottom: 6px;
+  margin-bottom: 4px;
   text-align: center;
 }
 
 .calendar-grid {
-  gap: 6px;
+  gap: 3px;
 }
 
 .calendar-empty {
-  min-height: 38px;
+  min-height: 30px;
 }
 
 .calendar-day {
@@ -346,9 +346,9 @@ button {
   color: var(--ink);
   cursor: pointer;
   display: grid;
-  font-size: 15px;
+  font-size: 13px;
   font-weight: 850;
-  min-height: 38px;
+  min-height: 30px;
   place-items: center;
 }
 
@@ -964,8 +964,8 @@ h1 {
   }
 
   .date-module.is-expanded .calendar-panel {
-    max-height: 460px;
-    padding: 14px;
+    max-height: 330px;
+    padding: 10px;
   }
 
   .progress-card {
