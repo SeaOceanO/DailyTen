@@ -43,6 +43,43 @@
         "publisher": { "type": "string" }
       }
     },
+    "localizedNewsItem": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "cat",
+        "title",
+        "take",
+        "meta",
+        "facts",
+        "visual",
+        "impacts",
+        "next",
+        "source",
+        "updated"
+      ],
+      "properties": {
+        "cat": { "type": "string" },
+        "title": { "type": "string" },
+        "take": { "type": "string" },
+        "meta": { "type": "string" },
+        "facts": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/labelTextPair" }
+        },
+        "visual": { "$ref": "#/$defs/visual" },
+        "impacts": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/labelTextPair" }
+        },
+        "next": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "source": { "type": "string" },
+        "updated": { "type": "string" }
+      }
+    },
     "visual": {
       "anyOf": [
         {
@@ -116,6 +153,7 @@
         "next",
         "source",
         "updated",
+        "en",
         "sourceLinks"
       ],
       "properties": {
@@ -143,6 +181,7 @@
         },
         "source": { "type": "string" },
         "updated": { "type": "string" },
+        "en": { "$ref": "#/$defs/localizedNewsItem" },
         "sourceLinks": {
           "type": "array",
           "items": { "$ref": "#/$defs/sourceLink" }

@@ -508,12 +508,14 @@ function render() {
   let lastCategory = '';
 
   items.forEach((item, index) => {
-    if (item.cat !== lastCategory) {
+    const displayItem = localizedItem(item);
+
+    if (displayItem.cat !== lastCategory) {
       const label = document.createElement('p');
       label.className = 'category-label';
-      label.textContent = item.cat;
+      label.textContent = displayItem.cat;
       elements.feed.append(label);
-      lastCategory = item.cat;
+      lastCategory = displayItem.cat;
     }
 
     elements.feed.append(createCard(item, index));
@@ -556,6 +558,7 @@ function renderMine() {
 }
 
 function createCard(item) {
+  const displayItem = localizedItem(item);
   const card = document.createElement('article');
   card.className = `news-card${state.muted.has(item.id) ? ' is-muted' : ''}`;
   card.dataset.id = item.id;
@@ -567,9 +570,9 @@ function createCard(item) {
   header.innerHTML = `
     <span class="summary-row">
       <span class="summary-copy">
-        <span class="card-title">${escapeHtml(item.title)}</span>
-        <span class="card-take">${escapeHtml(item.take)}</span>
-        <span class="card-meta">${escapeHtml(item.meta)}</span>
+        <span class="card-title">${escapeHtml(displayItem.title)}</span>
+        <span class="card-take">${escapeHtml(displayItem.take)}</span>
+        <span class="card-meta">${escapeHtml(displayItem.meta)}</span>
       </span>
       <span class="sketch-icon">${sketchIcon(item.icon, 42)}</span>
       <span class="chevron" aria-hidden="true"></span>
@@ -578,7 +581,7 @@ function createCard(item) {
 
   const details = document.createElement('div');
   details.className = 'details';
-  details.innerHTML = detailsHtml(item);
+  details.innerHTML = detailsHtml(displayItem);
 
   header.addEventListener('click', () => {
     if (card.classList.contains('is-open')) {
@@ -628,7 +631,7 @@ function detailsHtml(item) {
     <div class="takeaway-row">
       <div class="takeaway-copy">
         <p class="mini-label">${escapeHtml(t('conclusion'))}</p>
-        <p class="take-text">${escapeHtml(item.take)}。</p>
+        <p class="take-text">${escapeHtml(item.take)}</p>
       </div>
       <span class="sketch-icon">${sketchIcon(item.icon, 58)}</span>
     </div>
@@ -802,8 +805,11 @@ async function collectAvailableFavoriteItems() {
 }
 
 function buildTopicItem(topic, channel, dateKey, index) {
+  const english = localTopicEnglish[topic.slug] ?? null;
+
   return {
     id: `${channel}-${dateKey}-${topic.slug}`,
+    slug: topic.slug,
     cat: topic.cat,
     icon: topic.icon,
     title: topic.title,
@@ -815,7 +821,68 @@ function buildTopicItem(topic, channel, dateKey, index) {
     next: topic.next,
     source: topic.source,
     updated: `${formatChineseDate(dateKey)} 更新`,
+    en: english ? {
+      cat: english.cat,
+      title: english.title,
+      take: english.take,
+      meta: `${english.region} | ${english.meta} | ${formatEnglishDate(dateKey)}`,
+      facts: english.facts,
+      visual: { type: 'chain', label: english.visualLabel, nodes: english.nodes },
+      impacts: english.impacts,
+      next: english.next,
+      source: english.source,
+      updated: `Updated ${formatEnglishDate(dateKey)}`,
+    } : null,
     sourceLinks: [],
+  };
+}
+
+const localTopicEnglish = {
+  'grid-storage': makeEnglishTopic('Energy', 'China storage projects are following AI power demand', 'AI data centers need steady electricity all day, not just occasional peak power. That is why storage is moving from a renewable-energy add-on to a practical backup for grids, factories, hospitals, and telecom networks.', 'China', 'storage and compute', 'Industry Watch', ['AI load', 'grid balancing', 'storage projects', 'stable power'], [['Demand', 'Data centers and industrial parks are asking for more continuous power.'], ['Cost', 'Cheaper batteries make more storage projects possible.'], ['Constraint', 'Safety rules and recycling capacity need to catch up with deployment.']], [['Reliability', 'More storage can soften power spikes and outages.'], ['Costs', 'It may reduce volatility over time, but construction costs still need to be paid for.'], ['City services', 'Hospitals, transit, and communications depend on steadier electricity.']], ['Watch whether new storage is tied directly to data centers.', 'Watch whether safety rules move as fast as construction.']),
+  'aramco-france': makeEnglishTopic('Energy', 'Saudi Aramco and French firms sign large cooperation deals', 'Large energy deals can shape future oil, gas, chemicals, and lower-carbon investments. The effects eventually show up in transport costs, industrial supply chains, and household energy bills.', 'Saudi Arabia, France', 'energy cooperation', 'TradeArabia', ['energy investment', 'cross-border deals', 'projects', 'prices'], [['Scale', 'The agreements are at a multi-billion-dollar level.'], ['Scope', 'They cover energy, chemicals, and engineering services.'], ['Signal', 'Traditional energy supply chains are still being rebuilt and funded.']], [['Travel', 'Fuel expectations affect transport prices.'], ['Goods', 'Logistics costs can move into everyday prices.'], ['Transition', 'The lower-carbon share of the deals will show how fast change really is.']], ['Look for how much of the deal is low-carbon technology.', 'Look for clear project timelines.']),
+  'city-consumption': makeEnglishTopic('China Economy', 'Chinese cities keep using vouchers to support demand', 'Local governments are trying to nudge people back into restaurants, travel, retail, appliances, and cars. The real question is whether short-term vouchers turn into steadier jobs and household cash flow.', 'China', 'consumer policy', 'Local Mock Archive', ['policy support', 'merchant signups', 'consumer spending', 'jobs'], [['Form', 'More programs are focused on services and small subsidies.'], ['Target', 'Dining, tourism, appliances, and autos remain key areas.'], ['Challenge', 'Household confidence matters more than a one-time discount.']], [['Budget', 'Some spending can get temporary relief.'], ['Jobs', 'Service orders need to recover before income improves.'], ['Small shops', 'Repeat customers matter more than one busy campaign.']], ['Watch whether subsidies continue into holidays.', 'Watch whether retail and employment data follow.']),
+  'semiconductor-export': makeEnglishTopic('Tech Industry', 'Chip supply chains keep adjusting to export controls', 'Where chips, tools, and materials can move determines whether AI services, phones, cars, and cloud products stay available and affordable. Export rules are now a daily business constraint, not a distant policy topic.', 'Global', 'chip supply chain', 'Multi-source Watch', ['controls', 'company adjustments', 'supply shifts', 'device prices'], [['Scope', 'Advanced chips and manufacturing tools remain policy targets.'], ['Companies', 'Firms are looking for backup suppliers and regional partnerships.'], ['Effect', 'Supply-chain changes create short-term uncertainty.']], [['Electronics', 'Some devices may face price or supply swings.'], ['Jobs', 'Manufacturing and maintenance work may move with investment.'], ['AI services', 'Compute supply affects model pricing.']], ['Watch whether export rules become more detailed.', 'Watch whether alternative suppliers can scale.']),
+  'public-health-alert': makeEnglishTopic('Public Safety', 'Health systems prepare more for extreme weather', 'Heat, heavy rain, and outages are not just weather stories. They quickly affect older people, children, chronic patients, outdoor workers, and anyone who depends on cooling, medicine, or transport.', 'Multiple regions', 'public health', 'Public Safety Watch', ['extreme weather', 'medical readiness', 'community alerts', 'vulnerable groups'], [['Risk', 'Extreme weather adds pressure on emergency rooms, power, and water.'], ['Response', 'Local clinics and service points are preparing alerts and temporary support.'], ['Priority', 'Older people, children, and outdoor workers need early help.']], [['Families', 'Water, medicine, and emergency contacts matter more.'], ['Travel', 'Warnings can affect commuting and school schedules.'], ['Communities', 'Neighbor support can fill gaps when services are stretched.']], ['Watch whether local warnings escalate.', 'Watch whether cooling and emergency sites open nearby.']),
+  'shipping-delay': makeEnglishTopic('International Affairs', 'Some shipping routes still face detours and insurance pressure', 'Shipping risk can make cross-border goods slower and more expensive. That matters for online purchases, imported parts, and small businesses that depend on stable overseas supply.', 'Global', 'shipping risk', 'Shipping Watch', ['route risk', 'detours', 'insurance costs', 'retail prices'], [['Routes', 'Some carriers still avoid high-risk corridors.'], ['Costs', 'Fuel, insurance, and time costs rise together.'], ['Pass-through', 'Imported parts and consumer goods feel the impact early.']], [['Shopping', 'Cross-border parcels may take longer.'], ['Prices', 'Transport costs can enter shelf prices.'], ['Small business', 'Firms using imported parts face cash-flow pressure.']], ['Watch whether carriers return to normal routes.', 'Watch whether insurance rates keep rising.']),
+  'ai-finance-risk': makeEnglishTopic('Public Safety', 'AI concentration risk in finance remains under scrutiny', 'If banks, funds, and payment systems use similar AI models, the same error can spread faster. That may affect fraud checks, loan approvals, insurance pricing, and account safety.', 'Global', 'fintech risk', 'Fintech Watch', ['shared models', 'automated decisions', 'risk amplification', 'human review'], [['Use cases', 'Fraud detection, customer service, advice, and credit are all adding AI.'], ['Risk', 'Model bias can create repeated mistakes.'], ['Oversight', 'Audits and appeal channels are becoming central.']], [['Loans', 'People need clearer reasons for approvals or rejections.'], ['Accounts', 'AI-generated scams are harder to spot.'], ['Insurance', 'Algorithmic pricing can affect fairness.']], ['Watch whether regulators require model audits.', 'Watch whether banks keep human review channels.']),
+  'education-tools': makeEnglishTopic('AI', 'Schools keep testing AI study assistants', 'AI tutors can make explanations easier to get, but they also change homework, exams, and study habits. The goal is to help students understand, not let the tool do the thinking for them.', 'Global', 'edtech', 'Edtech Watch', ['study assistant', 'classroom pilots', 'homework rules', 'assessment changes'], [['Use', 'Schools and platforms are testing personalized tutoring.'], ['Concern', 'Ghostwritten homework and wrong explanations remain problems.'], ['Direction', 'More rules may require process records and teacher involvement.']], [['Students', 'They can get explanations faster but still need to check them.'], ['Parents', 'They need to tell tutoring apart from doing the work.'], ['Teachers', 'Assessment may focus more on process and expression.']], ['Watch whether schools publish clear AI-use rules.', 'Watch whether tools show sources and correction paths.']),
+  'robotics-factory': makeEnglishTopic('Tech Industry', 'Robotics investment shifts toward flexible factories', 'Robots are moving from fixed stations toward lines that can change tasks more easily. That can alter factory jobs, delivery speed, and production costs.', 'Asia', 'smart manufacturing', 'Manufacturing Watch', ['sensors', 'robot scheduling', 'flexible lines', 'delivery speed'], [['Trend', 'Companies want machines that can switch tasks quickly.'], ['Cost', 'Cheaper hardware and better software expand pilots.'], ['Jobs', 'Maintenance, tuning, and data roles are growing.']], [['Work', 'Some repetitive jobs shrink while maintenance roles grow.'], ['Products', 'Small-batch goods may ship faster.'], ['Training', 'Frontline workers need more digital skills.']], ['Watch whether pilots become full deployments.', 'Watch whether safety rules fit human-robot work.']),
+  'privacy-rules': makeEnglishTopic('Public Safety', 'Personal data rules keep tightening across regions', 'Data rules shape recommendations, finance, health records, and cross-border work. Ordinary users mainly need to know what they agreed to, how to withdraw consent, and how to delete or correct data.', 'Global', 'data governance', 'Privacy Watch', ['data collection', 'consent records', 'cross-border transfer', 'user rights'], [['Regulation', 'More regions are defining data-use boundaries.'], ['Companies', 'Compliance and audit costs are rising.'], ['Users', 'Consent, withdrawal, and correction rights matter more.']], [['Privacy', 'Apps need clearer explanations of data use.'], ['Experience', 'Stricter rules may reduce some personalization.'], ['Work', 'Cross-border teams may need different data tools.']], ['Watch for clearer personal data dashboards.', 'Watch whether cross-border rules affect common services.']),
+  'enterprise-agents': makeEnglishTopic('Agent', 'Enterprise agents move from demos to real workflows', 'More AI products now handle reports, customer service, sales follow-up, and internal search. The hard part is no longer whether they can chat, but whether they can finish work reliably with permissions and logs.', 'Global', 'enterprise software', 'AI Industry Watch', ['task planning', 'tool use', 'permissions', 'workflow delivery'], [['Shift', 'Agent products are connecting to internal company systems.'], ['Hard part', 'Permissions, audit logs, and rollback matter as much as model quality.'], ['Opportunity', 'Repetitive knowledge work is the first area to change.']], [['Work', 'People will spend more time setting rules and checking outputs.'], ['Management', 'Teams need clear responsibility boundaries.'], ['Buying software', 'Security and integrations become key purchase factors.']], ['Watch whether pilots turn into paid long-term contracts.', 'Watch whether permission audits keep up with automation.']),
+  'ai-browser': makeEnglishTopic('AI Products', 'AI browsers and search assistants keep fighting for the main entry point', 'Browsers, search engines, and personal assistants all want to become the place where people start asking questions. Answers may arrive faster, but users become more dependent on how platforms rank, cite, and explain sources.', 'Global', 'AI search', 'Product Watch', ['web understanding', 'answer generation', 'source citations', 'user entry point'], [['Competition', 'Search, browsers, and assistants are blending together.'], ['Trust', 'Citation quality and correction paths decide whether users can rely on answers.'], ['Business model', 'Ads and subscriptions are still being tested.']], [['Information', 'Search steps may shrink, but source-checking matters more.'], ['Creators', 'Traffic distribution may keep changing.'], ['Privacy', 'Browsing context becomes sensitive data.']], ['Watch whether answers show clear citations.', 'Watch whether the default search entry point changes.']),
+  'mcp-ecosystem': makeEnglishTopic('AI Infrastructure', 'Tool protocols keep expanding around enterprise integration', 'Tool protocols such as MCP make it easier for models to call documents, databases, and business systems. The useful part is integration; the risky part is that permissions, logs, and safety boundaries become much more important.', 'Global', 'tool protocols', 'Developer Watch', ['protocol APIs', 'tool connections', 'permission audit', 'enterprise rollout'], [['Direction', 'Developers want more standardized tool connections.'], ['Benefit', 'Apps may not need one-off model integrations each time.'], ['Risk', 'Tool calls expand the damage from bad instructions or leaks.']], [['Developers', 'Integration costs may fall.'], ['Enterprises', 'Security review becomes stricter.'], ['Users', 'Automation gets stronger, but key actions still need confirmation.']], ['Watch whether major platforms support common protocols.', 'Watch whether permission revocation and logs are easy to inspect.']),
+  'ai-chip-demand': makeEnglishTopic('Chips and Compute', 'AI chip demand keeps reshuffling supply chains', 'Training and inference need chips, memory, networking, data centers, and electricity at the same time. That pressure can change cloud prices and decide which AI products are actually available.', 'Global', 'compute supply chain', 'Supply Chain Watch', ['model demand', 'chip orders', 'data centers', 'service pricing'], [['Demand', 'Inference traffic is becoming long-term compute demand.'], ['Bottleneck', 'Packaging, memory, and networking gear are also critical.'], ['Split', 'Large firms and small teams face very different compute costs.']], [['Developers', 'Compute budgets shape how quickly products can be tested.'], ['Users', 'Advanced AI features may move further into paid plans.'], ['Energy', 'Data-center electricity pressure keeps rising.']], ['Watch whether inference chips ease supply pressure.', 'Watch whether cloud providers change prices.']),
+  'open-models': makeEnglishTopic('Model Ecosystem', 'Open models keep narrowing the baseline capability gap', 'Better open models lower the cost for startups and companies that want more control. But production use still depends on deployment, security, evaluation, and licensing, not just benchmark scores.', 'Global', 'model ecosystem', 'Model Watch', ['open models', 'fine-tuning', 'enterprise evaluation', 'lower cost'], [['Progress', 'More models are good enough for code, long text, and multilingual work.'], ['Advantage', 'Private deployment and cost control are more flexible.'], ['Limit', 'Security testing and operations still require skill.']], [['Startups', 'Prototype costs fall.'], ['Enterprises', 'Sensitive data can stay in-house.'], ['Users', 'There are more product choices, but quality varies more.']], ['Watch for reliable third-party evals.', 'Watch whether commercial licenses are clear.']),
+  'ai-regulation': makeEnglishTopic('AI Governance', 'AI regulation is moving from principles to responsibility', 'Regulators are no longer only saying AI should be safe. They are asking who is responsible, how systems are audited, and how people can appeal when AI decisions affect finance, health, education, or hiring.', 'Global', 'AI regulation', 'Policy Watch', ['new rules', 'model audits', 'responsibility', 'appeals'], [['Focus', 'High-risk uses face clearer transparency and audit duties.'], ['Companies', 'Pre-launch testing and post-launch logs matter more.'], ['Users', 'People affected by AI decisions need a way to appeal.']], [['Jobs', 'Automated resume screening needs explanations.'], ['Finance', 'Credit and insurance pricing must avoid discrimination.'], ['Health', 'Doctor responsibility and AI advice boundaries must be clear.']], ['Watch whether regulators publish practical checklists.', 'Watch whether companies disclose where AI is used.']),
+  'devtools-agent': makeEnglishTopic('Developer Tools', 'Coding agents are entering team workflows', 'Coding assistants are moving beyond autocomplete into issue breakdown, tests, refactors, and code review. Teams need new quality gates so speed does not quietly create regressions.', 'Global', 'developer tools', 'Developer Watch', ['task understanding', 'code changes', 'test runs', 'review and merge'], [['Shift', 'Tools are becoming collaborators, not just solo helpers.'], ['Risk', 'Wrong edits and hidden dependencies need test coverage.'], ['Opportunity', 'Routine bug fixes and scaffolding can move faster.']], [['Developers', 'More time goes into defining tasks and reviewing results.'], ['Teams', 'They need rules for what AI can change.'], ['Products', 'Small features may ship faster.']], ['Watch whether tools can run tests and explain changes.', 'Watch how companies handle permissions and code privacy.']),
+  'ai-media': makeEnglishTopic('Content and Copyright', 'AI content platforms face more pressure on copyright and labeling', 'As generated text, images, videos, and summaries spread, users need to know what the source was, whether content was licensed, and whether humans reviewed it.', 'Global', 'content industry', 'Media Watch', ['training data', 'generation', 'licensing talks', 'source labels'], [['Dispute', 'Rights holders want more transparency about data use.'], ['Platforms', 'Labeling and detection tools are improving.'], ['Business', 'Licensing and revenue sharing are still unsettled.']], [['Readers', 'Source labels matter more.'], ['Creators', 'Licensing and income models may be rewritten.'], ['Brands', 'Misused material can create legal risk.']], ['Watch whether platforms clearly label AI content.', 'Watch whether licensing models stabilize.']),
+  'voice-agents': makeEnglishTopic('AI Products', 'Voice agents keep expanding into service and coaching', 'Voice makes AI easier to use, especially in customer service, language practice, and sales training. It also raises sharper questions about recordings, consent, identity, and when a person should take over.', 'Global', 'voice AI', 'Product Watch', ['real-time voice', 'task execution', 'service quality', 'privacy boundaries'], [['Use cases', 'Customer service, language learning, and sales training are early markets.'], ['Experience', 'Low latency and interruption handling are key.'], ['Risk', 'Recording and identity data need clearer consent.']], [['Users', 'Tasks can feel more natural, but recording notices matter.'], ['Companies', 'Service costs may fall while quality responsibility rises.'], ['Workers', 'Training may feel more like live coaching.']], ['Watch whether products offer recording deletion.', 'Watch whether complex cases can transfer to a human.']),
+  'ai-energy': makeEnglishTopic('Compute and Energy', 'AI data-center power is becoming an industry constraint', 'AI competition is not only about software. It is also about electricity, land, water, grid capacity, and storage. Those physical constraints shape where AI services can grow.', 'Global', 'data-center energy', 'Energy Watch', ['model demand', 'data centers', 'power contracts', 'community impact'], [['Demand', 'Inference services create more continuous electricity use.'], ['Constraint', 'Grid access and cooling resources affect site choices.'], ['Trend', 'More projects are tied to clean power and storage.']], [['Residents', 'Local power and water debates may increase.'], ['Companies', 'Cloud prices reflect energy costs.'], ['Environment', 'The clean-power share determines carbon pressure.']], ['Watch whether new data centers disclose power sources.', 'Watch whether local communities get a say.']),
+  'agent-memory': makeEnglishTopic('Agent', 'Agent products start emphasizing memory and task context', 'Memory makes an assistant feel more like a long-running coworker. But users and companies need to know what is saved, who can see it, and whether it can be corrected or deleted.', 'Global', 'agent memory', 'AI Industry Watch', ['preferences', 'task context', 'permissions', 'ongoing collaboration'], [['Direction', 'More products treat long-term context as a core feature.'], ['Problem', 'Memory accuracy and privacy boundaries still need proof.'], ['Adoption', 'Enterprise use requires admin controls and audits.']], [['Personal use', 'Assistants become easier to work with, but saved information needs review.'], ['Companies', 'Permission management becomes a buying requirement.'], ['Safety', 'Wrong memory can affect later decisions.']], ['Watch whether users can view and delete memory.', 'Watch whether admins can block sensitive information.']),
+  'anp-protocols': makeEnglishTopic('AI Infrastructure', 'Agent-to-agent protocol talk is heating up', 'If agents can exchange tasks, identity, and results, automation becomes more powerful. But standards, trust, authentication, and verification need to mature before that is safe at scale.', 'Global', 'agent protocols', 'Developer Watch', ['identity', 'task negotiation', 'result verification', 'cross-app work'], [['Trend', 'Developer communities are discussing agent interoperability.'], ['Value', 'Cross-tool cooperation can reduce manual copy-paste work.'], ['Risk', 'Fake identity and bad handoffs can amplify mistakes.']], [['Users', 'Cross-app tasks could feel smoother.'], ['Developers', 'Authentication and permissions become central.'], ['Enterprises', 'Automation boundaries must be traceable.']], ['Watch whether a standard gets adopted by major platforms.', 'Watch whether the protocol includes security certification.']),
+  'ai-office': makeEnglishTopic('AI Products', 'Office suites keep adding AI to documents and spreadsheets', 'AI in everyday office tools is useful when it reduces searching, cleanup, and checking, not only when it writes faster. The hard part is fitting into permissions and real workflows.', 'Global', 'office AI', 'Product Watch', ['document understanding', 'spreadsheet cleanup', 'meeting summaries', 'task follow-up'], [['Features', 'Summaries, rewriting, and data cleanup remain common entry points.'], ['Competition', 'Platforms stress integration with existing permissions.'], ['Limit', 'Complex business judgment still needs people.']], [['Office work', 'Repetitive cleanup may shrink.'], ['Managers', 'Meetings and task tracking become easier to review.'], ['Privacy', 'Companies need to know whether documents train models.']], ['Watch whether AI features are on by default.', 'Watch whether companies can opt out of training.']),
+  'robotics-ai': makeEnglishTopic('Robotics', 'Embodied AI keeps attracting factory and logistics pilots', 'Large models make robots better at understanding instructions, but stable, safe, low-cost deployment is still hard. Warehouses, inspection, and simple assembly are the first places to watch.', 'Global', 'robotics AI', 'Industry Watch', ['vision', 'motion planning', 'pilots', 'safety checks'], [['Use', 'Warehousing, inspection, and simple assembly are common pilots.'], ['Bottleneck', 'Hardware cost and safety certification limit scale.'], ['Trend', 'Better models help robots adapt to changing environments.']], [['Jobs', 'Repetitive physical work may change.'], ['Logistics', 'Warehouse efficiency may improve.'], ['Safety', 'Human-robot work needs strict standards.']], ['Watch whether pilots expand to real production lines.', 'Watch how accident responsibility is defined.']),
+  'ai-security': makeEnglishTopic('AI Security', 'Companies add AI risk to cybersecurity workflows', 'AI tools can help defenders, but they also widen the attack surface. The practical question is who called which tool, what data it touched, and whether risky actions require confirmation.', 'Global', 'AI security', 'Security Watch', ['model access', 'tool calls', 'audit logs', 'risk response'], [['Shift', 'Security teams are reviewing AI tool permissions.'], ['Risk', 'Prompt injection and data leaks remain central concerns.'], ['Controls', 'Logs, isolation, and human confirmation are becoming common.']], [['Employees', 'Customer data should not be pasted into random tools.'], ['Companies', 'Central purchasing and permission rules are needed.'], ['Users', 'Responsibility for data leaks gets more attention.']], ['Watch whether companies create AI tool allowlists.', 'Watch whether sensitive actions need second confirmation.']),
+  'ai-healthcare': makeEnglishTopic('AI Applications', 'Medical AI focuses more on responsibility after diagnosis support', 'AI can help doctors read images and organize records, but patients need to know whether a doctor reviewed the result, who is responsible for mistakes, and how medical data is protected.', 'Global', 'medical AI', 'Health Tech Watch', ['record cleanup', 'image support', 'doctor review', 'responsibility'], [['Progress', 'Hospitals keep testing diagnosis support and documentation tools.'], ['Limit', 'Clinical responsibility cannot be handed fully to a model.'], ['Requirement', 'Data compliance and explainable results matter.']], [['Patients', 'Visits may become faster.'], ['Doctors', 'Paperwork pressure may fall.'], ['Privacy', 'Medical data use must be transparent.']], ['Watch whether tools have clinical validation.', 'Watch whether hospitals disclose AI involvement.']),
+  'ai-ads': makeEnglishTopic('AI Commercialization', 'AI ads and recommendations keep changing platform revenue', 'Platforms can use AI to make and target ads faster. That helps businesses, but it also makes it harder for users to separate ordinary content from paid persuasion.', 'Global', 'platform economy', 'Business Watch', ['content generation', 'targeting', 'conversion', 'labeling'], [['Trend', 'Ad tools are becoming more automated.'], ['Benefit', 'Small merchants can create material more easily.'], ['Risk', 'Misleading content and over-personalization are harder to police.']], [['Consumers', 'Ad labels matter more.'], ['Merchants', 'Ad costs and results may split further.'], ['Platforms', 'Transparency becomes a regulatory focus.']], ['Watch whether AI ads are clearly labeled.', 'Watch whether platforms limit sensitive categories.']),
+  'ai-coding-market': makeEnglishTopic('Developer Tools', 'AI coding tools move from autocomplete to project-level work', 'Tools can write code, run tests, and fix bugs, but teams need stability, explanations, and respect for existing code more than raw generation speed.', 'Global', 'coding agents', 'Developer Watch', ['task breakdown', 'code generation', 'test validation', 'merge review'], [['Capability', 'More tools support cross-file edits.'], ['Risk', 'Hidden regressions and dependency mistakes remain common.'], ['Trend', 'Testing and code review are becoming key selling points.']], [['Developers', 'The role shifts toward architecture and review.'], ['Teams', 'They need rules for which files AI can change.'], ['Companies', 'Speed and quality control must be balanced.']], ['Watch whether tools explain each change.', 'Watch whether they run tests by default.']),
+  'ai-devices': makeEnglishTopic('Consumer AI', 'Phone and PC makers push AI into the operating system', 'When AI moves from apps into the operating system, it affects photos, search, notifications, writing, and support. It also becomes a reason companies may give users to upgrade devices.', 'Global', 'on-device AI', 'Consumer Tech Watch', ['on-device models', 'system features', 'privacy policy', 'hardware upgrades'], [['Direction', 'Makers are putting AI into default system entry points.'], ['Difference', 'On-device versus cloud processing changes privacy.'], ['Business', 'Some premium features may be tied to new hardware.']], [['Users', 'Common actions become more automated.'], ['Privacy', 'People need to know whether data leaves the device.'], ['Budget', 'AI features may become part of upgrade pressure.']], ['Watch whether older devices get new features.', 'Watch whether cloud processing can be turned off.']),
+  'ai-evals': makeEnglishTopic('Model Evaluation', 'AI evaluation shifts from leaderboards to real tasks', 'Simple benchmark scores are no longer enough. Companies care more about whether a model is stable in real workflows, how much it costs, and what kinds of mistakes it makes.', 'Global', 'AI evaluation', 'Model Watch', ['task sets', 'error categories', 'cost checks', 'production monitoring'], [['Shift', 'General scores do not prove business value.'], ['Practice', 'Companies are building their own evaluation sets.'], ['Key point', 'Failure cases are often more useful than average scores.']], [['Procurement', 'Real task trials matter more.'], ['Developers', 'Live monitoring becomes necessary.'], ['Users', 'The gap between marketing and real experience becomes easier to see.']], ['Watch whether vendors publish failure cases.', 'Watch whether companies build internal evals.']),
+};
+
+function makeEnglishTopic(cat, title, take, region, meta, source, nodes, facts, impacts, next) {
+  return {
+    cat,
+    title,
+    take,
+    region,
+    meta,
+    source,
+    nodes,
+    facts,
+    impacts,
+    next,
+    visualLabel: 'Impact chain',
   };
 }
 
@@ -1011,6 +1078,26 @@ function syncCardButtons(card, id) {
   favoriteButton.textContent = favorite ? t('favoriteOn') : t('favoriteOff');
   favoriteButton.classList.toggle('is-active', favorite);
   muteButton.textContent = muted ? t('muteOn') : t('muteOff');
+}
+
+function localizedItem(item) {
+  if (state.language !== 'en' || !item.en) {
+    return item;
+  }
+
+  return {
+    ...item,
+    cat: item.en.cat ?? item.cat,
+    title: item.en.title ?? item.title,
+    take: item.en.take ?? item.take,
+    meta: item.en.meta ?? item.meta,
+    facts: item.en.facts ?? item.facts,
+    visual: item.en.visual ?? item.visual,
+    impacts: item.en.impacts ?? item.impacts,
+    next: item.en.next ?? item.next,
+    source: item.en.source ?? item.source,
+    updated: item.en.updated ?? item.updated,
+  };
 }
 
 function updateProgress() {

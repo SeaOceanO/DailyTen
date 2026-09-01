@@ -200,6 +200,9 @@ async function generateEdition({ apiKey, model, reasoningEffort, schema, config,
         'You are the editor of DailyTen, a calm personal daily briefing product.',
         'Select exactly ten important real news items from the candidate list.',
         'Write in plain Simplified Chinese for a smart general reader who does not read policy or industry jargon every day.',
+        'For every item, also write an en object in natural English.',
+        'The English version must be plain and readable, but do not remove useful technical terms such as Agent, MCP, compute, inference, governance, data center, supply chain, or audit when they are central to the story.',
+        'Explain technical terms through context instead of deleting them.',
         'Do not sound like a government notice, corporate press release, stock analyst note, or official abstract.',
         'Use everyday explanations: first say what happened, then why it matters, then what could change for ordinary life, work, prices, tools, privacy, safety, or choices.',
         'Keep key numbers, actors, places, dates, and direct consequences; simplify wording without losing important facts.',
@@ -222,6 +225,7 @@ async function generateEdition({ apiKey, model, reasoningEffort, schema, config,
           'title should be clear and concrete, not slogan-like.',
           'take should be one readable paragraph in everyday language, while preserving the important numbers and consequences.',
           'fact labels should be simple nouns; fact text should explain the point without bureaucratic phrasing.',
+          'en must mirror the same important facts as the Chinese item, with natural English rather than literal translation.',
           'visual may be null, chain, bars, or trend.',
           'If visual.type is bars, every bar must be [label, numericPercent, hexColor].',
         ],
@@ -345,6 +349,7 @@ function validateEdition(edition) {
 
     validatePairs(item.facts, 3, 3, `${label}.facts`, errors);
     validatePairs(item.impacts, 2, 3, `${label}.impacts`, errors);
+    validateLocalizedItem(item.en, `${label}.en`, errors);
 
     if (!Array.isArray(item.next) || item.next.length > 2) {
       errors.push(`${label}.next must contain zero to two items.`);
@@ -362,6 +367,28 @@ function validateEdition(edition) {
   if (errors.length) {
     throw new Error(`DailyTen edition validation failed:\n- ${errors.join('\n- ')}`);
   }
+}
+
+function validateLocalizedItem(item, label, errors) {
+  requiredStrings(item, ['cat', 'title', 'take', 'meta', 'source', 'updated'], errors, label);
+  validatePairs(item?.facts, 3, 3, `${label}.facts`, errors);
+  validatePairs(item?.impacts, 2, 3, `${label}.impacts`, errors);
+
+  if (label.endsWith('.en') && containsCjkText(item)) {
+    errors.push(`${label} must be written in English, not Chinese.`);
+  }
+
+  if (!Array.isArray(item?.next) || item.next.length > 2) {
+    errors.push(`${label}.next must contain zero to two items.`);
+  }
+
+  if (item?.visual !== null) {
+    validateVisual(item?.visual, `${label}.visual`, errors);
+  }
+}
+
+function containsCjkText(value) {
+  return /[\u3400-\u9fff]/.test(JSON.stringify(value ?? ''));
 }
 
 function requiredStrings(object, keys, errors, label) {
