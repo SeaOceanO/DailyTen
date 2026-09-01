@@ -26,6 +26,7 @@
 
 html,
 body {
+  background: #e8dcc4;
   margin: 0;
   min-height: 100%;
 }
@@ -59,6 +60,271 @@ button {
 
 .topbar {
   margin-bottom: 18px;
+}
+
+.channel-tabs {
+  background: rgba(255, 255, 255, 0.45);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  display: grid;
+  gap: 6px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin-bottom: 14px;
+  padding: 5px;
+}
+
+.channel-tab {
+  all: unset;
+  border-radius: 10px;
+  color: var(--secondary);
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 850;
+  line-height: 1.2;
+  padding: 10px 12px;
+  text-align: center;
+  transition: background-color 160ms ease, color 160ms ease, box-shadow 160ms ease;
+}
+
+.channel-tab.is-active {
+  background: var(--olive);
+  box-shadow: 0 6px 16px rgba(47, 74, 58, 0.15);
+  color: #fffaf0;
+}
+
+.date-module {
+  margin-bottom: 14px;
+  touch-action: pan-y;
+}
+
+.date-row {
+  align-items: stretch;
+  display: flex;
+  gap: 8px;
+}
+
+.calendar-toggle {
+  all: unset;
+  align-items: center;
+  background: #edf0e7;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  box-sizing: border-box;
+  color: var(--olive);
+  cursor: pointer;
+  display: grid;
+  flex: 0 0 48px;
+  height: 58px;
+  justify-content: center;
+  place-items: center;
+  transition: background-color 160ms ease, border-color 160ms ease;
+}
+
+.calendar-toggle.in-panel {
+  flex-basis: 44px;
+  height: 44px;
+}
+
+.calendar-toggle:active {
+  background: var(--sage);
+  border-color: var(--sage-border);
+}
+
+.chevron-icon {
+  display: block;
+  height: 16px;
+  position: relative;
+  width: 20px;
+}
+
+.chevron-icon span {
+  background: currentColor;
+  border-radius: 999px;
+  height: 2px;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform-origin: center;
+  width: 11px;
+}
+
+.chevron-icon.is-down span:first-child {
+  transform: translate(-8px, -50%) rotate(42deg);
+}
+
+.chevron-icon.is-down span:last-child {
+  transform: translate(-2px, -50%) rotate(-42deg);
+}
+
+.chevron-icon.is-up span:first-child {
+  transform: translate(-8px, -50%) rotate(-42deg);
+}
+
+.chevron-icon.is-up span:last-child {
+  transform: translate(-2px, -50%) rotate(42deg);
+}
+
+.date-strip {
+  display: flex;
+  flex: 1;
+  gap: 8px;
+  min-width: 0;
+  overflow-x: auto;
+  padding-bottom: 3px;
+  scrollbar-width: none;
+}
+
+.date-strip::-webkit-scrollbar {
+  display: none;
+}
+
+.date-chip {
+  all: unset;
+  background: #edf0e7;
+  border: 1px solid transparent;
+  border-radius: 16px;
+  box-sizing: border-box;
+  color: var(--secondary);
+  cursor: pointer;
+  display: grid;
+  flex: 0 0 72px;
+  min-height: 58px;
+  padding: 7px 8px 8px;
+  place-items: center;
+  text-align: center;
+  transition: background-color 160ms ease, color 160ms ease, border-color 160ms ease;
+}
+
+.date-chip span {
+  font-size: 11px;
+  font-weight: 850;
+}
+
+.date-chip strong {
+  color: var(--ink);
+  font-size: 24px;
+  line-height: 1;
+}
+
+.date-chip em {
+  color: var(--muted);
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 750;
+}
+
+.date-chip.is-selected {
+  background: #2f5b56;
+  border-color: rgba(47, 74, 58, 0.45);
+  color: #eef7eb;
+}
+
+.date-chip.is-selected strong,
+.date-chip.is-selected em {
+  color: #eef7eb;
+}
+
+.calendar-panel {
+  background: rgba(251, 248, 239, 0.82);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  margin-top: 10px;
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  pointer-events: none;
+  transform: translateY(-8px);
+  transition:
+    max-height 245ms cubic-bezier(0.22, 1, 0.36, 1),
+    opacity 220ms ease,
+    transform 245ms cubic-bezier(0.22, 1, 0.36, 1),
+    padding 245ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.date-module.is-expanded .calendar-panel {
+  max-height: 430px;
+  opacity: 1;
+  padding: 16px;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+.calendar-head {
+  align-items: center;
+  display: flex;
+  gap: 12px;
+  justify-content: space-between;
+  margin-bottom: 14px;
+}
+
+.calendar-head strong,
+.calendar-head span {
+  display: block;
+}
+
+.calendar-head strong {
+  color: var(--ink);
+  font-size: 22px;
+  line-height: 1.25;
+}
+
+.calendar-head span {
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 750;
+  margin-top: 3px;
+}
+
+.weekday-grid,
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+}
+
+.weekday-grid {
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 850;
+  margin-bottom: 6px;
+  text-align: center;
+}
+
+.calendar-grid {
+  gap: 6px;
+}
+
+.calendar-empty {
+  min-height: 38px;
+}
+
+.calendar-day {
+  all: unset;
+  align-items: center;
+  border: 1px solid transparent;
+  border-radius: 12px;
+  box-sizing: border-box;
+  color: var(--ink);
+  cursor: pointer;
+  display: grid;
+  font-size: 15px;
+  font-weight: 850;
+  min-height: 38px;
+  place-items: center;
+}
+
+.calendar-day.is-today:not(.is-selected) {
+  border-color: var(--sage-border);
+  color: var(--olive);
+}
+
+.calendar-day.is-selected {
+  background: #2f5b56;
+  color: #eef7eb;
+}
+
+.calendar-day.is-disabled {
+  color: rgba(107, 104, 92, 0.35);
+  cursor: default;
 }
 
 .eyebrow {
@@ -449,13 +715,64 @@ h1 {
 }
 
 @media (max-width: 520px) {
+  html,
   body {
-    padding: 12px 8px;
+    background: #e8dcc4;
+  }
+
+  body {
+    background:
+      radial-gradient(circle at top left, rgba(220, 232, 218, 0.9), transparent 22rem),
+      linear-gradient(180deg, #e8dcc4 0%, #efe7d6 42%, #e8dcc4 100%);
+    min-height: 100svh;
+    padding: env(safe-area-inset-top, 0px) 0 env(safe-area-inset-bottom, 0px);
+  }
+
+  @supports (min-height: 100dvh) {
+    body {
+      min-height: 100dvh;
+    }
   }
 
   .shell {
-    border-radius: 18px;
-    padding: 18px 12px;
+    background: rgba(244, 239, 228, 0.92);
+    border-left: 0;
+    border-radius: 0;
+    border-right: 0;
+    margin: 0;
+    max-width: none;
+    min-height: calc(100svh - env(safe-area-inset-top, 0px) - env(safe-area-inset-bottom, 0px));
+    padding: 28px 12px 30px;
+    width: 100%;
+  }
+
+  @supports (min-height: 100dvh) {
+    .shell {
+      min-height: calc(100dvh - env(safe-area-inset-top, 0px) - env(safe-area-inset-bottom, 0px));
+    }
+  }
+
+  h1 {
+    font-size: clamp(36px, 12vw, 52px);
+  }
+
+  .subtitle {
+    font-size: 17px;
+  }
+
+  .channel-tabs {
+    position: sticky;
+    top: 0;
+    z-index: 2;
+  }
+
+  .date-chip {
+    flex-basis: 68px;
+  }
+
+  .date-module.is-expanded .calendar-panel {
+    max-height: 460px;
+    padding: 14px;
   }
 
   .progress-card {
