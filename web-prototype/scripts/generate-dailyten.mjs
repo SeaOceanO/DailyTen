@@ -201,6 +201,8 @@ async function generateEdition({ apiKey, model, reasoningEffort, schema, config,
         'Select exactly ten important real news items from the candidate list.',
         'Write in plain Simplified Chinese for a smart general reader who does not read policy or industry jargon every day.',
         'For every item, also write an en object in natural English.',
+        'Each item must have a brief field: one plain, compact sentence for the collapsed card.',
+        'brief is for scanning; take is for the expanded explanation. Do not put the whole explanation into brief.',
         'The English version must be plain and readable, but do not remove useful technical terms such as Agent, MCP, compute, inference, governance, data center, supply chain, or audit when they are central to the story.',
         'Explain technical terms through context instead of deleting them.',
         'Do not sound like a government notice, corporate press release, stock analyst note, or official abstract.',
@@ -223,6 +225,7 @@ async function generateEdition({ apiKey, model, reasoningEffort, schema, config,
           'impacts must contain two or three short label/text pairs.',
           'next may contain zero to two watch points.',
           'title should be clear and concrete, not slogan-like.',
+          'brief should be one everyday sentence that explains why a normal reader should care.',
           'take should be one readable paragraph in everyday language, while preserving the important numbers and consequences.',
           'fact labels should be simple nouns; fact text should explain the point without bureaucratic phrasing.',
           'en must mirror the same important facts as the Chinese item, with natural English rather than literal translation.',
@@ -336,7 +339,7 @@ function validateEdition(edition) {
   const ids = new Set();
   for (const [index, item] of (edition.items ?? []).entries()) {
     const label = `items[${index}]`;
-    requiredStrings(item, ['id', 'cat', 'icon', 'title', 'take', 'meta', 'source', 'updated'], errors, label);
+    requiredStrings(item, ['id', 'cat', 'icon', 'title', 'brief', 'take', 'meta', 'source', 'updated'], errors, label);
 
     if (ids.has(item.id)) {
       errors.push(`${label}.id is duplicated.`);
@@ -370,7 +373,7 @@ function validateEdition(edition) {
 }
 
 function validateLocalizedItem(item, label, errors) {
-  requiredStrings(item, ['cat', 'title', 'take', 'meta', 'source', 'updated'], errors, label);
+  requiredStrings(item, ['cat', 'title', 'brief', 'take', 'meta', 'source', 'updated'], errors, label);
   validatePairs(item?.facts, 3, 3, `${label}.facts`, errors);
   validatePairs(item?.impacts, 2, 3, `${label}.impacts`, errors);
 

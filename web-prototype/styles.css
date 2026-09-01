@@ -26,9 +26,10 @@
 
 html,
 body {
-  background: #e8dcc4;
+  background: var(--frame);
   margin: 0;
   min-height: 100%;
+  overflow-x: hidden;
 }
 
 body {
@@ -153,16 +154,16 @@ button {
   color: var(--olive);
   cursor: pointer;
   display: grid;
-  flex: 0 0 48px;
-  height: 58px;
+  flex: 0 0 40px;
+  height: 46px;
   justify-content: center;
   place-items: center;
   transition: background-color 160ms ease, border-color 160ms ease;
 }
 
 .calendar-toggle.in-panel {
-  flex-basis: 34px;
-  height: 34px;
+  flex-basis: 30px;
+  height: 30px;
 }
 
 .calendar-toggle:active {
@@ -227,28 +228,28 @@ button {
   color: var(--secondary);
   cursor: pointer;
   display: grid;
-  flex: 0 0 72px;
-  min-height: 58px;
-  padding: 7px 8px 8px;
+  flex: 0 0 56px;
+  min-height: 46px;
+  padding: 5px 6px 6px;
   place-items: center;
   text-align: center;
   transition: background-color 160ms ease, color 160ms ease, border-color 160ms ease;
 }
 
 .date-chip span {
-  font-size: 11px;
+  font-size: 10px;
   font-weight: 850;
 }
 
 .date-chip strong {
   color: var(--ink);
-  font-size: 24px;
+  font-size: 18px;
   line-height: 1;
 }
 
 .date-chip em {
   color: var(--muted);
-  font-size: 10px;
+  font-size: 9px;
   font-style: normal;
   font-weight: 750;
 }
@@ -282,9 +283,9 @@ button {
 }
 
 .date-module.is-expanded .calendar-panel {
-  max-height: 315px;
+  max-height: 224px;
   opacity: 1;
-  padding: 10px;
+  padding: 8px;
   pointer-events: auto;
   transform: translateY(0);
 }
@@ -294,7 +295,7 @@ button {
   display: flex;
   gap: 8px;
   justify-content: space-between;
-  margin-bottom: 8px;
+  margin-bottom: 6px;
 }
 
 .calendar-head strong,
@@ -304,13 +305,13 @@ button {
 
 .calendar-head strong {
   color: var(--ink);
-  font-size: 17px;
+  font-size: 14px;
   line-height: 1.25;
 }
 
 .calendar-head span {
   color: var(--muted);
-  font-size: 11px;
+  font-size: 10px;
   font-weight: 750;
   margin-top: 1px;
 }
@@ -323,32 +324,32 @@ button {
 
 .weekday-grid {
   color: var(--muted);
-  font-size: 11px;
+  font-size: 10px;
   font-weight: 850;
-  margin-bottom: 4px;
+  margin-bottom: 3px;
   text-align: center;
 }
 
 .calendar-grid {
-  gap: 3px;
+  gap: 2px;
 }
 
 .calendar-empty {
-  min-height: 30px;
+  min-height: 21px;
 }
 
 .calendar-day {
   all: unset;
   align-items: center;
   border: 1px solid transparent;
-  border-radius: 12px;
+  border-radius: 9px;
   box-sizing: border-box;
   color: var(--ink);
   cursor: pointer;
   display: grid;
-  font-size: 13px;
+  font-size: 11px;
   font-weight: 850;
-  min-height: 30px;
+  min-height: 21px;
   place-items: center;
 }
 
@@ -683,6 +684,10 @@ h1 {
   margin-top: 5px;
 }
 
+.news-card.is-open .card-take {
+  color: var(--muted);
+}
+
 .card-meta {
   color: var(--muted);
   display: block;
@@ -928,15 +933,13 @@ h1 {
 @media (max-width: 520px) {
   html,
   body {
-    background: #e8dcc4;
+    background: var(--frame);
   }
 
   body {
-    background:
-      radial-gradient(circle at top left, rgba(220, 232, 218, 0.9), transparent 22rem),
-      linear-gradient(180deg, #e8dcc4 0%, #efe7d6 42%, #e8dcc4 100%);
+    background: var(--frame);
     min-height: 100svh;
-    padding: env(safe-area-inset-top, 0px) 0 calc(88px + env(safe-area-inset-bottom, 0px));
+    padding: 0 0 82px;
   }
 
   @supports (min-height: 100dvh) {
@@ -946,32 +949,32 @@ h1 {
   }
 
   .shell {
-    background: rgba(244, 239, 228, 0.92);
+    background: var(--frame);
     border-left: 0;
     border-radius: 0;
     border-right: 0;
     margin: 0;
     max-width: none;
-    min-height: calc(100svh - env(safe-area-inset-top, 0px) - env(safe-area-inset-bottom, 0px));
-    padding: 20px 12px 24px;
+    min-height: 100svh;
+    padding: calc(16px + env(safe-area-inset-top, 0px)) 12px 24px;
     width: 100%;
   }
 
   @supports (min-height: 100dvh) {
     .shell {
-      min-height: calc(100dvh - env(safe-area-inset-top, 0px) - env(safe-area-inset-bottom, 0px));
+      min-height: 100dvh;
     }
   }
 
   h1 {
-    font-size: clamp(30px, 9vw, 38px);
+    font-size: clamp(24px, 6.6vw, 30px);
     line-height: 1.08;
   }
 
   .subtitle {
-    font-size: 15px;
-    line-height: 1.55;
-    margin-top: 8px;
+    font-size: 14px;
+    line-height: 1.5;
+    margin-top: 7px;
   }
 
   .channel-tabs {
@@ -982,17 +985,28 @@ h1 {
     border-bottom: 0;
     border-radius: 18px 18px 0 0;
     bottom: 0;
+    box-sizing: border-box;
+    display: flex;
+    left: 0;
+    margin: 0;
     max-width: none;
+    right: 0;
+    transform: none;
     width: 100%;
   }
 
+  .bottom-nav-item {
+    flex: 1 1 0;
+    min-width: 0;
+  }
+
   .date-chip {
-    flex-basis: 68px;
+    flex-basis: 54px;
   }
 
   .date-module.is-expanded .calendar-panel {
-    max-height: 330px;
-    padding: 10px;
+    max-height: 224px;
+    padding: 8px;
   }
 
   .progress-card {

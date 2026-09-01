@@ -49,6 +49,7 @@
       "required": [
         "cat",
         "title",
+        "brief",
         "take",
         "meta",
         "facts",
@@ -61,6 +62,7 @@
       "properties": {
         "cat": { "type": "string" },
         "title": { "type": "string" },
+        "brief": { "type": "string" },
         "take": { "type": "string" },
         "meta": { "type": "string" },
         "facts": {
@@ -145,6 +147,7 @@
         "cat",
         "icon",
         "title",
+        "brief",
         "take",
         "meta",
         "facts",
@@ -164,6 +167,7 @@
           "enum": ["oil", "chart", "drone", "quake", "ai", "alert", "code", "refinery", "ship", "eclipse"]
         },
         "title": { "type": "string" },
+        "brief": { "type": "string" },
         "take": { "type": "string" },
         "meta": { "type": "string" },
         "facts": {

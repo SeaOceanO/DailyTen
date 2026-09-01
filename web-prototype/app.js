@@ -44,6 +44,7 @@ const channels = {
 };
 
 const bottomTabs = ['daily', 'ai', 'mine'];
+const swipeChannels = ['daily', 'ai', 'mine'];
 
 const i18n = {
   zh: {
@@ -177,10 +178,13 @@ const elements = {
   languageOptions: document.querySelector('#language-options'),
   languageModalTitle: document.querySelector('#language-modal-title'),
   languageClose: document.querySelector('[data-language-close]'),
+  shell: document.querySelector('.shell'),
 };
 
 let items = [];
 let touchStartY = 0;
+let navTouchStartX = 0;
+let navTouchStartY = 0;
 let latestDailyEdition = null;
 
 init();
@@ -190,6 +194,7 @@ async function init() {
   renderLanguageModal();
   wireLanguageModal();
   wireDateGestures();
+  wireNavigationGestures();
   showLoadingState('正在读取这一天的十条...');
 
   try {
@@ -206,7 +211,9 @@ async function init() {
 }
 
 async function loadAndRender(preloadedLatestEdition = null) {
-  showLoadingState('正在读取这一天的十条...');
+  if (!items.length && state.channel !== 'mine' && state.channel !== 'favorites') {
+    showLoadingState('正在读取这一天的十条...');
+  }
 
   try {
     const canUsePreloaded = preloadedLatestEdition
@@ -247,7 +254,9 @@ async function loadEdition(channel, dateKey) {
   }
 
   if (channel === 'daily' && dateKey === todayKey) {
-    return fetchEdition('./data/today.json');
+    if (latestDailyEdition) return latestDailyEdition;
+    latestDailyEdition = await fetchEdition('./data/today.json');
+    return latestDailyEdition;
   }
 
   return buildLocalEdition(channel, dateKey);
@@ -292,12 +301,17 @@ function renderChannelTabs() {
   elements.bottomNav.querySelectorAll('[data-channel]').forEach((button) => {
     button.addEventListener('click', async () => {
       const nextChannel = button.dataset.channel;
-      if (state.channel === nextChannel) return;
-      state.channel = nextChannel;
-      localStorage.setItem(storageKeys.channel, state.channel);
-      await loadAndRender();
+      await setActiveChannel(nextChannel);
     });
   });
+}
+
+async function setActiveChannel(nextChannel) {
+  if (!channels[nextChannel] || state.channel === nextChannel) return;
+  state.channel = nextChannel;
+  localStorage.setItem(storageKeys.channel, state.channel);
+  renderChannelTabs();
+  await loadAndRender();
 }
 
 function renderLanguageModal() {
@@ -473,6 +487,43 @@ function showLoadingState(text) {
   elements.feed.innerHTML = `<article class="state-card">${escapeHtml(state.language === 'en' ? 'Loading this edition...' : text)}</article>`;
 }
 
+function wireNavigationGestures() {
+  elements.shell.addEventListener('touchstart', (event) => {
+    if (event.target.closest('.date-module, .modal-backdrop')) return;
+    navTouchStartX = event.touches[0]?.clientX ?? 0;
+    navTouchStartY = event.touches[0]?.clientY ?? 0;
+  }, { passive: true });
+
+  elements.shell.addEventListener('touchend', async (event) => {
+    if (event.target.closest('.date-module, .modal-backdrop')) return;
+
+    const touch = event.changedTouches[0];
+    if (!touch) return;
+
+    const deltaX = touch.clientX - navTouchStartX;
+    const deltaY = touch.clientY - navTouchStartY;
+
+    if (Math.abs(deltaX) < 70 || Math.abs(deltaX) < Math.abs(deltaY) * 1.4) return;
+    if (state.channel === 'favorites') return;
+
+    const currentIndex = swipeChannels.indexOf(state.channel);
+    if (currentIndex < 0) return;
+
+    let nextIndex = currentIndex;
+    if (state.channel === 'daily') {
+      nextIndex = 1;
+    } else if (deltaX > 0) {
+      nextIndex = Math.max(0, currentIndex - 1);
+    } else {
+      nextIndex = Math.min(swipeChannels.length - 1, currentIndex + 1);
+    }
+
+    if (nextIndex !== currentIndex) {
+      await setActiveChannel(swipeChannels[nextIndex]);
+    }
+  }, { passive: true });
+}
+
 function showErrorState(error) {
   elements.feed.innerHTML = `
     <article class="state-card is-error">
@@ -559,6 +610,7 @@ function renderMine() {
 
 function createCard(item) {
   const displayItem = localizedItem(item);
+  const brief = summaryBrief(displayItem);
   const card = document.createElement('article');
   card.className = `news-card${state.muted.has(item.id) ? ' is-muted' : ''}`;
   card.dataset.id = item.id;
@@ -571,7 +623,7 @@ function createCard(item) {
     <span class="summary-row">
       <span class="summary-copy">
         <span class="card-title">${escapeHtml(displayItem.title)}</span>
-        <span class="card-take">${escapeHtml(displayItem.take)}</span>
+        <span class="card-take">${escapeHtml(brief)}</span>
         <span class="card-meta">${escapeHtml(displayItem.meta)}</span>
       </span>
       <span class="sketch-icon">${sketchIcon(item.icon, 42)}</span>
@@ -1089,6 +1141,7 @@ function localizedItem(item) {
     ...item,
     cat: item.en.cat ?? item.cat,
     title: item.en.title ?? item.title,
+    brief: item.en.brief ?? item.brief,
     take: item.en.take ?? item.take,
     meta: item.en.meta ?? item.meta,
     facts: item.en.facts ?? item.facts,
@@ -1098,6 +1151,31 @@ function localizedItem(item) {
     source: item.en.source ?? item.source,
     updated: item.en.updated ?? item.updated,
   };
+}
+
+function summaryBrief(item) {
+  const text = String(item.brief || item.summary || item.take || '').replace(/\s+/g, ' ').trim();
+  if (!text) return '';
+
+  const sentence = firstReadableSentence(text);
+  const limit = state.language === 'en' ? 135 : 54;
+
+  if (sentence.length <= limit) return sentence;
+
+  const comma = state.language === 'en'
+    ? sentence.indexOf(',', 68)
+    : sentence.indexOf('，', 22);
+  const cut = comma > 0 && comma <= limit + 18
+    ? sentence.slice(0, comma)
+    : sentence.slice(0, limit);
+
+  return `${cut.replace(/[，,;；、\s]+$/, '')}${state.language === 'en' ? '...' : '。'}`;
+}
+
+function firstReadableSentence(text) {
+  const match = text.match(/^.+?[。！？.!?](?=\s|$|[A-Za-z0-9\u4e00-\u9fff])/);
+  if (match) return match[0].trim();
+  return text;
 }
 
 function updateProgress() {

@@ -106,7 +106,8 @@
           "How procurement support and risk compensation are actually implemented"
         ],
         "source": "Yicai",
-        "updated": "Updated Aug 31"
+        "updated": "Updated Aug 31",
+        "brief": "This is about policy support moving from bigger models to companies that put AI into real workflows."
       },
       "sourceLinks": [
         {
@@ -114,7 +115,8 @@
           "url": "https://www.yicai.com/news/103341306.html",
           "publisher": "第一财经"
         }
-      ]
+      ],
+      "brief": "这条说的是：政策开始扶持能把 AI 真正装进企业流程的服务商。"
     },
     {
       "id": "us-power-grid-emergency",
@@ -215,7 +217,8 @@
           "How utilities pay for security upgrades"
         ],
         "source": "Federal Register",
-        "updated": "Updated Aug 31"
+        "updated": "Updated Aug 31",
+        "brief": "This means grid security can affect phones, hospitals, transport, payments, heating, and cooling at once."
       },
       "sourceLinks": [
         {
@@ -223,7 +226,8 @@
           "url": "https://www.federalregister.gov/documents/2026/08/31/2026-17843/declaring-a-national-emergency-to-secure-the-united-states-bulk-power-system",
           "publisher": "Federal Register"
         }
-      ]
+      ],
+      "brief": "这条提醒你：电网安全会同时影响通信、医院、交通、支付和家里用电。"
     },
     {
       "id": "eu-lumi-ai-supercomputer",
@@ -327,7 +331,8 @@
           "Whether the project lowers compute bottlenecks for European AI"
         ],
         "source": "HWUpgrade",
-        "updated": "Updated Aug 31"
+        "updated": "Updated Aug 31",
+        "brief": "Europe is investing in its own AI compute base so research and companies depend less on outside capacity."
       },
       "sourceLinks": [
         {
@@ -335,7 +340,8 @@
           "url": "https://www.hwupgrade.it/news/server-workstation/lumi-ai-l-europa-investe-387-8-milioni-di-euro-nel-nuovo-supercomputer-per-l-intelligenza-artificiale_158438.html",
           "publisher": "HWUpgrade"
         }
-      ]
+      ],
+      "brief": "这条讲的是：欧洲在补自己的 AI 算力底座，减少对外部算力的依赖。"
     },
     {
       "id": "apple-ceo-transition",
@@ -436,7 +442,8 @@
           "How much processing stays on the device"
         ],
         "source": "Business Standard",
-        "updated": "Updated Aug 31"
+        "updated": "Updated Aug 31",
+        "brief": "This is not just Apple gossip; it affects whether AI becomes genuinely useful inside everyday devices."
       },
       "sourceLinks": [
         {
@@ -444,7 +451,8 @@
           "url": "https://www.business-standard.com/technology/tech-news/tim-cook-s-last-day-at-apple-how-he-took-the-company-beyond-the-iphone-126083100425_1.html",
           "publisher": "Business Standard"
         }
-      ]
+      ],
+      "brief": "这条不是公司八卦，而是关系到苹果能不能把 AI 变成真正好用的系统功能。"
     },
     {
       "id": "ai-energy-race",
@@ -545,7 +553,8 @@
           "Whether storage and clean power deals keep pace"
         ],
         "source": "The Business Times",
-        "updated": "Updated Aug 31"
+        "updated": "Updated Aug 31",
+        "brief": "AI competition is becoming a fight over chips, grid access, storage, and electricity prices."
       },
       "sourceLinks": [
         {
@@ -553,7 +562,8 @@
           "url": "https://www.businesstimes.com.sg/startups-tech/technology/ai-push-becoming-energy-race-sembcorp",
           "publisher": "The Business Times"
         }
-      ]
+      ],
+      "brief": "这条说的是：AI 竞争已经变成芯片、电网、储能和电价一起竞争。"
     },
     {
       "id": "japan-korea-business-cooperation",
@@ -654,7 +664,8 @@
           "Whether chip and energy supply plans become more detailed"
         ],
         "source": "Hankyoreh",
-        "updated": "Updated Aug 31"
+        "updated": "Updated Aug 31",
+        "brief": "Japan and South Korea want more business cooperation so chip, energy, and manufacturing supply chains break less easily."
       },
       "sourceLinks": [
         {
@@ -662,7 +673,8 @@
           "url": "https://www.hani.co.kr/arti/economy/economy_general/1275468.html",
           "publisher": "韩民族日报"
         }
-      ]
+      ],
+      "brief": "这条讲的是：日韩企业想多合作，是为了让芯片、能源和制造供应链更不容易断。"
     },
     {
       "id": "australia-indonesia-22",
@@ -763,7 +775,8 @@
           "Whether maritime security language becomes stronger"
         ],
         "source": "The Diplomat",
-        "updated": "Updated Aug 31"
+        "updated": "Updated Aug 31",
+        "brief": "Australia-Indonesia security talks matter because sea routes affect energy, food, tourism, and delivery stability."
       },
       "sourceLinks": [
         {
@@ -771,7 +784,8 @@
           "url": "https://thediplomat.com/2026/08/hitting-a-high-point-the-australia-indonesia-22/",
           "publisher": "The Diplomat"
         }
-      ]
+      ],
+      "brief": "这条说的是：澳印安全沟通会影响周边海路，也会影响能源、粮食和物流稳定。"
     },
     {
       "id": "korea-central-asia-summit",
@@ -872,7 +886,8 @@
           "Which resource and transport deals become specific"
         ],
         "source": "The Korea Herald",
-        "updated": "Updated Aug 31"
+        "updated": "Updated Aug 31",
+        "brief": "South Korea’s Central Asia push is really about energy, minerals, manufacturing links, and Eurasian routes."
       },
       "sourceLinks": [
         {
@@ -880,7 +895,8 @@
           "url": "https://www.koreaherald.com/article/10857468",
           "publisher": "The Korea Herald"
         }
-      ]
+      ],
+      "brief": "这条讲的是：韩国靠近中亚，背后是能源、矿产和欧亚运输通道。"
     },
     {
       "id": "chongqing-stability-measures",
@@ -986,7 +1002,8 @@
           "Whether local employment and small-business data improve"
         ],
         "source": "Phoenix Chongqing",
-        "updated": "Updated Aug 31"
+        "updated": "Updated Aug 31",
+        "brief": "For Chongqing’s 37 measures, the real test is jobs, financing, and whether support reaches people and small firms."
       },
       "sourceLinks": [
         {
@@ -994,7 +1011,8 @@
           "url": "https://cq.ifeng.com/c/8w0d29HDMjP",
           "publisher": "凤凰网重庆"
         }
-      ]
+      ],
+      "brief": "这条看重庆政策，不是看口号数量，而是看就业、融资和补贴能不能落到人身上。"
     },
     {
       "id": "china-data-expo-digital-economy",
@@ -1095,7 +1113,8 @@
           "Whether data-sharing projects explain accountability clearly"
         ],
         "source": "Sina Finance",
-        "updated": "Updated Aug 31"
+        "updated": "Updated Aug 31",
+        "brief": "This turns “data elements” into plain terms: data should be more useful, but privacy and responsibility must stay clear."
       },
       "sourceLinks": [
         {
@@ -1103,7 +1122,8 @@
           "url": "https://finance.sina.com.cn/tech/roll/2026-08-31/doc-iniqehwx4691036.shtml",
           "publisher": "新浪财经"
         }
-      ]
+      ],
+      "brief": "这条把“数据要素”翻成白话：数据要更好用，但隐私和责任也要说清。"
     }
   ]
 }

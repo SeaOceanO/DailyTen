@@ -140,6 +140,50 @@
         }
       ]
     },
+    "localizedNewsItem": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "cat",
+        "title",
+        "brief",
+        "take",
+        "meta",
+        "facts",
+        "visual",
+        "impacts",
+        "next",
+        "source",
+        "updated"
+      ],
+      "properties": {
+        "cat": { "type": "string", "minLength": 1 },
+        "title": { "type": "string", "minLength": 1 },
+        "brief": { "type": "string", "minLength": 1 },
+        "take": { "type": "string", "minLength": 1 },
+        "meta": { "type": "string", "minLength": 1 },
+        "facts": {
+          "type": "array",
+          "minItems": 3,
+          "maxItems": 3,
+          "items": { "$ref": "#/$defs/labelTextPair" }
+        },
+        "visual": { "$ref": "#/$defs/visual" },
+        "impacts": {
+          "type": "array",
+          "minItems": 2,
+          "maxItems": 3,
+          "items": { "$ref": "#/$defs/labelTextPair" }
+        },
+        "next": {
+          "type": "array",
+          "maxItems": 2,
+          "items": { "type": "string", "minLength": 1 }
+        },
+        "source": { "type": "string", "minLength": 1 },
+        "updated": { "type": "string", "minLength": 1 }
+      }
+    },
     "newsItem": {
       "type": "object",
       "additionalProperties": false,
@@ -148,6 +192,7 @@
         "cat",
         "icon",
         "title",
+        "brief",
         "take",
         "meta",
         "facts",
@@ -156,6 +201,7 @@
         "next",
         "source",
         "updated",
+        "en",
         "sourceLinks"
       ],
       "properties": {
@@ -166,6 +212,7 @@
           "enum": ["oil", "chart", "drone", "quake", "ai", "alert", "code", "refinery", "ship", "eclipse"]
         },
         "title": { "type": "string", "minLength": 1 },
+        "brief": { "type": "string", "minLength": 1 },
         "take": { "type": "string", "minLength": 1 },
         "meta": { "type": "string", "minLength": 1 },
         "facts": {
@@ -188,6 +235,7 @@
         },
         "source": { "type": "string", "minLength": 1 },
         "updated": { "type": "string", "minLength": 1 },
+        "en": { "$ref": "#/$defs/localizedNewsItem" },
         "sourceLinks": {
           "type": "array",
           "maxItems": 4,
