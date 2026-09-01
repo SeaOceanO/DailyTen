@@ -9,6 +9,7 @@
     "国际局势",
     "能源",
     "科技产业",
+    "机器人与具身智能",
     "公共安全",
     "影响普通人生活的政策变化"
   ],
@@ -24,7 +25,8 @@
     "科技产业": "Use for technology companies, chips, software, devices, data infrastructure, platforms, and industrial technology.",
     "能源": "Use for oil, gas, power grids, renewables, storage, mining, and energy security.",
     "公共安全": "Use for health, disasters, cyber risk, infrastructure safety, food safety, and everyday public risk.",
-    "AI": "Use for AI models, AI products, AI regulation, AI labor impact, and AI infrastructure when AI itself is the main story."
+    "AI": "Use for AI models, AI products, AI regulation, AI labor impact, and AI infrastructure when AI itself is the main story. In the AI industry column, robotics or embodied AI may be included only when there is a strong real candidate that day; do not force it.",
+    "机器人与具身智能": "Use for robotics, embodied AI, industrial robots, warehouse robots, humanoid robots, robot foundation models, manipulation, motion planning, sensors, and autonomy when they are substantial real news."
   },
-  "sourceQuery": "(artificial intelligence OR economy OR energy OR supply chain OR technology OR geopolitics OR public safety)"
+  "sourceQuery": "(artificial intelligence OR AI agent OR MCP OR compute OR inference OR data center OR robotics OR robot OR embodied AI OR humanoid robot OR economy OR energy OR supply chain OR technology OR geopolitics OR public safety)"
 }

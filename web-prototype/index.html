@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-    <meta name="theme-color" content="#f4efe4" />
+    <meta name="theme-color" content="#efe7d6" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
     <title>DailyTen · 今日简报</title>
@@ -45,6 +45,15 @@
           <button class="modal-close" type="button" data-language-close aria-label="关闭">×</button>
         </div>
         <div class="choice-list" id="language-options"></div>
+      </section>
+    </div>
+
+    <div class="modal-backdrop term-backdrop" id="term-modal" hidden>
+      <section class="term-modal" role="dialog" aria-modal="true" aria-labelledby="term-modal-title">
+        <button class="modal-close term-close" type="button" data-term-close aria-label="关闭">×</button>
+        <p class="term-kicker" id="term-modal-kicker">专业词解释</p>
+        <h2 id="term-modal-title">AI</h2>
+        <div class="term-body" id="term-modal-body"></div>
       </section>
     </div>
 

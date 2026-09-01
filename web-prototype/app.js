@@ -45,6 +45,7 @@ const channels = {
 
 const bottomTabs = ['daily', 'ai', 'mine'];
 const swipeChannels = ['daily', 'ai', 'mine'];
+const transitionMs = 210;
 
 const i18n = {
   zh: {
@@ -83,6 +84,9 @@ const i18n = {
     today: '今天',
     languageHint: '选择后会立刻保存到当前浏览器。',
     favoriteHint: '查看已收藏的十条',
+    termKicker: '专业词解释',
+    termMeaning: '它是什么意思',
+    termRelation: '和这条新闻的关系',
   },
   en: {
     daily: 'Home',
@@ -120,6 +124,9 @@ const i18n = {
     today: 'Today',
     languageHint: 'Your choice is saved in this browser.',
     favoriteHint: 'View saved items',
+    termKicker: 'Term guide',
+    termMeaning: 'What it means',
+    termRelation: 'Why it matters here',
   },
 };
 
@@ -178,6 +185,11 @@ const elements = {
   languageOptions: document.querySelector('#language-options'),
   languageModalTitle: document.querySelector('#language-modal-title'),
   languageClose: document.querySelector('[data-language-close]'),
+  termModal: document.querySelector('#term-modal'),
+  termModalKicker: document.querySelector('#term-modal-kicker'),
+  termModalTitle: document.querySelector('#term-modal-title'),
+  termModalBody: document.querySelector('#term-modal-body'),
+  termClose: document.querySelector('[data-term-close]'),
   shell: document.querySelector('.shell'),
 };
 
@@ -193,6 +205,7 @@ async function init() {
   renderChannelTabs();
   renderLanguageModal();
   wireLanguageModal();
+  wireTermModal();
   wireDateGestures();
   wireNavigationGestures();
   showLoadingState('正在读取这一天的十条...');
@@ -308,10 +321,13 @@ function renderChannelTabs() {
 
 async function setActiveChannel(nextChannel) {
   if (!channels[nextChannel] || state.channel === nextChannel) return;
-  state.channel = nextChannel;
-  localStorage.setItem(storageKeys.channel, state.channel);
-  renderChannelTabs();
-  await loadAndRender();
+  const direction = channelDirection(state.channel, nextChannel);
+  await transitionChannel(direction, async () => {
+    state.channel = nextChannel;
+    localStorage.setItem(storageKeys.channel, state.channel);
+    renderChannelTabs();
+    await loadAndRender();
+  });
 }
 
 function renderLanguageModal() {
@@ -353,6 +369,21 @@ function wireLanguageModal() {
   });
 }
 
+function wireTermModal() {
+  elements.termClose.addEventListener('click', closeTermModal);
+  elements.termModal.addEventListener('click', (event) => {
+    if (event.target === elements.termModal) {
+      closeTermModal();
+    }
+  });
+
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape' && !elements.termModal.hidden) {
+      closeTermModal();
+    }
+  });
+}
+
 function renderDateModule() {
   if (state.channel === 'favorites' || state.channel === 'mine') {
     elements.dateModule.hidden = true;
@@ -375,7 +406,7 @@ function renderDateModule() {
     <div class="calendar-panel" data-date-gesture="expanded">
       <div class="calendar-head">
         <div>
-          <strong>${monthDate.getFullYear()}年 ${monthDate.getMonth() + 1}月</strong>
+          <strong>${monthTitle(monthDate)}</strong>
           <span>${state.language === 'en' ? 'Today and yesterday are available for now' : '可查看今天和昨天的十条'}</span>
         </div>
         <button class="calendar-toggle in-panel" type="button" aria-label="收起日历" aria-expanded="${state.calendarExpanded}">
@@ -503,7 +534,7 @@ function wireNavigationGestures() {
     const deltaX = touch.clientX - navTouchStartX;
     const deltaY = touch.clientY - navTouchStartY;
 
-    if (Math.abs(deltaX) < 70 || Math.abs(deltaX) < Math.abs(deltaY) * 1.4) return;
+    if (Math.abs(deltaX) < 62 || Math.abs(deltaX) < Math.abs(deltaY) * 1.35) return;
     if (state.channel === 'favorites') return;
 
     const currentIndex = swipeChannels.indexOf(state.channel);
@@ -522,6 +553,44 @@ function wireNavigationGestures() {
       await setActiveChannel(swipeChannels[nextIndex]);
     }
   }, { passive: true });
+}
+
+function channelDirection(currentChannel, nextChannel) {
+  const currentIndex = swipeChannels.indexOf(currentChannel === 'favorites' ? 'mine' : currentChannel);
+  const nextIndex = swipeChannels.indexOf(nextChannel === 'favorites' ? 'mine' : nextChannel);
+  return nextIndex >= currentIndex ? 'forward' : 'back';
+}
+
+async function transitionChannel(direction, applyChange) {
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    await applyChange();
+    return;
+  }
+
+  if (document.startViewTransition) {
+    document.documentElement.dataset.channelDirection = direction;
+    const transition = document.startViewTransition(() => applyChange());
+    try {
+      await transition.finished;
+    } finally {
+      delete document.documentElement.dataset.channelDirection;
+    }
+    return;
+  }
+
+  await applyChange();
+  animateChannelEnter(direction);
+}
+
+function animateChannelEnter(direction) {
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    return;
+  }
+
+  elements.shell.classList.add(direction === 'forward' ? 'is-entering-forward' : 'is-entering-back');
+  window.setTimeout(() => {
+    elements.shell.classList.remove('is-entering-forward', 'is-entering-back');
+  }, transitionMs);
 }
 
 function showErrorState(error) {
@@ -585,7 +654,7 @@ function renderMine() {
           <strong>${escapeHtml(t('favorites'))}</strong>
           <em>${escapeHtml(t('favoriteHint'))}</em>
         </span>
-        <b>${state.favorites.size}</b>
+        <b data-favorite-count>0</b>
       </button>
       <button class="settings-row" type="button" data-settings-action="language">
         <span>
@@ -606,6 +675,11 @@ function renderMine() {
     renderLanguageModal();
     elements.languageModal.hidden = false;
   });
+
+  syncDisplayableFavorites().then((favoriteItems) => {
+    const count = elements.feed.querySelector('[data-favorite-count]');
+    if (count) count.textContent = String(favoriteItems.length);
+  });
 }
 
 function createCard(item) {
@@ -615,16 +689,17 @@ function createCard(item) {
   card.className = `news-card${state.muted.has(item.id) ? ' is-muted' : ''}`;
   card.dataset.id = item.id;
 
-  const header = document.createElement('button');
+  const header = document.createElement('div');
   header.className = 'card-button';
-  header.type = 'button';
+  header.tabIndex = 0;
+  header.setAttribute('role', 'button');
   header.setAttribute('aria-expanded', 'false');
   header.innerHTML = `
     <span class="summary-row">
       <span class="summary-copy">
-        <span class="card-title">${escapeHtml(displayItem.title)}</span>
-        <span class="card-take">${escapeHtml(brief)}</span>
-        <span class="card-meta">${escapeHtml(displayItem.meta)}</span>
+        <span class="card-title">${annotateTerms(displayItem.title, item)}</span>
+        <span class="card-take">${annotateTerms(brief, item)}</span>
+        <span class="card-meta">${annotateTerms(displayItem.meta, item)}</span>
       </span>
       <span class="sketch-icon">${sketchIcon(item.icon, 42)}</span>
       <span class="chevron" aria-hidden="true"></span>
@@ -635,7 +710,33 @@ function createCard(item) {
   details.className = 'details';
   details.innerHTML = detailsHtml(displayItem);
 
-  header.addEventListener('click', () => {
+  header.addEventListener('click', (event) => {
+    if (event.target.closest('[data-term]')) return;
+    toggleCardOpen(card, header, item);
+  });
+
+  header.addEventListener('keydown', (event) => {
+    if (event.key !== 'Enter' && event.key !== ' ') return;
+    if (event.target.closest('[data-term]')) return;
+    event.preventDefault();
+    toggleCardOpen(card, header, item);
+  });
+
+  details.addEventListener('click', (event) => {
+    const termButton = event.target.closest('[data-term]');
+    if (!termButton) return;
+    event.stopPropagation();
+    openTermModal(termButton.dataset.term, item);
+  });
+
+  header.addEventListener('click', (event) => {
+    const termButton = event.target.closest('[data-term]');
+    if (!termButton) return;
+    event.stopPropagation();
+    openTermModal(termButton.dataset.term, item);
+  });
+
+  function toggleCardOpen(card, header, item) {
     if (card.classList.contains('is-open')) {
       collapseCardWithoutJump(card, header);
       return;
@@ -646,7 +747,7 @@ function createCard(item) {
     state.read.add(item.id);
     writeSet(storageKeys.read, state.read);
     updateProgress();
-  });
+  }
 
   details.querySelector('[data-action="collapse"]').addEventListener('click', () => {
     collapseCardWithoutJump(card, header);
@@ -683,7 +784,7 @@ function detailsHtml(item) {
     <div class="takeaway-row">
       <div class="takeaway-copy">
         <p class="mini-label">${escapeHtml(t('conclusion'))}</p>
-        <p class="take-text">${escapeHtml(item.take)}</p>
+        <p class="take-text">${annotateTerms(item.take, item)}</p>
       </div>
       <span class="sketch-icon">${sketchIcon(item.icon, 58)}</span>
     </div>
@@ -692,8 +793,8 @@ function detailsHtml(item) {
     <div class="fact-grid">
       ${item.facts.map(([label, text]) => `
         <div class="fact">
-          <strong>${escapeHtml(label)}</strong>
-          <span>${escapeHtml(text)}</span>
+          <strong>${annotateTerms(label, item)}</strong>
+          <span>${annotateTerms(text, item)}</span>
         </div>
       `).join('')}
     </div>
@@ -704,8 +805,8 @@ function detailsHtml(item) {
     <div class="impact-grid">
       ${item.impacts.map(([label, text]) => `
         <div class="impact">
-          <strong>${escapeHtml(label)}</strong>
-          <span>${escapeHtml(text)}</span>
+          <strong>${annotateTerms(label, item)}</strong>
+          <span>${annotateTerms(text, item)}</span>
         </div>
       `).join('')}
     </div>
@@ -713,12 +814,12 @@ function detailsHtml(item) {
     ${item.next.length ? `
       ${sectionTitle(t('next'))}
       <ol class="next-list">
-        ${item.next.map((text, index) => `<li><span>${index + 1}</span>${escapeHtml(text)}</li>`).join('')}
+        ${item.next.map((text, index) => `<li><span>${index + 1}</span>${annotateTerms(text, item)}</li>`).join('')}
       </ol>
     ` : ''}
 
     <div class="source-row">
-      <span class="source-text">${escapeHtml(item.source)} · ${escapeHtml(item.updated)}</span>
+      <span class="source-text">${annotateTerms(item.source, item)} · ${escapeHtml(item.updated)}</span>
       <span class="actions">
         <button class="pill-button" type="button" data-action="favorite"></button>
         <button class="pill-button is-danger" type="button" data-action="mute"></button>
@@ -756,7 +857,7 @@ function sectionTitle(text) {
 
 function visualBlock(visual) {
   const content = visual.type === 'chain'
-    ? chainSvg(visual.nodes)
+    ? chainDiagramHtml(visual.nodes)
     : visual.type === 'bars'
       ? barsSvg(visual.bars, visual.max, visual.decimal)
       : trendSvg(visual);
@@ -793,8 +894,7 @@ function buildLocalEdition(channel, dateKey) {
 }
 
 async function buildFavoritesEdition() {
-  const allItems = await collectAvailableFavoriteItems();
-  const favoriteItems = allItems.filter((item) => state.favorites.has(item.id));
+  const favoriteItems = await syncDisplayableFavorites();
 
   return {
     dateKey: 'favorites',
@@ -856,6 +956,20 @@ async function collectAvailableFavoriteItems() {
     });
 }
 
+async function syncDisplayableFavorites() {
+  const allItems = await collectAvailableFavoriteItems();
+  const availableIds = new Set(allItems.map((item) => item.id));
+  const favoriteItems = allItems.filter((item) => state.favorites.has(item.id));
+  const cleanedFavorites = new Set([...state.favorites].filter((id) => availableIds.has(id)));
+
+  if (cleanedFavorites.size !== state.favorites.size) {
+    state.favorites = cleanedFavorites;
+    writeSet(storageKeys.favorites, state.favorites);
+  }
+
+  return favoriteItems;
+}
+
 function buildTopicItem(topic, channel, dateKey, index) {
   const english = localTopicEnglish[topic.slug] ?? null;
 
@@ -865,6 +979,7 @@ function buildTopicItem(topic, channel, dateKey, index) {
     cat: topic.cat,
     icon: topic.icon,
     title: topic.title,
+    brief: topic.brief || summaryBrief(topic),
     take: topic.take,
     meta: `${topic.region}｜${topic.meta}｜${formatChineseDate(dateKey)}`,
     facts: topic.facts,
@@ -876,6 +991,7 @@ function buildTopicItem(topic, channel, dateKey, index) {
     en: english ? {
       cat: english.cat,
       title: english.title,
+      brief: english.brief || summaryBrief(english),
       take: english.take,
       meta: `${english.region} | ${english.meta} | ${formatEnglishDate(dateKey)}`,
       facts: english.facts,
@@ -1007,6 +1123,17 @@ function sketchIcon(name, size) {
   `;
 }
 
+function chainDiagramHtml(nodes) {
+  return `
+    <div class="chain-diagram" role="img" aria-label="${escapeHtml(nodes.join('，'))}">
+      ${nodes.map((node, index) => `
+        <span class="chain-node${index === nodes.length - 1 ? ' is-final' : ''}">${annotateTerms(node)}</span>
+        ${index < nodes.length - 1 ? '<span class="chain-arrow" aria-hidden="true"></span>' : ''}
+      `).join('')}
+    </div>
+  `;
+}
+
 function chainSvg(nodes) {
   const width = 620;
   const height = 78;
@@ -1130,6 +1257,258 @@ function syncCardButtons(card, id) {
   favoriteButton.textContent = favorite ? t('favoriteOn') : t('favoriteOff');
   favoriteButton.classList.toggle('is-active', favorite);
   muteButton.textContent = muted ? t('muteOn') : t('muteOff');
+}
+
+const glossary = [
+  {
+    key: 'ai',
+    terms: ['AI'],
+    zh: {
+      label: 'AI',
+      meaning: '人工智能，简单说就是让软件通过模型理解文字、图片、声音或数据，并辅助生成、判断和执行任务。',
+      relation: '在这条新闻里，AI 不是一个抽象概念，而是会影响工具能力、用电、芯片、隐私、工作流程和产品价格的实际技术。',
+    },
+    en: {
+      label: 'AI',
+      meaning: 'Artificial intelligence: software using models to understand text, images, audio, or data, then help generate, decide, or act.',
+      relation: 'Here, AI is not just a buzzword. It affects tools, electricity demand, chips, privacy, workflows, and product pricing.',
+    },
+  },
+  {
+    key: 'mcp',
+    terms: ['MCP'],
+    zh: {
+      label: 'MCP',
+      meaning: '一种让 AI 模型连接外部工具和数据的接口协议，可以把文档、数据库、软件功能接到模型旁边。',
+      relation: '这条新闻提到 MCP 时，重点通常不是协议名字本身，而是 AI 能不能安全地调用真实工具、留下日志、控制权限。',
+    },
+    en: {
+      label: 'MCP',
+      meaning: 'A protocol for connecting AI models to external tools and data, such as documents, databases, and app functions.',
+      relation: 'Here, MCP matters because useful agents need safe tool access, permissions, and logs, not only better chat.',
+    },
+  },
+  {
+    key: 'agent',
+    terms: ['Agent', '智能体'],
+    zh: {
+      label: 'Agent',
+      meaning: '可以按目标自己拆步骤、调用工具、执行任务的 AI，不只是回答一句话。',
+      relation: '在这条新闻里，Agent 的关键是能否稳定接管流程，比如查资料、填表、跟进任务，同时不越权、不乱改。',
+    },
+    en: {
+      label: 'Agent',
+      meaning: 'An AI system that can break a goal into steps, use tools, and carry out tasks, not just answer a prompt.',
+      relation: 'In this story, the agent angle is whether AI can reliably handle real workflows while staying within permissions.',
+    },
+  },
+  {
+    key: 'anp',
+    terms: ['ANP'],
+    zh: {
+      label: 'ANP',
+      meaning: '可以理解成 Agent 之间互相沟通、传递任务和结果的一类协议思路。',
+      relation: '如果新闻里出现 ANP，重点是多个 Agent 能否安全协作，而不是每个工具各自孤立运行。',
+    },
+    en: {
+      label: 'ANP',
+      meaning: 'A protocol idea for agents to communicate, hand off tasks, and share results with each other.',
+      relation: 'Here it matters because multi-agent work needs identity, trust, and verification before it can scale safely.',
+    },
+  },
+  {
+    key: 'compute',
+    terms: ['算力', 'compute'],
+    zh: {
+      label: '算力',
+      meaning: '运行 AI 模型所需的计算能力，主要来自芯片、服务器、网络和电力。',
+      relation: '这条新闻里的算力关系到 AI 服务能不能便宜、稳定、广泛地提供给企业和普通用户。',
+    },
+    en: {
+      label: 'Compute',
+      meaning: 'The computing power needed to run AI models, usually involving chips, servers, networks, and electricity.',
+      relation: 'In this story, compute affects whether AI services are affordable, reliable, and widely available.',
+    },
+  },
+  {
+    key: 'inference',
+    terms: ['推理', 'inference'],
+    zh: {
+      label: '推理',
+      meaning: '模型已经训练好之后，每次回答问题、分析文件、生成图片或执行任务时的计算过程。',
+      relation: '新闻里谈推理，通常是在说 AI 真正被大量使用后，对芯片、云服务和电力的持续压力。',
+    },
+    en: {
+      label: 'Inference',
+      meaning: 'The compute used when a trained model answers questions, reads files, generates content, or performs tasks.',
+      relation: 'Here, inference points to the ongoing cost of everyday AI use, not just the one-time cost of training.',
+    },
+  },
+  {
+    key: 'data-center',
+    terms: ['数据中心', 'data center', 'data centers'],
+    zh: {
+      label: '数据中心',
+      meaning: '集中放服务器和芯片的机房，是云计算和 AI 服务的基础设施。',
+      relation: '这条新闻里，数据中心通常会牵动电网接入、用水、用地、储能和地方电价讨论。',
+    },
+    en: {
+      label: 'Data center',
+      meaning: 'A facility full of servers and chips that powers cloud computing and AI services.',
+      relation: 'In this story, data centers connect AI growth to grid access, water, land, storage, and local energy costs.',
+    },
+  },
+  {
+    key: 'supply-chain',
+    terms: ['供应链', 'supply chain', 'supply chains'],
+    zh: {
+      label: '供应链',
+      meaning: '从原材料、零部件、生产、运输到交付的一整套链路。',
+      relation: '这条新闻里的供应链变化，最后可能影响产品能不能买到、价格稳不稳、维修和交付快不快。',
+    },
+    en: {
+      label: 'Supply chain',
+      meaning: 'The chain from raw materials and parts through production, shipping, and delivery.',
+      relation: 'Here, supply-chain shifts can affect availability, pricing, repairs, and delivery times.',
+    },
+  },
+  {
+    key: 'governance',
+    terms: ['治理', 'governance'],
+    zh: {
+      label: '治理',
+      meaning: '给技术使用定规则：谁能用、怎么审、出问题谁负责、用户怎么申诉。',
+      relation: '这条新闻里，治理决定 AI 是只追求速度，还是能在金融、医疗、教育等场景里被放心使用。',
+    },
+    en: {
+      label: 'Governance',
+      meaning: 'Rules for how technology is used: access, audits, responsibility, and user appeals.',
+      relation: 'Here, governance decides whether AI can be trusted in serious settings such as finance, health, or education.',
+    },
+  },
+  {
+    key: 'audit',
+    terms: ['审计', 'audit', 'audits'],
+    zh: {
+      label: '审计',
+      meaning: '把系统做了什么、谁批准了什么、哪里出错了记录下来并检查。',
+      relation: '这条新闻里的审计，是为了让 AI 自动做事时还能追责和回滚，避免黑箱操作。',
+    },
+    en: {
+      label: 'Audit',
+      meaning: 'A way to record and inspect what a system did, who approved it, and where it failed.',
+      relation: 'Here, audits matter because automated AI work needs accountability, rollback, and clear records.',
+    },
+  },
+  {
+    key: 'robotics',
+    terms: ['机器人', '具身智能', 'robotics', 'robots', 'embodied AI'],
+    zh: {
+      label: '机器人 / 具身智能',
+      meaning: '让 AI 不只在屏幕里回答问题，也能通过机器人感知环境、移动和执行物理任务。',
+      relation: '如果当天新闻里有机器人，它更关乎工厂、物流、仓储、服务业岗位和安全标准，而不只是模型能力。',
+    },
+    en: {
+      label: 'Robotics / embodied AI',
+      meaning: 'AI connected to machines that can sense the physical world, move, and perform real-world tasks.',
+      relation: 'In this story, robotics links AI to factories, logistics, service jobs, and safety standards.',
+    },
+  },
+  {
+    key: 'lumi-ai',
+    terms: ['LUMI-AI'],
+    zh: {
+      label: 'LUMI-AI',
+      meaning: '欧洲正在建设的 AI 超算项目，可以理解成给科研和产业用的大型算力基础设施。',
+      relation: '这条新闻里，它代表欧洲想把关键 AI 算力留在本地，减少对外部云和芯片资源的依赖。',
+    },
+    en: {
+      label: 'LUMI-AI',
+      meaning: 'A European AI supercomputing project, essentially large-scale compute infrastructure for research and industry.',
+      relation: 'Here, it shows Europe trying to keep critical AI compute closer to home and reduce outside dependence.',
+    },
+  },
+];
+
+function annotateTerms(value) {
+  const text = String(value ?? '');
+  if (!text) return '';
+
+  const matches = [];
+  const lowerText = text.toLowerCase();
+
+  for (const entry of glossary) {
+    for (const term of entry.terms) {
+      const lowerTerm = term.toLowerCase();
+      let start = lowerText.indexOf(lowerTerm);
+
+      while (start !== -1) {
+        const end = start + term.length;
+        if (isTermBoundary(text, start, end)) {
+          matches.push({ start, end, entry });
+        }
+        start = lowerText.indexOf(lowerTerm, start + term.length);
+      }
+    }
+  }
+
+  matches.sort((first, second) => first.start - second.start || second.end - first.end);
+
+  let cursor = 0;
+  let html = '';
+
+  for (const match of matches) {
+    if (match.start < cursor) continue;
+    const rawTerm = text.slice(match.start, match.end);
+    const copy = state.language === 'en' ? match.entry.en : match.entry.zh;
+    html += escapeHtml(text.slice(cursor, match.start));
+    html += `<button class="term-token" type="button" data-term="${match.entry.key}" aria-label="${escapeHtml(copy.label)}">${escapeHtml(rawTerm)}</button>`;
+    cursor = match.end;
+  }
+
+  html += escapeHtml(text.slice(cursor));
+  return html;
+}
+
+function isTermBoundary(text, start, end) {
+  const before = text[start - 1] ?? '';
+  const after = text[end] ?? '';
+  return !isAsciiWord(before) && !isAsciiWord(after);
+}
+
+function isAsciiWord(character) {
+  return /[A-Za-z0-9_-]/.test(character);
+}
+
+function openTermModal(key, item) {
+  const entry = glossary.find((glossaryItem) => glossaryItem.key === key);
+  if (!entry) return;
+
+  const copy = state.language === 'en' ? entry.en : entry.zh;
+  elements.termModalKicker.textContent = t('termKicker');
+  elements.termModalTitle.textContent = copy.label;
+  elements.termModalBody.innerHTML = `
+    <div>
+      <strong>${escapeHtml(t('termMeaning'))}</strong>
+      <p>${escapeHtml(copy.meaning)}</p>
+    </div>
+    <div>
+      <strong>${escapeHtml(t('termRelation'))}</strong>
+      <p>${escapeHtml(copy.relation)}</p>
+      <em>${escapeHtml(localizedItem(item).title)}</em>
+    </div>
+  `;
+  elements.termModal.hidden = false;
+  requestAnimationFrame(() => {
+    elements.termModal.classList.add('is-open');
+  });
+}
+
+function closeTermModal() {
+  elements.termModal.classList.remove('is-open');
+  window.setTimeout(() => {
+    elements.termModal.hidden = true;
+  }, 170);
 }
 
 function localizedItem(item) {
@@ -1323,6 +1702,12 @@ function shortDateLabel(date) {
 function formatEnglishDate(dateKey) {
   const date = parseDateKey(dateKey);
   return `${date.toLocaleString('en-US', { month: 'short' })} ${date.getDate()}`;
+}
+
+function monthTitle(date) {
+  return state.language === 'en'
+    ? date.toLocaleString('en-US', { month: 'long', year: 'numeric' })
+    : `${date.getFullYear()}年 ${date.getMonth() + 1}月`;
 }
 
 function uniqueId(prefix) {

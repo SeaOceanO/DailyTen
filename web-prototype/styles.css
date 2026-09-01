@@ -26,8 +26,9 @@
 
 html,
 body {
-  background: var(--frame);
+  background: var(--paper);
   margin: 0;
+  height: 100%;
   min-height: 100%;
   overflow-x: hidden;
 }
@@ -57,6 +58,58 @@ button {
   max-width: 720px;
   overflow: hidden;
   padding: 22px 18px;
+  view-transition-name: dailyten-shell;
+  will-change: opacity, transform;
+}
+
+::view-transition-old(dailyten-shell),
+::view-transition-new(dailyten-shell) {
+  animation-duration: 220ms;
+  animation-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+html[data-channel-direction="forward"]::view-transition-old(dailyten-shell) {
+  animation-name: channel-old-forward;
+}
+
+html[data-channel-direction="forward"]::view-transition-new(dailyten-shell) {
+  animation-name: channel-new-forward;
+}
+
+html[data-channel-direction="back"]::view-transition-old(dailyten-shell) {
+  animation-name: channel-old-back;
+}
+
+html[data-channel-direction="back"]::view-transition-new(dailyten-shell) {
+  animation-name: channel-new-back;
+}
+
+.shell.is-entering-forward {
+  animation: channel-new-forward 210ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.shell.is-entering-back {
+  animation: channel-new-back 210ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@keyframes channel-old-forward {
+  from { opacity: 1; transform: translateX(0); }
+  to { opacity: 0.54; transform: translateX(-18px); }
+}
+
+@keyframes channel-new-forward {
+  from { opacity: 0.6; transform: translateX(18px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes channel-old-back {
+  from { opacity: 1; transform: translateX(0); }
+  to { opacity: 0.54; transform: translateX(18px); }
+}
+
+@keyframes channel-new-back {
+  from { opacity: 0.6; transform: translateX(-18px); }
+  to { opacity: 1; transform: translateX(0); }
 }
 
 .bottom-nav {
@@ -635,6 +688,111 @@ h1 {
   margin: 4px 2px 0;
 }
 
+.term-backdrop {
+  align-items: center;
+  background: rgba(43, 42, 36, 0);
+  opacity: 0;
+  pointer-events: none;
+  transition: background-color 180ms ease, opacity 180ms ease;
+}
+
+.term-backdrop.is-open {
+  background: rgba(26, 25, 20, 0.52);
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.term-modal {
+  background: var(--frame);
+  border: 1px solid rgba(205, 180, 119, 0.68);
+  border-radius: 20px;
+  box-shadow: 0 24px 80px rgba(43, 42, 36, 0.26);
+  color: var(--ink);
+  max-width: 440px;
+  opacity: 0;
+  padding: 18px;
+  position: relative;
+  transform: translateY(14px) scale(0.98);
+  transition:
+    opacity 190ms ease,
+    transform 210ms cubic-bezier(0.22, 1, 0.36, 1);
+  width: min(100%, 440px);
+}
+
+.term-backdrop.is-open .term-modal {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+.term-close {
+  position: absolute;
+  right: 14px;
+  top: 14px;
+}
+
+.term-kicker {
+  color: var(--gold);
+  font-size: 11px;
+  font-weight: 850;
+  letter-spacing: 0.7px;
+  margin: 0 42px 7px 0;
+  text-transform: uppercase;
+}
+
+.term-modal h2 {
+  color: var(--ink);
+  font-size: 24px;
+  line-height: 1.2;
+  margin: 0 42px 14px 0;
+}
+
+.term-body {
+  display: grid;
+  gap: 12px;
+}
+
+.term-body div {
+  background: rgba(251, 248, 239, 0.72);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 12px;
+}
+
+.term-body strong {
+  color: var(--olive);
+  display: block;
+  font-size: 13px;
+  margin-bottom: 5px;
+}
+
+.term-body p,
+.term-body em {
+  color: var(--secondary);
+  display: block;
+  font-size: 13px;
+  font-style: normal;
+  line-height: 1.65;
+  margin: 0;
+}
+
+.term-body em {
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  margin-top: 9px;
+  padding-top: 8px;
+}
+
+.term-token {
+  all: unset;
+  border-bottom: 1px dotted rgba(47, 74, 58, 0.72);
+  color: inherit;
+  cursor: pointer;
+  display: inline;
+  text-decoration: underline dotted rgba(47, 74, 58, 0.38);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 4px;
+}
+
 .news-card.is-open {
   border-color: var(--olive-mid);
   box-shadow: 0 8px 24px var(--shadow);
@@ -815,6 +973,60 @@ h1 {
   padding: 14px;
 }
 
+.chain-diagram {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.chain-node {
+  align-items: center;
+  background: var(--sage);
+  border: 1px solid var(--sage-border);
+  border-radius: 12px;
+  color: var(--olive);
+  display: flex;
+  flex: 1 1 112px;
+  font-size: 12px;
+  font-weight: 850;
+  justify-content: center;
+  line-height: 1.25;
+  min-height: 38px;
+  min-width: 0;
+  overflow-wrap: anywhere;
+  padding: 8px 10px;
+  text-align: center;
+}
+
+.chain-node.is-final {
+  background: var(--gold-bg);
+  border-color: var(--gold-border);
+  color: var(--gold-text);
+}
+
+.chain-arrow {
+  background: var(--olive-mid);
+  border-radius: 999px;
+  flex: 0 0 22px;
+  height: 2px;
+  opacity: 0.75;
+  position: relative;
+}
+
+.chain-arrow::after {
+  border-color: var(--olive-mid);
+  border-style: solid;
+  border-width: 2px 2px 0 0;
+  content: "";
+  height: 7px;
+  position: absolute;
+  right: 0;
+  top: -3px;
+  transform: rotate(45deg);
+  width: 7px;
+}
+
 .visual-label {
   color: var(--secondary);
   font-size: 12px;
@@ -933,11 +1145,11 @@ h1 {
 @media (max-width: 520px) {
   html,
   body {
-    background: var(--frame);
+    background: var(--paper);
   }
 
   body {
-    background: var(--frame);
+    background: var(--paper);
     min-height: 100svh;
     padding: 0 0 82px;
   }
@@ -949,7 +1161,7 @@ h1 {
   }
 
   .shell {
-    background: var(--frame);
+    background: var(--paper);
     border-left: 0;
     border-radius: 0;
     border-right: 0;
@@ -967,8 +1179,9 @@ h1 {
   }
 
   h1 {
-    font-size: clamp(24px, 6.6vw, 30px);
+    font-size: clamp(20px, 5.2vw, 24px);
     line-height: 1.08;
+    overflow-wrap: anywhere;
   }
 
   .subtitle {
@@ -982,6 +1195,7 @@ h1 {
   }
 
   .bottom-nav {
+    background: var(--frame);
     border-bottom: 0;
     border-radius: 18px 18px 0 0;
     bottom: 0;
@@ -1022,5 +1236,36 @@ h1 {
   .summary-row,
   .takeaway-row {
     gap: 10px;
+  }
+
+  .chain-diagram {
+    gap: 6px;
+  }
+
+  .chain-node {
+    flex-basis: calc(50% - 18px);
+    font-size: 11px;
+    min-height: 34px;
+    padding: 7px 8px;
+  }
+
+  .chain-arrow {
+    flex-basis: 14px;
+  }
+
+  .term-modal {
+    border-radius: 18px;
+    padding: 16px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .shell,
+  .shell.is-entering-forward,
+  .shell.is-entering-back,
+  .term-backdrop,
+  .term-modal {
+    animation: none;
+    transition: none;
   }
 }
