@@ -29,11 +29,94 @@ const channels = {
     fallbackTitle: 'AI 行业十条',
     fallbackSubtitle: '模型、Agent、算力、芯片、产品与治理，一次看清今天的 AI 产业变化。',
   },
+  mine: {
+    label: '我的',
+    eyebrow: 'DAILYTEN · 我的',
+    fallbackTitle: '我的',
+    fallbackSubtitle: '管理收藏、语言和之后会接入的个人偏好。',
+  },
   favorites: {
     label: '收藏',
     eyebrow: 'DAILYTEN · 收藏',
     fallbackTitle: '我的收藏',
     fallbackSubtitle: '把想回看的每日十条和 AI 行业内容集中放在这里。',
+  },
+};
+
+const bottomTabs = ['daily', 'ai', 'mine'];
+
+const i18n = {
+  zh: {
+    daily: '主页',
+    ai: 'AI 行业',
+    mine: '我的',
+    favorites: '收藏',
+    language: '语言选择',
+    chinese: '中文',
+    english: 'English',
+    close: '关闭',
+    mineEyebrow: 'DAILYTEN · 我的',
+    mineTitle: '我的',
+    mineSubtitle: '管理收藏、语言和之后会接入的个人偏好。',
+    favoritesEyebrow: 'DAILYTEN · 收藏',
+    favoritesTitle: '我的收藏',
+    favoritesSubtitle: '已收藏的内容会保留在本机浏览器里，方便之后回看。',
+    favoritesEmptyTitle: '暂无收藏',
+    favoritesEmptyCopy: '在每日十条或 AI 行业里点击收藏，内容会出现在这里。',
+    noContentTitle: '暂无内容',
+    noContentCopy: '这一天暂时没有可展示的内容。',
+    progressDefault: '先扫读，再展开真正想看的。',
+    progressEmpty: '在每日十条或 AI 行业里点击收藏。',
+    readComplete: '这一天的十条已完成。',
+    readPrefix: '已读',
+    favoriteOn: '已收藏',
+    favoriteOff: '收藏',
+    muteOn: '已记录偏好',
+    muteOff: '少看这类',
+    conclusion: '一句话结论',
+    facts: '三个关键事实',
+    visual: '核心可视化',
+    impact: '对个人有什么影响',
+    next: '接下来只看什么',
+    today: '今天',
+    languageHint: '选择后会立刻保存到当前浏览器。',
+    favoriteHint: '查看已收藏的十条',
+  },
+  en: {
+    daily: 'Home',
+    ai: 'AI Industry',
+    mine: 'Mine',
+    favorites: 'Favorites',
+    language: 'Language',
+    chinese: 'Chinese',
+    english: 'English',
+    close: 'Close',
+    mineEyebrow: 'DAILYTEN · MINE',
+    mineTitle: 'Mine',
+    mineSubtitle: 'Manage favorites, language, and future personal preferences.',
+    favoritesEyebrow: 'DAILYTEN · FAVORITES',
+    favoritesTitle: 'Favorites',
+    favoritesSubtitle: 'Saved items stay in this browser for quick review later.',
+    favoritesEmptyTitle: 'No favorites yet',
+    favoritesEmptyCopy: 'Tap Favorite in DailyTen or AI Industry to save items here.',
+    noContentTitle: 'No content',
+    noContentCopy: 'There is nothing to show for this date yet.',
+    progressDefault: 'Scan first, then open the stories that matter.',
+    progressEmpty: 'Tap Favorite in DailyTen or AI Industry to save items.',
+    readComplete: 'You have finished this edition.',
+    readPrefix: 'Read',
+    favoriteOn: 'Saved',
+    favoriteOff: 'Favorite',
+    muteOn: 'Preference saved',
+    muteOff: 'Show less',
+    conclusion: 'Bottom line',
+    facts: 'Three key facts',
+    visual: 'Core visual',
+    impact: 'What it means for you',
+    next: 'What to watch next',
+    today: 'Today',
+    languageHint: 'Your choice is saved in this browser.',
+    favoriteHint: 'View saved items',
   },
 };
 
@@ -43,6 +126,7 @@ const storageKeys = {
   read: 'dailyten-web:read',
   channel: 'dailyten-web:channel',
   date: 'dailyten-web:date',
+  language: 'dailyten-web:language',
 };
 
 const iconPaths = {
@@ -69,6 +153,7 @@ const state = {
   muted: readSet(storageKeys.muted),
   read: readSet(storageKeys.read),
   channel: channels[localStorage.getItem(storageKeys.channel)] ? localStorage.getItem(storageKeys.channel) : 'daily',
+  language: readSavedLanguage(),
   selectedDateKey: readSavedDateKey(),
   calendarExpanded: false,
 };
@@ -78,12 +163,18 @@ const elements = {
   title: document.querySelector('#page-title'),
   subtitle: document.querySelector('.subtitle'),
   channelTabs: document.querySelector('#channel-tabs'),
+  bottomNav: document.querySelector('#bottom-nav'),
   dateModule: document.querySelector('#date-module'),
   progressTitle: document.querySelector('#progress-title'),
   progressStatus: document.querySelector('#progress-status'),
+  progressCard: document.querySelector('.progress-card'),
   feed: document.querySelector('#feed'),
   dots: document.querySelector('#progress-dots'),
   doneCard: document.querySelector('#done-card'),
+  languageModal: document.querySelector('#language-modal'),
+  languageOptions: document.querySelector('#language-options'),
+  languageModalTitle: document.querySelector('#language-modal-title'),
+  languageClose: document.querySelector('[data-language-close]'),
 };
 
 let items = [];
@@ -94,6 +185,8 @@ init();
 
 async function init() {
   renderChannelTabs();
+  renderLanguageModal();
+  wireLanguageModal();
   wireDateGestures();
   showLoadingState('正在读取这一天的十条...');
 
@@ -143,6 +236,10 @@ function setLatestDate(dateKey) {
 }
 
 async function loadEdition(channel, dateKey) {
+  if (channel === 'mine') {
+    return buildMineEdition();
+  }
+
   if (channel === 'favorites') {
     return buildFavoritesEdition();
   }
@@ -166,23 +263,31 @@ async function fetchEdition(pathname) {
 
 function hydrateEdition(edition) {
   const channel = channels[state.channel];
-  document.title = `${edition.title ?? channel.fallbackTitle} · ${channel.label}`;
-  elements.eyebrow.textContent = channel.eyebrow;
-  elements.title.textContent = edition.title ?? channel.fallbackTitle;
-  elements.subtitle.textContent = edition.subtitle ?? channel.fallbackSubtitle;
-  elements.progressTitle.textContent = edition.briefLabel ?? `${dateLabel(state.selectedDateKey)} 10 条`;
-  elements.progressStatus.textContent = '先扫读，再展开真正想看的。';
-  elements.doneCard.textContent = edition.doneLabel ?? '这一天已读完';
+  const title = localizedEditionTitle(edition, channel);
+  const subtitle = localizedEditionSubtitle(edition, channel);
+
+  document.documentElement.lang = state.language === 'en' ? 'en' : 'zh-CN';
+  document.title = `${title} · ${t(state.channel) ?? channel.label}`;
+  elements.eyebrow.textContent = localizedEyebrow(channel);
+  elements.title.textContent = title;
+  elements.subtitle.textContent = subtitle;
+  elements.progressTitle.textContent = localizedBriefLabel(edition);
+  elements.progressStatus.textContent = t('progressDefault');
+  elements.doneCard.textContent = edition.doneLabel ?? t('readComplete');
+  elements.progressCard.hidden = state.channel === 'mine';
 }
 
 function renderChannelTabs() {
-  elements.channelTabs.innerHTML = Object.entries(channels).map(([key, channel]) => `
-    <button class="channel-tab${state.channel === key ? ' is-active' : ''}" type="button" data-channel="${key}">
-      ${escapeHtml(channel.label)}
+  elements.channelTabs.hidden = true;
+  const activeTab = state.channel === 'favorites' ? 'mine' : state.channel;
+
+  elements.bottomNav.innerHTML = bottomTabs.map((key) => `
+    <button class="bottom-nav-item${activeTab === key ? ' is-active' : ''}" type="button" data-channel="${key}">
+      ${escapeHtml(t(key))}
     </button>
   `).join('');
 
-  elements.channelTabs.querySelectorAll('[data-channel]').forEach((button) => {
+  elements.bottomNav.querySelectorAll('[data-channel]').forEach((button) => {
     button.addEventListener('click', async () => {
       const nextChannel = button.dataset.channel;
       if (state.channel === nextChannel) return;
@@ -193,8 +298,47 @@ function renderChannelTabs() {
   });
 }
 
+function renderLanguageModal() {
+  elements.languageModalTitle.textContent = t('language');
+  elements.languageClose.textContent = '×';
+  elements.languageClose.setAttribute('aria-label', t('close'));
+  elements.languageOptions.innerHTML = `
+    <button class="choice-option${state.language === 'zh' ? ' is-active' : ''}" type="button" data-language="zh">
+      <strong>${escapeHtml(t('chinese'))}</strong>
+      <span>${state.language === 'zh' ? '当前选择' : ''}</span>
+    </button>
+    <button class="choice-option${state.language === 'en' ? ' is-active' : ''}" type="button" data-language="en">
+      <strong>${escapeHtml(t('english'))}</strong>
+      <span>${state.language === 'en' ? 'Selected' : ''}</span>
+    </button>
+    <p class="choice-hint">${escapeHtml(t('languageHint'))}</p>
+  `;
+
+  elements.languageOptions.querySelectorAll('[data-language]').forEach((button) => {
+    button.addEventListener('click', async () => {
+      state.language = button.dataset.language;
+      localStorage.setItem(storageKeys.language, state.language);
+      elements.languageModal.hidden = true;
+      renderLanguageModal();
+      await loadAndRender();
+    });
+  });
+}
+
+function wireLanguageModal() {
+  elements.languageClose.addEventListener('click', () => {
+    elements.languageModal.hidden = true;
+  });
+
+  elements.languageModal.addEventListener('click', (event) => {
+    if (event.target === elements.languageModal) {
+      elements.languageModal.hidden = true;
+    }
+  });
+}
+
 function renderDateModule() {
-  if (state.channel === 'favorites') {
+  if (state.channel === 'favorites' || state.channel === 'mine') {
     elements.dateModule.hidden = true;
     elements.dateModule.innerHTML = '';
     return;
@@ -216,14 +360,14 @@ function renderDateModule() {
       <div class="calendar-head">
         <div>
           <strong>${monthDate.getFullYear()}年 ${monthDate.getMonth() + 1}月</strong>
-          <span>可查看今天和昨天的十条</span>
+          <span>${state.language === 'en' ? 'Today and yesterday are available for now' : '可查看今天和昨天的十条'}</span>
         </div>
         <button class="calendar-toggle in-panel" type="button" aria-label="收起日历" aria-expanded="${state.calendarExpanded}">
           <span class="chevron-icon is-up" aria-hidden="true"><span></span><span></span></span>
         </button>
       </div>
       <div class="weekday-grid">
-        ${['日', '一', '二', '三', '四', '五', '六'].map((day) => `<span>${day}</span>`).join('')}
+        ${weekdayNames().map((day) => `<span>${day}</span>`).join('')}
       </div>
       <div class="calendar-grid">
         ${calendarCellsHtml(monthDate)}
@@ -253,7 +397,7 @@ function dateChipHtml(date) {
     <button class="date-chip${selected ? ' is-selected' : ''}" type="button" data-date-key="${key}">
       <span>${weekdayLabel(date)}</span>
       <strong>${date.getDate()}</strong>
-      <em>${key === todayKey ? '今天' : `${date.getMonth() + 1}月${date.getDate()}日`}</em>
+      <em>${key === todayKey ? t('today') : shortDateLabel(date)}</em>
     </button>
   `;
 }
@@ -324,7 +468,7 @@ function renderDots(count) {
 }
 
 function showLoadingState(text) {
-  elements.feed.innerHTML = `<article class="state-card">${escapeHtml(text)}</article>`;
+  elements.feed.innerHTML = `<article class="state-card">${escapeHtml(state.language === 'en' ? 'Loading this edition...' : text)}</article>`;
 }
 
 function showErrorState(error) {
@@ -339,11 +483,16 @@ function showErrorState(error) {
 function render() {
   elements.feed.innerHTML = '';
 
+  if (state.channel === 'mine') {
+    renderMine();
+    return;
+  }
+
   if (!items.length) {
-    const emptyTitle = state.channel === 'favorites' ? '暂无收藏' : '暂无内容';
+    const emptyTitle = state.channel === 'favorites' ? t('favoritesEmptyTitle') : t('noContentTitle');
     const emptyCopy = state.channel === 'favorites'
-      ? '在每日十条或 AI 行业里点击收藏，内容会出现在这里。'
-      : '这一天暂时没有可展示的内容。';
+      ? t('favoritesEmptyCopy')
+      : t('noContentCopy');
     elements.feed.innerHTML = `
       <article class="state-card">
         <strong>${emptyTitle}</strong>
@@ -369,6 +518,39 @@ function render() {
   });
 
   updateProgress();
+}
+
+function renderMine() {
+  elements.progressCard.hidden = true;
+  elements.doneCard.hidden = true;
+  elements.feed.innerHTML = `
+    <section class="settings-list" aria-label="${escapeHtml(t('mine'))}">
+      <button class="settings-row" type="button" data-settings-action="favorites">
+        <span>
+          <strong>${escapeHtml(t('favorites'))}</strong>
+          <em>${escapeHtml(t('favoriteHint'))}</em>
+        </span>
+        <b>${state.favorites.size}</b>
+      </button>
+      <button class="settings-row" type="button" data-settings-action="language">
+        <span>
+          <strong>${escapeHtml(t('language'))}</strong>
+          <em>${escapeHtml(state.language === 'en' ? t('english') : t('chinese'))}</em>
+        </span>
+        <b>${state.language === 'en' ? 'EN' : '中'}</b>
+      </button>
+    </section>
+  `;
+
+  elements.feed.querySelector('[data-settings-action="favorites"]').addEventListener('click', async () => {
+    state.channel = 'favorites';
+    await loadAndRender();
+  });
+
+  elements.feed.querySelector('[data-settings-action="language"]').addEventListener('click', () => {
+    renderLanguageModal();
+    elements.languageModal.hidden = false;
+  });
 }
 
 function createCard(item) {
@@ -436,13 +618,13 @@ function detailsHtml(item) {
     <div class="divider"></div>
     <div class="takeaway-row">
       <div class="takeaway-copy">
-        <p class="mini-label">一句话结论</p>
+        <p class="mini-label">${escapeHtml(t('conclusion'))}</p>
         <p class="take-text">${escapeHtml(item.take)}。</p>
       </div>
       <span class="sketch-icon">${sketchIcon(item.icon, 58)}</span>
     </div>
 
-    ${sectionTitle('三个关键事实')}
+    ${sectionTitle(t('facts'))}
     <div class="fact-grid">
       ${item.facts.map(([label, text]) => `
         <div class="fact">
@@ -452,9 +634,9 @@ function detailsHtml(item) {
       `).join('')}
     </div>
 
-    ${item.visual ? `${sectionTitle('核心可视化')}${visualBlock(item.visual)}` : ''}
+    ${item.visual ? `${sectionTitle(t('visual'))}${visualBlock(item.visual)}` : ''}
 
-    ${sectionTitle('对个人有什么影响')}
+    ${sectionTitle(t('impact'))}
     <div class="impact-grid">
       ${item.impacts.map(([label, text]) => `
         <div class="impact">
@@ -465,7 +647,7 @@ function detailsHtml(item) {
     </div>
 
     ${item.next.length ? `
-      ${sectionTitle('接下来只看什么')}
+      ${sectionTitle(t('next'))}
       <ol class="next-list">
         ${item.next.map((text, index) => `<li><span>${index + 1}</span>${escapeHtml(text)}</li>`).join('')}
       </ol>
@@ -530,14 +712,29 @@ async function buildFavoritesEdition() {
   return {
     dateKey: 'favorites',
     generatedAt: new Date().toISOString(),
-    title: '我的收藏',
+    title: t('favoritesTitle'),
     subtitle: favoriteItems.length
-      ? '已收藏的内容会保留在本机浏览器里，方便之后回看。'
+      ? t('favoritesSubtitle')
       : channels.favorites.fallbackSubtitle,
-    briefLabel: favoriteItems.length ? `已收藏 ${favoriteItems.length} 条` : '暂无收藏',
-    doneLabel: '收藏已读完',
+    briefLabel: favoriteItems.length
+      ? (state.language === 'en' ? `${favoriteItems.length} saved` : `已收藏 ${favoriteItems.length} 条`)
+      : t('favoritesEmptyTitle'),
+    doneLabel: state.language === 'en' ? 'Favorites finished' : '收藏已读完',
     readTimeMinutes: Math.max(1, Math.ceil(favoriteItems.length * 0.8)),
     items: favoriteItems,
+  };
+}
+
+function buildMineEdition() {
+  return {
+    dateKey: 'mine',
+    generatedAt: new Date().toISOString(),
+    title: t('mineTitle'),
+    subtitle: t('mineSubtitle'),
+    briefLabel: '',
+    doneLabel: '',
+    readTimeMinutes: 0,
+    items: [],
   };
 }
 
@@ -779,17 +976,17 @@ function syncCardButtons(card, id) {
   const favorite = state.favorites.has(id);
   const muted = state.muted.has(id);
 
-  favoriteButton.textContent = favorite ? '已收藏' : '收藏';
+  favoriteButton.textContent = favorite ? t('favoriteOn') : t('favoriteOff');
   favoriteButton.classList.toggle('is-active', favorite);
-  muteButton.textContent = muted ? '已记录偏好' : '少看这类';
+  muteButton.textContent = muted ? t('muteOn') : t('muteOff');
 }
 
 function updateProgress() {
   if (!items.length) {
     Array.from(elements.dots.children).forEach((dot) => dot.classList.remove('is-read'));
     elements.progressStatus.textContent = state.channel === 'favorites'
-      ? '在每日十条或 AI 行业里点击收藏。'
-      : '暂无可读内容。';
+      ? t('progressEmpty')
+      : t('noContentCopy');
     elements.doneCard.hidden = true;
     return;
   }
@@ -799,14 +996,59 @@ function updateProgress() {
     dot.classList.toggle('is-read', index < readCount);
   });
   elements.progressStatus.textContent = readCount === items.length
-    ? '这一天的十条已完成。'
-    : `已读 ${readCount} / ${items.length} 条`;
+    ? t('readComplete')
+    : `${t('readPrefix')} ${readCount} / ${items.length}`;
   elements.doneCard.hidden = readCount !== items.length;
+}
+
+function t(key) {
+  return i18n[state.language]?.[key] ?? i18n.zh[key] ?? key;
+}
+
+function localizedEyebrow(channel) {
+  if (state.channel === 'mine') return t('mineEyebrow');
+  if (state.channel === 'favorites') return t('favoritesEyebrow');
+  return state.language === 'en'
+    ? `DAILYTEN · ${t(state.channel).toUpperCase()}`
+    : channel.eyebrow;
+}
+
+function localizedEditionTitle(edition, channel) {
+  if (state.channel === 'mine') return t('mineTitle');
+  if (state.channel === 'favorites') return t('favoritesTitle');
+  if (state.language === 'en') {
+    return state.channel === 'ai' ? 'AI Industry Ten' : 'DailyTen';
+  }
+  return edition.title ?? channel.fallbackTitle;
+}
+
+function localizedEditionSubtitle(edition, channel) {
+  if (state.channel === 'mine') return t('mineSubtitle');
+  if (state.channel === 'favorites') return edition.subtitle ?? t('favoritesSubtitle');
+  if (state.language === 'en') {
+    return state.channel === 'ai'
+      ? 'Models, agents, compute, chips, products, and governance in one quiet briefing.'
+      : 'Ten things worth knowing today, filtered and explained clearly.';
+  }
+  return edition.subtitle ?? channel.fallbackSubtitle;
+}
+
+function localizedBriefLabel(edition) {
+  if (state.channel === 'mine') return '';
+  if (state.channel === 'favorites') return edition.briefLabel;
+  if (state.language === 'en') {
+    return `${dateLabel(state.selectedDateKey)} · 10 items`;
+  }
+  return edition.briefLabel ?? `${dateLabel(state.selectedDateKey)} 10 条`;
 }
 
 function readSavedDateKey() {
   const saved = localStorage.getItem(storageKeys.date);
   return saved === todayKey || saved === yesterdayKey ? saved : todayKey;
+}
+
+function readSavedLanguage() {
+  return localStorage.getItem(storageKeys.language) === 'en' ? 'en' : 'zh';
 }
 
 function readSet(key) {
@@ -857,13 +1099,33 @@ function formatChineseDate(dateKey) {
 }
 
 function dateLabel(dateKey) {
-  if (dateKey === todayKey) return '今天';
-  if (dateKey === yesterdayKey) return '昨天';
-  return formatChineseDate(dateKey);
+  if (dateKey === todayKey) return t('today');
+  if (dateKey === yesterdayKey) return state.language === 'en' ? 'Yesterday' : '昨天';
+  return state.language === 'en' ? formatEnglishDate(dateKey) : formatChineseDate(dateKey);
 }
 
 function weekdayLabel(date) {
-  return ['周日', '周一', '周二', '周三', '周四', '周五', '周六'][date.getDay()];
+  const names = state.language === 'en'
+    ? ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat']
+    : ['周日', '周一', '周二', '周三', '周四', '周五', '周六'];
+  return names[date.getDay()];
+}
+
+function weekdayNames() {
+  return state.language === 'en'
+    ? ['S', 'M', 'T', 'W', 'T', 'F', 'S']
+    : ['日', '一', '二', '三', '四', '五', '六'];
+}
+
+function shortDateLabel(date) {
+  return state.language === 'en'
+    ? `${date.toLocaleString('en-US', { month: 'short' })} ${date.getDate()}`
+    : `${date.getMonth() + 1}月${date.getDate()}日`;
+}
+
+function formatEnglishDate(dateKey) {
+  const date = parseDateKey(dateKey);
+  return `${date.toLocaleString('en-US', { month: 'short' })} ${date.getDate()}`;
 }
 
 function uniqueId(prefix) {
