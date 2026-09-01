@@ -71,6 +71,7 @@ const i18n = {
     readPrefix: '已读',
     favoriteOn: '已收藏',
     favoriteOff: '收藏',
+    collapse: '收起',
     muteOn: '已记录偏好',
     muteOff: '少看这类',
     conclusion: '一句话结论',
@@ -107,6 +108,7 @@ const i18n = {
     readPrefix: 'Read',
     favoriteOn: 'Saved',
     favoriteOff: 'Favorite',
+    collapse: 'Collapse',
     muteOn: 'Preference saved',
     muteOff: 'Show less',
     conclusion: 'Bottom line',
@@ -579,13 +581,20 @@ function createCard(item) {
   details.innerHTML = detailsHtml(item);
 
   header.addEventListener('click', () => {
-    const open = card.classList.toggle('is-open');
-    header.setAttribute('aria-expanded', String(open));
-    if (open) {
-      state.read.add(item.id);
-      writeSet(storageKeys.read, state.read);
-      updateProgress();
+    if (card.classList.contains('is-open')) {
+      collapseCardWithoutJump(card, header);
+      return;
     }
+
+    card.classList.add('is-open');
+    header.setAttribute('aria-expanded', 'true');
+    state.read.add(item.id);
+    writeSet(storageKeys.read, state.read);
+    updateProgress();
+  });
+
+  details.querySelector('[data-action="collapse"]').addEventListener('click', () => {
+    collapseCardWithoutJump(card, header);
   });
 
   details.querySelector('[data-action="favorite"]').addEventListener('click', async () => {
@@ -658,9 +667,32 @@ function detailsHtml(item) {
       <span class="actions">
         <button class="pill-button" type="button" data-action="favorite"></button>
         <button class="pill-button is-danger" type="button" data-action="mute"></button>
+        <button class="pill-button is-collapse" type="button" data-action="collapse">${escapeHtml(t('collapse'))}</button>
       </span>
     </div>
   `;
+}
+
+function collapseCardWithoutJump(card, header) {
+  const beforeTop = card.getBoundingClientRect().top;
+  card.classList.remove('is-open');
+  header.setAttribute('aria-expanded', 'false');
+
+  requestAnimationFrame(() => {
+    const afterRect = card.getBoundingClientRect();
+    const topPadding = 12;
+
+    if (afterRect.bottom < topPadding || afterRect.top < -topPadding) {
+      window.scrollTo({
+        top: Math.max(0, window.scrollY + afterRect.top - topPadding),
+        left: 0,
+        behavior: 'auto',
+      });
+      return;
+    }
+
+    window.scrollBy({ top: afterRect.top - beforeTop, left: 0, behavior: 'auto' });
+  });
 }
 
 function sectionTitle(text) {
