@@ -114,7 +114,20 @@
           "url": "https://www.chinanews.com.cn/cj/2026/09-01/10687882.shtml",
           "publisher": "中新网"
         }
-      ]
+      ],
+      "eventImage": {
+        "url": "https://2b1c.cscec.com/xwzx/gsyw/202412/W020241218360665154863.jpg",
+        "credit": "中建二局一公司惠州智算中心项目图",
+        "link": "https://2b1c.cscec.com/xwzx/gsyw/202412/3837815.html",
+        "zh": {
+          "alt": "惠州智算中心项目建设效果图",
+          "caption": "相关真实项目图：润泽（惠州）国际信息港新型智算中心"
+        },
+        "en": {
+          "alt": "Project image of a Huizhou intelligent computing center",
+          "caption": "Related real project image: Runze Huizhou intelligent computing center"
+        }
+      }
     },
     {
       "id": "data-crowdwork",
@@ -207,7 +220,20 @@
           "url": "https://www.nbd.com.cn/articles/2026-09-01/4568565.html",
           "publisher": "每日经济新闻"
         }
-      ]
+      ],
+      "eventImage": {
+        "url": "https://smcos.cdmgiml.com/tx/others/upload/2e65c40b2b324eb44ac0db1d93b19b14-1770046399320.jpg",
+        "credit": "每日经济新闻配图",
+        "link": "https://www.nbd.com.cn/articles/2026-09-01/4568565.html",
+        "zh": {
+          "alt": "数据采集众包报道配图",
+          "caption": "原文配图：数据采集众包与数据零工报道"
+        },
+        "en": {
+          "alt": "Image from a report on crowdsourced AI data work",
+          "caption": "Source image: report on crowdsourced AI data work"
+        }
+      }
     },
     {
       "id": "ai-devices-policy",
@@ -300,7 +326,20 @@
           "url": "https://finance.eastmoney.com/a/202609023861873539.html",
           "publisher": "东方财富网"
         }
-      ]
+      ],
+      "eventImage": {
+        "url": "https://np-metadata.eastmoney.com/api/metadata.jpg?event=1&source=3&mode=2&type=1&id=202609023861873539",
+        "credit": "东方财富新闻卡片图",
+        "link": "https://finance.eastmoney.com/a/202609023861873539.html",
+        "zh": {
+          "alt": "AI终端政策支持报道卡片图",
+          "caption": "来源页图片：AI终端与一老一小应用场景报道"
+        },
+        "en": {
+          "alt": "Image card from a report on AI devices for older adults and children",
+          "caption": "Source image: report on AI devices for older adults and children"
+        }
+      }
     },
     {
       "id": "hangzhou-humanoid-standard",
@@ -403,7 +442,20 @@
           "url": "https://hznews.hangzhou.com.cn/jingji/content/2026-09/01/content_9295134.htm",
           "publisher": "杭州网"
         }
-      ]
+      ],
+      "eventImage": {
+        "url": "https://meizi-chao-pub.8531.cn/2093272292417314816_1280px.png?width=1280&height=850",
+        "credit": "潮新闻机器人相关图",
+        "link": "https://tidenews.com.cn/news.html?id=3543143",
+        "zh": {
+          "alt": "人形机器人相关真实图片",
+          "caption": "相关真实图：源页未提供现场图，先用机器人产业报道图辅助理解"
+        },
+        "en": {
+          "alt": "Related real image of humanoid robotics",
+          "caption": "Related real image: the source page did not expose an event photo"
+        }
+      }
     },
     {
       "id": "shenzhen-robot-valley",
@@ -514,7 +566,20 @@
           "url": "https://news.southcn.com/node_ac2b0b62a4/eb19061da0.shtml",
           "publisher": "南方网"
         }
-      ]
+      ],
+      "eventImage": {
+        "url": "https://ocmsmedia.sfccn.com/vod-4310da/image/default/9927BDFBE889419BB8BB95B263F4E4FD-6-2.jpeg",
+        "credit": "南方财经深圳机器人谷相关图",
+        "link": "https://news.southcn.com/node_ac2b0b62a4/eb19061da0.shtml",
+        "zh": {
+          "alt": "深圳机器人谷相关真实图",
+          "caption": "相关真实图：深圳机器人谷产业片区，用来辅助理解本地机器人供应链密度"
+        },
+        "en": {
+          "alt": "Related real image of Shenzhen Robot Valley",
+          "caption": "Related real image: Shenzhen Robot Valley helps show local supplier density"
+        }
+      }
     },
     {
       "id": "robot-parts-alliance",
@@ -599,7 +664,20 @@
           "url": "https://autonews.gasgoo.com/articles/news/robot-parts-industry-development-alliance-established-co-founded-by-jd-industrial-and-schaeffler-2094630697271902208",
           "publisher": "Gasgoo"
         }
-      ]
+      ],
+      "eventImage": {
+        "url": "https://50002352.s21i.huaweicloudsite.cn/2/ABUIABACGAAgtZiqyQYoqMbxogEwsAk42gU.jpg",
+        "credit": "森云智能京东工业合作报道图",
+        "link": "https://www.sensing-world.com/h-nd-102.html",
+        "zh": {
+          "alt": "京东工业机器人供应商合作授牌现场",
+          "caption": "相关真实图：京东工业机器人供应商合作现场，辅助理解机器人零部件联盟"
+        },
+        "en": {
+          "alt": "JD Industrial robotics supplier cooperation ceremony",
+          "caption": "Related real image: JD Industrial robotics supplier cooperation, used to explain parts alliances"
+        }
+      }
     },
     {
       "id": "osaka-metro-humanoid",
@@ -710,7 +788,20 @@
           "url": "https://newsonjapan.com/article/150576.php",
           "publisher": "News On Japan"
         }
-      ]
+      ],
+      "eventImage": {
+        "url": "https://i2.ytimg.com/vi/zGop4dKqvnU/maxresdefault.jpg",
+        "credit": "News On Japan 视频缩略图",
+        "link": "https://newsonjapan.com/article/150576.php",
+        "zh": {
+          "alt": "大阪地铁试用人形机器人报道视频缩略图",
+          "caption": "来源页视频图：大阪地铁试用人形机器人"
+        },
+        "en": {
+          "alt": "Video thumbnail from a report on Osaka Metro trialing a humanoid robot",
+          "caption": "Source video image: Osaka Metro trialing a humanoid robot"
+        }
+      }
     },
     {
       "id": "anthropic-data-center",
@@ -827,7 +918,20 @@
           "url": "https://www.haberaktuel.com/anthropic-35-milyar-dolarlik-veri-merkezi-anlasmasi-imzaladi-3481754",
           "publisher": "Haber Aktuel"
         }
-      ]
+      ],
+      "eventImage": {
+        "url": "https://www.haberaktuel.com/wp-content/uploads/anthropic-35-milyar-dolarlik-veri-merkezi-anlasmasi-imzaladi.webp",
+        "credit": "Haber Aktuel 配图",
+        "link": "https://www.haberaktuel.com/anthropic-35-milyar-dolarlik-veri-merkezi-anlasmasi-imzaladi-3481754",
+        "zh": {
+          "alt": "Anthropic数据中心协议报道配图",
+          "caption": "原文配图：Anthropic数据中心协议报道"
+        },
+        "en": {
+          "alt": "Image from a report on Anthropic data-center agreements",
+          "caption": "Source image: report on Anthropic data-center agreements"
+        }
+      }
     },
     {
       "id": "meta-data-center-robots",
@@ -938,7 +1042,20 @@
           "url": "https://embarque.developpez.com/actu/386691/Dans-les-coulisses-de-l-initiative-de-Meta-visant-a-mettre-des-robots-au-travail-dans-ses-centres-de-donnees-les-robots-restent-plus-lents-que-les-techniciens-humains-et-fonctionnent-sous-supervision/",
           "publisher": "Developpez.com"
         }
-      ]
+      ],
+      "eventImage": {
+        "url": "https://image.ic.work/e8/e8aab970c9c4.png",
+        "credit": "ic.work 数据中心机器人报道图",
+        "link": "https://www.ic.work/article/softbank-roze-ai-robotics-data-centers-100b-ipo",
+        "zh": {
+          "alt": "数据中心施工现场机器人搬运相关图",
+          "caption": "相关真实图：数据中心机器人搬运场景，辅助理解 Meta 数据中心机器人试用"
+        },
+        "en": {
+          "alt": "Related real image of robots moving materials in a data-center construction site",
+          "caption": "Related real image: data-center robotics scene, used to explain Meta data-center robot trials"
+        }
+      }
     },
     {
       "id": "dreame-car-production",
@@ -1031,7 +1148,20 @@
           "url": "https://www.nbd.com.cn/articles/2026-09-01/4569580.html",
           "publisher": "每日经济新闻"
         }
-      ]
+      ],
+      "eventImage": {
+        "url": "https://img1.mydrivers.com/img/20260313/061f2d7fc6e34cea99c77b58e1f03b04.jpg",
+        "credit": "快科技追觅汽车相关图",
+        "link": "https://news.mydrivers.com/1/1108/1108895.htm",
+        "zh": {
+          "alt": "追觅汽车概念车相关图片",
+          "caption": "相关真实图：追觅汽车概念车，用来辅助理解整车量产讨论"
+        },
+        "en": {
+          "alt": "Related real image of a Dreame concept car",
+          "caption": "Related real image: Dreame concept car, used to explain the production discussion"
+        }
+      }
     }
   ]
 }

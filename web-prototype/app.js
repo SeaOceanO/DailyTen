@@ -85,6 +85,7 @@ const i18n = {
     conclusion: '一句话结论',
     facts: '三个关键事实',
     visual: '核心可视化',
+    eventImage: '事件图片',
     impact: '对个人有什么影响',
     next: '接下来只看什么',
     today: '今天',
@@ -131,6 +132,7 @@ const i18n = {
     conclusion: 'Bottom line',
     facts: 'Three key facts',
     visual: 'Core visual',
+    eventImage: 'Event image',
     impact: 'What it means for you',
     next: 'What to watch next',
     today: 'Today',
@@ -899,6 +901,8 @@ function detailsHtml(item) {
       `).join('')}
     </div>
 
+    ${eventImageHtml(item)}
+
     ${item.visual ? `${sectionTitle(t('visual'))}${visualBlock(item.visual)}` : ''}
 
     ${sectionTitle(t('impact'))}
@@ -1218,6 +1222,34 @@ function sketchIcon(name, size) {
   `;
 }
 
+function eventImageHtml(item) {
+  const image = localizedEventImage(item.eventImage);
+  if (!image?.url) return '';
+  const caption = image.caption || image.credit || item.source || '';
+  const link = image.link || item.sourceLinks?.[0]?.url || '';
+  const imageMarkup = `
+    <img src="${escapeHtml(image.url)}" alt="${escapeHtml(image.alt || caption || item.title)}" loading="lazy" referrerpolicy="no-referrer" />
+  `;
+
+  return `
+    ${sectionTitle(t('eventImage'))}
+    <figure class="event-image">
+      ${link ? `<a href="${escapeHtml(link)}" target="_blank" rel="noopener noreferrer">${imageMarkup}</a>` : imageMarkup}
+      ${caption ? `<figcaption>${escapeHtml(caption)}</figcaption>` : ''}
+    </figure>
+  `;
+}
+
+function localizedEventImage(image) {
+  if (!image) return null;
+  const localized = state.language === 'en' ? image.en : image.zh;
+  return {
+    ...image,
+    alt: localized?.alt ?? image.alt,
+    caption: localized?.caption ?? image.caption,
+  };
+}
+
 function chainDiagramHtml(nodes) {
   return `
     <div class="chain-diagram" role="img" aria-label="${escapeHtml(nodes.join('，'))}">
@@ -1267,38 +1299,22 @@ function arrowPath(x, y, length) {
 }
 
 function barsSvg(bars, max, decimal = false) {
-  const width = 620;
-  const rowHeight = 34;
-  const height = bars.length * rowHeight + 24;
-  const left = 112;
-  const plot = width - left - 58;
-  const id = uniqueId('bars');
-
-  const shapes = bars.map(([, value, color], index) => {
-    const y = 8 + index * rowHeight;
-    const barWidth = Math.max(4, (plot * value) / max);
-    return `
-      <rect x="${left}" y="${y + 8}" width="${plot}" height="17" rx="6" fill="${C.track}" />
-      <rect x="${left}" y="${y + 8}" width="${barWidth}" height="17" rx="6" fill="${color}" />
-    `;
-  }).join('');
-
-  const labels = bars.map(([label, value], index) => {
-    const y = 8 + index * rowHeight;
-    const barWidth = Math.max(4, (plot * value) / max);
-    const display = decimal ? value.toFixed(1) : String(value);
-    return `
-      <text x="${left - 10}" y="${y + 17}" text-anchor="end" dominant-baseline="middle" font-size="12" fill="${C.secondary}">${escapeSvg(label)}</text>
-      <text x="${left + barWidth + 8}" y="${y + 17}" dominant-baseline="middle" font-size="12" font-weight="700" fill="${C.ink}">${display}%</text>
-    `;
-  }).join('');
-
   return `
-    <svg class="visual-svg" viewBox="0 0 ${width} ${height}" role="img" aria-label="对比条形图">
-      <defs>${sketchFilter(id, 2, 0.02)}</defs>
-      <g filter="url(#${id})">${shapes}</g>
-      <g>${labels}</g>
-    </svg>
+    <div class="bars-diagram" role="img" aria-label="${state.language === 'en' ? 'Comparison bar chart' : '对比条形图'}">
+      ${bars.map(([label, value, color]) => {
+        const width = Math.min(100, Math.max(4, (value / max) * 100));
+        const display = decimal ? value.toFixed(1) : String(value);
+        return `
+          <div class="bar-row">
+            <span class="bar-label">${escapeHtml(label)}</span>
+            <div class="bar-track">
+              <span class="bar-fill" style="width: ${width}%; background: ${escapeHtml(color)}"></span>
+            </div>
+            <strong class="bar-value">${escapeHtml(display)}%</strong>
+          </div>
+        `;
+      }).join('')}
+    </div>
   `;
 }
 

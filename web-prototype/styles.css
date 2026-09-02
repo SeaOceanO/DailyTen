@@ -1035,6 +1035,35 @@ h1 {
   padding: 14px;
 }
 
+.event-image {
+  background: var(--frame);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  margin: 0 0 16px;
+  overflow: hidden;
+}
+
+.event-image a {
+  display: block;
+}
+
+.event-image img {
+  aspect-ratio: 16 / 9;
+  background: var(--track);
+  display: block;
+  object-fit: cover;
+  width: 100%;
+}
+
+.event-image figcaption {
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 11px;
+  line-height: 1.45;
+  margin: 0;
+  padding: 8px 10px;
+}
+
 .chain-diagram {
   align-items: center;
   display: flex;
@@ -1093,6 +1122,47 @@ h1 {
   color: var(--secondary);
   font-size: 12px;
   margin: 0 0 10px;
+}
+
+.bars-diagram {
+  display: grid;
+  gap: 10px;
+}
+
+.bar-row {
+  display: grid;
+  gap: 6px;
+  grid-template-columns: minmax(0, 1fr) auto;
+}
+
+.bar-label {
+  color: var(--secondary);
+  font-size: 12px;
+  font-weight: 760;
+  line-height: 1.35;
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.bar-value {
+  color: var(--ink);
+  font-size: 12px;
+  font-weight: 820;
+}
+
+.bar-track {
+  background: var(--track);
+  border-radius: 999px;
+  grid-column: 1 / -1;
+  height: 14px;
+  overflow: hidden;
+}
+
+.bar-fill {
+  border-radius: inherit;
+  display: block;
+  height: 100%;
+  min-width: 12px;
 }
 
 .next-list {

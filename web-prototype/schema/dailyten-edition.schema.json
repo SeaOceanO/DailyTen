@@ -66,11 +66,24 @@
     "sourceLink": {
       "type": "object",
       "additionalProperties": false,
-      "required": ["title", "url", "publisher"],
+      "required": [
+        "title",
+        "url",
+        "publisher"
+      ],
       "properties": {
-        "title": { "type": "string", "minLength": 1 },
-        "url": { "type": "string", "minLength": 1 },
-        "publisher": { "type": "string", "minLength": 1 }
+        "title": {
+          "type": "string",
+          "minLength": 1
+        },
+        "url": {
+          "type": "string",
+          "minLength": 1
+        },
+        "publisher": {
+          "type": "string",
+          "minLength": 1
+        }
       }
     },
     "visual": {
@@ -81,25 +94,47 @@
         {
           "type": "object",
           "additionalProperties": false,
-          "required": ["type", "label", "nodes"],
+          "required": [
+            "type",
+            "label",
+            "nodes"
+          ],
           "properties": {
-            "type": { "const": "chain" },
-            "label": { "type": "string", "minLength": 1 },
+            "type": {
+              "const": "chain"
+            },
+            "label": {
+              "type": "string",
+              "minLength": 1
+            },
             "nodes": {
               "type": "array",
               "minItems": 3,
               "maxItems": 6,
-              "items": { "type": "string", "minLength": 1 }
+              "items": {
+                "type": "string",
+                "minLength": 1
+              }
             }
           }
         },
         {
           "type": "object",
           "additionalProperties": false,
-          "required": ["type", "label", "bars", "max"],
+          "required": [
+            "type",
+            "label",
+            "bars",
+            "max"
+          ],
           "properties": {
-            "type": { "const": "bars" },
-            "label": { "type": "string", "minLength": 1 },
+            "type": {
+              "const": "bars"
+            },
+            "label": {
+              "type": "string",
+              "minLength": 1
+            },
             "bars": {
               "type": "array",
               "minItems": 2,
@@ -109,32 +144,71 @@
                 "minItems": 3,
                 "maxItems": 3,
                 "prefixItems": [
-                  { "type": "string", "minLength": 1 },
-                  { "type": "number" },
-                  { "type": "string", "pattern": "^#[0-9A-Fa-f]{6}$" }
+                  {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  {
+                    "type": "number"
+                  },
+                  {
+                    "type": "string",
+                    "pattern": "^#[0-9A-Fa-f]{6}$"
+                  }
                 ]
               }
             },
-            "max": { "type": "number", "exclusiveMinimum": 0 },
-            "decimal": { "type": "boolean" }
+            "max": {
+              "type": "number",
+              "exclusiveMinimum": 0
+            },
+            "decimal": {
+              "type": "boolean"
+            }
           }
         },
         {
           "type": "object",
           "additionalProperties": false,
-          "required": ["type", "label", "big", "sub", "direction", "up", "points"],
+          "required": [
+            "type",
+            "label",
+            "big",
+            "sub",
+            "direction",
+            "up",
+            "points"
+          ],
           "properties": {
-            "type": { "const": "trend" },
-            "label": { "type": "string", "minLength": 1 },
-            "big": { "type": "string", "minLength": 1 },
-            "sub": { "type": "string", "minLength": 1 },
-            "direction": { "type": "string", "minLength": 1 },
-            "up": { "type": "boolean" },
+            "type": {
+              "const": "trend"
+            },
+            "label": {
+              "type": "string",
+              "minLength": 1
+            },
+            "big": {
+              "type": "string",
+              "minLength": 1
+            },
+            "sub": {
+              "type": "string",
+              "minLength": 1
+            },
+            "direction": {
+              "type": "string",
+              "minLength": 1
+            },
+            "up": {
+              "type": "boolean"
+            },
             "points": {
               "type": "array",
               "minItems": 3,
               "maxItems": 12,
-              "items": { "type": "number" }
+              "items": {
+                "type": "number"
+              }
             }
           }
         }
@@ -157,31 +231,61 @@
         "updated"
       ],
       "properties": {
-        "cat": { "type": "string", "minLength": 1 },
-        "title": { "type": "string", "minLength": 1 },
-        "brief": { "type": "string", "minLength": 1 },
-        "take": { "type": "string", "minLength": 1 },
-        "meta": { "type": "string", "minLength": 1 },
+        "cat": {
+          "type": "string",
+          "minLength": 1
+        },
+        "title": {
+          "type": "string",
+          "minLength": 1
+        },
+        "brief": {
+          "type": "string",
+          "minLength": 1
+        },
+        "take": {
+          "type": "string",
+          "minLength": 1
+        },
+        "meta": {
+          "type": "string",
+          "minLength": 1
+        },
         "facts": {
           "type": "array",
           "minItems": 3,
           "maxItems": 3,
-          "items": { "$ref": "#/$defs/labelTextPair" }
+          "items": {
+            "$ref": "#/$defs/labelTextPair"
+          }
         },
-        "visual": { "$ref": "#/$defs/visual" },
+        "visual": {
+          "$ref": "#/$defs/visual"
+        },
         "impacts": {
           "type": "array",
           "minItems": 2,
           "maxItems": 3,
-          "items": { "$ref": "#/$defs/labelTextPair" }
+          "items": {
+            "$ref": "#/$defs/labelTextPair"
+          }
         },
         "next": {
           "type": "array",
           "maxItems": 2,
-          "items": { "type": "string", "minLength": 1 }
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
         },
-        "source": { "type": "string", "minLength": 1 },
-        "updated": { "type": "string", "minLength": 1 }
+        "source": {
+          "type": "string",
+          "minLength": 1
+        },
+        "updated": {
+          "type": "string",
+          "minLength": 1
+        }
       }
     },
     "newsItem": {
@@ -205,41 +309,141 @@
         "sourceLinks"
       ],
       "properties": {
-        "id": { "type": "string", "minLength": 1 },
-        "cat": { "type": "string", "minLength": 1 },
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "cat": {
+          "type": "string",
+          "minLength": 1
+        },
         "icon": {
           "type": "string",
-          "enum": ["oil", "chart", "drone", "quake", "ai", "alert", "code", "refinery", "ship", "eclipse"]
+          "enum": [
+            "oil",
+            "chart",
+            "drone",
+            "quake",
+            "ai",
+            "alert",
+            "code",
+            "refinery",
+            "ship",
+            "eclipse"
+          ]
         },
-        "title": { "type": "string", "minLength": 1 },
-        "brief": { "type": "string", "minLength": 1 },
-        "take": { "type": "string", "minLength": 1 },
-        "meta": { "type": "string", "minLength": 1 },
+        "title": {
+          "type": "string",
+          "minLength": 1
+        },
+        "brief": {
+          "type": "string",
+          "minLength": 1
+        },
+        "take": {
+          "type": "string",
+          "minLength": 1
+        },
+        "meta": {
+          "type": "string",
+          "minLength": 1
+        },
         "facts": {
           "type": "array",
           "minItems": 3,
           "maxItems": 3,
-          "items": { "$ref": "#/$defs/labelTextPair" }
+          "items": {
+            "$ref": "#/$defs/labelTextPair"
+          }
         },
-        "visual": { "$ref": "#/$defs/visual" },
+        "visual": {
+          "$ref": "#/$defs/visual"
+        },
         "impacts": {
           "type": "array",
           "minItems": 2,
           "maxItems": 3,
-          "items": { "$ref": "#/$defs/labelTextPair" }
+          "items": {
+            "$ref": "#/$defs/labelTextPair"
+          }
         },
         "next": {
           "type": "array",
           "maxItems": 2,
-          "items": { "type": "string", "minLength": 1 }
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
         },
-        "source": { "type": "string", "minLength": 1 },
-        "updated": { "type": "string", "minLength": 1 },
-        "en": { "$ref": "#/$defs/localizedNewsItem" },
+        "source": {
+          "type": "string",
+          "minLength": 1
+        },
+        "updated": {
+          "type": "string",
+          "minLength": 1
+        },
+        "en": {
+          "$ref": "#/$defs/localizedNewsItem"
+        },
         "sourceLinks": {
           "type": "array",
           "maxItems": 4,
-          "items": { "$ref": "#/$defs/sourceLink" }
+          "items": {
+            "$ref": "#/$defs/sourceLink"
+          }
+        },
+        "eventImage": {
+          "$ref": "#/$defs/eventImage"
+        }
+      }
+    },
+    "localizedText": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "alt",
+        "caption"
+      ],
+      "properties": {
+        "alt": {
+          "type": "string",
+          "minLength": 1
+        },
+        "caption": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "eventImage": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "url",
+        "credit",
+        "link",
+        "zh",
+        "en"
+      ],
+      "properties": {
+        "url": {
+          "type": "string",
+          "minLength": 1
+        },
+        "credit": {
+          "type": "string",
+          "minLength": 1
+        },
+        "link": {
+          "type": "string",
+          "minLength": 1
+        },
+        "zh": {
+          "$ref": "#/$defs/localizedText"
+        },
+        "en": {
+          "$ref": "#/$defs/localizedText"
         }
       }
     }
