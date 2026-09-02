@@ -7,6 +7,17 @@
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
     <title>DailyTen · 今日简报</title>
+    <script>
+      (() => {
+        try {
+          const saved = localStorage.getItem('dailyten-web:theme') || 'system';
+          const dark = saved === 'dark' || (saved === 'system' && matchMedia('(prefers-color-scheme: dark)').matches);
+          document.documentElement.dataset.theme = dark ? 'dark' : 'light';
+        } catch {
+          document.documentElement.dataset.theme = 'light';
+        }
+      })();
+    </script>
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
@@ -45,6 +56,16 @@
           <button class="modal-close" type="button" data-language-close aria-label="关闭">×</button>
         </div>
         <div class="choice-list" id="language-options"></div>
+      </section>
+    </div>
+
+    <div class="modal-backdrop" id="theme-modal" hidden>
+      <section class="choice-modal" role="dialog" aria-modal="true" aria-labelledby="theme-modal-title">
+        <div class="choice-head">
+          <h2 id="theme-modal-title">主题</h2>
+          <button class="modal-close" type="button" data-theme-close aria-label="关闭">×</button>
+        </div>
+        <div class="choice-list" id="theme-options"></div>
       </section>
     </div>
 

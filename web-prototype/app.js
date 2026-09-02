@@ -45,7 +45,8 @@ const channels = {
 
 const bottomTabs = ['daily', 'ai', 'mine'];
 const swipeChannels = ['daily', 'ai', 'mine'];
-const transitionMs = 210;
+const transitionMs = 270;
+const themeMedia = window.matchMedia('(prefers-color-scheme: dark)');
 
 const i18n = {
   zh: {
@@ -54,6 +55,10 @@ const i18n = {
     mine: '我的',
     favorites: '收藏',
     language: '语言选择',
+    theme: '主题',
+    themeDark: '深色',
+    themeLight: '浅色',
+    themeSystem: '跟随本机',
     chinese: '中文',
     english: 'English',
     close: '关闭',
@@ -88,6 +93,7 @@ const i18n = {
     termKicker: '专业词解释',
     termMeaning: '它是什么意思',
     termRelation: '和这条新闻的关系',
+    themeHint: '选择后会立刻应用并保存在当前浏览器。',
   },
   en: {
     daily: 'Home',
@@ -95,6 +101,10 @@ const i18n = {
     mine: 'Mine',
     favorites: 'Favorites',
     language: 'Language',
+    theme: 'Theme',
+    themeDark: 'Dark',
+    themeLight: 'Light',
+    themeSystem: 'Follow device',
     chinese: 'Chinese',
     english: 'English',
     close: 'Close',
@@ -129,6 +139,7 @@ const i18n = {
     termKicker: 'Term guide',
     termMeaning: 'What it means',
     termRelation: 'Why it matters here',
+    themeHint: 'Your choice applies immediately and is saved in this browser.',
   },
 };
 
@@ -139,6 +150,7 @@ const storageKeys = {
   channel: 'dailyten-web:channel',
   date: 'dailyten-web:date',
   language: 'dailyten-web:language',
+  theme: 'dailyten-web:theme',
 };
 
 const iconPaths = {
@@ -166,6 +178,7 @@ const state = {
   read: readSet(storageKeys.read),
   channel: channels[localStorage.getItem(storageKeys.channel)] ? localStorage.getItem(storageKeys.channel) : 'daily',
   language: readSavedLanguage(),
+  theme: readSavedTheme(),
   selectedDateKey: readSavedDateKey(),
   calendarExpanded: false,
 };
@@ -187,6 +200,10 @@ const elements = {
   languageOptions: document.querySelector('#language-options'),
   languageModalTitle: document.querySelector('#language-modal-title'),
   languageClose: document.querySelector('[data-language-close]'),
+  themeModal: document.querySelector('#theme-modal'),
+  themeOptions: document.querySelector('#theme-options'),
+  themeModalTitle: document.querySelector('#theme-modal-title'),
+  themeClose: document.querySelector('[data-theme-close]'),
   termModal: document.querySelector('#term-modal'),
   termModalKicker: document.querySelector('#term-modal-kicker'),
   termModalTitle: document.querySelector('#term-modal-title'),
@@ -204,9 +221,13 @@ let latestDailyEdition = null;
 init();
 
 async function init() {
+  applyTheme();
   renderChannelTabs();
   renderLanguageModal();
+  renderThemeModal();
   wireLanguageModal();
+  wireThemeModal();
+  wireThemePreference();
   wireTermModal();
   wireDateGestures();
   wireNavigationGestures();
@@ -354,7 +375,37 @@ function renderLanguageModal() {
       localStorage.setItem(storageKeys.language, state.language);
       elements.languageModal.hidden = true;
       renderLanguageModal();
+      renderThemeModal();
       await loadAndRender();
+    });
+  });
+}
+
+function renderThemeModal() {
+  const labels = {
+    dark: t('themeDark'),
+    light: t('themeLight'),
+    system: t('themeSystem'),
+  };
+
+  elements.themeModalTitle.textContent = t('theme');
+  elements.themeClose.textContent = '×';
+  elements.themeClose.setAttribute('aria-label', t('close'));
+  elements.themeOptions.innerHTML = ['system', 'dark', 'light'].map((mode) => `
+    <button class="choice-option${state.theme === mode ? ' is-active' : ''}" type="button" data-theme="${mode}">
+      <strong>${escapeHtml(labels[mode])}</strong>
+      <span>${state.theme === mode ? (state.language === 'en' ? 'Selected' : '当前选择') : ''}</span>
+    </button>
+  `).join('') + `<p class="choice-hint">${escapeHtml(t('themeHint'))}</p>`;
+
+  elements.themeOptions.querySelectorAll('[data-theme]').forEach((button) => {
+    button.addEventListener('click', () => {
+      state.theme = button.dataset.theme;
+      localStorage.setItem(storageKeys.theme, state.theme);
+      elements.themeModal.hidden = true;
+      applyTheme();
+      renderThemeModal();
+      renderMineIfActive();
     });
   });
 }
@@ -369,6 +420,33 @@ function wireLanguageModal() {
       elements.languageModal.hidden = true;
     }
   });
+}
+
+function wireThemeModal() {
+  elements.themeClose.addEventListener('click', () => {
+    elements.themeModal.hidden = true;
+  });
+
+  elements.themeModal.addEventListener('click', (event) => {
+    if (event.target === elements.themeModal) {
+      elements.themeModal.hidden = true;
+    }
+  });
+}
+
+function wireThemePreference() {
+  const syncSystemTheme = () => {
+    if (state.theme === 'system') {
+      applyTheme();
+    }
+  };
+
+  if (themeMedia.addEventListener) {
+    themeMedia.addEventListener('change', syncSystemTheme);
+    return;
+  }
+
+  themeMedia.addListener(syncSystemTheme);
 }
 
 function wireTermModal() {
@@ -564,24 +642,41 @@ function channelDirection(currentChannel, nextChannel) {
 }
 
 async function transitionChannel(direction, applyChange) {
-  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  if (reduceMotion || !elements.shell.animate) {
     await applyChange();
     return;
   }
 
-  await applyChange();
-  animateChannelEnter(direction);
-}
+  elements.shell.getAnimations().forEach((animation) => animation.cancel());
+  const leavingX = direction === 'forward' ? -24 : 24;
+  const enteringX = direction === 'forward' ? 28 : -28;
 
-function animateChannelEnter(direction) {
-  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-    return;
+  try {
+    await elements.shell.animate([
+      { opacity: 1, transform: 'translate3d(0, 0, 0) scale(1)' },
+      { opacity: 0.82, transform: `translate3d(${leavingX}px, 0, 0) scale(0.992)` },
+    ], {
+      duration: 115,
+      easing: 'cubic-bezier(0.32, 0.72, 0, 1)',
+      fill: 'forwards',
+    }).finished;
+
+    await applyChange();
+
+    await elements.shell.animate([
+      { opacity: 0.9, transform: `translate3d(${enteringX}px, 0, 0) scale(0.994)` },
+      { opacity: 1, transform: 'translate3d(0, 0, 0) scale(1)' },
+    ], {
+      duration: transitionMs,
+      easing: 'cubic-bezier(0.22, 1, 0.36, 1)',
+      fill: 'both',
+    }).finished;
+  } finally {
+    elements.shell.style.opacity = '';
+    elements.shell.style.transform = '';
   }
-
-  elements.shell.classList.add(direction === 'forward' ? 'is-entering-forward' : 'is-entering-back');
-  window.setTimeout(() => {
-    elements.shell.classList.remove('is-entering-forward', 'is-entering-back');
-  }, transitionMs);
 }
 
 function showErrorState(error) {
@@ -654,6 +749,13 @@ function renderMine() {
         </span>
         <b>${state.language === 'en' ? 'EN' : '中'}</b>
       </button>
+      <button class="settings-row" type="button" data-settings-action="theme">
+        <span>
+          <strong>${escapeHtml(t('theme'))}</strong>
+          <em>${escapeHtml(themeLabel(state.theme))}</em>
+        </span>
+        <b>${escapeHtml(themeBadge(state.theme))}</b>
+      </button>
     </section>
   `;
 
@@ -665,6 +767,11 @@ function renderMine() {
   elements.feed.querySelector('[data-settings-action="language"]').addEventListener('click', () => {
     renderLanguageModal();
     elements.languageModal.hidden = false;
+  });
+
+  elements.feed.querySelector('[data-settings-action="theme"]').addEventListener('click', () => {
+    renderThemeModal();
+    elements.themeModal.hidden = false;
   });
 
   syncDisplayableFavorites().then((favoriteItems) => {
@@ -694,7 +801,7 @@ function createCard(item) {
       </span>
       <span class="summary-controls">
         <span class="sketch-icon">${sketchIcon(item.icon, 38)}</span>
-        <span class="summary-action">${escapeHtml(t('expand'))}</span>
+        <span class="summary-action">${escapeHtml(t('expand'))}${chevronControlHtml('down')}</span>
       </span>
     </span>
   `;
@@ -816,32 +923,27 @@ function detailsHtml(item) {
       <span class="actions">
         <button class="pill-button" type="button" data-action="favorite"></button>
         <button class="pill-button is-danger" type="button" data-action="mute"></button>
-        <button class="pill-button is-collapse" type="button" data-action="collapse">${escapeHtml(t('collapse'))}</button>
+        <button class="pill-button is-collapse" type="button" data-action="collapse">${escapeHtml(t('collapse'))}${chevronControlHtml('up')}</button>
       </span>
     </div>
   `;
 }
 
 function collapseCardWithoutJump(card, header) {
-  const beforeTop = card.getBoundingClientRect().top;
+  const targetTop = Math.max(0, window.scrollY + card.getBoundingClientRect().top - 12);
   card.classList.remove('is-open');
   header.setAttribute('aria-expanded', 'false');
 
   requestAnimationFrame(() => {
-    const afterRect = card.getBoundingClientRect();
-    const topPadding = 12;
-
-    if (afterRect.bottom < topPadding || afterRect.top < -topPadding) {
-      window.scrollTo({
-        top: Math.max(0, window.scrollY + afterRect.top - topPadding),
-        left: 0,
-        behavior: 'auto',
-      });
-      return;
+    const currentTop = card.getBoundingClientRect().top;
+    if (currentTop < 10 || currentTop > window.innerHeight * 0.42) {
+      window.scrollTo({ top: targetTop, left: 0, behavior: 'smooth' });
     }
-
-    window.scrollBy({ top: afterRect.top - beforeTop, left: 0, behavior: 'auto' });
   });
+}
+
+function chevronControlHtml(direction) {
+  return `<span class="inline-chevron is-${direction}" aria-hidden="true"><span></span><span></span></span>`;
 }
 
 function sectionTitle(text) {
@@ -1574,6 +1676,39 @@ function t(key) {
   return i18n[state.language]?.[key] ?? i18n.zh[key] ?? key;
 }
 
+function effectiveTheme() {
+  if (state.theme === 'dark') return 'dark';
+  if (state.theme === 'light') return 'light';
+  return themeMedia.matches ? 'dark' : 'light';
+}
+
+function applyTheme() {
+  const theme = effectiveTheme();
+  document.documentElement.dataset.theme = theme;
+  document.querySelector('meta[name="theme-color"]')?.setAttribute(
+    'content',
+    theme === 'dark' ? '#101513' : '#f4f6f2',
+  );
+}
+
+function themeLabel(theme) {
+  if (theme === 'dark') return t('themeDark');
+  if (theme === 'light') return t('themeLight');
+  return t('themeSystem');
+}
+
+function themeBadge(theme) {
+  if (theme === 'dark') return state.language === 'en' ? 'DARK' : '深';
+  if (theme === 'light') return state.language === 'en' ? 'LIGHT' : '浅';
+  return state.language === 'en' ? 'AUTO' : '自动';
+}
+
+function renderMineIfActive() {
+  if (state.channel === 'mine') {
+    renderMine();
+  }
+}
+
 function localizedEyebrow(channel) {
   if (state.channel === 'mine') return t('mineEyebrow');
   if (state.channel === 'favorites') return t('favoritesEyebrow');
@@ -1618,6 +1753,11 @@ function readSavedDateKey() {
 
 function readSavedLanguage() {
   return localStorage.getItem(storageKeys.language) === 'en' ? 'en' : 'zh';
+}
+
+function readSavedTheme() {
+  const saved = localStorage.getItem(storageKeys.theme);
+  return saved === 'dark' || saved === 'light' || saved === 'system' ? saved : 'system';
 }
 
 function readSet(key) {

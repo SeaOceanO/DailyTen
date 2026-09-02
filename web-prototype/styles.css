@@ -18,6 +18,42 @@
   --line: #e3e7de;
   --track: #eef1ea;
   --shadow: rgba(25, 48, 39, 0.09);
+  --nav-bg: rgba(255, 255, 252, 0.94);
+  --panel-soft: rgba(255, 255, 252, 0.9);
+  --modal-overlay: rgba(26, 25, 20, 0.52);
+  --button-bg: #fffef9;
+  --focus: rgba(36, 83, 68, 0.35);
+  --active-bg: #245344;
+  --active-text: #ffffff;
+  --soft-shadow: rgba(25, 48, 39, 0.08);
+}
+
+:root[data-theme="dark"] {
+  --ink: #f1f5ef;
+  --secondary: #bac5bd;
+  --muted: #87938c;
+  --olive: #8fd2bd;
+  --olive-mid: #79b8a2;
+  --sage: #19312b;
+  --sage-border: #315b4f;
+  --gold: #d9b867;
+  --gold-bg: #312813;
+  --gold-border: #6f5720;
+  --gold-text: #f0d88d;
+  --paper: #101513;
+  --frame: #151d1a;
+  --card: #1b2420;
+  --line: #2b3732;
+  --track: #202a26;
+  --shadow: rgba(0, 0, 0, 0.28);
+  --nav-bg: rgba(20, 28, 25, 0.94);
+  --panel-soft: rgba(24, 33, 30, 0.92);
+  --modal-overlay: rgba(0, 0, 0, 0.62);
+  --button-bg: #17211d;
+  --focus: rgba(143, 210, 189, 0.38);
+  --active-bg: #2f6756;
+  --active-text: #f6fffb;
+  --soft-shadow: rgba(0, 0, 0, 0.3);
 }
 
 * {
@@ -35,8 +71,8 @@ body {
 
 body {
   background:
-    radial-gradient(circle at top left, rgba(219, 235, 226, 0.95), transparent 28rem),
-    linear-gradient(180deg, #f4f6f2 0%, #edf1ea 100%);
+    radial-gradient(circle at top left, color-mix(in srgb, var(--sage) 76%, transparent), transparent 28rem),
+    linear-gradient(180deg, var(--paper) 0%, color-mix(in srgb, var(--paper) 88%, var(--track)) 100%);
   color: var(--ink);
   font-family:
     -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB",
@@ -58,34 +94,18 @@ button {
   max-width: 720px;
   overflow: hidden;
   padding: 22px 18px;
+  backface-visibility: hidden;
+  transform: translateZ(0);
   will-change: opacity, transform;
-}
-
-.shell.is-entering-forward {
-  animation: channel-new-forward 170ms cubic-bezier(0.2, 0.8, 0.2, 1) both;
-}
-
-.shell.is-entering-back {
-  animation: channel-new-back 170ms cubic-bezier(0.2, 0.8, 0.2, 1) both;
-}
-
-@keyframes channel-new-forward {
-  from { opacity: 0.72; transform: translateX(12px); }
-  to { opacity: 1; transform: translateX(0); }
-}
-
-@keyframes channel-new-back {
-  from { opacity: 0.72; transform: translateX(-12px); }
-  to { opacity: 1; transform: translateX(0); }
 }
 
 .bottom-nav {
   align-items: center;
-  background: rgba(255, 255, 252, 0.94);
+  background: var(--nav-bg);
   border: 1px solid rgba(194, 204, 194, 0.72);
   border-radius: 18px;
   bottom: 18px;
-  box-shadow: 0 16px 40px rgba(25, 48, 39, 0.13);
+  box-shadow: 0 16px 40px var(--shadow);
   display: grid;
   gap: 6px;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -115,8 +135,8 @@ button {
 }
 
 .bottom-nav-item.is-active {
-  background: var(--olive);
-  color: #ffffff;
+  background: var(--active-bg);
+  color: var(--active-text);
 }
 
 .topbar {
@@ -124,7 +144,7 @@ button {
 }
 
 .channel-tabs {
-  background: rgba(255, 255, 255, 0.45);
+  background: var(--panel-soft);
   border: 1px solid var(--line);
   border-radius: 14px;
   display: grid;
@@ -148,9 +168,9 @@ button {
 }
 
 .channel-tab.is-active {
-  background: var(--olive);
-  box-shadow: 0 6px 16px rgba(47, 74, 58, 0.15);
-  color: #fffaf0;
+  background: var(--active-bg);
+  box-shadow: 0 6px 16px var(--shadow);
+  color: var(--active-text);
 }
 
 .date-module {
@@ -167,7 +187,7 @@ button {
 .calendar-toggle {
   all: unset;
   align-items: center;
-  background: #f8faf6;
+  background: var(--button-bg);
   border: 1px solid var(--line);
   border-radius: 14px;
   box-sizing: border-box;
@@ -241,7 +261,7 @@ button {
 
 .date-chip {
   all: unset;
-  background: #f8faf6;
+  background: var(--button-bg);
   border: 1px solid transparent;
   border-radius: 16px;
   box-sizing: border-box;
@@ -275,18 +295,18 @@ button {
 }
 
 .date-chip.is-selected {
-  background: var(--olive);
+  background: var(--active-bg);
   border-color: rgba(47, 74, 58, 0.45);
-  color: #eef7eb;
+  color: var(--active-text);
 }
 
 .date-chip.is-selected strong,
 .date-chip.is-selected em {
-  color: #eef7eb;
+  color: var(--active-text);
 }
 
 .calendar-panel {
-  background: rgba(255, 255, 252, 0.9);
+  background: var(--panel-soft);
   border: 1px solid var(--line);
   border-radius: 14px;
   margin-top: 8px;
@@ -379,12 +399,12 @@ button {
 }
 
 .calendar-day.is-selected {
-  background: #2f5b56;
-  color: #eef7eb;
+  background: var(--active-bg);
+  color: var(--active-text);
 }
 
 .calendar-day.is-disabled {
-  color: rgba(107, 104, 92, 0.35);
+  color: color-mix(in srgb, var(--muted) 44%, transparent);
   cursor: default;
 }
 
@@ -440,7 +460,7 @@ h1 {
 }
 
 .progress-card span {
-  color: rgba(90, 71, 22, 0.76);
+  color: color-mix(in srgb, var(--gold-text) 76%, transparent);
   font-size: 12px;
   margin-top: 3px;
 }
@@ -478,15 +498,16 @@ h1 {
   background: var(--card);
   border: 1px solid var(--line);
   border-radius: 18px;
-  box-shadow: 0 8px 22px rgba(25, 48, 39, 0.045);
+  box-shadow: 0 8px 22px color-mix(in srgb, var(--soft-shadow) 56%, transparent);
   margin-bottom: 12px;
   overflow: hidden;
+  overflow-anchor: none;
   transition: border-color 160ms ease, box-shadow 160ms ease, opacity 160ms ease, transform 160ms ease;
 }
 
 .news-card:has(.card-button:hover) {
   border-color: rgba(63, 116, 95, 0.42);
-  box-shadow: 0 12px 28px rgba(25, 48, 39, 0.08);
+  box-shadow: 0 12px 28px var(--soft-shadow);
 }
 
 .state-card {
@@ -536,7 +557,7 @@ h1 {
 
 .settings-row:hover {
   border-color: rgba(63, 116, 95, 0.38);
-  box-shadow: 0 10px 24px rgba(25, 48, 39, 0.06);
+  box-shadow: 0 10px 24px color-mix(in srgb, var(--soft-shadow) 76%, transparent);
 }
 
 .settings-row:active {
@@ -577,7 +598,7 @@ h1 {
 
 .modal-backdrop {
   align-items: flex-end;
-  background: rgba(43, 42, 36, 0.38);
+  background: var(--modal-overlay);
   display: flex;
   inset: 0;
   justify-content: center;
@@ -594,7 +615,7 @@ h1 {
   background: var(--frame);
   border: 1px solid rgba(205, 180, 119, 0.55);
   border-radius: 20px;
-  box-shadow: 0 24px 60px rgba(47, 74, 58, 0.22);
+  box-shadow: 0 24px 60px var(--shadow);
   max-width: 420px;
   padding: 16px;
   width: 100%;
@@ -668,14 +689,14 @@ h1 {
 
 .term-backdrop {
   align-items: center;
-  background: rgba(43, 42, 36, 0);
+  background: transparent;
   opacity: 0;
   pointer-events: none;
   transition: background-color 180ms ease, opacity 180ms ease;
 }
 
 .term-backdrop.is-open {
-  background: rgba(26, 25, 20, 0.52);
+  background: var(--modal-overlay);
   opacity: 1;
   pointer-events: auto;
 }
@@ -684,7 +705,7 @@ h1 {
   background: var(--frame);
   border: 1px solid rgba(205, 180, 119, 0.68);
   border-radius: 20px;
-  box-shadow: 0 24px 80px rgba(43, 42, 36, 0.26);
+  box-shadow: 0 24px 80px var(--shadow);
   color: var(--ink);
   max-width: 440px;
   opacity: 0;
@@ -730,7 +751,7 @@ h1 {
 }
 
 .term-body div {
-  background: rgba(251, 248, 239, 0.72);
+  background: var(--panel-soft);
   border: 1px solid var(--line);
   border-radius: 14px;
   padding: 12px;
@@ -796,7 +817,7 @@ h1 {
 .calendar-toggle:focus-visible,
 .pill-button:focus-visible,
 .term-token:focus-visible {
-  outline: 2px solid rgba(36, 83, 68, 0.35);
+  outline: 2px solid var(--focus);
   outline-offset: 3px;
 }
 
@@ -865,18 +886,64 @@ h1 {
   display: inline-flex;
   font-size: 12px;
   font-weight: 760;
+  gap: 6px;
   line-height: 1;
   min-height: 28px;
   padding: 0 12px;
 }
 
+.inline-chevron {
+  display: inline-block;
+  height: 10px;
+  position: relative;
+  width: 12px;
+}
+
+.inline-chevron span {
+  background: currentColor;
+  border-radius: 999px;
+  height: 2px;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform-origin: center;
+  width: 8px;
+}
+
+.inline-chevron.is-down span:first-child {
+  transform: translate(-6px, -50%) rotate(42deg);
+}
+
+.inline-chevron.is-down span:last-child {
+  transform: translate(-2px, -50%) rotate(-42deg);
+}
+
+.inline-chevron.is-up span:first-child {
+  transform: translate(-6px, -50%) rotate(-42deg);
+}
+
+.inline-chevron.is-up span:last-child {
+  transform: translate(-2px, -50%) rotate(42deg);
+}
+
 .details {
-  display: none;
-  padding: 2px 18px 16px;
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  padding: 0 18px;
+  transform: translateY(-6px);
+  transition:
+    max-height 260ms cubic-bezier(0.22, 1, 0.36, 1),
+    opacity 180ms ease,
+    padding 260ms cubic-bezier(0.22, 1, 0.36, 1),
+    transform 260ms cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .news-card.is-open .details {
-  display: block;
+  max-height: 1800px;
+  opacity: 1;
+  padding: 2px 18px 16px;
+  transform: translateY(0);
 }
 
 .divider {
@@ -1078,13 +1145,16 @@ h1 {
 
 .pill-button {
   all: unset;
-  background: #fffef9;
+  align-items: center;
+  background: var(--button-bg);
   border: 1px solid var(--olive-mid);
   border-radius: 999px;
   color: var(--olive);
   cursor: pointer;
+  display: inline-flex;
   font-size: 12px;
   font-weight: 760;
+  gap: 6px;
   padding: 7px 13px;
 }
 
@@ -1104,18 +1174,6 @@ h1 {
   margin-left: auto;
   padding-left: 10px;
   padding-right: 0;
-}
-
-.pill-button.is-collapse::after {
-  border-color: currentColor;
-  border-style: solid;
-  border-width: 2px 2px 0 0;
-  content: "";
-  display: inline-block;
-  height: 7px;
-  margin-left: 8px;
-  transform: translateY(2px) rotate(-45deg);
-  width: 7px;
 }
 
 .done-card {
@@ -1273,8 +1331,7 @@ h1 {
 
 @media (prefers-reduced-motion: reduce) {
   .shell,
-  .shell.is-entering-forward,
-  .shell.is-entering-back,
+  .details,
   .term-backdrop,
   .term-modal {
     animation: none;
