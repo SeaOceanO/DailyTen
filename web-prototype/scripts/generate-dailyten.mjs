@@ -6,7 +6,10 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const rootDir = path.resolve(__dirname, '..');
 const schemaPath = path.join(rootDir, 'schema', 'openai-dailyten-edition.schema.json');
 const configPath = path.join(rootDir, 'config', 'interests.json');
-const outputPath = path.join(rootDir, 'data', 'today.json');
+const dataDir = path.join(rootDir, 'data');
+const editionsDir = path.join(dataDir, 'editions');
+const outputPath = path.join(dataDir, 'today.json');
+const editionIndexPath = path.join(editionsDir, 'index.json');
 const validateOnly = process.argv.includes('--validate-only');
 const testSourcesOnly = process.argv.includes('--test-sources');
 
@@ -39,7 +42,12 @@ async function main() {
   if (validateOnly) {
     const edition = await readJson(outputPath);
     validateEdition(edition);
-    console.log(`Validated ${edition.items.length} DailyTen items for ${edition.dateKey}.`);
+    const index = await readEditionIndex();
+    const archivedEdition = await readArchivedEdition(edition.dateKey);
+    if (archivedEdition) {
+      validateEdition(archivedEdition);
+    }
+    console.log(`Validated ${edition.items.length} DailyTen items for ${edition.dateKey}. Saved editions: ${index.editions.length}.`);
     return;
   }
 
@@ -62,12 +70,90 @@ async function main() {
   const edition = await generateEdition({ apiKey, model, reasoningEffort, schema, config, candidates });
   normalizeEdition(edition);
   validateEdition(edition);
-  await fs.writeFile(outputPath, `${JSON.stringify(edition, null, 2)}\n`, 'utf8');
-  console.log(`Wrote ${edition.items.length} DailyTen items to ${outputPath}.`);
+  await writeEditionOutputs(edition);
+  console.log(`Wrote ${edition.items.length} DailyTen items to ${outputPath} and archived ${edition.dateKey}.`);
 }
 
 async function readJson(filePath) {
   return JSON.parse(await fs.readFile(filePath, 'utf8'));
+}
+
+async function writeEditionOutputs(edition) {
+  await fs.mkdir(editionsDir, { recursive: true });
+  const payload = `${JSON.stringify(edition, null, 2)}\n`;
+  const archivedPath = path.join(editionsDir, `${edition.dateKey}.json`);
+  const index = await readEditionIndex();
+  const nextIndex = updateEditionIndex(index, edition);
+
+  await Promise.all([
+    fs.writeFile(outputPath, payload, 'utf8'),
+    fs.writeFile(archivedPath, payload, 'utf8'),
+    fs.writeFile(editionIndexPath, `${JSON.stringify(nextIndex, null, 2)}\n`, 'utf8'),
+  ]);
+}
+
+async function readEditionIndex() {
+  try {
+    const index = await readJson(editionIndexPath);
+    return normalizeEditionIndex(index);
+  } catch (error) {
+    if (error.code !== 'ENOENT') {
+      throw error;
+    }
+
+    return {
+      latestDateKey: '',
+      updatedAt: '',
+      editions: [],
+    };
+  }
+}
+
+async function readArchivedEdition(dateKey) {
+  try {
+    return await readJson(path.join(editionsDir, `${dateKey}.json`));
+  } catch (error) {
+    if (error.code === 'ENOENT') return null;
+    throw error;
+  }
+}
+
+function normalizeEditionIndex(index) {
+  const editions = Array.isArray(index?.editions) ? index.editions : [];
+  const seen = new Set();
+  return {
+    latestDateKey: typeof index?.latestDateKey === 'string' ? index.latestDateKey : '',
+    updatedAt: typeof index?.updatedAt === 'string' ? index.updatedAt : '',
+    editions: editions
+      .filter((entry) => typeof entry?.dateKey === 'string' && !seen.has(entry.dateKey) && seen.add(entry.dateKey))
+      .map((entry) => ({
+        dateKey: entry.dateKey,
+        path: typeof entry.path === 'string' ? entry.path : `./data/editions/${entry.dateKey}.json`,
+        channels: Array.isArray(entry.channels) ? entry.channels : ['daily'],
+        generatedAt: typeof entry.generatedAt === 'string' ? entry.generatedAt : '',
+      }))
+      .sort((a, b) => b.dateKey.localeCompare(a.dateKey)),
+  };
+}
+
+function updateEditionIndex(index, edition) {
+  const current = normalizeEditionIndex(index);
+  const entry = {
+    dateKey: edition.dateKey,
+    path: `./data/editions/${edition.dateKey}.json`,
+    channels: ['daily'],
+    generatedAt: edition.generatedAt,
+  };
+  const editions = [
+    entry,
+    ...current.editions.filter((item) => item.dateKey !== edition.dateKey),
+  ].sort((a, b) => b.dateKey.localeCompare(a.dateKey));
+
+  return {
+    latestDateKey: editions[0]?.dateKey ?? edition.dateKey,
+    updatedAt: new Date().toISOString(),
+    editions,
+  };
 }
 
 async function fetchNewsCandidates(config) {

@@ -5,9 +5,11 @@ This is a standalone web version of DailyTen. The frontend is deliberately small
 - `index.html` is the page shell.
 - `styles.css` is the warm paper/card visual system.
 - `app.js` renders the briefing, accordion cards, reading progress, favorites, and "less like this".
-- `data/today.json` is the current DailyTen edition that the page reads.
+- `data/today.json` is the latest DailyTen edition for quick loading.
+- `data/editions/YYYY-MM-DD.json` stores each generated day permanently.
+- `data/editions/index.json` tells the calendar which saved dates are available.
 
-The main anti-redundancy rule is: the website only renders one stable JSON shape. The daily generation pipeline replaces `data/today.json`; the UI does not need to be rebuilt every day.
+The main anti-redundancy rule is: the website only renders one stable JSON shape. The daily generation pipeline writes the latest edition to `data/today.json` and also archives the same edition by date, so old generated days are not lost.
 
 ## Current Status
 
@@ -22,6 +24,8 @@ The site currently uses local mock data only. No backend, database, NewsAPI, RSS
 3. Ask OpenAI to produce one structured DailyTen edition.
 4. Validate the result against the expected shape.
 5. Write the final edition to `data/today.json`.
+6. Archive the same edition to `data/editions/YYYY-MM-DD.json`.
+7. Update `data/editions/index.json` so the calendar can keep showing saved dates.
 
 The browser never receives the OpenAI API key. Generation should run on GitHub Actions, Netlify Functions, or another server-side scheduler.
 
@@ -50,7 +54,7 @@ Before enabling it, set:
 - repository secret: `OPENAI_API_KEY`
 - repository variable: `OPENAI_MODEL`
 
-If the repository is connected to Netlify, the workflow commits the new `data/today.json`, then Netlify can deploy the updated static site.
+If the repository is connected to Netlify, the workflow commits the updated `web-prototype/data` folder, then Netlify can deploy the updated static site with both the latest edition and historical archives.
 
 ## Netlify
 

@@ -219,6 +219,9 @@ let touchStartY = 0;
 let navTouchStartX = 0;
 let navTouchStartY = 0;
 let latestDailyEdition = null;
+let editionIndex = null;
+let availableDateKeys = new Set([todayKey, yesterdayKey]);
+let editionPathByDate = new Map();
 
 init();
 
@@ -236,9 +239,12 @@ async function init() {
   showLoadingState('正在读取这一天的十条...');
 
   try {
-    const latestEdition = await fetchEdition('./data/today.json');
+    const [latestEdition, loadedIndex] = await Promise.all([
+      fetchEdition('./data/today.json'),
+      fetchEditionIndex(),
+    ]);
     latestDailyEdition = latestEdition;
-    setLatestDate(latestEdition.dateKey);
+    setLatestDate(latestEdition.dateKey, loadedIndex);
     state.selectedDateKey = readSavedDateKey();
     renderDateModule();
     await loadAndRender(latestEdition);
@@ -274,12 +280,18 @@ async function loadAndRender(preloadedLatestEdition = null) {
   }
 }
 
-function setLatestDate(dateKey) {
+function setLatestDate(dateKey, loadedIndex = null) {
   today = parseDateKey(dateKey);
   yesterday = addDays(today, -1);
-  dateOptions = [today, yesterday];
   todayKey = formatDateKey(today);
   yesterdayKey = formatDateKey(yesterday);
+  editionIndex = normalizeEditionIndex(loadedIndex, dateKey);
+  editionPathByDate = new Map(editionIndex.editions.map((entry) => [entry.dateKey, entry.path]));
+  availableDateKeys = new Set([todayKey, yesterdayKey, ...editionPathByDate.keys()]);
+  dateOptions = [...availableDateKeys]
+    .filter((key) => parseDateKey(key) <= today)
+    .sort((a, b) => b.localeCompare(a))
+    .map((key) => parseDateKey(key));
 }
 
 async function loadEdition(channel, dateKey) {
@@ -297,7 +309,43 @@ async function loadEdition(channel, dateKey) {
     return latestDailyEdition;
   }
 
+  if (channel === 'daily') {
+    const archivedPath = editionPathByDate.get(dateKey);
+    if (archivedPath) {
+      return fetchEdition(archivedPath);
+    }
+  }
+
   return buildLocalEdition(channel, dateKey);
+}
+
+async function fetchEditionIndex() {
+  try {
+    return await fetchEdition('./data/editions/index.json');
+  } catch {
+    return null;
+  }
+}
+
+function normalizeEditionIndex(index, fallbackDateKey) {
+  const seen = new Set();
+  const rawEntries = Array.isArray(index?.editions) ? index.editions : [];
+  const editions = rawEntries
+    .filter((entry) => typeof entry?.dateKey === 'string' && entry.dateKey <= fallbackDateKey)
+    .filter((entry) => !seen.has(entry.dateKey) && seen.add(entry.dateKey))
+    .map((entry) => ({
+      dateKey: entry.dateKey,
+      path: typeof entry.path === 'string' ? entry.path : `./data/editions/${entry.dateKey}.json`,
+      channels: Array.isArray(entry.channels) ? entry.channels : ['daily'],
+      generatedAt: typeof entry.generatedAt === 'string' ? entry.generatedAt : '',
+    }))
+    .sort((a, b) => b.dateKey.localeCompare(a.dateKey));
+
+  return {
+    latestDateKey: typeof index?.latestDateKey === 'string' ? index.latestDateKey : fallbackDateKey,
+    updatedAt: typeof index?.updatedAt === 'string' ? index.updatedAt : '',
+    editions,
+  };
 }
 
 async function fetchEdition(pathname) {
@@ -489,7 +537,7 @@ function renderDateModule() {
       <div class="calendar-head">
         <div>
           <strong>${monthTitle(monthDate)}</strong>
-          <span>${state.language === 'en' ? 'Today and yesterday are available for now' : '可查看今天和昨天的十条'}</span>
+          <span>${state.language === 'en' ? 'Saved editions stay available here' : '已生成的日期会保存在这里'}</span>
         </div>
         <button class="calendar-toggle in-panel" type="button" aria-label="收起日历" aria-expanded="${state.calendarExpanded}">
           <span class="chevron-icon is-up" aria-hidden="true"><span></span><span></span></span>
@@ -543,7 +591,7 @@ function calendarCellsHtml(monthDate) {
   for (let day = 1; day <= last.getDate(); day += 1) {
     const date = new Date(monthDate.getFullYear(), monthDate.getMonth(), day);
     const key = formatDateKey(date);
-    const selectable = key === todayKey || key === yesterdayKey;
+    const selectable = availableDateKeys.has(key);
     const isFuture = date > today;
     const classes = [
       'calendar-day',
@@ -971,7 +1019,7 @@ function visualBlock(visual) {
 
 function buildLocalEdition(channel, dateKey) {
   if (dateKey !== todayKey && dateKey !== yesterdayKey) {
-    throw new Error('当前只保留今天和昨天的十条。');
+    throw new Error('这一天还没有保存的十条。');
   }
 
   const isAi = channel === 'ai';
@@ -1038,6 +1086,20 @@ async function collectAvailableFavoriteItems() {
   if (latestDailyEdition) {
     editions.push(latestDailyEdition);
   }
+
+  const archivedDailyEditions = await Promise.all(
+    (editionIndex?.editions ?? [])
+      .filter((entry) => entry.dateKey !== todayKey)
+      .map(async (entry) => {
+        try {
+          return await fetchEdition(entry.path);
+        } catch {
+          return null;
+        }
+      }),
+  );
+
+  editions.push(...archivedDailyEditions.filter(Boolean));
 
   editions.push(
     buildLocalEdition('daily', yesterdayKey),
@@ -1764,7 +1826,7 @@ function localizedBriefLabel(edition) {
 
 function readSavedDateKey() {
   const saved = localStorage.getItem(storageKeys.date);
-  return saved === todayKey || saved === yesterdayKey ? saved : todayKey;
+  return saved && availableDateKeys.has(saved) ? saved : todayKey;
 }
 
 function readSavedLanguage() {

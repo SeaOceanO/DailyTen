@@ -1,0 +1,1167 @@
+{
+  "dateKey": "2026-09-02",
+  "generatedAt": "2026-09-02T05:00:00+08:00",
+  "title": "DailyTen｜9月2日",
+  "subtitle": "从算力建设到机器人标准：今天值得知道的十件事",
+  "briefLabel": "一分钟看懂",
+  "doneLabel": "读完了",
+  "readTimeMinutes": 8,
+  "items": [
+    {
+      "id": "huizhou-compute-center",
+      "cat": "AI",
+      "icon": "ai",
+      "title": "广东惠州集中签约117亿元智算中心项目",
+      "brief": "更多大规模算力正往广东落地，未来AI服务能否更快、更便宜，也要看这些机房是否真能按时建成。",
+      "take": "广东惠州集中签约一批智算中心项目，总投资117亿元。智算中心可以理解为专门给AI训练和推理准备的大型服务器机房：训练模型需要大量计算，用户日常调用模型也依赖持续的推理算力。项目签约不等于服务器已经上线，但这反映出地方和企业仍在为AI基础设施投入重金。对普通人而言，算力供给会影响AI工具的响应速度、价格，以及本地企业能否把AI服务做进客服、制造和办公流程。",
+      "meta": "中国｜AI基础设施｜9月1日",
+      "facts": [
+        [
+          "金额",
+          "集中签约项目总投资117亿元。"
+        ],
+        [
+          "地点",
+          "项目落在广东惠州。"
+        ],
+        [
+          "用途",
+          "智算中心为AI训练和日常推理提供计算资源。"
+        ]
+      ],
+      "visual": {
+        "type": "bars",
+        "label": "已披露项目投资",
+        "bars": [
+          [
+            "智算中心项目",
+            100,
+            "#4F7CAC"
+          ]
+        ],
+        "max": 117,
+        "decimal": false
+      },
+      "impacts": [
+        [
+          "工具成本",
+          "算力更充足有助于降低部分AI服务的边际成本。"
+        ],
+        [
+          "建设风险",
+          "签约后的供电、设备交付和实际利用率仍需验证。"
+        ]
+      ],
+      "next": [
+        "项目何时开工并投产",
+        "服务器、电力和网络资源由谁提供"
+      ],
+      "source": "中新网",
+      "updated": "2026-09-01",
+      "en": {
+        "cat": "AI",
+        "title": "Huizhou signs AI compute-center projects worth 11.7 billion yuan",
+        "brief": "More large-scale AI compute is being planned in Guangdong, but faster or cheaper AI services will depend on whether these facilities are actually built and put to use.",
+        "take": "Huizhou in Guangdong signed a group of intelligent-compute-center projects with total planned investment of 11.7 billion yuan. These centers are large server facilities built for AI training and inference, the ongoing computation used when people use an AI product. A signing does not mean the machines are online yet, but it shows local authorities and companies are still spending heavily on AI infrastructure. For ordinary users, available compute can affect the speed and price of AI tools, and whether local firms can use them in customer service, manufacturing and office work.",
+        "meta": "China | AI infrastructure | Sep. 1",
+        "facts": [
+          [
+            "Investment",
+            "The signed projects total 11.7 billion yuan."
+          ],
+          [
+            "Location",
+            "The projects are in Huizhou, Guangdong."
+          ],
+          [
+            "Purpose",
+            "Compute centers supply capacity for AI training and everyday inference."
+          ]
+        ],
+        "visual": {
+          "type": "bars",
+          "label": "Disclosed project investment",
+          "bars": [
+            [
+              "Compute-center projects",
+              100,
+              "#4F7CAC"
+            ]
+          ],
+          "max": 117,
+          "decimal": false
+        },
+        "impacts": [
+          [
+            "Tool costs",
+            "More compute supply may reduce the marginal cost of some AI services."
+          ],
+          [
+            "Build-out risk",
+            "Power, hardware delivery and real utilization still need to be proven."
+          ]
+        ],
+        "next": [
+          "When the projects begin construction and enter service",
+          "Who supplies the servers, power and network capacity"
+        ],
+        "source": "China News Service",
+        "updated": "2026-09-01"
+      },
+      "sourceLinks": [
+        {
+          "title": "总投资达117亿元的智算中心项目在广东惠州集中签约",
+          "url": "https://www.chinanews.com.cn/cj/2026/09-01/10687882.shtml",
+          "publisher": "中新网"
+        }
+      ],
+      "eventImage": {
+        "url": "https://2b1c.cscec.com/xwzx/gsyw/202412/W020241218360665154863.jpg",
+        "credit": "中建二局一公司惠州智算中心项目图",
+        "link": "https://2b1c.cscec.com/xwzx/gsyw/202412/3837815.html",
+        "zh": {
+          "alt": "惠州智算中心项目建设效果图",
+          "caption": "相关真实项目图：润泽（惠州）国际信息港新型智算中心"
+        },
+        "en": {
+          "alt": "Project image of a Huizhou intelligent computing center",
+          "caption": "Related real project image: Runze Huizhou intelligent computing center"
+        }
+      }
+    },
+    {
+      "id": "data-crowdwork",
+      "cat": "AI",
+      "icon": "code",
+      "title": "数据采集零工走向众包，报道提及45元时薪",
+      "brief": "训练AI的“数据活”正变成更多人能接的零工，但报酬、隐私和劳动保障不能只靠平台一句承诺。",
+      "take": "每日经济新闻报道，数据采集工作正走向面向大众的众包模式，并提到时薪45元的岗位。这里的数据活可能包括拍摄图片、录制语音、标注文字或核对模型回答，它们是训练和评估AI的重要原料。它给部分人增加了灵活收入选择，也把问题带到台前：任务是否稳定、报酬是否透明，平台如何处理人脸、声音和位置信息，以及出错或拖欠时谁来负责。接单前，普通人尤其应看清数据授权范围和结算规则。",
+      "meta": "中国｜AI劳动与数据｜9月1日",
+      "facts": [
+        [
+          "报酬",
+          "报道提及部分数据零工时薪45元。"
+        ],
+        [
+          "工作",
+          "采集、标注和核验可用于训练或评估AI。"
+        ],
+        [
+          "模式",
+          "任务通过众包向更多个人开放。"
+        ]
+      ],
+      "visual": null,
+      "impacts": [
+        [
+          "灵活就业",
+          "低门槛任务可能带来补充收入。"
+        ],
+        [
+          "个人信息",
+          "声音、图像和位置等数据的授权边界更重要。"
+        ],
+        [
+          "劳动保障",
+          "结算、申诉和工时认定仍是实际问题。"
+        ]
+      ],
+      "next": [
+        "平台是否公开数据用途和保存期限",
+        "报酬能否稳定按时结算"
+      ],
+      "source": "每日经济新闻",
+      "updated": "2026-09-01",
+      "en": {
+        "cat": "AI",
+        "title": "AI data-collection gigs move toward crowdsourcing, with a reported 45-yuan hourly rate",
+        "brief": "The small jobs that feed AI are becoming easier to pick up, but pay, privacy and worker protections should not rest on a platform's promise alone.",
+        "take": "National Business Daily reported that data-collection work is moving toward crowdsourcing and cited jobs paying 45 yuan an hour. Such work can include taking photos, recording speech, labeling text or checking model answers—raw material used to train and evaluate AI. It may offer flexible extra income, but it also raises practical questions about steady work, clear pay, and how platforms handle faces, voices and location data. Before accepting a task, people should check the data-permission terms and payment rules carefully.",
+        "meta": "China | AI work and data | Sep. 1",
+        "facts": [
+          [
+            "Pay",
+            "The report cited some data gigs at 45 yuan per hour."
+          ],
+          [
+            "Work",
+            "Collection, labeling and verification can train or evaluate AI."
+          ],
+          [
+            "Model",
+            "Crowdsourcing opens tasks to more individual workers."
+          ]
+        ],
+        "visual": null,
+        "impacts": [
+          [
+            "Flexible work",
+            "Low-entry tasks may provide supplementary income."
+          ],
+          [
+            "Personal data",
+            "Permission limits for voice, images and location matter more."
+          ],
+          [
+            "Worker protection",
+            "Payment, appeals and recognition of working time remain practical issues."
+          ]
+        ],
+        "next": [
+          "Whether platforms disclose data use and retention periods",
+          "Whether payments are reliable and on time"
+        ],
+        "source": "National Business Daily",
+        "updated": "2026-09-01"
+      },
+      "sourceLinks": [
+        {
+          "title": "时薪45元，数据零工来了！数据采集正在走向全民众包",
+          "url": "https://www.nbd.com.cn/articles/2026-09-01/4568565.html",
+          "publisher": "每日经济新闻"
+        }
+      ],
+      "eventImage": {
+        "url": "https://smcos.cdmgiml.com/tx/others/upload/2e65c40b2b324eb44ac0db1d93b19b14-1770046399320.jpg",
+        "credit": "每日经济新闻配图",
+        "link": "https://www.nbd.com.cn/articles/2026-09-01/4568565.html",
+        "zh": {
+          "alt": "数据采集众包报道配图",
+          "caption": "原文配图：数据采集众包与数据零工报道"
+        },
+        "en": {
+          "alt": "Image from a report on crowdsourced AI data work",
+          "caption": "Source image: report on crowdsourced AI data work"
+        }
+      }
+    },
+    {
+      "id": "ai-devices-policy",
+      "cat": "中国经济",
+      "icon": "alert",
+      "title": "政策支持AI终端面向“一老一小”发力",
+      "brief": "带AI功能的设备可能更快进入老人和孩子身边，真正该先问的是好不好用、安不安全、谁来管数据。",
+      "take": "一篇市场报道关注政策支持AI终端产品发展，重点落在老人和儿童等使用场景。AI终端指带有语音、视觉或本地AI处理能力的手机、家电、穿戴设备和陪伴设备。它们可能帮老人提醒用药、联系家人，也可能为儿童提供学习和看护辅助；但产品进入家庭后，误识别、诱导消费、摄像头和录音数据如何保存，都会直接影响使用者。支持产业不能替代产品测试和清晰的监护设置。",
+      "meta": "中国｜消费与AI设备｜9月2日",
+      "facts": [
+        [
+          "对象",
+          "报道聚焦老人和儿童相关使用场景。"
+        ],
+        [
+          "产品",
+          "AI终端包括手机、家电、穿戴和陪伴设备等。"
+        ],
+        [
+          "关键",
+          "标准和销售渠道被视为推广中的问题。"
+        ]
+      ],
+      "visual": null,
+      "impacts": [
+        [
+          "家庭选择",
+          "消费者将面对更多带AI功能的设备。"
+        ],
+        [
+          "隐私安全",
+          "摄像头、麦克风和账户数据需要明确控制。"
+        ],
+        [
+          "适老适童",
+          "操作难度、误报和监护功能比宣传更重要。"
+        ]
+      ],
+      "next": [
+        "是否出现可执行的产品标准",
+        "儿童与老人数据保护如何细化"
+      ],
+      "source": "东方财富网",
+      "updated": "2026-09-02",
+      "en": {
+        "cat": "China Economy",
+        "title": "Policy support turns toward AI devices for older people and children",
+        "brief": "AI-enabled devices may reach more older people and children sooner; the first questions should be whether they work safely and who controls the data.",
+        "take": "A market report highlighted policy support for AI terminal products, with use cases for older people and children receiving attention. AI terminals are phones, appliances, wearables and companion devices with voice, vision or on-device AI capabilities. They may remind an older person to take medicine or help families stay in touch, while offering learning or care assistance for children. But once they enter homes, false recognition, pushy sales, and storage of camera and microphone data become personal concerns. Industry support is not a substitute for testing and clear guardian controls.",
+        "meta": "China | Consumer economy and AI devices | Sep. 2",
+        "facts": [
+          [
+            "Users",
+            "The report focuses on use cases involving older people and children."
+          ],
+          [
+            "Products",
+            "AI terminals can include phones, appliances, wearables and companion devices."
+          ],
+          [
+            "Issue",
+            "Standards and sales channels are identified as barriers to wider use."
+          ]
+        ],
+        "visual": null,
+        "impacts": [
+          [
+            "Household choices",
+            "Consumers may see more devices marketed with AI features."
+          ],
+          [
+            "Privacy and safety",
+            "Camera, microphone and account data need clear controls."
+          ],
+          [
+            "Accessible design",
+            "Ease of use, false alerts and guardian settings matter more than marketing."
+          ]
+        ],
+        "next": [
+          "Whether enforceable product standards emerge",
+          "How protections for children’s and older people’s data are specified"
+        ],
+        "source": "Eastmoney",
+        "updated": "2026-09-02"
+      },
+      "sourceLinks": [
+        {
+          "title": "完善标准与渠道破局 政策支持AI终端产品发力“一老一小”",
+          "url": "https://finance.eastmoney.com/a/202609023861873539.html",
+          "publisher": "东方财富网"
+        }
+      ],
+      "eventImage": {
+        "url": "https://np-metadata.eastmoney.com/api/metadata.jpg?event=1&source=3&mode=2&type=1&id=202609023861873539",
+        "credit": "东方财富新闻卡片图",
+        "link": "https://finance.eastmoney.com/a/202609023861873539.html",
+        "zh": {
+          "alt": "AI终端政策支持报道卡片图",
+          "caption": "来源页图片：AI终端与一老一小应用场景报道"
+        },
+        "en": {
+          "alt": "Image card from a report on AI devices for older adults and children",
+          "caption": "Source image: report on AI devices for older adults and children"
+        }
+      }
+    },
+    {
+      "id": "hangzhou-humanoid-standard",
+      "cat": "机器人与具身智能",
+      "icon": "drone",
+      "title": "杭州出台人形机器人团体标准",
+      "brief": "人形机器人开始有了更明确的测评“尺子”，企业比性能、买方看安全会更有依据。",
+      "take": "杭州媒体报道，全国首个面向人形机器人的团体标准在当地出台。团体标准不是全国强制法规，但它能先把测试项目、表达方式和部分要求统一起来，减少厂商各说各话的情况。人形机器人要进工厂、仓库或公共场所，不能只展示走路和对话，还要说明稳定性、任务完成率和安全边界。对采购方和未来使用者来说，一把共同的尺子有助于分辨演示效果与实际能力，但仍需看后续测试是否公开、事故责任是否明确。",
+      "meta": "中国｜机器人标准｜9月1日",
+      "facts": [
+        [
+          "标准",
+          "报道称全国首个人形机器人团体标准已出台。"
+        ],
+        [
+          "地点",
+          "标准在杭州推出。"
+        ],
+        [
+          "性质",
+          "团体标准可统一测评口径，但并非强制性国家法规。"
+        ]
+      ],
+      "visual": {
+        "type": "chain",
+        "label": "标准如何影响采购",
+        "nodes": [
+          "统一测试",
+          "可比结果",
+          "采购判断",
+          "安全要求"
+        ]
+      },
+      "impacts": [
+        [
+          "购买判断",
+          "企业更容易横向比较不同机器人的能力。"
+        ],
+        [
+          "公共安全",
+          "明确测试和责任边界有助于降低试用风险。"
+        ]
+      ],
+      "next": [
+        "标准具体覆盖哪些测试指标",
+        "是否有公开的第三方测评结果"
+      ],
+      "source": "杭州网",
+      "updated": "2026-09-01",
+      "en": {
+        "cat": "Robotics & Embodied AI",
+        "title": "Hangzhou issues a humanoid-robot industry standard",
+        "brief": "Humanoid robots now have a clearer measuring stick, giving buyers and the public a better basis for judging performance and safety.",
+        "take": "Hangzhou media reported that the country’s first industry-group standard for humanoid robots has been issued there. A group standard is not a mandatory national regulation, but it can align test items, terminology and some requirements so vendors are not simply making incomparable claims. A robot intended for a factory, warehouse or public space must show more than walking and chatting: stability, task completion and safety limits matter. For buyers and future users, a shared yardstick can separate a stage demo from usable capability, though public test results and liability rules still matter.",
+        "meta": "China | Robotics standards | Sep. 1",
+        "facts": [
+          [
+            "Standard",
+            "The report calls it China’s first group standard for humanoid robots."
+          ],
+          [
+            "Location",
+            "It was introduced in Hangzhou."
+          ],
+          [
+            "Status",
+            "A group standard can align testing but is not mandatory national law."
+          ]
+        ],
+        "visual": {
+          "type": "chain",
+          "label": "How standards can affect procurement",
+          "nodes": [
+            "Aligned tests",
+            "Comparable results",
+            "Buying decisions",
+            "Safety requirements"
+          ]
+        },
+        "impacts": [
+          [
+            "Buying decisions",
+            "Firms can compare robot capabilities more directly."
+          ],
+          [
+            "Public safety",
+            "Clearer testing and responsibility limits can reduce pilot risks."
+          ]
+        ],
+        "next": [
+          "Which test measures the standard covers",
+          "Whether independent test results will be made public"
+        ],
+        "source": "Hangzhou Net",
+        "updated": "2026-09-01"
+      },
+      "sourceLinks": [
+        {
+          "title": "人形机器人最缺一把“尺子” 全国首个团体标准在杭出台",
+          "url": "https://hznews.hangzhou.com.cn/jingji/content/2026-09/01/content_9295134.htm",
+          "publisher": "杭州网"
+        }
+      ],
+      "eventImage": {
+        "url": "https://meizi-chao-pub.8531.cn/2093272292417314816_1280px.png?width=1280&height=850",
+        "credit": "潮新闻机器人相关图",
+        "link": "https://tidenews.com.cn/news.html?id=3543143",
+        "zh": {
+          "alt": "人形机器人相关真实图片",
+          "caption": "相关真实图：源页未提供现场图，先用机器人产业报道图辅助理解"
+        },
+        "en": {
+          "alt": "Related real image of humanoid robotics",
+          "caption": "Related real image: the source page did not expose an event photo"
+        }
+      }
+    },
+    {
+      "id": "shenzhen-robot-valley",
+      "cat": "机器人与具身智能",
+      "icon": "refinery",
+      "title": "深圳“机器人谷”主打半小时配齐零部件",
+      "brief": "机器人零件找得更快，能让新产品试得更快，但这不代表机器人已经能可靠地干所有活。",
+      "take": "南方网报道，深圳“机器人谷”凭借密集的供应链，提出半小时可配齐一台机器人的零部件。这里说的核心不是半小时造完一台成品，而是电机、减速器、传感器、控制器等部件在附近更容易找到和协调。供应链距离短能缩短打样和维修等待，也有利于小团队试错；不过机器人是否实用，仍取决于软件、可靠性、安全测试和长期售后。对消费者和工人来说，供应链更快最终只有转化为更可靠、更容易维修的产品才有意义。",
+      "meta": "中国｜机器人供应链｜9月1日",
+      "facts": [
+        [
+          "说法",
+          "报道提及半小时配齐一台机器人的零部件。"
+        ],
+        [
+          "地点",
+          "供应链集聚在深圳“机器人谷”。"
+        ],
+        [
+          "部件",
+          "机器人通常需要电机、减速器、传感器和控制器等。"
+        ]
+      ],
+      "visual": {
+        "type": "chain",
+        "label": "近距离供应链的作用",
+        "nodes": [
+          "零部件集聚",
+          "更快打样",
+          "更快维修",
+          "产品迭代"
+        ]
+      },
+      "impacts": [
+        [
+          "产品速度",
+          "企业试制和改款的等待时间可能缩短。"
+        ],
+        [
+          "维修体验",
+          "零件供应充足时，故障后的维修可能更快。"
+        ],
+        [
+          "能力边界",
+          "配件齐全不等于软件和安全能力已经成熟。"
+        ]
+      ],
+      "next": [
+        "这种供应链能否降低实际产品价格",
+        "关键零部件的质量和兼容性如何验证"
+      ],
+      "source": "南方网",
+      "updated": "2026-09-01",
+      "en": {
+        "cat": "Robotics & Embodied AI",
+        "title": "Shenzhen’s ‘Robot Valley’ promotes a 30-minute parts supply chain",
+        "brief": "Finding robot parts faster can speed up new products, but it does not mean robots are already reliable at every real-world job.",
+        "take": "Southcn.com reported that Shenzhen’s ‘Robot Valley,’ backed by a dense supply chain, says parts for a robot can be assembled in 30 minutes. The point is not that a finished robot can be built in half an hour. It is that motors, reducers, sensors and controllers can be found and coordinated nearby. Shorter supply distances can cut waiting time for prototypes and repairs and help small teams experiment. Whether a robot is useful still depends on software, reliability, safety testing and long-term service. Faster supply matters to people only if it becomes more dependable and repairable products.",
+        "meta": "China | Robotics supply chain | Sep. 1",
+        "facts": [
+          [
+            "Claim",
+            "The report says parts for one robot can be gathered in 30 minutes."
+          ],
+          [
+            "Location",
+            "The supply-chain cluster is in Shenzhen’s ‘Robot Valley.’"
+          ],
+          [
+            "Parts",
+            "Robots commonly need motors, reducers, sensors and controllers."
+          ]
+        ],
+        "visual": {
+          "type": "chain",
+          "label": "What a nearby supply chain can do",
+          "nodes": [
+            "Parts cluster",
+            "Faster prototypes",
+            "Faster repairs",
+            "Product iteration"
+          ]
+        },
+        "impacts": [
+          [
+            "Product speed",
+            "Companies may spend less time waiting to test and revise designs."
+          ],
+          [
+            "Repair experience",
+            "Repairs may be quicker when parts are readily available."
+          ],
+          [
+            "Capability limits",
+            "Available parts do not guarantee mature software or safety."
+          ]
+        ],
+        "next": [
+          "Whether this lowers real product prices",
+          "How quality and interoperability of key components are tested"
+        ],
+        "source": "Southcn.com",
+        "updated": "2026-09-01"
+      },
+      "sourceLinks": [
+        {
+          "title": "半小时就能配齐一台机器人 深圳“机器人谷”跑出智造加速度",
+          "url": "https://news.southcn.com/node_ac2b0b62a4/eb19061da0.shtml",
+          "publisher": "南方网"
+        }
+      ],
+      "eventImage": {
+        "url": "https://ocmsmedia.sfccn.com/vod-4310da/image/default/9927BDFBE889419BB8BB95B263F4E4FD-6-2.jpeg",
+        "credit": "南方财经深圳机器人谷相关图",
+        "link": "https://news.southcn.com/node_ac2b0b62a4/eb19061da0.shtml",
+        "zh": {
+          "alt": "深圳机器人谷相关真实图",
+          "caption": "相关真实图：深圳机器人谷产业片区，用来辅助理解本地机器人供应链密度"
+        },
+        "en": {
+          "alt": "Related real image of Shenzhen Robot Valley",
+          "caption": "Related real image: Shenzhen Robot Valley helps show local supplier density"
+        }
+      }
+    },
+    {
+      "id": "robot-parts-alliance",
+      "cat": "机器人与具身智能",
+      "icon": "drone",
+      "title": "京东工业与舍弗勒共建机器人零部件产业联盟",
+      "brief": "机器人供应商开始抱团做零部件协同，未来工厂买机器人时，维修和替换件是否好找会更关键。",
+      "take": "汽车产业媒体报道称，京东工业与德国舍弗勒共同发起机器人零部件产业发展联盟。联盟本身不是一款新机器人，也不会立即改变市场；它更像是让零部件厂商、采购和制造企业围绕供应、规格和合作形成更稳定的连接。工业机器人和人形机器人要大规模使用，最怕停机后找不到合适部件，或不同品牌之间难以兼容。对使用机器人的工厂来说，备件供应、维修周期和总成本，往往比发布会上的动作更影响是否真的部署。",
+      "meta": "中国/德国｜机器人供应链｜9月1日",
+      "facts": [
+        [
+          "发起方",
+          "京东工业与舍弗勒共同参与发起。"
+        ],
+        [
+          "组织",
+          "成立机器人零部件产业发展联盟。"
+        ],
+        [
+          "重点",
+          "联盟关注零部件供应与产业协同。"
+        ]
+      ],
+      "visual": null,
+      "impacts": [
+        [
+          "工厂成本",
+          "稳定的备件供应可减少设备停机损失。"
+        ],
+        [
+          "采购选择",
+          "统一或更清晰的规格有助于降低更换部件的难度。"
+        ]
+      ],
+      "next": [
+        "联盟是否公布成员和具体标准",
+        "是否覆盖关键部件的维修与质量规则"
+      ],
+      "source": "Gasgoo",
+      "updated": "2026-09-01",
+      "en": {
+        "cat": "Robotics & Embodied AI",
+        "title": "JD Industrial and Schaeffler help form a robot-parts alliance",
+        "brief": "Robot suppliers are coordinating around components, making repair access and replacement parts more important for factories considering a purchase.",
+        "take": "Automotive industry outlet Gasgoo reported that JD Industrial and Germany’s Schaeffler helped establish a robot-parts industry development alliance. An alliance is not a new robot and will not transform the market overnight. It is a way to build steadier links among component makers, procurement teams and manufacturers around supply, specifications and cooperation. At scale, industrial and humanoid robots can be costly when a suitable part is unavailable after a breakdown or brands do not work together. For factories, spare-parts supply, repair time and total cost often matter more than a launch-event demonstration.",
+        "meta": "China/Germany | Robotics supply chain | Sep. 1",
+        "facts": [
+          [
+            "Founders",
+            "JD Industrial and Schaeffler jointly took part in founding it."
+          ],
+          [
+            "Organization",
+            "It is a robot-parts industry development alliance."
+          ],
+          [
+            "Focus",
+            "It centers on component supply and industry coordination."
+          ]
+        ],
+        "visual": null,
+        "impacts": [
+          [
+            "Factory costs",
+            "Reliable spare parts can reduce losses from equipment downtime."
+          ],
+          [
+            "Procurement choices",
+            "Clearer or shared specifications may make replacements easier."
+          ]
+        ],
+        "next": [
+          "Whether the alliance publishes members and concrete standards",
+          "Whether repair and quality rules cover critical parts"
+        ],
+        "source": "Gasgoo",
+        "updated": "2026-09-01"
+      },
+      "sourceLinks": [
+        {
+          "title": "Robot Parts Industry Development Alliance Established, Co-Founded by JD Industrial and Schaeffler",
+          "url": "https://autonews.gasgoo.com/articles/news/robot-parts-industry-development-alliance-established-co-founded-by-jd-industrial-and-schaeffler-2094630697271902208",
+          "publisher": "Gasgoo"
+        }
+      ],
+      "eventImage": {
+        "url": "https://50002352.s21i.huaweicloudsite.cn/2/ABUIABACGAAgtZiqyQYoqMbxogEwsAk42gU.jpg",
+        "credit": "森云智能京东工业合作报道图",
+        "link": "https://www.sensing-world.com/h-nd-102.html",
+        "zh": {
+          "alt": "京东工业机器人供应商合作授牌现场",
+          "caption": "相关真实图：京东工业机器人供应商合作现场，辅助理解机器人零部件联盟"
+        },
+        "en": {
+          "alt": "JD Industrial robotics supplier cooperation ceremony",
+          "caption": "Related real image: JD Industrial robotics supplier cooperation, used to explain parts alliances"
+        }
+      }
+    },
+    {
+      "id": "osaka-metro-humanoid",
+      "cat": "机器人与具身智能",
+      "icon": "drone",
+      "title": "大阪地铁试用人形机器人",
+      "brief": "地铁开始试用人形机器人，乘客最在意的不是它像不像人，而是能不能不添乱地把服务做好。",
+      "take": "日本媒体报道，大阪地铁正在试用人形机器人。公共交通是检验机器人是否可靠的高压场景：人流密集、突发情况多，还要照顾老人、儿童和行动不便者。试用阶段的意义主要是观察机器人能否在真实环境中提供指引、信息或简单协助，并与工作人员顺畅配合，而不是把人完全替掉。对乘客而言，若系统设计得当，它可能缩短问路和求助时间；若识别不准、挡路或缺少人工接手，反而会增加麻烦。",
+      "meta": "日本｜公共服务机器人｜9月1日",
+      "facts": [
+        [
+          "地点",
+          "试用发生在大阪地铁。"
+        ],
+        [
+          "设备",
+          "测试对象为人形机器人。"
+        ],
+        [
+          "场景",
+          "地铁属于人流密集、对安全和服务连续性要求高的场所。"
+        ]
+      ],
+      "visual": {
+        "type": "chain",
+        "label": "公共场所试用的关键",
+        "nodes": [
+          "乘客需求",
+          "机器人协助",
+          "人工接手",
+          "安全复盘"
+        ]
+      },
+      "impacts": [
+        [
+          "出行服务",
+          "问路和基础信息服务可能更方便。"
+        ],
+        [
+          "无障碍",
+          "设计是否照顾行动不便者是关键。"
+        ],
+        [
+          "安全体验",
+          "机器人必须能在拥挤环境中避让并及时交给人工。"
+        ]
+      ],
+      "next": [
+        "机器人具体承担哪些任务",
+        "试用后的乘客反馈和故障记录"
+      ],
+      "source": "News On Japan",
+      "updated": "2026-09-01",
+      "en": {
+        "cat": "Robotics & Embodied AI",
+        "title": "Osaka Metro trials a humanoid robot",
+        "brief": "A metro system is testing a humanoid robot; riders care less about whether it looks human than whether it can help without getting in the way.",
+        "take": "Japanese outlet News On Japan reported that Osaka Metro is trialing a humanoid robot. Public transit is a demanding test setting: crowds are dense, unexpected events happen, and older people, children and people with limited mobility all need to be considered. The main purpose of a trial is to see whether a robot can offer directions, information or simple assistance in a real environment while working smoothly with staff—not to replace people outright. Done well, it could shorten the time needed to ask for help. Poor recognition, blocked paths or no human handoff would make travel harder instead.",
+        "meta": "Japan | Public-service robots | Sep. 1",
+        "facts": [
+          [
+            "Location",
+            "The trial is at Osaka Metro."
+          ],
+          [
+            "Machine",
+            "The device being tested is a humanoid robot."
+          ],
+          [
+            "Setting",
+            "Metro stations are crowded places with high demands for safety and continuity of service."
+          ]
+        ],
+        "visual": {
+          "type": "chain",
+          "label": "What matters in a public-space trial",
+          "nodes": [
+            "Passenger needs",
+            "Robot assistance",
+            "Human handoff",
+            "Safety review"
+          ]
+        },
+        "impacts": [
+          [
+            "Travel service",
+            "Directions and basic information may become easier to get."
+          ],
+          [
+            "Accessibility",
+            "Whether the design serves people with limited mobility is crucial."
+          ],
+          [
+            "Safety experience",
+            "The robot must avoid people in crowds and hand off quickly to staff."
+          ]
+        ],
+        "next": [
+          "Which tasks the robot is assigned",
+          "Passenger feedback and fault records after the trial"
+        ],
+        "source": "News On Japan",
+        "updated": "2026-09-01"
+      },
+      "sourceLinks": [
+        {
+          "title": "Osaka Metro Trials Humanoid Robot",
+          "url": "https://newsonjapan.com/article/150576.php",
+          "publisher": "News On Japan"
+        }
+      ],
+      "eventImage": {
+        "url": "https://i2.ytimg.com/vi/zGop4dKqvnU/maxresdefault.jpg",
+        "credit": "News On Japan 视频缩略图",
+        "link": "https://newsonjapan.com/article/150576.php",
+        "zh": {
+          "alt": "大阪地铁试用人形机器人报道视频缩略图",
+          "caption": "来源页视频图：大阪地铁试用人形机器人"
+        },
+        "en": {
+          "alt": "Video thumbnail from a report on Osaka Metro trialing a humanoid robot",
+          "caption": "Source video image: Osaka Metro trialing a humanoid robot"
+        }
+      }
+    },
+    {
+      "id": "anthropic-data-center",
+      "cat": "AI",
+      "icon": "ai",
+      "title": "报道称Anthropic签下350亿美元数据中心协议",
+      "brief": "AI公司继续为数据中心砸下巨额资金，模型能力在进步，电力、用水和最终收费也会跟着承压。",
+      "take": "土耳其媒体报道称，Anthropic签署了一项350亿美元的数据中心协议。若金额和安排得到进一步确认，这将是生成式AI公司为计算资源作出的又一笔极大承诺。数据中心装着大量芯片和网络设备，为模型训练及用户请求的推理提供算力；它们同时需要稳定电力、冷却和土地。对普通人来说，这类投资可能带来更强的AI助手和更多在线服务，但也可能推高部分地区的能源与基础设施压力，并让AI服务更依赖少数拥有资金和算力的大公司。",
+      "meta": "全球｜AI基础设施｜9月1日",
+      "facts": [
+        [
+          "金额",
+          "报道提及协议金额为350亿美元。"
+        ],
+        [
+          "公司",
+          "报道指向AI公司Anthropic。"
+        ],
+        [
+          "资源",
+          "数据中心需要芯片、电力、冷却和网络设施。"
+        ]
+      ],
+      "visual": {
+        "type": "bars",
+        "label": "报道中的协议金额",
+        "bars": [
+          [
+            "数据中心协议",
+            100,
+            "#7A5AF8"
+          ]
+        ],
+        "max": 35,
+        "decimal": false
+      },
+      "impacts": [
+        [
+          "AI服务",
+          "更大的算力储备可能支持更强或更稳定的模型服务。"
+        ],
+        [
+          "能源压力",
+          "大型数据中心会增加当地供电和冷却资源需求。"
+        ],
+        [
+          "市场集中",
+          "巨额投入提高了小公司追赶领先者的门槛。"
+        ]
+      ],
+      "next": [
+        "Anthropic或合作方是否披露协议细节",
+        "项目地点及电力来源是否公开"
+      ],
+      "source": "Haber Aktuel",
+      "updated": "2026-09-01",
+      "en": {
+        "cat": "AI",
+        "title": "Report says Anthropic signed a $35 billion data-center deal",
+        "brief": "AI companies are committing huge sums to data centers; better models may follow, but so can pressure on power, water and eventually prices.",
+        "take": "Turkish outlet Haber Aktuel reported that Anthropic signed a $35 billion data-center agreement. If the amount and arrangement are confirmed, it would be another exceptionally large commitment by a generative-AI company to computing capacity. Data centers house the chips and networking equipment used for model training and inference, the computation behind each user request. They also need dependable power, cooling and land. For people, this investment could bring stronger AI assistants and more online services, but it can also strain local energy and infrastructure and make AI services more dependent on a small number of companies with capital and compute.",
+        "meta": "Global | AI infrastructure | Sep. 1",
+        "facts": [
+          [
+            "Amount",
+            "The report puts the agreement at $35 billion."
+          ],
+          [
+            "Company",
+            "The report identifies AI company Anthropic."
+          ],
+          [
+            "Resources",
+            "Data centers require chips, power, cooling and network infrastructure."
+          ]
+        ],
+        "visual": {
+          "type": "bars",
+          "label": "Reported agreement value",
+          "bars": [
+            [
+              "Data-center agreement",
+              100,
+              "#7A5AF8"
+            ]
+          ],
+          "max": 35,
+          "decimal": false
+        },
+        "impacts": [
+          [
+            "AI services",
+            "More compute capacity could support stronger or steadier model services."
+          ],
+          [
+            "Energy pressure",
+            "Large data centers raise local demand for power and cooling resources."
+          ],
+          [
+            "Market concentration",
+            "Huge commitments make it harder for smaller firms to catch up."
+          ]
+        ],
+        "next": [
+          "Whether Anthropic or a partner confirms deal details",
+          "Whether project locations and power sources are disclosed"
+        ],
+        "source": "Haber Aktuel",
+        "updated": "2026-09-01"
+      },
+      "sourceLinks": [
+        {
+          "title": "Anthropic, 35 Milyar Dolarlık Veri Merkezi Anlaşması İmzaladı",
+          "url": "https://www.haberaktuel.com/anthropic-35-milyar-dolarlik-veri-merkezi-anlasmasi-imzaladi-3481754",
+          "publisher": "Haber Aktuel"
+        }
+      ],
+      "eventImage": {
+        "url": "https://www.haberaktuel.com/wp-content/uploads/anthropic-35-milyar-dolarlik-veri-merkezi-anlasmasi-imzaladi.webp",
+        "credit": "Haber Aktuel 配图",
+        "link": "https://www.haberaktuel.com/anthropic-35-milyar-dolarlik-veri-merkezi-anlasmasi-imzaladi-3481754",
+        "zh": {
+          "alt": "Anthropic数据中心协议报道配图",
+          "caption": "原文配图：Anthropic数据中心协议报道"
+        },
+        "en": {
+          "alt": "Image from a report on Anthropic data-center agreements",
+          "caption": "Source image: report on Anthropic data-center agreements"
+        }
+      }
+    },
+    {
+      "id": "meta-data-center-robots",
+      "cat": "机器人与具身智能",
+      "icon": "refinery",
+      "title": "报道：Meta在数据中心试用机器人，仍需人工看管",
+      "brief": "数据中心机器人还比技术员慢、还得有人盯着，说明“用机器人替人”离日常现实仍有距离。",
+      "take": "一篇报道关注Meta让机器人进入数据中心工作的尝试，并指出机器人目前仍慢于人工技术员，且需要监督。数据中心是高价值且容错很低的环境，设备维护一旦出错，可能影响大量在线服务。机器人若能承担重复巡检、搬运或简单操作，或许能减少夜间和危险作业；但速度、异常处理和安全责任仍决定它能否真正独立工作。这也提醒普通职场人，自动化更常见的第一步是改变岗位分工，让人处理判断和例外，而不是立刻取消所有岗位。",
+      "meta": "全球｜数据中心机器人｜9月1日",
+      "facts": [
+        [
+          "公司",
+          "报道涉及Meta的数据中心机器人尝试。"
+        ],
+        [
+          "现状",
+          "机器人仍比人工技术员慢。"
+        ],
+        [
+          "监督",
+          "报道指机器人在人工监督下运行。"
+        ]
+      ],
+      "visual": {
+        "type": "chain",
+        "label": "当前人机分工",
+        "nodes": [
+          "机器人执行",
+          "人工监督",
+          "异常处理",
+          "服务保障"
+        ]
+      },
+      "impacts": [
+        [
+          "在线服务",
+          "维护自动化若成熟，可能提高机房持续运行能力。"
+        ],
+        [
+          "就业变化",
+          "岗位更可能先转向监督和处理异常。"
+        ],
+        [
+          "安全要求",
+          "高风险机房不能只凭演示效果减少人工。"
+        ]
+      ],
+      "next": [
+        "机器人实际负责哪些维护任务",
+        "是否公布效率和故障率数据"
+      ],
+      "source": "Developpez.com",
+      "updated": "2026-09-01",
+      "en": {
+        "cat": "Robotics & Embodied AI",
+        "title": "Report: Meta tests robots in data centers, still under human supervision",
+        "brief": "Data-center robots are reportedly slower than technicians and still watched by people, showing that replacement is far from an everyday reality.",
+        "take": "A report examined Meta’s effort to put robots to work in data centers, saying they remain slower than human technicians and operate under supervision. Data centers are high-value, low-tolerance environments: a maintenance mistake can affect many online services. Robots may eventually take on repetitive inspections, moving equipment or simple tasks, reducing overnight or hazardous work. But speed, handling of exceptions and accountability will determine whether they can work independently. For workers, the first effect of automation is often a shift in job division—people oversee systems and resolve unusual cases—rather than the instant removal of all jobs.",
+        "meta": "Global | Data-center robots | Sep. 1",
+        "facts": [
+          [
+            "Company",
+            "The report concerns Meta’s data-center robot effort."
+          ],
+          [
+            "Current performance",
+            "It says robots are still slower than human technicians."
+          ],
+          [
+            "Supervision",
+            "It says the robots operate with human oversight."
+          ]
+        ],
+        "visual": {
+          "type": "chain",
+          "label": "Current human-machine division of work",
+          "nodes": [
+            "Robot execution",
+            "Human oversight",
+            "Exception handling",
+            "Service continuity"
+          ]
+        },
+        "impacts": [
+          [
+            "Online services",
+            "Mature maintenance automation could improve facility uptime."
+          ],
+          [
+            "Work changes",
+            "Jobs may first shift toward supervision and exception handling."
+          ],
+          [
+            "Safety requirements",
+            "High-risk facilities cannot reduce staff based on demos alone."
+          ]
+        ],
+        "next": [
+          "Which maintenance tasks robots actually perform",
+          "Whether efficiency and failure-rate data are published"
+        ],
+        "source": "Developpez.com",
+        "updated": "2026-09-01"
+      },
+      "sourceLinks": [
+        {
+          "title": "Dans les coulisses de linitiative de Meta visant à mettre des robots au travail dans ses centres de données : les robots restent plus lents que les techniciens humains et fonctionnent sous supervision",
+          "url": "https://embarque.developpez.com/actu/386691/Dans-les-coulisses-de-l-initiative-de-Meta-visant-a-mettre-des-robots-au-travail-dans-ses-centres-de-donnees-les-robots-restent-plus-lents-que-les-techniciens-humains-et-fonctionnent-sous-supervision/",
+          "publisher": "Developpez.com"
+        }
+      ],
+      "eventImage": {
+        "url": "https://image.ic.work/e8/e8aab970c9c4.png",
+        "credit": "ic.work 数据中心机器人报道图",
+        "link": "https://www.ic.work/article/softbank-roze-ai-robotics-data-centers-100b-ipo",
+        "zh": {
+          "alt": "数据中心施工现场机器人搬运相关图",
+          "caption": "相关真实图：数据中心机器人搬运场景，辅助理解 Meta 数据中心机器人试用"
+        },
+        "en": {
+          "alt": "Related real image of robots moving materials in a data-center construction site",
+          "caption": "Related real image: data-center robotics scene, used to explain Meta data-center robot trials"
+        }
+      }
+    },
+    {
+      "id": "dreame-car-production",
+      "cat": "科技产业",
+      "icon": "alert",
+      "title": "追觅回应放弃整车量产",
+      "brief": "做过扫地机的追觅不再推进整车量产，说明从智能硬件跨到造车，资金和交付门槛依然很高。",
+      "take": "每日经济新闻报道，追觅回应放弃整车量产。整车量产意味着不只做概念车或零部件，而要持续解决研发、供应链、工厂、质量、售后和资金周转等一整套难题。企业调整计划未必意味着相关技术停止投入，但它表明造车不是把成熟家电或智能硬件经验简单复制过去。对消费者而言，车企和跨界品牌的退出或收缩，可能减少未来可选车型，却也提醒购车时应重视品牌能否长期交付、维修和提供软件支持，而不只看首发配置。",
+      "meta": "中国｜智能硬件与汽车｜9月1日",
+      "facts": [
+        [
+          "公司",
+          "报道涉及智能硬件企业追觅。"
+        ],
+        [
+          "回应",
+          "公司回应称放弃整车量产。"
+        ],
+        [
+          "门槛",
+          "量产车需要供应链、制造、质量和售后能力。"
+        ]
+      ],
+      "visual": null,
+      "impacts": [
+        [
+          "购车选择",
+          "跨界新品牌的车型承诺需要观察持续交付能力。"
+        ],
+        [
+          "售后保障",
+          "长期维修、零件和软件支持应成为购买考量。"
+        ],
+        [
+          "行业竞争",
+          "资源可能回流到更擅长的产品线或汽车供应环节。"
+        ]
+      ],
+      "next": [
+        "追觅是否保留汽车零部件或技术业务",
+        "公司对已投入项目和合作方如何安排"
+      ],
+      "source": "每日经济新闻",
+      "updated": "2026-09-01",
+      "en": {
+        "cat": "Technology Industry",
+        "title": "Dreame says it is dropping plans for mass production of complete vehicles",
+        "brief": "Dreame, known for smart home hardware, is no longer pursuing mass vehicle production—a reminder that moving from devices to carmaking is still expensive and hard to deliver.",
+        "take": "National Business Daily reported that Dreame responded to claims that it is abandoning mass production of complete vehicles. Mass production means more than showing a concept car or making components: a company must consistently manage R&D, supply chains, factories, quality, after-sales service and cash flow. A plan change does not necessarily mean all related technology work stops, but it shows that experience in home appliances or smart hardware cannot simply be copied into carmaking. For buyers, a new brand’s ability to keep delivering cars, repairs and software support matters as much as launch-day specifications.",
+        "meta": "China | Smart hardware and autos | Sep. 1",
+        "facts": [
+          [
+            "Company",
+            "The report concerns smart-hardware company Dreame."
+          ],
+          [
+            "Response",
+            "The company said it is giving up mass production of complete vehicles."
+          ],
+          [
+            "Barrier",
+            "Mass-produced cars require supply-chain, manufacturing, quality and after-sales capabilities."
+          ]
+        ],
+        "visual": null,
+        "impacts": [
+          [
+            "Car choices",
+            "Promises from cross-sector new brands need to be judged by sustained delivery."
+          ],
+          [
+            "After-sales support",
+            "Long-term repairs, parts and software support should factor into purchases."
+          ],
+          [
+            "Industry competition",
+            "Resources may return to stronger product lines or auto-supply businesses."
+          ]
+        ],
+        "next": [
+          "Whether Dreame retains auto-component or vehicle-technology operations",
+          "How it handles existing projects and partners"
+        ],
+        "source": "National Business Daily",
+        "updated": "2026-09-01"
+      },
+      "sourceLinks": [
+        {
+          "title": "追觅回应放弃整车量产",
+          "url": "https://www.nbd.com.cn/articles/2026-09-01/4569580.html",
+          "publisher": "每日经济新闻"
+        }
+      ],
+      "eventImage": {
+        "url": "https://img1.mydrivers.com/img/20260313/061f2d7fc6e34cea99c77b58e1f03b04.jpg",
+        "credit": "快科技追觅汽车相关图",
+        "link": "https://news.mydrivers.com/1/1108/1108895.htm",
+        "zh": {
+          "alt": "追觅汽车概念车相关图片",
+          "caption": "相关真实图：追觅汽车概念车，用来辅助理解整车量产讨论"
+        },
+        "en": {
+          "alt": "Related real image of a Dreame concept car",
+          "caption": "Related real image: Dreame concept car, used to explain the production discussion"
+        }
+      }
+    }
+  ]
+}
