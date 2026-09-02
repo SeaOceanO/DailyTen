@@ -223,20 +223,28 @@ let editionIndex = null;
 let availableDateKeys = new Set([todayKey, yesterdayKey]);
 let editionPathByDate = new Map();
 
+window.addEventListener('error', (event) => {
+  reportRuntimeError(event.error || new Error(event.message));
+});
+
+window.addEventListener('unhandledrejection', (event) => {
+  reportRuntimeError(event.reason || new Error('页面数据加载失败'));
+});
+
 init();
 
 async function init() {
-  applyTheme();
-  renderChannelTabs();
-  renderLanguageModal();
-  renderThemeModal();
-  wireLanguageModal();
-  wireThemeModal();
-  wireThemePreference();
-  wireTermModal();
-  wireDateGestures();
-  wireNavigationGestures();
   showLoadingState('正在读取这一天的十条...');
+  safeSetup(applyTheme);
+  safeSetup(renderChannelTabs);
+  safeSetup(renderLanguageModal);
+  safeSetup(renderThemeModal);
+  safeSetup(wireLanguageModal);
+  safeSetup(wireThemeModal);
+  safeSetup(wireThemePreference);
+  safeSetup(wireTermModal);
+  safeSetup(wireDateGestures);
+  safeSetup(wireNavigationGestures);
 
   try {
     const [latestEdition, loadedIndex] = await Promise.all([
@@ -252,6 +260,20 @@ async function init() {
     renderDateModule();
     showErrorState(error);
   }
+}
+
+function safeSetup(callback) {
+  try {
+    callback();
+  } catch (error) {
+    console.warn(error);
+  }
+}
+
+function reportRuntimeError(error) {
+  console.error(error);
+  if (items.length) return;
+  showErrorState(error instanceof Error ? error : new Error(String(error)));
 }
 
 async function loadAndRender(preloadedLatestEdition = null) {
@@ -329,9 +351,9 @@ async function fetchEditionIndex() {
 
 function normalizeEditionIndex(index, fallbackDateKey) {
   const seen = new Set();
-  const rawEntries = Array.isArray(index?.editions) ? index.editions : [];
+  const rawEntries = index && Array.isArray(index.editions) ? index.editions : [];
   const editions = rawEntries
-    .filter((entry) => typeof entry?.dateKey === 'string' && entry.dateKey <= fallbackDateKey)
+    .filter((entry) => entry && typeof entry.dateKey === 'string' && entry.dateKey <= fallbackDateKey)
     .filter((entry) => !seen.has(entry.dateKey) && seen.add(entry.dateKey))
     .map((entry) => ({
       dateKey: entry.dateKey,
@@ -342,8 +364,8 @@ function normalizeEditionIndex(index, fallbackDateKey) {
     .sort((a, b) => b.dateKey.localeCompare(a.dateKey));
 
   return {
-    latestDateKey: typeof index?.latestDateKey === 'string' ? index.latestDateKey : fallbackDateKey,
-    updatedAt: typeof index?.updatedAt === 'string' ? index.updatedAt : '',
+    latestDateKey: index && typeof index.latestDateKey === 'string' ? index.latestDateKey : fallbackDateKey,
+    updatedAt: index && typeof index.updatedAt === 'string' ? index.updatedAt : '',
     editions,
   };
 }
@@ -364,13 +386,13 @@ function hydrateEdition(edition) {
   const subtitle = localizedEditionSubtitle(edition, channel);
 
   document.documentElement.lang = state.language === 'en' ? 'en' : 'zh-CN';
-  document.title = `${title} · ${t(state.channel) ?? channel.label}`;
+  document.title = `${title} · ${coalesce(t(state.channel), channel.label)}`;
   elements.eyebrow.textContent = localizedEyebrow(channel);
   elements.title.textContent = title;
   elements.subtitle.textContent = subtitle;
   elements.progressTitle.textContent = localizedBriefLabel(edition);
   elements.progressStatus.textContent = t('progressDefault');
-  elements.doneCard.textContent = edition.doneLabel ?? t('readComplete');
+  elements.doneCard.textContent = coalesce(edition.doneLabel, t('readComplete'));
   elements.progressCard.hidden = state.channel === 'mine';
 }
 
@@ -612,11 +634,11 @@ function calendarCellsHtml(monthDate) {
 
 function wireDateGestures() {
   elements.dateModule.addEventListener('touchstart', (event) => {
-    touchStartY = event.touches[0]?.clientY ?? 0;
+    touchStartY = event.touches[0] ? event.touches[0].clientY : 0;
   }, { passive: true });
 
   elements.dateModule.addEventListener('touchend', (event) => {
-    const touchEndY = event.changedTouches[0]?.clientY ?? touchStartY;
+    const touchEndY = event.changedTouches[0] ? event.changedTouches[0].clientY : touchStartY;
     const deltaY = touchEndY - touchStartY;
 
     if (!state.calendarExpanded && deltaY > 34) {
@@ -651,8 +673,8 @@ function showLoadingState(text) {
 function wireNavigationGestures() {
   elements.shell.addEventListener('touchstart', (event) => {
     if (event.target.closest('.date-module, .modal-backdrop')) return;
-    navTouchStartX = event.touches[0]?.clientX ?? 0;
-    navTouchStartY = event.touches[0]?.clientY ?? 0;
+    navTouchStartX = event.touches[0] ? event.touches[0].clientX : 0;
+    navTouchStartY = event.touches[0] ? event.touches[0].clientY : 0;
   }, { passive: true });
 
   elements.shell.addEventListener('touchend', async (event) => {
@@ -1088,7 +1110,7 @@ async function collectAvailableFavoriteItems() {
   }
 
   const archivedDailyEditions = await Promise.all(
-    (editionIndex?.editions ?? [])
+    (editionIndex && editionIndex.editions ? editionIndex.editions : [])
       .filter((entry) => entry.dateKey !== todayKey)
       .map(async (entry) => {
         try {
@@ -1109,7 +1131,7 @@ async function collectAvailableFavoriteItems() {
 
   const seen = new Set();
   return editions
-    .flatMap((edition) => edition.items)
+    .reduce((allItems, edition) => allItems.concat(edition.items), [])
     .filter((item) => {
       if (seen.has(item.id)) return false;
       seen.add(item.id);
@@ -1132,7 +1154,7 @@ async function syncDisplayableFavorites() {
 }
 
 function buildTopicItem(topic, channel, dateKey, index) {
-  const english = localTopicEnglish[topic.slug] ?? null;
+  const english = coalesce(localTopicEnglish[topic.slug], null);
 
   return {
     id: `${channel}-${dateKey}-${topic.slug}`,
@@ -1273,7 +1295,7 @@ function makeTopic(slug, cat, icon, title, take, region, meta, source, nodes, fa
 
 function sketchIcon(name, size) {
   const id = uniqueId('sketch');
-  const path = iconPaths[name] ?? iconPaths.chart;
+  const path = coalesce(iconPaths[name], iconPaths.chart);
   return `
     <svg class="sketch-svg" viewBox="0 0 64 64" width="${size}" height="${size}" aria-hidden="true">
       <defs>${sketchFilter(id, 2.2, 0.03)}</defs>
@@ -1286,9 +1308,9 @@ function sketchIcon(name, size) {
 
 function eventImageHtml(item) {
   const image = localizedEventImage(item.eventImage);
-  if (!image?.url) return '';
+  if (!image || !image.url) return '';
   const caption = image.caption || image.credit || item.source || '';
-  const link = image.link || item.sourceLinks?.[0]?.url || '';
+  const link = image.link || (item.sourceLinks && item.sourceLinks[0] ? item.sourceLinks[0].url : '');
   const imageMarkup = `
     <img src="${escapeHtml(image.url)}" alt="${escapeHtml(image.alt || caption || item.title)}" loading="lazy" referrerpolicy="no-referrer" />
   `;
@@ -1307,8 +1329,8 @@ function localizedEventImage(image) {
   const localized = state.language === 'en' ? image.en : image.zh;
   return {
     ...image,
-    alt: localized?.alt ?? image.alt,
-    caption: localized?.caption ?? image.caption,
+    alt: localized && localized.alt !== undefined ? localized.alt : image.alt,
+    caption: localized && localized.caption !== undefined ? localized.caption : image.caption,
   };
 }
 
@@ -1604,7 +1626,7 @@ const glossary = [
 ];
 
 function annotateTerms(value) {
-  const text = String(value ?? '');
+  const text = String(coalesce(value, ''));
   if (!text) return '';
 
   const matches = [];
@@ -1644,8 +1666,8 @@ function annotateTerms(value) {
 }
 
 function isTermBoundary(text, start, end) {
-  const before = text[start - 1] ?? '';
-  const after = text[end] ?? '';
+  const before = coalesce(text[start - 1], '');
+  const after = coalesce(text[end], '');
   return !isAsciiWord(before) && !isAsciiWord(after);
 }
 
@@ -1691,18 +1713,22 @@ function localizedItem(item) {
 
   return {
     ...item,
-    cat: item.en.cat ?? item.cat,
-    title: item.en.title ?? item.title,
-    brief: item.en.brief ?? item.brief,
-    take: item.en.take ?? item.take,
-    meta: item.en.meta ?? item.meta,
-    facts: item.en.facts ?? item.facts,
-    visual: item.en.visual ?? item.visual,
-    impacts: item.en.impacts ?? item.impacts,
-    next: item.en.next ?? item.next,
-    source: item.en.source ?? item.source,
-    updated: item.en.updated ?? item.updated,
+    cat: coalesce(item.en.cat, item.cat),
+    title: coalesce(item.en.title, item.title),
+    brief: coalesce(item.en.brief, item.brief),
+    take: coalesce(item.en.take, item.take),
+    meta: coalesce(item.en.meta, item.meta),
+    facts: coalesce(item.en.facts, item.facts),
+    visual: coalesce(item.en.visual, item.visual),
+    impacts: coalesce(item.en.impacts, item.impacts),
+    next: coalesce(item.en.next, item.next),
+    source: coalesce(item.en.source, item.source),
+    updated: coalesce(item.en.updated, item.updated),
   };
+}
+
+function coalesce(value, fallback) {
+  return value === null || value === undefined ? fallback : value;
 }
 
 function summaryBrief(item) {
@@ -1751,7 +1777,10 @@ function updateProgress() {
 }
 
 function t(key) {
-  return i18n[state.language]?.[key] ?? i18n.zh[key] ?? key;
+  const languagePack = i18n[state.language] || i18n.zh;
+  if (languagePack[key] !== undefined) return languagePack[key];
+  if (i18n.zh[key] !== undefined) return i18n.zh[key];
+  return key;
 }
 
 function effectiveTheme() {
@@ -1763,10 +1792,10 @@ function effectiveTheme() {
 function applyTheme() {
   const theme = effectiveTheme();
   document.documentElement.dataset.theme = theme;
-  document.querySelector('meta[name="theme-color"]')?.setAttribute(
-    'content',
-    theme === 'dark' ? '#101513' : '#f4f6f2',
-  );
+  const themeColor = document.querySelector('meta[name="theme-color"]');
+  if (themeColor) {
+    themeColor.setAttribute('content', theme === 'dark' ? '#101513' : '#f4f6f2');
+  }
 }
 
 function themeLabel(theme) {
@@ -1801,18 +1830,18 @@ function localizedEditionTitle(edition, channel) {
   if (state.language === 'en') {
     return state.channel === 'ai' ? 'AI Industry Ten' : 'DailyTen';
   }
-  return edition.title ?? channel.fallbackTitle;
+  return coalesce(edition.title, channel.fallbackTitle);
 }
 
 function localizedEditionSubtitle(edition, channel) {
   if (state.channel === 'mine') return t('mineSubtitle');
-  if (state.channel === 'favorites') return edition.subtitle ?? t('favoritesSubtitle');
+  if (state.channel === 'favorites') return coalesce(edition.subtitle, t('favoritesSubtitle'));
   if (state.language === 'en') {
     return state.channel === 'ai'
       ? 'Models, agents, compute, chips, products, and governance in one quiet briefing.'
       : 'Ten things worth knowing today, filtered and explained clearly.';
   }
-  return edition.subtitle ?? channel.fallbackSubtitle;
+  return coalesce(edition.subtitle, channel.fallbackSubtitle);
 }
 
 function localizedBriefLabel(edition) {
@@ -1821,7 +1850,7 @@ function localizedBriefLabel(edition) {
   if (state.language === 'en') {
     return `${dateLabel(state.selectedDateKey)} · 10 items`;
   }
-  return edition.briefLabel ?? `${dateLabel(state.selectedDateKey)} 10 条`;
+  return coalesce(edition.briefLabel, `${dateLabel(state.selectedDateKey)} 10 条`);
 }
 
 function readSavedDateKey() {
@@ -1840,7 +1869,7 @@ function readSavedTheme() {
 
 function readSet(key) {
   try {
-    return new Set(JSON.parse(localStorage.getItem(key) ?? '[]'));
+    return new Set(JSON.parse(coalesce(localStorage.getItem(key), '[]')));
   } catch {
     return new Set();
   }
@@ -1927,11 +1956,11 @@ function uniqueId(prefix) {
 
 function escapeHtml(value) {
   return String(value)
-    .replaceAll('&', '&amp;')
-    .replaceAll('<', '&lt;')
-    .replaceAll('>', '&gt;')
-    .replaceAll('"', '&quot;')
-    .replaceAll("'", '&#039;');
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#039;');
 }
 
 function escapeSvg(value) {
