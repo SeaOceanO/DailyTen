@@ -91,7 +91,19 @@
           "publisher": "新浪科技"
         }
       ],
-      "eventImage": null
+      "eventImage": {
+        "url": "https://n.sinaimg.cn/spider20260902/629/w1270h959/20260902/0289-7b9a78fd2c9707098e0b9f3aea122589.png",
+        "credit": "新浪科技",
+        "link": "https://finance.sina.com.cn/tech/roll/2026-09-02/doc-iniqnaws7497039.shtml",
+        "zh": {
+          "alt": "成都人工智能政府规章开始施行",
+          "caption": "成都人工智能政府规章开始施行"
+        },
+        "en": {
+          "alt": "Chengdu’s AI government rules take effect",
+          "caption": "Chengdu’s AI government rules take effect"
+        }
+      }
     },
     {
       "id": "beijing-yizhuang-robots",
@@ -195,7 +207,19 @@
           "publisher": "新华网"
         }
       ],
-      "eventImage": null
+      "eventImage": {
+        "url": "http://www.news.cn/tech/20260903/ae2c27b2145645d7aa02f2e3957068a0/20260903ae2c27b2145645d7aa02f2e3957068a0_2026090392bb21e171a44e64bd1636ea35928095.jpg",
+        "credit": "新华网",
+        "link": "http://www.news.cn/tech/20260903/ae2c27b2145645d7aa02f2e3957068a0/c.html",
+        "zh": {
+          "alt": "北京亦庄推动机器人更快进入市场",
+          "caption": "北京亦庄推动机器人更快进入市场"
+        },
+        "en": {
+          "alt": "Beijing E-Town pushes robots toward real customers",
+          "caption": "Beijing E-Town pushes robots toward real customers"
+        }
+      }
     },
     {
       "id": "nttpc-physical-ai-cloud",
@@ -281,7 +305,19 @@
           "publisher": "ZDNET Japan"
         }
       ],
-      "eventImage": null
+      "eventImage": {
+        "url": "https://japan.zdnet.com/storage/2025/10/09/60478e248ca20b13795f871513cee7f9/t/1280/960/d/251009_ai_as_1280_323829966.jpeg",
+        "credit": "ZDNET Japan",
+        "link": "https://japan.zdnet.com/article/35252231/",
+        "zh": {
+          "alt": "NTTPC推出面向物理AI的GPU云服务",
+          "caption": "NTTPC推出面向物理AI的GPU云服务"
+        },
+        "en": {
+          "alt": "NTTPC launches a GPU cloud for physical AI",
+          "caption": "NTTPC launches a GPU cloud for physical AI"
+        }
+      }
     },
     {
       "id": "zhejiang-embodied-policing",
@@ -385,7 +421,19 @@
           "publisher": "新华网"
         }
       ],
-      "eventImage": null
+      "eventImage": {
+        "url": "http://www.zj.xinhuanet.com/20260902/0c45856a08cc4f7daffc6ae8b0b70d3f/202609020c45856a08cc4f7daffc6ae8b0b70d3f_202609021637335944rId4image1.jpeg",
+        "credit": "新华网",
+        "link": "http://www.zj.xinhuanet.com/20260902/0c45856a08cc4f7daffc6ae8b0b70d3f/c.html",
+        "zh": {
+          "alt": "浙江上虞启用具身智能警务场景",
+          "caption": "浙江上虞启用具身智能警务场景"
+        },
+        "en": {
+          "alt": "Shangyu deploys embodied AI in policing",
+          "caption": "Shangyu deploys embodied AI in policing"
+        }
+      }
     },
     {
       "id": "china-consumption-policy",
@@ -471,7 +519,19 @@
           "publisher": "财经网"
         }
       ],
-      "eventImage": null
+      "eventImage": {
+        "url": "https://www.news.cn/fortune/20260831/4120c91857b54add803d76426e6d2ed9/202608314120c91857b54add803d76426e6d2ed9_a214f4426aeb4dcb815cd24a7a8ac8cc.jpg",
+        "credit": "新华社",
+        "link": "https://www.news.cn/fortune/20260831/4120c91857b54add803d76426e6d2ed9/c.html",
+        "zh": {
+          "alt": "促消费新政把重点放在智能商品和服务",
+          "caption": "促消费新政把重点放在智能商品和服务"
+        },
+        "en": {
+          "alt": "Consumer policy focuses on smarter goods and services",
+          "caption": "Consumer policy focuses on smarter goods and services"
+        }
+      }
     },
     {
       "id": "china-listed-company-results",
@@ -557,7 +617,19 @@
           "publisher": "新华网"
         }
       ],
-      "eventImage": null
+      "eventImage": {
+        "url": "https://www.news.cn/fortune/20260903/190642596f8d4aed8595ae279f86e676/22921f52c382440d97e95dd1ed79d5da.jpg",
+        "credit": "新华网",
+        "link": "https://www.news.cn/fortune/20260903/390361c5e8ac4a969c1908a5ad5a5a0a/c.html",
+        "zh": {
+          "alt": "上市公司半年报折射经济结构变化",
+          "caption": "上市公司半年报折射经济结构变化"
+        },
+        "en": {
+          "alt": "Half-year company reports point to shifts in China’s economy",
+          "caption": "Half-year company reports point to shifts in China’s economy"
+        }
+      }
     },
     {
       "id": "machine-duck-orders",
@@ -667,7 +739,19 @@
           "publisher": "每日经济新闻"
         }
       ],
-      "eventImage": null
+      "eventImage": {
+        "url": "https://smcos.cdmgiml.com/tx/test/others/200/copy-image-1788344202619-0-1788344206049_transcode.jpg",
+        "credit": "每日经济新闻",
+        "link": "https://www.nbd.com.cn/articles/2026-09-02/4570682.html",
+        "zh": {
+          "alt": "399美元“机器鸭”4天获1.05万台订单",
+          "caption": "399美元“机器鸭”4天获1.05万台订单"
+        },
+        "en": {
+          "alt": "A $399 robot duck draws 10,500 orders in four days",
+          "caption": "A $399 robot duck draws 10,500 orders in four days"
+        }
+      }
     },
     {
       "id": "carmakers-robotics",
@@ -771,7 +855,19 @@
           "publisher": "新浪科技"
         }
       ],
-      "eventImage": null
+      "eventImage": {
+        "url": "https://n.sinaimg.cn/spider20260903/553/w1053h300/20260903/ac9a-43d21f9ada09e8f4c5d41040a19b5ec9.png",
+        "credit": "新浪科技",
+        "link": "https://finance.sina.com.cn/tech/roll/2026-09-03/doc-iniqpksa7026484.shtml",
+        "zh": {
+          "alt": "车企把机器人列为下一块竞争场地",
+          "caption": "车企把机器人列为下一块竞争场地"
+        },
+        "en": {
+          "alt": "Carmakers treat robots as their next competitive field",
+          "caption": "Carmakers treat robots as their next competitive field"
+        }
+      }
     },
     {
       "id": "nsf-human-robot-center",
@@ -857,7 +953,19 @@
           "publisher": "University of Utah"
         }
       ],
-      "eventImage": null
+      "eventImage": {
+        "url": "https://www.price.utah.edu/wp-content/uploads/2026/06/Tucker-Hermans-Class.jpg",
+        "credit": "University of Utah",
+        "link": "https://www.price.utah.edu/2026/09/01/u-researchers-join-nsf-center-that-will-study-how-robots-and-people-learn-to-live-and-work-together",
+        "zh": {
+          "alt": "美国NSF中心研究人和机器人如何共同工作",
+          "caption": "美国NSF中心研究人和机器人如何共同工作"
+        },
+        "en": {
+          "alt": "NSF-backed center studies how people and robots can work together",
+          "caption": "NSF-backed center studies how people and robots can work together"
+        }
+      }
     },
     {
       "id": "schaeffler-harmonic-gear",
@@ -961,7 +1069,19 @@
           "publisher": "共同社PR Wire"
         }
       ],
-      "eventImage": null
+      "eventImage": {
+        "url": "https://d17gj49471obkc.cloudfront.net/kyodopress_cms/wp-content/uploads/2026/09/prw_PI2im_18c3TF33.jpg",
+        "credit": "共同社PR Wire",
+        "link": "https://www.kyodo.co.jp/pr/2026-09-03_4032762/",
+        "zh": {
+          "alt": "舍弗勒发布面向人形机器人的波发生齿轮箱",
+          "caption": "舍弗勒发布面向人形机器人的波发生齿轮箱"
+        },
+        "en": {
+          "alt": "Schaeffler introduces a gear system for humanoid robots",
+          "caption": "Schaeffler introduces a gear system for humanoid robots"
+        }
+      }
     }
   ]
 }

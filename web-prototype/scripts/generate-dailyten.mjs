@@ -69,6 +69,7 @@ async function main() {
   const candidates = await fetchNewsCandidates(config);
   const edition = await generateEdition({ apiKey, model, reasoningEffort, schema, config, candidates });
   normalizeEdition(edition);
+  await enrichEditionEventImages(edition);
   validateEdition(edition);
   await writeEditionOutputs(edition);
   console.log(`Wrote ${edition.items.length} DailyTen items to ${outputPath} and archived ${edition.dateKey}.`);
@@ -353,6 +354,96 @@ function normalizeEdition(edition) {
   for (const item of edition.items ?? []) {
     item.cat = normalizeCategory(item);
   }
+}
+
+async function enrichEditionEventImages(edition) {
+  await Promise.all((edition.items ?? []).map(async (item) => {
+    if (item.eventImage?.url) return;
+
+    const source = Array.isArray(item.sourceLinks) ? item.sourceLinks[0] : null;
+    if (!source?.url) {
+      item.eventImage = null;
+      return;
+    }
+
+    const imageUrl = await findSourceImage(source.url);
+    item.eventImage = imageUrl
+      ? {
+        url: imageUrl,
+        credit: source.publisher || item.source || '',
+        link: source.url,
+        zh: {
+          alt: item.title,
+          caption: item.title,
+        },
+        en: {
+          alt: item.en?.title || item.title,
+          caption: item.en?.title || item.title,
+        },
+      }
+      : null;
+  }));
+}
+
+async function findSourceImage(url) {
+  try {
+    const response = await withTimeout(fetch(url, {
+      headers: {
+        accept: 'text/html,application/xhtml+xml',
+        'user-agent': 'Mozilla/5.0 DailyTen image resolver',
+      },
+    }), 9000);
+
+    if (!response.ok) return '';
+
+    const html = await response.text();
+    return selectUsableImage(extractImageCandidates(html, url));
+  } catch (error) {
+    console.warn(`Image lookup skipped for ${url}: ${error.message}`);
+    return '';
+  }
+}
+
+function extractImageCandidates(html, baseUrl) {
+  const candidates = [];
+  const add = (value) => {
+    if (!value) return;
+    try {
+      candidates.push(new URL(value.replaceAll('&amp;', '&'), baseUrl).href);
+    } catch {
+      // Ignore malformed image URLs from source pages.
+    }
+  };
+
+  [
+    /<meta[^>]+property=["']og:image["'][^>]+content=["']([^"']+)/gi,
+    /<meta[^>]+content=["']([^"']+)["'][^>]+property=["']og:image["']/gi,
+    /<meta[^>]+name=["']twitter:image["'][^>]+content=["']([^"']+)/gi,
+    /<img\b[^>]+(?:src|data-src|data-original)=["']([^"']+)["'][^>]*>/gi,
+  ].forEach((pattern) => {
+    for (const match of html.matchAll(pattern)) {
+      add(match[1]);
+    }
+  });
+
+  return candidates;
+}
+
+function selectUsableImage(candidates) {
+  return candidates.find((url) => {
+    const lower = url.toLowerCase();
+    return /\.(jpe?g|png|webp)(\?|#|$)/.test(lower)
+      && !/(logo|qrcode|qr-code|code|ewm|beacon|share|app|blank|police|big_logo|thumb_150_110|article-er|weixin)/.test(lower);
+  }) || '';
+}
+
+function withTimeout(promise, milliseconds) {
+  return Promise.race([
+    promise,
+    new Promise((_, reject) => {
+      setTimeout(() => reject(new Error('timeout')), milliseconds);
+    }),
+  ]);
 }
 
 function normalizeCategory(item) {
