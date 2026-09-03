@@ -261,7 +261,8 @@
         "source",
         "updated",
         "en",
-        "sourceLinks"
+        "sourceLinks",
+        "eventImage"
       ],
       "properties": {
         "id": {
@@ -357,35 +358,42 @@
       }
     },
     "eventImage": {
-      "type": "object",
-      "additionalProperties": false,
-      "required": [
-        "url",
-        "credit",
-        "link",
-        "zh",
-        "en"
-      ],
-      "properties": {
-        "url": {
-          "type": "string",
-          "minLength": 1
+      "anyOf": [
+        {
+          "type": "null"
         },
-        "credit": {
-          "type": "string",
-          "minLength": 1
-        },
-        "link": {
-          "type": "string",
-          "minLength": 1
-        },
-        "zh": {
-          "$ref": "#/$defs/localizedText"
-        },
-        "en": {
-          "$ref": "#/$defs/localizedText"
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "url",
+            "credit",
+            "link",
+            "zh",
+            "en"
+          ],
+          "properties": {
+            "url": {
+              "type": "string",
+              "minLength": 1
+            },
+            "credit": {
+              "type": "string",
+              "minLength": 1
+            },
+            "link": {
+              "type": "string",
+              "minLength": 1
+            },
+            "zh": {
+              "$ref": "#/$defs/localizedText"
+            },
+            "en": {
+              "$ref": "#/$defs/localizedText"
+            }
+          }
         }
-      }
+      ]
     }
   }
 }
