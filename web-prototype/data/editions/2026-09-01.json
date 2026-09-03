@@ -1,0 +1,609 @@
+{
+  "dateKey": "2026-09-01",
+  "generatedAt": "2026-09-01T05:00:00+08:00",
+  "title": "DailyTen｜9月1日早报",
+  "subtitle": "AI扩张正在同时改写电力、芯片与公共基础设施；区域合作和产业政策也在加速落地。",
+  "briefLabel": "今日十则",
+  "doneLabel": "已读",
+  "readTimeMinutes": 8,
+  "items": [
+    {
+      "id": "miit-ai-service-providers",
+      "cat": "AI",
+      "icon": "ai",
+      "title": "工信部启动AI应用服务商培育专项行动",
+      "take": "政策重点从“造模型”进一步转向“用模型”。如果资源池、首购首用和风险补偿等措施落实，中小企业采用AI的试错成本有望下降，普通人的工作工具和公共服务也可能更快出现可用的智能化产品。",
+      "meta": "中国｜政策与产业应用",
+      "facts": [
+        [
+          "行动",
+          "工信部部署AI应用服务商培育专项行动"
+        ],
+        [
+          "目标",
+          "今年底资源池企业目标突破2000家"
+        ],
+        [
+          "支持方式",
+          "探索首购首用、风险补偿等采购模式"
+        ]
+      ],
+      "visual": {
+        "type": "chain",
+        "label": "政策传导路径",
+        "nodes": [
+          "服务商资源池",
+          "采购支持",
+          "企业试用",
+          "AI应用落地"
+        ]
+      },
+      "impacts": [
+        [
+          "职场",
+          "更多行业软件或接入智能体与大模型能力"
+        ],
+        [
+          "中小企业",
+          "采购新技术的前期风险可能降低"
+        ],
+        [
+          "消费者",
+          "金融、政务、客服等服务的智能化速度或加快"
+        ]
+      ],
+      "next": [
+        "资源池企业的遴选标准与名单",
+        "风险补偿和采购支持的具体执行细则"
+      ],
+      "source": "第一财经",
+      "updated": "2026-08-31",
+      "sourceLinks": [
+        {
+          "title": "建立AI应用服务商资源池，工信部部署专项行动",
+          "url": "https://www.yicai.com/news/103341306.html",
+          "publisher": "第一财经"
+        }
+      ]
+    },
+    {
+      "id": "us-power-grid-emergency",
+      "cat": "公共安全",
+      "icon": "alert",
+      "title": "美国宣布保障大电网安全的国家紧急状态",
+      "take": "电网已不只是能源问题，也是公共安全问题。美国以紧急状态处理大电网安全，反映极端天气、网络风险和供电可靠性正在被提升到国家安全层级；大规模停电会直接影响家庭通信、医疗、交通和日常支付。",
+      "meta": "美国｜电力基础设施",
+      "facts": [
+        [
+          "文件",
+          "美国《联邦公报》发布相关总统行动"
+        ],
+        [
+          "对象",
+          "美国大宗电力系统"
+        ],
+        [
+          "核心",
+          "以国家紧急状态名义强化电网安全保障"
+        ]
+      ],
+      "visual": {
+        "type": "chain",
+        "label": "停电影响链条",
+        "nodes": [
+          "电网受扰",
+          "通信与交通受影响",
+          "医疗和支付承压",
+          "居民生活受限"
+        ]
+      },
+      "impacts": [
+        [
+          "生活",
+          "供电稳定性关系到通信、出行、冷暖与支付"
+        ],
+        [
+          "安全",
+          "关键基础设施面临更高的网络与物理防护要求"
+        ],
+        [
+          "成本",
+          "强化电网韧性的投资最终可能影响电价和税收"
+        ]
+      ],
+      "next": [
+        "后续行政措施及其适用范围",
+        "电网安全投入如何与电价监管协调"
+      ],
+      "source": "Federal Register",
+      "updated": "2026-08-31",
+      "sourceLinks": [
+        {
+          "title": "Declaring a National Emergency To Secure the United States Bulk-Power System",
+          "url": "https://www.federalregister.gov/documents/2026/08/31/2026-17843/declaring-a-national-emergency-to-secure-the-united-states-bulk-power-system",
+          "publisher": "Federal Register"
+        }
+      ]
+    },
+    {
+      "id": "eu-lumi-ai-supercomputer",
+      "cat": "AI",
+      "icon": "ai",
+      "title": "欧洲为LUMI-AI超级计算机投入3.878亿欧元",
+      "take": "高性能算力正被视为AI时代的基础设施，而非单纯科研设备。欧洲加码超级计算，意在减少对外部算力的依赖；这会影响未来AI服务的能力、价格和数据处理地点。",
+      "meta": "欧洲｜AI基础设施",
+      "facts": [
+        [
+          "项目",
+          "LUMI-AI超级计算机"
+        ],
+        [
+          "投资",
+          "3.878亿欧元"
+        ],
+        [
+          "方向",
+          "建设面向人工智能的高性能计算能力"
+        ]
+      ],
+      "visual": {
+        "type": "bars",
+        "label": "已披露投资额",
+        "bars": [
+          [
+            "LUMI-AI",
+            100,
+            "#4F7CAC"
+          ]
+        ],
+        "max": 100,
+        "decimal": false
+      },
+      "impacts": [
+        [
+          "用户",
+          "本地AI服务能力提升可能带来更多可选产品"
+        ],
+        [
+          "隐私",
+          "数据在本地区处理的需求可能得到更多基础设施支持"
+        ],
+        [
+          "产业",
+          "算力供给竞争将影响AI创业和科研的门槛"
+        ]
+      ],
+      "next": [
+        "设备落地时间与算力配置",
+        "欧洲如何向企业和科研机构分配资源"
+      ],
+      "source": "HWUpgrade",
+      "updated": "2026-08-31",
+      "sourceLinks": [
+        {
+          "title": "LUMI-AI，欧洲投资3.878亿欧元建设新的AI超级计算机",
+          "url": "https://www.hwupgrade.it/news/server-workstation/lumi-ai-l-europa-investe-387-8-milioni-di-euro-nel-nuovo-supercomputer-per-l-intelligenza-artificiale_158438.html",
+          "publisher": "HWUpgrade"
+        }
+      ]
+    },
+    {
+      "id": "apple-ceo-transition",
+      "cat": "科技产业",
+      "icon": "chart",
+      "title": "苹果迎来CEO交接，特努斯接任受关注",
+      "take": "苹果的管理层更替会影响全球最重要消费电子生态之一的产品节奏。报道指约翰·特努斯将接任CEO；市场尤其会观察苹果能否把AI能力更自然地带进iPhone、Mac和服务业务，进而影响消费者换机与开发者投入。",
+      "meta": "全球科技｜消费电子",
+      "facts": [
+        [
+          "人事",
+          "报道指约翰·特努斯将成为苹果新任CEO"
+        ],
+        [
+          "交接",
+          "蒂姆·库克卸任引发关注"
+        ],
+        [
+          "焦点",
+          "苹果在AI时代的产品与平台策略"
+        ]
+      ],
+      "visual": {
+        "type": "chain",
+        "label": "苹果生态影响路径",
+        "nodes": [
+          "管理层交接",
+          "产品战略",
+          "开发者生态",
+          "用户设备与服务"
+        ]
+      },
+      "impacts": [
+        [
+          "消费者",
+          "未来设备的AI功能、定价和换机理由值得关注"
+        ],
+        [
+          "开发者",
+          "平台规则和系统能力变化会影响应用开发"
+        ],
+        [
+          "供应链",
+          "苹果产品路线会牵动零部件和代工需求"
+        ]
+      ],
+      "next": [
+        "苹果对CEO交接的正式说明",
+        "新管理层的AI产品路线与发布节奏"
+      ],
+      "source": "Business Standard",
+      "updated": "2026-08-31",
+      "sourceLinks": [
+        {
+          "title": "Tim Cook last day at Apple: How he took the company beyond the iPhone",
+          "url": "https://www.business-standard.com/technology/tech-news/tim-cook-s-last-day-at-apple-how-he-took-the-company-beyond-the-iphone-126083100425_1.html",
+          "publisher": "Business Standard"
+        }
+      ]
+    },
+    {
+      "id": "ai-energy-race",
+      "cat": "能源",
+      "icon": "oil",
+      "title": "AI扩张被视为一场新的能源竞赛",
+      "take": "训练和运行AI需要持续、密集的电力供应。企业界将AI推进形容为“能源竞赛”，提醒我们：未来不只是芯片可能紧张，稳定电源、电网接入和储能也会决定AI服务能否普及，并可能影响各地用电成本。",
+      "meta": "全球｜AI与电力需求",
+      "facts": [
+        [
+          "判断",
+          "Sembcorp称AI推进正成为能源竞赛"
+        ],
+        [
+          "需求",
+          "数据中心与AI计算依赖大量稳定电力"
+        ],
+        [
+          "瓶颈",
+          "电源、电网和接入能力的重要性上升"
+        ]
+      ],
+      "visual": {
+        "type": "chain",
+        "label": "AI的能源约束",
+        "nodes": [
+          "算力扩张",
+          "用电需求增加",
+          "电网接入承压",
+          "能源投资加速"
+        ]
+      },
+      "impacts": [
+        [
+          "电价",
+          "数据中心集中地区需关注供电与价格压力"
+        ],
+        [
+          "环境",
+          "新增电力来源将影响减排速度"
+        ],
+        [
+          "就业",
+          "电网、储能和能源运维相关技能需求可能增加"
+        ]
+      ],
+      "next": [
+        "数据中心新增负荷的区域分布",
+        "可再生能源与燃气电源如何配套"
+      ],
+      "source": "The Business Times",
+      "updated": "2026-08-31",
+      "sourceLinks": [
+        {
+          "title": "The AI push is becoming an energy race: Sembcorp",
+          "url": "https://www.businesstimes.com.sg/startups-tech/technology/ai-push-becoming-energy-race-sembcorp",
+          "publisher": "The Business Times"
+        }
+      ]
+    },
+    {
+      "id": "japan-korea-business-cooperation",
+      "cat": "国际局势",
+      "icon": "ship",
+      "title": "日韩商界推动在供应链、能源与AI芯片上扩大合作",
+      "take": "日韩企业界把竞争关系更多地放进“互补合作”的框架，涉及供应链、能源安全和未来产业。两国若加强协调，可能提高东亚关键零部件和能源供应的韧性，也会影响电子产品和汽车产业链的成本与稳定性。",
+      "meta": "东亚｜经贸与产业安全",
+      "facts": [
+        [
+          "参与方",
+          "日韩商工会议所会长团"
+        ],
+        [
+          "议题",
+          "供应链、能源安全、AI与半导体"
+        ],
+        [
+          "表述",
+          "强调竞争之外的互补关系"
+        ]
+      ],
+      "visual": {
+        "type": "chain",
+        "label": "合作覆盖领域",
+        "nodes": [
+          "供应链",
+          "能源安全",
+          "AI与芯片",
+          "区域产业韧性"
+        ]
+      },
+      "impacts": [
+        [
+          "消费者",
+          "零部件供应更稳定有助于减少产品缺货风险"
+        ],
+        [
+          "就业",
+          "跨国合作可能带来新的投资与岗位"
+        ],
+        [
+          "风险",
+          "地缘政治变化仍可能影响合作落实"
+        ]
+      ],
+      "next": [
+        "双方是否形成具体联合项目",
+        "半导体与能源合作是否获得政府层面配套"
+      ],
+      "source": "韩民族日报",
+      "updated": "2026-08-31",
+      "sourceLinks": [
+        {
+          "title": "韩日商工会议所会长团：加强供应链、能源安全与未来产业合作",
+          "url": "https://www.hani.co.kr/arti/economy/economy_general/1275468.html",
+          "publisher": "韩民族日报"
+        }
+      ]
+    },
+    {
+      "id": "australia-indonesia-22",
+      "cat": "国际局势",
+      "icon": "ship",
+      "title": "澳大利亚与印尼“2+2”会谈显示安全合作升温",
+      "take": "澳大利亚和印尼加强外交与防务沟通，说明印太地区的安全合作正在向邻国间更紧密的机制延伸。对普通人而言，海上通道和地区稳定关系到旅游安全、商品运输时效以及能源和食品价格的波动。",
+      "meta": "印太｜外交与安全",
+      "facts": [
+        [
+          "机制",
+          "澳大利亚—印尼“2+2”会谈"
+        ],
+        [
+          "参与",
+          "外交与防务部门共同参与"
+        ],
+        [
+          "意义",
+          "双边安全合作被视为处于高点"
+        ]
+      ],
+      "visual": {
+        "type": "chain",
+        "label": "地区稳定与生活",
+        "nodes": [
+          "安全对话",
+          "海上通道稳定",
+          "贸易运输顺畅",
+          "商品价格与出行"
+        ]
+      },
+      "impacts": [
+        [
+          "出行",
+          "地区安全形势影响跨境旅行风险评估"
+        ],
+        [
+          "物价",
+          "航运受扰可能传导至能源和进口商品价格"
+        ],
+        [
+          "安全",
+          "邻国间沟通机制有助于降低误判概率"
+        ]
+      ],
+      "next": [
+        "会谈后的联合声明与具体合作项目",
+        "南海及周边海域局势对合作的影响"
+      ],
+      "source": "The Diplomat",
+      "updated": "2026-08-31",
+      "sourceLinks": [
+        {
+          "title": "Hitting a High Point: The Australia-Indonesia 2+2",
+          "url": "https://thediplomat.com/2026/08/hitting-a-high-point-the-australia-indonesia-22/",
+          "publisher": "The Diplomat"
+        }
+      ]
+    },
+    {
+      "id": "korea-central-asia-summit",
+      "cat": "国际局势",
+      "icon": "ship",
+      "title": "韩国—中亚峰会前夕，乌兹别克斯坦期待升温",
+      "take": "韩国与中亚国家靠近，不仅关乎外交，也涉及能源、矿产、制造与劳动力合作。中亚在关键资源和欧亚运输通道中的地位上升，新的合作网络可能改变部分商品和产业链的来源与路线。",
+      "meta": "中亚｜区域合作",
+      "facts": [
+        [
+          "活动",
+          "韩国—中亚峰会受到关注"
+        ],
+        [
+          "地点",
+          "报道聚焦乌兹别克斯坦的期待"
+        ],
+        [
+          "关联",
+          "合作可能覆盖经贸、资源与基础设施"
+        ]
+      ],
+      "visual": {
+        "type": "chain",
+        "label": "合作可能的连接点",
+        "nodes": [
+          "峰会沟通",
+          "资源与基建合作",
+          "运输通道",
+          "产业链多元化"
+        ]
+      },
+      "impacts": [
+        [
+          "供应链",
+          "更多运输与采购路线可降低单一来源风险"
+        ],
+        [
+          "就业",
+          "基建和制造合作可能创造跨境岗位"
+        ],
+        [
+          "价格",
+          "资源合作变化会长期影响原材料成本"
+        ]
+      ],
+      "next": [
+        "峰会公布的合作清单",
+        "能源、关键矿产和交通项目的实际签约"
+      ],
+      "source": "The Korea Herald",
+      "updated": "2026-08-31",
+      "sourceLinks": [
+        {
+          "title": "Hopes high among Uzbeks ahead of Korea-Central Asia Summit",
+          "url": "https://www.koreaherald.com/article/10857468",
+          "publisher": "The Korea Herald"
+        }
+      ]
+    },
+    {
+      "id": "chongqing-stability-measures",
+      "cat": "中国经济",
+      "icon": "chart",
+      "title": "重庆推出37条措施，支持经济稳中向好",
+      "take": "地方出台稳增长组合政策，通常会通过消费、就业、企业融资或投资项目传导到居民生活。对在重庆工作、经营或购房的人来说，关键不在政策数量，而在补贴、服务和融资支持能否真正落到个人与小微企业。",
+      "meta": "中国｜地方经济政策",
+      "facts": [
+        [
+          "地区",
+          "重庆市"
+        ],
+        [
+          "措施",
+          "出台37条政策举措"
+        ],
+        [
+          "目标",
+          "进一步推动经济稳中向好"
+        ]
+      ],
+      "visual": {
+        "type": "trend",
+        "label": "政策关注点",
+        "big": "37条",
+        "sub": "稳增长支持措施",
+        "direction": "right",
+        "up": true,
+        "points": [
+          28,
+          42,
+          58,
+          76,
+          90
+        ]
+      },
+      "impacts": [
+        [
+          "就业",
+          "企业经营改善有助于稳定招聘和收入预期"
+        ],
+        [
+          "消费",
+          "促消费措施若落地，居民可能获得更多活动或补贴"
+        ],
+        [
+          "小微企业",
+          "融资和降本支持的可得性最值得关注"
+        ]
+      ],
+      "next": [
+        "37条措施的具体申领条件和执行部门",
+        "就业、消费及房地产相关细则"
+      ],
+      "source": "凤凰网重庆",
+      "updated": "2026-08-31",
+      "sourceLinks": [
+        {
+          "title": "重庆市出台37条政策举措 进一步推动经济稳中向好",
+          "url": "https://cq.ifeng.com/c/8w0d29HDMjP",
+          "publisher": "凤凰网重庆"
+        }
+      ]
+    },
+    {
+      "id": "china-data-expo-digital-economy",
+      "cat": "科技产业",
+      "icon": "code",
+      "title": "数博会聚焦数据要素与数字经济的下一阶段",
+      "take": "数据如何流通、确权和被安全使用，决定了AI和数字服务能否真正提升效率。数博会围绕数据要素价值释放展开讨论，意味着未来企业办理业务、获得信贷和使用公共服务时，数据协同会更普遍，但隐私保护也更重要。",
+      "meta": "中国｜数字基础设施",
+      "facts": [
+        [
+          "活动",
+          "2026中国国际大数据产业博览会"
+        ],
+        [
+          "主题",
+          "探索数据要素价值释放的新路径"
+        ],
+        [
+          "方向",
+          "数字经济发展与数据基础设施"
+        ]
+      ],
+      "visual": {
+        "type": "chain",
+        "label": "数据价值形成",
+        "nodes": [
+          "数据治理",
+          "合规流通",
+          "AI与业务应用",
+          "公共与商业服务"
+        ]
+      },
+      "impacts": [
+        [
+          "办事",
+          "跨机构数据协同可能减少重复提交材料"
+        ],
+        [
+          "企业",
+          "数据治理能力将影响融资、运营和AI应用"
+        ],
+        [
+          "隐私",
+          "数据使用扩大也要求更清晰的授权与保护"
+        ]
+      ],
+      "next": [
+        "数据流通交易和授权机制的具体规则",
+        "公共数据开放与个人信息保护如何平衡"
+      ],
+      "source": "新浪财经",
+      "updated": "2026-08-31",
+      "sourceLinks": [
+        {
+          "title": "数博会探寻数据要素价值释放新路径",
+          "url": "https://finance.sina.com.cn/tech/roll/2026-08-31/doc-iniqehwx4691036.shtml",
+          "publisher": "新浪财经"
+        }
+      ]
+    }
+  ]
+}

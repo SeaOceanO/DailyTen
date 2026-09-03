@@ -17,6 +17,22 @@
         "daily"
       ],
       "generatedAt": "2026-09-02T05:00:00+08:00"
+    },
+    {
+      "dateKey": "2026-09-01",
+      "path": "./data/editions/2026-09-01.json",
+      "channels": [
+        "daily"
+      ],
+      "generatedAt": "2026-09-01T05:00:00+08:00"
+    },
+    {
+      "dateKey": "2026-08-31",
+      "path": "./data/editions/2026-08-31.json",
+      "channels": [
+        "daily"
+      ],
+      "generatedAt": "2026-08-31T05:00:00+08:00"
     }
   ]
 }
