@@ -872,7 +872,45 @@ function createCard(item) {
 
   const details = document.createElement('div');
   details.className = 'details';
-  details.innerHTML = detailsHtml(displayItem);
+  let detailsRendered = false;
+
+  function ensureDetailsRendered() {
+    if (detailsRendered) return;
+    details.innerHTML = detailsHtml(localizedItem(item));
+    detailsRendered = true;
+
+    details.querySelectorAll('.event-image img').forEach((image) => {
+      image.addEventListener('error', () => {
+        const wrapper = image.closest('.event-image');
+        if (wrapper) wrapper.remove();
+      }, { once: true });
+    });
+
+    details.querySelector('[data-action="collapse"]').addEventListener('click', () => {
+      collapseCardWithoutJump(card, header);
+    });
+
+    details.querySelector('[data-action="favorite"]').addEventListener('click', async () => {
+      toggleSet(state.favorites, item.id);
+      writeSet(storageKeys.favorites, state.favorites);
+
+      if (state.channel === 'favorites') {
+        await loadAndRender();
+        return;
+      }
+
+      syncCardButtons(card, item.id);
+    });
+
+    details.querySelector('[data-action="mute"]').addEventListener('click', () => {
+      state.muted.add(item.id);
+      writeSet(storageKeys.muted, state.muted);
+      card.classList.add('is-muted');
+      syncCardButtons(card, item.id);
+    });
+
+    syncCardButtons(card, item.id);
+  }
 
   header.addEventListener('click', (event) => {
     if (event.target.closest('[data-term]')) return;
@@ -906,35 +944,13 @@ function createCard(item) {
       return;
     }
 
+    ensureDetailsRendered();
     card.classList.add('is-open');
     header.setAttribute('aria-expanded', 'true');
     state.read.add(item.id);
     writeSet(storageKeys.read, state.read);
     updateProgress();
   }
-
-  details.querySelector('[data-action="collapse"]').addEventListener('click', () => {
-    collapseCardWithoutJump(card, header);
-  });
-
-  details.querySelector('[data-action="favorite"]').addEventListener('click', async () => {
-    toggleSet(state.favorites, item.id);
-    writeSet(storageKeys.favorites, state.favorites);
-
-    if (state.channel === 'favorites') {
-      await loadAndRender();
-      return;
-    }
-
-    syncCardButtons(card, item.id);
-  });
-
-  details.querySelector('[data-action="mute"]').addEventListener('click', () => {
-    state.muted.add(item.id);
-    writeSet(storageKeys.muted, state.muted);
-    card.classList.add('is-muted');
-    syncCardButtons(card, item.id);
-  });
 
   card.append(header, details);
   syncCardButtons(card, item.id);
@@ -1286,12 +1302,10 @@ function makeTopic(slug, cat, icon, title, take, region, meta, source, nodes, fa
 }
 
 function sketchIcon(name, size) {
-  const id = uniqueId('sketch');
   const path = coalesce(iconPaths[name], iconPaths.chart);
   return `
     <svg class="sketch-svg" viewBox="0 0 64 64" width="${size}" height="${size}" aria-hidden="true">
-      <defs>${sketchFilter(id, 2.2, 0.03)}</defs>
-      <g filter="url(#${id})" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+      <g fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
         ${path}
       </g>
     </svg>
@@ -1303,7 +1317,7 @@ function eventImageHtml(item) {
   if (!image || !image.url) return '';
   const link = image.link || (item.sourceLinks && item.sourceLinks[0] ? item.sourceLinks[0].url : '');
   const imageMarkup = `
-    <img src="${escapeHtml(image.url)}" alt="${escapeHtml(image.alt || item.title)}" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.closest('.event-image').remove()" />
+    <img src="${escapeHtml(image.url)}" alt="${escapeHtml(image.alt || item.title)}" loading="lazy" decoding="async" referrerpolicy="no-referrer" />
   `;
 
   return `
@@ -1438,9 +1452,14 @@ function syncCardButtons(card, id) {
   const favorite = state.favorites.has(id);
   const muted = state.muted.has(id);
 
-  favoriteButton.textContent = favorite ? t('favoriteOn') : t('favoriteOff');
-  favoriteButton.classList.toggle('is-active', favorite);
-  muteButton.textContent = muted ? t('muteOn') : t('muteOff');
+  if (favoriteButton) {
+    favoriteButton.textContent = favorite ? t('favoriteOn') : t('favoriteOff');
+    favoriteButton.classList.toggle('is-active', favorite);
+  }
+
+  if (muteButton) {
+    muteButton.textContent = muted ? t('muteOn') : t('muteOff');
+  }
 }
 
 const glossary = [
