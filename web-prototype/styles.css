@@ -95,7 +95,6 @@ button {
   overflow: hidden;
   padding: 22px 18px;
   backface-visibility: hidden;
-  transform: translateZ(0);
   will-change: opacity, transform;
 }
 
@@ -1039,7 +1038,7 @@ h1 {
   background: var(--frame);
   border: 1px solid var(--line);
   border-radius: 14px;
-  margin: 0 0 16px;
+  margin: 4px 0 16px;
   overflow: hidden;
 }
 
@@ -1053,15 +1052,6 @@ h1 {
   display: block;
   object-fit: cover;
   width: 100%;
-}
-
-.event-image figcaption {
-  border-top: 1px solid var(--line);
-  color: var(--muted);
-  font-size: 11px;
-  line-height: 1.45;
-  margin: 0;
-  padding: 8px 10px;
 }
 
 .chain-diagram {

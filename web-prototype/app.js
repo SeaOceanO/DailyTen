@@ -722,27 +722,17 @@ async function transitionChannel(direction, applyChange) {
   }
 
   elements.shell.getAnimations().forEach((animation) => animation.cancel());
-  const leavingX = direction === 'forward' ? -24 : 24;
-  const enteringX = direction === 'forward' ? 28 : -28;
+  const enteringX = direction === 'forward' ? 18 : -18;
 
   try {
-    await elements.shell.animate([
-      { opacity: 1, transform: 'translate3d(0, 0, 0) scale(1)' },
-      { opacity: 0.82, transform: `translate3d(${leavingX}px, 0, 0) scale(0.992)` },
-    ], {
-      duration: 115,
-      easing: 'cubic-bezier(0.32, 0.72, 0, 1)',
-      fill: 'forwards',
-    }).finished;
-
     await applyChange();
 
     await elements.shell.animate([
-      { opacity: 0.9, transform: `translate3d(${enteringX}px, 0, 0) scale(0.994)` },
-      { opacity: 1, transform: 'translate3d(0, 0, 0) scale(1)' },
+      { opacity: 0.72, transform: `translate3d(${enteringX}px, 0, 0)` },
+      { opacity: 1, transform: 'translate3d(0, 0, 0)' },
     ], {
-      duration: transitionMs,
-      easing: 'cubic-bezier(0.22, 1, 0.36, 1)',
+      duration: 220,
+      easing: 'cubic-bezier(0.2, 0.8, 0.2, 1)',
       fill: 'both',
     }).finished;
   } finally {
@@ -1309,17 +1299,14 @@ function sketchIcon(name, size) {
 function eventImageHtml(item) {
   const image = localizedEventImage(item.eventImage);
   if (!image || !image.url) return '';
-  const caption = image.caption || image.credit || item.source || '';
   const link = image.link || (item.sourceLinks && item.sourceLinks[0] ? item.sourceLinks[0].url : '');
   const imageMarkup = `
-    <img src="${escapeHtml(image.url)}" alt="${escapeHtml(image.alt || caption || item.title)}" loading="lazy" referrerpolicy="no-referrer" />
+    <img src="${escapeHtml(image.url)}" alt="${escapeHtml(image.alt || item.title)}" loading="lazy" referrerpolicy="no-referrer" />
   `;
 
   return `
-    ${sectionTitle(t('eventImage'))}
     <figure class="event-image">
       ${link ? `<a href="${escapeHtml(link)}" target="_blank" rel="noopener noreferrer">${imageMarkup}</a>` : imageMarkup}
-      ${caption ? `<figcaption>${escapeHtml(caption)}</figcaption>` : ''}
     </figure>
   `;
 }
