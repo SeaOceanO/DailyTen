@@ -153,6 +153,7 @@ const storageKeys = {
   date: 'dailyten-web:date',
   language: 'dailyten-web:language',
   theme: 'dailyten-web:theme',
+  themeVersion: 'dailyten-web:theme-version',
 };
 
 const iconPaths = {
@@ -474,6 +475,7 @@ function renderThemeModal() {
     button.addEventListener('click', () => {
       state.theme = button.dataset.theme;
       localStorage.setItem(storageKeys.theme, state.theme);
+      localStorage.setItem(storageKeys.themeVersion, '2');
       elements.themeModal.hidden = true;
       applyTheme();
       renderThemeModal();
@@ -1301,7 +1303,7 @@ function eventImageHtml(item) {
   if (!image || !image.url) return '';
   const link = image.link || (item.sourceLinks && item.sourceLinks[0] ? item.sourceLinks[0].url : '');
   const imageMarkup = `
-    <img src="${escapeHtml(image.url)}" alt="${escapeHtml(image.alt || item.title)}" loading="lazy" referrerpolicy="no-referrer" />
+    <img src="${escapeHtml(image.url)}" alt="${escapeHtml(image.alt || item.title)}" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.closest('.event-image').remove()" />
   `;
 
   return `
@@ -1850,8 +1852,14 @@ function readSavedLanguage() {
 }
 
 function readSavedTheme() {
+  if (localStorage.getItem(storageKeys.themeVersion) !== '2') {
+    localStorage.setItem(storageKeys.theme, 'light');
+    localStorage.setItem(storageKeys.themeVersion, '2');
+    return 'light';
+  }
+
   const saved = localStorage.getItem(storageKeys.theme);
-  return saved === 'dark' || saved === 'light' || saved === 'system' ? saved : 'system';
+  return saved === 'dark' || saved === 'light' || saved === 'system' ? saved : 'light';
 }
 
 function readSet(key) {

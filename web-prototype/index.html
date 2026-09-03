@@ -15,7 +15,8 @@
     <script>
       (() => {
         try {
-          const saved = localStorage.getItem('dailyten-web:theme') || 'system';
+          const hasCurrentThemeChoice = localStorage.getItem('dailyten-web:theme-version') === '2';
+          const saved = hasCurrentThemeChoice ? localStorage.getItem('dailyten-web:theme') || 'light' : 'light';
           const dark = saved === 'dark' || (saved === 'system' && matchMedia('(prefers-color-scheme: dark)').matches);
           document.documentElement.dataset.theme = dark ? 'dark' : 'light';
         } catch {
