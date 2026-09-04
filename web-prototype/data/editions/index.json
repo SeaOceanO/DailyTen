@@ -1,7 +1,15 @@
 {
-  "latestDateKey": "2026-09-04",
-  "updatedAt": "2026-09-03T22:55:30.875Z",
+  "latestDateKey": "2026-09-05",
+  "updatedAt": "2026-09-04T22:40:17.111Z",
   "editions": [
+    {
+      "dateKey": "2026-09-05",
+      "path": "./data/editions/2026-09-05.json",
+      "channels": [
+        "daily"
+      ],
+      "generatedAt": "2026-09-05T05:00:00+08:00"
+    },
     {
       "dateKey": "2026-09-04",
       "path": "./data/editions/2026-09-04.json",
