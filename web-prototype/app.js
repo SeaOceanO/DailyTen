@@ -1804,34 +1804,38 @@ function gpt6AstraTopic() {
     'gpt6-astra',
     '前沿模型',
     'ai',
-    'OpenAI 发布 GPT-6 Astra，重点提升电脑操作与复杂任务能力',
-    'OpenAI 于 9 月 3 日发布 GPT-6 Astra。它不只是回答问题更强，还更擅长操作电脑、浏览网页、编程、研究和完成多步骤专业工作；目前先向有限组织开放，更多用户和 API 访问将在随后几天逐步推出。',
+    'OpenAI 把 GPT-6 Astra 推成“AGI 时代”的信号',
+    'OpenAI 于 9 月 3 日发布 GPT-6 Astra。真正值得看的是，它不只是“回答更强”，而是更像一个能操作电脑、浏览网页、写代码、做研究并接管多步骤工作的系统。OpenAI 高管 Greg Brockman 把这次发布称作可能被回看为 AGI 时代的起点；但这不等于普通人今天就拿到万能助手，开放仍在分批进行，敏感网络安全能力也有额外限制。',
     '全球',
-    '前沿模型发布',
+    'AGI 与模型发布',
     'OpenAI',
-    ['OpenAI 官方发布', '有限范围开放', 'ChatGPT 与 API 推出', '工作流能力升级'],
-    [['发布时间', 'OpenAI 于 9 月 3 日正式公布 GPT-6 Astra。'], ['主要变化', '电脑操作、浏览、编程、研究和复杂工作能力明显加强。'], ['开放范围', '目前先向有限组织开放，随后扩展到更多订阅用户和 API。']],
-    [['普通用户', '短期内不一定马上看到模型选项，需要等待分批开放。'], ['开发者', 'API 模型名为 gpt-6-astra，适合复杂、多步骤任务。'], ['安全', '更强的电脑和网络安全能力也带来更严格的监控与使用限制。']],
-    ['具体账号何时获得使用权限。', '真实任务中的速度、价格和稳定性表现。'],
+    ['OpenAI 官方发布', 'AGI 时代表述', '电脑操作能力', '分批开放与安全限制'],
+    [['AGI 说法', 'Brockman 把 Astra 描述成可能被未来回看为 AGI 时代起点，但 AGI 本身仍没有统一定义。'], ['真正变化', '重点是模型能更主动地操作工具和电脑，而不只是给出一段更漂亮的回答。'], ['开放限制', '先给部分组织使用，更多 ChatGPT、API 和云平台用户随后分批获得。']],
+    [['普通用户', '你短期内可能还看不到入口，但未来 AI 会更像能代办整套任务的助手。'], ['开发者和公司', '更强的电脑使用和工作流能力，会直接影响软件开发、数据分析、客服和研究流程。'], ['安全边界', '越能代办真实操作，越需要权限、审计、撤销和人工确认。']],
+    ['普通账号、API 和企业客户什么时候真正拿到。', '它在真实任务里是否稳定，而不是只在发布演示里好看。'],
   );
-  topic.brief = '这次升级不只是让回答更聪明，而是让 AI 更会操作电脑和完成整套工作，不过目前仍在分批开放。';
+  topic.brief = '真正的大新闻不是“模型又强了”，而是 OpenAI 开始把它当成 AGI 时代入口来讲，但开放和安全限制还没跟上。';
   topic.en = makeEnglishTopic(
     'Frontier Models',
-    'OpenAI launches GPT-6 Astra with stronger computer use and complex-task performance',
-    'OpenAI introduced GPT-6 Astra on September 3. The change is not only better answers: Astra is designed to operate computers, browse, code, research, and complete multi-step professional work more reliably. Access is initially limited and will expand over the following days.',
+    'OpenAI frames GPT-6 Astra as a possible start of the AGI era',
+    'OpenAI introduced GPT-6 Astra on September 3. The point is not just that the model is stronger. Astra is being presented as a system that can operate computers, browse the web, write code, do research, and carry more of a full workflow. OpenAI president Greg Brockman described the launch as something future people may look back on as the start of the AGI era, though AGI is still a contested term and access remains limited.',
     'Global',
-    'frontier model launch',
+    'AGI and frontier models',
     'OpenAI',
-    ['Official launch', 'Limited rollout', 'ChatGPT and API access', 'Workflow upgrades'],
-    [['Timing', 'OpenAI officially announced GPT-6 Astra on September 3.'], ['Main change', 'Computer use, browsing, coding, research, and complex work are significantly stronger.'], ['Availability', 'The rollout starts with limited organizations before expanding to more subscribers and the API.']],
-    [['Users', 'The model may not appear immediately because access is rolling out in stages.'], ['Developers', 'The API model ID is gpt-6-astra and it targets complex multi-step work.'], ['Safety', 'Stronger computer and cybersecurity abilities also bring tighter monitoring and restrictions.']],
-    ['Watch when access reaches each account tier.', 'Watch real-world speed, price, and reliability.'],
+    ['Official launch', 'AGI-era framing', 'Computer-use ability', 'Limited rollout and safety controls'],
+    [['AGI framing', 'Brockman framed Astra as a possible marker for the beginning of the AGI era, while the meaning of AGI remains debated.'], ['Real change', 'The shift is toward AI that can use tools and computers to finish work, not just produce better text.'], ['Access', 'The rollout begins with selected organizations before reaching more ChatGPT, API, and cloud users.']],
+    [['Everyday users', 'You may not see it in your account right away, but this is the direction of AI assistants that can handle whole tasks.'], ['Developers and companies', 'Computer use and workflow execution could change coding, analysis, customer support, and research work.'], ['Safety', 'The more a model can act in real systems, the more permissions, audit logs, rollback, and human confirmation matter.']],
+    ['Watch when access reaches normal accounts, API users, and enterprises.', 'Watch whether it stays reliable on real tasks, not only in launch demos.'],
   );
-  topic.en.brief = 'This upgrade is about AI operating computers and completing whole workflows, not just giving smarter answers, but access is still rolling out.';
+  topic.en.brief = 'The real story is not “a stronger model”; OpenAI is framing Astra as an AGI-era step, while access and safety limits are still unresolved.';
   topic.sourceLinks = [{
     title: 'GPT-6 Astra: A new generation of intelligence',
     url: 'https://openai.com/index/gpt-6-astra/',
     publisher: 'OpenAI',
+  }, {
+    title: 'Welcome to the AGI era, OpenAI says as GPT-6 Astra debuts',
+    url: 'https://www.axios.com/2026/09/03/openai-astra-gpt-6-agi-brockman',
+    publisher: 'Axios',
   }];
   return topic;
 }
