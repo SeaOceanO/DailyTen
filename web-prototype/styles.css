@@ -92,6 +92,27 @@ button {
   font: inherit;
 }
 
+.page-viewport {
+  margin: 0 auto;
+  max-width: 720px;
+  overflow: hidden;
+  touch-action: pan-y;
+  width: 100%;
+}
+
+.page-track {
+  display: flex;
+  min-width: 100%;
+  transform: translate3d(0, 0, 0);
+  will-change: transform;
+}
+
+.page-track.is-nav-dragging {
+  cursor: grabbing;
+  transition: none;
+  user-select: none;
+}
+
 .shell {
   background: var(--frame);
   border: 1px solid rgba(205, 180, 119, 0.55);
@@ -104,11 +125,11 @@ button {
   touch-action: pan-y;
 }
 
-.shell.is-nav-dragging {
-  cursor: grabbing;
-  transition: none;
-  user-select: none;
-  will-change: transform;
+.page-viewport .shell {
+  flex: 0 0 100%;
+  margin: 0;
+  max-width: none;
+  width: 100%;
 }
 
 .bottom-nav {
@@ -1313,6 +1334,10 @@ h1 {
     }
   }
 
+  .page-viewport {
+    max-width: none;
+  }
+
   .shell {
     background: var(--paper);
     border-left: 0;
@@ -1429,6 +1454,7 @@ h1 {
 }
 
 @media (prefers-reduced-motion: reduce) {
+  .page-track,
   .shell,
   .details,
   .term-backdrop,

@@ -246,6 +246,9 @@ let touchStartY = 0;
 let navigationLocked = false;
 let suppressNextClick = false;
 const channelScrollPositions = new Map();
+const pagePanes = new Map();
+let pageViewport = null;
+let pageTrack = null;
 
 window.addEventListener('error', (event) => {
   reportRuntimeError(event.error || new Error(event.message));
@@ -259,6 +262,7 @@ init();
 
 async function init() {
   showLoadingState('正在读取这一天的十条...');
+  safeSetup(setupPagePanes);
   safeSetup(applyTheme);
   safeSetup(renderChannelTabs);
   safeSetup(renderLanguageModal);
@@ -301,7 +305,82 @@ function reportRuntimeError(error) {
   showErrorState(error instanceof Error ? error : new Error(String(error)));
 }
 
+function setupPagePanes() {
+  if (pageTrack) return;
+
+  const firstShell = elements.shell;
+  const parent = firstShell.parentNode;
+  const shellTemplate = firstShell.cloneNode(true);
+  pageViewport = document.createElement('div');
+  pageViewport.className = 'page-viewport';
+  pageTrack = document.createElement('div');
+  pageTrack.className = 'page-track';
+
+  parent.insertBefore(pageViewport, firstShell);
+  pageViewport.append(pageTrack);
+
+  swipeChannels.forEach((channel, index) => {
+    const shell = index === 0 ? firstShell : shellTemplate.cloneNode(true);
+    shell.classList.add('page-pane');
+    shell.dataset.pageChannel = channel;
+    namespacePaneIds(shell, channel);
+    pageTrack.append(shell);
+    pagePanes.set(channel, collectPaneElements(shell));
+  });
+
+  activateElementsForChannel(state.channel);
+  updatePaneAccessibility();
+  positionPageTrack(false);
+  window.addEventListener('resize', () => positionPageTrack(false));
+}
+
+function namespacePaneIds(shell, channel) {
+  shell.querySelectorAll('[id]').forEach((node) => {
+    node.id = `${node.id}-${channel}`;
+  });
+
+  const title = shell.querySelector('h1');
+  if (title) {
+    shell.setAttribute('aria-labelledby', title.id);
+  }
+}
+
+function collectPaneElements(shell) {
+  return {
+    shell,
+    eyebrow: shell.querySelector('.eyebrow'),
+    title: shell.querySelector('h1'),
+    subtitle: shell.querySelector('.subtitle'),
+    channelTabs: shell.querySelector('.channel-tabs'),
+    dateModule: shell.querySelector('.date-module'),
+    progressTitle: shell.querySelector('.progress-card strong'),
+    progressStatus: shell.querySelector('.progress-card span'),
+    progressCard: shell.querySelector('.progress-card'),
+    feed: shell.querySelector('.feed'),
+    dots: shell.querySelector('.progress-dots'),
+    doneCard: shell.querySelector('.done-card'),
+  };
+}
+
+function activateElementsForChannel(channel) {
+  const pane = pagePanes.get(channel === 'favorites' ? 'mine' : channel);
+  if (!pane) return;
+  Object.assign(elements, pane);
+}
+
+function updatePaneAccessibility() {
+  const activeChannel = pageChannelFor(state.channel);
+  pagePanes.forEach((pane, channel) => {
+    const isActive = channel === activeChannel;
+    pane.shell.toggleAttribute('inert', !isActive);
+    pane.shell.setAttribute('aria-hidden', isActive ? 'false' : 'true');
+  });
+}
+
 async function loadAndRender(preloadedLatestEdition = null) {
+  activateElementsForChannel(state.channel);
+  updatePaneAccessibility();
+
   if (!items.length && state.channel !== 'mine' && state.channel !== 'favorites') {
     showLoadingState('正在读取这一天的十条...');
   }
@@ -483,16 +562,18 @@ async function setActiveChannel(nextChannel, transitionOptions = {}) {
   if (!channels[nextChannel] || state.channel === nextChannel || navigationLocked) return;
   navigationLocked = true;
   const currentChannel = state.channel;
-  const direction = channelDirection(state.channel, nextChannel);
+  const currentPage = pageChannelFor(currentChannel);
+  const nextPage = pageChannelFor(nextChannel);
+  const currentIndex = swipeChannels.indexOf(currentPage);
+  const nextIndex = swipeChannels.indexOf(nextPage);
   channelScrollPositions.set(currentChannel, getPageScrollTop());
 
   try {
-    await transitionChannel(direction, async () => {
-      state.channel = nextChannel;
-      storage.setItem(storageKeys.channel, state.channel);
-      renderChannelTabs();
-      await loadAndRender();
-    }, {
+    state.channel = nextChannel;
+    storage.setItem(storageKeys.channel, state.channel);
+    renderChannelTabs();
+    await loadAndRender();
+    await transitionPageTrack(currentIndex, nextIndex, {
       ...transitionOptions,
       targetScroll: channelScrollPositions.get(nextChannel) || 0,
     });
@@ -755,7 +836,7 @@ function wireNavigationGestures() {
   const paintDrag = () => {
     dragFrame = 0;
     if (!gesture || gesture.axis !== 'horizontal') return;
-    elements.shell.style.transform = `translate3d(${gesture.offsetX}px, 0, 0)`;
+    setPageTrackOffset(gesture.baseIndex, gesture.offsetX, false);
   };
 
   const queueDragPaint = () => {
@@ -763,12 +844,16 @@ function wireNavigationGestures() {
   };
 
   gestureSurface.addEventListener('pointerdown', (event) => {
-    if (!event.isPrimary || event.button !== 0 || navigationLocked || state.channel === 'favorites') return;
+    if (!event.isPrimary || event.button !== 0 || navigationLocked) return;
     if (event.target.closest('.date-module, .modal-backdrop, .bottom-nav, input, select, textarea, [data-term]')) return;
 
     const now = performance.now();
+    const baseIndex = currentPageIndex();
+    if (baseIndex < 0) return;
+
     gesture = {
       pointerId: event.pointerId,
+      baseIndex,
       startX: event.clientX,
       startY: event.clientY,
       lastX: event.clientX,
@@ -792,7 +877,7 @@ function wireNavigationGestures() {
       if (Math.max(absX, absY) < 9) return;
       gesture.axis = absX > absY * 1.18 ? 'horizontal' : 'vertical';
       if (gesture.axis === 'horizontal') {
-        elements.shell.classList.add('is-nav-dragging');
+        pageTrack.classList.add('is-nav-dragging');
       }
     }
 
@@ -805,7 +890,7 @@ function wireNavigationGestures() {
     gesture.lastX = event.clientX;
     gesture.lastTime = now;
     gesture.targetChannel = swipeTargetForDelta(deltaX);
-    gesture.offsetX = gesture.targetChannel ? deltaX : deltaX * 0.18;
+    gesture.offsetX = gesture.targetChannel ? deltaX : deltaX * 0.16;
     queueDragPaint();
   }, { passive: false });
 
@@ -826,7 +911,7 @@ function wireNavigationGestures() {
       && finishedGesture.targetChannel
       && (distanceEnough || velocityEnough);
 
-    elements.shell.classList.remove('is-nav-dragging');
+    pageTrack.classList.remove('is-nav-dragging');
 
     if (shouldChange) {
       await setActiveChannel(finishedGesture.targetChannel, {
@@ -835,7 +920,7 @@ function wireNavigationGestures() {
       return;
     }
 
-    await animateShellBack(finishedGesture.offsetX);
+    await animateTrackBack(finishedGesture.baseIndex, finishedGesture.offsetX);
   };
 
   gestureSurface.addEventListener('pointerup', (event) => finishGesture(event));
@@ -850,33 +935,46 @@ function wireNavigationGestures() {
 }
 
 function swipeTargetForDelta(deltaX) {
-  const currentIndex = swipeChannels.indexOf(state.channel);
+  const currentIndex = currentPageIndex();
   if (currentIndex < 0 || deltaX === 0) return null;
   const nextIndex = deltaX < 0 ? currentIndex + 1 : currentIndex - 1;
   return swipeChannels[nextIndex] || null;
 }
 
-async function animateShellBack(offsetX) {
-  if (!offsetX || !elements.shell.animate) {
-    elements.shell.style.transform = '';
+function pageChannelFor(channel) {
+  return channel === 'favorites' ? 'mine' : channel;
+}
+
+function currentPageIndex() {
+  return swipeChannels.indexOf(pageChannelFor(state.channel));
+}
+
+function viewportWidth() {
+  return Math.max(1, pageViewport ? pageViewport.clientWidth : window.innerWidth || 1);
+}
+
+function setPageTrackOffset(pageIndex, offsetX = 0, animate = false) {
+  if (!pageTrack) return;
+  const x = (-pageIndex * viewportWidth()) + offsetX;
+  pageTrack.style.transition = animate
+    ? `transform ${transitionMs}ms cubic-bezier(0.32, 0.72, 0, 1)`
+    : 'none';
+  pageTrack.style.transform = `translate3d(${x}px, 0, 0)`;
+}
+
+function positionPageTrack(animate = false) {
+  const index = currentPageIndex();
+  if (index < 0) return;
+  setPageTrackOffset(index, 0, animate);
+}
+
+async function animateTrackBack(pageIndex, offsetX) {
+  if (!offsetX || !pageTrack) {
+    positionPageTrack(false);
     return;
   }
 
-  const animation = elements.shell.animate([
-    { transform: `translate3d(${offsetX}px, 0, 0)` },
-    { transform: 'translate3d(0, 0, 0)' },
-  ], {
-    duration: 170,
-    easing: 'cubic-bezier(0.32, 0.72, 0, 1)',
-  });
-
-  try {
-    await animation.finished;
-  } catch {
-    // A new gesture can intentionally replace this settling animation.
-  } finally {
-    elements.shell.style.transform = '';
-  }
+  await animatePageTrack(pageIndex, pageIndex, offsetX, 0, 170);
 }
 
 function getPageScrollTop() {
@@ -901,62 +999,46 @@ function setPageScrollTop(top) {
   window.scrollTo({ top: safeTop, left: 0 });
 }
 
-function channelDirection(currentChannel, nextChannel) {
-  const currentIndex = swipeChannels.indexOf(currentChannel === 'favorites' ? 'mine' : currentChannel);
-  const nextIndex = swipeChannels.indexOf(nextChannel === 'favorites' ? 'mine' : nextChannel);
-  return nextIndex >= currentIndex ? 'forward' : 'back';
-}
-
-async function transitionChannel(direction, applyChange, options = {}) {
+async function transitionPageTrack(fromIndex, toIndex, options = {}) {
   const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   const targetScroll = options.targetScroll || 0;
+  const initialOffset = Number.isFinite(options.initialOffset) ? options.initialOffset : 0;
 
-  if (reduceMotion || !elements.shell.animate) {
-    await applyChange();
+  if (reduceMotion || !pageTrack || fromIndex < 0 || toIndex < 0) {
+    positionPageTrack(false);
     setPageScrollTop(targetScroll);
     return;
   }
 
-  elements.shell.getAnimations().forEach((animation) => animation.cancel());
-  const viewportWidth = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
-  const initialOffset = Number.isFinite(options.initialOffset) ? options.initialOffset : 0;
-  const outgoingEnd = direction === 'forward' ? -Math.min(viewportWidth * 0.32, 180) : Math.min(viewportWidth * 0.32, 180);
-  const incomingStart = direction === 'forward' ? Math.min(viewportWidth * 0.34, 190) : -Math.min(viewportWidth * 0.34, 190);
-  const startOffset = initialOffset || 0;
+  await animatePageTrack(fromIndex, toIndex, initialOffset, 0, transitionMs);
+  setPageScrollTop(targetScroll);
+}
 
-  try {
-    elements.shell.style.willChange = 'transform, opacity';
-    const outgoingAnimation = elements.shell.animate([
-      { opacity: 1, transform: `translate3d(${startOffset}px, 0, 0)` },
-      { opacity: 0.9, transform: `translate3d(${outgoingEnd}px, 0, 0)` },
-    ], {
-      duration: 82,
-      easing: 'cubic-bezier(0.32, 0.72, 0, 1)',
-      fill: 'both',
-    });
-    await outgoingAnimation.finished.catch(() => {});
+async function animatePageTrack(fromIndex, toIndex, fromOffset, toOffset, duration) {
+  const startX = (-fromIndex * viewportWidth()) + fromOffset;
+  const endX = (-toIndex * viewportWidth()) + toOffset;
 
-    await applyChange();
-    setPageScrollTop(targetScroll);
-    elements.shell.style.transform = `translate3d(${incomingStart}px, 0, 0)`;
-    elements.shell.style.opacity = '0.96';
-    await new Promise((resolve) => requestAnimationFrame(resolve));
+  pageTrack.style.transition = 'none';
+  pageTrack.style.transform = `translate3d(${startX}px, 0, 0)`;
+  await new Promise((resolve) => requestAnimationFrame(resolve));
 
-    const incomingAnimation = elements.shell.animate([
-      { opacity: 0.96, transform: `translate3d(${incomingStart}px, 0, 0)` },
-      { opacity: 1, transform: 'translate3d(0, 0, 0)' },
-    ], {
-      duration: transitionMs,
-      easing: 'cubic-bezier(0.32, 0.72, 0, 1)',
-      fill: 'both',
-    });
+  pageTrack.style.transition = `transform ${duration}ms cubic-bezier(0.32, 0.72, 0, 1)`;
+  pageTrack.style.transform = `translate3d(${endX}px, 0, 0)`;
 
-    await incomingAnimation.finished.catch(() => {});
-  } finally {
-    elements.shell.style.opacity = '';
-    elements.shell.style.transform = '';
-    elements.shell.style.willChange = '';
-  }
+  await new Promise((resolve) => {
+    let done = false;
+    const finish = () => {
+      if (done) return;
+      done = true;
+      pageTrack.removeEventListener('transitionend', finish);
+      resolve();
+    };
+    pageTrack.addEventListener('transitionend', finish, { once: true });
+    window.setTimeout(finish, duration + 80);
+  });
+
+  pageTrack.style.transition = '';
+  positionPageTrack(false);
 }
 
 function showErrorState(error) {
