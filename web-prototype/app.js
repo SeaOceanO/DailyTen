@@ -45,7 +45,6 @@ const channels = {
 
 const bottomTabs = ['daily', 'ai', 'mine'];
 const swipeChannels = ['daily', 'ai', 'mine'];
-const transitionMs = 210;
 const themeMedia = window.matchMedia('(prefers-color-scheme: dark)');
 
 const i18n = {
@@ -373,13 +372,28 @@ function updatePaneAccessibility() {
   pagePanes.forEach((pane, channel) => {
     const isActive = channel === activeChannel;
     pane.shell.toggleAttribute('inert', !isActive);
+    pane.shell.hidden = !isActive;
     pane.shell.setAttribute('aria-hidden', isActive ? 'false' : 'true');
   });
 }
 
-async function loadAndRender(preloadedLatestEdition = null) {
+function paneRenderKey() {
+  return JSON.stringify([state.channel, state.selectedDateKey, state.language, state.theme,
+    state.calendarExpanded, [...state.favorites], [...state.muted], [...state.read]]);
+}
+
+async function loadAndRender(preloadedLatestEdition = null, reusePane = false) {
   activateElementsForChannel(state.channel);
   updatePaneAccessibility();
+  const pane = pagePanes.get(pageChannelFor(state.channel));
+  const renderKey = paneRenderKey();
+  if (reusePane && pane?.renderKey === renderKey && pane.edition) {
+    items = pane.edition.items;
+    hydrateEdition(pane.edition);
+    renderChannelTabs();
+    updateProgress();
+    return;
+  }
 
   if (!items.length && state.channel !== 'mine' && state.channel !== 'favorites') {
     showLoadingState('正在读取这一天的十条...');
@@ -401,6 +415,10 @@ async function loadAndRender(preloadedLatestEdition = null) {
     renderDateModule();
     renderDots(items.length);
     render();
+    if (pane) {
+      pane.edition = edition;
+      pane.renderKey = renderKey;
+    }
   } catch (error) {
     showErrorState(error);
   }
@@ -572,7 +590,7 @@ async function setActiveChannel(nextChannel, transitionOptions = {}) {
     state.channel = nextChannel;
     storage.setItem(storageKeys.channel, state.channel);
     renderChannelTabs();
-    await loadAndRender();
+    await loadAndRender(null, true);
     await transitionPageTrack(currentIndex, nextIndex, {
       ...transitionOptions,
       targetScroll: channelScrollPositions.get(nextChannel) || 0,
@@ -830,18 +848,7 @@ function showLoadingState(text) {
 
 function wireNavigationGestures() {
   let gesture = null;
-  let dragFrame = 0;
   const gestureSurface = document;
-
-  const paintDrag = () => {
-    dragFrame = 0;
-    if (!gesture || gesture.axis !== 'horizontal') return;
-    setPageTrackOffset(gesture.baseIndex, gesture.offsetX, false);
-  };
-
-  const queueDragPaint = () => {
-    if (!dragFrame) dragFrame = requestAnimationFrame(paintDrag);
-  };
 
   gestureSurface.addEventListener('pointerdown', (event) => {
     if (!event.isPrimary || event.button !== 0 || navigationLocked) return;
@@ -876,9 +883,6 @@ function wireNavigationGestures() {
     if (!gesture.axis) {
       if (Math.max(absX, absY) < 9) return;
       gesture.axis = absX > absY * 1.18 ? 'horizontal' : 'vertical';
-      if (gesture.axis === 'horizontal') {
-        pageTrack.classList.add('is-nav-dragging');
-      }
     }
 
     if (gesture.axis !== 'horizontal') return;
@@ -891,27 +895,23 @@ function wireNavigationGestures() {
     gesture.lastTime = now;
     gesture.targetChannel = swipeTargetForDelta(deltaX);
     gesture.offsetX = gesture.targetChannel ? deltaX : deltaX * 0.16;
-    queueDragPaint();
   }, { passive: false });
 
   const finishGesture = async (event, cancelled = false) => {
     if (!gesture || gesture.pointerId !== event.pointerId) return;
     const finishedGesture = gesture;
     gesture = null;
-    if (dragFrame) cancelAnimationFrame(dragFrame);
-    dragFrame = 0;
 
     if (finishedGesture.axis !== 'horizontal') return;
     suppressNextClick = true;
     window.setTimeout(() => { suppressNextClick = false; }, 360);
 
     const distanceEnough = Math.abs(finishedGesture.offsetX) >= window.innerWidth * 0.2;
-    const velocityEnough = Math.abs(finishedGesture.velocityX) >= 0.42;
+    const velocityEnough = Math.abs(finishedGesture.offsetX) >= 30
+      && Math.abs(finishedGesture.velocityX) >= 0.42;
     const shouldChange = !cancelled
       && finishedGesture.targetChannel
       && (distanceEnough || velocityEnough);
-
-    pageTrack.classList.remove('is-nav-dragging');
 
     if (shouldChange) {
       await setActiveChannel(finishedGesture.targetChannel, {
@@ -920,7 +920,6 @@ function wireNavigationGestures() {
       return;
     }
 
-    await animateTrackBack(finishedGesture.baseIndex, finishedGesture.offsetX);
   };
 
   gestureSurface.addEventListener('pointerup', (event) => finishGesture(event));
@@ -949,32 +948,8 @@ function currentPageIndex() {
   return swipeChannels.indexOf(pageChannelFor(state.channel));
 }
 
-function viewportWidth() {
-  return Math.max(1, pageViewport ? pageViewport.clientWidth : window.innerWidth || 1);
-}
-
-function setPageTrackOffset(pageIndex, offsetX = 0, animate = false) {
-  if (!pageTrack) return;
-  const x = (-pageIndex * viewportWidth()) + offsetX;
-  pageTrack.style.transition = animate
-    ? `transform ${transitionMs}ms cubic-bezier(0.32, 0.72, 0, 1)`
-    : 'none';
-  pageTrack.style.transform = `translate3d(${x}px, 0, 0)`;
-}
-
-function positionPageTrack(animate = false) {
-  const index = currentPageIndex();
-  if (index < 0) return;
-  setPageTrackOffset(index, 0, animate);
-}
-
-async function animateTrackBack(pageIndex, offsetX) {
-  if (!offsetX || !pageTrack) {
-    positionPageTrack(false);
-    return;
-  }
-
-  await animatePageTrack(pageIndex, pageIndex, offsetX, 0, 170);
+function positionPageTrack() {
+  updatePaneAccessibility();
 }
 
 function getPageScrollTop() {
@@ -996,49 +971,12 @@ function setPageScrollTop(top) {
     return;
   }
 
-  window.scrollTo({ top: safeTop, left: 0 });
+  window.scrollTo({ top: safeTop, left: 0, behavior: 'instant' });
 }
 
 async function transitionPageTrack(fromIndex, toIndex, options = {}) {
-  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  const targetScroll = options.targetScroll || 0;
-  const initialOffset = Number.isFinite(options.initialOffset) ? options.initialOffset : 0;
-
-  if (reduceMotion || !pageTrack || fromIndex < 0 || toIndex < 0) {
-    positionPageTrack(false);
-    setPageScrollTop(targetScroll);
-    return;
-  }
-
-  await animatePageTrack(fromIndex, toIndex, initialOffset, 0, transitionMs);
-  setPageScrollTop(targetScroll);
-}
-
-async function animatePageTrack(fromIndex, toIndex, fromOffset, toOffset, duration) {
-  const startX = (-fromIndex * viewportWidth()) + fromOffset;
-  const endX = (-toIndex * viewportWidth()) + toOffset;
-
-  pageTrack.style.transition = 'none';
-  pageTrack.style.transform = `translate3d(${startX}px, 0, 0)`;
-  await new Promise((resolve) => requestAnimationFrame(resolve));
-
-  pageTrack.style.transition = `transform ${duration}ms cubic-bezier(0.32, 0.72, 0, 1)`;
-  pageTrack.style.transform = `translate3d(${endX}px, 0, 0)`;
-
-  await new Promise((resolve) => {
-    let done = false;
-    const finish = () => {
-      if (done) return;
-      done = true;
-      pageTrack.removeEventListener('transitionend', finish);
-      resolve();
-    };
-    pageTrack.addEventListener('transitionend', finish, { once: true });
-    window.setTimeout(finish, duration + 80);
-  });
-
-  pageTrack.style.transition = '';
-  positionPageTrack(false);
+  positionPageTrack();
+  setPageScrollTop(options.targetScroll || 0);
 }
 
 function showErrorState(error) {

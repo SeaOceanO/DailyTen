@@ -101,16 +101,11 @@ button {
 }
 
 .page-track {
-  display: flex;
-  min-width: 100%;
-  transform: translate3d(0, 0, 0);
-  will-change: transform;
+  display: block;
 }
 
-.page-track.is-nav-dragging {
-  cursor: grabbing;
-  transition: none;
-  user-select: none;
+.page-pane[hidden] {
+  display: none !important;
 }
 
 .shell {
@@ -164,7 +159,7 @@ button {
   min-height: 46px;
   place-items: center;
   text-align: center;
-  transition: background-color 160ms ease, color 160ms ease;
+  transition: none;
 }
 
 .bottom-nav-item.is-active {
