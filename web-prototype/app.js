@@ -194,6 +194,11 @@ let yesterday = addDays(today, -1);
 let dateOptions = [today, yesterday];
 let todayKey = formatDateKey(today);
 let yesterdayKey = formatDateKey(yesterday);
+let latestDailyEdition = null;
+let editionIndex = null;
+let availableDateKeys = new Set([todayKey, yesterdayKey]);
+let editionPathByDate = new Map();
+let aiEditionPathByDate = new Map();
 
 const state = {
   favorites: readSet(storageKeys.favorites),
@@ -240,11 +245,6 @@ let touchStartY = 0;
 let navigationLocked = false;
 let suppressNextClick = false;
 const channelScrollPositions = new Map();
-let latestDailyEdition = null;
-let editionIndex = null;
-let availableDateKeys = new Set([todayKey, yesterdayKey]);
-let editionPathByDate = new Map();
-let aiEditionPathByDate = new Map();
 
 window.addEventListener('error', (event) => {
   reportRuntimeError(event.error || new Error(event.message));
@@ -881,9 +881,16 @@ function getPageScrollTop() {
 
 function setPageScrollTop(top) {
   const safeTop = Math.max(0, top);
+  const bodyOwnsScroll = document.body.scrollTop > 0
+    && window.scrollY === 0
+    && document.documentElement.scrollTop === 0;
+
+  if (bodyOwnsScroll) {
+    document.body.scrollTop = safeTop;
+    return;
+  }
+
   window.scrollTo({ top: safeTop, left: 0 });
-  document.documentElement.scrollTop = safeTop;
-  document.body.scrollTop = safeTop;
 }
 
 function channelDirection(currentChannel, nextChannel) {
@@ -1105,7 +1112,7 @@ function createCard(item) {
     });
 
     details.querySelector('[data-action="collapse"]').addEventListener('click', () => {
-      collapseCardWithoutJump(card, header);
+      collapseCard(card, header, 'bottom');
     });
 
     details.querySelector('[data-action="favorite"]').addEventListener('click', async () => {
@@ -1157,17 +1164,15 @@ function createCard(item) {
   });
 
   function toggleCardOpen(card, header, item) {
+    if (card.classList.contains('is-card-animating')) return;
+
     if (card.classList.contains('is-open')) {
-      collapseCardWithoutJump(card, header);
+      collapseCard(card, header, 'top');
       return;
     }
 
     ensureDetailsRendered();
-    card.classList.add('is-open');
-    header.setAttribute('aria-expanded', 'true');
-    state.read.add(item.id);
-    writeSet(storageKeys.read, state.read);
-    updateProgress();
+    openCard(card, header, item);
   }
 
   card.append(header, details);
@@ -1229,59 +1234,146 @@ function detailsHtml(item) {
   `;
 }
 
-async function collapseCardWithoutJump(card, header) {
-  if (card.classList.contains('is-collapsing')) return;
-
+async function openCard(card, header, item) {
   const details = card.querySelector('.details');
   if (!details) return;
 
-  const cardRect = card.getBoundingClientRect();
-  const detailsHeight = details.getBoundingClientRect().height;
-  const startScroll = getPageScrollTop();
-  const cardDocumentTop = startScroll + cardRect.top;
-  const cardTopIsVisible = cardRect.top >= 12 && cardRect.top <= window.innerHeight * 0.42;
-  const targetScroll = cardTopIsVisible ? startScroll : Math.max(0, cardDocumentTop - 12);
   const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  card.classList.add('is-open');
+  header.setAttribute('aria-expanded', 'true');
+  state.read.add(item.id);
+  writeSet(storageKeys.read, state.read);
+  updateProgress();
 
-  header.setAttribute('aria-expanded', 'false');
+  if (reduceMotion || !details.animate) return;
 
-  if (reduceMotion || !details.animate || detailsHeight <= 0) {
-    card.classList.remove('is-open');
-    setPageScrollTop(targetScroll);
-    return;
-  }
-
-  card.classList.add('is-collapsing');
-  const duration = 360;
-  const detailsAnimation = details.animate([
+  card.classList.add('is-card-animating', 'is-opening');
+  const targetHeight = details.scrollHeight;
+  const animation = details.animate([
     {
-      height: `${detailsHeight}px`,
+      clipPath: 'inset(0 0 100% 0)',
+      height: '0px',
+      opacity: 0,
+      paddingTop: '0px',
+      paddingBottom: '0px',
+      transform: 'translateY(-6px)',
+    },
+    {
+      clipPath: 'inset(0 0 0 0)',
+      height: `${targetHeight}px`,
       opacity: 1,
       paddingTop: '2px',
       paddingBottom: '16px',
       transform: 'translateY(0)',
     },
-    {
-      height: '0px',
-      opacity: 0,
-      paddingTop: '0px',
-      paddingBottom: '0px',
-      transform: 'translateY(-8px)',
-    },
   ], {
-    duration,
+    duration: 300,
     easing: 'cubic-bezier(0.32, 0.72, 0, 1)',
     fill: 'both',
   });
 
-  const scrollAnimation = new Promise((resolve) => {
+  try {
+    await animation.finished;
+  } catch {
+    // A page change can intentionally interrupt this animation.
+  } finally {
+    animation.cancel();
+    card.classList.remove('is-card-animating', 'is-opening');
+  }
+}
+
+async function collapseCard(card, header, anchor) {
+  if (card.classList.contains('is-card-animating')) return;
+
+  const details = card.querySelector('.details');
+  if (!details) return;
+
+  const detailsHeight = details.getBoundingClientRect().height;
+  const startScroll = getPageScrollTop();
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const keepBottomStable = anchor === 'bottom';
+
+  if (keepBottomStable) {
+    document.documentElement.classList.add('is-card-collapsing');
+  }
+
+  header.setAttribute('aria-expanded', 'false');
+
+  if (reduceMotion || !details.animate || detailsHeight <= 0) {
+    card.classList.remove('is-open');
+    if (keepBottomStable) {
+      setPageScrollTop(Math.max(0, startScroll - detailsHeight));
+    }
+    document.documentElement.classList.remove('is-card-collapsing');
+    return;
+  }
+
+  card.classList.add('is-card-animating', keepBottomStable ? 'is-collapsing-bottom' : 'is-collapsing-top');
+  const keyframes = keepBottomStable
+    ? [
+      { clipPath: 'inset(0 0 0 0)', opacity: 1, transform: 'translateY(0)' },
+      { clipPath: 'inset(100% 0 0 0)', opacity: 0.18, transform: 'translateY(8px)' },
+    ]
+    : [
+      {
+        clipPath: 'inset(0 0 0 0)',
+        height: `${detailsHeight}px`,
+        opacity: 1,
+        paddingTop: '2px',
+        paddingBottom: '16px',
+        transform: 'translateY(0)',
+      },
+      {
+        clipPath: 'inset(0 0 100% 0)',
+        height: '0px',
+        opacity: 0,
+        paddingTop: '0px',
+        paddingBottom: '0px',
+        transform: 'translateY(-6px)',
+      },
+    ];
+  const animation = details.animate(keyframes, {
+    duration: keepBottomStable ? 280 : 260,
+    easing: 'cubic-bezier(0.32, 0.72, 0, 1)',
+    fill: 'both',
+  });
+
+  try {
+    await animation.finished;
+  } catch {
+    // A page change can intentionally interrupt this animation.
+  } finally {
+    if (keepBottomStable) {
+      const spacer = document.createElement('div');
+      spacer.className = 'collapse-layout-spacer';
+      spacer.style.height = `${detailsHeight}px`;
+      card.insertAdjacentElement('afterend', spacer);
+      card.classList.remove('is-open');
+      animation.cancel();
+      card.classList.remove('is-card-animating', 'is-collapsing-bottom');
+      await animateCollapseSpacer(spacer, startScroll, detailsHeight);
+      spacer.remove();
+      setPageScrollTop(Math.max(0, startScroll - detailsHeight));
+      document.documentElement.classList.remove('is-card-collapsing');
+      return;
+    }
+
+    card.classList.remove('is-open');
+    animation.cancel();
+    card.classList.remove('is-card-animating', 'is-collapsing-top');
+  }
+}
+
+function animateCollapseSpacer(spacer, startScroll, height) {
+  const duration = 210;
+  return new Promise((resolve) => {
     const startedAt = performance.now();
 
     const step = (now) => {
       const progress = Math.min(1, (now - startedAt) / duration);
       const eased = 1 - Math.pow(1 - progress, 3);
-      const nextScroll = startScroll + (targetScroll - startScroll) * eased;
-      setPageScrollTop(nextScroll);
+      spacer.style.height = `${height * (1 - eased)}px`;
+      setPageScrollTop(Math.max(0, startScroll - height * eased));
 
       if (progress < 1) {
         requestAnimationFrame(step);
@@ -1292,16 +1384,6 @@ async function collapseCardWithoutJump(card, header) {
 
     requestAnimationFrame(step);
   });
-
-  try {
-    await Promise.all([detailsAnimation.finished, scrollAnimation]);
-  } catch {
-    // A rerender can intentionally interrupt the collapse animation.
-  } finally {
-    detailsAnimation.cancel();
-    card.classList.remove('is-open', 'is-collapsing');
-    setPageScrollTop(targetScroll);
-  }
 }
 
 function chevronControlHtml(direction) {

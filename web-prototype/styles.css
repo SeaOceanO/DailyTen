@@ -69,6 +69,11 @@ body {
   overflow-x: hidden;
 }
 
+html.is-card-collapsing,
+html.is-card-collapsing body {
+  overflow-anchor: none !important;
+}
+
 body {
   background:
     radial-gradient(circle at top left, color-mix(in srgb, var(--sage) 76%, transparent), transparent 28rem),
@@ -515,6 +520,10 @@ h1 {
   margin: 16px 4px 8px;
 }
 
+.feed {
+  overflow-anchor: none;
+}
+
 .news-card {
   background: var(--card);
   border: 1px solid var(--line);
@@ -954,15 +963,10 @@ h1 {
   overflow: hidden;
   padding: 0 18px;
   transform: translateY(-6px);
-  transition:
-    max-height 260ms cubic-bezier(0.22, 1, 0.36, 1),
-    opacity 180ms ease,
-    padding 260ms cubic-bezier(0.22, 1, 0.36, 1),
-    transform 260ms cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .news-card.is-open .details {
-  max-height: 1800px;
+  max-height: none;
   opacity: 1;
   padding: 2px 18px 16px;
   transform: translateY(0);
@@ -1057,14 +1061,30 @@ h1 {
   padding: 14px;
 }
 
-.news-card.is-collapsing {
+.news-card.is-card-animating {
   pointer-events: none;
 }
 
-.news-card.is-collapsing .details {
-  transform-origin: top;
+.news-card.is-card-animating .details {
+  max-height: none;
   transition: none;
-  will-change: height, opacity, transform;
+  will-change: clip-path, height, opacity, transform;
+}
+
+.news-card.is-opening .details,
+.news-card.is-collapsing-top .details {
+  transform-origin: top;
+}
+
+.news-card.is-collapsing-bottom .details {
+  transform-origin: bottom;
+}
+
+.collapse-layout-spacer {
+  height: 0;
+  margin: 0;
+  overflow: hidden;
+  pointer-events: none;
 }
 
 .event-image {
