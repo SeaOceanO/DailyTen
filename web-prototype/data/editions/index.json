@@ -1,10 +1,21 @@
 {
-  "latestDateKey": "2026-09-05",
-  "updatedAt": "2026-09-04T22:40:17.111Z",
+  "latestDateKey": "2026-09-06",
+  "updatedAt": "2026-09-05T22:32:08.310Z",
   "editions": [
+    {
+      "dateKey": "2026-09-06",
+      "path": "./data/editions/2026-09-06.json",
+      "aiPath": "./data/ai-editions/2026-09-06.json",
+      "channels": [
+        "daily",
+        "ai"
+      ],
+      "generatedAt": "2026-09-06T05:00:00+08:00"
+    },
     {
       "dateKey": "2026-09-05",
       "path": "./data/editions/2026-09-05.json",
+      "aiPath": "",
       "channels": [
         "daily"
       ],
@@ -13,6 +24,7 @@
     {
       "dateKey": "2026-09-04",
       "path": "./data/editions/2026-09-04.json",
+      "aiPath": "",
       "channels": [
         "daily"
       ],
@@ -21,6 +33,7 @@
     {
       "dateKey": "2026-09-03",
       "path": "./data/editions/2026-09-03.json",
+      "aiPath": "",
       "channels": [
         "daily"
       ],
@@ -29,6 +42,7 @@
     {
       "dateKey": "2026-09-02",
       "path": "./data/editions/2026-09-02.json",
+      "aiPath": "",
       "channels": [
         "daily"
       ],
@@ -37,6 +51,7 @@
     {
       "dateKey": "2026-09-01",
       "path": "./data/editions/2026-09-01.json",
+      "aiPath": "",
       "channels": [
         "daily"
       ],
@@ -45,6 +60,7 @@
     {
       "dateKey": "2026-08-31",
       "path": "./data/editions/2026-08-31.json",
+      "aiPath": "",
       "channels": [
         "daily"
       ],
