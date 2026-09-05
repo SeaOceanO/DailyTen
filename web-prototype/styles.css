@@ -83,6 +83,7 @@ body {
     -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB",
     "Microsoft YaHei", sans-serif;
   padding: 24px 12px 104px;
+  touch-action: pan-y;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -107,21 +108,6 @@ button {
   cursor: grabbing;
   transition: none;
   user-select: none;
-  will-change: transform;
-}
-
-.nav-transition-overlay {
-  inset: 0;
-  overflow: hidden;
-  pointer-events: none;
-  position: fixed;
-  z-index: 15;
-}
-
-.nav-transition-clone {
-  margin: 0 !important;
-  max-width: none !important;
-  position: absolute !important;
   will-change: transform;
 }
 

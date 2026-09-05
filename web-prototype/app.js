@@ -740,6 +740,7 @@ function showLoadingState(text) {
 function wireNavigationGestures() {
   let gesture = null;
   let dragFrame = 0;
+  const gestureSurface = document;
 
   const paintDrag = () => {
     dragFrame = 0;
@@ -751,9 +752,9 @@ function wireNavigationGestures() {
     if (!dragFrame) dragFrame = requestAnimationFrame(paintDrag);
   };
 
-  elements.shell.addEventListener('pointerdown', (event) => {
+  gestureSurface.addEventListener('pointerdown', (event) => {
     if (!event.isPrimary || event.button !== 0 || navigationLocked || state.channel === 'favorites') return;
-    if (event.target.closest('.date-module, .modal-backdrop, input, select, textarea, [data-term]')) return;
+    if (event.target.closest('.date-module, .modal-backdrop, .bottom-nav, input, select, textarea, [data-term]')) return;
 
     const now = performance.now();
     gesture = {
@@ -769,7 +770,7 @@ function wireNavigationGestures() {
     };
   }, { passive: true });
 
-  elements.shell.addEventListener('pointermove', (event) => {
+  gestureSurface.addEventListener('pointermove', (event) => {
     if (!gesture || gesture.pointerId !== event.pointerId) return;
 
     const deltaX = event.clientX - gesture.startX;
@@ -782,9 +783,6 @@ function wireNavigationGestures() {
       gesture.axis = absX > absY * 1.18 ? 'horizontal' : 'vertical';
       if (gesture.axis === 'horizontal') {
         elements.shell.classList.add('is-nav-dragging');
-        if (elements.shell.setPointerCapture) {
-          elements.shell.setPointerCapture(event.pointerId);
-        }
       }
     }
 
@@ -830,8 +828,8 @@ function wireNavigationGestures() {
     await animateShellBack(finishedGesture.offsetX);
   };
 
-  elements.shell.addEventListener('pointerup', (event) => finishGesture(event));
-  elements.shell.addEventListener('pointercancel', (event) => finishGesture(event, true));
+  gestureSurface.addEventListener('pointerup', (event) => finishGesture(event));
+  gestureSurface.addEventListener('pointercancel', (event) => finishGesture(event, true));
 
   document.addEventListener('click', (event) => {
     if (!suppressNextClick) return;
@@ -912,57 +910,40 @@ async function transitionChannel(direction, applyChange, options = {}) {
   elements.shell.getAnimations().forEach((animation) => animation.cancel());
   const viewportWidth = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
   const initialOffset = Number.isFinite(options.initialOffset) ? options.initialOffset : 0;
-  const outgoingEnd = direction === 'forward' ? -viewportWidth : viewportWidth;
-  const incomingStart = direction === 'forward' ? viewportWidth : -viewportWidth;
-  const shellRect = elements.shell.getBoundingClientRect();
-  const overlay = document.createElement('div');
-  const outgoingShell = elements.shell.cloneNode(true);
-
-  overlay.className = 'nav-transition-overlay';
-  outgoingShell.classList.add('nav-transition-clone');
-  outgoingShell.classList.remove('is-nav-dragging');
-  outgoingShell.setAttribute('aria-hidden', 'true');
-  outgoingShell.querySelectorAll('[id]').forEach((node) => node.removeAttribute('id'));
-  Object.assign(outgoingShell.style, {
-    left: `${shellRect.left}px`,
-    top: `${shellRect.top}px`,
-    width: `${shellRect.width}px`,
-    transform: `translate3d(${initialOffset}px, 0, 0)`,
-  });
-  overlay.append(outgoingShell);
-  document.body.append(overlay);
-  elements.shell.style.visibility = 'hidden';
-  elements.shell.style.transform = '';
+  const outgoingEnd = direction === 'forward' ? -Math.min(viewportWidth * 0.32, 180) : Math.min(viewportWidth * 0.32, 180);
+  const incomingStart = direction === 'forward' ? Math.min(viewportWidth * 0.34, 190) : -Math.min(viewportWidth * 0.34, 190);
+  const startOffset = initialOffset || 0;
 
   try {
+    elements.shell.style.willChange = 'transform, opacity';
+    const outgoingAnimation = elements.shell.animate([
+      { opacity: 1, transform: `translate3d(${startOffset}px, 0, 0)` },
+      { opacity: 0.9, transform: `translate3d(${outgoingEnd}px, 0, 0)` },
+    ], {
+      duration: 120,
+      easing: 'cubic-bezier(0.32, 0.72, 0, 1)',
+      fill: 'both',
+    });
+    await outgoingAnimation.finished.catch(() => {});
+
     await applyChange();
     setPageScrollTop(targetScroll);
     elements.shell.style.transform = `translate3d(${incomingStart}px, 0, 0)`;
-    elements.shell.style.visibility = 'visible';
-    elements.shell.style.willChange = 'transform';
+    elements.shell.style.opacity = '0.96';
     await new Promise((resolve) => requestAnimationFrame(resolve));
 
-    const outgoingAnimation = outgoingShell.animate([
-      { transform: `translate3d(${initialOffset}px, 0, 0)` },
-      { transform: `translate3d(${outgoingEnd}px, 0, 0)` },
-    ], {
-      duration: transitionMs,
-      easing: 'cubic-bezier(0.32, 0.72, 0, 1)',
-      fill: 'both',
-    });
     const incomingAnimation = elements.shell.animate([
-      { transform: `translate3d(${incomingStart}px, 0, 0)` },
-      { transform: 'translate3d(0, 0, 0)' },
+      { opacity: 0.96, transform: `translate3d(${incomingStart}px, 0, 0)` },
+      { opacity: 1, transform: 'translate3d(0, 0, 0)' },
     ], {
-      duration: transitionMs,
+      duration: transitionMs - 40,
       easing: 'cubic-bezier(0.32, 0.72, 0, 1)',
       fill: 'both',
     });
 
-    await Promise.allSettled([outgoingAnimation.finished, incomingAnimation.finished]);
+    await incomingAnimation.finished.catch(() => {});
   } finally {
-    overlay.remove();
-    elements.shell.style.visibility = '';
+    elements.shell.style.opacity = '';
     elements.shell.style.transform = '';
     elements.shell.style.willChange = '';
   }
