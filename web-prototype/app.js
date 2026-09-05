@@ -244,6 +244,7 @@ let latestDailyEdition = null;
 let editionIndex = null;
 let availableDateKeys = new Set([todayKey, yesterdayKey]);
 let editionPathByDate = new Map();
+let aiEditionPathByDate = new Map();
 
 window.addEventListener('error', (event) => {
   reportRuntimeError(event.error || new Error(event.message));
@@ -331,6 +332,11 @@ function setLatestDate(dateKey, loadedIndex = null) {
   yesterdayKey = formatDateKey(yesterday);
   editionIndex = normalizeEditionIndex(loadedIndex, dateKey);
   editionPathByDate = new Map(editionIndex.editions.map((entry) => [entry.dateKey, entry.path]));
+  aiEditionPathByDate = new Map(
+    editionIndex.editions
+      .filter((entry) => entry.aiPath)
+      .map((entry) => [entry.dateKey, entry.aiPath]),
+  );
   availableDateKeys = new Set([todayKey, yesterdayKey, ...editionPathByDate.keys()]);
   dateOptions = [...availableDateKeys]
     .filter((key) => parseDateKey(key) <= today)
@@ -360,7 +366,33 @@ async function loadEdition(channel, dateKey) {
     }
   }
 
+  if (channel === 'ai') {
+    const aiArchivedPath = aiEditionPathByDate.get(dateKey);
+    if (aiArchivedPath) {
+      try {
+        return await fetchEdition(aiArchivedPath);
+      } catch {
+        // Older deployments can fall back to the saved daily archive below.
+      }
+    }
+
+    const archivedPath = editionPathByDate.get(dateKey);
+    if (archivedPath && dateKey !== todayKey && dateKey !== yesterdayKey) {
+      return adaptArchivedEditionForAi(await fetchEdition(archivedPath));
+    }
+  }
+
   return buildLocalEdition(channel, dateKey);
+}
+
+function adaptArchivedEditionForAi(edition) {
+  return {
+    ...edition,
+    title: 'AI 行业十条',
+    subtitle: channels.ai.fallbackSubtitle,
+    briefLabel: `${dateLabel(edition.dateKey)} AI 行业 10 条 · 约 ${edition.readTimeMinutes || 8} 分钟`,
+    doneLabel: `${dateLabel(edition.dateKey)} AI 行业已读完`,
+  };
 }
 
 async function fetchEditionIndex() {
@@ -380,6 +412,7 @@ function normalizeEditionIndex(index, fallbackDateKey) {
     .map((entry) => ({
       dateKey: entry.dateKey,
       path: typeof entry.path === 'string' ? entry.path : `./data/editions/${entry.dateKey}.json`,
+      aiPath: typeof entry.aiPath === 'string' ? entry.aiPath : '',
       channels: Array.isArray(entry.channels) ? entry.channels : ['daily'],
       generatedAt: typeof entry.generatedAt === 'string' ? entry.generatedAt : '',
     }))
@@ -720,7 +753,7 @@ function wireNavigationGestures() {
 
   elements.shell.addEventListener('pointerdown', (event) => {
     if (!event.isPrimary || event.button !== 0 || navigationLocked || state.channel === 'favorites') return;
-    if (event.target.closest('.date-module, .modal-backdrop, button, a, input, select, textarea, [data-term]')) return;
+    if (event.target.closest('.date-module, .modal-backdrop, input, select, textarea, [data-term]')) return;
 
     const now = performance.now();
     gesture = {
@@ -1378,6 +1411,20 @@ async function collectAvailableFavoriteItems() {
 
   editions.push(...archivedDailyEditions.filter(Boolean));
 
+  const archivedAiEditions = await Promise.all(
+    (editionIndex && editionIndex.editions ? editionIndex.editions : [])
+      .filter((entry) => entry.aiPath)
+      .map(async (entry) => {
+        try {
+          return await fetchEdition(entry.aiPath);
+        } catch {
+          return null;
+        }
+      }),
+  );
+
+  editions.push(...archivedAiEditions.filter(Boolean));
+
   editions.push(
     buildLocalEdition('daily', yesterdayKey),
     buildLocalEdition('ai', todayKey),
@@ -1409,7 +1456,7 @@ async function syncDisplayableFavorites() {
 }
 
 function buildTopicItem(topic, channel, dateKey, index) {
-  const english = coalesce(localTopicEnglish[topic.slug], null);
+  const english = coalesce(topic.en, localTopicEnglish[topic.slug], null);
 
   return {
     id: `${channel}-${dateKey}-${topic.slug}`,
@@ -1439,7 +1486,8 @@ function buildTopicItem(topic, channel, dateKey, index) {
       source: english.source,
       updated: `Updated ${formatEnglishDate(dateKey)}`,
     } : null,
-    sourceLinks: [],
+    sourceLinks: Array.isArray(topic.sourceLinks) ? topic.sourceLinks : [],
+    eventImage: topic.eventImage || null,
   };
 }
 
@@ -1505,7 +1553,45 @@ const yesterdayDailyTopics = [
   makeTopic('privacy-rules', '公共安全', 'alert', '个人数据授权和跨境流动规则继续收紧', '数据规则会影响应用推荐、金融服务、医疗记录和跨境办公，普通人最需要看懂授权边界和删除权。', '全球', '数据治理', '隐私观察', ['数据收集', '授权记录', '跨境传输', '个人权利'], [['监管', '多个地区继续细化数据使用边界。'], ['企业', '合规成本和审计要求上升。'], ['用户', '授权、撤回和纠错变得更重要。']], [['隐私', '应用需要更清楚说明数据用途。'], ['服务体验', '更严格规则可能影响个性化推荐。'], ['工作', '跨境团队的数据工具选择会受影响。']], ['是否出现更清晰的个人数据面板。', '跨境数据规则是否影响常用服务。']),
 ];
 
+function gpt6AstraTopic() {
+  const topic = makeTopic(
+    'gpt6-astra',
+    '前沿模型',
+    'ai',
+    'OpenAI 发布 GPT-6 Astra，重点提升电脑操作与复杂任务能力',
+    'OpenAI 于 9 月 3 日发布 GPT-6 Astra。它不只是回答问题更强，还更擅长操作电脑、浏览网页、编程、研究和完成多步骤专业工作；目前先向有限组织开放，更多用户和 API 访问将在随后几天逐步推出。',
+    '全球',
+    '前沿模型发布',
+    'OpenAI',
+    ['OpenAI 官方发布', '有限范围开放', 'ChatGPT 与 API 推出', '工作流能力升级'],
+    [['发布时间', 'OpenAI 于 9 月 3 日正式公布 GPT-6 Astra。'], ['主要变化', '电脑操作、浏览、编程、研究和复杂工作能力明显加强。'], ['开放范围', '目前先向有限组织开放，随后扩展到更多订阅用户和 API。']],
+    [['普通用户', '短期内不一定马上看到模型选项，需要等待分批开放。'], ['开发者', 'API 模型名为 gpt-6-astra，适合复杂、多步骤任务。'], ['安全', '更强的电脑和网络安全能力也带来更严格的监控与使用限制。']],
+    ['具体账号何时获得使用权限。', '真实任务中的速度、价格和稳定性表现。'],
+  );
+  topic.brief = '这次升级不只是让回答更聪明，而是让 AI 更会操作电脑和完成整套工作，不过目前仍在分批开放。';
+  topic.en = makeEnglishTopic(
+    'Frontier Models',
+    'OpenAI launches GPT-6 Astra with stronger computer use and complex-task performance',
+    'OpenAI introduced GPT-6 Astra on September 3. The change is not only better answers: Astra is designed to operate computers, browse, code, research, and complete multi-step professional work more reliably. Access is initially limited and will expand over the following days.',
+    'Global',
+    'frontier model launch',
+    'OpenAI',
+    ['Official launch', 'Limited rollout', 'ChatGPT and API access', 'Workflow upgrades'],
+    [['Timing', 'OpenAI officially announced GPT-6 Astra on September 3.'], ['Main change', 'Computer use, browsing, coding, research, and complex work are significantly stronger.'], ['Availability', 'The rollout starts with limited organizations before expanding to more subscribers and the API.']],
+    [['Users', 'The model may not appear immediately because access is rolling out in stages.'], ['Developers', 'The API model ID is gpt-6-astra and it targets complex multi-step work.'], ['Safety', 'Stronger computer and cybersecurity abilities also bring tighter monitoring and restrictions.']],
+    ['Watch when access reaches each account tier.', 'Watch real-world speed, price, and reliability.'],
+  );
+  topic.en.brief = 'This upgrade is about AI operating computers and completing whole workflows, not just giving smarter answers, but access is still rolling out.';
+  topic.sourceLinks = [{
+    title: 'GPT-6 Astra: A new generation of intelligence',
+    url: 'https://openai.com/index/gpt-6-astra/',
+    publisher: 'OpenAI',
+  }];
+  return topic;
+}
+
 const aiTodayTopics = [
+  gpt6AstraTopic(),
   makeTopic('enterprise-agents', 'Agent', 'code', '企业 Agent 从演示走向流程接管', '越来越多 AI 产品开始处理报表、客服、销售跟进和内部检索，重点不再是会聊天，而是能不能稳定完成工作。', '全球', '企业软件', 'AI 行业观察', ['任务分解', '工具调用', '权限控制', '流程交付'], [['变化', 'Agent 产品开始绑定企业内部系统。'], ['难点', '权限、审计和错误回滚比模型能力更关键。'], ['机会', '重复性知识工作最先被改造。']], [['工作方式', '人会更多检查结果和设定规则。'], ['团队管理', '流程责任边界需要写清楚。'], ['采购', '企业会更看重安全和集成能力。']], ['真实客户是否从试点转为长期合同。', '权限审计能否跟上自动执行。']),
   makeTopic('ai-browser', 'AI 产品', 'ai', 'AI 浏览器和搜索助手继续争夺入口', '浏览器、搜索和个人助手都想成为信息入口，用户获得答案更快，但也更依赖平台如何排序、引用和解释来源。', '全球', 'AI 搜索', '产品观察', ['网页理解', '答案生成', '引用来源', '用户入口'], [['竞争', '搜索、浏览器和助手产品边界正在变模糊。'], ['关键', '引用质量和错误纠正决定可信度。'], ['商业', '广告和订阅模式仍在摸索。']], [['获取信息', '搜索步骤会减少，但核对来源更重要。'], ['创作者', '流量分配可能继续变化。'], ['隐私', '浏览上下文会成为敏感数据。']], ['是否清楚展示引用来源。', '默认搜索入口是否发生变化。']),
   makeTopic('mcp-ecosystem', 'AI 基础设施', 'code', '工具协议生态继续围绕企业集成扩展', '类似 MCP 的工具连接方式让模型更容易调用文档、数据库和业务系统，但真正落地要看权限、日志和安全边界。', '全球', '工具协议', '开发者观察', ['协议接口', '工具连接', '权限审计', '企业落地'], [['方向', '开发者更重视标准化工具连接。'], ['收益', '减少每个应用单独适配模型的成本。'], ['风险', '工具调用扩大了误操作和泄露边界。']], [['开发者', '集成成本可能下降。'], ['企业', '安全审核会更细。'], ['普通用户', '自动化能力增强，但需要明确确认关键操作。']], ['主流平台是否支持共同协议。', '权限撤销和日志能否简单可查。']),
@@ -1516,9 +1602,10 @@ const aiTodayTopics = [
   makeTopic('ai-media', '内容与版权', 'chart', 'AI 内容平台继续面对版权和标注压力', '生成式内容进入图片、视频和新闻摘要后，用户更需要知道内容来源、授权情况和是否经过人工编辑。', '全球', '内容产业', '媒体观察', ['训练数据', '内容生成', '版权谈判', '来源标注'], [['争议', '版权方要求更透明的数据使用。'], ['平台', '内容标注和检测工具继续完善。'], ['商业', '授权分成仍在谈判。']], [['读者', '需要更会看来源和标注。'], ['创作者', '授权和收入模式会被重写。'], ['品牌', '误用素材可能带来法律风险。']], ['平台是否提供明确 AI 标识。', '授权收入模式是否稳定。']),
   makeTopic('voice-agents', 'AI 产品', 'ai', '语音 Agent 继续向客服和陪练场景扩展', '语音交互降低使用门槛，但也让隐私、录音保存和身份识别更敏感。', '全球', '语音 AI', '产品观察', ['实时语音', '任务执行', '服务质检', '隐私边界'], [['场景', '客服、语言学习和销售培训最先落地。'], ['能力', '低延迟和打断处理是体验关键。'], ['风险', '录音和身份信息需要更清楚的授权。']], [['用户', '办事可以更自然，但要注意录音提示。'], ['企业', '客服成本下降但质检责任上升。'], ['员工', '培训方式会更像实时陪练。']], ['是否提供录音删除入口。', '复杂问题是否能转人工。']),
   makeTopic('ai-energy', '算力与能源', 'refinery', 'AI 数据中心用电继续成为产业变量', 'AI 不只是软件竞争，也在变成电力、土地、水资源和电网容量的竞争。', '全球', '数据中心能源', '能源观察', ['模型需求', '数据中心', '电力协议', '社区影响'], [['需求', '推理服务扩张让用电更持续。'], ['约束', '电网接入和冷却资源影响选址。'], ['趋势', '更多项目绑定绿电和储能。']], [['居民', '本地电价和用水讨论可能增加。'], ['企业', '云服务价格受能源成本影响。'], ['环境', '绿电比例决定碳排压力。']], ['新增数据中心是否公开用电来源。', '地方社区是否参与审批讨论。']),
-];
+].slice(0, 10);
 
 const aiYesterdayTopics = [
+  gpt6AstraTopic(),
   makeTopic('agent-memory', 'Agent', 'code', 'Agent 产品开始强调长期记忆和任务上下文', '记忆能力让助手更像持续工作的同事，但企业和个人都需要知道哪些信息被保存、能否删除、谁能访问。', '全球', 'Agent 记忆', 'AI 行业观察', ['偏好记录', '任务上下文', '权限管理', '持续协作'], [['方向', '更多产品把长期上下文作为核心卖点。'], ['问题', '记忆准确性和隐私边界仍需验证。'], ['落地', '企业场景需要管理员控制和审计。']], [['个人', '助手更省心，但要定期检查保存的信息。'], ['企业', '权限管理会成为采购条件。'], ['安全', '错误记忆可能影响后续决策。']], ['是否提供记忆查看和删除。', '团队管理员能否限制敏感信息。']),
   makeTopic('anp-protocols', 'AI 基础设施', 'code', 'Agent 之间的通信协议讨论升温', '如果 Agent 能彼此交换任务、身份和结果，自动化会更强，但标准、信任和验证机制必须先跟上。', '全球', 'Agent 协议', '开发者观察', ['身份声明', '任务协商', '结果验证', '跨应用协作'], [['趋势', '开发者社区开始讨论 Agent 间互操作。'], ['价值', '跨工具协同可以减少人工复制粘贴。'], ['风险', '身份伪造和错误传递会放大损失。']], [['用户', '跨应用任务会更顺滑。'], ['开发者', '需要处理认证和权限。'], ['企业', '自动化边界必须可追踪。']], ['是否出现被主流平台采纳的标准。', '协议是否有安全认证机制。']),
   makeTopic('ai-office', 'AI 产品', 'ai', '办公套件继续把 AI 放进表格和文档流程', 'AI 进入日常办公后，价值不只是写得快，而是能不能减少查找、整理和核对的时间。', '全球', '办公 AI', '产品观察', ['文档理解', '表格整理', '会议摘要', '任务跟进'], [['功能', '摘要、改写、数据整理仍是主流入口。'], ['竞争', '平台更强调和现有权限系统整合。'], ['限制', '复杂业务判断仍需要人复核。']], [['白领', '重复整理工作会减少。'], ['管理者', '会议和任务追踪更透明。'], ['隐私', '企业文档是否进入模型训练需要看清。']], ['AI 功能是否默认开启。', '企业数据是否可选择不训练。']),
@@ -1529,7 +1616,7 @@ const aiYesterdayTopics = [
   makeTopic('ai-coding-market', '开发工具', 'code', 'AI 编程工具继续从补全走向项目级执行', '工具能写代码、跑测试、改 bug，但团队真正需要的是稳定性、可解释性和不会破坏已有代码。', '全球', '代码 Agent', '开发者观察', ['需求拆解', '代码生成', '测试验证', '合并审查'], [['能力', '更多工具支持跨文件修改。'], ['风险', '隐藏回归和依赖误判仍常见。'], ['趋势', '测试和代码审查能力变成核心卖点。']], [['开发者', '角色更偏架构和审查。'], ['团队', '需要规定 AI 可改哪些文件。'], ['公司', '交付速度和质量控制要重新平衡。']], ['工具是否能解释每个改动。', '是否默认运行测试。']),
   makeTopic('ai-devices', '消费 AI', 'ai', '手机和电脑厂商继续把 AI 功能放到系统层', 'AI 从应用进入操作系统后，会影响拍照、搜索、通知、写作和客服，也会影响换机理由。', '全球', '端侧 AI', '消费科技观察', ['端侧模型', '系统功能', '隐私策略', '硬件升级'], [['方向', '厂商把 AI 功能放进系统默认入口。'], ['差异', '端侧处理和云端处理影响隐私。'], ['商业', '部分高级功能可能绑定新硬件。']], [['用户', '常用操作会更自动化。'], ['隐私', '需要看清数据是否离开设备。'], ['预算', 'AI 功能可能成为换机理由。']], ['旧设备是否支持新功能。', '云端处理是否可关闭。']),
   makeTopic('ai-evals', '模型评测', 'chart', 'AI 评测从跑分转向真实任务表现', '简单榜单越来越难说明产品好坏，企业更关心模型在真实流程中的稳定、成本和错误类型。', '全球', 'AI 评测', '模型观察', ['任务集', '错误分类', '成本评估', '生产监控'], [['变化', '通用跑分不足以判断业务价值。'], ['做法', '企业开始建立自己的评测集。'], ['关键', '失败案例比平均分更有参考价值。']], [['企业采购', '会更重视真实任务试用。'], ['开发者', '需要持续监控上线效果。'], ['用户', '产品宣传和实际体验差距会更容易暴露。']], ['厂商是否公开失败案例。', '企业是否建立内部评测流程。']),
-];
+].slice(0, 10);
 
 function makeTopic(slug, cat, icon, title, take, region, meta, source, nodes, facts, impacts, next) {
   return {

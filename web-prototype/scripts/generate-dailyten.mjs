@@ -8,7 +8,9 @@ const schemaPath = path.join(rootDir, 'schema', 'openai-dailyten-edition.schema.
 const configPath = path.join(rootDir, 'config', 'interests.json');
 const dataDir = path.join(rootDir, 'data');
 const editionsDir = path.join(dataDir, 'editions');
+const aiEditionsDir = path.join(dataDir, 'ai-editions');
 const outputPath = path.join(dataDir, 'today.json');
+const aiOutputPath = path.join(dataDir, 'ai-today.json');
 const editionIndexPath = path.join(editionsDir, 'index.json');
 const validateOnly = process.argv.includes('--validate-only');
 const testSourcesOnly = process.argv.includes('--test-sources');
@@ -19,6 +21,10 @@ const rssFeeds = [
   { publisher: 'BBC News', url: 'https://feeds.bbci.co.uk/news/world/rss.xml' },
   { publisher: 'NPR', url: 'https://feeds.npr.org/1001/rss.xml' },
   { publisher: 'The Guardian', url: 'https://www.theguardian.com/world/rss' },
+];
+const aiRssFeeds = [
+  { publisher: 'TechCrunch AI', url: 'https://techcrunch.com/category/artificial-intelligence/feed/' },
+  { publisher: 'MIT Technology Review', url: 'https://www.technologyreview.com/topic/artificial-intelligence/feed' },
 ];
 
 // Future production flow:
@@ -42,19 +48,22 @@ async function main() {
   if (validateOnly) {
     const edition = await readJson(outputPath);
     validateEdition(edition);
+    const aiEdition = await readOptionalJson(aiOutputPath);
+    if (aiEdition) validateEdition(aiEdition);
     const index = await readEditionIndex();
     const archivedEdition = await readArchivedEdition(edition.dateKey);
     if (archivedEdition) {
       validateEdition(archivedEdition);
     }
-    console.log(`Validated ${edition.items.length} DailyTen items for ${edition.dateKey}. Saved editions: ${index.editions.length}.`);
+    const aiStatus = aiEdition ? ` and ${aiEdition.items.length} AI items` : '';
+    console.log(`Validated ${edition.items.length} DailyTen items${aiStatus} for ${edition.dateKey}. Saved editions: ${index.editions.length}.`);
     return;
   }
 
   if (testSourcesOnly) {
     const candidates = await fetchNewsCandidates(config);
-    console.log(`Fetched ${candidates.length} candidate articles.`);
-    console.log(candidates.slice(0, 3).map((candidate) => `- ${candidate.title} (${candidate.domain})`).join('\n'));
+    console.log(`Fetched ${candidates.daily.length} general and ${candidates.ai.length} AI candidate articles.`);
+    console.log(candidates.ai.slice(0, 5).map((candidate) => `- ${candidate.title} (${candidate.domain})`).join('\n'));
     return;
   }
 
@@ -66,29 +75,49 @@ async function main() {
     throw new Error('Missing OPENAI_API_KEY or OPENAI_MODEL. Set them before running daily generation.');
   }
 
-  const candidates = await fetchNewsCandidates(config);
-  const edition = await generateEdition({ apiKey, model, reasoningEffort, schema, config, candidates });
-  normalizeEdition(edition);
+  const candidatePools = await fetchNewsCandidates(config);
+  const edition = await generateEdition({ apiKey, model, reasoningEffort, schema, config, candidates: candidatePools.daily, channel: 'daily' });
+  const aiEdition = await generateEdition({ apiKey, model, reasoningEffort, schema, config, candidates: candidatePools.ai, channel: 'ai' });
+  normalizeEdition(edition, 'daily');
+  normalizeEdition(aiEdition, 'ai');
   await enrichEditionEventImages(edition);
+  await enrichEditionEventImages(aiEdition);
   validateEdition(edition);
-  await writeEditionOutputs(edition);
-  console.log(`Wrote ${edition.items.length} DailyTen items to ${outputPath} and archived ${edition.dateKey}.`);
+  validateEdition(aiEdition);
+  await writeEditionOutputs(edition, aiEdition);
+  console.log(`Wrote and archived ${edition.items.length} DailyTen items plus ${aiEdition.items.length} AI items for ${edition.dateKey}.`);
 }
 
 async function readJson(filePath) {
   return JSON.parse(await fs.readFile(filePath, 'utf8'));
 }
 
-async function writeEditionOutputs(edition) {
-  await fs.mkdir(editionsDir, { recursive: true });
+async function readOptionalJson(filePath) {
+  try {
+    return await readJson(filePath);
+  } catch (error) {
+    if (error.code === 'ENOENT') return null;
+    throw error;
+  }
+}
+
+async function writeEditionOutputs(edition, aiEdition) {
+  await Promise.all([
+    fs.mkdir(editionsDir, { recursive: true }),
+    fs.mkdir(aiEditionsDir, { recursive: true }),
+  ]);
   const payload = `${JSON.stringify(edition, null, 2)}\n`;
+  const aiPayload = `${JSON.stringify(aiEdition, null, 2)}\n`;
   const archivedPath = path.join(editionsDir, `${edition.dateKey}.json`);
+  const aiArchivedPath = path.join(aiEditionsDir, `${aiEdition.dateKey}.json`);
   const index = await readEditionIndex();
-  const nextIndex = updateEditionIndex(index, edition);
+  const nextIndex = updateEditionIndex(index, edition, aiEdition);
 
   await Promise.all([
     fs.writeFile(outputPath, payload, 'utf8'),
+    fs.writeFile(aiOutputPath, aiPayload, 'utf8'),
     fs.writeFile(archivedPath, payload, 'utf8'),
+    fs.writeFile(aiArchivedPath, aiPayload, 'utf8'),
     fs.writeFile(editionIndexPath, `${JSON.stringify(nextIndex, null, 2)}\n`, 'utf8'),
   ]);
 }
@@ -130,6 +159,7 @@ function normalizeEditionIndex(index) {
       .map((entry) => ({
         dateKey: entry.dateKey,
         path: typeof entry.path === 'string' ? entry.path : `./data/editions/${entry.dateKey}.json`,
+        aiPath: typeof entry.aiPath === 'string' ? entry.aiPath : '',
         channels: Array.isArray(entry.channels) ? entry.channels : ['daily'],
         generatedAt: typeof entry.generatedAt === 'string' ? entry.generatedAt : '',
       }))
@@ -137,12 +167,13 @@ function normalizeEditionIndex(index) {
   };
 }
 
-function updateEditionIndex(index, edition) {
+function updateEditionIndex(index, edition, aiEdition) {
   const current = normalizeEditionIndex(index);
   const entry = {
     dateKey: edition.dateKey,
     path: `./data/editions/${edition.dateKey}.json`,
-    channels: ['daily'],
+    aiPath: `./data/ai-editions/${aiEdition.dateKey}.json`,
+    channels: ['daily', 'ai'],
     generatedAt: edition.generatedAt,
   };
   const editions = [
@@ -158,28 +189,61 @@ function updateEditionIndex(index, edition) {
 }
 
 async function fetchNewsCandidates(config) {
+  let dailyCandidates;
+
   try {
-    const candidates = await fetchGdeltCandidates(config);
-    console.log(`Fetched ${candidates.length} candidate articles from GDELT.`);
-    return candidates;
+    dailyCandidates = await fetchGdeltCandidates(config.sourceQuery, '48h');
+    console.log(`Fetched ${dailyCandidates.length} general candidate articles from GDELT.`);
   } catch (error) {
     console.warn(`${error.message}; falling back to public RSS feeds.`);
-    const candidates = await fetchRssCandidates();
-    console.log(`Fetched ${candidates.length} candidate articles from RSS feeds.`);
-    return candidates;
+    dailyCandidates = await fetchRssCandidates();
+    console.log(`Fetched ${dailyCandidates.length} general candidate articles from RSS feeds.`);
   }
+
+  let aiCandidates;
+  try {
+    await delay(5500);
+    aiCandidates = await fetchGdeltCandidates(config.aiSourceQuery || defaultAiSourceQuery, '72h');
+    console.log(`Fetched ${aiCandidates.length} focused AI candidate articles from GDELT.`);
+  } catch (error) {
+    console.warn(`${error.message}; falling back to focused AI RSS feeds.`);
+    try {
+      aiCandidates = await fetchAiRssCandidates();
+      console.log(`Fetched ${aiCandidates.length} focused AI candidate articles from RSS feeds.`);
+    } catch (rssError) {
+      console.warn(`${rssError.message}; deriving the AI pool from available candidates.`);
+      aiCandidates = dailyCandidates.filter(isAiCandidate);
+    }
+  }
+
+  const rankedAi = rankCandidates(dedupeCandidates(aiCandidates), 'ai');
+  const rankedDaily = rankCandidates(
+    dedupeCandidates([...dailyCandidates, ...rankedAi.slice(0, 30)]),
+    'daily',
+  );
+
+  if (rankedAi.length < 10) {
+    throw new Error(`Only ${rankedAi.length} focused AI candidates were available; at least 10 are required.`);
+  }
+
+  return {
+    daily: rankedDaily.slice(0, 120),
+    ai: rankedAi.slice(0, 100),
+  };
 }
 
-async function fetchGdeltCandidates(config) {
+const defaultAiSourceQuery = '(OpenAI OR GPT OR Anthropic OR Claude OR Gemini OR "AI model" OR "AI agent" OR MCP OR "model context protocol" OR robotics OR robot OR "embodied AI" OR "humanoid robot" OR "AI chip" OR inference OR "AI data center")';
+
+async function fetchGdeltCandidates(query, timespan) {
   const params = new URLSearchParams({
-    query: config.sourceQuery,
+    query,
     mode: 'ArtList',
     format: 'json',
     maxrecords: '75',
     sort: 'hybridrel',
-    timespan: '24h',
+    timespan,
   });
-  const url = `http://api.gdeltproject.org/api/v2/doc/doc?${params}`;
+  const url = `https://api.gdeltproject.org/api/v2/doc/doc?${params}`;
 
   const response = await fetchWithContext(url, {
     headers: { accept: 'application/json' },
@@ -206,6 +270,54 @@ async function fetchGdeltCandidates(config) {
   }));
 }
 
+function dedupeCandidates(candidates) {
+  const seen = new Set();
+  return candidates.filter((candidate) => {
+    const key = `${String(candidate.url || '').toLowerCase()}|${String(candidate.title || '').toLowerCase()}`;
+    if (!candidate.title || !candidate.url || seen.has(key)) return false;
+    seen.add(key);
+    return true;
+  });
+}
+
+function isAiCandidate(candidate) {
+  return /\b(ai|artificial intelligence|openai|gpt|anthropic|claude|gemini|agent|mcp|robot|robotics|humanoid|inference|compute|chip|data cent(?:er|re))\b/i.test(candidate.title || '');
+}
+
+function rankCandidates(candidates, channel) {
+  return candidates
+    .map((candidate) => ({
+      ...candidate,
+      priorityScore: candidatePriority(candidate, channel),
+    }))
+    .sort((first, second) => second.priorityScore - first.priorityScore);
+}
+
+function candidatePriority(candidate, channel) {
+  const title = String(candidate.title || '');
+  const domain = String(candidate.domain || '');
+  let score = 0;
+
+  if (/\b(gpt[- ]?6|astra|openai|anthropic|claude|gemini)\b/i.test(title)) score += 90;
+  if (/\b(launch|launched|release|released|introduc|announce|unveil|new model)\b/i.test(title)) score += 45;
+  if (/\b(agent|mcp|robot|robotics|humanoid|embodied ai|inference|ai chip|data cent(?:er|re))\b/i.test(title)) score += 28;
+  if (/openai\.com|anthropic\.com|deepmind\.google|blog\.google/i.test(domain)) score += 70;
+  if (/press release|sponsored|地方|园区|签约|促消费/i.test(title)) score -= 25;
+  if (channel === 'ai' && isAiCandidate(candidate)) score += 35;
+
+  const seenAt = Date.parse(candidate.seenDate || '');
+  if (Number.isFinite(seenAt)) {
+    const hoursOld = Math.max(0, (Date.now() - seenAt) / 3600000);
+    score += Math.max(0, 24 - hoursOld) / 4;
+  }
+
+  return Math.round(score * 10) / 10;
+}
+
+function delay(milliseconds) {
+  return new Promise((resolve) => setTimeout(resolve, milliseconds));
+}
+
 async function fetchRssCandidates() {
   const batches = await Promise.all(rssFeeds.map(async (feed) => {
     const response = await fetchWithContext(feed.url, {
@@ -227,6 +339,27 @@ async function fetchRssCandidates() {
   }
 
   return candidates.slice(0, 75);
+}
+
+async function fetchAiRssCandidates() {
+  const batches = await Promise.all(aiRssFeeds.map(async (feed) => {
+    const response = await fetchWithContext(feed.url, {
+      headers: { accept: 'application/rss+xml, application/xml, text/xml' },
+    }, `${feed.publisher} RSS fetch`);
+
+    if (!response.ok) {
+      throw new Error(`${feed.publisher} RSS fetch failed: ${response.status}`);
+    }
+
+    return parseRssItems(await response.text(), feed);
+  }));
+
+  const candidates = dedupeCandidates(batches.flat());
+  if (candidates.length < 10) {
+    throw new Error(`AI RSS fallback returned only ${candidates.length} candidate articles.`);
+  }
+
+  return candidates.slice(0, 100);
 }
 
 function parseRssItems(xml, feed) {
@@ -271,7 +404,19 @@ function domainFromUrl(value) {
   }
 }
 
-async function generateEdition({ apiKey, model, reasoningEffort, schema, config, candidates }) {
+async function generateEdition({ apiKey, model, reasoningEffort, schema, config, candidates, channel }) {
+  const channelInstructions = channel === 'ai'
+    ? [
+      'This is the separate AI Industry edition: all ten items must be substantial AI-industry news.',
+      'Cover models, Agents, MCP and other tool protocols, compute, chips, AI products, governance, safety, and real robotics news.',
+      'A verified launch of a major frontier model or platform within the last 72 hours is normally a top-three item and must not be displaced by routine funding, local promotion, or generic trend stories.',
+      'Include robotics or embodied AI only when a genuinely important real candidate exists; do not force it.',
+    ]
+    : [
+      'This is the broad DailyTen edition covering the reader interests in the preferences.',
+      'A globally significant verified AI launch can enter DailyTen, but keep the overall set balanced across major interests.',
+    ];
+
   const response = await fetchWithContext('https://api.openai.com/v1/responses', {
     method: 'POST',
     headers: {
@@ -286,11 +431,15 @@ async function generateEdition({ apiKey, model, reasoningEffort, schema, config,
       instructions: [
         'You are the editor of DailyTen, a calm personal daily briefing product.',
         'Select exactly ten important real news items from the candidate list.',
+        ...channelInstructions,
+        'Treat priorityScore as an editorial review signal, not as proof. Verify importance using the title, publisher, timing, and corroboration in the candidate set.',
+        'Do not omit a major official model or platform launch in favor of routine corporate promotion, local showcase projects, or generic commentary.',
+        'Prefer first-party announcements and stories corroborated by multiple reputable publishers.',
+        'Avoid filling several slots with near-duplicate coverage of the same event.',
         'Write in plain Simplified Chinese for a smart general reader who does not read policy or industry jargon every day.',
         'For every item, also write an en object in natural English.',
         'Each item must have a brief field: one plain, compact sentence for the collapsed card.',
         'brief is for scanning; take is for the expanded explanation. The collapsed card must read like one everyday sentence, not an official summary, policy abstract, or industry report sentence.',
-        'For the AI industry column, include robotics, embodied AI, robot foundation models, warehouse robots, industrial robots, or humanoid robots only when there is a genuinely important real news item that day; do not force a robotics item when the candidate set is weak.',
         'The English version must be plain and readable, but do not remove useful technical terms such as Agent, MCP, compute, inference, governance, data center, supply chain, or audit when they are central to the story.',
         'Explain technical terms through context instead of deleting them.',
         'Do not sound like a government notice, corporate press release, stock analyst note, or official abstract.',
@@ -307,6 +456,7 @@ async function generateEdition({ apiKey, model, reasoningEffort, schema, config,
       ].join('\n'),
       input: JSON.stringify({
         dateKey: todayInTimezone(config.timezone),
+        channel,
         preferences: config,
         candidates,
         outputNotes: [
@@ -350,9 +500,12 @@ async function generateEdition({ apiKey, model, reasoningEffort, schema, config,
   return parseJson(text, 'OpenAI edition output');
 }
 
-function normalizeEdition(edition) {
+function normalizeEdition(edition, channel) {
   for (const item of edition.items ?? []) {
     item.cat = normalizeCategory(item);
+    if (channel === 'ai' && !item.id.startsWith('ai-')) {
+      item.id = `ai-${item.id}`;
+    }
   }
 }
 

@@ -28,5 +28,6 @@
     "AI": "Use for AI models, AI products, AI regulation, AI labor impact, and AI infrastructure when AI itself is the main story. In the AI industry column, robotics or embodied AI may be included only when there is a strong real candidate that day; do not force it.",
     "机器人与具身智能": "Use for robotics, embodied AI, industrial robots, warehouse robots, humanoid robots, robot foundation models, manipulation, motion planning, sensors, and autonomy when they are substantial real news."
   },
-  "sourceQuery": "(artificial intelligence OR AI agent OR MCP OR compute OR inference OR data center OR robotics OR robot OR embodied AI OR humanoid robot OR economy OR energy OR supply chain OR technology OR geopolitics OR public safety)"
+  "sourceQuery": "(artificial intelligence OR AI agent OR MCP OR compute OR inference OR data center OR robotics OR robot OR embodied AI OR humanoid robot OR economy OR energy OR supply chain OR technology OR geopolitics OR public safety)",
+  "aiSourceQuery": "(OpenAI OR GPT OR Anthropic OR Claude OR Gemini OR artificial intelligence OR AI model OR AI agent OR MCP OR model context protocol OR compute OR inference OR AI chip OR data center OR robotics OR robot OR embodied AI OR humanoid robot)"
 }
