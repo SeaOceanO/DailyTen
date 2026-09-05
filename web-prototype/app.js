@@ -45,7 +45,7 @@ const channels = {
 
 const bottomTabs = ['daily', 'ai', 'mine'];
 const swipeChannels = ['daily', 'ai', 'mine'];
-const transitionMs = 280;
+const transitionMs = 210;
 const themeMedia = window.matchMedia('(prefers-color-scheme: dark)');
 
 const i18n = {
@@ -199,6 +199,7 @@ let editionIndex = null;
 let availableDateKeys = new Set([todayKey, yesterdayKey]);
 let editionPathByDate = new Map();
 let aiEditionPathByDate = new Map();
+const editionCache = new Map();
 
 const state = {
   favorites: readSet(storageKeys.favorites),
@@ -271,10 +272,11 @@ async function init() {
 
   try {
     const [latestEdition, loadedIndex] = await Promise.all([
-      fetchEdition('./data/today.json'),
-      fetchEditionIndex(),
+      fetchEdition('./data/today.json', { refresh: true }),
+      fetchEditionIndex({ refresh: true }),
     ]);
     latestDailyEdition = latestEdition;
+    editionCache.set('./data/today.json', latestEdition);
     setLatestDate(latestEdition.dateKey, loadedIndex);
     state.selectedDateKey = readSavedDateKey();
     renderDateModule();
@@ -395,9 +397,9 @@ function adaptArchivedEditionForAi(edition) {
   };
 }
 
-async function fetchEditionIndex() {
+async function fetchEditionIndex(options = {}) {
   try {
-    return await fetchEdition('./data/editions/index.json');
+    return await fetchEdition('./data/editions/index.json', options);
   } catch {
     return null;
   }
@@ -425,14 +427,22 @@ function normalizeEditionIndex(index, fallbackDateKey) {
   };
 }
 
-async function fetchEdition(pathname) {
-  const response = await fetch(pathname, { cache: 'no-store' });
+async function fetchEdition(pathname, options = {}) {
+  if (!options.refresh && editionCache.has(pathname)) {
+    return editionCache.get(pathname);
+  }
+
+  const response = await fetch(pathname, {
+    cache: options.refresh ? 'no-store' : 'default',
+  });
 
   if (!response.ok) {
     throw new Error(`${pathname} 读取失败：${response.status}`);
   }
 
-  return response.json();
+  const edition = await response.json();
+  editionCache.set(pathname, edition);
+  return edition;
 }
 
 function hydrateEdition(edition) {
@@ -856,7 +866,7 @@ async function animateShellBack(offsetX) {
     { transform: `translate3d(${offsetX}px, 0, 0)` },
     { transform: 'translate3d(0, 0, 0)' },
   ], {
-    duration: 220,
+    duration: 170,
     easing: 'cubic-bezier(0.32, 0.72, 0, 1)',
   });
 
@@ -920,7 +930,7 @@ async function transitionChannel(direction, applyChange, options = {}) {
       { opacity: 1, transform: `translate3d(${startOffset}px, 0, 0)` },
       { opacity: 0.9, transform: `translate3d(${outgoingEnd}px, 0, 0)` },
     ], {
-      duration: 120,
+      duration: 82,
       easing: 'cubic-bezier(0.32, 0.72, 0, 1)',
       fill: 'both',
     });
@@ -936,7 +946,7 @@ async function transitionChannel(direction, applyChange, options = {}) {
       { opacity: 0.96, transform: `translate3d(${incomingStart}px, 0, 0)` },
       { opacity: 1, transform: 'translate3d(0, 0, 0)' },
     ], {
-      duration: transitionMs - 40,
+      duration: transitionMs,
       easing: 'cubic-bezier(0.32, 0.72, 0, 1)',
       fill: 'both',
     });
