@@ -156,6 +156,26 @@ const storageKeys = {
   themeVersion: 'dailyten-web:theme-version',
 };
 
+const memoryStorage = new Map();
+const storage = {
+  getItem(key) {
+    try {
+      const value = window.localStorage.getItem(key);
+      return value === null ? (memoryStorage.get(key) || null) : value;
+    } catch {
+      return memoryStorage.get(key) || null;
+    }
+  },
+  setItem(key, value) {
+    memoryStorage.set(key, String(value));
+    try {
+      window.localStorage.setItem(key, String(value));
+    } catch {
+      // Restricted browser storage falls back to memory for this visit.
+    }
+  },
+};
+
 const iconPaths = {
   oil: '<ellipse cx="32" cy="15" rx="12" ry="4.5"/><path d="M20 15V49"/><path d="M44 15V49"/><ellipse cx="32" cy="49" rx="12" ry="4.5"/><path d="M20 28H44"/><path d="M20 40H44"/>',
   chart: '<path d="M13 51H53"/><path d="M13 51V13"/><polyline points="17,43 27,33 35,39 49,19"/><polyline points="43,19 49,19 49,25"/>',
@@ -179,7 +199,7 @@ const state = {
   favorites: readSet(storageKeys.favorites),
   muted: readSet(storageKeys.muted),
   read: readSet(storageKeys.read),
-  channel: channels[localStorage.getItem(storageKeys.channel)] ? localStorage.getItem(storageKeys.channel) : 'daily',
+  channel: channels[storage.getItem(storageKeys.channel)] ? storage.getItem(storageKeys.channel) : 'daily',
   language: readSavedLanguage(),
   theme: readSavedTheme(),
   selectedDateKey: readSavedDateKey(),
@@ -426,7 +446,7 @@ async function setActiveChannel(nextChannel, transitionOptions = {}) {
   try {
     await transitionChannel(direction, async () => {
       state.channel = nextChannel;
-      localStorage.setItem(storageKeys.channel, state.channel);
+      storage.setItem(storageKeys.channel, state.channel);
       renderChannelTabs();
       await loadAndRender();
     }, {
@@ -457,7 +477,7 @@ function renderLanguageModal() {
   elements.languageOptions.querySelectorAll('[data-language]').forEach((button) => {
     button.addEventListener('click', async () => {
       state.language = button.dataset.language;
-      localStorage.setItem(storageKeys.language, state.language);
+      storage.setItem(storageKeys.language, state.language);
       elements.languageModal.hidden = true;
       renderLanguageModal();
       renderThemeModal();
@@ -486,8 +506,8 @@ function renderThemeModal() {
   elements.themeOptions.querySelectorAll('[data-theme]').forEach((button) => {
     button.addEventListener('click', () => {
       state.theme = button.dataset.theme;
-      localStorage.setItem(storageKeys.theme, state.theme);
-      localStorage.setItem(storageKeys.themeVersion, '2');
+      storage.setItem(storageKeys.theme, state.theme);
+      storage.setItem(storageKeys.themeVersion, '2');
       elements.themeModal.hidden = true;
       applyTheme();
       renderThemeModal();
@@ -597,7 +617,7 @@ function renderDateModule() {
       const dateKey = button.dataset.dateKey;
       if (button.disabled || !dateKey || state.selectedDateKey === dateKey) return;
       state.selectedDateKey = dateKey;
-      localStorage.setItem(storageKeys.date, dateKey);
+      storage.setItem(storageKeys.date, dateKey);
       await loadAndRender();
     });
   });
@@ -729,7 +749,9 @@ function wireNavigationGestures() {
       gesture.axis = absX > absY * 1.18 ? 'horizontal' : 'vertical';
       if (gesture.axis === 'horizontal') {
         elements.shell.classList.add('is-nav-dragging');
-        elements.shell.setPointerCapture?.(event.pointerId);
+        if (elements.shell.setPointerCapture) {
+          elements.shell.setPointerCapture(event.pointerId);
+        }
       }
     }
 
@@ -2087,35 +2109,35 @@ function localizedBriefLabel(edition) {
 }
 
 function readSavedDateKey() {
-  const saved = localStorage.getItem(storageKeys.date);
+  const saved = storage.getItem(storageKeys.date);
   return saved && availableDateKeys.has(saved) ? saved : todayKey;
 }
 
 function readSavedLanguage() {
-  return localStorage.getItem(storageKeys.language) === 'en' ? 'en' : 'zh';
+  return storage.getItem(storageKeys.language) === 'en' ? 'en' : 'zh';
 }
 
 function readSavedTheme() {
-  if (localStorage.getItem(storageKeys.themeVersion) !== '2') {
-    localStorage.setItem(storageKeys.theme, 'light');
-    localStorage.setItem(storageKeys.themeVersion, '2');
+  if (storage.getItem(storageKeys.themeVersion) !== '2') {
+    storage.setItem(storageKeys.theme, 'light');
+    storage.setItem(storageKeys.themeVersion, '2');
     return 'light';
   }
 
-  const saved = localStorage.getItem(storageKeys.theme);
+  const saved = storage.getItem(storageKeys.theme);
   return saved === 'dark' || saved === 'light' || saved === 'system' ? saved : 'light';
 }
 
 function readSet(key) {
   try {
-    return new Set(JSON.parse(coalesce(localStorage.getItem(key), '[]')));
+    return new Set(JSON.parse(coalesce(storage.getItem(key), '[]')));
   } catch {
     return new Set();
   }
 }
 
 function writeSet(key, value) {
-  localStorage.setItem(key, JSON.stringify([...value]));
+  storage.setItem(key, JSON.stringify([...value]));
 }
 
 function toggleSet(set, value) {
