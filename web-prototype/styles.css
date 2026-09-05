@@ -95,7 +95,29 @@ button {
   overflow: hidden;
   padding: 22px 18px;
   backface-visibility: hidden;
-  will-change: opacity, transform;
+  touch-action: pan-y;
+}
+
+.shell.is-nav-dragging {
+  cursor: grabbing;
+  transition: none;
+  user-select: none;
+  will-change: transform;
+}
+
+.nav-transition-overlay {
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  position: fixed;
+  z-index: 15;
+}
+
+.nav-transition-clone {
+  margin: 0 !important;
+  max-width: none !important;
+  position: absolute !important;
+  will-change: transform;
 }
 
 .bottom-nav {
@@ -926,6 +948,7 @@ h1 {
 }
 
 .details {
+  box-sizing: border-box;
   max-height: 0;
   opacity: 0;
   overflow: hidden;
@@ -1032,6 +1055,16 @@ h1 {
   margin-bottom: 16px;
   overflow: hidden;
   padding: 14px;
+}
+
+.news-card.is-collapsing {
+  pointer-events: none;
+}
+
+.news-card.is-collapsing .details {
+  transform-origin: top;
+  transition: none;
+  will-change: height, opacity, transform;
 }
 
 .event-image {

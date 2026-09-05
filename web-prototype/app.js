@@ -45,7 +45,7 @@ const channels = {
 
 const bottomTabs = ['daily', 'ai', 'mine'];
 const swipeChannels = ['daily', 'ai', 'mine'];
-const transitionMs = 270;
+const transitionMs = 280;
 const themeMedia = window.matchMedia('(prefers-color-scheme: dark)');
 
 const i18n = {
@@ -217,8 +217,9 @@ const elements = {
 
 let items = [];
 let touchStartY = 0;
-let navTouchStartX = 0;
-let navTouchStartY = 0;
+let navigationLocked = false;
+let suppressNextClick = false;
+const channelScrollPositions = new Map();
 let latestDailyEdition = null;
 let editionIndex = null;
 let availableDateKeys = new Set([todayKey, yesterdayKey]);
@@ -415,15 +416,26 @@ function renderChannelTabs() {
   });
 }
 
-async function setActiveChannel(nextChannel) {
-  if (!channels[nextChannel] || state.channel === nextChannel) return;
+async function setActiveChannel(nextChannel, transitionOptions = {}) {
+  if (!channels[nextChannel] || state.channel === nextChannel || navigationLocked) return;
+  navigationLocked = true;
+  const currentChannel = state.channel;
   const direction = channelDirection(state.channel, nextChannel);
-  await transitionChannel(direction, async () => {
-    state.channel = nextChannel;
-    localStorage.setItem(storageKeys.channel, state.channel);
-    renderChannelTabs();
-    await loadAndRender();
-  });
+  channelScrollPositions.set(currentChannel, getPageScrollTop());
+
+  try {
+    await transitionChannel(direction, async () => {
+      state.channel = nextChannel;
+      localStorage.setItem(storageKeys.channel, state.channel);
+      renderChannelTabs();
+      await loadAndRender();
+    }, {
+      ...transitionOptions,
+      targetScroll: channelScrollPositions.get(nextChannel) || 0,
+    });
+  } finally {
+    navigationLocked = false;
+  }
 }
 
 function renderLanguageModal() {
@@ -673,40 +685,150 @@ function showLoadingState(text) {
 }
 
 function wireNavigationGestures() {
-  elements.shell.addEventListener('touchstart', (event) => {
-    if (event.target.closest('.date-module, .modal-backdrop')) return;
-    navTouchStartX = event.touches[0] ? event.touches[0].clientX : 0;
-    navTouchStartY = event.touches[0] ? event.touches[0].clientY : 0;
+  let gesture = null;
+  let dragFrame = 0;
+
+  const paintDrag = () => {
+    dragFrame = 0;
+    if (!gesture || gesture.axis !== 'horizontal') return;
+    elements.shell.style.transform = `translate3d(${gesture.offsetX}px, 0, 0)`;
+  };
+
+  const queueDragPaint = () => {
+    if (!dragFrame) dragFrame = requestAnimationFrame(paintDrag);
+  };
+
+  elements.shell.addEventListener('pointerdown', (event) => {
+    if (!event.isPrimary || event.button !== 0 || navigationLocked || state.channel === 'favorites') return;
+    if (event.target.closest('.date-module, .modal-backdrop, button, a, input, select, textarea, [data-term]')) return;
+
+    const now = performance.now();
+    gesture = {
+      pointerId: event.pointerId,
+      startX: event.clientX,
+      startY: event.clientY,
+      lastX: event.clientX,
+      lastTime: now,
+      velocityX: 0,
+      axis: null,
+      offsetX: 0,
+      targetChannel: null,
+    };
   }, { passive: true });
 
-  elements.shell.addEventListener('touchend', async (event) => {
-    if (event.target.closest('.date-module, .modal-backdrop')) return;
+  elements.shell.addEventListener('pointermove', (event) => {
+    if (!gesture || gesture.pointerId !== event.pointerId) return;
 
-    const touch = event.changedTouches[0];
-    if (!touch) return;
+    const deltaX = event.clientX - gesture.startX;
+    const deltaY = event.clientY - gesture.startY;
+    const absX = Math.abs(deltaX);
+    const absY = Math.abs(deltaY);
 
-    const deltaX = touch.clientX - navTouchStartX;
-    const deltaY = touch.clientY - navTouchStartY;
-
-    if (Math.abs(deltaX) < 62 || Math.abs(deltaX) < Math.abs(deltaY) * 1.35) return;
-    if (state.channel === 'favorites') return;
-
-    const currentIndex = swipeChannels.indexOf(state.channel);
-    if (currentIndex < 0) return;
-
-    let nextIndex = currentIndex;
-    if (state.channel === 'daily') {
-      nextIndex = 1;
-    } else if (deltaX > 0) {
-      nextIndex = Math.max(0, currentIndex - 1);
-    } else {
-      nextIndex = Math.min(swipeChannels.length - 1, currentIndex + 1);
+    if (!gesture.axis) {
+      if (Math.max(absX, absY) < 9) return;
+      gesture.axis = absX > absY * 1.18 ? 'horizontal' : 'vertical';
+      if (gesture.axis === 'horizontal') {
+        elements.shell.classList.add('is-nav-dragging');
+        elements.shell.setPointerCapture?.(event.pointerId);
+      }
     }
 
-    if (nextIndex !== currentIndex) {
-      await setActiveChannel(swipeChannels[nextIndex]);
+    if (gesture.axis !== 'horizontal') return;
+    event.preventDefault();
+
+    const now = performance.now();
+    const elapsed = Math.max(1, now - gesture.lastTime);
+    gesture.velocityX = (event.clientX - gesture.lastX) / elapsed;
+    gesture.lastX = event.clientX;
+    gesture.lastTime = now;
+    gesture.targetChannel = swipeTargetForDelta(deltaX);
+    gesture.offsetX = gesture.targetChannel ? deltaX : deltaX * 0.18;
+    queueDragPaint();
+  }, { passive: false });
+
+  const finishGesture = async (event, cancelled = false) => {
+    if (!gesture || gesture.pointerId !== event.pointerId) return;
+    const finishedGesture = gesture;
+    gesture = null;
+    if (dragFrame) cancelAnimationFrame(dragFrame);
+    dragFrame = 0;
+
+    if (finishedGesture.axis !== 'horizontal') return;
+    suppressNextClick = true;
+    window.setTimeout(() => { suppressNextClick = false; }, 360);
+
+    const distanceEnough = Math.abs(finishedGesture.offsetX) >= window.innerWidth * 0.2;
+    const velocityEnough = Math.abs(finishedGesture.velocityX) >= 0.42;
+    const shouldChange = !cancelled
+      && finishedGesture.targetChannel
+      && (distanceEnough || velocityEnough);
+
+    elements.shell.classList.remove('is-nav-dragging');
+
+    if (shouldChange) {
+      await setActiveChannel(finishedGesture.targetChannel, {
+        initialOffset: finishedGesture.offsetX,
+      });
+      return;
     }
-  }, { passive: true });
+
+    await animateShellBack(finishedGesture.offsetX);
+  };
+
+  elements.shell.addEventListener('pointerup', (event) => finishGesture(event));
+  elements.shell.addEventListener('pointercancel', (event) => finishGesture(event, true));
+
+  document.addEventListener('click', (event) => {
+    if (!suppressNextClick) return;
+    suppressNextClick = false;
+    event.preventDefault();
+    event.stopImmediatePropagation();
+  }, true);
+}
+
+function swipeTargetForDelta(deltaX) {
+  const currentIndex = swipeChannels.indexOf(state.channel);
+  if (currentIndex < 0 || deltaX === 0) return null;
+  const nextIndex = deltaX < 0 ? currentIndex + 1 : currentIndex - 1;
+  return swipeChannels[nextIndex] || null;
+}
+
+async function animateShellBack(offsetX) {
+  if (!offsetX || !elements.shell.animate) {
+    elements.shell.style.transform = '';
+    return;
+  }
+
+  const animation = elements.shell.animate([
+    { transform: `translate3d(${offsetX}px, 0, 0)` },
+    { transform: 'translate3d(0, 0, 0)' },
+  ], {
+    duration: 220,
+    easing: 'cubic-bezier(0.32, 0.72, 0, 1)',
+  });
+
+  try {
+    await animation.finished;
+  } catch {
+    // A new gesture can intentionally replace this settling animation.
+  } finally {
+    elements.shell.style.transform = '';
+  }
+}
+
+function getPageScrollTop() {
+  return Math.max(
+    window.scrollY || 0,
+    document.documentElement.scrollTop || 0,
+    document.body.scrollTop || 0,
+  );
+}
+
+function setPageScrollTop(top) {
+  const safeTop = Math.max(0, top);
+  window.scrollTo({ top: safeTop, left: 0 });
+  document.documentElement.scrollTop = safeTop;
+  document.body.scrollTop = safeTop;
 }
 
 function channelDirection(currentChannel, nextChannel) {
@@ -715,31 +837,72 @@ function channelDirection(currentChannel, nextChannel) {
   return nextIndex >= currentIndex ? 'forward' : 'back';
 }
 
-async function transitionChannel(direction, applyChange) {
+async function transitionChannel(direction, applyChange, options = {}) {
   const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const targetScroll = options.targetScroll || 0;
 
   if (reduceMotion || !elements.shell.animate) {
     await applyChange();
+    setPageScrollTop(targetScroll);
     return;
   }
 
   elements.shell.getAnimations().forEach((animation) => animation.cancel());
-  const enteringX = direction === 'forward' ? 18 : -18;
+  const viewportWidth = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
+  const initialOffset = Number.isFinite(options.initialOffset) ? options.initialOffset : 0;
+  const outgoingEnd = direction === 'forward' ? -viewportWidth : viewportWidth;
+  const incomingStart = direction === 'forward' ? viewportWidth : -viewportWidth;
+  const shellRect = elements.shell.getBoundingClientRect();
+  const overlay = document.createElement('div');
+  const outgoingShell = elements.shell.cloneNode(true);
+
+  overlay.className = 'nav-transition-overlay';
+  outgoingShell.classList.add('nav-transition-clone');
+  outgoingShell.classList.remove('is-nav-dragging');
+  outgoingShell.setAttribute('aria-hidden', 'true');
+  outgoingShell.querySelectorAll('[id]').forEach((node) => node.removeAttribute('id'));
+  Object.assign(outgoingShell.style, {
+    left: `${shellRect.left}px`,
+    top: `${shellRect.top}px`,
+    width: `${shellRect.width}px`,
+    transform: `translate3d(${initialOffset}px, 0, 0)`,
+  });
+  overlay.append(outgoingShell);
+  document.body.append(overlay);
+  elements.shell.style.visibility = 'hidden';
+  elements.shell.style.transform = '';
 
   try {
     await applyChange();
+    setPageScrollTop(targetScroll);
+    elements.shell.style.transform = `translate3d(${incomingStart}px, 0, 0)`;
+    elements.shell.style.visibility = 'visible';
+    elements.shell.style.willChange = 'transform';
+    await new Promise((resolve) => requestAnimationFrame(resolve));
 
-    await elements.shell.animate([
-      { opacity: 0.72, transform: `translate3d(${enteringX}px, 0, 0)` },
-      { opacity: 1, transform: 'translate3d(0, 0, 0)' },
+    const outgoingAnimation = outgoingShell.animate([
+      { transform: `translate3d(${initialOffset}px, 0, 0)` },
+      { transform: `translate3d(${outgoingEnd}px, 0, 0)` },
     ], {
-      duration: 220,
-      easing: 'cubic-bezier(0.2, 0.8, 0.2, 1)',
+      duration: transitionMs,
+      easing: 'cubic-bezier(0.32, 0.72, 0, 1)',
       fill: 'both',
-    }).finished;
+    });
+    const incomingAnimation = elements.shell.animate([
+      { transform: `translate3d(${incomingStart}px, 0, 0)` },
+      { transform: 'translate3d(0, 0, 0)' },
+    ], {
+      duration: transitionMs,
+      easing: 'cubic-bezier(0.32, 0.72, 0, 1)',
+      fill: 'both',
+    });
+
+    await Promise.allSettled([outgoingAnimation.finished, incomingAnimation.finished]);
   } finally {
-    elements.shell.style.opacity = '';
+    overlay.remove();
+    elements.shell.style.visibility = '';
     elements.shell.style.transform = '';
+    elements.shell.style.willChange = '';
   }
 }
 
@@ -1011,17 +1174,79 @@ function detailsHtml(item) {
   `;
 }
 
-function collapseCardWithoutJump(card, header) {
-  const targetTop = Math.max(0, window.scrollY + card.getBoundingClientRect().top - 12);
-  card.classList.remove('is-open');
+async function collapseCardWithoutJump(card, header) {
+  if (card.classList.contains('is-collapsing')) return;
+
+  const details = card.querySelector('.details');
+  if (!details) return;
+
+  const cardRect = card.getBoundingClientRect();
+  const detailsHeight = details.getBoundingClientRect().height;
+  const startScroll = getPageScrollTop();
+  const cardDocumentTop = startScroll + cardRect.top;
+  const cardTopIsVisible = cardRect.top >= 12 && cardRect.top <= window.innerHeight * 0.42;
+  const targetScroll = cardTopIsVisible ? startScroll : Math.max(0, cardDocumentTop - 12);
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
   header.setAttribute('aria-expanded', 'false');
 
-  requestAnimationFrame(() => {
-    const currentTop = card.getBoundingClientRect().top;
-    if (currentTop < 10 || currentTop > window.innerHeight * 0.42) {
-      window.scrollTo({ top: targetTop, left: 0, behavior: 'smooth' });
-    }
+  if (reduceMotion || !details.animate || detailsHeight <= 0) {
+    card.classList.remove('is-open');
+    setPageScrollTop(targetScroll);
+    return;
+  }
+
+  card.classList.add('is-collapsing');
+  const duration = 360;
+  const detailsAnimation = details.animate([
+    {
+      height: `${detailsHeight}px`,
+      opacity: 1,
+      paddingTop: '2px',
+      paddingBottom: '16px',
+      transform: 'translateY(0)',
+    },
+    {
+      height: '0px',
+      opacity: 0,
+      paddingTop: '0px',
+      paddingBottom: '0px',
+      transform: 'translateY(-8px)',
+    },
+  ], {
+    duration,
+    easing: 'cubic-bezier(0.32, 0.72, 0, 1)',
+    fill: 'both',
   });
+
+  const scrollAnimation = new Promise((resolve) => {
+    const startedAt = performance.now();
+
+    const step = (now) => {
+      const progress = Math.min(1, (now - startedAt) / duration);
+      const eased = 1 - Math.pow(1 - progress, 3);
+      const nextScroll = startScroll + (targetScroll - startScroll) * eased;
+      setPageScrollTop(nextScroll);
+
+      if (progress < 1) {
+        requestAnimationFrame(step);
+      } else {
+        resolve();
+      }
+    };
+
+    requestAnimationFrame(step);
+  });
+
+  try {
+    await Promise.all([detailsAnimation.finished, scrollAnimation]);
+  } catch {
+    // A rerender can intentionally interrupt the collapse animation.
+  } finally {
+    detailsAnimation.cancel();
+    card.classList.remove('is-open', 'is-collapsing');
+    setPageScrollTop(targetScroll);
+  }
 }
 
 function chevronControlHtml(direction) {
