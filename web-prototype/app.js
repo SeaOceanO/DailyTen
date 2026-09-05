@@ -1569,9 +1569,173 @@ function buildTopicItem(topic, channel, dateKey, index) {
       updated: `Updated ${formatEnglishDate(dateKey)}`,
     } : null,
     sourceLinks: Array.isArray(topic.sourceLinks) ? topic.sourceLinks : [],
-    eventImage: topic.eventImage || null,
+    eventImage: topic.eventImage || aiTopicEventImage(topic.slug),
   };
 }
+
+function aiTopicEventImage(slug) {
+  return aiTopicImages[slug] || null;
+}
+
+function makeEventImage(url, zhAlt, enAlt, link, credit = '') {
+  return {
+    url,
+    credit,
+    link,
+    zh: { alt: zhAlt, caption: zhAlt },
+    en: { alt: enAlt, caption: enAlt },
+  };
+}
+
+const aiTopicImages = {
+  'gpt6-astra': makeEventImage(
+    'https://www.all-ai.de/images/2-news/8-26/openai-astra-1600.webp',
+    'OpenAI Astra 发布视觉图',
+    'OpenAI Astra launch visual',
+    'https://openai.com/index/gpt-6-astra/',
+    'OpenAI',
+  ),
+  'enterprise-agents': makeEventImage(
+    'https://cdn-cms.apito.ai/blog/images/news-openai-codex-gpt6-astra-signal--cover-7fb32167c8d5.webp',
+    '企业级代码与 Agent 工具视觉图',
+    'Enterprise coding and agent tool visual',
+    'https://apito.ai/zh/blog/news/news-openai-codex-gpt6-astra-signal/',
+    'Apito',
+  ),
+  'ai-browser': makeEventImage(
+    'https://x0.ifengimg.com/ucms/2026_32/304B7C60D3533DBDD54D2967D025BB2F3FC1615E_size26_w900_h507.jpg',
+    'AI 助手界面视觉图',
+    'AI assistant interface visual',
+    'https://tech.ifeng.com/c/8vQLdqUGmyN',
+    'Ifeng Tech',
+  ),
+  'mcp-ecosystem': makeEventImage(
+    'https://cdn-cms.apito.ai/blog/images/news-openai-codex-gpt6-astra-signal--cover-7fb32167c8d5.webp',
+    '工具协议与开发者工作流视觉图',
+    'Tool protocol and developer workflow visual',
+    'https://apito.ai/zh/blog/news/news-openai-codex-gpt6-astra-signal/',
+    'Apito',
+  ),
+  'ai-chip-demand': makeEventImage(
+    'https://2b1c.cscec.com/xwzx/gsyw/202412/W020241218360665154863.jpg',
+    '智算中心项目实景图',
+    'AI compute-center project image',
+    'https://www.chinanews.com.cn/cj/2026/09-01/10687882.shtml',
+    'China News',
+  ),
+  'open-models': makeEventImage(
+    'https://static.inshorts.com/inshorts/images/v1/variants/jpg/m/2025/10_oct/17_fri/img_1760710246027_473.jpg',
+    'GPT-6 模型发布视觉图',
+    'GPT-6 model release visual',
+    'https://inshorts.com/en/news/gpt-6-is-expected-to-arrive-by-the-end-of-2025--report-1760710259078',
+    'Inshorts',
+  ),
+  'ai-regulation': makeEventImage(
+    'https://n.sinaimg.cn/spider20260902/629/w1270h959/20260902/0289-7b9a78fd2c9707098e0b9f3aea122589.png',
+    '成都人工智能监管报道配图',
+    'Chengdu AI regulation report image',
+    'https://finance.sina.com.cn/tech/roll/2026-09-02/doc-iniqckee9182260.shtml',
+    'Sina',
+  ),
+  'devtools-agent': makeEventImage(
+    'https://cdn-cms.apito.ai/blog/images/news-openai-codex-gpt6-astra-signal--cover-7fb32167c8d5.webp',
+    '代码 Agent 与开发工具视觉图',
+    'Coding agent and developer tool visual',
+    'https://apito.ai/zh/blog/news/news-openai-codex-gpt6-astra-signal/',
+    'Apito',
+  ),
+  'ai-media': makeEventImage(
+    'https://www.news.cn/fortune/20260903/190642596f8d4aed8595ae279f86e676/22921f52c382440d97e95dd1ed79d5da.jpg',
+    '数字内容与平台经济报道配图',
+    'Digital content and platform economy image',
+    'https://www.news.cn/fortune/20260903/390361c5e8ac4a969c1908a5ad5a5a0a/c.html',
+    'Xinhua',
+  ),
+  'voice-agents': makeEventImage(
+    'https://japan.zdnet.com/storage/2025/10/09/60478e248ca20b13795f871513cee7f9/t/1280/960/d/251009_ai_as_1280_323829966.jpeg',
+    'AI 云服务与交互场景配图',
+    'AI cloud service and interaction visual',
+    'https://japan.zdnet.com/article/35252231/',
+    'ZDNET Japan',
+  ),
+  'ai-energy': makeEventImage(
+    'https://ichef.bbci.co.uk/ace/branded_news/1200/cpsprodpb/2f90/live/402d60f0-a828-11f1-aed2-8d6da8d75094.jpg',
+    'AI 数据中心与电力成本报道配图',
+    'AI data center and energy cost report image',
+    'https://www.bbc.co.uk/news/articles/cgl3we7wdr3o?at_medium=RSS&at_campaign=rss',
+    'BBC News',
+  ),
+  'agent-memory': makeEventImage(
+    'https://pasqualepillitteri.it/uploads/img/news/openai-astra-multi-agente-senato-cover.webp',
+    '多 Agent 系统视觉图',
+    'Multi-agent system visual',
+    'https://pasqualepillitteri.it/en/news/9190/openai-astra-multi-agent-model-senate',
+    'Pasquale Pillitteri',
+  ),
+  'anp-protocols': makeEventImage(
+    'https://pasqualepillitteri.it/uploads/img/news/openai-astra-multi-agente-senato-cover.webp',
+    'Agent 通信协议视觉图',
+    'Agent communication protocol visual',
+    'https://pasqualepillitteri.it/en/news/9190/openai-astra-multi-agent-model-senate',
+    'Pasquale Pillitteri',
+  ),
+  'ai-office': makeEventImage(
+    'https://cdn-cms.apito.ai/blog/images/news-openai-codex-gpt6-astra-signal--cover-7fb32167c8d5.webp',
+    '办公与代码 AI 工作流视觉图',
+    'Office and coding AI workflow visual',
+    'https://apito.ai/zh/blog/news/news-openai-codex-gpt6-astra-signal/',
+    'Apito',
+  ),
+  'robotics-ai': makeEventImage(
+    'https://www.news.cn/tech/20260903/ae2c27b2145645d7aa02f2e3957068a0/20260903ae2c27b2145645d7aa02f2e3957068a0_2026090392bb21e171a44e64bd1636ea35928095.jpg',
+    '北京亦庄机器人产业报道配图',
+    'Beijing E-Town robotics industry report image',
+    'https://www.news.cn/tech/20260903/ae2c27b2145645d7aa02f2e3957068a0/c.html',
+    'Xinhua',
+  ),
+  'ai-security': makeEventImage(
+    'https://staticr1.blastingcdncf.com/media/photogallery/2026/8/8/660x290/b_1200x675x95/openais-astra-solved-10-open-math-problems-for-2-dollars-000-cents-memeburn-c-creative-commons_3293647.jpg',
+    'OpenAI Astra 安全能力视觉图',
+    'OpenAI Astra safety capability visual',
+    'https://openai.com/index/safety-overview-gpt-6-astra/',
+    'OpenAI',
+  ),
+  'ai-healthcare': makeEventImage(
+    'https://www.price.utah.edu/wp-content/uploads/2026/06/Tucker-Hermans-Class.jpg',
+    '人机协作研究现场图',
+    'Human-robot collaboration research image',
+    'https://www.price.utah.edu/2026/09/01/u-researchers-join-nsf-center-that-will-study-how-robots-and-people-learn-to-live-and-work-together',
+    'University of Utah',
+  ),
+  'ai-ads': makeEventImage(
+    'https://www.news.cn/fortune/20260831/4120c91857b54add803d76426e6d2ed9/202608314120c91857b54add803d76426e6d2ed9_a214f4426aeb4dcb815cd24a7a8ac8cc.jpg',
+    '智能消费与平台业务报道配图',
+    'Smart consumption and platform business image',
+    'https://www.news.cn/fortune/20260831/4120c91857b54add803d76426e6d2ed9/c.html',
+    'Xinhua',
+  ),
+  'ai-coding-market': makeEventImage(
+    'https://cdn-cms.apito.ai/blog/images/news-openai-codex-gpt6-astra-signal--cover-7fb32167c8d5.webp',
+    'AI 编程工具报道视觉图',
+    'AI coding tool report visual',
+    'https://apito.ai/zh/blog/news/news-openai-codex-gpt6-astra-signal/',
+    'Apito',
+  ),
+  'ai-devices': makeEventImage(
+    'https://np-metadata.eastmoney.com/api/metadata.jpg?event=1&source=3&mode=2&type=1&id=202609023861873539',
+    'AI 终端产品报道配图',
+    'AI device product report image',
+    'https://finance.eastmoney.com/a/202609023861873539.html',
+    'Eastmoney',
+  ),
+  'ai-evals': makeEventImage(
+    'https://www.all-ai.de/images/2-news/8-26/openai-astra-1600.webp',
+    '模型评测与 Astra 能力视觉图',
+    'Model evaluation and Astra capability visual',
+    'https://openai.com/index/gpt-6-astra/',
+    'OpenAI',
+  ),
+};
 
 const localTopicEnglish = {
   'grid-storage': makeEnglishTopic('Energy', 'China storage projects are following AI power demand', 'AI data centers need steady electricity all day, not just occasional peak power. That is why storage is moving from a renewable-energy add-on to a practical backup for grids, factories, hospitals, and telecom networks.', 'China', 'storage and compute', 'Industry Watch', ['AI load', 'grid balancing', 'storage projects', 'stable power'], [['Demand', 'Data centers and industrial parks are asking for more continuous power.'], ['Cost', 'Cheaper batteries make more storage projects possible.'], ['Constraint', 'Safety rules and recycling capacity need to catch up with deployment.']], [['Reliability', 'More storage can soften power spikes and outages.'], ['Costs', 'It may reduce volatility over time, but construction costs still need to be paid for.'], ['City services', 'Hospitals, transit, and communications depend on steadier electricity.']], ['Watch whether new storage is tied directly to data centers.', 'Watch whether safety rules move as fast as construction.']),
