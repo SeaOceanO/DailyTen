@@ -848,9 +848,17 @@ function showLoadingState(text) {
 
 function wireNavigationGestures() {
   let gesture = null;
+  const activeTouchPointers = new Set();
   const gestureSurface = document;
 
   gestureSurface.addEventListener('pointerdown', (event) => {
+    if (event.pointerType === 'touch') {
+      activeTouchPointers.add(event.pointerId);
+      if (activeTouchPointers.size > 1) {
+        gesture = null;
+        return;
+      }
+    }
     if (!event.isPrimary || event.button !== 0 || navigationLocked) return;
     if (event.target.closest('.date-module, .modal-backdrop, .bottom-nav, input, select, textarea, [data-term]')) return;
 
@@ -873,6 +881,7 @@ function wireNavigationGestures() {
   }, { passive: true });
 
   gestureSurface.addEventListener('pointermove', (event) => {
+    if (event.pointerType === 'touch' && activeTouchPointers.size > 1) return;
     if (!gesture || gesture.pointerId !== event.pointerId) return;
 
     const deltaX = event.clientX - gesture.startX;
@@ -898,6 +907,7 @@ function wireNavigationGestures() {
   }, { passive: false });
 
   const finishGesture = async (event, cancelled = false) => {
+    if (event.pointerType === 'touch') activeTouchPointers.delete(event.pointerId);
     if (!gesture || gesture.pointerId !== event.pointerId) return;
     const finishedGesture = gesture;
     gesture = null;
