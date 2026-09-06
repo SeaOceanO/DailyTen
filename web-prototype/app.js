@@ -94,6 +94,14 @@ const i18n = {
     termMeaning: '它是什么意思',
     termRelation: '和这条新闻的关系',
     themeHint: '选择后会立刻应用并保存在当前浏览器。',
+    listen: '播报本条',
+    pauseAudio: '暂停播报',
+    resumeAudio: '继续播报',
+    previousStory: '上一条',
+    nextStory: '下一条',
+    closePlayer: '关闭播放器',
+    speechSpeed: '语速',
+    paused: '已暂停',
   },
   en: {
     daily: 'Home',
@@ -141,6 +149,14 @@ const i18n = {
     termMeaning: 'What it means',
     termRelation: 'Why it matters here',
     themeHint: 'Your choice applies immediately and is saved in this browser.',
+    listen: 'Listen',
+    pauseAudio: 'Pause narration',
+    resumeAudio: 'Resume narration',
+    previousStory: 'Previous story',
+    nextStory: 'Next story',
+    closePlayer: 'Close player',
+    speechSpeed: 'Speed',
+    paused: 'Paused',
   },
 };
 
@@ -153,6 +169,7 @@ const storageKeys = {
   language: 'dailyten-web:language',
   theme: 'dailyten-web:theme',
   themeVersion: 'dailyten-web:theme-version',
+  speechRate: 'dailyten-web:speech-rate',
 };
 
 const memoryStorage = new Map();
@@ -237,6 +254,14 @@ const elements = {
   termModalTitle: document.querySelector('#term-modal-title'),
   termModalBody: document.querySelector('#term-modal-body'),
   termClose: document.querySelector('[data-term-close]'),
+  audioPlayer: document.querySelector('#audio-player'),
+  audioPlayerLabel: document.querySelector('#audio-player-label'),
+  audioPlayerTitle: document.querySelector('#audio-player-title'),
+  audioPrevious: document.querySelector('#audio-previous'),
+  audioToggle: document.querySelector('#audio-toggle'),
+  audioNext: document.querySelector('#audio-next'),
+  audioSpeed: document.querySelector('#audio-speed'),
+  audioClose: document.querySelector('#audio-close'),
   shell: document.querySelector('.shell'),
 };
 
@@ -248,6 +273,18 @@ const channelScrollPositions = new Map();
 const pagePanes = new Map();
 let pageViewport = null;
 let pageTrack = null;
+const speechState = {
+  supported: 'speechSynthesis' in window && 'SpeechSynthesisUtterance' in window,
+  active: false,
+  paused: false,
+  ended: false,
+  item: null,
+  index: -1,
+  sourceItems: [],
+  utterance: null,
+  session: 0,
+  rate: normalizeSpeechRate(Number(storage.getItem(storageKeys.speechRate))),
+};
 
 window.addEventListener('error', (event) => {
   reportRuntimeError(event.error || new Error(event.message));
@@ -272,6 +309,7 @@ async function init() {
   safeSetup(wireTermModal);
   safeSetup(wireDateGestures);
   safeSetup(wireNavigationGestures);
+  safeSetup(wireSpeechPlayer);
 
   try {
     const [latestEdition, loadedIndex] = await Promise.all([
@@ -415,6 +453,7 @@ async function loadAndRender(preloadedLatestEdition = null, reusePane = false) {
     renderDateModule();
     renderDots(items.length);
     render();
+    syncSpeechUI();
     if (pane) {
       pane.edition = edition;
       pane.renderKey = renderKey;
@@ -1104,7 +1143,7 @@ function renderMine() {
   });
 }
 
-function createCard(item) {
+function createCard(item, itemIndex = 0) {
   const displayItem = localizedItem(item);
   const brief = summaryBrief(displayItem);
   const card = document.createElement('article');
@@ -1124,7 +1163,10 @@ function createCard(item) {
         <span class="card-meta">${annotateTerms(displayItem.meta, item)}</span>
       </span>
       <span class="summary-controls">
-        <span class="sketch-icon">${sketchIcon(item.icon, 38)}</span>
+        <span class="summary-tools">
+          <span class="sketch-icon">${sketchIcon(item.icon, 38)}</span>
+          ${speechState.supported ? `<button class="card-speech-button" type="button" data-action="speak" aria-label="${escapeHtml(t('listen'))}" title="${escapeHtml(t('listen'))}">${speechIconSvg('speaker')}</button>` : ''}
+        </span>
         <span class="summary-action">${escapeHtml(t('expand'))}${chevronControlHtml('down')}</span>
       </span>
     </span>
@@ -1173,13 +1215,13 @@ function createCard(item) {
   }
 
   header.addEventListener('click', (event) => {
-    if (event.target.closest('[data-term]')) return;
+    if (event.target.closest('[data-term], [data-action="speak"]')) return;
     toggleCardOpen(card, header, item);
   });
 
   header.addEventListener('keydown', (event) => {
     if (event.key !== 'Enter' && event.key !== ' ') return;
-    if (event.target.closest('[data-term]')) return;
+    if (event.target.closest('[data-term], [data-action="speak"]')) return;
     event.preventDefault();
     toggleCardOpen(card, header, item);
   });
@@ -1196,6 +1238,11 @@ function createCard(item) {
     if (!termButton) return;
     event.stopPropagation();
     openTermModal(termButton.dataset.term, item);
+  });
+
+  header.querySelector('[data-action="speak"]')?.addEventListener('click', (event) => {
+    event.stopPropagation();
+    toggleSpeechItem(item, itemIndex, items);
   });
 
   function toggleCardOpen(card, header, item) {
@@ -1423,6 +1470,219 @@ function animateCollapseSpacer(spacer, startScroll, height) {
 
 function chevronControlHtml(direction) {
   return `<span class="inline-chevron is-${direction}" aria-hidden="true"><span></span><span></span></span>`;
+}
+
+function speechIconSvg(type) {
+  const paths = {
+    speaker: '<path d="M5 10h4l5-4v12l-5-4H5z"/><path d="M17 9c1.4 1.7 1.4 4.3 0 6"/><path d="M20 6c3 3.3 3 8.7 0 12"/>',
+    pause: '<rect x="7" y="5" width="4" height="14" rx="1"/><rect x="15" y="5" width="4" height="14" rx="1"/>',
+    previous: '<path d="M7 5v14"/><path d="M19 6l-9 6 9 6z"/>',
+    next: '<path d="M19 5v14"/><path d="M5 6l9 6-9 6z"/>',
+    close: '<circle cx="12" cy="12" r="9"/><path d="M9 9l6 6M15 9l-6 6"/>',
+  };
+  return `<svg class="audio-icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">${paths[type]}</svg>`;
+}
+
+function normalizeSpeechRate(value) {
+  return [0.8, 1, 1.2, 1.5].includes(value) ? value : 1;
+}
+
+function wireSpeechPlayer() {
+  if (!elements.audioPlayer || !speechState.supported) return;
+
+  elements.audioSpeed.value = String(speechState.rate);
+  elements.audioPrevious.addEventListener('click', () => moveSpeechItem(-1));
+  elements.audioNext.addEventListener('click', () => moveSpeechItem(1));
+  elements.audioToggle.addEventListener('click', toggleCurrentSpeech);
+  elements.audioClose.addEventListener('click', closeSpeechPlayer);
+  elements.audioSpeed.addEventListener('change', () => {
+    speechState.rate = normalizeSpeechRate(Number(elements.audioSpeed.value));
+    storage.setItem(storageKeys.speechRate, speechState.rate);
+    if (speechState.active && !speechState.paused && !speechState.ended) {
+      playSpeechItem(speechState.item, speechState.index, speechState.sourceItems);
+    } else if (speechState.active) {
+      speechState.session += 1;
+      window.speechSynthesis.cancel();
+      speechState.ended = true;
+      syncSpeechUI();
+    }
+  });
+  window.addEventListener('beforeunload', () => window.speechSynthesis.cancel());
+  syncSpeechUI();
+}
+
+function toggleSpeechItem(item, itemIndex, sourceItems) {
+  if (!speechState.supported) return;
+  const isCurrent = speechState.active && speechState.item?.id === item.id;
+  if (!isCurrent || speechState.ended) {
+    playSpeechItem(item, itemIndex, sourceItems);
+    return;
+  }
+  toggleCurrentSpeech();
+}
+
+function toggleCurrentSpeech() {
+  if (!speechState.active || !speechState.item) return;
+  if (speechState.ended) {
+    playSpeechItem(speechState.item, speechState.index, speechState.sourceItems);
+    return;
+  }
+  if (speechState.paused) {
+    window.speechSynthesis.resume();
+    speechState.paused = false;
+  } else {
+    window.speechSynthesis.pause();
+    speechState.paused = true;
+  }
+  syncSpeechUI();
+}
+
+function playSpeechItem(item, itemIndex, sourceItems) {
+  if (!speechState.supported || !item) return;
+  const source = Array.isArray(sourceItems) && sourceItems.length ? [...sourceItems] : [item];
+  const resolvedIndex = Math.max(0, source.findIndex((entry) => entry.id === item.id));
+  const index = resolvedIndex >= 0 ? resolvedIndex : Math.max(0, itemIndex);
+  const session = speechState.session + 1;
+
+  speechState.session = session;
+  speechState.active = true;
+  speechState.paused = false;
+  speechState.ended = false;
+  speechState.item = item;
+  speechState.index = index;
+  speechState.sourceItems = source;
+  window.speechSynthesis.cancel();
+
+  const utterance = new SpeechSynthesisUtterance(buildSpeechParagraph(item, index));
+  utterance.lang = state.language === 'en' ? 'en-US' : 'zh-CN';
+  utterance.rate = speechState.rate;
+  utterance.pitch = 1;
+  const voice = preferredSpeechVoice(utterance.lang);
+  if (voice) utterance.voice = voice;
+  utterance.onend = () => {
+    if (speechState.session !== session) return;
+    const nextItem = speechState.sourceItems[index + 1];
+    if (nextItem) {
+      window.setTimeout(() => playSpeechItem(nextItem, index + 1, speechState.sourceItems), 180);
+      return;
+    }
+    speechState.paused = true;
+    speechState.ended = true;
+    syncSpeechUI();
+  };
+  utterance.onerror = (event) => {
+    if (speechState.session !== session || event.error === 'canceled' || event.error === 'interrupted') return;
+    speechState.paused = true;
+    speechState.ended = true;
+    syncSpeechUI();
+  };
+  speechState.utterance = utterance;
+  syncSpeechUI();
+  window.speechSynthesis.speak(utterance);
+}
+
+function preferredSpeechVoice(language) {
+  const prefix = language.toLowerCase().split('-')[0];
+  const matches = window.speechSynthesis.getVoices()
+    .filter((voice) => voice.lang.toLowerCase().startsWith(prefix));
+  return matches.find((voice) => voice.localService) || matches[0] || null;
+}
+
+function moveSpeechItem(direction) {
+  if (!speechState.active) return;
+  const nextIndex = speechState.index + direction;
+  const nextItem = speechState.sourceItems[nextIndex];
+  if (nextItem) playSpeechItem(nextItem, nextIndex, speechState.sourceItems);
+}
+
+function closeSpeechPlayer() {
+  speechState.session += 1;
+  window.speechSynthesis?.cancel();
+  speechState.active = false;
+  speechState.paused = false;
+  speechState.ended = false;
+  speechState.item = null;
+  speechState.index = -1;
+  speechState.sourceItems = [];
+  speechState.utterance = null;
+  syncSpeechUI();
+}
+
+function buildSpeechParagraph(item, itemIndex) {
+  const displayItem = localizedItem(item);
+  const intro = state.language === 'en' ? `Top story ${itemIndex + 1}:` : `热点${itemIndex + 1}：`;
+  const title = spokenSentence(displayItem.title);
+  const explanation = spokenSentence(displayItem.take || displayItem.brief);
+  const visual = spokenVisual(displayItem.visual);
+  return state.language === 'en'
+    ? [intro, title, explanation, visual].filter(Boolean).join(' ').replace(/\s+/g, ' ').trim()
+    : [intro, title, explanation, visual].filter(Boolean).join('').replace(/\s+/g, '').trim();
+}
+
+function spokenSentence(value) {
+  const text = String(value || '').replace(/\s+/g, ' ').trim();
+  if (!text) return '';
+  if (/[。！？.!?]$/.test(text)) return text;
+  return `${text}${state.language === 'en' ? '.' : '。'}`;
+}
+
+function spokenVisual(visual) {
+  if (!visual) return '';
+  if ((visual.type === 'chain' || visual.type === 'orbit') && Array.isArray(visual.nodes)) {
+    if (state.language === 'en') {
+      const steps = ['First', 'then', 'next', 'finally'];
+      return `The impact chain goes clockwise: ${visual.nodes.map((node, index) => `${steps[index] || 'then'}, ${node}`).join('; ')}.`;
+    }
+    const steps = ['第一步', '接着', '然后', '最后'];
+    return `这条影响链按顺序是：${visual.nodes.map((node, index) => `${steps[index] || '接着'}，${node}`).join('；')}。`;
+  }
+  if (visual.type === 'bars' && Array.isArray(visual.bars)) {
+    const values = visual.bars.map(([label, value]) => `${label}${value}%`).join(state.language === 'en' ? ', ' : '，');
+    return state.language === 'en' ? `The comparison chart shows ${values}.` : `对比图显示：${values}。`;
+  }
+  if (visual.type === 'trend') {
+    return state.language === 'en'
+      ? `The trend chart shows ${visual.label}: ${visual.big}, ${visual.sub}, ${visual.direction}.`
+      : `趋势图显示：${visual.label}，${visual.big}，${visual.sub}，${visual.direction}。`;
+  }
+  return '';
+}
+
+function syncSpeechUI() {
+  if (!elements.audioPlayer) return;
+  const visible = speechState.supported && speechState.active && speechState.item;
+  elements.audioPlayer.hidden = !visible;
+  document.body.classList.toggle('has-audio-player', Boolean(visible));
+
+  document.querySelectorAll('.news-card').forEach((card) => {
+    const isCurrent = Boolean(visible && card.dataset.id === speechState.item.id);
+    const isSpeaking = isCurrent && !speechState.paused && !speechState.ended;
+    card.classList.toggle('is-speaking', isSpeaking);
+    const button = card.querySelector('[data-action="speak"]');
+    if (!button) return;
+    button.classList.toggle('is-active', isCurrent);
+    button.innerHTML = speechIconSvg(isSpeaking ? 'pause' : 'speaker');
+    button.setAttribute('aria-label', isSpeaking ? t('pauseAudio') : (isCurrent ? t('resumeAudio') : t('listen')));
+    button.setAttribute('aria-pressed', isSpeaking ? 'true' : 'false');
+  });
+
+  if (!visible) return;
+  const total = speechState.sourceItems.length;
+  const prefix = state.language === 'en' ? `Story ${speechState.index + 1} / ${total}` : `热点 ${speechState.index + 1} / ${total}`;
+  elements.audioPlayerLabel.textContent = speechState.paused ? `${prefix} · ${t('paused')}` : prefix;
+  elements.audioPlayerTitle.textContent = localizedItem(speechState.item).title;
+  elements.audioPrevious.disabled = speechState.index <= 0;
+  elements.audioNext.disabled = speechState.index >= total - 1;
+  elements.audioPrevious.innerHTML = speechIconSvg('previous');
+  elements.audioNext.innerHTML = speechIconSvg('next');
+  elements.audioToggle.innerHTML = speechIconSvg(speechState.paused || speechState.ended ? 'speaker' : 'pause');
+  elements.audioClose.innerHTML = speechIconSvg('close');
+  elements.audioPrevious.setAttribute('aria-label', t('previousStory'));
+  elements.audioNext.setAttribute('aria-label', t('nextStory'));
+  elements.audioToggle.setAttribute('aria-label', speechState.paused || speechState.ended ? t('resumeAudio') : t('pauseAudio'));
+  elements.audioClose.setAttribute('aria-label', t('closePlayer'));
+  elements.audioSpeed.setAttribute('aria-label', t('speechSpeed'));
+  elements.audioSpeed.closest('label')?.setAttribute('title', t('speechSpeed'));
 }
 
 function sectionTitle(text) {

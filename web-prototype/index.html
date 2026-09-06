@@ -24,7 +24,7 @@
         }
       })();
     </script>
-    <link rel="stylesheet" href="./styles.css?v=20260906-dark-term-lines" />
+    <link rel="stylesheet" href="./styles.css?v=20260906-audio-player" />
   </head>
   <body>
     <main class="shell" aria-labelledby="page-title">
@@ -54,6 +54,28 @@
     </main>
 
     <nav class="bottom-nav" id="bottom-nav" aria-label="主导航"></nav>
+
+    <section class="audio-player" id="audio-player" aria-label="语音播放器" hidden>
+      <div class="audio-player-copy">
+        <strong id="audio-player-label">热点 1 / 10</strong>
+        <span id="audio-player-title"></span>
+      </div>
+      <div class="audio-player-controls">
+        <button class="audio-icon-button" id="audio-previous" type="button" aria-label="上一条"></button>
+        <button class="audio-icon-button is-primary" id="audio-toggle" type="button" aria-label="暂停"></button>
+        <button class="audio-icon-button" id="audio-next" type="button" aria-label="下一条"></button>
+        <label class="audio-speed-wrap" title="语速">
+          <span class="sr-only">语速</span>
+          <select id="audio-speed" aria-label="语速">
+            <option value="0.8">0.8×</option>
+            <option value="1">1.0×</option>
+            <option value="1.2">1.2×</option>
+            <option value="1.5">1.5×</option>
+          </select>
+        </label>
+        <button class="audio-icon-button is-close" id="audio-close" type="button" aria-label="关闭播放器"></button>
+      </div>
+    </section>
 
     <div class="modal-backdrop" id="language-modal" hidden>
       <section class="choice-modal" role="dialog" aria-modal="true" aria-labelledby="language-modal-title">
@@ -85,7 +107,7 @@
     </div>
 
     <script
-      src="./app.js?v=20260906-complete-terms"
+      src="./app.js?v=20260906-audio-player"
       onerror="document.getElementById('feed').innerHTML='<article class=&quot;state-card is-error&quot;><strong>页面脚本加载失败</strong><span>请刷新页面后重试。</span></article>'"
     ></script>
   </body>
