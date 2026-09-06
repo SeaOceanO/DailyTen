@@ -762,7 +762,7 @@ h1 {
 }
 
 .modal-backdrop {
-  align-items: flex-end;
+  align-items: center;
   background: var(--modal-overlay);
   display: flex;
   inset: 0;
@@ -1037,11 +1037,11 @@ h1 {
 }
 
 .summary-controls {
-  align-items: flex-end;
+  align-items: center;
   display: flex;
-  flex: 0 0 auto;
+  flex: 0 0 76px;
   flex-direction: column;
-  gap: 10px;
+  gap: 8px;
 }
 
 .summary-action {
@@ -1105,7 +1105,8 @@ h1 {
 .summary-tools {
   align-items: center;
   display: flex;
-  gap: 6px;
+  flex-direction: column;
+  gap: 8px;
 }
 
 .card-speech-button {
@@ -1346,7 +1347,7 @@ h1 {
 
 .bars-diagram {
   display: grid;
-  gap: 10px;
+  gap: 8px;
 }
 
 .bar-row {
