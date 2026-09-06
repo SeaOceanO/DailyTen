@@ -1406,8 +1406,12 @@ function sectionTitle(text) {
 }
 
 function visualBlock(visual) {
-  const content = visual.type === 'chain'
-    ? chainDiagramHtml(visual.nodes)
+  const useOrbitImage = visual.type === 'orbit'
+    || (visual.type === 'chain' && state.channel === 'ai' && state.selectedDateKey === '2026-09-06');
+  const content = useOrbitImage
+    ? orbitChainImageHtml(visual.nodes, visual.label)
+    : visual.type === 'chain'
+      ? chainDiagramHtml(visual.nodes)
     : visual.type === 'bars'
       ? barsSvg(visual.bars, visual.max, visual.decimal)
       : trendSvg(visual);
@@ -1998,6 +2002,97 @@ function barsSvg(bars, max, decimal = false) {
       }).join('')}
     </div>
   `;
+}
+
+function orbitChainImageHtml(nodes, label) {
+  const imageAlt = `${label}：${nodes.join(' → ')}`;
+  const source = `data:image/svg+xml;charset=utf-8,${encodeURIComponent(orbitChainSvg(nodes))}`;
+  return `<img class="impact-chain-image" src="${source}" alt="${escapeHtml(imageAlt)}" />`;
+}
+
+function orbitChainSvg(nodes) {
+  const dark = effectiveTheme() === 'dark';
+  const palette = dark
+    ? {
+      background: '#17211D', surface: '#20312B', final: '#3A311D', border: '#416A5C',
+      finalBorder: '#8C7132', ink: '#F1F5EF', muted: '#B6C2BA', accent: '#83C9B2', gold: '#E2C36F',
+    }
+    : {
+      background: '#F5F7F2', surface: '#FFFFFF', final: '#F4EAD0', border: '#B8D2C6',
+      finalBorder: '#D6BD7B', ink: '#18201D', muted: '#66716B', accent: '#39705D', gold: '#A98232',
+    };
+  const safeNodes = nodes.slice(0, 4);
+  const positions = [
+    { x: 230, y: 22, width: 260, height: 94 },
+    { x: 474, y: 190, width: 216, height: 104 },
+    { x: 230, y: 402, width: 260, height: 94 },
+    { x: 30, y: 190, width: 216, height: 104 },
+  ];
+  const paths = [
+    'M 495 69 C 596 69 650 116 650 181',
+    'M 650 303 C 650 386 582 449 500 449',
+    'M 220 449 C 129 449 70 386 70 303',
+    'M 70 181 C 70 108 132 69 220 69',
+  ];
+  const markerId = uniqueId('orbit-arrow');
+  const arrows = paths.slice(0, safeNodes.length).map((path, index) => `
+    <path d="${path}" fill="none" stroke="${index === safeNodes.length - 1 ? palette.gold : palette.accent}" stroke-width="5" stroke-linecap="round" marker-end="url(#${markerId})" opacity="0.9" />
+  `).join('');
+  const nodeShapes = safeNodes.map((node, index) => {
+    const position = positions[index];
+    const isFinal = index === safeNodes.length - 1;
+    const lines = splitOrbitLabel(node, state.language === 'en' ? 19 : 9);
+    const firstY = position.y + position.height / 2 + 6 - ((lines.length - 1) * 12);
+    const labelX = position.x + position.width / 2 + 10;
+    return `
+      <g>
+        <rect x="${position.x}" y="${position.y}" width="${position.width}" height="${position.height}" rx="24" fill="${isFinal ? palette.final : palette.surface}" stroke="${isFinal ? palette.finalBorder : palette.border}" stroke-width="2" />
+        <circle cx="${position.x + 24}" cy="${position.y + 20}" r="13" fill="${isFinal ? palette.gold : palette.accent}" />
+        <text x="${position.x + 24}" y="${position.y + 21}" text-anchor="middle" dominant-baseline="middle" font-size="14" font-weight="800" fill="${dark ? '#101513' : '#FFFFFF'}">${index + 1}</text>
+        <text x="${labelX}" y="${firstY}" text-anchor="middle" dominant-baseline="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC','Microsoft YaHei',sans-serif" font-size="${state.language === 'en' ? 18 : 20}" font-weight="700" fill="${palette.ink}">
+          ${lines.map((line, lineIndex) => `<tspan x="${labelX}" dy="${lineIndex === 0 ? 0 : 24}">${escapeSvg(line)}</tspan>`).join('')}
+        </text>
+      </g>
+    `;
+  }).join('');
+
+  return `
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 520" width="720" height="520">
+      <defs>
+        <marker id="${markerId}" markerWidth="12" markerHeight="12" refX="9" refY="6" orient="auto" markerUnits="strokeWidth">
+          <path d="M 1 1 L 10 6 L 1 11" fill="none" stroke="${palette.accent}" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" />
+        </marker>
+        <filter id="orbit-shadow" x="-20%" y="-20%" width="140%" height="150%">
+          <feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#10251D" flood-opacity="${dark ? '0.26' : '0.10'}" />
+        </filter>
+      </defs>
+      <rect width="720" height="520" rx="30" fill="${palette.background}" />
+      <g>${arrows}</g>
+      <g filter="url(#orbit-shadow)">${nodeShapes}</g>
+      <g transform="translate(360 256)">
+        <circle r="76" fill="none" stroke="${palette.border}" stroke-width="2" stroke-dasharray="5 8" />
+        <circle r="54" fill="${palette.surface}" stroke="${palette.border}" stroke-width="2" />
+        <path d="M -18 -6 C -7 -23 19 -20 24 -2 C 29 17 8 29 -8 20 C -17 15 -22 6 -18 -6 Z" fill="none" stroke="${palette.accent}" stroke-width="5" stroke-linecap="round" />
+        <path d="M 17 -15 L 27 -5 L 14 -2" fill="none" stroke="${palette.accent}" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" />
+        <text x="0" y="48" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC','Microsoft YaHei',sans-serif" font-size="16" font-weight="700" fill="${palette.muted}">${state.language === 'en' ? 'IMPACT' : '影响传导'}</text>
+      </g>
+    </svg>
+  `;
+}
+
+function splitOrbitLabel(value, maxLength) {
+  const text = String(value).trim();
+  if (!text) return [''];
+  if (/\s/.test(text)) {
+    const lines = [];
+    for (const word of text.split(/\s+/)) {
+      const current = lines[lines.length - 1] || '';
+      if (!current || `${current} ${word}`.length > maxLength) lines.push(word);
+      else lines[lines.length - 1] = `${current} ${word}`;
+    }
+    return lines.slice(0, 3);
+  }
+  return text.match(new RegExp(`.{1,${maxLength}}`, 'g')).slice(0, 3);
 }
 
 function trendSvg(visual) {

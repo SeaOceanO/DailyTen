@@ -1169,6 +1169,15 @@ h1 {
   margin: 0 0 10px;
 }
 
+.impact-chain-image {
+  aspect-ratio: 18 / 13;
+  border-radius: 12px;
+  display: block;
+  height: auto;
+  object-fit: contain;
+  width: 100%;
+}
+
 .bars-diagram {
   display: grid;
   gap: 10px;

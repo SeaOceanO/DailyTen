@@ -145,7 +145,7 @@
             "type": {
               "type": "string",
               "enum": [
-                "chain"
+                "orbit"
               ]
             },
             "label": {

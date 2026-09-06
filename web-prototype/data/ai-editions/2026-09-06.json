@@ -128,7 +128,7 @@
         ]
       ],
       "visual": {
-        "type": "chain",
+        "type": "orbit",
         "label": "风险为什么更难收住",
         "nodes": [
           "Agent 获得任务",
@@ -178,7 +178,7 @@
           ]
         ],
         "visual": {
-          "type": "chain",
+          "type": "orbit",
           "label": "Why the risk is harder to contain",
           "nodes": [
             "Agent receives a task",
@@ -257,7 +257,7 @@
         ]
       ],
       "visual": {
-        "type": "chain",
+        "type": "orbit",
         "label": "Nvidia 想连起的链条",
         "nodes": [
           "AI 芯片",
@@ -307,7 +307,7 @@
           ]
         ],
         "visual": {
-          "type": "chain",
+          "type": "orbit",
           "label": "The chain Nvidia is trying to connect",
           "nodes": [
             "AI chips",
@@ -479,7 +479,7 @@
         ]
       ],
       "visual": {
-        "type": "chain",
+        "type": "orbit",
         "label": "出发前别跳过的核验",
         "nodes": [
           "AI 给出建议",
@@ -525,7 +525,7 @@
           ]
         ],
         "visual": {
-          "type": "chain",
+          "type": "orbit",
           "label": "Checks not to skip before leaving",
           "nodes": [
             "AI offers advice",
@@ -693,7 +693,7 @@
         ]
       ],
       "visual": {
-        "type": "chain",
+        "type": "orbit",
         "label": "一笔算力融资会流向哪里",
         "nodes": [
           "融资",
@@ -739,7 +739,7 @@
           ]
         ],
         "visual": {
-          "type": "chain",
+          "type": "orbit",
           "label": "Where a compute financing round goes",
           "nodes": [
             "Financing",
@@ -907,7 +907,7 @@
         ]
       ],
       "visual": {
-        "type": "chain",
+        "type": "orbit",
         "label": "拆除护栏后的变化",
         "nodes": [
           "安全限制被移除",
@@ -953,7 +953,7 @@
           ]
         ],
         "visual": {
-          "type": "chain",
+          "type": "orbit",
           "label": "What changes after guardrails are removed",
           "nodes": [
             "Safety limits are stripped",

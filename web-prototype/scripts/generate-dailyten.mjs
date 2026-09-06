@@ -16,7 +16,7 @@ const validateOnly = process.argv.includes('--validate-only');
 const testSourcesOnly = process.argv.includes('--test-sources');
 
 const allowedIcons = new Set(['oil', 'chart', 'drone', 'quake', 'ai', 'alert', 'code', 'refinery', 'ship', 'eclipse']);
-const allowedVisuals = new Set(['chain', 'bars', 'trend']);
+const allowedVisuals = new Set(['chain', 'orbit', 'bars', 'trend']);
 const rssFeeds = [
   { publisher: 'BBC News', url: 'https://feeds.bbci.co.uk/news/world/rss.xml' },
   { publisher: 'NPR', url: 'https://feeds.npr.org/1001/rss.xml' },
@@ -492,7 +492,8 @@ async function generateEdition({ apiKey, model, reasoningEffort, schema, config,
           'fact labels should be simple nouns; fact text should explain the point without bureaucratic phrasing.',
           'facts should be factual anchors only; impacts should explain why the reader should care. Do not mix them into generic commentary.',
           'en must mirror the same important facts as the Chinese item, with natural English rather than literal translation.',
-          'visual may be null, chain, bars, or trend.',
+          'visual may be null, orbit, bars, or trend.',
+          'For every cause-and-effect or impact-chain visual, use type orbit with exactly four short nodes ordered clockwise. Never create a new type chain visual.',
           'If visual.type is bars, every bar must be [label, numericPercent, hexColor].',
         ],
       }),
@@ -783,6 +784,10 @@ function validateVisual(visual, label, errors) {
 
   if (visual.type === 'chain' && (!Array.isArray(visual.nodes) || visual.nodes.length < 3)) {
     errors.push(`${label}.nodes must contain at least three nodes.`);
+  }
+
+  if (visual.type === 'orbit' && (!Array.isArray(visual.nodes) || visual.nodes.length !== 4)) {
+    errors.push(`${label}.nodes must contain exactly four clockwise nodes.`);
   }
 
   if (visual.type === 'bars' && (!Array.isArray(visual.bars) || typeof visual.max !== 'number')) {
