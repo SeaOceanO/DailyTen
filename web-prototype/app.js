@@ -846,6 +846,10 @@ function showLoadingState(text) {
   elements.feed.innerHTML = `<article class="state-card">${escapeHtml(state.language === 'en' ? 'Loading this edition...' : text)}</article>`;
 }
 
+function pageIsZoomed() {
+  return Boolean(window.visualViewport && window.visualViewport.scale > 1.01);
+}
+
 function wireNavigationGestures() {
   let gesture = null;
   const activeTouchPointers = new Set();
@@ -859,6 +863,7 @@ function wireNavigationGestures() {
         return;
       }
     }
+    if (pageIsZoomed()) return;
     if (!event.isPrimary || event.button !== 0 || navigationLocked) return;
     if (event.target.closest('.date-module, .modal-backdrop, .bottom-nav, input, select, textarea, [data-term]')) return;
 
@@ -881,6 +886,10 @@ function wireNavigationGestures() {
   }, { passive: true });
 
   gestureSurface.addEventListener('pointermove', (event) => {
+    if (pageIsZoomed()) {
+      gesture = null;
+      return;
+    }
     if (event.pointerType === 'touch' && activeTouchPointers.size > 1) return;
     if (!gesture || gesture.pointerId !== event.pointerId) return;
 
@@ -920,6 +929,7 @@ function wireNavigationGestures() {
     const velocityEnough = Math.abs(finishedGesture.offsetX) >= 30
       && Math.abs(finishedGesture.velocityX) >= 0.42;
     const shouldChange = !cancelled
+      && !pageIsZoomed()
       && finishedGesture.targetChannel
       && (distanceEnough || velocityEnough);
 
@@ -934,6 +944,10 @@ function wireNavigationGestures() {
 
   gestureSurface.addEventListener('pointerup', (event) => finishGesture(event));
   gestureSurface.addEventListener('pointercancel', (event) => finishGesture(event, true));
+
+  window.visualViewport?.addEventListener('resize', () => {
+    if (pageIsZoomed()) gesture = null;
+  }, { passive: true });
 
   document.addEventListener('click', (event) => {
     if (!suppressNextClick) return;
