@@ -26,6 +26,7 @@
   --active-bg: #245344;
   --active-text: #ffffff;
   --soft-shadow: rgba(25, 48, 39, 0.08);
+  --term-underline: rgba(36, 83, 68, 0.82);
 }
 
 :root[data-theme="dark"] {
@@ -54,6 +55,7 @@
   --active-bg: #2f6756;
   --active-text: #f6fffb;
   --soft-shadow: rgba(0, 0, 0, 0.3);
+  --term-underline: rgba(143, 210, 189, 0.96);
 }
 
 * {
@@ -815,12 +817,14 @@ h1 {
 
 .term-token {
   all: unset;
-  border-bottom: 1px dotted rgba(47, 74, 58, 0.72);
   color: inherit;
   cursor: pointer;
   display: inline;
-  text-decoration: underline dotted rgba(47, 74, 58, 0.38);
-  text-decoration-thickness: 1px;
+  text-decoration-color: var(--term-underline);
+  text-decoration-line: underline;
+  text-decoration-skip-ink: none;
+  text-decoration-style: dotted;
+  text-decoration-thickness: 2px;
   text-underline-offset: 4px;
 }
 
