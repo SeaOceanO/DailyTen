@@ -2006,11 +2006,10 @@ function barsSvg(bars, max, decimal = false) {
 
 function orbitChainImageHtml(nodes, label) {
   const imageAlt = `${label}：${nodes.join(' → ')}`;
-  const source = `data:image/svg+xml;charset=utf-8,${encodeURIComponent(orbitChainSvg(nodes))}`;
-  return `<img class="impact-chain-image" src="${source}" alt="${escapeHtml(imageAlt)}" />`;
+  return orbitChainSvg(nodes, imageAlt);
 }
 
-function orbitChainSvg(nodes) {
+function orbitChainSvg(nodes, imageAlt) {
   const dark = effectiveTheme() === 'dark';
   const palette = dark
     ? {
@@ -2057,7 +2056,7 @@ function orbitChainSvg(nodes) {
   }).join('');
 
   return `
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 520" width="720" height="520">
+    <svg class="impact-chain-image" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 520" role="img" aria-label="${escapeHtml(imageAlt)}" preserveAspectRatio="xMidYMid meet">
       <defs>
         <marker id="${markerId}" markerWidth="12" markerHeight="12" refX="9" refY="6" orient="auto" markerUnits="strokeWidth">
           <path d="M 1 1 L 10 6 L 1 11" fill="none" stroke="${palette.accent}" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" />

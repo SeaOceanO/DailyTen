@@ -1174,7 +1174,8 @@ h1 {
   border-radius: 12px;
   display: block;
   height: auto;
-  object-fit: contain;
+  shape-rendering: geometricPrecision;
+  text-rendering: geometricPrecision;
   width: 100%;
 }
 
