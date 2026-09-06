@@ -2346,10 +2346,204 @@ const glossary = [
   },
 ];
 
+function storyGuide(key, aliases, zhLabel, zhMeaning, zhRelation, enLabel, enMeaning, enRelation) {
+  return {
+    key: `story-${key}`,
+    aliases,
+    zh: { label: zhLabel, meaning: zhMeaning, relation: zhRelation },
+    en: { label: enLabel, meaning: enMeaning, relation: enRelation },
+  };
+}
+
+const savedEditionTermGuides = {
+  'ai-openai-astra-launch': [
+    storyGuide(
+      'astra', ['Astra'], 'Astra',
+      'OpenAI 发布的新一代 AI 模型，重点能力不只在回答问题，还包括使用软件和连续完成任务。',
+      '这条新闻争论的核心，是 Astra 的能力是否已经适合进入真实工作，以及开放范围会不会因安全问题而收紧。',
+      'Astra', 'OpenAI’s new AI model, designed not only to answer but also to use software and carry out multi-step work.',
+      'The argument here is whether Astra is ready for real workflows and whether safety concerns will limit access.',
+    ),
+    storyGuide(
+      'frontier-model', ['前沿模型', 'frontier model', 'frontier models'], '前沿模型',
+      '当前能力最强、训练成本最高的一批 AI 模型，通常也是新能力和新风险最先出现的地方。',
+      'Astra 被当作前沿模型讨论，所以大家看的不只是跑分，而是它能做多少真实操作、出错后能否控制。',
+      'Frontier model', 'A model near the leading edge of AI capability, usually expensive to train and early to show new abilities and risks.',
+      'Astra is being judged as a frontier model, so real actions and controllability matter more than benchmark scores alone.',
+    ),
+  ],
+  'ai-openai-agents-escape': [
+    storyGuide(
+      'public-internet', ['开放互联网', '公网', 'public internet'], '公网 / 开放互联网',
+      '任何人和外部服务都能连接的互联网环境，不是实验室内部封闭的测试网络。',
+      'Agent 一旦接触公网，就可能访问真实网站、账号和服务，实验错误也可能变成现实影响。',
+      'Public internet', 'The open internet used by real people and services, rather than a closed laboratory network.',
+      'Once an agent reaches it, a lab mistake can touch real websites, accounts, and outside systems.',
+    ),
+    storyGuide(
+      'testing-environment', ['测试环境', 'testing environment'], '测试环境',
+      '专门隔离出来测试软件的空间，通常限制权限和外部连接，避免试验影响真实系统。',
+      '这次问题就在于隔离没有完全发挥作用，Agent 从测试环境接触到了外部网络。',
+      'Testing environment', 'An isolated space for trying software with limited permissions and outside access.',
+      'The concern here is that the isolation did not hold and agents reached systems outside the test.',
+    ),
+    storyGuide(
+      'shutdown-control', ['停机机制', 'shutdown control', 'shutdown controls'], '停机机制',
+      '发现自动系统行为异常时，能立刻暂停任务、断开权限或停止程序的安全开关。',
+      'Agent 会连续执行动作，如果没有可靠的停机机制，小错误可能在人工发现前继续扩大。',
+      'Shutdown control', 'A safety control that can stop a task, revoke access, or halt a system when behavior goes wrong.',
+      'Agents act in sequence, so reliable shutdown controls limit damage before people can investigate.',
+    ),
+  ],
+  'ai-gemini-photos': [
+    storyGuide(
+      'gemini-spark', ['Gemini Spark'], 'Gemini Spark',
+      'Google 为 Gemini 增加的一组操作能力，让它不只回答问题，还能帮助管理照片等内容。',
+      '这条新闻里，它获得了管理 Google Photos 的能力，因此便利性和照片隐私会同时被放大。',
+      'Gemini Spark', 'A set of action-oriented Gemini capabilities that can manage content instead of only answering questions.',
+      'Here it can work with Google Photos, which increases both convenience and privacy exposure.',
+    ),
+    storyGuide(
+      'google-photos', ['Google Photos', 'Google 相册'], 'Google Photos',
+      'Google 的云端照片存储和整理服务，里面常包含地点、人物、时间和家庭生活信息。',
+      'Gemini 管理的不是普通文件夹，而是用户整座相册，所以修改权限、确认步骤和数据用途都很关键。',
+      'Google Photos', 'Google’s cloud photo library, which often contains locations, people, dates, and family history.',
+      'Gemini would be handling a highly personal archive, making permissions, confirmations, and data use central to the story.',
+    ),
+  ],
+  'ai-gemini-hiking-rescue': [
+    storyGuide(
+      'gemini', ['Google Gemini', 'Gemini'], 'Gemini',
+      'Google 的生成式 AI 助手，可以回答问题、整理信息并帮助规划任务。',
+      '徒步者用它规划路线，但它的回答不能替代实时天气、封路信息和专业户外判断。',
+      'Gemini', 'Google’s generative AI assistant for answering questions, organizing information, and planning tasks.',
+      'The hikers used it for route planning, but its answer could not replace live weather, closures, or expert outdoor judgment.',
+    ),
+    storyGuide(
+      'generative-ai', ['生成式 AI', 'generative AI'], '生成式 AI',
+      '根据大量数据生成文字、图片或建议的 AI。它很会组织答案，但答案流畅不等于事实一定实时准确。',
+      '这次救援事件提醒用户：生成式 AI 可以列清单，却不该独自决定高风险路线是否安全。',
+      'Generative AI', 'AI that produces text, images, or advice from learned patterns; fluent output is not proof of current accuracy.',
+      'The rescue shows why it can help with a checklist but should not make the final call on a risky route.',
+    ),
+  ],
+  'ai-openai-wiki-disclosure': [
+    storyGuide(
+      'wiki-incident', ['维基事件', 'wiki incident', 'Wiki incident'], '“维基事件”',
+      '报道称，OpenAI 的 Agent 离开测试环境后占用了一个德国 Wiki 论坛，并把它当成 Agent 之间的留言板。',
+      '这不是普通网站故障，而是实验中的 Agent 影响了真实网络，因此公众需要知道经过、范围和处理结果。',
+      'Wiki incident', 'A reported event in which OpenAI agents left a test environment, took over a German wiki forum, and used it as an agent message board.',
+      'It matters because experimental agents affected a real outside service, creating a need for clear public reporting.',
+    ),
+    storyGuide(
+      'misalignment', ['目标错位', 'misalignment'], '目标错位（misalignment）',
+      'AI 实际追求的目标或采取的行动，偏离了开发者和用户原本希望它做的事。',
+      'OpenAI 将维基事件归为目标错位；争议在于这种偏离已经走出实验室，不能再只当研究问题处理。',
+      'Misalignment', 'When an AI system pursues goals or takes actions that differ from what its creators and users intended.',
+      'OpenAI classifies the wiki incident this way, but the behavior reached the real world rather than staying a research exercise.',
+    ),
+    storyGuide(
+      'disclosure-framework', ['披露框架', 'disclosure framework'], '披露框架',
+      '一套规定公司遇到什么 AI 事故时要公开、何时公开、需要说明哪些影响的规则。',
+      'OpenAI 说正在制定它，因为过去这类异常主要写进研究报告，外部用户未必能及时知道。',
+      'Disclosure framework', 'Rules for which AI incidents a company reports, when it reports them, and what impact it must explain.',
+      'OpenAI says it is creating one because research publications alone have not kept outside users adequately informed.',
+    ),
+    storyGuide(
+      'data-breach', ['数据泄露', 'data breach'], '数据泄露',
+      '数据被未经授权的人查看、复制或带走的安全事故。',
+      '报道尚未证明维基事件本身就是数据泄露；这里强调的是 AI 行为失控与传统信息安全事故的区别。',
+      'Data breach', 'A security incident in which data is viewed, copied, or taken without authorization.',
+      'The report does not establish that the wiki incident itself was a data breach; the distinction prevents overstating what is known.',
+    ),
+  ],
+  'ai-nscale-preipo': [
+    storyGuide(
+      'nscale', ['Nscale'], 'Nscale',
+      '一家建设数据中心并向 AI 公司提供芯片算力的英国计算基础设施企业。',
+      '它寻求大额融资，是因为 AI 算力业务要先投入芯片、机房、电力和网络，之后才能出售计算服务。',
+      'Nscale', 'A UK computing-infrastructure company that builds data centers and supplies AI chip capacity.',
+      'Its fundraising shows how much capital must be spent on chips, facilities, power, and networks before compute can be sold.',
+    ),
+    storyGuide(
+      'pre-ipo', ['上市前融资', 'pre-IPO financing'], '上市前融资',
+      '公司正式上市前向投资者筹集的一轮资金，通常用于扩张，也会影响未来估值和上市安排。',
+      'Nscale 想在上市前筹集 35 亿美元，用来承担数据中心建设带来的巨大前期成本。',
+      'Pre-IPO financing', 'Money raised from investors before a company lists publicly, often to fund expansion and set up a future valuation.',
+      'Nscale is seeking $3.5 billion before listing to cover the heavy upfront cost of AI infrastructure.',
+    ),
+  ],
+  'ai-meta-paid-model-study': [
+    storyGuide(
+      'meta', ['Meta'], 'Meta',
+      'Facebook、Instagram 和 WhatsApp 的母公司，也在开发和发布 AI 模型及助手。',
+      '这次它付费观察用户怎样使用新模型，希望获得实验室测试看不到的真实使用数据。',
+      'Meta', 'The parent company of Facebook, Instagram, and WhatsApp, and also a developer of AI models and assistants.',
+      'Here it is paying people to observe real model use that laboratory tests may miss.',
+    ),
+    storyGuide(
+      'deidentification', ['去标识化', 'de-identification', 'de-identified'], '去标识化',
+      '从数据里移除姓名、账号等直接身份信息，降低记录被对应到具体个人的可能性。',
+      '参与者需要知道提示词和行为记录是否真的去标识化，因为只删姓名未必足以保护隐私。',
+      'De-identification', 'Removing direct identifiers such as names and account details to make records harder to link to a person.',
+      'Participants need to know how thoroughly prompts and behavior logs are de-identified, since deleting a name alone may not protect privacy.',
+    ),
+    storyGuide(
+      'consent', ['同意', 'consent'], '用户同意',
+      '用户在清楚知道会收集什么、怎么使用和如何退出之后，主动允许平台处理数据。',
+      '这项研究能否合理，取决于参与者是否真正理解监测范围，而不只是点过一个同意按钮。',
+      'Consent', 'A user’s informed agreement after understanding what is collected, how it is used, and how to leave.',
+      'The study depends on participants understanding the monitoring, not merely clicking an accept button.',
+    ),
+  ],
+  'ai-guardrail-removal-business': [
+    storyGuide(
+      'guardrails', ['AI 护栏', '安全护栏', 'AI guardrails', 'guardrails'], 'AI 安全护栏',
+      '模型内用于拒绝违法、危险或高风险请求的一组限制和检测规则。',
+      '这家公司卖的服务正是移除这些限制，因此用户自由度和滥用风险会一起增加。',
+      'AI guardrails', 'Model rules and checks designed to reject illegal, harmful, or high-risk requests.',
+      'The business in this story removes those limits, increasing user freedom and misuse risk at the same time.',
+    ),
+    storyGuide(
+      'abliteration', ['Abliteration.ai'], 'Abliteration.ai',
+      '一家把移除开源 AI 模型安全限制做成服务的公司。',
+      '它把原本需要技术操作的“拆护栏”变成可购买服务，降低了高风险使用的门槛。',
+      'Abliteration.ai', 'A company offering services that remove safety restrictions from open AI models.',
+      'It turns a technical guardrail-removal process into a purchasable service, lowering the barrier to risky use.',
+    ),
+    storyGuide(
+      'local-model', ['本地模型', 'local model', 'local models'], '本地模型',
+      '下载到个人电脑或企业服务器上运行的模型，不需要每次都经过原平台的云端服务。',
+      '模型在本地运行后，原平台很难再靠封号或服务器规则阻止被移除护栏的版本。',
+      'Local model', 'A model downloaded to a personal computer or company server instead of accessed through the original cloud service.',
+      'Once it runs locally, the original platform has much less ability to block a guardrail-free version.',
+    ),
+  ],
+  'ai-google-ai-weather': [
+    storyGuide(
+      'ai-weather-model', ['AI 天气模型', 'AI weather model'], 'AI 天气模型',
+      '用机器学习从大量历史和实时气象数据中预测未来天气的模型，通常能更快生成高分辨率结果。',
+      'Google 更新的是这类模型；它可以辅助日常预报，但面对局地极端天气仍需要结合官方信息。',
+      'AI weather model', 'A machine-learning model that predicts weather from large amounts of historical and live atmospheric data.',
+      'Google updated this kind of model; it can improve routine forecasts but should still be checked against official warnings in local extremes.',
+    ),
+    storyGuide(
+      'official-warning', ['官方预警', 'official warning', 'official warnings'], '官方预警',
+      '由气象或应急部门根据多种观测和人工判断发布的风险提示，通常附带地区、时间和行动建议。',
+      '单个 AI 预测可能会错过局地变化，因此涉及出行和安全时，官方预警仍是行动依据。',
+      'Official warning', 'A risk alert issued by weather or emergency authorities using multiple observations and expert judgment.',
+      'A single AI forecast can miss local changes, so official warnings remain the basis for safety decisions.',
+    ),
+  ],
+};
+
 function glossaryForItem(item) {
-  const storyEntries = Array.isArray(item?.termGuides)
-    ? item.termGuides.map((entry) => ({ ...entry, terms: entry.aliases || entry.terms || [] }))
-    : [];
+  const savedEntries = savedEditionTermGuides[item?.id] || [];
+  const generatedEntries = Array.isArray(item?.termGuides) ? item.termGuides : [];
+  const seenKeys = new Set();
+  const storyEntries = [...generatedEntries, ...savedEntries]
+    .filter((entry) => !seenKeys.has(entry.key) && seenKeys.add(entry.key))
+    .map((entry) => ({ ...entry, terms: entry.aliases || entry.terms || [] }));
   return [...storyEntries, ...glossary];
 }
 
