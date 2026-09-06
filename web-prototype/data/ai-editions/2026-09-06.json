@@ -242,6 +242,36 @@
       "brief": "开发者常用的模型社区若进了 Nvidia 体系，选模型和买算力可能会变得更省事，也更难绕开它。",
       "take": "Nvidia 确认将以129亿美元收购 Hugging Face。Hugging Face 是许多开发者寻找、测试和发布开源模型的常用入口；Nvidia 则掌握训练和推理所需的大量芯片与软件。两者合在一起，确实可能让开发流程更顺，但也让一家公司更靠近从算力到模型分发的整条路。交易能否完成以及平台会否保持开放，才是开发者下一步要看的。",
       "meta": "并购｜9月3日",
+      "termGuides": [
+        {
+          "key": "story-nvidia",
+          "aliases": ["Nvidia", "NVIDIA", "英伟达"],
+          "zh": {
+            "label": "英伟达（Nvidia）",
+            "meaning": "一家做图形处理器和 AI 芯片的美国公司。如今很多 AI 模型的训练和运行都依赖它的硬件与软件。",
+            "relation": "这次它想收购 Hugging Face，相当于卖发动机的公司还想拿下开发者寻找和发布模型的入口。"
+          },
+          "en": {
+            "label": "Nvidia",
+            "meaning": "A US chip company whose GPUs and software power much of today's AI training and inference.",
+            "relation": "Buying Hugging Face would move Nvidia from supplying the engine closer to controlling where developers find and ship models."
+          }
+        },
+        {
+          "key": "story-hugging-face",
+          "aliases": ["Hugging Face"],
+          "zh": {
+            "label": "Hugging Face",
+            "meaning": "一个供开发者寻找、下载、测试和发布 AI 模型的平台，常被称为“AI 界的 GitHub”。",
+            "relation": "它是这笔收购的标的。平台若归英伟达，模型社区、开发工具和算力销售会被更紧地连在一起。"
+          },
+          "en": {
+            "label": "Hugging Face",
+            "meaning": "A platform where developers find, download, test, and publish AI models, often described as the GitHub of AI.",
+            "relation": "It is the acquisition target. Under Nvidia, the model community, developer tools, and compute sales could become much more tightly connected."
+          }
+        }
+      ],
       "facts": [
         [
           "买方",

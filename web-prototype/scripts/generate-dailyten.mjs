@@ -460,6 +460,10 @@ async function generateEdition({ apiKey, model, reasoningEffort, schema, config,
         'When the event is complex, use one simple analogy or plain contrast if it helps, but do not become casual to the point of losing precision.',
         'Every item must explain why it matters to a person, not only to markets, governments, or industries.',
         'When using abbreviations or technical terms such as AI, Agent, MCP, ANP, compute, inference, data center, governance, audit, supply chain, or robotics, keep the useful term but explain it through plain surrounding language.',
+        'Each item must include termGuides for one to five central names or terms that a general reader may not know. Include unfamiliar company names, product names, model names, abbreviations, protocols, and technical terms when they are necessary to understand the story.',
+        'Do not omit the central companies or products. For example, a story about Nvidia buying Hugging Face must explain both Nvidia and Hugging Face.',
+        'Each term guide needs aliases matching how the term appears in Chinese and English, plus a plain meaning and a relation specific to this news event. Do not write a generic dictionary definition for the relation.',
+        'Do not annotate ordinary words, countries, dates, or widely understood public figures merely to fill the list.',
         'For Chinese output, avoid long noun chains. Break abstract phrases into cause and effect. Example: not “供应链韧性提升”, but “如果备货和替代供应跟上，断供风险会小一些”.',
         'For Chinese output, do not use official-news phrases such as “受到关注”, “释放信号”, “持续推进”, “形成合力”, “相关方面”, “外界认为”, “或将产生深远影响” unless there is no simpler wording.',
         'For Chinese output, prefer sentences a normal user might actually say: “这事麻烦在……”, “真正要看的是……”, “普通人会先感受到……”, “短期看……长期看……”. Use this style naturally, not as a fixed template.',
@@ -492,6 +496,7 @@ async function generateEdition({ apiKey, model, reasoningEffort, schema, config,
           'fact labels should be simple nouns; fact text should explain the point without bureaucratic phrasing.',
           'facts should be factual anchors only; impacts should explain why the reader should care. Do not mix them into generic commentary.',
           'en must mirror the same important facts as the Chinese item, with natural English rather than literal translation.',
+          'termGuides must contain one to five useful explanations. Keep each meaning and relation brief, concrete, and understandable without industry knowledge.',
           'visual may be null, orbit, bars, or trend.',
           'For every cause-and-effect or impact-chain visual, use type orbit with exactly four short nodes ordered clockwise. Never create a new type chain visual.',
           'If visual.type is bars, every bar must be [label, numericPercent, hexColor].',
@@ -710,6 +715,9 @@ function validateEdition(edition) {
     validatePairs(item.facts, 3, 3, `${label}.facts`, errors);
     validatePairs(item.impacts, 2, 3, `${label}.impacts`, errors);
     validateLocalizedItem(item.en, `${label}.en`, errors);
+    if (item.termGuides !== undefined) {
+      validateTermGuides(item.termGuides, `${label}.termGuides`, errors);
+    }
 
     if (!Array.isArray(item.next) || item.next.length > 2) {
       errors.push(`${label}.next must contain zero to two items.`);
@@ -727,6 +735,23 @@ function validateEdition(edition) {
   if (errors.length) {
     throw new Error(`DailyTen edition validation failed:\n- ${errors.join('\n- ')}`);
   }
+}
+
+function validateTermGuides(value, label, errors) {
+  if (!Array.isArray(value) || value.length < 1 || value.length > 5) {
+    errors.push(`${label} must contain one to five useful term guides.`);
+    return;
+  }
+
+  value.forEach((entry, index) => {
+    const entryLabel = `${label}[${index}]`;
+    requiredStrings(entry, ['key'], errors, entryLabel);
+    if (!Array.isArray(entry?.aliases) || entry.aliases.length < 1 || entry.aliases.some((alias) => typeof alias !== 'string' || !alias.trim())) {
+      errors.push(`${entryLabel}.aliases must contain at least one non-empty string.`);
+    }
+    requiredStrings(entry?.zh, ['label', 'meaning', 'relation'], errors, `${entryLabel}.zh`);
+    requiredStrings(entry?.en, ['label', 'meaning', 'relation'], errors, `${entryLabel}.en`);
+  });
 }
 
 function validateLocalizedItem(item, label, errors) {

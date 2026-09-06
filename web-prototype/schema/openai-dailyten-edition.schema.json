@@ -67,6 +67,40 @@
         }
       }
     },
+    "termGuideCopy": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "label",
+        "meaning",
+        "relation"
+      ],
+      "properties": {
+        "label": { "type": "string" },
+        "meaning": { "type": "string" },
+        "relation": { "type": "string" }
+      }
+    },
+    "termGuide": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "key",
+        "aliases",
+        "zh",
+        "en"
+      ],
+      "properties": {
+        "key": { "type": "string" },
+        "aliases": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "type": "string" }
+        },
+        "zh": { "$ref": "#/$defs/termGuideCopy" },
+        "en": { "$ref": "#/$defs/termGuideCopy" }
+      }
+    },
     "localizedNewsItem": {
       "type": "object",
       "additionalProperties": false,
@@ -262,7 +296,8 @@
         "updated",
         "en",
         "sourceLinks",
-        "eventImage"
+        "eventImage",
+        "termGuides"
       ],
       "properties": {
         "id": {
@@ -336,6 +371,14 @@
         },
         "eventImage": {
           "$ref": "#/$defs/eventImage"
+        },
+        "termGuides": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 5,
+          "items": {
+            "$ref": "#/$defs/termGuide"
+          }
         }
       }
     },

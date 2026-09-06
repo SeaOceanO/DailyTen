@@ -2332,14 +2332,21 @@ const glossary = [
   },
 ];
 
-function annotateTerms(value) {
+function glossaryForItem(item) {
+  const storyEntries = Array.isArray(item?.termGuides)
+    ? item.termGuides.map((entry) => ({ ...entry, terms: entry.aliases || entry.terms || [] }))
+    : [];
+  return [...storyEntries, ...glossary];
+}
+
+function annotateTerms(value, item) {
   const text = String(coalesce(value, ''));
   if (!text) return '';
 
   const matches = [];
   const lowerText = text.toLowerCase();
 
-  for (const entry of glossary) {
+  for (const entry of glossaryForItem(item)) {
     for (const term of entry.terms) {
       const lowerTerm = term.toLowerCase();
       let start = lowerText.indexOf(lowerTerm);
@@ -2364,7 +2371,7 @@ function annotateTerms(value) {
     const rawTerm = text.slice(match.start, match.end);
     const copy = state.language === 'en' ? match.entry.en : match.entry.zh;
     html += escapeHtml(text.slice(cursor, match.start));
-    html += `<button class="term-token" type="button" data-term="${match.entry.key}" aria-label="${escapeHtml(copy.label)}">${escapeHtml(rawTerm)}</button>`;
+    html += `<button class="term-token" type="button" data-term="${escapeHtml(match.entry.key)}" aria-label="${escapeHtml(copy.label)}">${escapeHtml(rawTerm)}</button>`;
     cursor = match.end;
   }
 
@@ -2383,7 +2390,7 @@ function isAsciiWord(character) {
 }
 
 function openTermModal(key, item) {
-  const entry = glossary.find((glossaryItem) => glossaryItem.key === key);
+  const entry = glossaryForItem(item).find((glossaryItem) => glossaryItem.key === key);
   if (!entry) return;
 
   const copy = state.language === 'en' ? entry.en : entry.zh;
