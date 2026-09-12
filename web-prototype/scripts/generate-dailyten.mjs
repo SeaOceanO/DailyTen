@@ -77,13 +77,17 @@ async function main() {
 
   const candidatePools = await fetchNewsCandidates(config);
   const edition = await generateEdition({ apiKey, model, reasoningEffort, schema, config, candidates: candidatePools.daily, channel: 'daily' });
-  const aiEdition = await generateEdition({ apiKey, model, reasoningEffort, schema, config, candidates: candidatePools.ai, channel: 'ai' });
   normalizeEdition(edition, 'daily');
-  normalizeEdition(aiEdition, 'ai');
-  await enrichEditionEventImages(edition);
-  await enrichEditionEventImages(aiEdition);
   validateEdition(edition);
+
+  const aiEdition = await generateEdition({ apiKey, model, reasoningEffort, schema, config, candidates: candidatePools.ai, channel: 'ai' });
+  normalizeEdition(aiEdition, 'ai');
   validateEdition(aiEdition);
+
+  await Promise.all([
+    enrichEditionEventImages(edition),
+    enrichEditionEventImages(aiEdition),
+  ]);
   await writeEditionOutputs(edition, aiEdition);
   console.log(`Wrote and archived ${edition.items.length} DailyTen items plus ${aiEdition.items.length} AI items for ${edition.dateKey}.`);
 }
@@ -695,7 +699,8 @@ function validateEdition(edition) {
   requiredStrings(edition, ['dateKey', 'generatedAt', 'title', 'subtitle', 'briefLabel', 'doneLabel'], errors, 'edition');
 
   if (!Array.isArray(edition.items) || edition.items.length !== 10) {
-    errors.push('edition.items must contain exactly 10 items.');
+    const received = Array.isArray(edition.items) ? edition.items.length : 'a non-array value';
+    errors.push(`edition.items must contain exactly 10 items; received ${received}.`);
   }
 
   const ids = new Set();
