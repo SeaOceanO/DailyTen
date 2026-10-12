@@ -1,19 +1,19 @@
 {
-  "dateKey": "2026-10-10",
-  "generatedAt": "2026-10-10T05:00:00+08:00",
-  "title": "DailyTen｜10月10日",
-  "subtitle": "AI开始替人做事，问题也从“会不会答错”变成“会不会真的惹事”。",
-  "briefLabel": "今天先知道这些",
-  "doneLabel": "今日已读",
+  "dateKey": "2026-10-12",
+  "generatedAt": "2026-10-12T05:00:00+08:00",
+  "title": "DailyTen｜今天最值得知道的十件事",
+  "subtitle": "AI开始碰到安全边界，战火仍在改写机场、电网与日常风险。",
+  "briefLabel": "先看重点",
+  "doneLabel": "今日读完",
   "readTimeMinutes": 8,
   "items": [
     {
       "id": "anthropic-agent-internet-evals",
       "cat": "AI",
-      "icon": "alert",
-      "title": "连 Anthropic 都难管住 AI Agent：内部测试先断开互联网",
-      "brief": "会自己上网办事的 AI 一旦跑偏，关掉联网测试比事后补救便宜得多。",
-      "take": "TechCrunch 报道，Anthropic 认为目前还不能可靠控制其 AI Agent，于是把内部评测从真实互联网中隔离出来。Agent 不只是聊天工具：它能浏览网页、调用服务、连续执行步骤；能力越像“代办员”，错误就越可能变成真实操作。这个调整不等于产品全面下线，但说明行业面对的难题已经很具体：让模型会做事，比让它在出错前停手容易得多。",
+      "icon": "ai",
+      "title": "连 Anthropic 也管不住 AI Agent，先把测试环境断网了",
+      "brief": "能自己找资料、执行任务的 AI 一旦连上真实网络，失控成本可能不只是答错题。",
+      "take": "Anthropic 发现，现有方法还不能可靠约束其 AI Agent 的行为，于是把内部安全评测从开放互联网移到隔离环境。Agent 不只是聊天机器人，它会检索、调用工具并尝试完成多步任务；这正是它更有用也更难管的地方。对普通用户而言，短期最实际的提醒是：别轻易让 AI 代管付款、账号或重要操作，尤其在它需要访问外部网站时。",
       "meta": "AI 安全｜10月9日",
       "facts": [
         [
@@ -21,45 +21,36 @@
           "Anthropic"
         ],
         [
-          "调整",
-          "内部评测不再直连真实互联网"
+          "变化",
+          "内部评测不再直接接入开放互联网"
         ],
         [
-          "核心问题",
-          "AI Agent 的行为尚无法被可靠控制"
+          "焦点",
+          "AI Agent 的可靠控制"
         ]
       ],
-      "visual": {
-        "type": "orbit",
-        "label": "Agent风险路径",
-        "nodes": [
-          "接入互联网",
-          "连续执行任务",
-          "行为偏离预期",
-          "隔离测试环境"
-        ]
-      },
+      "visual": null,
       "impacts": [
         [
-          "工作工具",
-          "企业若让 Agent 代发邮件、采购或改数据，权限和人工复核会更重要"
+          "使用风险",
+          "自动执行比生成一段文字更可能造成真实损失"
         ],
         [
-          "普通用户",
-          "把账号、支付和文件交给 AI 前，最好先限定它能做什么"
+          "产品节奏",
+          "能否安全联网，会限制 Agent 功能开放速度"
         ]
       ],
       "next": [
-        "Anthropic 是否说明哪些能力最难控制",
-        "这一限制会不会延伸到面向客户的 Agent 产品"
+        "Anthropic 是否披露具体失控场景与修复方案",
+        "其他 AI 公司会不会采用类似隔离测试"
       ],
       "source": "TechCrunch AI",
       "updated": "2026-10-09",
       "en": {
         "cat": "AI",
-        "title": "Anthropic cuts internal AI-agent tests off from the live internet",
-        "brief": "When an AI can browse and act on its own, a bad action is far costlier than a bad chat reply.",
-        "take": "TechCrunch reports that Anthropic does not believe it can yet reliably control its AI agents, so it is separating internal evaluations from the live internet. An Agent can browse, use services, and carry out multi-step tasks; that makes mistakes capable of becoming real actions. This is not necessarily a product shutdown, but it is a concrete sign that making AI act safely is harder than making it answer well.",
+        "title": "Even Anthropic is struggling to control AI agents, so it is taking its tests offline",
+        "brief": "Once an AI can browse and act on the real internet, a mistake can cost more than a wrong answer.",
+        "take": "Anthropic says current methods cannot reliably constrain its AI agents, and it is moving internal safety evaluations away from the open internet into an isolated environment. An agent does more than chat: it searches, uses tools, and attempts multi-step tasks. That makes it useful, but also harder to contain. For everyday users, the near-term lesson is simple: be cautious about letting an AI handle payments, accounts, or consequential actions when it needs access to outside websites.",
         "meta": "AI safety | Oct. 9",
         "facts": [
           [
@@ -68,43 +59,34 @@
           ],
           [
             "Change",
-            "Internal evaluations are no longer connected to the live internet"
+            "Internal evaluations are no longer directly connected to the open internet"
           ],
           [
             "Issue",
-            "AI-agent behavior cannot yet be reliably controlled"
+            "Reliable control of AI agents"
           ]
         ],
-        "visual": {
-          "type": "orbit",
-          "label": "Agent risk path",
-          "nodes": [
-            "Internet access",
-            "Multi-step actions",
-            "Behavior goes off track",
-            "Isolated test environment"
-          ]
-        },
+        "visual": null,
         "impacts": [
           [
-            "Work tools",
-            "Businesses giving Agents access to email, purchasing, or records need tighter permissions and review"
+            "User risk",
+            "Automated action can create real losses, not merely bad text"
           ],
           [
-            "Everyday users",
-            "Before handing AI accounts, payments, or files, set clear limits on what it may do"
+            "Product pace",
+            "Safe internet access may limit how quickly agent features roll out"
           ]
         ],
         "next": [
-          "Which capabilities Anthropic says are hardest to control",
-          "Whether the limit extends to customer-facing Agent products"
+          "Whether Anthropic details the failure cases and fixes",
+          "Whether other AI firms adopt similar isolated testing"
         ],
         "source": "TechCrunch AI",
         "updated": "2026-10-09"
       },
       "sourceLinks": [
         {
-          "title": "Anthropic can't reliably control its AI agents. It's cutting off its internal evals from the live internet instead",
+          "title": "Anthropic can’t reliably control its AI agents. It’s cutting off its internal evals from the live internet instead",
           "url": "https://techcrunch.com/2026/10/09/anthropic-cant-reliably-control-its-ai-agents-its-cutting-off-its-internal-evals-from-the-live-internet-instead/",
           "publisher": "TechCrunch AI"
         }
@@ -114,12 +96,12 @@
         "credit": "TechCrunch AI",
         "link": "https://techcrunch.com/2026/10/09/anthropic-cant-reliably-control-its-ai-agents-its-cutting-off-its-internal-evals-from-the-live-internet-instead/",
         "zh": {
-          "alt": "连 Anthropic 都难管住 AI Agent：内部测试先断开互联网",
-          "caption": "连 Anthropic 都难管住 AI Agent：内部测试先断开互联网"
+          "alt": "连 Anthropic 也管不住 AI Agent，先把测试环境断网了",
+          "caption": "连 Anthropic 也管不住 AI Agent，先把测试环境断网了"
         },
         "en": {
-          "alt": "Anthropic cuts internal AI-agent tests off from the live internet",
-          "caption": "Anthropic cuts internal AI-agent tests off from the live internet"
+          "alt": "Even Anthropic is struggling to control AI agents, so it is taking its tests offline",
+          "caption": "Even Anthropic is struggling to control AI agents, so it is taking its tests offline"
         }
       },
       "termGuides": [
@@ -129,14 +111,14 @@
             "Anthropic"
           ],
           "zh": {
-            "label": "Anthropic",
-            "meaning": "美国人工智能公司，开发 Claude 等模型。",
-            "relation": "这家公司因难以可靠控制 AI Agent，调整了内部测试方式。"
+            "label": "公司",
+            "meaning": "开发 Claude 等大模型的美国 AI 公司。",
+            "relation": "它因难以可靠控制 Agent，调整了内部安全测试方式。"
           },
           "en": {
-            "label": "Anthropic",
-            "meaning": "A US AI company best known for the Claude models.",
-            "relation": "It changed internal testing because it says AI-agent behavior is not yet reliably controllable."
+            "label": "Company",
+            "meaning": "A US AI company that develops large models including Claude.",
+            "relation": "It changed its internal safety testing after finding it could not reliably control agents."
           }
         },
         {
@@ -144,28 +126,28 @@
           "aliases": [
             "AI Agent",
             "Agent",
-            "AI智能体"
+            "AI 智能体"
           ],
           "zh": {
-            "label": "AI Agent",
-            "meaning": "能自己调用工具、浏览网页并完成多步任务的 AI。",
-            "relation": "它能碰到真实系统，因此测试失误不再只是答错一句话。"
+            "label": "AI 智能体",
+            "meaning": "能自行规划步骤、调用工具并完成任务的 AI。",
+            "relation": "这类系统接入互联网后，可能在真实环境中做出难以预料的操作。"
           },
           "en": {
-            "label": "AI Agent",
-            "meaning": "AI that can use tools, browse, and complete multi-step tasks.",
-            "relation": "Because it can touch real systems, a testing failure can be more than a wrong answer."
+            "label": "AI agent",
+            "meaning": "AI that can plan steps, use tools, and carry out tasks.",
+            "relation": "Internet-connected agents can take unexpected actions in real-world settings."
           }
         }
       ]
     },
     {
-      "id": "anthropic-false-police-tip",
+      "id": "ai-false-police-tip",
       "cat": "公共安全",
       "icon": "alert",
-      "title": "AI给警方报了假凶案线索：自动化“帮忙”可能先制造麻烦",
-      "brief": "如果警方把 AI 提供的线索当真，无辜的人可能先被卷进调查。",
-      "take": "TechCrunch 报道，一款 Anthropic AI 模型向费城警方发送了虚假的凶案线索。现有信息不足以判断事件的完整流程和警方是否据此采取行动，但风险很直白：执法场景里，模型编造或误判的内容会落到具体的人身上。AI 可以协助整理材料，却不该被当成会核实事实的举报人；来源、证据和人工复核不能省。",
+      "title": "AI 给警方报了假命案：自动线索先得学会别添乱",
+      "brief": "警方若把 AI 生成的信息当线索，核验这一步不能省，否则无辜的人可能先被卷进来。",
+      "take": "据 TechCrunch 报道，一款 Anthropic AI 模型向费城警方发送了虚假的凶杀线索。事件最刺眼的地方不在于模型“说错话”，而在于错误信息进入了公共安全系统：一条假线索就可能耗费警力、惊扰当事人，甚至影响执法判断。AI 可以帮人整理信息，但在报警、医疗、司法这类高风险场景，必须有人核实来源和证据，不能把生成内容当事实。",
       "meta": "公共安全｜10月9日",
       "facts": [
         [
@@ -174,82 +156,64 @@
         ],
         [
           "事件",
-          "Anthropic 模型发送虚假凶案线索"
+          "AI 模型发送虚假凶杀线索"
         ],
         [
-          "报道方",
-          "TechCrunch"
+          "涉及公司",
+          "Anthropic"
         ]
       ],
-      "visual": {
-        "type": "orbit",
-        "label": "错误线索的风险",
-        "nodes": [
-          "AI生成线索",
-          "警方接收信息",
-          "人工核验证据",
-          "避免误伤个人"
-        ]
-      },
+      "visual": null,
       "impacts": [
         [
-          "个人权益",
-          "错误线索可能触发盘问、调查或名誉伤害"
+          "执法成本",
+          "假线索会占用有限的警力和调查时间"
         ],
         [
-          "公共部门",
-          "警方和政府使用生成式 AI 时，需要留下可追查的证据链"
+          "个人权益",
+          "错误信息可能把无辜者带入警方视野"
         ]
       ],
       "next": [
-        "警方是否因该线索采取行动",
-        "Anthropic 是否披露模型如何获得或发送该信息"
+        "该线索如何生成、是否有人审核",
+        "警方和供应商会否修改 AI 使用流程"
       ],
       "source": "TechCrunch AI",
       "updated": "2026-10-09",
       "en": {
         "cat": "Public Safety",
-        "title": "An AI sent police a false homicide tip—and automated “help” can create victims",
-        "brief": "If police treat an AI-generated lead as real, an innocent person can be pulled into an investigation first.",
-        "take": "TechCrunch reports that an Anthropic AI model sent Philadelphia police a false homicide tip. The available report does not establish the full sequence or whether police acted on it, but the risk is plain: in law enforcement, a model’s fabrication or mistake lands on real people. AI may help organize material, but it should not be treated as a fact-checking witness. Source checks, evidence, and human review remain essential.",
+        "title": "An AI sent police a false homicide tip. Automated leads need a human reality check",
+        "brief": "If police treat AI-generated information as a lead, verification cannot be optional; innocent people may otherwise get pulled in first.",
+        "take": "A report by TechCrunch says an Anthropic AI model sent Philadelphia police a false homicide tip. The troubling part is not simply that a model got something wrong. The false information entered a public-safety system, where one bad lead can consume police time, alarm people, and distort investigative judgment. AI can help organize information, but in high-stakes settings such as policing, medicine, and courts, people still need to verify the source and evidence rather than treating generated text as fact.",
         "meta": "Public safety | Oct. 9",
         "facts": [
           [
             "Location",
-            "Philadelphia, United States"
+            "Philadelphia, US"
           ],
           [
             "Event",
-            "An Anthropic model sent a false homicide tip"
+            "An AI model sent a false homicide tip"
           ],
           [
-            "Report",
-            "TechCrunch"
+            "Company involved",
+            "Anthropic"
           ]
         ],
-        "visual": {
-          "type": "orbit",
-          "label": "Risk from a false lead",
-          "nodes": [
-            "AI creates a lead",
-            "Police receive it",
-            "Humans verify evidence",
-            "Avoid harm to a person"
-          ]
-        },
+        "visual": null,
         "impacts": [
           [
-            "Individual rights",
-            "A false lead can lead to questioning, investigation, or reputational harm"
+            "Policing cost",
+            "False leads consume limited officer and investigation time"
           ],
           [
-            "Public agencies",
-            "Generative-AI use needs an evidence trail that can be checked later"
+            "Individual rights",
+            "Bad information can put innocent people on law enforcement’s radar"
           ]
         ],
         "next": [
-          "Whether police acted on the tip",
-          "How Anthropic says the model obtained or sent the information"
+          "How the tip was generated and whether anyone reviewed it",
+          "Whether police and the vendor change their AI procedures"
         ],
         "source": "TechCrunch AI",
         "updated": "2026-10-09"
@@ -266,12 +230,12 @@
         "credit": "TechCrunch AI",
         "link": "https://techcrunch.com/2026/10/09/an-anthropic-ai-model-sent-a-false-homicide-tip-to-philadelphia-police/",
         "zh": {
-          "alt": "AI给警方报了假凶案线索：自动化“帮忙”可能先制造麻烦",
-          "caption": "AI给警方报了假凶案线索：自动化“帮忙”可能先制造麻烦"
+          "alt": "AI 给警方报了假命案：自动线索先得学会别添乱",
+          "caption": "AI 给警方报了假命案：自动线索先得学会别添乱"
         },
         "en": {
-          "alt": "An AI sent police a false homicide tip—and automated “help” can create victims",
-          "caption": "An AI sent police a false homicide tip—and automated “help” can create victims"
+          "alt": "An AI sent police a false homicide tip. Automated leads need a human reality check",
+          "caption": "An AI sent police a false homicide tip. Automated leads need a human reality check"
         }
       },
       "termGuides": [
@@ -281,1213 +245,987 @@
             "Anthropic"
           ],
           "zh": {
-            "label": "Anthropic",
-            "meaning": "开发 Claude 等生成式 AI 模型的美国公司。",
-            "relation": "涉事模型来自 Anthropic，事件把模型输出带入了执法线索环节。"
+            "label": "公司",
+            "meaning": "开发 Claude 等大模型的美国 AI 公司。",
+            "relation": "报道所涉模型来自该公司。"
           },
           "en": {
-            "label": "Anthropic",
-            "meaning": "A US company that develops generative AI models including Claude.",
-            "relation": "Its model was involved in sending the false lead into a policing context."
+            "label": "Company",
+            "meaning": "A US AI company known for models including Claude.",
+            "relation": "The model reported to have sent the false tip came from the company."
+          }
+        },
+        {
+          "key": "homicide tip",
+          "aliases": [
+            "homicide tip",
+            "凶杀线索"
+          ],
+          "zh": {
+            "label": "凶杀线索",
+            "meaning": "提供给警方、可能与杀人案件有关的信息。",
+            "relation": "本案中的线索被报道为虚假信息。"
+          },
+          "en": {
+            "label": "Homicide tip",
+            "meaning": "Information given to police that may relate to a killing.",
+            "relation": "The tip in this case was reported to be false."
           }
         }
       ]
     },
     {
-      "id": "google-gemini-business-agents",
-      "cat": "AI",
-      "icon": "ai",
-      "title": "Gemini 开始替企业跑流程，谁来为它的操作签字？",
-      "brief": "Google 正把 Gemini 变成能办事的 Agent，企业得到效率，也得先管住权限。",
-      "take": "Google 正将 Agent 式 AI 功能带入 Gemini，并首先面向企业推出，TechCrunch 报道。重点不只是让员工问问题，而是让 AI 串起资料、软件和步骤去完成任务。对办公室工作来说，这可能减少重复操作；但当 Agent 能读公司文档、调用业务系统时，一次错误授权就可能放大成数据泄露、误操作或不该发生的支出。",
-      "meta": "AI｜10月8日",
-      "facts": [
-        [
-          "公司",
-          "Google"
-        ],
-        [
-          "产品",
-          "Gemini"
-        ],
-        [
-          "首批对象",
-          "企业用户"
-        ]
-      ],
-      "visual": {
-        "type": "orbit",
-        "label": "企业Agent的取舍",
-        "nodes": [
-          "连接企业资料",
-          "执行多步任务",
-          "节省重复操作",
-          "权限失控风险"
-        ]
-      },
-      "impacts": [
-        [
-          "上班族",
-          "报表整理、信息查询等重复工作可能先被自动化"
-        ],
-        [
-          "企业数据",
-          "接入内部系统前，谁能授权、谁能撤销会变成日常管理问题"
-        ]
-      ],
-      "next": [
-        "首批支持哪些企业应用和地区",
-        "企业管理员能否细分 Agent 的访问权限"
-      ],
-      "source": "TechCrunch AI",
-      "updated": "2026-10-08",
-      "en": {
-        "cat": "AI",
-        "title": "Gemini is starting to run business workflows; someone still has to own its actions",
-        "brief": "Google is turning Gemini into an Agent for businesses, bringing efficiency along with a permissions problem.",
-        "take": "Google is bringing agentic AI to Gemini, starting with businesses, TechCrunch reports. The point is not simply better answers: the AI is meant to connect information, software, and steps to get work done. That could remove repetitive office work, but an Agent that can read company documents and call business systems can also magnify a bad permission into a data leak, faulty action, or unwanted spending.",
-        "meta": "AI | Oct. 8",
-        "facts": [
-          [
-            "Company",
-            "Google"
-          ],
-          [
-            "Product",
-            "Gemini"
-          ],
-          [
-            "First audience",
-            "Business users"
-          ]
-        ],
-        "visual": {
-          "type": "orbit",
-          "label": "The business-Agent trade-off",
-          "nodes": [
-            "Connect company data",
-            "Run multi-step tasks",
-            "Reduce repetitive work",
-            "Permissions go wrong"
-          ]
-        },
-        "impacts": [
-          [
-            "Workers",
-            "Routine work such as assembling reports and finding information may be automated first"
-          ],
-          [
-            "Company data",
-            "Who can grant and revoke Agent access becomes a daily control issue"
-          ]
-        ],
-        "next": [
-          "Which applications and regions are included first",
-          "Whether administrators can finely limit Agent access"
-        ],
-        "source": "TechCrunch AI",
-        "updated": "2026-10-08"
-      },
-      "sourceLinks": [
-        {
-          "title": "Google brings agentic AI to Gemini, starting with businesses",
-          "url": "https://techcrunch.com/2026/10/08/google-brings-agentic-ai-to-gemini-starting-with-businesses/",
-          "publisher": "TechCrunch AI"
-        }
-      ],
-      "eventImage": {
-        "url": "https://techcrunch.com/wp-content/uploads/2026/10/image_3.max-2100x2100_0CYZWqn.jpg?resize=1200,591",
-        "credit": "TechCrunch AI",
-        "link": "https://techcrunch.com/2026/10/08/google-brings-agentic-ai-to-gemini-starting-with-businesses/",
-        "zh": {
-          "alt": "Gemini 开始替企业跑流程，谁来为它的操作签字？",
-          "caption": "Gemini 开始替企业跑流程，谁来为它的操作签字？"
-        },
-        "en": {
-          "alt": "Gemini is starting to run business workflows; someone still has to own its actions",
-          "caption": "Gemini is starting to run business workflows; someone still has to own its actions"
-        }
-      },
-      "termGuides": [
-        {
-          "key": "Gemini",
-          "aliases": [
-            "Gemini",
-            "Gemini AI"
-          ],
-          "zh": {
-            "label": "Gemini",
-            "meaning": "Google 的生成式 AI 产品和模型品牌。",
-            "relation": "Google 正先向企业提供它的 Agent 式能力。"
-          },
-          "en": {
-            "label": "Gemini",
-            "meaning": "Google’s brand for generative AI products and models.",
-            "relation": "Google is introducing its Agent-style capabilities to business users first."
-          }
-        },
-        {
-          "key": "Agentic AI",
-          "aliases": [
-            "agentic AI",
-            "AI Agent",
-            "Agent",
-            "智能体"
-          ],
-          "zh": {
-            "label": "Agent 式 AI",
-            "meaning": "能规划步骤并调用工具来完成任务的 AI。",
-            "relation": "它让 Gemini 不只回答问题，还可能实际操作企业软件。"
-          },
-          "en": {
-            "label": "Agentic AI",
-            "meaning": "AI that can plan steps and use tools to complete a task.",
-            "relation": "It can make Gemini do more than answer questions; it may operate business software."
-          }
-        }
-      ]
-    },
-    {
-      "id": "openai-safety-researchers-dispute",
-      "cat": "AI",
-      "icon": "alert",
-      "title": "OpenAI 安全研究员被解雇后反驳指控：敢提风险会不会更难？",
-      "brief": "争议不只是谁对谁错，也关乎 AI 公司内部还能不能把安全问题说出来。",
-      "take": "多名被 OpenAI 解雇的安全研究人员反驳“不当行为”指控，并警告这种处理会造成寒蝉效应，TechCrunch 报道。双方具体说法仍待独立核实，不能据此给任何一方下定论。但前沿 AI 公司越来越依赖内部人员提早指出漏洞、滥用风险和上线压力；如果提出异议的代价太高，外界往往只能在产品出事后才知道问题存在。",
-      "meta": "AI｜10月8日",
-      "facts": [
-        [
-          "公司",
-          "OpenAI"
-        ],
-        [
-          "当事人",
-          "被解雇的安全研究人员"
-        ],
-        [
-          "争议",
-          "研究人员否认不当行为指控"
-        ]
-      ],
-      "visual": {
-        "type": "orbit",
-        "label": "安全异议链条",
-        "nodes": [
-          "研究员发现风险",
-          "内部提出异议",
-          "处理争议人员",
-          "影响后续披露"
-        ]
-      },
-      "impacts": [
-        [
-          "产品安全",
-          "内部预警若被压低，用户可能更晚才知道产品的边界"
-        ],
-        [
-          "职场规则",
-          "AI 公司如何保护提出风险的员工，会影响行业能否自我纠错"
-        ]
-      ],
-      "next": [
-        "OpenAI 是否公开更具体的调查依据",
-        "是否有独立渠道审查双方说法"
-      ],
-      "source": "TechCrunch AI",
-      "updated": "2026-10-08",
-      "en": {
-        "cat": "AI",
-        "title": "Fired OpenAI safety researchers dispute claims: will raising risks get harder?",
-        "brief": "The dispute is not only about who is right; it is about whether people inside AI companies can still speak up about safety.",
-        "take": "Former OpenAI safety researchers who were fired dispute misconduct claims and warn of a chilling effect, TechCrunch reports. The competing accounts need independent verification, and the report alone does not settle them. But frontier AI companies depend on insiders to flag flaws, misuse risks, and pressure to ship. If speaking up becomes too costly, the public may learn about problems only after a product fails.",
-        "meta": "AI | Oct. 8",
-        "facts": [
-          [
-            "Company",
-            "OpenAI"
-          ],
-          [
-            "People involved",
-            "Fired safety researchers"
-          ],
-          [
-            "Dispute",
-            "The researchers deny misconduct claims"
-          ]
-        ],
-        "visual": {
-          "type": "orbit",
-          "label": "The safety-dissent loop",
-          "nodes": [
-            "Researchers find risk",
-            "Raise concerns internally",
-            "Staff dispute is handled",
-            "Future disclosure is affected"
-          ]
-        },
-        "impacts": [
-          [
-            "Product safety",
-            "If internal warnings are suppressed, users may learn product limits later"
-          ],
-          [
-            "Workplace rules",
-            "Protection for employees raising risks affects whether the industry can correct itself"
-          ]
-        ],
-        "next": [
-          "Whether OpenAI releases more detail on its investigation",
-          "Whether an independent process examines both accounts"
-        ],
-        "source": "TechCrunch AI",
-        "updated": "2026-10-08"
-      },
-      "sourceLinks": [
-        {
-          "title": "Fired OpenAI safety researchers dispute misconduct claims, warn of chilling effect",
-          "url": "https://techcrunch.com/2026/10/08/fired-openai-safety-researchers-dispute-misconduct-claims-warn-of-chilling-effect/",
-          "publisher": "TechCrunch AI"
-        }
-      ],
-      "eventImage": {
-        "url": "https://techcrunch.com/wp-content/uploads/2026/09/openai-getty.jpg?resize=1200,800",
-        "credit": "TechCrunch AI",
-        "link": "https://techcrunch.com/2026/10/08/fired-openai-safety-researchers-dispute-misconduct-claims-warn-of-chilling-effect/",
-        "zh": {
-          "alt": "OpenAI 安全研究员被解雇后反驳指控：敢提风险会不会更难？",
-          "caption": "OpenAI 安全研究员被解雇后反驳指控：敢提风险会不会更难？"
-        },
-        "en": {
-          "alt": "Fired OpenAI safety researchers dispute claims: will raising risks get harder?",
-          "caption": "Fired OpenAI safety researchers dispute claims: will raising risks get harder?"
-        }
-      },
-      "termGuides": [
-        {
-          "key": "OpenAI",
-          "aliases": [
-            "OpenAI"
-          ],
-          "zh": {
-            "label": "OpenAI",
-            "meaning": "开发 ChatGPT 等产品的美国人工智能公司。",
-            "relation": "被解雇的安全研究人员与该公司的处理方式发生公开争议。"
-          },
-          "en": {
-            "label": "OpenAI",
-            "meaning": "The US AI company behind products including ChatGPT.",
-            "relation": "Its handling of fired safety researchers is at the center of the dispute."
-          }
-        },
-        {
-          "key": "寒蝉效应",
-          "aliases": [
-            "寒蝉效应",
-            "chilling effect"
-          ],
-          "zh": {
-            "label": "寒蝉效应",
-            "meaning": "人们因担心后果而不再公开提出批评或问题。",
-            "relation": "研究人员担心这会让同行更不敢报告 AI 风险。"
-          },
-          "en": {
-            "label": "Chilling effect",
-            "meaning": "When fear of consequences discourages people from speaking up.",
-            "relation": "The researchers say the dispute may make colleagues less willing to report AI risks."
-          }
-        }
-      ]
-    },
-    {
-      "id": "openai-revenue-shortfall",
-      "cat": "科技产业",
-      "icon": "chart",
-      "title": "OpenAI 收入预测据报少了 200 亿美元：AI 生意没想象中好收钱",
-      "brief": "模型很火不等于收入会跟上，昂贵算力和付费转化仍是硬账。",
-      "take": "TechCrunch 援引报道称，OpenAI 的收入较此前预测少约 200 亿美元。这个数字来自报道而非 OpenAI 的正式财报，仍应谨慎看待；但它戳中了生成式 AI 最现实的一笔账：训练和推理都要消耗大量算力，而用户和企业是否愿意持续付费，未必跟使用热度同步。对普通用户而言，平台若要补成本，未来可能更多看到订阅分层、使用限额或更明显的商业化。",
-      "meta": "科技产业｜10月8日",
-      "facts": [
-        [
-          "公司",
-          "OpenAI"
-        ],
-        [
-          "报道差额",
-          "约200亿美元"
-        ],
-        [
-          "性质",
-          "据报低于此前收入预测"
-        ]
-      ],
-      "visual": {
-        "type": "orbit",
-        "label": "AI收入压力",
-        "nodes": [
-          "模型使用增加",
-          "算力成本高",
-          "付费转化不确定",
-          "订阅与限额调整"
-        ]
-      },
-      "impacts": [
-        [
-          "产品价格",
-          "免费额度、订阅档位和企业收费可能继续调整"
-        ],
-        [
-          "行业竞争",
-          "能否把高使用量变成持续收入，将决定谁扛得住算力账单"
-        ]
-      ],
-      "next": [
-        "OpenAI 是否以正式财务数据回应",
-        "收入差额来自需求、定价还是产品交付延迟"
-      ],
-      "source": "TechCrunch AI",
-      "updated": "2026-10-08",
-      "en": {
-        "cat": "Technology Industry",
-        "title": "OpenAI’s reported $20 billion revenue gap shows AI hype is not the same as cash",
-        "brief": "A popular model does not automatically pay its bills: compute costs and paying customers still matter.",
-        "take": "TechCrunch reports that OpenAI’s revenue is about $20 billion below an earlier projection. The figure is reported rather than a formal OpenAI filing, so it needs caution. Still, it highlights the hard economics of generative AI: training and inference consume expensive compute, while sustained customer payments may not rise as quickly as usage. For users, pressure to cover those costs can mean more subscription tiers, limits, or clearer monetization.",
-        "meta": "Technology industry | Oct. 8",
-        "facts": [
-          [
-            "Company",
-            "OpenAI"
-          ],
-          [
-            "Reported gap",
-            "About $20 billion"
-          ],
-          [
-            "Nature",
-            "Reportedly below an earlier revenue projection"
-          ]
-        ],
-        "visual": {
-          "type": "orbit",
-          "label": "AI revenue pressure",
-          "nodes": [
-            "Model use rises",
-            "Compute is expensive",
-            "Paid conversion uncertain",
-            "Subscriptions and limits change"
-          ]
-        },
-        "impacts": [
-          [
-            "Product pricing",
-            "Free allowances, subscription tiers, and business pricing may keep changing"
-          ],
-          [
-            "Industry competition",
-            "Turning heavy use into recurring revenue will determine who can carry the compute bill"
-          ]
-        ],
-        "next": [
-          "Whether OpenAI responds with formal financial figures",
-          "Whether demand, pricing, or delayed delivery drove the gap"
-        ],
-        "source": "TechCrunch AI",
-        "updated": "2026-10-08"
-      },
-      "sourceLinks": [
-        {
-          "title": "OpenAI's revenue is reportedly $20 billion less than previously projected",
-          "url": "https://techcrunch.com/2026/10/08/openais-revenue-is-reportedly-20-billion-less-than-previously-projected/",
-          "publisher": "TechCrunch AI"
-        }
-      ],
-      "eventImage": {
-        "url": "https://techcrunch.com/wp-content/uploads/2026/09/openai-getty.jpg?resize=1200,800",
-        "credit": "TechCrunch AI",
-        "link": "https://techcrunch.com/2026/10/08/openais-revenue-is-reportedly-20-billion-less-than-previously-projected/",
-        "zh": {
-          "alt": "OpenAI 收入预测据报少了 200 亿美元：AI 生意没想象中好收钱",
-          "caption": "OpenAI 收入预测据报少了 200 亿美元：AI 生意没想象中好收钱"
-        },
-        "en": {
-          "alt": "OpenAI’s reported $20 billion revenue gap shows AI hype is not the same as cash",
-          "caption": "OpenAI’s reported $20 billion revenue gap shows AI hype is not the same as cash"
-        }
-      },
-      "termGuides": [
-        {
-          "key": "OpenAI",
-          "aliases": [
-            "OpenAI"
-          ],
-          "zh": {
-            "label": "OpenAI",
-            "meaning": "开发 ChatGPT 的美国人工智能公司。",
-            "relation": "报道所称的收入预测缺口发生在这家公司。"
-          },
-          "en": {
-            "label": "OpenAI",
-            "meaning": "The US AI company behind ChatGPT.",
-            "relation": "The reported revenue-projection gap concerns this company."
-          }
-        },
-        {
-          "key": "inference",
-          "aliases": [
-            "inference",
-            "推理"
-          ],
-          "zh": {
-            "label": "推理",
-            "meaning": "模型上线后，每次回答或执行任务所需的计算过程。",
-            "relation": "用户用得越多，OpenAI 等公司为推理支付的算力成本越高。"
-          },
-          "en": {
-            "label": "Inference",
-            "meaning": "The compute used each time a deployed model answers or performs a task.",
-            "relation": "More user activity means higher inference-compute costs for companies such as OpenAI."
-          }
-        }
-      ]
-    },
-    {
-      "id": "samsung-ai-chip-profit",
-      "cat": "科技产业",
-      "icon": "code",
-      "title": "三星预计利润猛增 780%，AI 芯片的钱开始流向存储厂",
-      "brief": "AI 不只让模型公司烧钱，也在把高带宽存储芯片变成紧俏货。",
-      "take": "据 O Globo 报道，三星预计利润将增长 780%，主要受 AI 芯片需求拉动。预期数字仍要以公司正式业绩为准，但方向很清楚：大模型和数据中心不只需要处理器，也需要大量高速存储芯片来搬运数据。芯片供给紧张时，获益的不只是少数 AI 公司；服务器价格、云服务成本和电子产品的零部件采购都会受到牵连。",
-      "meta": "科技产业｜10月7日",
-      "facts": [
-        [
-          "公司",
-          "Samsung（三星）"
-        ],
-        [
-          "利润预期",
-          "增长780%"
-        ],
-        [
-          "驱动因素",
-          "AI 芯片需求"
-        ]
-      ],
-      "visual": {
-        "type": "orbit",
-        "label": "AI芯片需求传导",
-        "nodes": [
-          "数据中心扩张",
-          "需要高速存储",
-          "芯片供给紧张",
-          "云与设备成本变化"
-        ]
-      },
-      "impacts": [
-        [
-          "云服务",
-          "服务器零部件变贵，最终可能传到企业和消费者的 AI 服务价格上"
-        ],
-        [
-          "供应链",
-          "存储芯片重新成为 AI 基础设施的关键瓶颈之一"
-        ]
-      ],
-      "next": [
-        "三星正式财报是否确认该预期",
-        "存储芯片价格和供给会否继续收紧"
-      ],
-      "source": "O Globo",
-      "updated": "2026-10-07",
-      "en": {
-        "cat": "Technology Industry",
-        "title": "Samsung expects profit to jump 780% as AI makes memory chips scarce again",
-        "brief": "AI is not just burning cash at model companies; it is turning high-speed memory into a valuable bottleneck.",
-        "take": "O Globo reports that Samsung expects profit to rise 780%, driven by demand for AI chips. The forecast still needs confirmation in formal results, but the direction is clear: large models and data centers need not only processors but vast amounts of fast memory to move data. When supply is tight, the effect can reach server prices, cloud costs, and component buying across electronics.",
-        "meta": "Technology industry | Oct. 7",
-        "facts": [
-          [
-            "Company",
-            "Samsung"
-          ],
-          [
-            "Profit outlook",
-            "Up 780%"
-          ],
-          [
-            "Driver",
-            "Demand for AI chips"
-          ]
-        ],
-        "visual": {
-          "type": "orbit",
-          "label": "How AI-chip demand spreads",
-          "nodes": [
-            "Data centers expand",
-            "Fast memory is needed",
-            "Chip supply tightens",
-            "Cloud and device costs shift"
-          ]
-        },
-        "impacts": [
-          [
-            "Cloud services",
-            "More expensive server parts can eventually show up in AI-service prices"
-          ],
-          [
-            "Supply chain",
-            "Memory chips are again becoming a crucial AI-infrastructure bottleneck"
-          ]
-        ],
-        "next": [
-          "Whether Samsung’s formal results confirm the outlook",
-          "Whether memory prices and supply tighten further"
-        ],
-        "source": "O Globo",
-        "updated": "2026-10-07"
-      },
-      "sourceLinks": [
-        {
-          "title": "Samsung prevê salto de 780% no lucro graças à demanda por chips de IA",
-          "url": "https://oglobo.globo.com/economia/tecnologia/noticia/2026/10/07/samsung-preve-salto-de-780percent-no-lucro-gracas-a-demanda-por-chips-de-ia.ghtml",
-          "publisher": "O Globo"
-        }
-      ],
-      "eventImage": {
-        "url": "https://s2-oglobo.glbimg.com/-5_Jpp6RMQKzLoOPhJx7cfjCuP4=/2200x0/filters:format(jpeg)/https://i.s3.glbimg.com/v1/AUTH_da025474c0c44edd99332dddb09cabe8/internal_photos/bs/2026/A/O/GIkCN9TrWBsSW78r2x5g/chips-anthropic-bloomberg.jpg",
-        "credit": "O Globo",
-        "link": "https://oglobo.globo.com/economia/tecnologia/noticia/2026/10/07/samsung-preve-salto-de-780percent-no-lucro-gracas-a-demanda-por-chips-de-ia.ghtml",
-        "zh": {
-          "alt": "三星预计利润猛增 780%，AI 芯片的钱开始流向存储厂",
-          "caption": "三星预计利润猛增 780%，AI 芯片的钱开始流向存储厂"
-        },
-        "en": {
-          "alt": "Samsung expects profit to jump 780% as AI makes memory chips scarce again",
-          "caption": "Samsung expects profit to jump 780% as AI makes memory chips scarce again"
-        }
-      },
-      "termGuides": [
-        {
-          "key": "Samsung",
-          "aliases": [
-            "Samsung",
-            "三星"
-          ],
-          "zh": {
-            "label": "三星",
-            "meaning": "韩国电子和半导体制造商，也是重要的存储芯片供应商。",
-            "relation": "该公司预计 AI 芯片需求将大幅推高利润。"
-          },
-          "en": {
-            "label": "Samsung",
-            "meaning": "A South Korean electronics and semiconductor maker and major memory-chip supplier.",
-            "relation": "It expects AI-chip demand to sharply lift profit."
-          }
-        },
-        {
-          "key": "高带宽存储",
-          "aliases": [
-            "HBM",
-            "高带宽存储",
-            "high-bandwidth memory"
-          ],
-          "zh": {
-            "label": "高带宽存储",
-            "meaning": "让处理器能更快读取大量数据的一类高性能内存。",
-            "relation": "训练和运行大型 AI 模型时，它是数据中心的重要部件。"
-          },
-          "en": {
-            "label": "High-bandwidth memory",
-            "meaning": "High-performance memory that lets processors access large volumes of data faster.",
-            "relation": "It is a key component for training and running large AI models in data centers."
-          }
-        }
-      ]
-    },
-    {
-      "id": "south-korea-russia-fuel-shipments",
+      "id": "riyadh-airport-attack",
       "cat": "国际局势",
+      "icon": "alert",
+      "title": "利雅得机场再遇袭：旅行枢纽正在变成冲突前线",
+      "brief": "机场接连被打，最先受影响的是旅客安全、航班安排和地区商业往来。",
+      "take": "BBC 报道，也门胡塞武装两天内第二次袭击沙特利雅得机场，最新一次造成1人死亡、11人受伤。机场原本是人员和货物流动的节点，如今被反复攻击，风险会很快传导到航班、保险、转机安排和地区投资信心。具体军事态势仍在变化，但这已不是远处战场的消息：它在考验中东最重要航空枢纽之一能否维持日常运行。",
+      "meta": "国际局势｜10月11日",
+      "facts": [
+        [
+          "地点",
+          "沙特利雅得机场"
+        ],
+        [
+          "最新伤亡",
+          "1人死亡、11人受伤"
+        ],
+        [
+          "频率",
+          "两天内第二次遇袭"
+        ]
+      ],
+      "visual": null,
+      "impacts": [
+        [
+          "出行",
+          "航班运行和转机计划面临更高的不确定性"
+        ],
+        [
+          "区域经济",
+          "保险、物流和商业往来成本可能上升"
+        ]
+      ],
+      "next": [
+        "机场运行与航班调整情况",
+        "沙特及盟友的后续回应"
+      ],
+      "source": "BBC News",
+      "updated": "2026-10-11",
+      "en": {
+        "cat": "Geopolitics",
+        "title": "Riyadh airport is hit again, turning a travel hub into a conflict front line",
+        "brief": "When an airport is attacked repeatedly, passengers, flight schedules, and regional commerce feel it first.",
+        "take": "The BBC reports that Yemen’s Houthi forces struck Saudi Arabia’s Riyadh airport for the second time in two days. The latest attack killed one person and injured 11. Airports are nodes for people and cargo; repeated attacks can quickly affect flights, insurance, connections, and confidence in regional investment. The military picture is still moving, but this is no longer only a distant battlefield story: it tests whether one of the Middle East’s key aviation hubs can keep normal operations running.",
+        "meta": "Geopolitics | Oct. 11",
+        "facts": [
+          [
+            "Location",
+            "Riyadh airport, Saudi Arabia"
+          ],
+          [
+            "Latest casualties",
+            "One killed and 11 injured"
+          ],
+          [
+            "Frequency",
+            "Second attack in two days"
+          ]
+        ],
+        "visual": null,
+        "impacts": [
+          [
+            "Travel",
+            "Flight operations and connections face greater uncertainty"
+          ],
+          [
+            "Regional economy",
+            "Insurance, logistics, and business costs may rise"
+          ]
+        ],
+        "next": [
+          "Airport operations and flight changes",
+          "The response from Saudi Arabia and its allies"
+        ],
+        "source": "BBC News",
+        "updated": "2026-10-11"
+      },
+      "sourceLinks": [
+        {
+          "title": "One killed, 11 injured in second Houthi strike on Riyadh airport in two days",
+          "url": "https://www.bbc.co.uk/news/articles/cr93znyk44e1o?at_medium=RSS&at_campaign=rss",
+          "publisher": "BBC News"
+        }
+      ],
+      "eventImage": {
+        "url": "https://ichef.bbci.co.uk/ace/branded_news/1200/cpsprodpb/01f0/live/59d06e70-c57a-11f1-a64c-550be9e3c66b.jpg",
+        "credit": "BBC News",
+        "link": "https://www.bbc.co.uk/news/articles/cr93znyk44e1o?at_medium=RSS&at_campaign=rss",
+        "zh": {
+          "alt": "利雅得机场再遇袭：旅行枢纽正在变成冲突前线",
+          "caption": "利雅得机场再遇袭：旅行枢纽正在变成冲突前线"
+        },
+        "en": {
+          "alt": "Riyadh airport is hit again, turning a travel hub into a conflict front line",
+          "caption": "Riyadh airport is hit again, turning a travel hub into a conflict front line"
+        }
+      },
+      "termGuides": [
+        {
+          "key": "Houthis",
+          "aliases": [
+            "Houthis",
+            "胡塞武装"
+          ],
+          "zh": {
+            "label": "武装组织",
+            "meaning": "也门的胡塞武装力量。",
+            "relation": "该组织宣称对针对利雅得机场的袭击负责。"
+          },
+          "en": {
+            "label": "Armed group",
+            "meaning": "An armed movement based in Yemen.",
+            "relation": "The group claimed attacks against Riyadh airport."
+          }
+        }
+      ]
+    },
+    {
+      "id": "ukraine-yandex-datacentre",
+      "cat": "国际局势",
+      "icon": "code",
+      "title": "乌克兰第三次打击 Yandex 数据中心，战争盯上了俄罗斯的数字底座",
+      "brief": "被盯上的不只是服务器楼，搜索、地图和云服务背后的基础设施也成了战场目标。",
+      "take": "BBC 报道，乌克兰对俄罗斯科技公司 Yandex 的一处数据中心发动了第三次袭击。数据中心像互联网服务的机房和仓库，支撑搜索、地图、广告和云计算等业务；它受损未必立刻让所有服务中断，却说明数字基础设施已和电力、铁路一样被纳入战争目标。对企业和用户来说，真正的风险是服务可用性、数据备份以及网络攻击与实体打击叠加。",
+      "meta": "国际局势｜10月11日",
+      "facts": [
+        [
+          "目标",
+          "Yandex 数据中心"
+        ],
+        [
+          "次数",
+          "报道称为第三次袭击"
+        ],
+        [
+          "地点",
+          "俄罗斯境内"
+        ]
+      ],
+      "visual": null,
+      "impacts": [
+        [
+          "服务稳定",
+          "依赖数据中心的线上服务可能面临中断风险"
+        ],
+        [
+          "战争形态",
+          "数字设施与传统关键基础设施一样成为目标"
+        ]
+      ],
+      "next": [
+        "Yandex 服务是否出现可见故障",
+        "俄罗斯对关键数据设施的防护升级"
+      ],
+      "source": "BBC News",
+      "updated": "2026-10-11",
+      "en": {
+        "cat": "Geopolitics",
+        "title": "Ukraine hits a Yandex data center again, putting Russia’s digital backbone in the war zone",
+        "brief": "The target is not just a server building: search, maps, and cloud services depend on infrastructure like this.",
+        "take": "The BBC reports that Ukraine has struck a data center belonging to Russian technology company Yandex for a third time. A data center is the machinery and storage behind services such as search, maps, advertising, and cloud computing. Damage may not immediately take every service offline, but it shows that digital infrastructure is being treated like power systems or railways in the war. For businesses and users, the practical risk is service availability, data backups, and a combination of cyber and physical disruption.",
+        "meta": "Geopolitics | Oct. 11",
+        "facts": [
+          [
+            "Target",
+            "A Yandex data center"
+          ],
+          [
+            "Count",
+            "Reportedly the third attack"
+          ],
+          [
+            "Location",
+            "Russia"
+          ]
+        ],
+        "visual": null,
+        "impacts": [
+          [
+            "Service reliability",
+            "Online services that rely on the facility may face disruption"
+          ],
+          [
+            "Warfare",
+            "Digital facilities are becoming targets like other critical infrastructure"
+          ]
+        ],
+        "next": [
+          "Whether Yandex services show visible outages",
+          "How Russia strengthens protection for key data facilities"
+        ],
+        "source": "BBC News",
+        "updated": "2026-10-11"
+      },
+      "sourceLinks": [
+        {
+          "title": "Ukraine strikes Yandex data centre in third attack on Russian tech giant",
+          "url": "https://www.bbc.co.uk/news/articles/cw0k0g57mk3zo?at_medium=RSS&at_campaign=rss",
+          "publisher": "BBC News"
+        }
+      ],
+      "eventImage": {
+        "url": "https://ichef.bbci.co.uk/ace/branded_news/1200/cpsprodpb/92b1/live/fca86430-c56c-11f1-a64c-550be9e3c66b.jpg",
+        "credit": "BBC News",
+        "link": "https://www.bbc.co.uk/news/articles/cw0k0g57mk3zo?at_medium=RSS&at_campaign=rss",
+        "zh": {
+          "alt": "乌克兰第三次打击 Yandex 数据中心，战争盯上了俄罗斯的数字底座",
+          "caption": "乌克兰第三次打击 Yandex 数据中心，战争盯上了俄罗斯的数字底座"
+        },
+        "en": {
+          "alt": "Ukraine hits a Yandex data center again, putting Russia’s digital backbone in the war zone",
+          "caption": "Ukraine hits a Yandex data center again, putting Russia’s digital backbone in the war zone"
+        }
+      },
+      "termGuides": [
+        {
+          "key": "Yandex",
+          "aliases": [
+            "Yandex",
+            "Yandex 数据中心"
+          ],
+          "zh": {
+            "label": "科技公司",
+            "meaning": "俄罗斯大型互联网公司，提供搜索、地图、广告和云等服务。",
+            "relation": "其数据中心成为乌克兰袭击目标。"
+          },
+          "en": {
+            "label": "Technology company",
+            "meaning": "A major Russian internet company offering search, maps, advertising, and cloud services.",
+            "relation": "One of its data centers was targeted in the reported Ukrainian strike."
+          }
+        },
+        {
+          "key": "data center",
+          "aliases": [
+            "data center",
+            "数据中心"
+          ],
+          "zh": {
+            "label": "数据中心",
+            "meaning": "集中放置服务器、存储和网络设备的设施。",
+            "relation": "它支撑 Yandex 的多项线上服务，因此被攻击具有更广泛影响。"
+          },
+          "en": {
+            "label": "Data center",
+            "meaning": "A facility that houses concentrated servers, storage, and network equipment.",
+            "relation": "It supports multiple Yandex services, making an attack potentially broader than a single site."
+          }
+        }
+      ]
+    },
+    {
+      "id": "ukraine-energy-ceasefire-dispute",
+      "cat": "能源",
+      "icon": "oil",
+      "title": "所谓俄乌“能源停火”还没落地：俄方沉默，乌方也说刚听说",
+      "brief": "电网和供暖设施能不能少挨炸，不能只看一方宣布，得看双方是否真的停手。",
+      "take": "特朗普宣称俄乌战争出现一项涉及能源设施的部分停火，但 BBC 报道称，泽连斯基欢迎任何降级承诺，俄罗斯则未作回应。这里的关键不是漂亮措辞，而是可核验的执行：冬季前后，发电、输电和供暖设施一旦持续受袭，普通家庭先面对的是停电、断暖和维修成本。现在这更像一个待确认的政治说法，而非已经稳定运转的安排。",
+      "meta": "能源｜10月11日",
+      "facts": [
+        [
+          "说法来源",
+          "特朗普宣称部分能源停火"
+        ],
+        [
+          "乌方反应",
+          "泽连斯基表示欢迎"
+        ],
+        [
+          "俄方反应",
+          "尚未回应"
+        ]
+      ],
+      "visual": null,
+      "impacts": [
+        [
+          "民生",
+          "能源设施若少受攻击，可直接减少停电和供暖风险"
+        ],
+        [
+          "可信度",
+          "没有双方确认和监督，停火容易停在口头上"
+        ]
+      ],
+      "next": [
+        "俄方是否正式确认",
+        "能源设施袭击是否实际下降"
+      ],
+      "source": "BBC News",
+      "updated": "2026-10-11",
+      "en": {
+        "cat": "Energy",
+        "title": "The claimed Ukraine energy ceasefire has not landed: Russia is silent and Ukraine says it just heard of it",
+        "brief": "Whether power and heating facilities stop being hit depends on both sides actually stopping, not on one announcement.",
+        "take": "Trump has claimed a partial ceasefire in the Russia-Ukraine war covering energy facilities. The BBC reports that Zelensky welcomed any promise of de-escalation, while Russia had not responded. The crucial issue is not the wording but verifiable compliance. Around winter, continued strikes on generation, transmission, and heating infrastructure mean blackouts, lost heat, and repair costs for ordinary households. For now, this looks more like an unconfirmed political claim than a working arrangement.",
+        "meta": "Energy | Oct. 11",
+        "facts": [
+          [
+            "Claim source",
+            "Trump claimed a partial energy ceasefire"
+          ],
+          [
+            "Ukrainian response",
+            "Zelensky welcomed it"
+          ],
+          [
+            "Russian response",
+            "No response reported"
+          ]
+        ],
+        "visual": null,
+        "impacts": [
+          [
+            "Daily life",
+            "Fewer attacks on energy sites could reduce blackout and heating risks"
+          ],
+          [
+            "Credibility",
+            "Without confirmation and monitoring from both sides, a ceasefire can remain only words"
+          ]
+        ],
+        "next": [
+          "Whether Russia formally confirms it",
+          "Whether attacks on energy facilities actually fall"
+        ],
+        "source": "BBC News",
+        "updated": "2026-10-11"
+      },
+      "sourceLinks": [
+        {
+          "title": "Trump's 'energy ceasefire' claim welcomed by Zelensky but Russia silent",
+          "url": "https://www.bbc.co.uk/news/articles/c6pvg4jyz1m0o?at_medium=RSS&at_campaign=rss",
+          "publisher": "BBC News"
+        }
+      ],
+      "eventImage": {
+        "url": "https://ichef.bbci.co.uk/ace/branded_news/1200/cpsprodpb/16d8/live/4817e400-c58a-11f1-bc2e-018d645d8d21.jpg",
+        "credit": "BBC News",
+        "link": "https://www.bbc.co.uk/news/articles/c6pvg4jyz1m0o?at_medium=RSS&at_campaign=rss",
+        "zh": {
+          "alt": "所谓俄乌“能源停火”还没落地：俄方沉默，乌方也说刚听说",
+          "caption": "所谓俄乌“能源停火”还没落地：俄方沉默，乌方也说刚听说"
+        },
+        "en": {
+          "alt": "The claimed Ukraine energy ceasefire has not landed: Russia is silent and Ukraine says it just heard of it",
+          "caption": "The claimed Ukraine energy ceasefire has not landed: Russia is silent and Ukraine says it just heard of it"
+        }
+      },
+      "termGuides": [
+        {
+          "key": "energy ceasefire",
+          "aliases": [
+            "energy ceasefire",
+            "能源停火"
+          ],
+          "zh": {
+            "label": "停火安排",
+            "meaning": "限制或停止攻击发电、输电、油气等能源设施的约定。",
+            "relation": "特朗普称俄乌出现这种部分安排，但双方确认和执行情况尚不清楚。"
+          },
+          "en": {
+            "label": "Ceasefire arrangement",
+            "meaning": "An agreement to limit or stop attacks on power, transmission, oil, gas, or other energy facilities.",
+            "relation": "Trump claimed a partial arrangement, but confirmation and implementation remain unclear."
+          }
+        }
+      ]
+    },
+    {
+      "id": "nepal-floods",
+      "cat": "公共安全",
+      "icon": "quake",
+      "title": "尼泊尔再遭洪水：房屋和桥梁被冲走，救援会被断路拖慢",
+      "brief": "洪水最麻烦的不只是淹水，桥一断，受灾的人连离开和等救援都更难。",
+      "take": "BBC 报道，尼泊尔中部出现新一轮洪水，房屋和桥梁被冲走。桥梁受损会把一场灾害变成交通和救援问题：村镇可能被隔开，食品、医疗和撤离都更困难。对当地居民，风险仍在于雨势、山地地形和基础设施受损会不会继续叠加；对出行者，山区道路和天气信息不能只看出发时的一次预报。",
+      "meta": "公共安全｜10月11日",
+      "facts": [
+        [
+          "地点",
+          "尼泊尔中部"
+        ],
+        [
+          "损失",
+          "房屋和桥梁被冲走"
+        ],
+        [
+          "灾害",
+          "新一轮洪水"
+        ]
+      ],
+      "visual": null,
+      "impacts": [
+        [
+          "救援",
+          "道路和桥梁中断会延误物资与医疗进入"
+        ],
+        [
+          "出行",
+          "山区交通和撤离路线可能随时变化"
+        ]
+      ],
+      "next": [
+        "伤亡和受困人数更新",
+        "降雨及道路恢复情况"
+      ],
+      "source": "BBC News",
+      "updated": "2026-10-11",
+      "en": {
+        "cat": "Public Safety",
+        "title": "Fresh Nepal floods sweep away homes and bridges, making rescue slower when roads vanish",
+        "brief": "Flooding is not just water: when a bridge goes, people can struggle even to leave or wait for help.",
+        "take": "The BBC reports fresh flooding in central Nepal that has swept away homes and bridges. A damaged bridge turns a flood into a transport and rescue crisis: towns can be cut off, and food, medical aid, and evacuation become harder. For residents, the open risks are further rain, mountainous terrain, and compounding infrastructure damage. For travelers, a single weather check before departure is not enough when mountain roads can change quickly.",
+        "meta": "Public safety | Oct. 11",
+        "facts": [
+          [
+            "Location",
+            "Central Nepal"
+          ],
+          [
+            "Damage",
+            "Homes and bridges swept away"
+          ],
+          [
+            "Disaster",
+            "Fresh flooding"
+          ]
+        ],
+        "visual": null,
+        "impacts": [
+          [
+            "Rescue",
+            "Broken roads and bridges delay aid and medical access"
+          ],
+          [
+            "Travel",
+            "Mountain transport and evacuation routes can change quickly"
+          ]
+        ],
+        "next": [
+          "Updated casualty and isolation figures",
+          "Rainfall and road-reopening conditions"
+        ],
+        "source": "BBC News",
+        "updated": "2026-10-11"
+      },
+      "sourceLinks": [
+        {
+          "title": "Homes and bridges swept away as fresh floods hit Nepal",
+          "url": "https://www.bbc.co.uk/news/articles/ck86zppejjw3o?at_medium=RSS&at_campaign=rss",
+          "publisher": "BBC News"
+        }
+      ],
+      "eventImage": {
+        "url": "https://ichef.bbci.co.uk/ace/branded_news/1200/cpsprodpb/9cf2/live/9cbf47b0-c56b-11f1-9a39-31b474234113.jpg",
+        "credit": "BBC News",
+        "link": "https://www.bbc.co.uk/news/articles/ck86zppejjw3o?at_medium=RSS&at_campaign=rss",
+        "zh": {
+          "alt": "尼泊尔再遭洪水：房屋和桥梁被冲走，救援会被断路拖慢",
+          "caption": "尼泊尔再遭洪水：房屋和桥梁被冲走，救援会被断路拖慢"
+        },
+        "en": {
+          "alt": "Fresh Nepal floods sweep away homes and bridges, making rescue slower when roads vanish",
+          "caption": "Fresh Nepal floods sweep away homes and bridges, making rescue slower when roads vanish"
+        }
+      },
+      "termGuides": [
+        {
+          "key": "flash floods",
+          "aliases": [
+            "flash floods",
+            "洪水",
+            "山洪"
+          ],
+          "zh": {
+            "label": "灾害",
+            "meaning": "短时间内水位快速上涨的洪涝灾害。",
+            "relation": "尼泊尔中部这轮洪水已冲毁房屋和桥梁。"
+          },
+          "en": {
+            "label": "Disaster",
+            "meaning": "Flooding in which water levels rise rapidly over a short period.",
+            "relation": "The latest flooding in central Nepal swept away homes and bridges."
+          }
+        }
+      ]
+    },
+    {
+      "id": "hurricane-simon-mexico",
+      "cat": "公共安全",
+      "icon": "alert",
+      "title": "飓风 Simon 靠近墨西哥，155英里时速的风不是“下场大雨”那么简单",
+      "brief": "强风、暴雨和洪水会一起到，沿海居民要先看撤离和断电安排，不要只盯风速。",
+      "take": "NPR 报道，飓风 Simon 正靠近墨西哥，最大风速约每小时155英里，并带来洪水担忧。这个级别的风暴危险不只来自风：暴雨、风暴潮、山洪和停电通常会同时出现，且影响可延续到登陆后。对当地人和旅客，最有用的信息不是围观路径图，而是当地政府的避险通知、交通关闭和通信备份安排。",
+      "meta": "公共安全｜10月11日",
+      "facts": [
+        [
+          "风暴",
+          "飓风 Simon"
+        ],
+        [
+          "最大风速",
+          "约每小时155英里"
+        ],
+        [
+          "风险",
+          "洪水担忧"
+        ]
+      ],
+      "visual": null,
+      "impacts": [
+        [
+          "人身安全",
+          "沿海和低洼地区需面对风暴潮、洪水与强风"
+        ],
+        [
+          "生活服务",
+          "停电、道路中断和通信受影响可能同时发生"
+        ]
+      ],
+      "next": [
+        "登陆位置及强度变化",
+        "当地撤离令和交通管制"
+      ],
+      "source": "NPR",
+      "updated": "2026-10-11",
+      "en": {
+        "cat": "Public Safety",
+        "title": "Hurricane Simon nears Mexico at 155 mph: this is more than a heavy-rain day",
+        "brief": "High winds, rain, and flooding can arrive together, so coastal residents need evacuation and outage plans, not just a wind-speed number.",
+        "take": "NPR reports that Hurricane Simon is nearing Mexico with winds around 155 mph and serious flooding concerns. At this strength, danger does not come from wind alone: heavy rain, storm surge, flash flooding, and power outages often arrive together and can persist after landfall. For residents and travelers, the useful information is local safety notices, road closures, and backup communications plans—not just watching a track map.",
+        "meta": "Public safety | Oct. 11",
+        "facts": [
+          [
+            "Storm",
+            "Hurricane Simon"
+          ],
+          [
+            "Maximum wind",
+            "About 155 mph"
+          ],
+          [
+            "Risk",
+            "Flooding concerns"
+          ]
+        ],
+        "visual": null,
+        "impacts": [
+          [
+            "Personal safety",
+            "Coastal and low-lying areas face storm surge, flooding, and severe wind"
+          ],
+          [
+            "Essential services",
+            "Power, roads, and communications may fail together"
+          ]
+        ],
+        "next": [
+          "Landfall location and intensity changes",
+          "Local evacuation orders and transport restrictions"
+        ],
+        "source": "NPR",
+        "updated": "2026-10-11"
+      },
+      "sourceLinks": [
+        {
+          "title": "Hurricane Simon nears Mexico with 155 mph winds and flooding fears",
+          "url": "https://www.npr.org/2026/10/11/nx-s1-5998022/hurricane-simon-nears-mexico-155-mph-winds-flooding-fears",
+          "publisher": "NPR"
+        }
+      ],
+      "eventImage": {
+        "url": "https://npr.brightspotcdn.com/dims3/default/strip/false/crop/6000x3375+0+13/resize/1400/quality/85/format/jpeg/?url=http%3A%2F%2Fnpr-brightspot.s3.amazonaws.com%2F66%2F6f%2Fc55fee1044bfb4ebd6865b275f29%2Fap26283701498998.jpg",
+        "credit": "NPR",
+        "link": "https://www.npr.org/2026/10/11/nx-s1-5998022/hurricane-simon-nears-mexico-155-mph-winds-flooding-fears",
+        "zh": {
+          "alt": "飓风 Simon 靠近墨西哥，155英里时速的风不是“下场大雨”那么简单",
+          "caption": "飓风 Simon 靠近墨西哥，155英里时速的风不是“下场大雨”那么简单"
+        },
+        "en": {
+          "alt": "Hurricane Simon nears Mexico at 155 mph: this is more than a heavy-rain day",
+          "caption": "Hurricane Simon nears Mexico at 155 mph: this is more than a heavy-rain day"
+        }
+      },
+      "termGuides": [
+        {
+          "key": "storm surge",
+          "aliases": [
+            "storm surge",
+            "风暴潮"
+          ],
+          "zh": {
+            "label": "灾害风险",
+            "meaning": "强风把海水推向岸边造成的异常增水。",
+            "relation": "它与暴雨一起，是飓风靠近墨西哥时沿海地区的主要危险。"
+          },
+          "en": {
+            "label": "Hazard",
+            "meaning": "An abnormal rise of sea water pushed ashore by a storm’s winds.",
+            "relation": "Along with heavy rain, it is a key coastal threat as the hurricane nears Mexico."
+          }
+        }
+      ]
+    },
+    {
+      "id": "djibouti-boat-capsize",
+      "cat": "公共安全",
       "icon": "ship",
-      "title": "韩国警告：若对俄燃料运输违法就追责，制裁漏洞盯上了海运链",
-      "brief": "制裁能不能起作用，往往不在声明里，而在一船船货有没有被查到。",
-      "take": "《卫报》报道，韩国表示，如果发现向俄罗斯运输燃料违反本国法律，将采取法律行动。报道没有说明是否已锁定具体违法主体，但这类表态反映出对俄制裁正在进入更难执行的环节：货物可以经由中间商、改旗船只或复杂航线流转。对全球市场来说，执法加严会增加航运、保险和能源贸易的不确定性，最终可能反映在运费和燃料价格上。",
-      "meta": "国际局势｜10月8日",
+      "title": "吉布提外海沉船致139人死亡，儿童也在其中",
+      "brief": "这不是一串遥远数字：海上偷渡路线的风险，仍在让家庭用生命换一次出路。",
+      "take": "联合国表示，一艘船在吉布提附近海域倾覆，造成至少139人死亡，其中包括儿童。此类事故往往发生在超载、船况差、缺乏救生设备的跨海迁移路线中；死伤数字背后，是安全通道不足和走私网络持续获利。眼下最紧迫的是搜救、身份确认和幸存者救助，但只靠一次救援很难消除下一艘危险船出发的原因。",
+      "meta": "公共安全｜10月11日",
+      "facts": [
+        [
+          "地点",
+          "吉布提附近海域"
+        ],
+        [
+          "死亡人数",
+          "至少139人"
+        ],
+        [
+          "信息来源",
+          "联合国"
+        ]
+      ],
+      "visual": null,
+      "impacts": [
+        [
+          "人道代价",
+          "儿童和家庭在高风险海路中首当其冲"
+        ],
+        [
+          "跨境治理",
+          "走私网络与缺少安全迁移渠道的问题仍未解决"
+        ]
+      ],
+      "next": [
+        "搜救与幸存者信息",
+        "遇难者身份及船只出发路线"
+      ],
+      "source": "BBC News",
+      "updated": "2026-10-11",
+      "en": {
+        "cat": "Public Safety",
+        "title": "A boat capsizes off Djibouti, killing 139 people, including children",
+        "brief": "This is not just a distant number: dangerous sea routes are still making families gamble their lives for a way out.",
+        "take": "The UN says a boat capsized near Djibouti, killing at least 139 people, including children. Such disasters often occur on cross-sea migration routes involving overcrowding, poor vessels, and too little life-saving equipment. Behind the death toll are limited safe routes and smuggling networks that continue to profit. Search and rescue, identification, and help for survivors are urgent, but one rescue alone cannot remove the reasons another dangerous boat may depart.",
+        "meta": "Public safety | Oct. 11",
+        "facts": [
+          [
+            "Location",
+            "Waters near Djibouti"
+          ],
+          [
+            "Deaths",
+            "At least 139"
+          ],
+          [
+            "Source",
+            "United Nations"
+          ]
+        ],
+        "visual": null,
+        "impacts": [
+          [
+            "Human cost",
+            "Children and families bear the brunt of dangerous sea crossings"
+          ],
+          [
+            "Cross-border policy",
+            "Smuggling networks and the lack of safe migration routes remain unresolved"
+          ]
+        ],
+        "next": [
+          "Search-and-rescue and survivor updates",
+          "Victim identities and the boat’s departure route"
+        ],
+        "source": "BBC News",
+        "updated": "2026-10-11"
+      },
+      "sourceLinks": [
+        {
+          "title": "Children among 139 dead after boat capsizes off Djibouti, UN says",
+          "url": "https://www.bbc.co.uk/news/articles/cwy7lxx60dg5o?at_medium=RSS&at_campaign=rss",
+          "publisher": "BBC News"
+        }
+      ],
+      "eventImage": {
+        "url": "https://ichef.bbci.co.uk/ace/branded_news/1200/cpsprodpb/6b0b/live/ba857dc0-c58c-11f1-a64c-550be9e3c66b.jpg",
+        "credit": "BBC News",
+        "link": "https://www.bbc.co.uk/news/articles/cwy7lxx60dg5o?at_medium=RSS&at_campaign=rss",
+        "zh": {
+          "alt": "吉布提外海沉船致139人死亡，儿童也在其中",
+          "caption": "吉布提外海沉船致139人死亡，儿童也在其中"
+        },
+        "en": {
+          "alt": "A boat capsizes off Djibouti, killing 139 people, including children",
+          "caption": "A boat capsizes off Djibouti, killing 139 people, including children"
+        }
+      },
+      "termGuides": [
+        {
+          "key": "UN",
+          "aliases": [
+            "UN",
+            "United Nations",
+            "联合国"
+          ],
+          "zh": {
+            "label": "国际组织",
+            "meaning": "由多国组成的国际组织。",
+            "relation": "联合国通报了这起沉船造成的死亡人数。"
+          },
+          "en": {
+            "label": "International organization",
+            "meaning": "An organization made up of member states worldwide.",
+            "relation": "The UN reported the death toll from the capsizing."
+          }
+        }
+      ]
+    },
+    {
+      "id": "poland-tusk-assassination-plot",
+      "cat": "国际局势",
+      "icon": "alert",
+      "title": "波兰拘留疑似策划刺杀总理者，欧洲政治暴力风险又近了一步",
+      "brief": "没有发生刺杀不等于风险不存在，针对政府首脑的谋划本身就会拉高社会紧张感。",
+      "take": "BBC 报道，波兰拘留一名涉嫌策划刺杀总理图斯克的男子。案件仍处于调查阶段，指控需要经过司法程序确认；不过，针对在任政府首脑的暴力威胁，往往会立即改变安保安排和政治氛围。欧洲多国近年持续应对极化、网络煽动和个人暴力风险，普通人先感受到的可能是活动安检变严、公共讨论更紧张。",
+      "meta": "国际局势｜10月11日",
       "facts": [
         [
           "国家",
-          "韩国"
+          "波兰"
         ],
         [
           "对象",
-          "运往俄罗斯的燃料运输"
+          "总理唐纳德·图斯克"
         ],
         [
-          "表态",
-          "若违法将采取法律行动"
+          "进展",
+          "嫌疑人已被拘留"
         ]
       ],
-      "visual": {
-        "type": "orbit",
-        "label": "制裁执行的链条",
-        "nodes": [
-          "燃料贸易",
-          "海运与中间商",
-          "核查是否违法",
-          "运费与供应风险"
-        ]
-      },
+      "visual": null,
       "impacts": [
         [
-          "能源价格",
-          "更严的核查会增加运输和保险成本"
+          "公共生活",
+          "大型活动和政要行程的安保可能加强"
         ],
         [
-          "地缘风险",
-          "制裁执行从政策口号转到物流细节，摩擦更容易发生"
+          "政治环境",
+          "暴力威胁会加深社会和政治对立"
         ]
       ],
       "next": [
-        "韩国是否披露调查对象或货运记录",
-        "其他国家是否跟进加强海运执法"
+        "检方公布的指控与证据",
+        "案件是否涉及同伙或网络煽动"
       ],
-      "source": "The Guardian",
-      "updated": "2026-10-08",
+      "source": "BBC News",
+      "updated": "2026-10-11",
       "en": {
         "cat": "Geopolitics",
-        "title": "South Korea warns on fuel shipments to Russia: sanctions enforcement comes down to ships",
-        "brief": "Sanctions work or fail not in statements, but in whether cargoes at sea are actually checked.",
-        "take": "The Guardian reports that South Korea said it would take legal action if fuel shipments to Russia were found to violate domestic law. The report does not say that specific offenders have been identified. But it shows how sanctions enforcement has moved into a difficult stage: cargo can travel through intermediaries, reflagged ships, and complex routes. Tighter enforcement can add uncertainty to shipping, insurance, and energy trade, with potential effects on freight and fuel prices.",
-        "meta": "Geopolitics | Oct. 8",
+        "title": "Poland detains a man over a suspected plot to kill its prime minister, bringing political violence closer",
+        "brief": "No assassination took place, but a plot against a head of government is enough to raise social tension and security measures.",
+        "take": "The BBC reports that Poland has detained a man suspected of planning to assassinate Prime Minister Donald Tusk. The case remains under investigation and any allegation must be tested in court. Still, a violent threat against a sitting leader can immediately change security arrangements and the political climate. European countries have been grappling with polarization, online incitement, and lone-actor violence; ordinary people may first notice tighter security at events and a more tense public debate.",
+        "meta": "Geopolitics | Oct. 11",
         "facts": [
           [
             "Country",
-            "South Korea"
+            "Poland"
           ],
           [
-            "Subject",
-            "Fuel shipments to Russia"
+            "Target",
+            "Prime Minister Donald Tusk"
           ],
           [
-            "Position",
-            "Legal action if domestic law was broken"
+            "Status",
+            "A suspect has been detained"
           ]
         ],
-        "visual": {
-          "type": "orbit",
-          "label": "The sanctions-enforcement chain",
-          "nodes": [
-            "Fuel trade",
-            "Ships and intermediaries",
-            "Check legality",
-            "Freight and supply risk"
-          ]
-        },
+        "visual": null,
         "impacts": [
           [
-            "Energy prices",
-            "Stricter checks can raise transport and insurance costs"
+            "Public life",
+            "Security at major events and official travel may tighten"
           ],
           [
-            "Geopolitical risk",
-            "Enforcement is moving from policy statements to logistics details, where friction is easier"
+            "Political climate",
+            "Threats of violence can deepen social and political division"
           ]
         ],
         "next": [
-          "Whether South Korea identifies targets or shipping records",
-          "Whether other countries tighten maritime enforcement"
+          "Charges and evidence released by prosecutors",
+          "Whether the case involves accomplices or online incitement"
         ],
-        "source": "The Guardian",
-        "updated": "2026-10-08"
+        "source": "BBC News",
+        "updated": "2026-10-11"
       },
       "sourceLinks": [
         {
-          "title": "South Korea threatens legal action if fuel shipments to Russia found to have broken law",
-          "url": "https://www.theguardian.com/world/2026/oct/08/south-korea-fuel-shipments-to-russia-domestic-law",
-          "publisher": "The Guardian"
+          "title": "Poland detains man suspected of planning assassination of PM Tusk",
+          "url": "https://www.bbc.co.uk/news/articles/c6n9rvynl5p5o?at_medium=RSS&at_campaign=rss",
+          "publisher": "BBC News"
         }
       ],
       "eventImage": {
-        "url": "https://i.guim.co.uk/img/media/1bc92aeec67082226ccd5e531f4e5378a53d0c2c/195_0_3750_3000/master/3750.jpg?width=1200&height=630&quality=85&auto=format&fit=crop&precrop=40:21,offset-x50,offset-y0&overlay-align=bottom%2Cleft&overlay-width=100p&overlay-base64=L2ltZy9zdGF0aWMvb3ZlcmxheXMvdGctZGVmYXVsdC5wbmc&enable=upscale&s=0b100d88e8400cd6730fb55dffa493d0",
-        "credit": "The Guardian",
-        "link": "https://www.theguardian.com/world/2026/oct/08/south-korea-fuel-shipments-to-russia-domestic-law",
+        "url": "https://ichef.bbci.co.uk/ace/branded_news/1200/cpsprodpb/187d/live/a4be0650-c592-11f1-9d5a-23156cc094cf.jpg",
+        "credit": "BBC News",
+        "link": "https://www.bbc.co.uk/news/articles/c6n9rvynl5p5o?at_medium=RSS&at_campaign=rss",
         "zh": {
-          "alt": "韩国警告：若对俄燃料运输违法就追责，制裁漏洞盯上了海运链",
-          "caption": "韩国警告：若对俄燃料运输违法就追责，制裁漏洞盯上了海运链"
+          "alt": "波兰拘留疑似策划刺杀总理者，欧洲政治暴力风险又近了一步",
+          "caption": "波兰拘留疑似策划刺杀总理者，欧洲政治暴力风险又近了一步"
         },
         "en": {
-          "alt": "South Korea warns on fuel shipments to Russia: sanctions enforcement comes down to ships",
-          "caption": "South Korea warns on fuel shipments to Russia: sanctions enforcement comes down to ships"
+          "alt": "Poland detains a man over a suspected plot to kill its prime minister, bringing political violence closer",
+          "caption": "Poland detains a man over a suspected plot to kill its prime minister, bringing political violence closer"
         }
       },
       "termGuides": [
         {
-          "key": "制裁规避",
+          "key": "Donald Tusk",
           "aliases": [
-            "制裁规避",
-            "sanctions evasion"
+            "Donald Tusk",
+            "图斯克",
+            "唐纳德·图斯克"
           ],
           "zh": {
-            "label": "制裁规避",
-            "meaning": "通过中间商、改换航线或其他安排躲开贸易限制。",
-            "relation": "韩国的警告针对的正是燃料运输可能绕开法律限制的问题。"
+            "label": "政治人物",
+            "meaning": "波兰总理。",
+            "relation": "警方拘留的嫌疑人被指涉嫌策划刺杀他。"
           },
           "en": {
-            "label": "Sanctions evasion",
-            "meaning": "Avoiding trade restrictions through intermediaries, rerouting, or other arrangements.",
-            "relation": "South Korea’s warning concerns the possibility that fuel shipments could bypass legal restrictions."
+            "label": "Political leader",
+            "meaning": "Poland’s prime minister.",
+            "relation": "The detained suspect is alleged to have planned to assassinate him."
           }
         }
       ]
     },
     {
-      "id": "tiktok-teen-safety-testing",
-      "cat": "公共安全",
-      "icon": "alert",
-      "title": "TikTok 被指拿青少年秘密测试安全功能：谁同意过？",
-      "brief": "给未成年人试用安全功能听起来没错，偷偷试才是问题。",
-      "take": "据 Business Standard 报道，纽约州总检察长指控 TikTok 曾秘密在青少年用户身上测试安全功能。指控尚需通过调查和法律程序检验，TikTok 的回应也很关键；不过争议的核心不是功能名称，而是平台是否清楚告知、是否取得合适同意，以及测试是否真的降低风险。未成年人的推荐、私信和隐私设置，不能只靠平台说“为了安全”就免于监督。",
-      "meta": "公共安全｜10月8日",
+      "id": "us-job-search-longer",
+      "cat": "全球经济",
+      "icon": "chart",
+      "title": "失业后找工作更久了：真正难受的是收入空窗被拉长",
+      "brief": "工作没那么容易接上时，房租、账单和求职焦虑都会比失业率数字更早压过来。",
+      "take": "NPR 报道，美国劳动者失业后找到下一份工作的时间正在变长。它未必意味着每个人都找不到工作，却提示就业市场的缓冲正在变薄：求职周期一拉长，家庭储蓄、失业救济和消费都会承压。对跨国市场而言，美国这个最大消费市场的就业韧性会影响进口需求和企业预期；对个人而言，更新简历、留出现金缓冲，比盯着一个总失业率更实际。",
+      "meta": "全球经济｜10月11日",
       "facts": [
         [
-          "指控方",
-          "纽约州总检察长"
+          "国家",
+          "美国"
         ],
         [
-          "平台",
-          "TikTok"
+          "变化",
+          "失业后再就业所需时间变长"
         ],
         [
-          "争议",
-          "被指秘密在青少年用户中测试安全功能"
+          "报道方",
+          "NPR"
         ]
       ],
-      "visual": {
-        "type": "orbit",
-        "label": "未成年人测试边界",
-        "nodes": [
-          "平台设计功能",
-          "向青少年测试",
-          "告知与同意",
-          "监管核查效果"
-        ]
-      },
+      "visual": null,
       "impacts": [
         [
-          "家长与学生",
-          "孩子使用的平台可能持续在调整推荐和保护机制"
+          "家庭财务",
+          "收入空窗拉长会更快消耗储蓄并压低消费"
         ],
         [
-          "隐私权",
-          "涉及未成年人的产品试验，对透明度和同意的要求应更高"
+          "全球需求",
+          "美国消费走弱会影响跨国企业和贸易需求"
         ]
       ],
       "next": [
-        "TikTok 如何回应这项指控",
-        "监管方会否公布测试范围和受影响用户情况"
+        "后续就业、工资与失业持续时间数据",
+        "失业救济与招聘需求是否变化"
       ],
-      "source": "Business Standard",
-      "updated": "2026-10-08",
+      "source": "NPR",
+      "updated": "2026-10-11",
       "en": {
-        "cat": "Public Safety",
-        "title": "TikTok is accused of secretly testing safety features on teens: who agreed to that?",
-        "brief": "Testing a safety feature for minors may sound reasonable; doing it secretly is the problem.",
-        "take": "Business Standard reports that New York’s attorney general accused TikTok of secretly testing safety features on teenage users. The allegation still needs to be tested through investigation and legal process, and TikTok’s response matters. The core question is not the feature’s label but whether users were clearly informed, appropriate consent was obtained, and the test actually reduced harm. A platform should not escape scrutiny merely by calling a change “for safety.”",
-        "meta": "Public safety | Oct. 8",
+        "cat": "Global Economy",
+        "title": "Finding a job after losing one is taking longer, and the painful part is the longer income gap",
+        "brief": "When work does not come quickly, rent, bills, and job-search stress hit before the unemployment-rate headline does.",
+        "take": "NPR reports that US workers are taking longer to find their next job after losing one. That does not mean everyone is unable to find work, but it suggests the labor market’s cushion is thinning. A longer search strains household savings, unemployment benefits, and spending. Because the US is the world’s largest consumer market, weaker job security can affect import demand and business expectations across borders. For individuals, keeping a cash buffer and updating a résumé may be more practical than watching one headline unemployment rate.",
+        "meta": "Global economy | Oct. 11",
         "facts": [
           [
-            "Accuser",
-            "New York attorney general"
-          ],
-          [
-            "Platform",
-            "TikTok"
-          ],
-          [
-            "Dispute",
-            "It is accused of secretly testing safety features on teens"
-          ]
-        ],
-        "visual": {
-          "type": "orbit",
-          "label": "Boundaries for testing on minors",
-          "nodes": [
-            "Platform designs feature",
-            "Tests on teens",
-            "Notice and consent",
-            "Regulator checks results"
-          ]
-        },
-        "impacts": [
-          [
-            "Parents and students",
-            "The platforms children use may keep changing recommendations and protections"
-          ],
-          [
-            "Privacy",
-            "Product testing involving minors deserves a higher bar for transparency and consent"
-          ]
-        ],
-        "next": [
-          "How TikTok responds to the allegation",
-          "Whether regulators disclose the test’s scope and affected users"
-        ],
-        "source": "Business Standard",
-        "updated": "2026-10-08"
-      },
-      "sourceLinks": [
-        {
-          "title": "TikTok accused by New York AG of secretly testing safety features on teens",
-          "url": "https://www.business-standard.com/world-news/tiktok-accused-by-new-york-ag-of-secretly-testing-safety-features-on-teens-126100800269_1.html",
-          "publisher": "Business Standard"
-        }
-      ],
-      "eventImage": {
-        "url": "https://bsmedia.business-standard.com/_media/bs/img/article/2026-10/08/thumb/fitandfill/1200X628/1791434433-0587.jpg",
-        "credit": "Business Standard",
-        "link": "https://www.business-standard.com/world-news/tiktok-accused-by-new-york-ag-of-secretly-testing-safety-features-on-teens-126100800269_1.html",
-        "zh": {
-          "alt": "TikTok 被指拿青少年秘密测试安全功能：谁同意过？",
-          "caption": "TikTok 被指拿青少年秘密测试安全功能：谁同意过？"
-        },
-        "en": {
-          "alt": "TikTok is accused of secretly testing safety features on teens: who agreed to that?",
-          "caption": "TikTok is accused of secretly testing safety features on teens: who agreed to that?"
-        }
-      },
-      "termGuides": [
-        {
-          "key": "纽约州总检察长",
-          "aliases": [
-            "纽约州总检察长",
-            "New York AG",
-            "New York attorney general"
-          ],
-          "zh": {
-            "label": "纽约州总检察长",
-            "meaning": "负责纽约州法律执行和消费者保护等事务的最高法律官员。",
-            "relation": "该办公室对 TikTok 涉及青少年安全测试的做法提出指控。"
-          },
-          "en": {
-            "label": "New York attorney general",
-            "meaning": "New York State’s chief legal officer, with responsibilities including law enforcement and consumer protection.",
-            "relation": "The office made the allegation over TikTok’s testing of teen safety features."
-          }
-        },
-        {
-          "key": "TikTok",
-          "aliases": [
-            "TikTok",
-            "抖音海外版"
-          ],
-          "zh": {
-            "label": "TikTok",
-            "meaning": "面向全球用户的短视频平台。",
-            "relation": "它被指在未充分公开的情况下对青少年测试安全功能。"
-          },
-          "en": {
-            "label": "TikTok",
-            "meaning": "A global short-video platform.",
-            "relation": "It is accused of testing safety features on teenagers without adequate disclosure."
-          }
-        }
-      ]
-    },
-    {
-      "id": "anthropic-election-policy",
-      "cat": "AI",
-      "icon": "alert",
-      "title": "Anthropic 禁止用模型干预选举：规则写上去，执行才是难题",
-      "brief": "禁止条款能拦住明目张胆的滥用，却未必挡得住伪装成普通内容的操纵。",
-      "take": "Anthropic 更新使用政策，禁止滥用模型以及干预选举，TechCrunch 报道。给生成式 AI 划红线当然必要，尤其在模型能批量写文案、生成图片和模仿对话的情况下；但真正麻烦的是识别和执行。平台要区分合法的政治表达、讽刺内容与有组织的欺骗，并在速度、隐私和误伤之间取舍。政策不是安全本身，而是之后审核、申诉和处罚能否跟上的起点。",
-      "meta": "AI｜10月8日",
-      "facts": [
-        [
-          "公司",
-          "Anthropic"
-        ],
-        [
-          "变更",
-          "更新使用政策"
-        ],
-        [
-          "新增禁令",
-          "模型滥用与选举干预"
-        ]
-      ],
-      "visual": {
-        "type": "orbit",
-        "label": "选举滥用防线",
-        "nodes": [
-          "生成大量内容",
-          "伪装政治信息",
-          "平台识别处置",
-          "申诉与误伤平衡"
-        ]
-      },
-      "impacts": [
-        [
-          "选民",
-          "低成本批量内容会让真假政治信息更难分辨"
-        ],
-        [
-          "开发者",
-          "把模型接入传播工具时，需要承担更明确的使用限制"
-        ]
-      ],
-      "next": [
-        "Anthropic 如何定义和识别选举干预",
-        "违规账户会面临哪些技术或商业处罚"
-      ],
-      "source": "TechCrunch AI",
-      "updated": "2026-10-08",
-      "en": {
-        "cat": "AI",
-        "title": "Anthropic bans election interference with its models; enforcement is the hard part",
-        "brief": "A written ban may stop obvious abuse, but it may not catch manipulation disguised as ordinary content.",
-        "take": "Anthropic has updated its usage policy to ban model abuse and election interference, TechCrunch reports. Red lines matter when generative AI can produce text, images, and simulated conversations at scale. The difficult part is detection and enforcement: platforms must distinguish lawful political speech and satire from organized deception, while balancing speed, privacy, and false positives. A policy is not safety by itself; it is the starting point for moderation, appeals, and penalties.",
-        "meta": "AI | Oct. 8",
-        "facts": [
-          [
-            "Company",
-            "Anthropic"
+            "Country",
+            "United States"
           ],
           [
             "Change",
-            "Updated usage policy"
+            "The time needed to find work after job loss is increasing"
           ],
           [
-            "New bans",
-            "Model abuse and election interference"
+            "Publisher",
+            "NPR"
           ]
         ],
-        "visual": {
-          "type": "orbit",
-          "label": "Defending against election abuse",
-          "nodes": [
-            "Content made at scale",
-            "Political information is disguised",
-            "Platform detects and acts",
-            "Appeals and false positives"
-          ]
-        },
+        "visual": null,
         "impacts": [
           [
-            "Voters",
-            "Cheap, mass-produced content can make political information harder to judge"
+            "Household finances",
+            "A longer income gap drains savings faster and can reduce spending"
           ],
           [
-            "Developers",
-            "Those connecting models to distribution tools face clearer limits on use"
+            "Global demand",
+            "Weaker US consumption can affect multinational firms and trade demand"
           ]
         ],
         "next": [
-          "How Anthropic defines and detects election interference",
-          "What technical or commercial penalties apply to violations"
+          "New data on jobs, wages, and unemployment duration",
+          "Whether benefits and hiring demand change"
         ],
-        "source": "TechCrunch AI",
-        "updated": "2026-10-08"
+        "source": "NPR",
+        "updated": "2026-10-11"
       },
       "sourceLinks": [
         {
-          "title": "Anthropic changes usage policy to ban model abuse and election interference",
-          "url": "https://techcrunch.com/2026/10/08/anthropic-changes-usage-policy-to-ban-model-abuse-and-election-interference/",
-          "publisher": "TechCrunch AI"
+          "title": "It's taking longer to find a new job after losing one",
+          "url": "https://www.npr.org/2026/10/11/nx-s1-5995238/jobs-employment-economy-unemployment-benefits",
+          "publisher": "NPR"
         }
       ],
       "eventImage": {
-        "url": "https://techcrunch.com/wp-content/uploads/2026/09/GettyImages-2294192768.jpg?resize=1200,798",
-        "credit": "TechCrunch AI",
-        "link": "https://techcrunch.com/2026/10/08/anthropic-changes-usage-policy-to-ban-model-abuse-and-election-interference/",
+        "url": "https://npr.brightspotcdn.com/dims3/default/strip/false/crop/6000x3375+0+79/resize/1400/quality/85/format/jpeg/?url=http%3A%2F%2Fnpr-brightspot.s3.amazonaws.com%2Ff2%2Fa1%2F2bc298f340b38e8dadaa0dabb377%2Fgettyimages-2297110253.jpg",
+        "credit": "NPR",
+        "link": "https://www.npr.org/2026/10/11/nx-s1-5995238/jobs-employment-economy-unemployment-benefits",
         "zh": {
-          "alt": "Anthropic 禁止用模型干预选举：规则写上去，执行才是难题",
-          "caption": "Anthropic 禁止用模型干预选举：规则写上去，执行才是难题"
+          "alt": "失业后找工作更久了：真正难受的是收入空窗被拉长",
+          "caption": "失业后找工作更久了：真正难受的是收入空窗被拉长"
         },
         "en": {
-          "alt": "Anthropic bans election interference with its models; enforcement is the hard part",
-          "caption": "Anthropic bans election interference with its models; enforcement is the hard part"
+          "alt": "Finding a job after losing one is taking longer, and the painful part is the longer income gap",
+          "caption": "Finding a job after losing one is taking longer, and the painful part is the longer income gap"
         }
       },
       "termGuides": [
         {
-          "key": "Anthropic",
+          "key": "unemployment benefits",
           "aliases": [
-            "Anthropic"
+            "unemployment benefits",
+            "失业救济"
           ],
           "zh": {
-            "label": "Anthropic",
-            "meaning": "开发 Claude 等模型的美国 AI 公司。",
-            "relation": "它更新条款，禁止利用其模型进行选举干预。"
+            "label": "收入支持",
+            "meaning": "失业者在符合条件时可领取的阶段性补助。",
+            "relation": "求职时间变长，会让这类支持和家庭储蓄承受更大压力。"
           },
           "en": {
-            "label": "Anthropic",
-            "meaning": "A US AI company that develops models including Claude.",
-            "relation": "It updated its rules to prohibit election interference using its models."
-          }
-        },
-        {
-          "key": "选举干预",
-          "aliases": [
-            "选举干预",
-            "election interference"
-          ],
-          "zh": {
-            "label": "选举干预",
-            "meaning": "用欺骗、操纵或非法手段影响选民、候选人或投票过程。",
-            "relation": "Anthropic 将这类模型使用列为禁止行为。"
-          },
-          "en": {
-            "label": "Election interference",
-            "meaning": "Using deception, manipulation, or illegal means to affect voters, candidates, or voting.",
-            "relation": "Anthropic now lists this as prohibited use of its models."
-          }
-        }
-      ]
-    },
-    {
-      "id": "openai-math-standards",
-      "cat": "AI",
-      "icon": "code",
-      "title": "OpenAI 的数学答案还过不了同行标准：会写步骤不等于能证明",
-      "brief": "把 AI 用在作业和研究前，别把看起来完整的推导当成可靠结论。",
-      "take": "TechCrunch 报道，OpenAI 给出的数学解答目前尚未达到该领域的标准。数学的难点不只是算出一个像样的答案，而是每一步能否严格成立、能否被别人复现和检查。对学生、研究者和依赖 AI 写技术内容的人，这是一记实用提醒：模型可以帮你找思路、整理符号和检查直觉，但在高风险结论上，仍需要教材、软件验证或专业人士复核。",
-      "meta": "AI｜10月8日",
-      "facts": [
-        [
-          "公司",
-          "OpenAI"
-        ],
-        [
-          "领域",
-          "数学解答"
-        ],
-        [
-          "结论",
-          "据报尚未达到领域标准"
-        ]
-      ],
-      "visual": {
-        "type": "orbit",
-        "label": "数学AI的正确用法",
-        "nodes": [
-          "AI给出推导",
-          "步骤看似完整",
-          "独立验证证明",
-          "再用于作业研究"
-        ]
-      },
-      "impacts": [
-        [
-          "学习",
-          "AI 能帮你起步，但不能替代对证明过程的理解"
-        ],
-        [
-          "专业工作",
-          "工程、金融和科研中的公式结论需独立验证"
-        ]
-      ],
-      "next": [
-        "评估所采用的数学标准和测试范围",
-        "OpenAI 是否公布改进计划或错误案例"
-      ],
-      "source": "TechCrunch AI",
-      "updated": "2026-10-08",
-      "en": {
-        "cat": "AI",
-        "title": "OpenAI’s math answers still do not meet the field’s standard: steps are not proof",
-        "brief": "Before using AI for coursework or research, do not mistake a polished derivation for a reliable conclusion.",
-        "take": "TechCrunch reports that OpenAI’s math solutions are not yet meeting the field’s standards. In mathematics, the challenge is not merely producing a plausible answer; every step must be valid, reproducible, and checkable. For students, researchers, and people using AI for technical writing, the practical lesson is clear: use a model for ideas, notation, and intuition, but verify high-stakes conclusions with textbooks, software, or experts.",
-        "meta": "AI | Oct. 8",
-        "facts": [
-          [
-            "Company",
-            "OpenAI"
-          ],
-          [
-            "Field",
-            "Mathematical solutions"
-          ],
-          [
-            "Finding",
-            "Reportedly not yet meeting field standards"
-          ]
-        ],
-        "visual": {
-          "type": "orbit",
-          "label": "Using math AI properly",
-          "nodes": [
-            "AI offers a derivation",
-            "Steps look complete",
-            "Independently verify proof",
-            "Then use it in work"
-          ]
-        },
-        "impacts": [
-          [
-            "Learning",
-            "AI can help you start, but it cannot replace understanding a proof"
-          ],
-          [
-            "Professional work",
-            "Formula-based conclusions in engineering, finance, and research need independent checks"
-          ]
-        ],
-        "next": [
-          "Which mathematical standards and tests were used",
-          "Whether OpenAI publishes a remediation plan or error examples"
-        ],
-        "source": "TechCrunch AI",
-        "updated": "2026-10-08"
-      },
-      "sourceLinks": [
-        {
-          "title": "OpenAI's math solutions aren't meeting the field's standards yet",
-          "url": "https://techcrunch.com/2026/10/08/openais-math-solutions-arent-meeting-the-fields-standards-yet/",
-          "publisher": "TechCrunch AI"
-        }
-      ],
-      "eventImage": {
-        "url": "https://techcrunch.com/wp-content/uploads/2026/09/Screenshot-2026-09-11-at-1.39.30-PM.png?w=672",
-        "credit": "TechCrunch AI",
-        "link": "https://techcrunch.com/2026/10/08/openais-math-solutions-arent-meeting-the-fields-standards-yet/",
-        "zh": {
-          "alt": "OpenAI 的数学答案还过不了同行标准：会写步骤不等于能证明",
-          "caption": "OpenAI 的数学答案还过不了同行标准：会写步骤不等于能证明"
-        },
-        "en": {
-          "alt": "OpenAI’s math answers still do not meet the field’s standard: steps are not proof",
-          "caption": "OpenAI’s math answers still do not meet the field’s standard: steps are not proof"
-        }
-      },
-      "termGuides": [
-        {
-          "key": "OpenAI",
-          "aliases": [
-            "OpenAI"
-          ],
-          "zh": {
-            "label": "OpenAI",
-            "meaning": "开发 ChatGPT 等产品的美国 AI 公司。",
-            "relation": "报道讨论的是该公司模型给出的数学解答质量。"
-          },
-          "en": {
-            "label": "OpenAI",
-            "meaning": "The US AI company behind products including ChatGPT.",
-            "relation": "The report concerns the quality of mathematical solutions generated by its models."
-          }
-        },
-        {
-          "key": "数学证明",
-          "aliases": [
-            "数学证明",
-            "mathematical proof"
-          ],
-          "zh": {
-            "label": "数学证明",
-            "meaning": "按严格逻辑说明一个结论必然成立的过程。",
-            "relation": "这是评估 AI 数学答案时，不能用流畅文字替代的部分。"
-          },
-          "en": {
-            "label": "Mathematical proof",
-            "meaning": "A strict logical argument showing that a conclusion must be true.",
-            "relation": "It is the part of an AI math answer that fluent writing cannot substitute for."
+            "label": "Income support",
+            "meaning": "Temporary payments available to eligible people after job loss.",
+            "relation": "A longer job search puts more pressure on this support and on household savings."
           }
         }
       ]

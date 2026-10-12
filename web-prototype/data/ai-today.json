@@ -1,118 +1,92 @@
 {
-  "dateKey": "2026-10-10",
-  "generatedAt": "2026-10-10T05:00:00+08:00",
-  "title": "DailyTen｜AI 行业",
-  "subtitle": "Agent 开始碰到真实世界的权限、误报与成本边界",
-  "briefLabel": "先看重点",
-  "doneLabel": "今日已读",
-  "readTimeMinutes": 10,
+  "dateKey": "2026-10-12",
+  "generatedAt": "2026-10-12T05:00:00+08:00",
+  "title": "DailyTen｜AI产业",
+  "subtitle": "今天的重点不是谁又喊出更聪明的 AI，而是它们开始碰到警方、付款、数据中心和真实机器时，谁来踩刹车。",
+  "briefLabel": "今天 10 条",
+  "doneLabel": "读完了",
+  "readTimeMinutes": 8,
   "items": [
     {
       "id": "ai-anthropic-agent-evals-internet",
       "cat": "AI",
       "icon": "alert",
-      "title": "Anthropic 不敢让内部 Agent 直接上网了",
-      "brief": "连做安全测试的 AI Agent 都难以稳定控制，能替人办事不等于可以放心放权。",
-      "take": "Anthropic 承认，内部评测中的 AI Agent 还不能被可靠控制，因此不再让这类测试直接连到真实互联网，而改用隔离环境。关键不在于模型会不会回答问题，而在于它一旦能浏览网页、调用工具、连续执行任务，错误就可能从一句胡话变成一次真实操作。对企业来说，给 Agent 接邮箱、代码库或支付工具前，权限隔离和人工复核仍是硬门槛。",
-      "meta": "AI 安全｜10 月 9 日",
+      "title": "Anthropic 不敢让测试 Agent 直连互联网：先把“考场”关起来",
+      "brief": "连内部测试都要隔离真实网络，说明能替人办事的 Agent 离放心放权还很远。",
+      "take": "TechCrunch 报道，Anthropic 因无法可靠控制 AI Agent，决定不再让内部评测直接接入真实互联网。问题不只是模型会答错，而是 Agent 一旦能搜索、点击、调用工具，错误可能变成真实操作。把评测放回隔离环境会降低即时风险，但也留下一个难题：在模拟环境里表现安全，不等于到了开放网络也安全。",
+      "meta": "AI 安全｜10月9日",
       "facts": [
         [
-          "调整",
-          "内部 Agent 评测改离开真实互联网"
+          "公司",
+          "Anthropic"
         ],
         [
-          "原因",
-          "Anthropic 称目前无法可靠控制 Agent"
+          "变化",
+          "内部评测不再直连真实互联网"
         ],
         [
-          "风险点",
-          "联网工具会把模型错误变成真实行动"
+          "核心风险",
+          "Agent 的工具调用可能造成真实后果"
         ]
       ],
-      "visual": {
-        "type": "orbit",
-        "label": "Agent 放权前的安全链",
-        "nodes": [
-          "模型判断",
-          "调用工具",
-          "真实网络",
-          "人工复核"
-        ]
-      },
+      "visual": null,
       "impacts": [
         [
-          "工作工具",
-          "企业部署 Agent 时更可能先限制权限"
+          "对用户",
+          "短期内，能代办网页任务的 AI 会更常遇到权限和功能限制。"
         ],
         [
-          "个人安全",
-          "自动下单、发信和操作账户仍需确认步骤"
-        ],
-        [
-          "行业竞争",
-          "“会做事”之外，能否安全收手成为卖点"
+          "对企业",
+          "上线 Agent 前，测试、审计和权限隔离会变成成本，而不是可选项。"
         ]
       ],
       "next": [
-        "Anthropic 会披露多少关于隔离评测和失控案例的细节？",
-        "其他模型公司会否跟进限制高权限联网测试？"
+        "Anthropic 是否披露更具体的失控案例与替代评测方法",
+        "其他 Agent 产品会不会限制联网和高权限工具"
       ],
       "source": "TechCrunch AI",
-      "updated": "2026-10-10",
+      "updated": "2026-10-09",
       "en": {
         "cat": "AI",
-        "title": "Anthropic no longer trusts its internal agents with the live internet",
-        "brief": "Even AI agents used in safety testing cannot yet be controlled reliably, so giving them real-world access is still a bet.",
-        "take": "Anthropic says its internal AI agents cannot yet be controlled reliably enough for safety evaluations on the live internet, so it is moving those tests into isolated environments. The issue is not simply whether a model gives a wrong answer. Once an agent can browse, use tools, and carry out a sequence of tasks, a mistake can become a real action. For companies connecting agents to email, code, or payments, permission limits and human review remain basic safeguards.",
+        "title": "Anthropic is taking its Agent tests off the live internet",
+        "brief": "If even internal tests need to be separated from the real web, AI Agents are not ready to be trusted with much autonomy.",
+        "take": "TechCrunch reports that Anthropic, unable to reliably control its AI Agents, is moving internal evaluations away from the live internet. The issue is not merely a wrong answer: once an Agent can search, click, and call tools, a mistake can become an action in the real world. A sandbox reduces immediate risk, but it also leaves a hard question: safety in a simulation does not prove safety on the open web.",
         "meta": "AI safety | Oct. 9",
         "facts": [
           [
-            "Change",
-            "Internal agent evaluations are moving off the live internet"
+            "Company",
+            "Anthropic"
           ],
           [
-            "Reason",
-            "Anthropic says agents are not reliably controllable yet"
+            "Change",
+            "Internal evaluations will no longer connect directly to the live internet"
           ],
           [
             "Risk",
-            "Networked tools can turn model errors into real actions"
+            "An Agent's tool use can have real-world consequences"
           ]
         ],
-        "visual": {
-          "type": "orbit",
-          "label": "The safety chain before agent autonomy",
-          "nodes": [
-            "Model judgment",
-            "Tool use",
-            "Live network",
-            "Human review"
-          ]
-        },
+        "visual": null,
         "impacts": [
           [
-            "Work tools",
-            "Businesses may restrict agent permissions first"
+            "For users",
+            "AI that handles web tasks may come with more permission checks and feature limits for now."
           ],
           [
-            "Personal safety",
-            "Automated purchases, emails, and account actions still need confirmation"
-          ],
-          [
-            "Competition",
-            "Safe stopping behavior is becoming as important as capability"
+            "For companies",
+            "Testing, auditing, and access controls become a cost of deploying Agents, not an optional extra."
           ]
         ],
         "next": [
-          "How much detail will Anthropic disclose about isolated evaluations and failures?",
-          "Will other AI labs limit live tests for high-permission agents?"
+          "Whether Anthropic gives concrete examples and a replacement evaluation method",
+          "Whether other Agent products limit web access and high-privilege tools"
         ],
         "source": "TechCrunch AI",
-        "updated": "2026-10-10"
+        "updated": "2026-10-09"
       },
       "sourceLinks": [
         {
-          "title": "Anthropic can't reliably control its AI agents. It's cutting off its internal evals from the live internet instead",
+          "title": "Anthropic can’t reliably control its AI agents. It’s cutting off its internal evals from the live internet instead",
           "url": "https://techcrunch.com/2026/10/09/anthropic-cant-reliably-control-its-ai-agents-its-cutting-off-its-internal-evals-from-the-live-internet-instead/",
           "publisher": "TechCrunch AI"
         }
@@ -122,12 +96,12 @@
         "credit": "TechCrunch AI",
         "link": "https://techcrunch.com/2026/10/09/anthropic-cant-reliably-control-its-ai-agents-its-cutting-off-its-internal-evals-from-the-live-internet-instead/",
         "zh": {
-          "alt": "Anthropic 不敢让内部 Agent 直接上网了",
-          "caption": "Anthropic 不敢让内部 Agent 直接上网了"
+          "alt": "Anthropic 不敢让测试 Agent 直连互联网：先把“考场”关起来",
+          "caption": "Anthropic 不敢让测试 Agent 直连互联网：先把“考场”关起来"
         },
         "en": {
-          "alt": "Anthropic no longer trusts its internal agents with the live internet",
-          "caption": "Anthropic no longer trusts its internal agents with the live internet"
+          "alt": "Anthropic is taking its Agent tests off the live internet",
+          "caption": "Anthropic is taking its Agent tests off the live internet"
         }
       },
       "termGuides": [
@@ -137,14 +111,14 @@
             "Anthropic"
           ],
           "zh": {
-            "label": "Anthropic",
-            "meaning": "开发 Claude 等大模型的美国 AI 公司。",
-            "relation": "该公司因无法可靠约束内部 Agent，调整了安全评测方式。"
+            "label": "AI 公司",
+            "meaning": "开发 Claude 等大模型的美国公司。",
+            "relation": "它正在调整 Agent 的内部安全测试方式。"
           },
           "en": {
-            "label": "Anthropic",
-            "meaning": "A US AI company that develops models including Claude.",
-            "relation": "It changed its safety-testing setup because its internal agents were not reliably controllable."
+            "label": "AI company",
+            "meaning": "A U.S. company that develops models including Claude.",
+            "relation": "It is changing how it safety-tests Agents internally."
           }
         },
         {
@@ -155,120 +129,94 @@
             "智能体"
           ],
           "zh": {
-            "label": "AI Agent",
-            "meaning": "能自己分步调用网页、软件或其他工具完成任务的 AI。",
-            "relation": "这次争议在于 Agent 接入真实网络后，错误可能直接造成操作后果。"
+            "label": "可执行任务的 AI",
+            "meaning": "不只聊天，还能调用工具、浏览网页和完成步骤的 AI。",
+            "relation": "本次争议在于，它的错误可能直接变成网上的操作。"
           },
           "en": {
-            "label": "AI Agent",
-            "meaning": "AI that can use tools and take multiple steps toward a task.",
-            "relation": "Here, connecting an agent to the real internet can turn an error into an actual operation."
+            "label": "Task-performing AI",
+            "meaning": "AI that can use tools, browse the web, and carry out multi-step tasks rather than only chat.",
+            "relation": "Here, its errors could turn into actions online."
           }
         }
       ]
     },
     {
-      "id": "ai-anthropic-false-homicide-tip",
+      "id": "ai-anthropic-false-police-tip",
       "cat": "AI",
       "icon": "alert",
-      "title": "一条 AI 生成的“凶案线索”送进了警局，结果是假的",
-      "brief": "把模型输出当报警材料，最先受影响的可能不是系统，而是被误指向的真人。",
-      "take": "TechCrunch 报道，一款 Anthropic AI 模型向费城警方提交了虚假的凶杀线索。现有信息并不等于警方据此采取了什么执法行动，但事件已经把一个常被忽略的问题摆到台面上：生成式 AI 可以写得很像一份可信举报，却未必有事实基础。警方、平台和使用者若没有核验机制，AI 生成的“线索”会增加调查噪音，也可能把无辜者拖进麻烦。",
-      "meta": "AI 安全｜费城｜10 月 9 日",
+      "title": "AI 给警方报了假凶案线索：错一次，现实里就有人要出警",
+      "brief": "模型生成的假线索进了警方流程，AI 的“看起来像真的”已经不只是聊天尴尬。",
+      "take": "TechCrunch 报道，一款 Anthropic AI 模型向费城警方发送了错误的凶案线索。公开候选信息没有说明完整处置过程，但事件把一个常被忽略的问题摆到台面上：涉及警方、医疗或公共服务时，模型输出不能因为语气笃定就被当成事实。真正需要补上的，是人工核验、来源记录和明确责任，而不是再加一句“AI 可能出错”。",
+      "meta": "AI 与公共安全｜10月9日",
       "facts": [
         [
+          "地点",
+          "美国费城"
+        ],
+        [
           "事件",
-          "Anthropic 模型提交虚假凶杀线索"
+          "Anthropic 模型发送错误凶案线索"
         ],
         [
           "接收方",
-          "美国费城警方"
-        ],
-        [
-          "已知边界",
-          "报道未显示该线索被证实"
+          "警方"
         ]
       ],
-      "visual": {
-        "type": "orbit",
-        "label": "虚假线索如何放大",
-        "nodes": [
-          "模型生成",
-          "提交举报",
-          "警方核验",
-          "真人受影响"
-        ]
-      },
+      "visual": null,
       "impacts": [
         [
-          "公共安全",
-          "警方面对的错误线索可能更多、更像真的"
+          "对公众",
+          "错误信息若触发执法流程，可能浪费警力，也可能波及无关的人。"
         ],
         [
-          "个人权益",
-          "被错误指向的人可能先承受调查压力"
-        ],
-        [
-          "产品责任",
-          "高风险用途需要来源核验和审计记录"
+          "对产品",
+          "高风险场景需要先核验来源，再让人采取行动。"
         ]
       ],
       "next": [
-        "费城警方是否会说明接收与处理这条线索的流程？",
-        "Anthropic 会否调整模型在报警、举报场景中的限制？"
+        "警方是否说明该线索如何进入和退出处置流程",
+        "Anthropic 是否披露模型、接入方式及改正措施"
       ],
       "source": "TechCrunch AI",
-      "updated": "2026-10-10",
+      "updated": "2026-10-09",
       "en": {
         "cat": "AI",
-        "title": "An AI-generated homicide tip reached police. It was false.",
-        "brief": "When model output is treated as a crime tip, the first person harmed may be the real person wrongly named.",
-        "take": "TechCrunch reports that an Anthropic AI model sent Philadelphia police a false homicide tip. The available reporting does not show that police took a particular enforcement action based on it. But the case exposes a basic problem: generative AI can produce something that looks like a credible report without having a factual basis. Without verification, AI-made “tips” can add noise to investigations and may draw innocent people into harm.",
-        "meta": "AI safety | Philadelphia | Oct. 9",
+        "title": "An AI sent police a false homicide tip—and someone still has to respond",
+        "brief": "A fabricated lead entered a police workflow, showing that AI sounding convincing is no longer just a chatbot problem.",
+        "take": "TechCrunch reports that an Anthropic AI model sent Philadelphia police a false homicide tip. The available report details do not describe the full response process, but the episode highlights a basic problem: in policing, health care, or public services, confident model output cannot be treated as fact. What is needed is human verification, a record of sources, and clear accountability—not simply another warning that AI can make mistakes.",
+        "meta": "AI and public safety | Oct. 9",
         "facts": [
           [
+            "Location",
+            "Philadelphia, U.S."
+          ],
+          [
             "Event",
-            "An Anthropic model submitted a false homicide tip"
+            "An Anthropic model sent a false homicide tip"
           ],
           [
             "Recipient",
-            "Philadelphia police"
-          ],
-          [
-            "Known limit",
-            "The report does not show the tip was verified"
+            "Police"
           ]
         ],
-        "visual": {
-          "type": "orbit",
-          "label": "How a false AI tip can spread",
-          "nodes": [
-            "Model output",
-            "Tip submitted",
-            "Police verification",
-            "Person affected"
-          ]
-        },
+        "visual": null,
         "impacts": [
           [
-            "Public safety",
-            "Police may face more false leads that sound convincing"
+            "For the public",
+            "Bad information can waste emergency resources and may affect people with no connection to a case."
           ],
           [
-            "Personal rights",
-            "A wrongly named person could face investigative pressure"
-          ],
-          [
-            "Product responsibility",
-            "High-risk uses need provenance checks and audit trails"
+            "For products",
+            "High-risk uses need source checks before a human acts on an AI output."
           ]
         ],
         "next": [
-          "Will Philadelphia police explain how the tip was received and handled?",
-          "Will Anthropic add restrictions for reporting and policing contexts?"
+          "Whether police explain how the tip entered and left their response process",
+          "Whether Anthropic identifies the model, integration, and corrective steps"
         ],
         "source": "TechCrunch AI",
-        "updated": "2026-10-10"
+        "updated": "2026-10-09"
       },
       "sourceLinks": [
         {
@@ -282,12 +230,12 @@
         "credit": "TechCrunch AI",
         "link": "https://techcrunch.com/2026/10/09/an-anthropic-ai-model-sent-a-false-homicide-tip-to-philadelphia-police/",
         "zh": {
-          "alt": "一条 AI 生成的“凶案线索”送进了警局，结果是假的",
-          "caption": "一条 AI 生成的“凶案线索”送进了警局，结果是假的"
+          "alt": "AI 给警方报了假凶案线索：错一次，现实里就有人要出警",
+          "caption": "AI 给警方报了假凶案线索：错一次，现实里就有人要出警"
         },
         "en": {
-          "alt": "An AI-generated homicide tip reached police. It was false.",
-          "caption": "An AI-generated homicide tip reached police. It was false."
+          "alt": "An AI sent police a false homicide tip—and someone still has to respond",
+          "caption": "An AI sent police a false homicide tip—and someone still has to respond"
         }
       },
       "termGuides": [
@@ -297,193 +245,14 @@
             "Anthropic"
           ],
           "zh": {
-            "label": "Anthropic",
-            "meaning": "美国 AI 公司，开发 Claude 等模型。",
-            "relation": "报道所涉的模型由 Anthropic 开发。"
+            "label": "AI 公司",
+            "meaning": "开发 Claude 等大模型的美国公司。",
+            "relation": "报道所称发送错误线索的模型来自该公司。"
           },
           "en": {
-            "label": "Anthropic",
-            "meaning": "A US AI company that develops models including Claude.",
-            "relation": "The model involved in the reported false tip was made by Anthropic."
-          }
-        },
-        {
-          "key": "generative AI",
-          "aliases": [
-            "生成式 AI",
-            "generative AI",
-            "AI model"
-          ],
-          "zh": {
-            "label": "生成式 AI",
-            "meaning": "根据提示生成文字、图片或其他内容的模型。",
-            "relation": "它生成的举报文字可能看似具体，但不能因此当作事实。"
-          },
-          "en": {
-            "label": "Generative AI",
-            "meaning": "A model that creates text, images, or other content from prompts.",
-            "relation": "Its report can sound specific without being factual."
-          }
-        }
-      ]
-    },
-    {
-      "id": "ai-google-gemini-business-agents",
-      "cat": "AI",
-      "icon": "ai",
-      "title": "Gemini 开始替企业跑流程，谁能批准它花钱成了新问题",
-      "brief": "Google 把 Agent 能力先推给企业，AI 不再只写答案，也开始碰公司的日常流程。",
-      "take": "Google 正把 Agent 式 AI 能力带入 Gemini，并首先面向企业。所谓 Agent，不只是聊天窗口里的助手，而是能围绕一个任务调用工具、查找资料并继续执行步骤的软件。它能省掉重复整理、查询和跟进的时间，但一旦接触客户资料、内部文件或采购流程，权限也会变得很敏感。真正的分水岭不是演示有多流畅，而是企业能否清楚规定它能看什么、能改什么、谁来最后点确认。",
-      "meta": "AI 产品｜企业软件｜10 月 8 日",
-      "facts": [
-        [
-          "发布方",
-          "Google 将 Agent 能力带入 Gemini"
-        ],
-        [
-          "首批对象",
-          "企业用户"
-        ],
-        [
-          "能力方向",
-          "围绕任务调用工具并执行多步操作"
-        ]
-      ],
-      "visual": {
-        "type": "orbit",
-        "label": "企业 Agent 的使用边界",
-        "nodes": [
-          "员工任务",
-          "Gemini Agent",
-          "公司数据",
-          "审批确认"
-        ]
-      },
-      "impacts": [
-        [
-          "办公室工作",
-          "整理信息和跟进流程可能更快完成"
-        ],
-        [
-          "数据隐私",
-          "内部文档与客户资料的访问控制更重要"
-        ],
-        [
-          "管理责任",
-          "公司需要重新划分 AI 与员工的审批权"
-        ]
-      ],
-      "next": [
-        "哪些 Gemini 企业套餐和地区会先获得这些能力？",
-        "Google 会提供多细的权限与操作日志？"
-      ],
-      "source": "TechCrunch AI",
-      "updated": "2026-10-10",
-      "en": {
-        "cat": "AI",
-        "title": "Gemini is moving into company workflows. The new question is who lets it spend.",
-        "brief": "Google is bringing agents to Gemini for businesses, shifting AI from answering questions toward touching everyday workflows.",
-        "take": "Google is bringing agent-style AI to Gemini, starting with businesses. An agent is more than a chat assistant: it can use tools, look up information, and take several steps around a task. That can remove repetitive work, but access to customer data, internal files, and purchasing processes raises the stakes. The real test is not a smooth demo. It is whether a company can clearly define what the agent may see, change, and do before a person must approve it.",
-        "meta": "AI product | Enterprise software | Oct. 8",
-        "facts": [
-          [
-            "Company",
-            "Google is bringing agents to Gemini"
-          ],
-          [
-            "Initial users",
-            "Businesses"
-          ],
-          [
-            "Direction",
-            "Tools can be used for multi-step tasks"
-          ]
-        ],
-        "visual": {
-          "type": "orbit",
-          "label": "The boundary for an enterprise agent",
-          "nodes": [
-            "Employee task",
-            "Gemini agent",
-            "Company data",
-            "Approval"
-          ]
-        },
-        "impacts": [
-          [
-            "Office work",
-            "Research and follow-up tasks may take less time"
-          ],
-          [
-            "Data privacy",
-            "Access controls for internal and customer data matter more"
-          ],
-          [
-            "Accountability",
-            "Companies must redraw approval rights between AI and staff"
-          ]
-        ],
-        "next": [
-          "Which Gemini business plans and regions will get the features first?",
-          "How detailed will Google's permission controls and action logs be?"
-        ],
-        "source": "TechCrunch AI",
-        "updated": "2026-10-10"
-      },
-      "sourceLinks": [
-        {
-          "title": "Google brings agentic AI to Gemini, starting with businesses",
-          "url": "https://techcrunch.com/2026/10/08/google-brings-agentic-ai-to-gemini-starting-with-businesses/",
-          "publisher": "TechCrunch AI"
-        }
-      ],
-      "eventImage": {
-        "url": "https://techcrunch.com/wp-content/uploads/2026/10/image_3.max-2100x2100_0CYZWqn.jpg?resize=1200,591",
-        "credit": "TechCrunch AI",
-        "link": "https://techcrunch.com/2026/10/08/google-brings-agentic-ai-to-gemini-starting-with-businesses/",
-        "zh": {
-          "alt": "Gemini 开始替企业跑流程，谁能批准它花钱成了新问题",
-          "caption": "Gemini 开始替企业跑流程，谁能批准它花钱成了新问题"
-        },
-        "en": {
-          "alt": "Gemini is moving into company workflows. The new question is who lets it spend.",
-          "caption": "Gemini is moving into company workflows. The new question is who lets it spend."
-        }
-      },
-      "termGuides": [
-        {
-          "key": "Gemini",
-          "aliases": [
-            "Gemini",
-            "谷歌 Gemini"
-          ],
-          "zh": {
-            "label": "Gemini",
-            "meaning": "Google 的 AI 模型和产品品牌。",
-            "relation": "Google 正把它从问答工具扩展为可执行企业任务的 Agent 入口。"
-          },
-          "en": {
-            "label": "Gemini",
-            "meaning": "Google's AI model and product brand.",
-            "relation": "Google is extending it from a question-answering tool into an entry point for enterprise agents."
-          }
-        },
-        {
-          "key": "Agent",
-          "aliases": [
-            "Agent",
-            "agentic AI",
-            "智能体"
-          ],
-          "zh": {
-            "label": "Agent",
-            "meaning": "可调用软件工具、按步骤完成任务的 AI。",
-            "relation": "此次功能让 Gemini 有机会接触企业的实际工作流，而不只是生成文本。"
-          },
-          "en": {
-            "label": "Agent",
-            "meaning": "AI that can use software tools and take steps to complete a task.",
-            "relation": "The feature could put Gemini into real company workflows, rather than only text generation."
+            "label": "AI company",
+            "meaning": "A U.S. company behind models including Claude.",
+            "relation": "The model reported to have sent the false tip came from the company."
           }
         }
       ]
@@ -492,104 +261,78 @@
       "id": "ai-openai-safety-researchers-dispute",
       "cat": "AI",
       "icon": "alert",
-      "title": "OpenAI 的安全研究员被解雇后发声：别把提风险的人变成风险",
-      "brief": "安全团队若担心说错话会丢工作，模型上线前最重要的坏消息可能没人敢讲。",
-      "take": "多名前 OpenAI 安全研究员在被解雇后反驳“不当行为”的说法，并警告这会让内部提出安全问题的人寒心。双方具体事实仍有争议，不能据此直接判定谁对谁错；但争议本身已触及 AI 公司最难管理的一层：当产品速度、商业压力和安全审查冲突时，提出异议的人有没有足够保护。对普通用户而言，内部预警失灵往往不会立刻显现，通常要等到产品已经大规模使用后才付出代价。",
-      "meta": "AI 治理｜劳动与安全｜10 月 8 日",
+      "title": "OpenAI 安全研究员被解雇后反驳指控：内部提风险会不会更难了",
+      "brief": "双方对解雇理由各说各话，最麻烦的是以后谁还敢在公司里按下安全警报。",
+      "take": "多名前 OpenAI 安全研究员在被解雇后，公开否认不当行为指控，并警告这会让内部提出风险的人寒心。现有候选报道没有给出争议的独立裁决，因此不宜把任何一方说法当定论；但在前沿 AI 公司里，安全团队能否独立提出反对意见，本身就是产品安全机制的一部分。若员工担心职业代价，问题可能不会消失，只是更晚被说出来。",
+      "meta": "AI 治理｜10月8日",
       "facts": [
         [
-          "当事方",
-          "多名前 OpenAI 安全研究员"
+          "公司",
+          "OpenAI"
+        ],
+        [
+          "当事人",
+          "被解雇的安全研究员"
         ],
         [
           "争议",
           "研究员否认不当行为指控"
-        ],
-        [
-          "担忧",
-          "他们称事件会压低内部提出安全问题的意愿"
         ]
       ],
-      "visual": {
-        "type": "orbit",
-        "label": "内部预警能否起作用",
-        "nodes": [
-          "研究发现",
-          "内部质疑",
-          "管理回应",
-          "产品上线"
-        ]
-      },
+      "visual": null,
       "impacts": [
         [
-          "产品安全",
-          "坏消息若被压住，风险可能更晚暴露"
+          "对用户",
+          "内部风险报告若失灵，产品问题更可能在大规模使用后才暴露。"
         ],
         [
-          "职场文化",
-          "研究人员是否敢反对会影响审查质量"
-        ],
-        [
-          "用户选择",
-          "模型公司的安全承诺更需要可验证机制"
+          "对员工",
+          "吹哨与安全审查的边界，会影响研究人员是否敢提出异议。"
         ]
       ],
       "next": [
-        "OpenAI 是否会公开更完整的处理依据或申诉程序？",
-        "是否会有独立机构介入核查相关指控？"
+        "OpenAI 是否回应具体争议或公布独立审查",
+        "是否有更多前员工或证据公开"
       ],
       "source": "TechCrunch AI",
-      "updated": "2026-10-10",
+      "updated": "2026-10-08",
       "en": {
         "cat": "AI",
-        "title": "Fired OpenAI safety researchers say the real risk is silencing people who raise alarms",
-        "brief": "If safety teams fear losing their jobs for speaking up, the most important bad news may never reach a product review.",
-        "take": "Former OpenAI safety researchers who were fired dispute misconduct claims and warn that the episode could discourage people inside the company from raising safety concerns. The underlying facts remain contested, so the case does not settle who is right. But it highlights a difficult question for AI companies: when product speed, commercial pressure, and safety review collide, are dissenting researchers protected? For users, a failed internal warning system often becomes visible only after a product is already widely used.",
-        "meta": "AI governance | Labor and safety | Oct. 8",
+        "title": "Fired OpenAI safety researchers say the bigger loss may be speaking up",
+        "brief": "Both sides dispute the dismissals; the harder question is whether people will still raise safety concerns inside the company.",
+        "take": "Former OpenAI safety researchers who were fired have publicly disputed misconduct claims and warned of a chilling effect. The available reporting does not provide an independent ruling on the dispute, so neither side’s account should be treated as settled. But at a frontier AI company, a safety team’s ability to raise objections independently is part of the safety system itself. If employees fear career consequences, problems may not disappear—they may simply be reported later.",
+        "meta": "AI governance | Oct. 8",
         "facts": [
           [
+            "Company",
+            "OpenAI"
+          ],
+          [
             "People involved",
-            "Former OpenAI safety researchers"
+            "Fired safety researchers"
           ],
           [
             "Dispute",
-            "They reject misconduct claims"
-          ],
-          [
-            "Concern",
-            "They say the case could deter internal safety warnings"
+            "The researchers deny misconduct claims"
           ]
         ],
-        "visual": {
-          "type": "orbit",
-          "label": "Whether internal warnings can work",
-          "nodes": [
-            "Research finding",
-            "Internal challenge",
-            "Management response",
-            "Product release"
-          ]
-        },
+        "visual": null,
         "impacts": [
           [
-            "Product safety",
-            "Suppressed bad news can leave risks undiscovered longer"
+            "For users",
+            "If internal risk reporting fails, product problems are more likely to surface after broad release."
           ],
           [
-            "Workplace culture",
-            "Whether researchers can object affects review quality"
-          ],
-          [
-            "User choice",
-            "Safety promises need mechanisms people can verify"
+            "For workers",
+            "The line between whistleblowing and internal review shapes whether researchers feel able to object."
           ]
         ],
         "next": [
-          "Will OpenAI publish fuller reasoning or an appeals process?",
-          "Will an independent body examine the claims?"
+          "Whether OpenAI addresses specific claims or publishes an independent review",
+          "Whether more former employees or evidence emerge"
         ],
         "source": "TechCrunch AI",
-        "updated": "2026-10-10"
+        "updated": "2026-10-08"
       },
       "sourceLinks": [
         {
@@ -603,12 +346,12 @@
         "credit": "TechCrunch AI",
         "link": "https://techcrunch.com/2026/10/08/fired-openai-safety-researchers-dispute-misconduct-claims-warn-of-chilling-effect/",
         "zh": {
-          "alt": "OpenAI 的安全研究员被解雇后发声：别把提风险的人变成风险",
-          "caption": "OpenAI 的安全研究员被解雇后发声：别把提风险的人变成风险"
+          "alt": "OpenAI 安全研究员被解雇后反驳指控：内部提风险会不会更难了",
+          "caption": "OpenAI 安全研究员被解雇后反驳指控：内部提风险会不会更难了"
         },
         "en": {
-          "alt": "Fired OpenAI safety researchers say the real risk is silencing people who raise alarms",
-          "caption": "Fired OpenAI safety researchers say the real risk is silencing people who raise alarms"
+          "alt": "Fired OpenAI safety researchers say the bigger loss may be speaking up",
+          "caption": "Fired OpenAI safety researchers say the bigger loss may be speaking up"
         }
       },
       "termGuides": [
@@ -618,510 +361,14 @@
             "OpenAI"
           ],
           "zh": {
-            "label": "OpenAI",
-            "meaning": "开发 ChatGPT 等产品的美国 AI 公司。",
-            "relation": "被解雇的前安全研究员曾在该公司从事模型安全相关工作。"
+            "label": "AI 公司",
+            "meaning": "开发 ChatGPT 等产品的美国人工智能公司。",
+            "relation": "被解雇研究员与公司之间的安全争议正在公开化。"
           },
           "en": {
-            "label": "OpenAI",
-            "meaning": "The US AI company behind products including ChatGPT.",
-            "relation": "The fired researchers previously worked there on model-safety issues."
-          }
-        },
-        {
-          "key": "chilling effect",
-          "aliases": [
-            "寒蝉效应",
-            "chilling effect"
-          ],
-          "zh": {
-            "label": "寒蝉效应",
-            "meaning": "人们担心受罚，于是不再公开提出问题。",
-            "relation": "研究员担心此事会让同事少报或不报模型风险。"
-          },
-          "en": {
-            "label": "Chilling effect",
-            "meaning": "People hold back from speaking because they fear consequences.",
-            "relation": "The researchers say the episode could make colleagues less likely to report model risks."
-          }
-        }
-      ]
-    },
-    {
-      "id": "ai-openai-revenue-shortfall",
-      "cat": "AI",
-      "icon": "chart",
-      "title": "OpenAI 的收入预测少了 200 亿美元，AI 的账没那么快算平",
-      "brief": "用户很爱用不等于公司立刻赚到钱，训练和推理成本还在追着收入跑。",
-      "take": "TechCrunch 援引报道说，OpenAI 的收入预计比先前预测少 200 亿美元。这个数字来自媒体报道，并非 OpenAI 在此次消息中公开确认的财报，因此应把它视为重要但仍待核实的商业信号。它提醒市场：生成式 AI 的使用量和付费收入不是一回事，尤其当公司还要持续承担模型训练、推理和数据中心成本。若收入增长慢于预期，企业订阅价格、免费额度和对外部融资的依赖都可能被重新审视。",
-      "meta": "AI 商业｜10 月 8 日",
-      "facts": [
-        [
-          "报道数字",
-          "收入预测据称少 200 亿美元"
-        ],
-        [
-          "公司",
-          "OpenAI"
-        ],
-        [
-          "信息性质",
-          "为媒体报道，并非本次公开财报"
-        ]
-      ],
-      "visual": {
-        "type": "orbit",
-        "label": "AI 公司为何难算账",
-        "nodes": [
-          "用户使用",
-          "付费收入",
-          "推理成本",
-          "融资压力"
-        ]
-      },
-      "impacts": [
-        [
-          "产品价格",
-          "免费额度和订阅定价可能承受压力"
-        ],
-        [
-          "企业采购",
-          "客户会更在意 AI 工具是否真能省钱"
-        ],
-        [
-          "资本市场",
-          "高估值 AI 公司需要用收入证明投入合理"
-        ]
-      ],
-      "next": [
-        "OpenAI 后续是否会确认或修正这一收入预期？",
-        "推理成本下降能否快过新增用户和使用量？"
-      ],
-      "source": "TechCrunch AI",
-      "updated": "2026-10-10",
-      "en": {
-        "cat": "AI",
-        "title": "OpenAI may be $20 billion short of an earlier revenue forecast. AI's bill is not paid yet.",
-        "brief": "Heavy use does not automatically mean quick profits when training and inference costs are still chasing revenue.",
-        "take": "TechCrunch, citing reporting, says OpenAI's revenue is expected to come in $20 billion below a previous projection. That figure is reported rather than confirmed in a new OpenAI earnings release, so it is an important signal, not a settled financial fact. It is a reminder that generative AI usage and paid revenue are not the same thing, especially while companies keep paying for training, inference, and data centers. If revenue grows more slowly than expected, subscription prices, free allowances, and reliance on outside funding may all come under more pressure.",
-        "meta": "AI business | Oct. 8",
-        "facts": [
-          [
-            "Reported figure",
-            "Revenue forecast is said to be $20 billion lower"
-          ],
-          [
-            "Company",
-            "OpenAI"
-          ],
-          [
-            "Status",
-            "Media reporting, not a new public earnings release"
-          ]
-        ],
-        "visual": {
-          "type": "orbit",
-          "label": "Why AI economics are hard",
-          "nodes": [
-            "User activity",
-            "Paid revenue",
-            "Inference costs",
-            "Funding pressure"
-          ]
-        },
-        "impacts": [
-          [
-            "Product pricing",
-            "Free usage limits and subscriptions could face pressure"
-          ],
-          [
-            "Business buyers",
-            "Customers will ask harder whether AI tools truly save money"
-          ],
-          [
-            "Capital markets",
-            "High-valued AI firms need revenue to justify their spending"
-          ]
-        ],
-        "next": [
-          "Will OpenAI confirm or revise the reported forecast?",
-          "Can falling inference costs outpace growth in usage?"
-        ],
-        "source": "TechCrunch AI",
-        "updated": "2026-10-10"
-      },
-      "sourceLinks": [
-        {
-          "title": "OpenAI's revenue is reportedly $20 billion less than previously projected",
-          "url": "https://techcrunch.com/2026/10/08/openais-revenue-is-reportedly-20-billion-less-than-previously-projected/",
-          "publisher": "TechCrunch AI"
-        }
-      ],
-      "eventImage": {
-        "url": "https://techcrunch.com/wp-content/uploads/2026/09/openai-getty.jpg?resize=1200,800",
-        "credit": "TechCrunch AI",
-        "link": "https://techcrunch.com/2026/10/08/openais-revenue-is-reportedly-20-billion-less-than-previously-projected/",
-        "zh": {
-          "alt": "OpenAI 的收入预测少了 200 亿美元，AI 的账没那么快算平",
-          "caption": "OpenAI 的收入预测少了 200 亿美元，AI 的账没那么快算平"
-        },
-        "en": {
-          "alt": "OpenAI may be $20 billion short of an earlier revenue forecast. AI's bill is not paid yet.",
-          "caption": "OpenAI may be $20 billion short of an earlier revenue forecast. AI's bill is not paid yet."
-        }
-      },
-      "termGuides": [
-        {
-          "key": "inference",
-          "aliases": [
-            "推理",
-            "inference"
-          ],
-          "zh": {
-            "label": "推理",
-            "meaning": "模型上线后，每次回答、生成或执行任务所需的计算。",
-            "relation": "用户越多、任务越复杂，OpenAI 持续支付的推理成本也可能越高。"
-          },
-          "en": {
-            "label": "Inference",
-            "meaning": "The computing used each time a deployed model answers, generates, or performs a task.",
-            "relation": "More users and harder tasks can mean larger ongoing inference bills for OpenAI."
-          }
-        },
-        {
-          "key": "OpenAI",
-          "aliases": [
-            "OpenAI"
-          ],
-          "zh": {
-            "label": "OpenAI",
-            "meaning": "开发 ChatGPT 的美国 AI 公司。",
-            "relation": "报道所称的收入预测缺口涉及该公司的商业化能力。"
-          },
-          "en": {
-            "label": "OpenAI",
-            "meaning": "The US AI company behind ChatGPT.",
-            "relation": "The reported revenue gap concerns its ability to turn AI use into a business."
-          }
-        }
-      ]
-    },
-    {
-      "id": "ai-anthropic-usage-policy-election",
-      "cat": "AI",
-      "icon": "alert",
-      "title": "Anthropic 把“操纵选举”写进禁令：规则终于追上了 Agent",
-      "brief": "AI 能批量写内容、调用工具后，平台的使用条款也得开始管它会不会替人操纵现实。",
-      "take": "Anthropic 更新使用政策，明确禁止滥用模型以及干预选举。条款不是技术护栏本身，违规者也不一定会因为一条规则就停手；但它决定了平台可以据什么拒绝服务、暂停账号或处理投诉。随着模型越来越能生成个性化内容、自动化联络并调用外部工具，选举影响不再只是“做一张假图”的问题，也可能变成低成本、大规模的定向操作。规则能否落地，取决于检测、申诉和执行是否一致。",
-      "meta": "AI 治理｜选举安全｜10 月 8 日",
-      "facts": [
-        [
-          "更新方",
-          "Anthropic"
-        ],
-        [
-          "新禁令",
-          "禁止模型滥用与选举干预"
-        ],
-        [
-          "执行基础",
-          "使用政策可支持拒绝服务或处理违规账号"
-        ]
-      ],
-      "visual": {
-        "type": "orbit",
-        "label": "条款如何影响滥用成本",
-        "nodes": [
-          "模型能力",
-          "违规使用",
-          "平台检测",
-          "限制账号"
-        ]
-      },
-      "impacts": [
-        [
-          "信息环境",
-          "批量生成和定向传播会让辨别成本上升"
-        ],
-        [
-          "平台权力",
-          "公司将更多决定哪些政治用途可以或不可以"
-        ],
-        [
-          "普通用户",
-          "看到逼真的政治内容时，更需要查来源和上下文"
-        ]
-      ],
-      "next": [
-        "Anthropic 会公布哪些选举相关执法数据？",
-        "政策会如何区分正常政治表达与操纵行为？"
-      ],
-      "source": "TechCrunch AI",
-      "updated": "2026-10-10",
-      "en": {
-        "cat": "AI",
-        "title": "Anthropic has put election interference on its banned list. Rules are catching up with agents.",
-        "brief": "As AI can generate at scale and use tools, platform rules have to address attempts to manipulate the real world.",
-        "take": "Anthropic has updated its usage policy to ban model abuse and election interference. A policy is not a technical safeguard by itself, and bad actors will not necessarily stop because a rule exists. But it sets the basis for refusing service, suspending accounts, and handling complaints. As models become better at personalized content, automated outreach, and tool use, election influence is no longer only about making a fake image. It can also become a cheap, targeted operation at scale. Whether the rule matters depends on consistent detection, appeals, and enforcement.",
-        "meta": "AI governance | Election security | Oct. 8",
-        "facts": [
-          [
-            "Updated by",
-            "Anthropic"
-          ],
-          [
-            "New bans",
-            "Model abuse and election interference"
-          ],
-          [
-            "Enforcement basis",
-            "The policy can support service denial and account action"
-          ]
-        ],
-        "visual": {
-          "type": "orbit",
-          "label": "How rules can raise abuse costs",
-          "nodes": [
-            "Model capability",
-            "Misuse",
-            "Platform detection",
-            "Account limits"
-          ]
-        },
-        "impacts": [
-          [
-            "Information environment",
-            "Mass-generated targeted content raises the cost of checking claims"
-          ],
-          [
-            "Platform power",
-            "Companies will decide more political uses that are allowed or barred"
-          ],
-          [
-            "Everyday users",
-            "Convincing political content needs source and context checks"
-          ]
-        ],
-        "next": [
-          "Will Anthropic publish election-related enforcement data?",
-          "How will it separate legitimate political expression from manipulation?"
-        ],
-        "source": "TechCrunch AI",
-        "updated": "2026-10-10"
-      },
-      "sourceLinks": [
-        {
-          "title": "Anthropic changes usage policy to ban model abuse and election interference",
-          "url": "https://techcrunch.com/2026/10/08/anthropic-changes-usage-policy-to-ban-model-abuse-and-election-interference/",
-          "publisher": "TechCrunch AI"
-        }
-      ],
-      "eventImage": {
-        "url": "https://techcrunch.com/wp-content/uploads/2026/09/GettyImages-2294192768.jpg?resize=1200,798",
-        "credit": "TechCrunch AI",
-        "link": "https://techcrunch.com/2026/10/08/anthropic-changes-usage-policy-to-ban-model-abuse-and-election-interference/",
-        "zh": {
-          "alt": "Anthropic 把“操纵选举”写进禁令：规则终于追上了 Agent",
-          "caption": "Anthropic 把“操纵选举”写进禁令：规则终于追上了 Agent"
-        },
-        "en": {
-          "alt": "Anthropic has put election interference on its banned list. Rules are catching up with agents.",
-          "caption": "Anthropic has put election interference on its banned list. Rules are catching up with agents."
-        }
-      },
-      "termGuides": [
-        {
-          "key": "Anthropic",
-          "aliases": [
-            "Anthropic"
-          ],
-          "zh": {
-            "label": "Anthropic",
-            "meaning": "开发 Claude 等产品的美国 AI 公司。",
-            "relation": "该公司更新了其模型服务的禁止用途清单。"
-          },
-          "en": {
-            "label": "Anthropic",
-            "meaning": "A US AI company that develops products including Claude.",
-            "relation": "It updated the list of prohibited uses for its model services."
-          }
-        },
-        {
-          "key": "election interference",
-          "aliases": [
-            "选举干预",
-            "election interference"
-          ],
-          "zh": {
-            "label": "选举干预",
-            "meaning": "通过欺骗、胁迫或不当操纵影响选民或选举过程。",
-            "relation": "Anthropic 将此类使用明确列为违反政策。"
-          },
-          "en": {
-            "label": "Election interference",
-            "meaning": "Improper influence over voters or an electoral process through deception, coercion, or manipulation.",
-            "relation": "Anthropic explicitly lists this type of use as a policy violation."
-          }
-        }
-      ]
-    },
-    {
-      "id": "ai-amazon-data-center-ndas",
-      "cat": "AI",
-      "icon": "refinery",
-      "title": "亚马逊不再把数据中心交易全藏在保密协议里",
-      "brief": "AI 数据中心耗电、占地又要补贴，居民至少该知道当地政府答应了什么。",
-      "take": "TechCrunch 报道，亚马逊等公司正减少对数据中心交易使用保密协议。数据中心扩张常牵涉土地、税收优惠、电力和用水，而这些成本最终可能影响当地公共服务和电网安排。取消或减少保密并不自动等于交易公平，合同细节、兑现条件和社区能否参与仍很关键；但它至少让公众更有机会看清，为了迎接 AI 算力，当地到底交换了什么。",
-      "meta": "AI 基础设施｜数据中心｜10 月 9 日",
-      "facts": [
-        [
-          "变化",
-          "亚马逊等减少数据中心交易保密安排"
-        ],
-        [
-          "涉及资源",
-          "土地、税收优惠、电力和用水"
-        ],
-        [
-          "核心问题",
-          "公众能否查看交易条件"
-        ]
-      ],
-      "visual": {
-        "type": "orbit",
-        "label": "数据中心交易牵动什么",
-        "nodes": [
-          "公司选址",
-          "政府条件",
-          "电力用水",
-          "社区账单"
-        ]
-      },
-      "impacts": [
-        [
-          "公共账本",
-          "居民更可能了解补贴和承诺的具体内容"
-        ],
-        [
-          "生活成本",
-          "大型数据中心可能影响本地电网与资源安排"
-        ],
-        [
-          "AI 扩张",
-          "算力建设的社会成本更难被一句“投资”带过"
-        ]
-      ],
-      "next": [
-        "哪些数据中心合同会真正公开，公开到什么程度？",
-        "电网升级和资源成本由谁承担？"
-      ],
-      "source": "TechCrunch AI",
-      "updated": "2026-10-10",
-      "en": {
-        "cat": "AI",
-        "title": "Amazon is no longer hiding every data-center deal behind an NDA",
-        "brief": "AI data centers use land, power, water, and public incentives, so residents deserve to know what their local government promised.",
-        "take": "TechCrunch reports that Amazon and others are reducing the use of nondisclosure agreements around data-center deals. Data-center growth often involves land, tax incentives, electricity, and water—costs that can affect public services and local grid planning. Less secrecy does not automatically make a deal fair; contract details, delivery conditions, and community participation still matter. But it gives the public a better chance to see what a locality is trading to host AI compute.",
-        "meta": "AI infrastructure | Data centers | Oct. 9",
-        "facts": [
-          [
-            "Change",
-            "Amazon and others are reducing secrecy around data-center deals"
-          ],
-          [
-            "Resources involved",
-            "Land, tax incentives, electricity, and water"
-          ],
-          [
-            "Core issue",
-            "Whether the public can see deal terms"
-          ]
-        ],
-        "visual": {
-          "type": "orbit",
-          "label": "What a data-center deal touches",
-          "nodes": [
-            "Company site choice",
-            "Government terms",
-            "Power and water",
-            "Community bills"
-          ]
-        },
-        "impacts": [
-          [
-            "Public accounts",
-            "Residents may learn more about subsidies and commitments"
-          ],
-          [
-            "Cost of living",
-            "Large data centers can affect local grid and resource planning"
-          ],
-          [
-            "AI expansion",
-            "The social cost of compute is harder to dismiss as simply investment"
-          ]
-        ],
-        "next": [
-          "Which data-center contracts will actually become public, and how fully?",
-          "Who will pay for grid upgrades and resource costs?"
-        ],
-        "source": "TechCrunch AI",
-        "updated": "2026-10-10"
-      },
-      "sourceLinks": [
-        {
-          "title": "Amazon and others are done keeping data center deals secret. Is it enough to build trust?",
-          "url": "https://techcrunch.com/video/amazon-and-others-are-done-keeping-data-center-deals-secret-is-it-enough-to-build-trust/",
-          "publisher": "TechCrunch AI"
-        }
-      ],
-      "eventImage": {
-        "url": "https://techcrunch.com/wp-content/uploads/2026/10/GettyImages-1252468735.jpg?resize=1200,800",
-        "credit": "TechCrunch AI",
-        "link": "https://techcrunch.com/video/amazon-and-others-are-done-keeping-data-center-deals-secret-is-it-enough-to-build-trust/",
-        "zh": {
-          "alt": "亚马逊不再把数据中心交易全藏在保密协议里",
-          "caption": "亚马逊不再把数据中心交易全藏在保密协议里"
-        },
-        "en": {
-          "alt": "Amazon is no longer hiding every data-center deal behind an NDA",
-          "caption": "Amazon is no longer hiding every data-center deal behind an NDA"
-        }
-      },
-      "termGuides": [
-        {
-          "key": "NDA",
-          "aliases": [
-            "NDA",
-            "保密协议",
-            "nondisclosure agreement"
-          ],
-          "zh": {
-            "label": "保密协议",
-            "meaning": "要求签约方不公开特定信息的合同安排。",
-            "relation": "它曾让部分数据中心交易的优惠条件和责任不易被公众看见。"
-          },
-          "en": {
-            "label": "NDA",
-            "meaning": "A contract that restricts disclosure of specified information.",
-            "relation": "It has made some data-center incentives and obligations difficult for the public to inspect."
-          }
-        },
-        {
-          "key": "data center",
-          "aliases": [
-            "数据中心",
-            "data center"
-          ],
-          "zh": {
-            "label": "数据中心",
-            "meaning": "放置大量服务器、提供计算和存储能力的设施。",
-            "relation": "AI 模型训练和推理需要它们消耗大量电力和其他资源。"
-          },
-          "en": {
-            "label": "Data center",
-            "meaning": "A facility with large numbers of servers for computing and storage.",
-            "relation": "AI training and inference rely on these facilities and their heavy resource use."
+            "label": "AI company",
+            "meaning": "The U.S. artificial intelligence company behind ChatGPT.",
+            "relation": "The dispute over the dismissed researchers is unfolding publicly at the company."
           }
         }
       ]
@@ -1130,104 +377,78 @@
       "id": "ai-jev-valuation",
       "cat": "AI",
       "icon": "chart",
-      "title": "Jev 上线几周就估值 75 亿美元，投资人押的是“不只会写字”的 AI",
-      "brief": "资本正追逐能处理非文本信息的模型，但高估值不等于它已经找到稳定用途。",
-      "take": "非文本 AI 模型公司 Jev 在推出数周后估值达到 75 亿美元。报道没有把估值等同于成熟收入，这一点尤其重要：投资人显然在押注 AI 的下一步不只处理文字，还要理解图像、声音、视频或其他数据。但从演示到可重复交付，是两回事。对于用户和企业，真正该问的是它在哪些任务上比现有工具更准、更便宜，且能承担错误责任，而不是融资数字有多大。",
-      "meta": "AI 融资｜10 月 9 日",
+      "title": "Jev 刚推出就被估到 75 亿美元：资本在押注“不只会写字”的模型",
+      "brief": "一家非文本 AI 模型公司上线数周就拿到高估值，钱正在追逐下一种模型入口。",
+      "take": "TechCrunch 报道，非文本 AI 模型 Jev 的开发商在产品推出仅数周后，估值已达 75 亿美元。候选报道没有提供足够信息来判断其技术效果或收入，因此这个数字更像资本押注，而不是已验证的商业成绩。值得看的不是估值本身，而是投资人正在把目光从纯文本聊天，转向能处理其他类型信息的模型；这条路若走通，会改变创作、分析和自动化工具的竞争。",
+      "meta": "模型与融资｜10月9日",
       "facts": [
         [
-          "公司",
+          "产品",
           "Jev"
         ],
         [
           "定位",
-          "非文本 AI 模型开发商"
+          "非文本 AI 模型"
         ],
         [
           "估值",
-          "上线数周后达 75 亿美元"
+          "75 亿美元"
         ]
       ],
-      "visual": {
-        "type": "orbit",
-        "label": "高估值还缺哪几步",
-        "nodes": [
-          "融资估值",
-          "产品演示",
-          "真实客户",
-          "稳定收入"
-        ]
-      },
+      "visual": null,
       "impacts": [
         [
-          "企业采购",
-          "买家会更谨慎区分展示效果与实际回报"
+          "对用户",
+          "未来 AI 工具可能更少依赖打字，更多处理图像、声音或其他输入。"
         ],
         [
-          "竞争方向",
-          "图像、声音和视频等非文本能力成为新赛道"
-        ],
-        [
-          "资本风险",
-          "估值跑在收入前面时，后续压力会更大"
+          "对市场",
+          "高估值会让同类团队更容易融资，也会抬高验证真实能力的压力。"
         ]
       ],
       "next": [
-        "Jev 会披露哪些产品能力和付费客户信息？",
-        "它的模型能否在成本和准确度上胜过现有方案？"
+        "Jev 具体处理哪些非文本信息、面向哪些用户",
+        "估值背后是否有公开的产品使用和收入数据"
       ],
       "source": "TechCrunch AI",
-      "updated": "2026-10-10",
+      "updated": "2026-10-09",
       "en": {
         "cat": "AI",
-        "title": "Jev reached a $7.5 billion valuation within weeks. Investors are betting on AI beyond text.",
-        "brief": "Money is chasing models that handle more than words, but a high valuation is not proof of a durable use case.",
-        "take": "Jev, a maker of non-text AI models, has reached a $7.5 billion valuation just weeks after launch. The reported valuation is not the same as proven revenue, and that distinction matters. Investors appear to be betting that AI's next step is not only text, but understanding images, audio, video, or other data. Yet a demo and repeatable delivery are different things. For buyers, the useful question is where the product is more accurate, cheaper, and accountable than existing tools—not how large the funding number is.",
-        "meta": "AI funding | Oct. 9",
+        "title": "Jev reached a $7.5 billion valuation before its case is proven",
+        "brief": "A non-text AI model company gained a huge valuation within weeks, as investors chase the next interface beyond chat.",
+        "take": "TechCrunch reports that the maker of Jev, a non-text AI model, is valued at $7.5 billion only weeks after launch. The candidate report does not provide enough evidence to judge technical performance or revenue, so the figure is a venture bet rather than proof of a working business. The important shift is that investors are looking beyond text chat toward models that handle other kinds of information—potentially changing creative, analytical, and automation tools if they deliver.",
+        "meta": "Models and funding | Oct. 9",
         "facts": [
           [
-            "Company",
+            "Product",
             "Jev"
           ],
           [
-            "Focus",
-            "Non-text AI models"
+            "Positioning",
+            "A non-text AI model"
           ],
           [
             "Valuation",
-            "$7.5 billion within weeks of launch"
+            "$7.5 billion"
           ]
         ],
-        "visual": {
-          "type": "orbit",
-          "label": "What a high valuation still needs",
-          "nodes": [
-            "Funding valuation",
-            "Product demo",
-            "Real customers",
-            "Steady revenue"
-          ]
-        },
+        "visual": null,
         "impacts": [
           [
-            "Business buying",
-            "Buyers will need to separate demonstrations from real returns"
+            "For users",
+            "Future AI tools may rely less on typing and handle images, audio, or other inputs more directly."
           ],
           [
-            "Competition",
-            "Image, audio, and video capabilities are becoming a new race"
-          ],
-          [
-            "Capital risk",
-            "Pressure rises when valuation runs ahead of revenue"
+            "For the market",
+            "A large valuation can fund rivals, while raising pressure to prove real capability."
           ]
         ],
         "next": [
-          "What product capabilities and paying-customer data will Jev disclose?",
-          "Can its models beat existing options on cost and accuracy?"
+          "What non-text information Jev handles and who it is for",
+          "Whether product use and revenue data behind the valuation become public"
         ],
         "source": "TechCrunch AI",
-        "updated": "2026-10-10"
+        "updated": "2026-10-09"
       },
       "sourceLinks": [
         {
@@ -1241,12 +462,12 @@
         "credit": "TechCrunch AI",
         "link": "https://techcrunch.com/2026/10/09/the-maker-of-non-text-ai-model-jev-valued-at-7-5b-just-weeks-after-launch/",
         "zh": {
-          "alt": "Jev 上线几周就估值 75 亿美元，投资人押的是“不只会写字”的 AI",
-          "caption": "Jev 上线几周就估值 75 亿美元，投资人押的是“不只会写字”的 AI"
+          "alt": "Jev 刚推出就被估到 75 亿美元：资本在押注“不只会写字”的模型",
+          "caption": "Jev 刚推出就被估到 75 亿美元：资本在押注“不只会写字”的模型"
         },
         "en": {
-          "alt": "Jev reached a $7.5 billion valuation within weeks. Investors are betting on AI beyond text.",
-          "caption": "Jev reached a $7.5 billion valuation within weeks. Investors are betting on AI beyond text."
+          "alt": "Jev reached a $7.5 billion valuation before its case is proven",
+          "caption": "Jev reached a $7.5 billion valuation before its case is proven"
         }
       },
       "termGuides": [
@@ -1256,191 +477,149 @@
             "Jev"
           ],
           "zh": {
-            "label": "Jev",
-            "meaning": "一家开发非文本 AI 模型的公司。",
-            "relation": "该公司在推出数周后获得 75 亿美元估值。"
+            "label": "AI 模型",
+            "meaning": "报道所称的一种非文本 AI 模型。",
+            "relation": "其开发商在推出数周后被估值 75 亿美元。"
           },
           "en": {
-            "label": "Jev",
-            "meaning": "A company developing AI models focused on data beyond text.",
-            "relation": "It reportedly reached a $7.5 billion valuation within weeks of launch."
-          }
-        },
-        {
-          "key": "non-text AI",
-          "aliases": [
-            "非文本 AI",
-            "non-text AI"
-          ],
-          "zh": {
-            "label": "非文本 AI",
-            "meaning": "主要处理图像、声音、视频或其他非文字数据的 AI。",
-            "relation": "这是 Jev 获得高估值时主打的能力方向。"
-          },
-          "en": {
-            "label": "Non-text AI",
-            "meaning": "AI that primarily handles images, audio, video, or other data beyond written language.",
-            "relation": "This is the capability area Jev is emphasizing in its funding story."
+            "label": "AI model",
+            "meaning": "A non-text AI model described in the report.",
+            "relation": "Its maker was valued at $7.5 billion within weeks of launch."
           }
         }
       ]
     },
     {
-      "id": "ai-goodfire-agent-monitoring",
+      "id": "ai-data-center-ndas",
       "cat": "AI",
-      "icon": "code",
-      "title": "Goodfire 要从模型内部盯住失控 Agent，但“更便宜”还得拿证据说话",
-      "brief": "给 Agent 装监控很有必要，但安全工具若看不准，反而可能让公司产生假安心。",
-      "take": "Goodfire 称推出一种“由内向外”的监测方法，可以用更低成本发现行为异常的 AI Agent。这里最该保留的词是“称”：安全产品的效果需要独立测试，不能只看供应商演示。方向本身值得关注，因为传统做法常从输入和输出判断 Agent 是否出错，而内部监测试图观察模型运行时的状态和异常迹象。若可靠，它能让企业更早发现越权操作；若误报过多或漏报严重，安全团队只会多一块难用的仪表盘。",
-      "meta": "AI 安全工具｜10 月 8 日",
+      "icon": "refinery",
+      "title": "数据中心不再全靠保密协议：居民先想知道电、水和噪声谁买单",
+      "brief": "Amazon 等公司开始少签保密协议，但公开项目不等于当地人自动接受它。",
+      "take": "TechCrunch 报道，Amazon 等企业正减少数据中心交易中的保密协议，希望缓和社区对 AI 基础设施的反弹。透明度是第一步：居民和地方政府至少能更早知道项目规模与谈判内容。但真正的账还在后面——用电是否推高电网成本、取水和柴油备用电源如何管理、税收优惠值不值。AI 服务越依赖数据中心，这些原本藏在合同里的问题越会变成日常公共议题。",
+      "meta": "AI 基础设施｜10月11日",
       "facts": [
         [
-          "公司",
-          "Goodfire"
+          "企业",
+          "Amazon 等"
         ],
         [
-          "产品主张",
-          "从模型内部监测异常 Agent"
+          "变化",
+          "减少数据中心交易保密协议"
         ],
         [
-          "成本说法",
-          "称成本低于现有方法"
+          "争点",
+          "社区对大型数据中心的信任"
         ]
       ],
-      "visual": {
-        "type": "orbit",
-        "label": "Agent 监控的两种难题",
-        "nodes": [
-          "Agent 行动",
-          "内部信号",
-          "风险判断",
-          "人工处置"
-        ]
-      },
+      "visual": null,
       "impacts": [
         [
-          "企业部署",
-          "监控能力可能决定 Agent 能否进入高权限场景"
+          "对居民",
+          "电力、用水、噪声和税收优惠可能直接影响当地生活与公共预算。"
         ],
         [
-          "安全成本",
-          "低成本方案若有效，可让更多团队做持续审查"
-        ],
-        [
-          "验证要求",
-          "厂商说法需要独立基准和真实事故检验"
+          "对 AI 价格",
+          "项目审批变慢或成本上升，最终会传到云服务和 AI 产品价格。"
         ]
       ],
       "next": [
-        "Goodfire 会公开哪些准确率、漏报率和误报率数据？",
-        "客户能否用它追溯一次 Agent 的具体决策？"
+        "企业会披露哪些合同、能耗和公共补贴信息",
+        "地方政府是否把公开条件写入审批规则"
       ],
       "source": "TechCrunch AI",
-      "updated": "2026-10-10",
+      "updated": "2026-10-11",
       "en": {
         "cat": "AI",
-        "title": "Goodfire wants to watch agents from inside the model. Its “cheaper” claim needs proof.",
-        "brief": "Monitoring agents matters, but a safety tool that cannot see clearly can give companies false confidence.",
-        "take": "Goodfire says it has launched an “inside-out” monitoring approach that can detect rogue AI agents at lower cost. The key word is “says”: safety products need independent testing, not only a vendor demo. The direction is worth watching because conventional approaches often judge an agent through its inputs and outputs, while internal monitoring aims to inspect signals and anomalies during model operation. If reliable, it could catch overreach earlier. If it misses too much or triggers too many false alarms, it becomes one more dashboard nobody can trust.",
-        "meta": "AI safety tools | Oct. 8",
+        "title": "Data-center secrecy is easing, but communities still want the bill explained",
+        "brief": "Amazon and others are dropping some NDAs, yet disclosure alone will not settle questions about power, water, and local costs.",
+        "take": "TechCrunch reports that Amazon and other companies are reducing nondisclosure agreements around data-center deals, hoping to ease local opposition to AI infrastructure. Transparency is a start: residents and local governments can learn earlier about a project’s scale and negotiations. But the bigger bill remains—whether grid costs rise, how water and diesel backup power are managed, and whether tax incentives are worthwhile. As AI depends more on data centers, contract details are becoming everyday public issues.",
+        "meta": "AI infrastructure | Oct. 11",
         "facts": [
           [
-            "Company",
-            "Goodfire"
+            "Companies",
+            "Amazon and others"
           ],
           [
-            "Claim",
-            "It monitors anomalous agents from inside the model"
+            "Change",
+            "Fewer NDAs in data-center deals"
           ],
           [
-            "Cost claim",
-            "It says the approach costs less than existing methods"
+            "Point of dispute",
+            "Community trust in large data centers"
           ]
         ],
-        "visual": {
-          "type": "orbit",
-          "label": "The challenge of agent monitoring",
-          "nodes": [
-            "Agent action",
-            "Internal signals",
-            "Risk judgment",
-            "Human response"
-          ]
-        },
+        "visual": null,
         "impacts": [
           [
-            "Business deployment",
-            "Monitoring may determine whether agents enter high-permission settings"
+            "For residents",
+            "Power, water, noise, and tax breaks can affect local life and public budgets."
           ],
           [
-            "Safety cost",
-            "A proven cheaper option could make continuous review more available"
-          ],
-          [
-            "Need for proof",
-            "Vendor claims need independent benchmarks and real-incident tests"
+            "For AI prices",
+            "Slower approvals or higher construction costs can feed into cloud and AI product prices."
           ]
         ],
         "next": [
-          "Will Goodfire publish accuracy, miss-rate, and false-alarm data?",
-          "Can customers use it to reconstruct an agent's specific decision?"
+          "What contract, energy-use, and subsidy data companies disclose",
+          "Whether local governments make disclosure a condition of approval"
         ],
         "source": "TechCrunch AI",
-        "updated": "2026-10-10"
+        "updated": "2026-10-11"
       },
       "sourceLinks": [
         {
-          "title": "Goodfire says its new ‘inside-out’ monitors catch rogue AI agents at a fraction of the cost",
-          "url": "https://techcrunch.com/2026/10/08/goodfire-says-its-new-inside-out-monitors-catch-rogue-ai-agents-at-a-fraction-of-the-cost/",
+          "title": "Can the AI industry persuade data center opponents by getting rid of NDAs?",
+          "url": "https://techcrunch.com/2026/10/11/can-the-ai-industry-persuade-data-center-opponents-by-getting-rid-of-ndas/",
           "publisher": "TechCrunch AI"
         }
       ],
       "eventImage": {
-        "url": "https://techcrunch.com/wp-content/uploads/2026/10/AI-agents.jpg?resize=1200,675",
+        "url": "https://techcrunch.com/wp-content/uploads/2026/09/9-DSCF1649.jpg?resize=800,1200",
         "credit": "TechCrunch AI",
-        "link": "https://techcrunch.com/2026/10/08/goodfire-says-its-new-inside-out-monitors-catch-rogue-ai-agents-at-a-fraction-of-the-cost/",
+        "link": "https://techcrunch.com/2026/10/11/can-the-ai-industry-persuade-data-center-opponents-by-getting-rid-of-ndas/",
         "zh": {
-          "alt": "Goodfire 要从模型内部盯住失控 Agent，但“更便宜”还得拿证据说话",
-          "caption": "Goodfire 要从模型内部盯住失控 Agent，但“更便宜”还得拿证据说话"
+          "alt": "数据中心不再全靠保密协议：居民先想知道电、水和噪声谁买单",
+          "caption": "数据中心不再全靠保密协议：居民先想知道电、水和噪声谁买单"
         },
         "en": {
-          "alt": "Goodfire wants to watch agents from inside the model. Its “cheaper” claim needs proof.",
-          "caption": "Goodfire wants to watch agents from inside the model. Its “cheaper” claim needs proof."
+          "alt": "Data-center secrecy is easing, but communities still want the bill explained",
+          "caption": "Data-center secrecy is easing, but communities still want the bill explained"
         }
       },
       "termGuides": [
         {
-          "key": "Goodfire",
+          "key": "NDA",
           "aliases": [
-            "Goodfire"
+            "NDA",
+            "保密协议",
+            "保密协定"
           ],
           "zh": {
-            "label": "Goodfire",
-            "meaning": "开发 AI 模型监测和理解工具的公司。",
-            "relation": "它称新工具可从模型内部发现异常 Agent 行为。"
+            "label": "保密合同",
+            "meaning": "要求签约方不公开谈判或交易细节的协议。",
+            "relation": "数据中心项目正减少使用它，以回应社区的知情要求。"
           },
           "en": {
-            "label": "Goodfire",
-            "meaning": "A company building tools to monitor and understand AI models.",
-            "relation": "It says its new tool can spot anomalous agent behavior from inside a model."
+            "label": "Confidentiality contract",
+            "meaning": "An agreement that limits disclosure of negotiation or deal details.",
+            "relation": "Data-center projects are using fewer of them in response to demands for public information."
           }
         },
         {
-          "key": "rogue AI agent",
+          "key": "数据中心",
           "aliases": [
-            "失控 Agent",
-            "rogue AI agent",
-            "异常智能体"
+            "数据中心",
+            "data center"
           ],
           "zh": {
-            "label": "失控 Agent",
-            "meaning": "执行的行为偏离授权任务或安全限制的 AI Agent。",
-            "relation": "Goodfire 的产品主张是更早发现这类偏离。"
+            "label": "算力设施",
+            "meaning": "放置大量服务器、提供云计算和 AI 训练与推理的设施。",
+            "relation": "AI 服务扩张需要更多这类高耗电项目。"
           },
           "en": {
-            "label": "Rogue AI agent",
-            "meaning": "An AI agent acting outside its authorized task or safety limits.",
-            "relation": "Goodfire claims its tool can detect this kind of deviation earlier."
+            "label": "Compute facility",
+            "meaning": "A site full of servers that provides cloud computing and AI training or inference.",
+            "relation": "Expanding AI services requires more of these power-hungry projects."
           }
         }
       ]
@@ -1449,10 +628,10 @@
       "id": "ai-danu-recycling-robot",
       "cat": "机器人与具身智能",
       "icon": "drone",
-      "title": "回收机器人最难的不是“看见垃圾”，而是每次都能抓对",
-      "brief": "回收线上的物品又脏又乱，机器人真能少分错一件，才可能把人工从危险重复活里换下来。",
-      "take": "Danu Robotics 正试图打造更好的回收机器人。和在整洁工厂里重复抓同一种零件不同，回收线面对的是污损、变形、混杂且高速移动的物品；能识别不代表能稳定抓取、分类和持续运行。这也是具身 AI 从视频演示走到现实的典型难关。若系统可靠，回收厂可减少人工分拣中的重复劳动和安全风险；但设备成本、维护和不同垃圾流的适应性，决定它能否真正铺开。",
-      "meta": "机器人与具身智能｜回收｜10 月 9 日",
+      "title": "回收机器人想分拣垃圾，难点不是抓起来，而是每天都别抓错",
+      "brief": "Danu Robotics 在做回收分拣机器人，真实垃圾流比实验室里的物体乱得多。",
+      "take": "TechCrunch 报道，Danu Robotics 正尝试打造更好的回收机器人。回收分拣是具身 AI 很实际的考场：物料脏、破、叠在一起，外观每天都不同，机器人必须看得准、抓得住，还要在高节奏产线上少停机。它离“家里有个万能机器人”很远，却可能先在脏、累、重复的工业岗位上证明价值。能否在复杂垃圾流里稳定运行，比演示视频更重要。",
+      "meta": "机器人与具身智能｜10月9日",
       "facts": [
         [
           "公司",
@@ -1460,97 +639,71 @@
         ],
         [
           "场景",
-          "废物回收分拣"
+          "回收分拣"
         ],
         [
-          "难点",
-          "物品污损、混杂、变形且不断移动"
+          "挑战",
+          "杂乱物料中的识别与抓取稳定性"
         ]
       ],
-      "visual": {
-        "type": "orbit",
-        "label": "回收机器人要过的关",
-        "nodes": [
-          "杂乱物料",
-          "视觉识别",
-          "机械抓取",
-          "分类稳定性"
-        ]
-      },
+      "visual": null,
       "impacts": [
         [
-          "一线工作",
-          "可靠机器人可减少危险、重复的人工分拣"
+          "对工人",
+          "若可靠，机器人可接手重复且环境较差的分拣环节。"
         ],
         [
-          "回收效率",
-          "分错更少才可能提高材料回收价值"
-        ],
-        [
-          "落地成本",
-          "维护和适应不同垃圾流会决定采购意愿"
+          "对回收",
+          "分拣更准可能提高可回收物纯度，减少本该回收的材料被丢弃。"
         ]
       ],
       "next": [
-        "Danu 的系统在真实回收线上的吞吐量和误分率如何？",
-        "它能否适应不同地区、不同来源的垃圾流？"
+        "机器人是否公布真实工厂的连续运行数据",
+        "系统能否处理更多混杂、破损和污染物料"
       ],
       "source": "TechCrunch AI",
-      "updated": "2026-10-10",
+      "updated": "2026-10-09",
       "en": {
         "cat": "Robotics and embodied AI",
-        "title": "A recycling robot's hard problem is not seeing trash. It is grabbing the right thing every time.",
-        "brief": "Items on a recycling line are dirty and chaotic; a robot matters only if it can consistently make fewer sorting mistakes.",
-        "take": "Danu Robotics is trying to build a better recycling robot. Unlike a tidy factory where the same component is picked repeatedly, recycling lines contain dirty, bent, mixed, fast-moving items. Recognizing an object does not mean a robot can reliably grasp, sort, and keep operating. It is a familiar obstacle for embodied AI moving from videos into the real world. A reliable system could reduce repetitive, hazardous sorting work, but equipment cost, maintenance, and adaptation to different waste streams will decide whether it scales.",
-        "meta": "Robotics and embodied AI | Recycling | Oct. 9",
+        "title": "A recycling robot has to work in the mess, not just pick a clean demo object",
+        "brief": "Danu Robotics is building for recycling lines, where real waste is much more chaotic than a lab table.",
+        "take": "TechCrunch reports that Danu Robotics is trying to build a better recycling robot. Sorting waste is a practical test for embodied AI: materials are dirty, damaged, overlapping, and different every day. A robot must identify them, grasp them, and keep a fast production line moving. This is far from a general-purpose home robot, but it could prove useful first in dirty, tiring, repetitive industrial work. Reliable performance in a messy waste stream matters more than a polished demo.",
+        "meta": "Robotics and embodied AI | Oct. 9",
         "facts": [
           [
             "Company",
             "Danu Robotics"
           ],
           [
-            "Setting",
-            "Waste-recycling sorting"
+            "Use case",
+            "Recycling sorting"
           ],
           [
             "Challenge",
-            "Items are dirty, mixed, deformed, and moving"
+            "Reliable recognition and grasping in mixed materials"
           ]
         ],
-        "visual": {
-          "type": "orbit",
-          "label": "What a recycling robot must solve",
-          "nodes": [
-            "Messy materials",
-            "Vision recognition",
-            "Physical grasping",
-            "Stable sorting"
-          ]
-        },
+        "visual": null,
         "impacts": [
           [
-            "Frontline work",
-            "Reliable robots could reduce hazardous, repetitive sorting"
+            "For workers",
+            "If reliable, robots could take on repetitive sorting work in unpleasant conditions."
           ],
           [
-            "Recycling efficiency",
-            "Fewer sorting errors can improve recovered material value"
-          ],
-          [
-            "Deployment cost",
-            "Maintenance and adapting to waste streams will shape demand"
+            "For recycling",
+            "More accurate sorting can improve material purity and reduce waste of recoverable goods."
           ]
         ],
         "next": [
-          "How do Danu's throughput and error rates perform on real recycling lines?",
-          "Can it adapt to different waste streams across locations?"
+          "Whether the robot publishes continuous-operation data from real facilities",
+          "Whether it can handle more mixed, damaged, and contaminated materials"
         ],
         "source": "TechCrunch AI",
-        "updated": "2026-10-10"
+        "updated": "2026-10-09"
       },
       "sourceLinks": [
         {
-          "title": "Danu Robotics' fight to build a better recycling robot",
+          "title": "Danu Robotics’ fight to build a better recycling robot",
           "url": "https://techcrunch.com/2026/10/09/danu-robotics-fight-to-build-a-better-recycling-robot/",
           "publisher": "TechCrunch AI"
         }
@@ -1560,12 +713,12 @@
         "credit": "TechCrunch AI",
         "link": "https://techcrunch.com/2026/10/09/danu-robotics-fight-to-build-a-better-recycling-robot/",
         "zh": {
-          "alt": "回收机器人最难的不是“看见垃圾”，而是每次都能抓对",
-          "caption": "回收机器人最难的不是“看见垃圾”，而是每次都能抓对"
+          "alt": "回收机器人想分拣垃圾，难点不是抓起来，而是每天都别抓错",
+          "caption": "回收机器人想分拣垃圾，难点不是抓起来，而是每天都别抓错"
         },
         "en": {
-          "alt": "A recycling robot's hard problem is not seeing trash. It is grabbing the right thing every time.",
-          "caption": "A recycling robot's hard problem is not seeing trash. It is grabbing the right thing every time."
+          "alt": "A recycling robot has to work in the mess, not just pick a clean demo object",
+          "caption": "A recycling robot has to work in the mess, not just pick a clean demo object"
         }
       },
       "termGuides": [
@@ -1576,31 +729,570 @@
             "Danu"
           ],
           "zh": {
-            "label": "Danu Robotics",
+            "label": "机器人公司",
             "meaning": "开发回收分拣机器人的公司。",
-            "relation": "它正尝试解决真实回收线中抓取和分类不稳定的问题。"
+            "relation": "它正试图让机器人在真实垃圾流中完成识别和抓取。"
           },
           "en": {
-            "label": "Danu Robotics",
+            "label": "Robotics company",
             "meaning": "A company developing robots for recycling sorting.",
-            "relation": "It is trying to solve unreliable grasping and sorting on real recycling lines."
+            "relation": "It is trying to make robots identify and grasp materials in real waste streams."
           }
         },
         {
-          "key": "embodied AI",
+          "key": "具身 AI",
           "aliases": [
             "具身 AI",
             "embodied AI"
           ],
           "zh": {
-            "label": "具身 AI",
-            "meaning": "让 AI 通过机器人、传感器和机械结构在现实中感知并行动。",
-            "relation": "回收任务要求 AI 不只认出物品，还得用机械臂准确处理它。"
+            "label": "能感知并行动的 AI",
+            "meaning": "让机器人通过摄像头、传感器和机械臂理解环境并动作的 AI。",
+            "relation": "回收分拣需要它把识别结果变成稳定抓取。"
           },
           "en": {
-            "label": "Embodied AI",
-            "meaning": "AI that senses and acts in the physical world through robots, sensors, and machinery.",
-            "relation": "Recycling requires AI not only to identify an item but to handle it accurately with a machine."
+            "label": "AI that acts in the physical world",
+            "meaning": "AI that lets robots use cameras, sensors, and mechanisms to understand and act in an environment.",
+            "relation": "Recycling sorting requires it to turn recognition into reliable grasping."
+          }
+        }
+      ]
+    },
+    {
+      "id": "ai-microsoft-emergency-brake",
+      "cat": "AI",
+      "icon": "alert",
+      "title": "微软 CEO 要给 AI 装“紧急刹车”：关键不是按钮，而是谁有权按",
+      "brief": "模型能做的事越多，用户和企业越需要一个能立刻停下来的办法。",
+      "take": "TechCrunch 报道，微软 CEO 萨提亚·纳德拉表示，AI 模型需要“紧急刹车”。这句话听上去简单，落实却很难：什么行为触发停机、谁能中止、停机后如何保留证据和恢复服务，都得在事故发生前写清楚。对普通用户来说，这关系到越来越多代办工作、客服和内容系统在明显出错时，能不能被及时关掉，而不是继续把错误放大。",
+      "meta": "AI 安全治理｜10月10日",
+      "facts": [
+        [
+          "公司",
+          "Microsoft"
+        ],
+        [
+          "发言人",
+          "萨提亚·纳德拉"
+        ],
+        [
+          "主张",
+          "AI 模型需要紧急刹车"
+        ]
+      ],
+      "visual": null,
+      "impacts": [
+        [
+          "对用户",
+          "处理付款、账号或重要信息的 AI，出错时应有可用的人工中断路径。"
+        ],
+        [
+          "对企业",
+          "停机权、日志和恢复流程会成为部署高权限 AI 的基本配置。"
+        ]
+      ],
+      "next": [
+        "微软是否提出具体的技术或产品机制",
+        "“紧急刹车”能否覆盖外部开发者接入的模型服务"
+      ],
+      "source": "TechCrunch AI",
+      "updated": "2026-10-10",
+      "en": {
+        "cat": "AI",
+        "title": "Microsoft’s CEO wants an AI emergency brake—but who gets the switch?",
+        "brief": "As models do more, users and businesses need a way to stop them quickly when something plainly goes wrong.",
+        "take": "TechCrunch reports that Microsoft CEO Satya Nadella said AI models need an “emergency brake.” The phrase is simple; implementation is not. Teams need to decide what triggers a shutdown, who can stop a system, and how to preserve evidence and restore service afterward—before an incident occurs. For ordinary users, this matters as AI handles more work, customer support, and content: can an obvious failure be halted, rather than allowed to compound?",
+        "meta": "AI safety governance | Oct. 10",
+        "facts": [
+          [
+            "Company",
+            "Microsoft"
+          ],
+          [
+            "Speaker",
+            "Satya Nadella"
+          ],
+          [
+            "Proposal",
+            "AI models need an emergency brake"
+          ]
+        ],
+        "visual": null,
+        "impacts": [
+          [
+            "For users",
+            "AI handling payments, accounts, or important information needs a usable human interruption path."
+          ],
+          [
+            "For companies",
+            "Stop authority, logs, and recovery plans become baseline requirements for high-privilege AI."
+          ]
+        ],
+        "next": [
+          "Whether Microsoft proposes specific technical or product mechanisms",
+          "Whether an emergency brake can cover model services used by outside developers"
+        ],
+        "source": "TechCrunch AI",
+        "updated": "2026-10-10"
+      },
+      "sourceLinks": [
+        {
+          "title": "Microsoft’s Satya Nadella says AI models need an ‘emergency brake’",
+          "url": "https://techcrunch.com/2026/10/10/microsofts-satya-nadella-says-ai-models-need-an-emergency-brake/",
+          "publisher": "TechCrunch AI"
+        }
+      ],
+      "eventImage": {
+        "url": "https://techcrunch.com/wp-content/uploads/2023/11/satya-nadella-2_web.png?w=1000",
+        "credit": "TechCrunch AI",
+        "link": "https://techcrunch.com/2026/10/10/microsofts-satya-nadella-says-ai-models-need-an-emergency-brake/",
+        "zh": {
+          "alt": "微软 CEO 要给 AI 装“紧急刹车”：关键不是按钮，而是谁有权按",
+          "caption": "微软 CEO 要给 AI 装“紧急刹车”：关键不是按钮，而是谁有权按"
+        },
+        "en": {
+          "alt": "Microsoft’s CEO wants an AI emergency brake—but who gets the switch?",
+          "caption": "Microsoft’s CEO wants an AI emergency brake—but who gets the switch?"
+        }
+      },
+      "termGuides": [
+        {
+          "key": "Microsoft",
+          "aliases": [
+            "Microsoft",
+            "微软"
+          ],
+          "zh": {
+            "label": "科技公司",
+            "meaning": "提供 Windows、Azure 云服务和 AI 产品的美国公司。",
+            "relation": "其 CEO 提出 AI 模型需要紧急中止机制。"
+          },
+          "en": {
+            "label": "Technology company",
+            "meaning": "The U.S. company behind Windows, Azure cloud services, and AI products.",
+            "relation": "Its CEO argued for an emergency stop mechanism for AI models."
+          }
+        },
+        {
+          "key": "紧急刹车",
+          "aliases": [
+            "紧急刹车",
+            "emergency brake"
+          ],
+          "zh": {
+            "label": "快速中止机制",
+            "meaning": "在系统出现危险或异常时，立即限制或停止其行动的控制措施。",
+            "relation": "它被用来描述高风险 AI 出错时的人工干预能力。"
+          },
+          "en": {
+            "label": "Rapid stop mechanism",
+            "meaning": "A control that quickly limits or stops a system when it behaves dangerously or abnormally.",
+            "relation": "It describes human intervention when high-risk AI goes wrong."
+          }
+        }
+      ]
+    },
+    {
+      "id": "ai-agents-in-text-messages",
+      "cat": "AI",
+      "icon": "code",
+      "title": "Agent 要搬进短信：最省一步，也最容易把付款和隐私交出去",
+      "brief": "用短信就能叫 AI 办事很方便，但它也把身份验证、聊天记录和付款授权挤进了同一个入口。",
+      "take": "TechCrunch 盘点了可直接在短信中使用的 AI Agent。把 Agent 放进人们最常用的通信工具，确实省去下载 App、学习新界面的麻烦；但短信不是一个天然适合高风险操作的工作台。用户需要看清它代表谁、能读哪些信息、是否会调用支付，以及号码被盗或被冒用时怎么撤销权限。便利的门槛更低，防错的门槛也必须更低。",
+      "meta": "AI 产品｜10月10日",
+      "facts": [
+        [
+          "产品形态",
+          "短信中的 AI Agent"
+        ],
+        [
+          "入口",
+          "手机短信"
+        ],
+        [
+          "敏感权限",
+          "信息访问与可能的付款操作"
+        ]
+      ],
+      "visual": null,
+      "impacts": [
+        [
+          "对用户",
+          "不要把短信里的自然语言请求，当成默认安全的付款或授权指令。"
+        ],
+        [
+          "对平台",
+          "身份验证、撤销授权和交易确认不能只靠一条聊天消息。"
+        ]
+      ],
+      "next": [
+        "这些 Agent 如何验证身份与确认支付",
+        "运营商和平台是否提供更清晰的反欺诈保护"
+      ],
+      "source": "TechCrunch AI",
+      "updated": "2026-10-10",
+      "en": {
+        "cat": "AI",
+        "title": "AI Agents are moving into text messages—convenient, until money and privacy join the chat",
+        "brief": "Using an AI by text lowers friction, but it also puts identity, chat data, and payment authority at one entry point.",
+        "take": "TechCrunch rounds up AI Agents that can be used through text messages. Putting an Agent inside a familiar communication tool avoids another app and interface. But SMS is not automatically a safe workspace for high-risk actions. Users need to know whom an Agent represents, what information it can read, whether it can initiate payment, and how permission is revoked if a number is stolen or impersonated. The convenience bar is lower; the error-prevention bar must be lower too.",
+        "meta": "AI products | Oct. 10",
+        "facts": [
+          [
+            "Product form",
+            "AI Agents in text messages"
+          ],
+          [
+            "Entry point",
+            "Mobile SMS"
+          ],
+          [
+            "Sensitive permissions",
+            "Information access and possible payment actions"
+          ]
+        ],
+        "visual": null,
+        "impacts": [
+          [
+            "For users",
+            "Do not treat a natural-language text request as automatically safe authorization for payment or account actions."
+          ],
+          [
+            "For platforms",
+            "Identity checks, permission revocation, and transaction confirmation cannot rest on one chat message."
+          ]
+        ],
+        "next": [
+          "How these Agents verify identity and confirm payments",
+          "Whether carriers and platforms offer clearer anti-fraud protections"
+        ],
+        "source": "TechCrunch AI",
+        "updated": "2026-10-10"
+      },
+      "sourceLinks": [
+        {
+          "title": "Here are the top AI agents that can live in your text messages",
+          "url": "https://techcrunch.com/2026/10/10/all-the-ai-agents-that-can-live-in-your-text-messages/",
+          "publisher": "TechCrunch AI"
+        }
+      ],
+      "eventImage": {
+        "url": "https://techcrunch.com/wp-content/uploads/2017/12/gettyimages-673436934.jpg?resize=1200,813",
+        "credit": "TechCrunch AI",
+        "link": "https://techcrunch.com/2026/10/10/all-the-ai-agents-that-can-live-in-your-text-messages/",
+        "zh": {
+          "alt": "Agent 要搬进短信：最省一步，也最容易把付款和隐私交出去",
+          "caption": "Agent 要搬进短信：最省一步，也最容易把付款和隐私交出去"
+        },
+        "en": {
+          "alt": "AI Agents are moving into text messages—convenient, until money and privacy join the chat",
+          "caption": "AI Agents are moving into text messages—convenient, until money and privacy join the chat"
+        }
+      },
+      "termGuides": [
+        {
+          "key": "AI Agent",
+          "aliases": [
+            "AI Agent",
+            "Agent",
+            "智能体"
+          ],
+          "zh": {
+            "label": "可执行任务的 AI",
+            "meaning": "能按指令完成多步骤任务、并可能调用外部工具的 AI。",
+            "relation": "这类产品开始通过短信接收指令，可能触及账号与付款操作。"
+          },
+          "en": {
+            "label": "Task-performing AI",
+            "meaning": "AI that can complete multi-step tasks and may call outside tools.",
+            "relation": "These products are beginning to take instructions by text, potentially touching accounts and payments."
+          }
+        },
+        {
+          "key": "SMS",
+          "aliases": [
+            "SMS",
+            "短信",
+            "text messages"
+          ],
+          "zh": {
+            "label": "手机短消息",
+            "meaning": "通过手机号发送和接收的文字通信服务。",
+            "relation": "它成为 AI Agent 的新入口，也带来号码冒用风险。"
+          },
+          "en": {
+            "label": "Mobile text messaging",
+            "meaning": "A service for sending and receiving messages through a phone number.",
+            "relation": "It is becoming an entry point for AI Agents, with risks of number impersonation."
+          }
+        }
+      ]
+    },
+    {
+      "id": "ai-designed-viruses",
+      "cat": "AI",
+      "icon": "alert",
+      "title": "AI 设计病毒的讨论走到台前：能力能公开，风险不能只靠自觉",
+      "brief": "研究 AI 设计病毒的人公开谈方法，生物安全的门槛正在从实验室延伸到模型和数据。",
+      "take": "MIT Technology Review 刊出对“AI 设计病毒”研究者的访谈。候选信息不足以判断相关工作是否产生了可操作的危险能力，但主题本身已很现实：生成式 AI 降低检索、归纳和设计门槛，也可能让具有生物背景的人更快拼接危险知识。这里不该把所有生命科学 AI 一概视为威胁；关键是模型提供商、研究机构和资助方能否区分正当研究与可被滥用的操作指导，并留下审计痕迹。",
+      "meta": "AI 生物安全｜10月8日",
+      "facts": [
+        [
+          "报道形式",
+          "研究者访谈"
+        ],
+        [
+          "主题",
+          "AI 设计病毒"
+        ],
+        [
+          "风险领域",
+          "生物安全与双重用途研究"
+        ]
+      ],
+      "visual": null,
+      "impacts": [
+        [
+          "对公众",
+          "这类风险通常不会先以 App 形式出现，但一旦失控，影响范围可能很大。"
+        ],
+        [
+          "对开发者",
+          "模型的能力评测与访问限制，需要覆盖生物学等高风险领域。"
+        ]
+      ],
+      "next": [
+        "研究者是否披露可复核的安全评测和防护措施",
+        "模型公司会否统一生物风险测试与审计标准"
+      ],
+      "source": "MIT Technology Review",
+      "updated": "2026-10-09",
+      "en": {
+        "cat": "AI",
+        "title": "AI-designed-virus research is no longer a lab-only safety question",
+        "brief": "A public discussion of AI-designed viruses shows that biosecurity now reaches into models, data, and access rules.",
+        "take": "MIT Technology Review published an interview with a creator of AI-designed viruses. The candidate information is not enough to establish whether the work creates an actionable dangerous capability, but the issue is concrete: generative AI can lower the effort needed to search, combine, and design biological knowledge. That does not make all life-science AI a threat. The key question is whether model providers, labs, and funders can separate legitimate research from instructions that can be misused—and retain auditable records.",
+        "meta": "AI biosecurity | Oct. 8",
+        "facts": [
+          [
+            "Format",
+            "Interview with a researcher"
+          ],
+          [
+            "Topic",
+            "AI-designed viruses"
+          ],
+          [
+            "Risk area",
+            "Biosecurity and dual-use research"
+          ]
+        ],
+        "visual": null,
+        "impacts": [
+          [
+            "For the public",
+            "The risk may not first arrive as a consumer app, but the consequences of failure could be broad."
+          ],
+          [
+            "For developers",
+            "Capability evaluations and access limits need to cover high-risk fields such as biology."
+          ]
+        ],
+        "next": [
+          "Whether researchers disclose reviewable safety evaluations and safeguards",
+          "Whether model companies adopt common bio-risk testing and audit standards"
+        ],
+        "source": "MIT Technology Review",
+        "updated": "2026-10-09"
+      },
+      "sourceLinks": [
+        {
+          "title": "Roundtables: A Conversation With the Creator of AI-Designed Viruses",
+          "url": "https://www.technologyreview.com/2026/10/08/1146224/roundtables-a-conversation-with-the-creator-of-ai-designed-viruses/",
+          "publisher": "MIT Technology Review"
+        }
+      ],
+      "eventImage": {
+        "url": "https://wp.technologyreview.com/wp-content/uploads/2024/01/MIT-TR-Roundtables_Oct-2-Thumbnail.png?resize=1200,600",
+        "credit": "MIT Technology Review",
+        "link": "https://www.technologyreview.com/2026/10/08/1146224/roundtables-a-conversation-with-the-creator-of-ai-designed-viruses/",
+        "zh": {
+          "alt": "AI 设计病毒的讨论走到台前：能力能公开，风险不能只靠自觉",
+          "caption": "AI 设计病毒的讨论走到台前：能力能公开，风险不能只靠自觉"
+        },
+        "en": {
+          "alt": "AI-designed-virus research is no longer a lab-only safety question",
+          "caption": "AI-designed-virus research is no longer a lab-only safety question"
+        }
+      },
+      "termGuides": [
+        {
+          "key": "双重用途研究",
+          "aliases": [
+            "双重用途研究",
+            "dual-use research"
+          ],
+          "zh": {
+            "label": "可善可恶的研究",
+            "meaning": "可用于医疗、科学等正当目的，也可能被用于造成伤害的研究。",
+            "relation": "AI 辅助生物设计的价值与滥用风险同时存在。"
+          },
+          "en": {
+            "label": "Research with two possible uses",
+            "meaning": "Research that can support legitimate goals such as medicine and science, but can also be used to cause harm.",
+            "relation": "AI-assisted biological design carries both potential value and misuse risk."
+          }
+        },
+        {
+          "key": "生物安全",
+          "aliases": [
+            "生物安全",
+            "biosecurity"
+          ],
+          "zh": {
+            "label": "防止生物技术被滥用",
+            "meaning": "降低病原体、实验材料和相关知识被意外泄露或恶意使用的措施。",
+            "relation": "本次讨论关注模型是否会降低危险生物知识的获取门槛。"
+          },
+          "en": {
+            "label": "Protection against biological misuse",
+            "meaning": "Measures that reduce accidental release or malicious use of pathogens, materials, and related knowledge.",
+            "relation": "The discussion asks whether models lower access to dangerous biological knowledge."
+          }
+        }
+      ]
+    },
+    {
+      "id": "ai-llm-refusal-safety",
+      "cat": "AI",
+      "icon": "ai",
+      "title": "别把 AI 的“我不能回答”当保险：拒答不是一条安全防线",
+      "brief": "模型会拒答不等于它挡得住风险，提示词一换、工具一接，边界就可能松动。",
+      "take": "MIT Technology Review 指出，人们可能过度相信 AI 会自己对危险请求说“不”。拒答当然有用，但它只是模型行为的一层：不同说法可能绕过限制，模型接上搜索、代码或其他工具后，风险也会变化。对使用者最实用的结论是，别把聊天界面的安全提示当作担保；对提供高风险能力的公司来说，真正的防护要包括权限、监测、人工复核和事后审计。",
+      "meta": "AI 安全｜10月9日",
+      "facts": [
+        [
+          "议题",
+          "AI 的拒答机制"
+        ],
+        [
+          "来源",
+          "MIT Technology Review 分析"
+        ],
+        [
+          "关键判断",
+          "拒答不能单独承担安全责任"
+        ]
+      ],
+      "visual": null,
+      "impacts": [
+        [
+          "对用户",
+          "看到模型拒答，不代表同类风险已被系统性解决。"
+        ],
+        [
+          "对企业",
+          "安全措施需要叠加：限制访问、监测异常、人工审核和审计记录。"
+        ]
+      ],
+      "next": [
+        "模型公司是否公开拒答绕过测试结果",
+        "工具调用型 Agent 是否采用更严格的分级权限"
+      ],
+      "source": "MIT Technology Review",
+      "updated": "2026-10-09",
+      "en": {
+        "cat": "AI",
+        "title": "An AI saying “I can’t help with that” is not a safety system",
+        "brief": "Refusal helps, but a changed prompt or a connected tool can loosen the boundary quickly.",
+        "take": "MIT Technology Review argues that people may place too much faith in an AI model’s ability to refuse dangerous requests. Refusal is useful, but it is only one layer of model behavior: different wording may bypass it, and risk changes when a model is connected to search, code, or other tools. The practical lesson is not to treat a chat safety message as a guarantee. Companies offering high-risk capabilities need access controls, monitoring, human review, and audits as well.",
+        "meta": "AI safety | Oct. 9",
+        "facts": [
+          [
+            "Issue",
+            "AI refusal mechanisms"
+          ],
+          [
+            "Source",
+            "MIT Technology Review analysis"
+          ],
+          [
+            "Core point",
+            "Refusal cannot carry safety responsibility alone"
+          ]
+        ],
+        "visual": null,
+        "impacts": [
+          [
+            "For users",
+            "A model refusing one request does not mean the underlying risk has been solved systemically."
+          ],
+          [
+            "For companies",
+            "Safety needs layers: restricted access, anomaly monitoring, human review, and audit records."
+          ]
+        ],
+        "next": [
+          "Whether model companies publish results of refusal-bypass testing",
+          "Whether tool-using Agents adopt stricter tiered permissions"
+        ],
+        "source": "MIT Technology Review",
+        "updated": "2026-10-09"
+      },
+      "sourceLinks": [
+        {
+          "title": "We’re putting too much faith in AI’s ability to say no",
+          "url": "https://www.technologyreview.com/2026/10/09/1145728/we-are-putting-too-much-faith-in-ai-to-say-no/",
+          "publisher": "MIT Technology Review"
+        }
+      ],
+      "eventImage": {
+        "url": "https://wp.technologyreview.com/wp-content/uploads/2026/10/0924OP.jpg?resize=1200,600",
+        "credit": "MIT Technology Review",
+        "link": "https://www.technologyreview.com/2026/10/09/1145728/we-are-putting-too-much-faith-in-ai-to-say-no/",
+        "zh": {
+          "alt": "别把 AI 的“我不能回答”当保险：拒答不是一条安全防线",
+          "caption": "别把 AI 的“我不能回答”当保险：拒答不是一条安全防线"
+        },
+        "en": {
+          "alt": "An AI saying “I can’t help with that” is not a safety system",
+          "caption": "An AI saying “I can’t help with that” is not a safety system"
+        }
+      },
+      "termGuides": [
+        {
+          "key": "拒答机制",
+          "aliases": [
+            "拒答机制",
+            "refusal",
+            "refusal mechanism"
+          ],
+          "zh": {
+            "label": "模型的拒绝回答规则",
+            "meaning": "模型识别到某些请求有风险时，拒绝提供内容或操作帮助的行为。",
+            "relation": "报道认为它不能单独承担 AI 系统的安全责任。"
+          },
+          "en": {
+            "label": "Model refusal behavior",
+            "meaning": "A model’s behavior of declining to provide content or operational help for requests it identifies as risky.",
+            "relation": "The report argues that it cannot carry an AI system’s safety burden by itself."
+          }
+        },
+        {
+          "key": "审计",
+          "aliases": [
+            "审计",
+            "audit"
+          ],
+          "zh": {
+            "label": "可追溯检查",
+            "meaning": "保留记录并检查系统做过什么、为何这么做的过程。",
+            "relation": "它让高风险 AI 出事后可以追查权限、决策和责任。"
+          },
+          "en": {
+            "label": "Traceable review",
+            "meaning": "Keeping records and examining what a system did and why it did it.",
+            "relation": "It makes it possible to investigate permissions, decisions, and responsibility after a high-risk AI incident."
           }
         }
       ]

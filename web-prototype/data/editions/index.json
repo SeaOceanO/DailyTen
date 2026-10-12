@@ -1,7 +1,17 @@
 {
-  "latestDateKey": "2026-10-10",
-  "updatedAt": "2026-10-10T00:26:42.149Z",
+  "latestDateKey": "2026-10-12",
+  "updatedAt": "2026-10-12T00:09:46.525Z",
   "editions": [
+    {
+      "dateKey": "2026-10-12",
+      "path": "./data/editions/2026-10-12.json",
+      "aiPath": "./data/ai-editions/2026-10-12.json",
+      "channels": [
+        "daily",
+        "ai"
+      ],
+      "generatedAt": "2026-10-12T05:00:00+08:00"
+    },
     {
       "dateKey": "2026-10-10",
       "path": "./data/editions/2026-10-10.json",
