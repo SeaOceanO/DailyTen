@@ -1,0 +1,1334 @@
+{
+  "dateKey": "2026-10-15",
+  "generatedAt": "2026-10-15T05:00:00+08:00",
+  "title": "DailyTen｜10月15日",
+  "subtitle": "从红海航运到卫星网络：今天的风险，正在落到价格、通信和安全上。",
+  "briefLabel": "今日十件事",
+  "doneLabel": "读完今日简报",
+  "readTimeMinutes": 8,
+  "items": [
+    {
+      "id": "openai-saudi-engineer-recording-device",
+      "cat": "AI",
+      "icon": "alert",
+      "title": "OpenAI办公室疑遭录音：AI公司也成了情报争夺的入口",
+      "brief": "一名沙特籍OpenAI员工被控放置录音设备，连最前沿的AI实验室也得重新防着“身边人”。",
+      "take": "英国广播公司报道，一名沙特籍OpenAI工程师被控在公司办公室放置录音装置。案件仍在司法程序中，不能把指控当成定论；但它把一个现实摆到台面上：掌握模型、芯片采购和产品路线的AI公司，已不只是普通科技企业，也是高价值情报目标。对普通用户来说，短期未必改变聊天机器人怎么用；长期看，企业会更严格控制员工、访客和内部信息，产品发布与技术合作也可能变得更慢、更封闭。",
+      "meta": "美国｜10月13—14日",
+      "facts": [
+        [
+          "被告",
+          "BBC称涉案者为沙特籍OpenAI工程师。"
+        ],
+        [
+          "指控",
+          "检方指其在OpenAI办公室放置录音设备。"
+        ],
+        [
+          "状态",
+          "案件已进入刑事指控与调查阶段。"
+        ]
+      ],
+      "visual": null,
+      "impacts": [
+        [
+          "工作场所",
+          "高敏感技术公司的内部安全和沟通限制可能收紧。"
+        ],
+        [
+          "AI竞争",
+          "模型能力和商业计划会更像需要严防的战略信息。"
+        ]
+      ],
+      "next": [
+        "法院将如何认定证据与动机。",
+        "OpenAI是否披露内部安全措施变化。"
+      ],
+      "source": "BBC News",
+      "updated": "2026-10-14",
+      "en": {
+        "cat": "AI",
+        "title": "An alleged recording device at OpenAI shows AI labs are now intelligence targets",
+        "brief": "A Saudi OpenAI employee has been charged over an alleged recording device, a reminder that frontier AI labs must guard against threats from inside too.",
+        "take": "BBC News reports that a Saudi OpenAI engineer has been charged with placing a recording device in an OpenAI office. The allegation still has to be tested in court. But the case makes a larger point: companies holding model research, chip plans, and product roadmaps are no longer just ordinary tech firms; they are valuable intelligence targets. Most users will not see an immediate change in how they use chatbots. Over time, though, tighter internal controls could make product launches and technical partnerships slower and more closed.",
+        "meta": "United States | Oct. 13–14",
+        "facts": [
+          [
+            "Accused",
+            "BBC identifies the defendant as a Saudi OpenAI engineer."
+          ],
+          [
+            "Allegation",
+            "Prosecutors say a recording device was placed in an OpenAI office."
+          ],
+          [
+            "Status",
+            "The matter has moved into a criminal case and investigation."
+          ]
+        ],
+        "visual": null,
+        "impacts": [
+          [
+            "Workplaces",
+            "High-security tech companies may tighten rules for staff, visitors, and internal discussions."
+          ],
+          [
+            "AI race",
+            "Model capabilities and commercial plans are increasingly treated as sensitive strategic information."
+          ]
+        ],
+        "next": [
+          "How a court assesses the evidence and motive.",
+          "Whether OpenAI announces changes to internal security."
+        ],
+        "source": "BBC News",
+        "updated": "2026-10-14"
+      },
+      "sourceLinks": [
+        {
+          "title": "Toilet paper and secret recorders: What we know about the arrest of the Saudi OpenAI engineer",
+          "url": "https://www.bbc.co.uk/news/articles/cm04054ykqqqo?at_medium=RSS&at_campaign=rss",
+          "publisher": "BBC News"
+        },
+        {
+          "title": "Saudi employee charged with planting recording device in OpenAI office",
+          "url": "https://www.bbc.co.uk/news/articles/cwg5jq4vlddzo?at_medium=RSS&at_campaign=rss",
+          "publisher": "BBC News"
+        }
+      ],
+      "eventImage": {
+        "url": "https://ichef.bbci.co.uk/ace/branded_news/1200/cpsprodpb/9074/live/83100400-c7bc-11f1-9a39-31b474234113.jpg",
+        "credit": "BBC News",
+        "link": "https://www.bbc.co.uk/news/articles/cm04054ykqqqo?at_medium=RSS&at_campaign=rss",
+        "zh": {
+          "alt": "OpenAI办公室疑遭录音：AI公司也成了情报争夺的入口",
+          "caption": "OpenAI办公室疑遭录音：AI公司也成了情报争夺的入口"
+        },
+        "en": {
+          "alt": "An alleged recording device at OpenAI shows AI labs are now intelligence targets",
+          "caption": "An alleged recording device at OpenAI shows AI labs are now intelligence targets"
+        }
+      },
+      "termGuides": [
+        {
+          "key": "OpenAI",
+          "aliases": [
+            "OpenAI"
+          ],
+          "zh": {
+            "label": "OpenAI",
+            "meaning": "开发ChatGPT等生成式AI产品的美国公司。",
+            "relation": "这起案件的疑似录音地点，也是被指窃取信息的一方。"
+          },
+          "en": {
+            "label": "OpenAI",
+            "meaning": "The U.S. company behind ChatGPT and other generative AI products.",
+            "relation": "Its office is the alleged site of the recording device."
+          }
+        }
+      ]
+    },
+    {
+      "id": "ukraine-starlink-restrictions",
+      "cat": "国际局势",
+      "icon": "ship",
+      "title": "乌军Starlink突然受限：一家公司也能卡住战场通信",
+      "brief": "前线卫星网络一受限，部队联络、无人机操作和救援协调都可能先变难。",
+      "take": "BBC和《卫报》报道称，乌克兰军方对Starlink卫星互联网的使用突然受到限制；马斯克则表示，任何限制都由美国决定，而非SpaceX单方面决定。具体范围、持续多久以及适用区域仍不清楚。麻烦在于，Starlink并非普通上网服务：在通信设施被毁或信号受干扰的地方，它可连接部队、无人机和救援。战争越来越依赖私营基础设施，也就意味着政府决定、企业规则和战场安全被捆在一起。",
+      "meta": "乌克兰｜10月14日",
+      "facts": [
+        [
+          "变化",
+          "报道称乌克兰军方的Starlink接入突然受限。"
+        ],
+        [
+          "说法",
+          "马斯克称限制决定来自美国，而非其公司。"
+        ],
+        [
+          "用途",
+          "Starlink可在受损地区提供卫星互联网连接。"
+        ]
+      ],
+      "visual": {
+        "type": "orbit",
+        "label": "通信受限如何传导",
+        "nodes": [
+          "接入受限",
+          "前线联络变难",
+          "无人机与协调受影响",
+          "平民救援风险上升"
+        ]
+      },
+      "impacts": [
+        [
+          "战场安全",
+          "通信中断会放大前线判断失误和救援延迟。"
+        ],
+        [
+          "基础设施",
+          "私营卫星网络已成国家安全中的关键单点。"
+        ]
+      ],
+      "next": [
+        "限制覆盖哪些地区和功能。",
+        "美国与SpaceX是否公布正式规则。"
+      ],
+      "source": "BBC News、The Guardian",
+      "updated": "2026-10-14",
+      "en": {
+        "cat": "Geopolitics",
+        "title": "Ukraine’s Starlink limits show one company can bottleneck battlefield communications",
+        "brief": "When frontline satellite access is restricted, unit contact, drone operations, and rescue coordination can become harder fast.",
+        "take": "BBC News and the Guardian report that Ukrainian military access to Starlink was suddenly restricted. Elon Musk said any limits came from the U.S. government rather than a unilateral SpaceX decision. The scope, duration, and affected areas remain unclear. Starlink is not just consumer internet in a war zone: where telecom networks are destroyed or jammed, it can connect units, drones, and emergency responders. The episode shows how government policy, a private company’s rules, and battlefield safety can now be tightly linked.",
+        "meta": "Ukraine | Oct. 14",
+        "facts": [
+          [
+            "Change",
+            "Reports say Ukrainian military access to Starlink was suddenly restricted."
+          ],
+          [
+            "Claim",
+            "Musk said the U.S., not his company alone, determines any limits."
+          ],
+          [
+            "Role",
+            "Starlink provides satellite internet where ground networks are damaged."
+          ]
+        ],
+        "visual": {
+          "type": "orbit",
+          "label": "How a communications limit spreads",
+          "nodes": [
+            "Access restricted",
+            "Frontline contact gets harder",
+            "Drones and coordination suffer",
+            "Civilian rescue risk rises"
+          ]
+        },
+        "impacts": [
+          [
+            "Safety",
+            "Lost communications can worsen errors at the front and delay rescue."
+          ],
+          [
+            "Infrastructure",
+            "A private satellite network has become a critical security dependency."
+          ]
+        ],
+        "next": [
+          "Which areas and functions are covered.",
+          "Whether the U.S. and SpaceX publish formal rules."
+        ],
+        "source": "BBC News and The Guardian",
+        "updated": "2026-10-14"
+      },
+      "sourceLinks": [
+        {
+          "title": "Musk says any limits on Ukraine's Starlink access down to US, not his firm",
+          "url": "https://www.bbc.co.uk/news/articles/c8wy9veedgygo?at_medium=RSS&at_campaign=rss",
+          "publisher": "BBC News"
+        },
+        {
+          "title": "Ukrainian military’s access to Starlink satellite internet suddenly restricted",
+          "url": "https://www.theguardian.com/world/2026/oct/14/ukraine-soldiers-combat-access-starlink-satellite-internet-restricted",
+          "publisher": "The Guardian"
+        }
+      ],
+      "eventImage": {
+        "url": "https://ichef.bbci.co.uk/ace/branded_news/1200/cpsprodpb/a29b/live/2b9027f0-c807-11f1-aff0-65f8bbf884f7.jpg",
+        "credit": "BBC News",
+        "link": "https://www.bbc.co.uk/news/articles/c8wy9veedgygo?at_medium=RSS&at_campaign=rss",
+        "zh": {
+          "alt": "乌军Starlink突然受限：一家公司也能卡住战场通信",
+          "caption": "乌军Starlink突然受限：一家公司也能卡住战场通信"
+        },
+        "en": {
+          "alt": "Ukraine’s Starlink limits show one company can bottleneck battlefield communications",
+          "caption": "Ukraine’s Starlink limits show one company can bottleneck battlefield communications"
+        }
+      },
+      "termGuides": [
+        {
+          "key": "Starlink",
+          "aliases": [
+            "Starlink",
+            "星链"
+          ],
+          "zh": {
+            "label": "Starlink（星链）",
+            "meaning": "SpaceX运营的低轨卫星互联网服务。",
+            "relation": "乌克兰军方被报道突然受到该服务的接入限制。"
+          },
+          "en": {
+            "label": "Starlink",
+            "meaning": "SpaceX’s low-Earth-orbit satellite internet service.",
+            "relation": "Ukrainian military access to it was reportedly suddenly restricted."
+          }
+        },
+        {
+          "key": "SpaceX",
+          "aliases": [
+            "SpaceX"
+          ],
+          "zh": {
+            "label": "SpaceX",
+            "meaning": "马斯克旗下的美国航天与卫星通信公司。",
+            "relation": "Starlink由它运营，但马斯克称限制决定来自美国政府。"
+          },
+          "en": {
+            "label": "SpaceX",
+            "meaning": "Elon Musk’s U.S. space and satellite communications company.",
+            "relation": "It operates Starlink, though Musk says the U.S. sets any limits."
+          }
+        }
+      ]
+    },
+    {
+      "id": "hormuz-container-ships-sink",
+      "cat": "能源",
+      "icon": "oil",
+      "title": "两艘货轮在霍尔木兹附近沉没：油价之外，日用品运费也要防着涨",
+      "brief": "霍尔木兹附近遇袭沉船，会让保险、绕行和运费一起变贵，最后可能传到商品价格上。",
+      "take": "BBC与《卫报》报道，在伊朗袭击增加的背景下，两艘集装箱船在霍尔木兹海峡附近沉没，其中一艘被新加坡方面确认遭到抛射物击中。人员伤亡、责任归属和航道是否持续受扰，仍需要更多官方信息。霍尔木兹海峡是能源运输要道，但风险不只体现在油价：集装箱船若绕航、等待或投保更贵，零售商补货成本也会上升。从燃油到家电、服装，价格压力通常不会当天出现，却会慢慢传到消费者。",
+      "meta": "霍尔木兹海峡｜10月14日",
+      "facts": [
+        [
+          "沉船",
+          "报道称两艘集装箱船在海峡附近沉没。"
+        ],
+        [
+          "确认",
+          "新加坡称其中一艘遭抛射物击中后沉没。"
+        ],
+        [
+          "背景",
+          "报道指当地伊朗袭击活动增加。"
+        ]
+      ],
+      "visual": {
+        "type": "orbit",
+        "label": "航道风险如何影响价格",
+        "nodes": [
+          "船只遇袭",
+          "保险与绕行增加",
+          "运输成本上升",
+          "商品价格承压"
+        ]
+      },
+      "impacts": [
+        [
+          "生活成本",
+          "更高的海运和保险费用可能传入进口商品价格。"
+        ],
+        [
+          "能源安全",
+          "这一关键航道受扰会迅速牵动油气供应预期。"
+        ]
+      ],
+      "next": [
+        "船员伤亡及沉船原因的官方调查。",
+        "航运公司是否大规模改道或暂停通行。"
+      ],
+      "source": "BBC News、The Guardian",
+      "updated": "2026-10-14",
+      "en": {
+        "cat": "Energy",
+        "title": "Two container ships sink near Hormuz: shipping costs, not just oil, are at risk",
+        "brief": "Attacks and sinkings near Hormuz can raise insurance, detour, and freight costs that eventually reach shop prices.",
+        "take": "BBC News and the Guardian report that two container ships sank near the Strait of Hormuz amid an increase in Iranian attacks. Singapore said one vessel was hit by a projectile before it sank. Casualties, responsibility, and the durability of the disruption still need official clarification. Hormuz is an energy chokepoint, but the risk goes beyond oil prices. If container ships must wait, reroute, or pay more for insurance, retailers face higher restocking costs. Those pressures can gradually reach consumers through fuel, appliances, clothing, and other imported goods.",
+        "meta": "Strait of Hormuz | Oct. 14",
+        "facts": [
+          [
+            "Sinkings",
+            "Reports say two container ships sank near the strait."
+          ],
+          [
+            "Confirmation",
+            "Singapore said one was hit by a projectile before sinking."
+          ],
+          [
+            "Context",
+            "Reports describe increased Iranian attacks in the area."
+          ]
+        ],
+        "visual": {
+          "type": "orbit",
+          "label": "How shipping risk reaches prices",
+          "nodes": [
+            "Ships attacked",
+            "Insurance and detours rise",
+            "Transport costs increase",
+            "Goods face price pressure"
+          ]
+        },
+        "impacts": [
+          [
+            "Living costs",
+            "Higher freight and insurance bills can feed into imported-goods prices."
+          ],
+          [
+            "Energy security",
+            "Disruption in this key route quickly affects expectations for oil and gas supply."
+          ]
+        ],
+        "next": [
+          "Official findings on casualties and the cause of the sinkings.",
+          "Whether carriers reroute at scale or suspend transits."
+        ],
+        "source": "BBC News and The Guardian",
+        "updated": "2026-10-14"
+      },
+      "sourceLinks": [
+        {
+          "title": "Container ship hit by projectile sinks in Strait of Hormuz, Singapore says",
+          "url": "https://www.bbc.co.uk/news/articles/crkg7q97z078o?at_medium=RSS&at_campaign=rss",
+          "publisher": "BBC News"
+        },
+        {
+          "title": "Two container ships sink near strait of Hormuz amid surge in Iranian attacks",
+          "url": "https://www.theguardian.com/world/2026/oct/14/container-ship-sinks-strait-of-hormuz-surge-iranian-attacks-iran-us-midterm-elections",
+          "publisher": "The Guardian"
+        }
+      ],
+      "eventImage": {
+        "url": "https://ichef.bbci.co.uk/ace/branded_news/1200/cpsprodpb/638b/live/5f02caa0-c7e6-11f1-a64c-550be9e3c66b.jpg",
+        "credit": "BBC News",
+        "link": "https://www.bbc.co.uk/news/articles/crkg7q97z078o?at_medium=RSS&at_campaign=rss",
+        "zh": {
+          "alt": "两艘货轮在霍尔木兹附近沉没：油价之外，日用品运费也要防着涨",
+          "caption": "两艘货轮在霍尔木兹附近沉没：油价之外，日用品运费也要防着涨"
+        },
+        "en": {
+          "alt": "Two container ships sink near Hormuz: shipping costs, not just oil, are at risk",
+          "caption": "Two container ships sink near Hormuz: shipping costs, not just oil, are at risk"
+        }
+      },
+      "termGuides": [
+        {
+          "key": "霍尔木兹海峡",
+          "aliases": [
+            "霍尔木兹海峡",
+            "Strait of Hormuz"
+          ],
+          "zh": {
+            "label": "霍尔木兹海峡",
+            "meaning": "连接波斯湾与外海的狭窄水道。",
+            "relation": "集装箱船在其附近沉没，令能源与普通货物运输都面临风险。"
+          },
+          "en": {
+            "label": "Strait of Hormuz",
+            "meaning": "The narrow waterway linking the Persian Gulf to open seas.",
+            "relation": "The nearby sinkings threaten energy and ordinary cargo shipping alike."
+          }
+        }
+      ]
+    },
+    {
+      "id": "us-inflation-september",
+      "cat": "全球经济",
+      "icon": "chart",
+      "title": "美国通胀高于预期：降息和全球借钱成本都多了一层变数",
+      "brief": "美国物价涨得比预期快，市场原本盼着的低利率可能没那么快到。",
+      "take": "BBC和NPR报道，美国9月通胀高于预期。报道同时提到，社会保障福利将随通胀调整而上调；但对家庭而言，福利增加并不等于物价压力消失。更棘手的是，美联储若担心通胀反复，就可能更谨慎地下调利率。美国利率会影响美元、全球资金流向和其他国家的融资成本，所以这不只是美国超市账单的问题；房贷、企业贷款和新兴市场汇率都可能跟着承压。",
+      "meta": "美国｜9月数据，10月14日发布",
+      "facts": [
+        [
+          "数据",
+          "美国9月通胀升幅高于市场预期。"
+        ],
+        [
+          "福利",
+          "社会保障福利将按通胀获得调整。"
+        ],
+        [
+          "利率",
+          "更黏的通胀会增加美联储降息难度。"
+        ]
+      ],
+      "visual": {
+        "type": "orbit",
+        "label": "通胀为何外溢",
+        "nodes": [
+          "物价高于预期",
+          "降息更谨慎",
+          "美元与融资成本受影响",
+          "全球借贷压力上升"
+        ]
+      },
+      "impacts": [
+        [
+          "家庭",
+          "日常开支压力未必会因福利调整而立刻缓解。"
+        ],
+        [
+          "全球市场",
+          "美国利率路径会影响汇率、房贷和企业融资。"
+        ]
+      ],
+      "next": [
+        "核心通胀是否也持续偏高。",
+        "美联储下一次会议如何表述利率前景。"
+      ],
+      "source": "BBC News、NPR",
+      "updated": "2026-10-14",
+      "en": {
+        "cat": "Global Economy",
+        "title": "U.S. inflation beats expectations, complicating rate cuts worldwide",
+        "brief": "Faster-than-expected U.S. price growth means the lower interest rates markets wanted may take longer to arrive.",
+        "take": "BBC News and NPR report that U.S. inflation rose more than expected in September. Social Security benefits will be adjusted for inflation, but a larger benefit does not make the underlying cost pressure disappear for households. The harder issue is monetary policy: if the Federal Reserve fears inflation is returning, it may cut rates more cautiously. Because U.S. rates affect the dollar, global capital flows, and borrowing costs elsewhere, this is not only about American grocery bills. Mortgages, business loans, and emerging-market currencies can all feel the effect.",
+        "meta": "United States | September data released Oct. 14",
+        "facts": [
+          [
+            "Data",
+            "U.S. inflation rose more than markets expected in September."
+          ],
+          [
+            "Benefits",
+            "Social Security benefits will be adjusted for inflation."
+          ],
+          [
+            "Rates",
+            "Stickier inflation makes Federal Reserve rate cuts harder."
+          ]
+        ],
+        "visual": {
+          "type": "orbit",
+          "label": "Why U.S. inflation travels",
+          "nodes": [
+            "Prices beat forecasts",
+            "Rate cuts become cautious",
+            "Dollar and funding costs move",
+            "Global borrowing pressure rises"
+          ]
+        },
+        "impacts": [
+          [
+            "Households",
+            "A benefit adjustment may not immediately ease everyday cost pressure."
+          ],
+          [
+            "Global markets",
+            "The U.S. rate path affects exchange rates, mortgages, and business financing."
+          ]
+        ],
+        "next": [
+          "Whether core inflation also stays elevated.",
+          "How the Fed describes the rate outlook at its next meeting."
+        ],
+        "source": "BBC News and NPR",
+        "updated": "2026-10-14"
+      },
+      "sourceLinks": [
+        {
+          "title": "US inflation rises more than expected - here's what is happening with prices",
+          "url": "https://www.bbc.co.uk/news/articles/cwy8lx3pg4k2o?at_medium=RSS&at_campaign=rss",
+          "publisher": "BBC News"
+        },
+        {
+          "title": "Inflation sizzled in September — and Social Security benefits will get a boost",
+          "url": "https://www.npr.org/2026/10/14/nx-s1-6000593/inflation-consumer-prices-cpi-social-security-benefits",
+          "publisher": "NPR"
+        }
+      ],
+      "eventImage": {
+        "url": "https://ichef.bbci.co.uk/ace/branded_news/1200/cpsprodpb/bd50/live/e1cf6860-c7cf-11f1-9e10-4dcbd31d4273.jpg",
+        "credit": "BBC News",
+        "link": "https://www.bbc.co.uk/news/articles/cwy8lx3pg4k2o?at_medium=RSS&at_campaign=rss",
+        "zh": {
+          "alt": "美国通胀高于预期：降息和全球借钱成本都多了一层变数",
+          "caption": "美国通胀高于预期：降息和全球借钱成本都多了一层变数"
+        },
+        "en": {
+          "alt": "U.S. inflation beats expectations, complicating rate cuts worldwide",
+          "caption": "U.S. inflation beats expectations, complicating rate cuts worldwide"
+        }
+      },
+      "termGuides": [
+        {
+          "key": "美联储",
+          "aliases": [
+            "美联储",
+            "Federal Reserve",
+            "Fed"
+          ],
+          "zh": {
+            "label": "美联储",
+            "meaning": "美国的中央银行，负责设定关键利率。",
+            "relation": "通胀偏高会让它更难快速降息。"
+          },
+          "en": {
+            "label": "Federal Reserve",
+            "meaning": "The U.S. central bank, which sets key interest rates.",
+            "relation": "Higher inflation makes it harder for the Fed to cut rates quickly."
+          }
+        }
+      ]
+    },
+    {
+      "id": "saudi-yemen-oil-depots",
+      "cat": "国际局势",
+      "icon": "refinery",
+      "title": "沙特打击也门油库，阿美总部附近再传导弹威胁",
+      "brief": "油库被炸、能源公司总部附近传出导弹威胁，中东冲突正把能源设施推到更危险的位置。",
+      "take": "《卫报》报道，沙特阿拉伯袭击了也门首都附近的战略油库，并称有导弹朝沙特阿美总部所在地的方向发射。袭击造成的损失、导弹是否被拦截及后续报复尚待进一步确认。这类事件的风险在于，能源设施既是经济命脉，也是容易制造全球市场焦虑的目标。即使实际供应没有中断，交易商、保险公司和航运企业也会先按更高风险定价，消费者随后可能在燃油与运输费用上感受到余波。",
+      "meta": "沙特阿拉伯、也门｜10月13日",
+      "facts": [
+        [
+          "空袭",
+          "沙特称打击也门首都附近战略油库。"
+        ],
+        [
+          "导弹",
+          "沙特称有导弹飞向阿美总部所在地的方向。"
+        ],
+        [
+          "设施",
+          "沙特阿美是全球重要的石油生产企业。"
+        ]
+      ],
+      "visual": null,
+      "impacts": [
+        [
+          "油价",
+          "供应未断也可能因风险溢价而出现价格波动。"
+        ],
+        [
+          "地区安全",
+          "能源基础设施遭瞄准会增加误判和报复升级风险。"
+        ]
+      ],
+      "next": [
+        "导弹拦截结果及设施损失。",
+        "冲突是否扩及更多能源与港口目标。"
+      ],
+      "source": "The Guardian",
+      "updated": "2026-10-13",
+      "en": {
+        "cat": "Geopolitics",
+        "title": "Saudi strikes on Yemen put oil infrastructure closer to the line of fire",
+        "brief": "Strikes on oil depots and a reported missile threat near Aramco’s headquarters put energy assets deeper into the conflict zone.",
+        "take": "The Guardian reports that Saudi Arabia struck strategic oil depots near Yemen’s capital and said missiles were launched toward the location of Saudi Aramco’s headquarters. Damage, interception results, and the next round of retaliation still need confirmation. Energy infrastructure is both an economic lifeline and a target that can quickly alarm global markets. Even without an actual supply outage, traders, insurers, and shipping firms price in higher risk first; consumers may later feel it in fuel and transport costs.",
+        "meta": "Saudi Arabia and Yemen | Oct. 13",
+        "facts": [
+          [
+            "Strikes",
+            "Saudi Arabia said it hit strategic oil depots near Yemen’s capital."
+          ],
+          [
+            "Missiles",
+            "Saudi Arabia said missiles were launched toward the area of Aramco’s headquarters."
+          ],
+          [
+            "Company",
+            "Saudi Aramco is one of the world’s major oil producers."
+          ]
+        ],
+        "visual": null,
+        "impacts": [
+          [
+            "Oil prices",
+            "Risk premiums can move prices even if physical supply is not interrupted."
+          ],
+          [
+            "Regional security",
+            "Targeting energy facilities raises the risk of escalation and miscalculation."
+          ]
+        ],
+        "next": [
+          "Interception results and damage to facilities.",
+          "Whether fighting spreads to more energy or port targets."
+        ],
+        "source": "The Guardian",
+        "updated": "2026-10-13"
+      },
+      "sourceLinks": [
+        {
+          "title": "Saudi Arabia strikes oil depots in Yemen and says missiles launched toward location of Saudi Aramco HQ",
+          "url": "https://www.theguardian.com/world/2026/oct/13/saudi-arabia-strikes-strategic-oil-depots-near-yemen-capital",
+          "publisher": "The Guardian"
+        }
+      ],
+      "eventImage": {
+        "url": "https://i.guim.co.uk/img/media/a0e9bef078e7fc1f0f1d0a49f0349b500081ee4b/505_0_3581_2864/master/3581.jpg?width=1200&height=630&quality=85&auto=format&fit=crop&precrop=40:21,offset-x50,offset-y0&overlay-align=bottom%2Cleft&overlay-width=100p&overlay-base64=L2ltZy9zdGF0aWMvb3ZlcmxheXMvdGctZGVmYXVsdC5wbmc&enable=upscale&s=5e2be8ae9f8be853f8896a4735d53065",
+        "credit": "The Guardian",
+        "link": "https://www.theguardian.com/world/2026/oct/13/saudi-arabia-strikes-strategic-oil-depots-near-yemen-capital",
+        "zh": {
+          "alt": "沙特打击也门油库，阿美总部附近再传导弹威胁",
+          "caption": "沙特打击也门油库，阿美总部附近再传导弹威胁"
+        },
+        "en": {
+          "alt": "Saudi strikes on Yemen put oil infrastructure closer to the line of fire",
+          "caption": "Saudi strikes on Yemen put oil infrastructure closer to the line of fire"
+        }
+      },
+      "termGuides": [
+        {
+          "key": "沙特阿美",
+          "aliases": [
+            "沙特阿美",
+            "Saudi Aramco",
+            "Aramco"
+          ],
+          "zh": {
+            "label": "沙特阿美",
+            "meaning": "沙特阿拉伯国有背景的石油巨头。",
+            "relation": "沙特称导弹飞向其总部所在地的方向。"
+          },
+          "en": {
+            "label": "Saudi Aramco",
+            "meaning": "Saudi Arabia’s state-backed oil giant.",
+            "relation": "Saudi Arabia said missiles were launched toward the area where its headquarters is located."
+          }
+        }
+      ]
+    },
+    {
+      "id": "kenya-second-ebola-case",
+      "cat": "公共安全",
+      "icon": "alert",
+      "title": "肯尼亚确认第二例埃博拉：接触者追踪成了关键一周",
+      "brief": "第二名患者是首例的亲属，说明防疫现在最要紧的是尽快找全密切接触者。",
+      "take": "BBC报道，肯尼亚确认第二例埃博拉病例，患者是首名死者的亲属。病例数量本身还小，不能据此断言出现大规模传播；但亲属关系提示存在已知接触链，公共卫生部门接下来的速度很重要：隔离、追踪接触者、提供安全就医路径，才能把风险拦在社区扩散之前。对其他国家而言，这也会考验机场筛查、医疗机构识别能力和跨境信息共享，而非只靠旅行限制。",
+      "meta": "肯尼亚｜10月14日",
+      "facts": [
+        [
+          "病例",
+          "肯尼亚确认第二例埃博拉病例。"
+        ],
+        [
+          "关联",
+          "第二名患者是首例患者的亲属。"
+        ],
+        [
+          "重点",
+          "防控核心是追踪并监测接触者。"
+        ]
+      ],
+      "visual": {
+        "type": "orbit",
+        "label": "早期防疫的关键环节",
+        "nodes": [
+          "发现病例",
+          "确认接触链",
+          "隔离与追踪",
+          "阻断社区传播"
+        ]
+      },
+      "impacts": [
+        [
+          "公共健康",
+          "越早找到接触者，越可能避免医院和社区内扩散。"
+        ],
+        [
+          "出行",
+          "周边国家和航空枢纽可能加强健康监测。"
+        ]
+      ],
+      "next": [
+        "新增病例与接触者追踪结果。",
+        "当地是否启动更广泛的检测和疫苗策略。"
+      ],
+      "source": "BBC News",
+      "updated": "2026-10-14",
+      "en": {
+        "cat": "Public Safety",
+        "title": "Kenya confirms a second Ebola case: contact tracing is now the urgent task",
+        "brief": "The second patient is related to the first, making fast identification of close contacts the immediate priority.",
+        "take": "BBC News reports that Kenya has confirmed a second Ebola case, involving a relative of the first victim. The count is still small and does not by itself prove broad community spread. But a family link points to a known contact chain, which makes the next few days important: isolation, contact tracing, and safe routes to care can stop the risk spreading further. For other countries, the test is not only travel restrictions but also surveillance at ports of entry, clinical recognition, and cross-border information sharing.",
+        "meta": "Kenya | Oct. 14",
+        "facts": [
+          [
+            "Cases",
+            "Kenya has confirmed a second Ebola case."
+          ],
+          [
+            "Link",
+            "The second patient is a relative of the first victim."
+          ],
+          [
+            "Priority",
+            "Tracing and monitoring contacts are central to containment."
+          ]
+        ],
+        "visual": {
+          "type": "orbit",
+          "label": "The early containment sequence",
+          "nodes": [
+            "Case detected",
+            "Contact chain identified",
+            "Isolation and tracing",
+            "Community spread blocked"
+          ]
+        },
+        "impacts": [
+          [
+            "Public health",
+            "Finding contacts early offers the best chance to avoid hospital and community transmission."
+          ],
+          [
+            "Travel",
+            "Nearby countries and aviation hubs may strengthen health monitoring."
+          ]
+        ],
+        "next": [
+          "New cases and results of contact tracing.",
+          "Whether wider testing or vaccination measures begin."
+        ],
+        "source": "BBC News",
+        "updated": "2026-10-14"
+      },
+      "sourceLinks": [
+        {
+          "title": "Kenya confirms second Ebola case - a relative of the first victim",
+          "url": "https://www.bbc.co.uk/news/articles/cw5yn8rn04ljo?at_medium=RSS&at_campaign=rss",
+          "publisher": "BBC News"
+        }
+      ],
+      "eventImage": {
+        "url": "https://ichef.bbci.co.uk/ace/branded_news/1200/cpsprodpb/aa15/live/cb6ea3e0-c7e5-11f1-a64c-550be9e3c66b.jpg",
+        "credit": "BBC News",
+        "link": "https://www.bbc.co.uk/news/articles/cw5yn8rn04ljo?at_medium=RSS&at_campaign=rss",
+        "zh": {
+          "alt": "肯尼亚确认第二例埃博拉：接触者追踪成了关键一周",
+          "caption": "肯尼亚确认第二例埃博拉：接触者追踪成了关键一周"
+        },
+        "en": {
+          "alt": "Kenya confirms a second Ebola case: contact tracing is now the urgent task",
+          "caption": "Kenya confirms a second Ebola case: contact tracing is now the urgent task"
+        }
+      },
+      "termGuides": [
+        {
+          "key": "埃博拉",
+          "aliases": [
+            "埃博拉",
+            "Ebola"
+          ],
+          "zh": {
+            "label": "埃博拉",
+            "meaning": "可引发严重出血热的病毒性疾病。",
+            "relation": "肯尼亚确认第二例病例，防控重点转向接触者追踪。"
+          },
+          "en": {
+            "label": "Ebola",
+            "meaning": "A viral disease that can cause severe hemorrhagic fever.",
+            "relation": "Kenya’s second confirmed case makes contact tracing the main containment task."
+          }
+        }
+      ]
+    },
+    {
+      "id": "eu-china-hybrid-import-limit",
+      "cat": "中国经济",
+      "icon": "chart",
+      "title": "欧盟拟给中国混动车设35万辆年上限：车价选择可能变少",
+      "brief": "如果进口配额落地，欧洲消费者能选的中国混动车会受限，价格竞争也会被削弱。",
+      "take": "《卫报》报道，欧盟将把中国混合动力汽车的年进口量限制在35万辆。报道标题将其称为一项协议，但具体执行时间、车型口径和配额分配方式仍需看正式文本。对欧洲消费者来说，这不是抽象的贸易数字：进口受限会减少部分价格较低、配置较高车型的供给，也可能降低本地车企降价的压力。欧盟则是在保护本土产业、就业与供应链控制力和保持市场竞争之间重新划线。",
+      "meta": "欧盟、中国｜10月12日",
+      "facts": [
+        [
+          "上限",
+          "报道指欧盟拟把年进口量限制为35万辆。"
+        ],
+        [
+          "对象",
+          "限制针对来自中国的混合动力汽车。"
+        ],
+        [
+          "未明",
+          "执行细则与时间表尚待正式文件确认。"
+        ]
+      ],
+      "visual": {
+        "type": "orbit",
+        "label": "进口上限的连锁反应",
+        "nodes": [
+          "进口设限",
+          "可选车型减少",
+          "价格竞争变弱",
+          "本地产业获保护"
+        ]
+      },
+      "impacts": [
+        [
+          "购车",
+          "欧洲消费者可能面对更少的车型与更弱的价格竞争。"
+        ],
+        [
+          "贸易",
+          "中欧汽车贸易摩擦可能扩展到更多技术与供应链环节。"
+        ]
+      ],
+      "next": [
+        "欧盟正式文本中的车型和配额规则。",
+        "中国是否出台对等或其他回应。"
+      ],
+      "source": "The Guardian",
+      "updated": "2026-10-12",
+      "en": {
+        "cat": "Global Economy",
+        "title": "EU plan to cap Chinese hybrid imports could narrow car choices in Europe",
+        "brief": "If the quota takes effect, fewer Chinese hybrids may reach European buyers and price competition could weaken.",
+        "take": "The Guardian reports that the EU will limit annual imports of Chinese hybrid vehicles to 350,000. The headline describes an agreement, but the implementation date, vehicle definitions, and quota allocation still need to be checked in the formal text. This is not just a trade statistic for European drivers: a cap could reduce the supply of lower-priced, feature-rich models and lessen pressure on local makers to cut prices. The EU is redrawing the line between protecting domestic industry, jobs, and supply-chain control on one hand, and keeping the market competitive on the other.",
+        "meta": "European Union and China | Oct. 12",
+        "facts": [
+          [
+            "Cap",
+            "The report says annual imports would be limited to 350,000."
+          ],
+          [
+            "Products",
+            "The restriction targets hybrid vehicles from China."
+          ],
+          [
+            "Unknowns",
+            "Detailed rules and timing await formal documentation."
+          ]
+        ],
+        "visual": {
+          "type": "orbit",
+          "label": "What an import cap can do",
+          "nodes": [
+            "Imports capped",
+            "Fewer models available",
+            "Price competition weakens",
+            "Local industry gains protection"
+          ]
+        },
+        "impacts": [
+          [
+            "Car buyers",
+            "European consumers could face fewer choices and less price competition."
+          ],
+          [
+            "Trade",
+            "China-EU friction may spread further across vehicles, technology, and supply chains."
+          ]
+        ],
+        "next": [
+          "The formal EU text on vehicles and quota rules.",
+          "Whether China responds with countermeasures or other action."
+        ],
+        "source": "The Guardian",
+        "updated": "2026-10-12"
+      },
+      "sourceLinks": [
+        {
+          "title": "EU to limit Chinese hybrid vehicle imports to 350,000 a year",
+          "url": "https://www.theguardian.com/environment/2026/oct/12/eu-deal-china-limit-imports-hybrid-electric-vehicles",
+          "publisher": "The Guardian"
+        }
+      ],
+      "eventImage": {
+        "url": "https://i.guim.co.uk/img/media/9b1bc334f5fc5243721e7b1a8d59c7c49217b34c/326_0_6827_5464/master/6827.jpg?width=1200&height=630&quality=85&auto=format&fit=crop&precrop=40:21,offset-x50,offset-y0&overlay-align=bottom%2Cleft&overlay-width=100p&overlay-base64=L2ltZy9zdGF0aWMvb3ZlcmxheXMvdGctZGVmYXVsdC5wbmc&enable=upscale&s=7ad22c99c05dc40fb328174cf276777f",
+        "credit": "The Guardian",
+        "link": "https://www.theguardian.com/environment/2026/oct/12/eu-deal-china-limit-imports-hybrid-electric-vehicles",
+        "zh": {
+          "alt": "欧盟拟给中国混动车设35万辆年上限：车价选择可能变少",
+          "caption": "欧盟拟给中国混动车设35万辆年上限：车价选择可能变少"
+        },
+        "en": {
+          "alt": "EU plan to cap Chinese hybrid imports could narrow car choices in Europe",
+          "caption": "EU plan to cap Chinese hybrid imports could narrow car choices in Europe"
+        }
+      },
+      "termGuides": [
+        {
+          "key": "混合动力汽车",
+          "aliases": [
+            "混合动力汽车",
+            "hybrid vehicle",
+            "hybrid vehicles"
+          ],
+          "zh": {
+            "label": "混合动力汽车",
+            "meaning": "同时使用内燃机和电力驱动系统的汽车。",
+            "relation": "欧盟报道中的进口上限直接针对这一类中国汽车。"
+          },
+          "en": {
+            "label": "Hybrid vehicle",
+            "meaning": "A car that combines an internal-combustion engine with electric propulsion.",
+            "relation": "The reported EU import cap directly targets Chinese vehicles in this category."
+          }
+        }
+      ]
+    },
+    {
+      "id": "germany-nord-stream-trial",
+      "cat": "国际局势",
+      "icon": "refinery",
+      "title": "北溪爆炸案在德国开审：欧洲能源安全的旧伤还没结痂",
+      "brief": "被控破坏北溪管道的乌克兰人受审，谁袭击了欧洲能源设施将进入更公开的司法追问。",
+      "take": "BBC报道，德国开始审理一名被控参与破坏北溪天然气管道的乌克兰人。被告享有无罪推定，审判结果尚不可预判；但案件进入法庭，意味着爆炸案的证据、行动链和责任归属可能得到更公开的检视。北溪管道已停止输气，审判不会立刻改变欧洲能源价格，但它触及一个仍未解决的问题：跨境关键基础设施在冲突中如何保护，遭破坏后谁承担政治、法律和经济代价。",
+      "meta": "德国｜10月14日",
+      "facts": [
+        [
+          "审判",
+          "德国审理一名被控破坏北溪管道的乌克兰人。"
+        ],
+        [
+          "原则",
+          "被告在法院判决前应视为无罪。"
+        ],
+        [
+          "设施",
+          "北溪是连接俄罗斯与德国的海底天然气管道系统。"
+        ]
+      ],
+      "visual": null,
+      "impacts": [
+        [
+          "能源安全",
+          "案件会推动欧洲重新审视海底管道等关键设施的防护。"
+        ],
+        [
+          "国际关系",
+          "责任认定可能影响欧洲与乌克兰、俄罗斯的政治关系。"
+        ]
+      ],
+      "next": [
+        "庭审披露哪些证据和涉案网络。",
+        "德国法院的裁决与后续外交反应。"
+      ],
+      "source": "BBC News",
+      "updated": "2026-10-14",
+      "en": {
+        "cat": "Geopolitics",
+        "title": "Nord Stream sabotage reaches a German court, reopening Europe’s energy-security wound",
+        "brief": "A Ukrainian defendant is on trial over the Nord Stream attack, bringing public legal scrutiny to who targeted Europe’s energy infrastructure.",
+        "take": "BBC News reports that Germany has put a Ukrainian man on trial over alleged involvement in the sabotage of the Nord Stream gas pipelines. He is presumed innocent unless proven guilty, and the outcome is unknown. But a courtroom process may expose more evidence about the operation, its chain of command, and responsibility. Nord Stream is no longer delivering gas, so the trial will not immediately alter energy prices. It does reopen a core question: how should cross-border critical infrastructure be protected in conflict, and who bears the political, legal, and financial cost when it is attacked?",
+        "meta": "Germany | Oct. 14",
+        "facts": [
+          [
+            "Trial",
+            "Germany is trying a Ukrainian man accused over the Nord Stream sabotage."
+          ],
+          [
+            "Principle",
+            "The defendant is presumed innocent before a court verdict."
+          ],
+          [
+            "Infrastructure",
+            "Nord Stream is a subsea gas-pipeline system linking Russia and Germany."
+          ]
+        ],
+        "visual": null,
+        "impacts": [
+          [
+            "Energy security",
+            "The case will sharpen scrutiny of protection for subsea pipelines and other critical assets."
+          ],
+          [
+            "Foreign relations",
+            "Findings on responsibility could affect Europe’s relations with Ukraine and Russia."
+          ]
+        ],
+        "next": [
+          "What evidence and networks emerge in court.",
+          "The German verdict and ensuing diplomatic reaction."
+        ],
+        "source": "BBC News",
+        "updated": "2026-10-14"
+      },
+      "sourceLinks": [
+        {
+          "title": "Germany puts Ukrainian on trial accused of blowing up Nord Stream pipelines",
+          "url": "https://www.bbc.co.uk/news/articles/cw99zpmnxzmjo?at_medium=RSS&at_campaign=rss",
+          "publisher": "BBC News"
+        }
+      ],
+      "eventImage": {
+        "url": "https://ichef.bbci.co.uk/ace/branded_news/1200/cpsprodpb/41b7/live/66289890-c7c4-11f1-993a-152cbb068da1.jpg",
+        "credit": "BBC News",
+        "link": "https://www.bbc.co.uk/news/articles/cw99zpmnxzmjo?at_medium=RSS&at_campaign=rss",
+        "zh": {
+          "alt": "北溪爆炸案在德国开审：欧洲能源安全的旧伤还没结痂",
+          "caption": "北溪爆炸案在德国开审：欧洲能源安全的旧伤还没结痂"
+        },
+        "en": {
+          "alt": "Nord Stream sabotage reaches a German court, reopening Europe’s energy-security wound",
+          "caption": "Nord Stream sabotage reaches a German court, reopening Europe’s energy-security wound"
+        }
+      },
+      "termGuides": [
+        {
+          "key": "北溪",
+          "aliases": [
+            "北溪",
+            "Nord Stream",
+            "Nord Stream pipelines"
+          ],
+          "zh": {
+            "label": "北溪",
+            "meaning": "连接俄罗斯和德国的海底天然气管道系统。",
+            "relation": "德国正审理一名被控参与破坏该系统的人。"
+          },
+          "en": {
+            "label": "Nord Stream",
+            "meaning": "A subsea natural-gas pipeline system linking Russia and Germany.",
+            "relation": "Germany is trying a man accused of helping sabotage it."
+          }
+        }
+      ]
+    },
+    {
+      "id": "india-voter-roll-protests",
+      "cat": "国际局势",
+      "icon": "alert",
+      "title": "印度选民名册删名争议升级：1300万人“去哪了”成街头问题",
+      "brief": "大规模删改选民登记引发抗议，争的不是技术流程，而是谁还有投票资格。",
+      "take": "《卫报》报道，印度围绕选民名册修订爆发抗议，示威者质问为何有1300万个名字被删除；反对派人士还带队前往最高法院附近，警方设置路障并关闭部分地铁站。政府或选举机构对每一项删名的解释、数字范围及最终名单仍值得核实。但对民主制度而言，选票不是小事：登记程序若缺乏透明申诉渠道，最先失去声音的往往是迁徙者、贫困群体和资料不完整的人。",
+      "meta": "印度｜10月12—14日",
+      "facts": [
+        [
+          "争议",
+          "抗议者质疑选民名册删除1300万个名字。"
+        ],
+        [
+          "行动",
+          "反对派人士带队向最高法院附近行进。"
+        ],
+        [
+          "管控",
+          "报道指警方设路障并关闭部分地铁站。"
+        ]
+      ],
+      "visual": {
+        "type": "orbit",
+        "label": "名册争议为何危险",
+        "nodes": [
+          "大量名字删除",
+          "申诉与核验受考验",
+          "投票资格受影响",
+          "选举公信力承压"
+        ]
+      },
+      "impacts": [
+        [
+          "权利",
+          "登记错误或不透明程序可能让合资格选民无法投票。"
+        ],
+        [
+          "政治风险",
+          "名册争议会加深社会对选举公平的怀疑。"
+        ]
+      ],
+      "next": [
+        "选举机构如何解释删名标准和复核程序。",
+        "法院是否介入并要求暂停或修正修订。"
+      ],
+      "source": "The Guardian",
+      "updated": "2026-10-14",
+      "en": {
+        "cat": "Geopolitics",
+        "title": "India’s voter-roll dispute turns into a street fight over who gets to vote",
+        "brief": "Protests over millions of deleted voter names are not about paperwork alone; they are about who retains a ballot.",
+        "take": "The Guardian reports protests in India over voter-roll revisions, with demonstrators asking why 130 million names were deleted. Opposition figures also marched toward the Supreme Court area, where police erected barricades and closed some metro stations. The government’s and election authorities’ explanations for each removal, the scope of the figures, and the final rolls still need scrutiny. In any democracy, voter registration is not a technical footnote: when appeal routes are opaque, migrants, poorer people, and those with incomplete paperwork can be the first to lose their voice.",
+        "meta": "India | Oct. 12–14",
+        "facts": [
+          [
+            "Dispute",
+            "Protesters question the deletion of 130 million names from voter rolls."
+          ],
+          [
+            "Action",
+            "Opposition figures marched toward the Supreme Court area."
+          ],
+          [
+            "Restrictions",
+            "Reports say police erected barricades and closed some metro stations."
+          ]
+        ],
+        "visual": {
+          "type": "orbit",
+          "label": "Why a voter-roll dispute matters",
+          "nodes": [
+            "Many names deleted",
+            "Appeals and checks tested",
+            "Voting rights affected",
+            "Trust in elections strained"
+          ]
+        },
+        "impacts": [
+          [
+            "Rights",
+            "Errors or opaque procedures can prevent eligible voters from casting ballots."
+          ],
+          [
+            "Political risk",
+            "The dispute can deepen public doubt about electoral fairness."
+          ]
+        ],
+        "next": [
+          "How election authorities explain standards and review procedures.",
+          "Whether courts intervene to pause or revise the process."
+        ],
+        "source": "The Guardian",
+        "updated": "2026-10-14"
+      },
+      "sourceLinks": [
+        {
+          "title": "‘How do you explain the deletion of 130 million names?’: why Indian voters are on the streets",
+          "url": "https://www.theguardian.com/world/2026/oct/14/india-protests-election-commission-gyanesh-kumar",
+          "publisher": "The Guardian"
+        },
+        {
+          "title": "Indian opposition figures lead march to police barricades around supreme court",
+          "url": "https://www.theguardian.com/world/2026/oct/12/india-election-protests-delhi-police-shut-metro-stations-ahead-march",
+          "publisher": "The Guardian"
+        }
+      ],
+      "eventImage": {
+        "url": "https://i.guim.co.uk/img/media/461d064cfe98335b0bdbed60f3824c89a8794839/0_0_4320_3456/master/4320.jpg?width=1200&height=630&quality=85&auto=format&fit=crop&precrop=40:21,offset-x50,offset-y0&overlay-align=bottom%2Cleft&overlay-width=100p&overlay-base64=L2ltZy9zdGF0aWMvb3ZlcmxheXMvdGctZGVmYXVsdC5wbmc&enable=upscale&s=057c6fa437a922eb24e8e062a80e5624",
+        "credit": "The Guardian",
+        "link": "https://www.theguardian.com/world/2026/oct/14/india-protests-election-commission-gyanesh-kumar",
+        "zh": {
+          "alt": "印度选民名册删名争议升级：1300万人“去哪了”成街头问题",
+          "caption": "印度选民名册删名争议升级：1300万人“去哪了”成街头问题"
+        },
+        "en": {
+          "alt": "India’s voter-roll dispute turns into a street fight over who gets to vote",
+          "caption": "India’s voter-roll dispute turns into a street fight over who gets to vote"
+        }
+      },
+      "termGuides": [
+        {
+          "key": "选民名册",
+          "aliases": [
+            "选民名册",
+            "voter roll",
+            "voter rolls"
+          ],
+          "zh": {
+            "label": "选民名册",
+            "meaning": "记录有资格参加选举的选民名单。",
+            "relation": "印度的修订行动被抗议者指称删除了大量名字。"
+          },
+          "en": {
+            "label": "Voter roll",
+            "meaning": "The official list of people eligible to vote in an election.",
+            "relation": "Protesters say India’s revision removed millions of names from it."
+          }
+        }
+      ]
+    },
+    {
+      "id": "netflix-job-cuts",
+      "cat": "科技产业",
+      "icon": "chart",
+      "title": "Netflix拟裁1000人：流媒体不再只靠增长故事养团队",
+      "brief": "Netflix据报将裁员1000人，订阅生意再大，也躲不开控制成本和重排岗位。",
+      "take": "BBC报道，Netflix计划裁减约1000个岗位，规模为该公司自2022年以来最大。哪些部门受影响、裁员时间和背后具体财务原因，仍需等待公司更完整说明。流媒体行业早已从“多烧钱抢用户”转到更看重利润、广告收入和内容投入回报；裁员不是观众明天就看不到剧，但可能影响节目开发、客服、推荐产品和与创作者的合作。对科技和媒体从业者，这也是一个提醒：成熟平台仍会在增长放缓时重做组织。",
+      "meta": "美国｜10月14日",
+      "facts": [
+        [
+          "规模",
+          "BBC称Netflix拟裁减约1000个岗位。"
+        ],
+        [
+          "纪录",
+          "这是该公司自2022年以来最大规模裁员。"
+        ],
+        [
+          "行业",
+          "流媒体公司正更强调利润与内容投入回报。"
+        ]
+      ],
+      "visual": null,
+      "impacts": [
+        [
+          "就业",
+          "媒体、内容和技术岗位都可能受到组织重组波及。"
+        ],
+        [
+          "用户体验",
+          "节目开发、产品更新和服务响应可能出现取舍。"
+        ]
+      ],
+      "next": [
+        "Netflix披露受影响团队及时间表。",
+        "裁员是否伴随内容预算或订阅策略调整。"
+      ],
+      "source": "BBC News",
+      "updated": "2026-10-14",
+      "en": {
+        "cat": "Tech Industry",
+        "title": "Netflix plans 1,000 cuts: streaming growth no longer funds every team",
+        "brief": "Netflix is reportedly cutting 1,000 jobs, showing that even a huge subscription business is reshuffling costs and roles.",
+        "take": "BBC News reports that Netflix plans to cut about 1,000 jobs, its steepest reduction since 2022. The affected teams, timing, and specific financial rationale still need fuller company disclosure. Streaming has shifted from spending heavily to win users toward a tougher focus on profit, advertising, and returns on content. A layoff does not mean viewers lose shows tomorrow, but it can shape development slates, customer support, recommendation products, and work with creators. For media and tech workers, it is a reminder that mature platforms can still redraw the organisation when growth slows.",
+        "meta": "United States | Oct. 14",
+        "facts": [
+          [
+            "Scale",
+            "BBC says Netflix plans to cut about 1,000 jobs."
+          ],
+          [
+            "Record",
+            "It would be the company’s largest reduction since 2022."
+          ],
+          [
+            "Industry",
+            "Streaming companies are placing more weight on profit and content returns."
+          ]
+        ],
+        "visual": null,
+        "impacts": [
+          [
+            "Jobs",
+            "Media, content, and technology roles may all be hit by restructuring."
+          ],
+          [
+            "User experience",
+            "Programming, product updates, and service response may face trade-offs."
+          ]
+        ],
+        "next": [
+          "Which teams Netflix identifies and its timeline.",
+          "Whether cuts are paired with changes to content budgets or subscriptions."
+        ],
+        "source": "BBC News",
+        "updated": "2026-10-14"
+      },
+      "sourceLinks": [
+        {
+          "title": "Netflix to shed 1,000 jobs in steepest cuts since 2022",
+          "url": "https://www.bbc.co.uk/news/articles/c6zxj0gzk4x4o?at_medium=RSS&at_campaign=rss",
+          "publisher": "BBC News"
+        }
+      ],
+      "eventImage": {
+        "url": "https://ichef.bbci.co.uk/ace/branded_news/1200/cpsprodpb/877e/live/417f8270-c7f0-11f1-a64c-550be9e3c66b.jpg",
+        "credit": "BBC News",
+        "link": "https://www.bbc.co.uk/news/articles/c6zxj0gzk4x4o?at_medium=RSS&at_campaign=rss",
+        "zh": {
+          "alt": "Netflix拟裁1000人：流媒体不再只靠增长故事养团队",
+          "caption": "Netflix拟裁1000人：流媒体不再只靠增长故事养团队"
+        },
+        "en": {
+          "alt": "Netflix plans 1,000 cuts: streaming growth no longer funds every team",
+          "caption": "Netflix plans 1,000 cuts: streaming growth no longer funds every team"
+        }
+      },
+      "termGuides": [
+        {
+          "key": "Netflix",
+          "aliases": [
+            "Netflix",
+            "奈飞"
+          ],
+          "zh": {
+            "label": "Netflix",
+            "meaning": "面向全球用户的订阅制流媒体公司。",
+            "relation": "该公司据报计划裁减约1000个岗位。"
+          },
+          "en": {
+            "label": "Netflix",
+            "meaning": "A global subscription streaming company.",
+            "relation": "It reportedly plans to cut about 1,000 jobs."
+          }
+        }
+      ]
+    }
+  ]
+}
