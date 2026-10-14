@@ -1,0 +1,1472 @@
+{
+  "dateKey": "2026-10-14",
+  "generatedAt": "2026-10-14T05:00:00+08:00",
+  "title": "DailyTen｜10月14日",
+  "subtitle": "从油库与电网，到 AI 的办公室、手机和工作入口",
+  "briefLabel": "今日十条",
+  "doneLabel": "读完了",
+  "readTimeMinutes": 8,
+  "items": [
+    {
+      "id": "saudi-yemen-oil-depots",
+      "cat": "国际局势",
+      "icon": "oil",
+      "title": "油库成了战场：也门冲突开始碰到沙特的能源神经",
+      "brief": "导弹在利雅得附近被拦截，沙特同时打击也门油库，能源设施和民航的风险都在往上走。",
+      "take": "沙特称也门胡塞武装向沙特阿美总部所在区域发射导弹，拦截行动发生在利雅得附近；沙特随后袭击也门首都附近的战略油料设施。这不只是又一轮报复：当油库、机场和石油公司周边都成为目标，原油供应、航班安排和海湾地区的安全成本都会变得更脆弱。眼下未见大规模供应中断，但真正要看的是攻击是否继续扩大到出口港、炼厂或航线。",
+      "meta": "10月13日｜沙特、也门",
+      "facts": [
+        [
+          "导弹",
+          "沙特称在利雅得附近拦截来袭导弹"
+        ],
+        [
+          "打击目标",
+          "沙特袭击也门首都附近战略油料设施"
+        ],
+        [
+          "风险区域",
+          "沙特阿美总部所在地被提及为导弹目标方向"
+        ]
+      ],
+      "visual": {
+        "type": "orbit",
+        "label": "冲突如何传到日常价格",
+        "nodes": [
+          "导弹与空袭",
+          "油库和机场受威胁",
+          "运输与保险变贵",
+          "油价和航班承压"
+        ]
+      },
+      "impacts": [
+        [
+          "油价",
+          "若能源设施受损或航运受限，燃油和物流成本可能上升"
+        ],
+        [
+          "出行",
+          "海湾机场反复受袭会让改签、停飞和旅行保险风险增加"
+        ]
+      ],
+      "next": [
+        "是否出现针对出口设施、炼厂或航运的新袭击",
+        "国际油价及区域航班是否持续波动"
+      ],
+      "source": "BBC News、The Guardian",
+      "updated": "2026-10-13",
+      "en": {
+        "cat": "Geopolitics",
+        "title": "Oil depots are now part of the battlefield in Yemen’s war",
+        "brief": "Missiles were intercepted near Riyadh as Saudi Arabia struck fuel depots in Yemen, putting energy sites and air travel under more pressure.",
+        "take": "Saudi Arabia said Houthi forces launched missiles toward the area where Saudi Aramco’s headquarters is located, with interceptions reported near Riyadh. Saudi forces then struck strategic fuel facilities near Yemen’s capital. This is more than another exchange of fire: when depots, airports and oil-company areas become targets, oil supply, flight schedules and security costs across the Gulf all become more fragile. There is no sign of a broad supply disruption yet; the key question is whether attacks spread to export terminals, refineries or shipping routes.",
+        "meta": "Oct 13 | Saudi Arabia, Yemen",
+        "facts": [
+          [
+            "Missiles",
+            "Saudi Arabia said incoming missiles were intercepted near Riyadh"
+          ],
+          [
+            "Target",
+            "Saudi forces struck strategic fuel facilities near Yemen’s capital"
+          ],
+          [
+            "Risk area",
+            "The area of Saudi Aramco’s headquarters was named as the missile direction"
+          ]
+        ],
+        "visual": {
+          "type": "orbit",
+          "label": "How conflict reaches prices",
+          "nodes": [
+            "Missiles and airstrikes",
+            "Depots and airports at risk",
+            "Transport and insurance cost more",
+            "Fuel and flights come under pressure"
+          ]
+        },
+        "impacts": [
+          [
+            "Fuel prices",
+            "Damage to energy infrastructure or shipping restrictions can raise fuel and logistics costs"
+          ],
+          [
+            "Travel",
+            "Repeated airport attacks can bring cancellations, rerouting and higher travel-insurance risk"
+          ]
+        ],
+        "next": [
+          "Whether export infrastructure, refineries or shipping face further attacks",
+          "Whether oil prices and Gulf flight disruptions persist"
+        ],
+        "source": "BBC News, The Guardian",
+        "updated": "2026-10-13"
+      },
+      "sourceLinks": [
+        {
+          "title": "Missiles intercepted near Riyadh after Saudi coalition hits Yemen fuel depot",
+          "url": "https://www.bbc.co.uk/news/articles/crx2d60y1py3o?at_medium=RSS&at_campaign=rss",
+          "publisher": "BBC News"
+        },
+        {
+          "title": "Saudi Arabia strikes oil depots in Yemen and says missiles launched toward location of Saudi Aramco HQ",
+          "url": "https://www.theguardian.com/world/2026/oct/13/saudi-arabia-strikes-strategic-oil-depots-near-yemen-capital",
+          "publisher": "The Guardian"
+        }
+      ],
+      "eventImage": {
+        "url": "https://ichef.bbci.co.uk/ace/branded_news/1200/cpsprodpb/eff9/live/16b445b0-c720-11f1-a64c-550be9e3c66b.jpg",
+        "credit": "BBC News",
+        "link": "https://www.bbc.co.uk/news/articles/crx2d60y1py3o?at_medium=RSS&at_campaign=rss",
+        "zh": {
+          "alt": "油库成了战场：也门冲突开始碰到沙特的能源神经",
+          "caption": "油库成了战场：也门冲突开始碰到沙特的能源神经"
+        },
+        "en": {
+          "alt": "Oil depots are now part of the battlefield in Yemen’s war",
+          "caption": "Oil depots are now part of the battlefield in Yemen’s war"
+        }
+      },
+      "termGuides": [
+        {
+          "key": "胡塞武装",
+          "aliases": [
+            "胡塞武装",
+            "Houthis",
+            "Houthi forces"
+          ],
+          "zh": {
+            "label": "谁",
+            "meaning": "控制也门大片地区的武装组织。",
+            "relation": "此次被指向沙特发射导弹，沙特则以空袭油料设施回应。"
+          },
+          "en": {
+            "label": "Who",
+            "meaning": "An armed group controlling large parts of Yemen.",
+            "relation": "It was accused of firing toward Saudi Arabia; Saudi forces responded with strikes on fuel facilities."
+          }
+        },
+        {
+          "key": "沙特阿美",
+          "aliases": [
+            "沙特阿美",
+            "Saudi Aramco",
+            "Aramco"
+          ],
+          "zh": {
+            "label": "公司",
+            "meaning": "沙特国有石油巨头，也是全球最重要的原油供应商之一。",
+            "relation": "其总部所在区域被提及为导弹目标方向，使能源市场格外警惕。"
+          },
+          "en": {
+            "label": "Company",
+            "meaning": "Saudi Arabia’s state oil giant and one of the world’s most important crude suppliers.",
+            "relation": "The area of its headquarters was cited as the missile direction, heightening market concern."
+          }
+        }
+      ]
+    },
+    {
+      "id": "ukraine-power-intelligence",
+      "cat": "国际局势",
+      "icon": "alert",
+      "title": "基辅电厂遇袭，泽连斯基又称盟友没提前预警",
+      "brief": "停电风险之外，乌克兰担心的是：关键导弹来袭前，情报支持是否正在变得不可靠。",
+      "take": "俄罗斯袭击基辅一座关键发电厂，泽连斯基称盟友没有提前警告俄方弹道导弹来袭。两件事放在一起，麻烦不只在于一座电厂受损：乌克兰进入供暖季前，本就难以承受电网再被打穿；若预警和情报共享出现缺口，平民避险时间会更短，防空拦截也更被动。各方说法仍需独立核实，但这已把俄乌战争中的援助可靠性摆到台面上。",
+      "meta": "10月13日｜乌克兰、俄罗斯",
+      "facts": [
+        [
+          "电厂",
+          "基辅一座关键发电设施遭俄军打击"
+        ],
+        [
+          "预警指控",
+          "泽连斯基称盟友未预先通报弹道导弹来袭"
+        ],
+        [
+          "季节",
+          "袭击发生在乌克兰供暖季前的关键阶段"
+        ]
+      ],
+      "visual": {
+        "type": "orbit",
+        "label": "电网受袭的连锁反应",
+        "nodes": [
+          "导弹袭击电厂",
+          "供电能力下降",
+          "医院与家庭受影响",
+          "防空和援助压力加大"
+        ]
+      },
+      "impacts": [
+        [
+          "民生",
+          "电力不足会先影响取暖、供水、医院和通信"
+        ],
+        [
+          "战争风险",
+          "预警若有缺口，城市居民获得的避险时间会更少"
+        ]
+      ],
+      "next": [
+        "电厂损坏程度及是否引发限电",
+        "美国和欧洲对情报共享争议的回应"
+      ],
+      "source": "BBC News、NPR、The Guardian",
+      "updated": "2026-10-13",
+      "en": {
+        "cat": "Geopolitics",
+        "title": "A Kyiv power plant is hit—and Ukraine says warnings came too late",
+        "brief": "Beyond the blackout risk, Ukraine is questioning whether missile-warning support from allies is becoming less dependable.",
+        "take": "Russia struck a key power plant in Kyiv, while President Volodymyr Zelenskyy said allies had not warned Ukraine in advance of Russian ballistic-missile attacks. Together, the claims raise more than a repair problem: Ukraine is approaching the heating season and can ill afford further damage to its grid. Any gap in warning or intelligence sharing gives civilians less time to shelter and makes air defence more difficult. The accounts still need independent verification, but they put the reliability of wartime support in plain view.",
+        "meta": "Oct 13 | Ukraine, Russia",
+        "facts": [
+          [
+            "Power plant",
+            "A key electricity facility in Kyiv was hit by Russian strikes"
+          ],
+          [
+            "Warning claim",
+            "Zelenskyy said allies did not provide advance warning of ballistic missiles"
+          ],
+          [
+            "Timing",
+            "The attack comes at a critical point before Ukraine’s heating season"
+          ]
+        ],
+        "visual": {
+          "type": "orbit",
+          "label": "The grid attack chain",
+          "nodes": [
+            "Missiles hit a power plant",
+            "Generating capacity falls",
+            "Homes and hospitals are affected",
+            "Air-defence and aid pressure rises"
+          ]
+        },
+        "impacts": [
+          [
+            "Daily life",
+            "Power shortages first hit heating, water, hospitals and communications"
+          ],
+          [
+            "War risk",
+            "If warning systems have gaps, city residents have less time to get to shelter"
+          ]
+        ],
+        "next": [
+          "The scale of damage and any power rationing",
+          "US and European responses to the intelligence-sharing dispute"
+        ],
+        "source": "BBC News, NPR, The Guardian",
+        "updated": "2026-10-13"
+      },
+      "sourceLinks": [
+        {
+          "title": "Russian strikes hit key power plant in Kyiv, Zelensky says",
+          "url": "https://www.bbc.co.uk/news/articles/ck20r9qpw505o?at_medium=RSS&at_campaign=rss",
+          "publisher": "BBC News"
+        },
+        {
+          "title": "The Trump administration warns Ukraine it could cut off intel, Zelenskyy tells NPR",
+          "url": "https://www.npr.org/2026/10/13/nx-s1-6000051/ukraine-zelenskyy-npr-interview-russia-war",
+          "publisher": "NPR"
+        },
+        {
+          "title": "Allies did not warn Kyiv of Russian ballistic missile strikes, says Zelenskyy",
+          "url": "https://www.theguardian.com/world/2026/oct/13/allies-did-not-warn-kyiv-of-russian-ballistic-missile-strikes-says-zelenskyy",
+          "publisher": "The Guardian"
+        }
+      ],
+      "eventImage": {
+        "url": "https://ichef.bbci.co.uk/ace/branded_news/1200/cpsprodpb/10cd/live/79669050-c74d-11f1-a64c-550be9e3c66b.jpg",
+        "credit": "BBC News",
+        "link": "https://www.bbc.co.uk/news/articles/ck20r9qpw505o?at_medium=RSS&at_campaign=rss",
+        "zh": {
+          "alt": "基辅电厂遇袭，泽连斯基又称盟友没提前预警",
+          "caption": "基辅电厂遇袭，泽连斯基又称盟友没提前预警"
+        },
+        "en": {
+          "alt": "A Kyiv power plant is hit—and Ukraine says warnings came too late",
+          "caption": "A Kyiv power plant is hit—and Ukraine says warnings came too late"
+        }
+      },
+      "termGuides": [
+        {
+          "key": "弹道导弹",
+          "aliases": [
+            "弹道导弹",
+            "ballistic missile",
+            "ballistic missiles"
+          ],
+          "zh": {
+            "label": "术语",
+            "meaning": "大部分飞行轨迹在高空运行、末段高速俯冲的导弹。",
+            "relation": "泽连斯基所说的预警缺口，涉及这类留给防空系统反应时间较短的武器。"
+          },
+          "en": {
+            "label": "Term",
+            "meaning": "A missile that travels much of its route high above the atmosphere and descends at high speed.",
+            "relation": "Zelenskyy’s warning claim concerns weapons that can leave air defences little time to react."
+          }
+        }
+      ]
+    },
+    {
+      "id": "imf-global-economy",
+      "cat": "全球经济",
+      "icon": "chart",
+      "title": "IMF说全球经济快摸到“韧性上限”：别把暂时没衰退当作没风险",
+      "brief": "增长虽然没有立刻熄火，但贸易摩擦、债务和地缘冲突叠在一起，缓冲空间正在变薄。",
+      "take": "国际货币基金组织在最新《世界经济展望》中警告，全球经济可能很快测试其承受冲击的极限。它的意思不是明天就会爆发全球衰退，而是此前撑住经济的就业、消费和政策缓冲，正同时面对贸易壁垒、战争扰动和高债务。对普通人最直接的传导通常不是一夜之间失业，而是进口商品更贵、借贷难降价、企业招聘和投资更谨慎。",
+      "meta": "10月13日｜全球",
+      "facts": [
+        [
+          "机构",
+          "IMF发布最新《世界经济展望》"
+        ],
+        [
+          "判断",
+          "IMF称全球经济可能很快触及韧性极限"
+        ],
+        [
+          "压力",
+          "贸易摩擦、地缘冲突与债务负担同时存在"
+        ]
+      ],
+      "visual": {
+        "type": "orbit",
+        "label": "为什么缓冲会变薄",
+        "nodes": [
+          "贸易和冲突扰动",
+          "企业成本上升",
+          "投资招聘转谨慎",
+          "消费与增长走弱"
+        ]
+      },
+      "impacts": [
+        [
+          "价格",
+          "贸易成本上升常会慢慢传到商品和物流价格"
+        ],
+        [
+          "工作与借贷",
+          "企业可能收紧招聘，利率下降也未必很快变成更便宜的贷款"
+        ]
+      ],
+      "next": [
+        "IMF对各主要经济体增长和通胀预测的调整",
+        "贸易限制是否进一步扩大"
+      ],
+      "source": "The Guardian",
+      "updated": "2026-10-13",
+      "en": {
+        "cat": "Global Economy",
+        "title": "The IMF says the global economy is nearing its shock limit",
+        "brief": "Growth has not collapsed, but trade friction, debt and conflict are thinning the cushion that kept the world economy steady.",
+        "take": "The International Monetary Fund warned in its latest World Economic Outlook that the global economy could soon test the limits of its resilience. That does not mean a worldwide recession starts tomorrow. It means the buffers that have held up jobs, spending and policy responses now face trade barriers, war-related disruption and heavy debt at the same time. For households, the path is usually gradual rather than dramatic: pricier imported goods, borrowing costs that stay sticky, and employers becoming more cautious about hiring and investment.",
+        "meta": "Oct 13 | Global",
+        "facts": [
+          [
+            "Institution",
+            "The IMF issued its latest World Economic Outlook"
+          ],
+          [
+            "Assessment",
+            "The IMF said the global economy could soon test its resilience limits"
+          ],
+          [
+            "Pressures",
+            "Trade friction, geopolitical conflict and debt burdens are converging"
+          ]
+        ],
+        "visual": {
+          "type": "orbit",
+          "label": "Why the cushion is thinning",
+          "nodes": [
+            "Trade and conflict disrupt",
+            "Business costs rise",
+            "Hiring and investment slow",
+            "Spending and growth weaken"
+          ]
+        },
+        "impacts": [
+          [
+            "Prices",
+            "Higher trade costs can gradually flow into goods and delivery prices"
+          ],
+          [
+            "Jobs and loans",
+            "Employers may pull back on hiring, while cheaper loans may take time to arrive"
+          ]
+        ],
+        "next": [
+          "Changes to IMF growth and inflation forecasts for major economies",
+          "Whether further trade restrictions are introduced"
+        ],
+        "source": "The Guardian",
+        "updated": "2026-10-13"
+      },
+      "sourceLinks": [
+        {
+          "title": "IMF warns global economy ‘could soon test the limits of resilience’",
+          "url": "https://www.theguardian.com/business/2026/oct/13/imf-global-economy-world-economic-outlook-uk-gdp-forecast-2026",
+          "publisher": "The Guardian"
+        }
+      ],
+      "eventImage": {
+        "url": "https://i.guim.co.uk/img/media/ebc2fbfb05a20eb6eda10742da9aad5434fc5293/400_0_4209_3368/master/4209.jpg?width=1200&height=630&quality=85&auto=format&fit=crop&precrop=40:21,offset-x50,offset-y0&overlay-align=bottom%2Cleft&overlay-width=100p&overlay-base64=L2ltZy9zdGF0aWMvb3ZlcmxheXMvdGctZGVmYXVsdC5wbmc&enable=upscale&s=678cf894a93b7e9c785c362d018162bb",
+        "credit": "The Guardian",
+        "link": "https://www.theguardian.com/business/2026/oct/13/imf-global-economy-world-economic-outlook-uk-gdp-forecast-2026",
+        "zh": {
+          "alt": "IMF说全球经济快摸到“韧性上限”：别把暂时没衰退当作没风险",
+          "caption": "IMF说全球经济快摸到“韧性上限”：别把暂时没衰退当作没风险"
+        },
+        "en": {
+          "alt": "The IMF says the global economy is nearing its shock limit",
+          "caption": "The IMF says the global economy is nearing its shock limit"
+        }
+      },
+      "termGuides": [
+        {
+          "key": "国际货币基金组织",
+          "aliases": [
+            "国际货币基金组织",
+            "IMF",
+            "International Monetary Fund"
+          ],
+          "zh": {
+            "label": "机构",
+            "meaning": "向成员国提供经济监测、政策建议和危机融资的国际组织。",
+            "relation": "它在最新全球经济预测中警告，现有增长缓冲可能不够应对下一轮冲击。"
+          },
+          "en": {
+            "label": "Institution",
+            "meaning": "An international body that monitors economies, gives policy advice and lends in crises.",
+            "relation": "In its latest global outlook, it warned that today’s growth buffers may not withstand the next shock."
+          }
+        },
+        {
+          "key": "世界经济展望",
+          "aliases": [
+            "世界经济展望",
+            "World Economic Outlook"
+          ],
+          "zh": {
+            "label": "报告",
+            "meaning": "IMF定期发布的全球增长、通胀和风险评估。",
+            "relation": "本次报告的核心提醒是，多种经济风险正在同时累积。"
+          },
+          "en": {
+            "label": "Report",
+            "meaning": "The IMF’s regular assessment of global growth, inflation and risks.",
+            "relation": "This edition’s central warning is that several economic risks are building at once."
+          }
+        }
+      ]
+    },
+    {
+      "id": "eu-china-hybrid-import-cap",
+      "cat": "中国经济",
+      "icon": "ship",
+      "title": "欧盟给中国混动车设进口上限，车价选择可能一起变少",
+      "brief": "一年35万辆的上限不只是在谈贸易，欧洲消费者以后能买到什么车、多少钱买，都会受影响。",
+      "take": "欧盟计划将中国混合动力汽车的年进口量限制在35万辆。这种做法比单纯加关税更直接：它先限定能进来的车数，再由车企和经销商决定把配额留给哪些车型和市场。欧洲想给本土制造商留空间，但竞争较少也可能让消费者少一些价格较低的选择。中国车企则可能加快在欧洲本地组装，或者把资源转向其他市场。",
+      "meta": "10月12日｜欧盟、中国",
+      "facts": [
+        [
+          "上限",
+          "欧盟计划每年最多进口35万辆中国混合动力车"
+        ],
+        [
+          "方式",
+          "限制的是数量，而非只调整关税"
+        ],
+        [
+          "对象",
+          "涉及中国制造的混合动力汽车"
+        ]
+      ],
+      "visual": {
+        "type": "orbit",
+        "label": "进口上限如何影响购车",
+        "nodes": [
+          "进口数量受限",
+          "畅销车型配额紧张",
+          "车企调整售价和供货",
+          "消费者选择变少或更贵"
+        ]
+      },
+      "impacts": [
+        [
+          "买车",
+          "部分价格较低的混动车供给可能收紧，等待时间和成交价都可能变化"
+        ],
+        [
+          "产业",
+          "中国车企可能更快把组装和供应链搬到欧洲"
+        ]
+      ],
+      "next": [
+        "具体配额分配规则和生效时间",
+        "中国及汽车企业是否推出反制或本地化生产计划"
+      ],
+      "source": "The Guardian",
+      "updated": "2026-10-12",
+      "en": {
+        "cat": "Global Economy",
+        "title": "Europe caps Chinese hybrid imports, and car choice could get tighter",
+        "brief": "The 350,000-a-year ceiling is not just a trade measure: it could shape which cars Europeans can buy and what they pay.",
+        "take": "The EU plans to limit imports of Chinese hybrid vehicles to 350,000 a year. This is more direct than a tariff: it fixes the number of cars that can enter, leaving manufacturers and dealers to decide which models and markets receive the scarce slots. Europe wants to give domestic producers room, but less competition can also mean fewer lower-priced choices for buyers. Chinese carmakers may respond by assembling more vehicles inside Europe or shifting resources to other markets.",
+        "meta": "Oct 12 | EU, China",
+        "facts": [
+          [
+            "Cap",
+            "The EU plans a yearly limit of 350,000 Chinese hybrid imports"
+          ],
+          [
+            "Mechanism",
+            "The measure limits volume rather than merely changing tariffs"
+          ],
+          [
+            "Scope",
+            "It covers hybrid vehicles made in China"
+          ]
+        ],
+        "visual": {
+          "type": "orbit",
+          "label": "How a cap reaches car buyers",
+          "nodes": [
+            "Import volume is capped",
+            "Popular models face scarce slots",
+            "Carmakers adjust pricing and supply",
+            "Buyers face fewer or pricier options"
+          ]
+        },
+        "impacts": [
+          [
+            "Car buying",
+            "Supply of some lower-priced hybrids may tighten, affecting prices and delivery times"
+          ],
+          [
+            "Industry",
+            "Chinese carmakers may move assembly and supply-chain work into Europe faster"
+          ]
+        ],
+        "next": [
+          "The allocation rules and start date",
+          "Whether China or carmakers respond with countermeasures or local-production plans"
+        ],
+        "source": "The Guardian",
+        "updated": "2026-10-12"
+      },
+      "sourceLinks": [
+        {
+          "title": "EU to limit Chinese hybrid vehicle imports to 350,000 a year",
+          "url": "https://www.theguardian.com/environment/2026/oct/12/eu-deal-china-limit-imports-hybrid-electric-vehicles",
+          "publisher": "The Guardian"
+        }
+      ],
+      "eventImage": {
+        "url": "https://i.guim.co.uk/img/media/9b1bc334f5fc5243721e7b1a8d59c7c49217b34c/326_0_6827_5464/master/6827.jpg?width=1200&height=630&quality=85&auto=format&fit=crop&precrop=40:21,offset-x50,offset-y0&overlay-align=bottom%2Cleft&overlay-width=100p&overlay-base64=L2ltZy9zdGF0aWMvb3ZlcmxheXMvdGctZGVmYXVsdC5wbmc&enable=upscale&s=7ad22c99c05dc40fb328174cf276777f",
+        "credit": "The Guardian",
+        "link": "https://www.theguardian.com/environment/2026/oct/12/eu-deal-china-limit-imports-hybrid-electric-vehicles",
+        "zh": {
+          "alt": "欧盟给中国混动车设进口上限，车价选择可能一起变少",
+          "caption": "欧盟给中国混动车设进口上限，车价选择可能一起变少"
+        },
+        "en": {
+          "alt": "Europe caps Chinese hybrid imports, and car choice could get tighter",
+          "caption": "Europe caps Chinese hybrid imports, and car choice could get tighter"
+        }
+      },
+      "termGuides": [
+        {
+          "key": "混合动力汽车",
+          "aliases": [
+            "混合动力汽车",
+            "hybrid vehicles",
+            "hybrids"
+          ],
+          "zh": {
+            "label": "车型",
+            "meaning": "同时使用燃油发动机和电动系统的汽车。",
+            "relation": "此次进口上限针对的是在中国制造、进入欧盟市场的这类车辆。"
+          },
+          "en": {
+            "label": "Vehicle type",
+            "meaning": "A car using both a combustion engine and an electric system.",
+            "relation": "The import cap targets these vehicles when they are made in China and sold into the EU."
+          }
+        }
+      ]
+    },
+    {
+      "id": "openai-recording-device",
+      "cat": "AI",
+      "icon": "alert",
+      "title": "OpenAI办公室发现疑似窃听装置：AI竞争也开始像情报战",
+      "brief": "一名沙特男子被控在OpenAI办公室放置复杂录音设备，模型公司保护的已不只是代码。",
+      "take": "英国广播公司报道，一名沙特男子被控在OpenAI办公室安放“复杂”的录音装置。案件仍在司法程序中，不能把指控当成定论；但它点出了一个现实：领先AI公司里，招聘、模型路线、商业合同和安全讨论都可能是高价值信息。对使用者而言，短期不会改变聊天机器人功能，却会让企业客户、研究人员和政府更在意谁能接触模型、数据和内部决策。",
+      "meta": "10月13日｜美国｜案件指控",
+      "facts": [
+        [
+          "指控",
+          "一名沙特男子被控在OpenAI办公室安放录音设备"
+        ],
+        [
+          "装置",
+          "报道称设备被形容为“复杂”"
+        ],
+        [
+          "阶段",
+          "案件仍处于指控和司法审理阶段"
+        ]
+      ],
+      "visual": {
+        "type": "orbit",
+        "label": "AI机密为什么值钱",
+        "nodes": [
+          "模型竞争加剧",
+          "内部信息价值上升",
+          "办公室安全收紧",
+          "合作与访问门槛提高"
+        ]
+      },
+      "impacts": [
+        [
+          "隐私与信任",
+          "企业会更仔细审查与AI供应商共享的数据和会议内容"
+        ],
+        [
+          "产品节奏",
+          "安全调查和内部管控可能拖慢一些合作、招聘或产品决策"
+        ]
+      ],
+      "next": [
+        "法庭文件如何说明装置、动机及是否有信息外泄",
+        "OpenAI是否披露额外安全措施"
+      ],
+      "source": "BBC News",
+      "updated": "2026-10-13",
+      "en": {
+        "cat": "AI",
+        "title": "An alleged recording device at OpenAI shows how AI competition is turning into an intelligence problem",
+        "brief": "A Saudi man has been charged over an alleged sophisticated recording device in an OpenAI office; model companies are guarding more than code.",
+        "take": "The BBC reports that a Saudi man has been charged with planting a “sophisticated” recording device in an OpenAI office. The case remains an allegation before the courts, not a proven account. But it highlights a reality of frontier AI: hiring plans, model roadmaps, commercial deals and safety debates can all be valuable intelligence. It will not change a chatbot overnight, but it gives corporate customers, researchers and governments more reason to scrutinize who can access models, data and internal decisions.",
+        "meta": "Oct 13 | United States | Alleged case",
+        "facts": [
+          [
+            "Charge",
+            "A Saudi man was charged over an alleged recording device in an OpenAI office"
+          ],
+          [
+            "Device",
+            "The device was described in reporting as “sophisticated”"
+          ],
+          [
+            "Status",
+            "The matter remains at the allegation and court stage"
+          ]
+        ],
+        "visual": {
+          "type": "orbit",
+          "label": "Why AI secrets matter",
+          "nodes": [
+            "Model competition intensifies",
+            "Internal information gains value",
+            "Office security tightens",
+            "Access and partnerships get harder"
+          ]
+        },
+        "impacts": [
+          [
+            "Privacy and trust",
+            "Companies may more closely review data and meeting information shared with AI vendors"
+          ],
+          [
+            "Product pace",
+            "Security inquiries and tighter controls can delay partnerships, hiring or product decisions"
+          ]
+        ],
+        "next": [
+          "What court documents say about the device, motive and any data exposure",
+          "Whether OpenAI discloses additional security measures"
+        ],
+        "source": "BBC News",
+        "updated": "2026-10-13"
+      },
+      "sourceLinks": [
+        {
+          "title": "Saudi man charged with planting 'sophisticated' recording device in OpenAI office",
+          "url": "https://www.bbc.co.uk/news/articles/cwg5jq4vlddzo?at_medium=RSS&at_campaign=rss",
+          "publisher": "BBC News"
+        }
+      ],
+      "eventImage": {
+        "url": "https://ichef.bbci.co.uk/ace/branded_news/1200/cpsprodpb/59c9/live/4ad4e9c0-c74e-11f1-a64c-550be9e3c66b.png",
+        "credit": "BBC News",
+        "link": "https://www.bbc.co.uk/news/articles/cwg5jq4vlddzo?at_medium=RSS&at_campaign=rss",
+        "zh": {
+          "alt": "OpenAI办公室发现疑似窃听装置：AI竞争也开始像情报战",
+          "caption": "OpenAI办公室发现疑似窃听装置：AI竞争也开始像情报战"
+        },
+        "en": {
+          "alt": "An alleged recording device at OpenAI shows how AI competition is turning into an intelligence problem",
+          "caption": "An alleged recording device at OpenAI shows how AI competition is turning into an intelligence problem"
+        }
+      },
+      "termGuides": [
+        {
+          "key": "OpenAI",
+          "aliases": [
+            "OpenAI",
+            "Open AI"
+          ],
+          "zh": {
+            "label": "公司",
+            "meaning": "开发ChatGPT等生成式AI产品的美国公司。",
+            "relation": "被指为录音设备安放地点，反映其内部信息已成为高价值目标。"
+          },
+          "en": {
+            "label": "Company",
+            "meaning": "The US company behind generative-AI products including ChatGPT.",
+            "relation": "Its office was the alleged site of the device, showing the value now attached to its internal information."
+          }
+        }
+      ]
+    },
+    {
+      "id": "openai-apple-hiring-records",
+      "cat": "科技产业",
+      "icon": "code",
+      "title": "苹果商业机密案追到OpenAI招聘记录：抢AI人才也有法律边线",
+      "brief": "法官要求OpenAI交出招聘材料，争议不只是挖走谁，而是有没有把前东家的机密一起带走。",
+      "take": "美国法官命令OpenAI在苹果商业机密纠纷中交出招聘记录。法院命令不代表OpenAI已经违法，但说明案件已进入需要看具体证据的阶段。AI人才争夺激烈，工程师跳槽本身并不罕见；真正敏感的是，新雇主是否鼓励、接收或使用了前雇主的保密资料。若诉讼扩大，科技公司在招聘、入职审查和项目隔离上都可能更严格。",
+      "meta": "10月13日｜美国｜诉讼程序",
+      "facts": [
+        [
+          "法院命令",
+          "法官要求OpenAI提交招聘相关记录"
+        ],
+        [
+          "原告",
+          "案件涉及苹果提出的商业机密主张"
+        ],
+        [
+          "关键问题",
+          "争议聚焦招聘过程是否牵涉前雇主机密"
+        ]
+      ],
+      "visual": {
+        "type": "orbit",
+        "label": "人才跳槽何时变成诉讼",
+        "nodes": [
+          "核心员工跳槽",
+          "机密接触被质疑",
+          "法院调取招聘材料",
+          "企业收紧入职审查"
+        ]
+      },
+      "impacts": [
+        [
+          "工作流动",
+          "高技术岗位跳槽时，合同、电脑资料和项目边界会被查得更细"
+        ],
+        [
+          "创新成本",
+          "公司为隔离潜在机密会增加法务和合规成本，项目协作可能变慢"
+        ]
+      ],
+      "next": [
+        "OpenAI提交记录后，法院是否安排进一步证据披露",
+        "苹果对损失及涉事技术范围的具体主张"
+      ],
+      "source": "TechCrunch AI",
+      "updated": "2026-10-13",
+      "en": {
+        "cat": "Technology Industry",
+        "title": "Apple’s trade-secrets fight reaches OpenAI’s hiring files",
+        "brief": "A judge ordered OpenAI to hand over hiring records; the question is not just who left Apple, but whether confidential material travelled with them.",
+        "take": "A US judge ordered OpenAI to turn over hiring records in Apple’s trade-secrets dispute. A court order is not a finding that OpenAI broke the law, but it moves the case into an evidence-heavy phase. Fierce competition for AI talent makes job moves routine. The sensitive question is whether a new employer encouraged, received or used confidential information from a former employer. If the case broadens, technology firms may impose stricter hiring, onboarding and project-separation procedures.",
+        "meta": "Oct 13 | United States | Litigation procedure",
+        "facts": [
+          [
+            "Court order",
+            "A judge ordered OpenAI to produce hiring-related records"
+          ],
+          [
+            "Claimant",
+            "The case involves trade-secrets claims by Apple"
+          ],
+          [
+            "Core issue",
+            "The dispute centers on whether hiring may have involved former-employer secrets"
+          ]
+        ],
+        "visual": {
+          "type": "orbit",
+          "label": "When a job move becomes litigation",
+          "nodes": [
+            "Key staff change jobs",
+            "Confidential access is questioned",
+            "Court seeks hiring records",
+            "Companies tighten onboarding checks"
+          ]
+        },
+        "impacts": [
+          [
+            "Job mobility",
+            "Contracts, work devices and project boundaries may face closer scrutiny when technical staff switch employers"
+          ],
+          [
+            "Cost of innovation",
+            "Legal and compliance work to isolate possible secrets can slow collaboration and add cost"
+          ]
+        ],
+        "next": [
+          "Whether the court orders further discovery after OpenAI produces records",
+          "Apple’s specific claims on damages and the technology involved"
+        ],
+        "source": "TechCrunch AI",
+        "updated": "2026-10-13"
+      },
+      "sourceLinks": [
+        {
+          "title": "Judge orders OpenAI to turn over hiring records in Apple trade secrets case",
+          "url": "https://techcrunch.com/2026/10/13/judge-orders-openai-to-turn-over-hiring-records-in-apple-trade-secrets-case/",
+          "publisher": "TechCrunch AI"
+        }
+      ],
+      "eventImage": {
+        "url": "https://techcrunch.com/wp-content/uploads/2021/01/lwzxxnshgj71bonwbik3.jpg.jpg?w=150",
+        "credit": "TechCrunch AI",
+        "link": "https://techcrunch.com/2026/10/13/judge-orders-openai-to-turn-over-hiring-records-in-apple-trade-secrets-case/",
+        "zh": {
+          "alt": "苹果商业机密案追到OpenAI招聘记录：抢AI人才也有法律边线",
+          "caption": "苹果商业机密案追到OpenAI招聘记录：抢AI人才也有法律边线"
+        },
+        "en": {
+          "alt": "Apple’s trade-secrets fight reaches OpenAI’s hiring files",
+          "caption": "Apple’s trade-secrets fight reaches OpenAI’s hiring files"
+        }
+      },
+      "termGuides": [
+        {
+          "key": "商业机密",
+          "aliases": [
+            "商业机密",
+            "trade secrets",
+            "trade-secret"
+          ],
+          "zh": {
+            "label": "法律概念",
+            "meaning": "企业通过保密措施保护、且具有商业价值的非公开信息。",
+            "relation": "苹果主张OpenAI的招聘相关情况可能牵涉其受保护的信息。"
+          },
+          "en": {
+            "label": "Legal term",
+            "meaning": "Nonpublic business information that has value and is protected through secrecy measures.",
+            "relation": "Apple argues that circumstances around OpenAI’s hiring may involve its protected information."
+          }
+        },
+        {
+          "key": "苹果",
+          "aliases": [
+            "苹果",
+            "Apple"
+          ],
+          "zh": {
+            "label": "公司",
+            "meaning": "生产iPhone、Mac等设备并开发软件与AI功能的美国科技公司。",
+            "relation": "它在本案中提出商业机密主张，并要求追查OpenAI的招聘材料。"
+          },
+          "en": {
+            "label": "Company",
+            "meaning": "The US technology company behind the iPhone, Mac and related software and AI features.",
+            "relation": "It brought the trade-secrets claims that led to scrutiny of OpenAI’s hiring records."
+          }
+        }
+      ]
+    },
+    {
+      "id": "meta-muse-wonder",
+      "cat": "AI",
+      "icon": "ai",
+      "title": "Meta首个前沿模型上线：它要把AI能力塞进你常用的平台",
+      "brief": "Muse Wonder的看点不只是参数，而是Meta有机会把自家模型直接放进社交、创作和开发工具里。",
+      "take": "Meta发布首个被称为“前沿模型”的Muse Wonder。公开信息仍有限，能力、价格、开放范围和安全限制都需要等正式文档补齐；但这次的竞争点很清楚：Meta拥有庞大的社交产品入口，若模型接入其应用和开发者工具，用户未必需要特地换一个AI应用，就会在发帖、聊天、创作或广告工具里遇到它。对开发者来说，模型的可用性和使用条款，比“最强”口号更重要。",
+      "meta": "10月12日｜Meta模型发布",
+      "facts": [
+        [
+          "发布方",
+          "Meta发布名为Muse Wonder的前沿模型"
+        ],
+        [
+          "定位",
+          "报道称这是Meta首个前沿模型"
+        ],
+        [
+          "待披露",
+          "能力细节、定价、开放范围与安全限制尚需更多信息"
+        ]
+      ],
+      "visual": {
+        "type": "orbit",
+        "label": "模型如何变成平台入口",
+        "nodes": [
+          "Meta发布模型",
+          "接入社交与创作产品",
+          "用户在原有应用中使用AI",
+          "开发者和广告工具被重塑"
+        ]
+      },
+      "impacts": [
+        [
+          "工具选择",
+          "AI可能更深地嵌进既有社交和创作应用，而不是只存在于独立聊天窗口"
+        ],
+        [
+          "开发工作",
+          "开发者需要比较模型价格、权限和接入条件，而不只是看榜单分数"
+        ]
+      ],
+      "next": [
+        "Meta公布模型基准、价格和开发者访问政策",
+        "是否接入Facebook、Instagram、WhatsApp等产品"
+      ],
+      "source": "TechCrunch AI",
+      "updated": "2026-10-12",
+      "en": {
+        "cat": "AI",
+        "title": "Meta’s first frontier model is really a bid for the app you already use",
+        "brief": "Muse Wonder matters less as a benchmark claim than as a model Meta can place inside social, creative and developer tools.",
+        "take": "Meta released Muse Wonder, described as its first frontier model. Public detail remains limited: capabilities, pricing, availability and safety limits need fuller documentation. But the competitive point is clear. Meta controls enormous consumer-product entry points; if the model is integrated into its apps and developer tools, people may encounter it while posting, messaging, creating or using advertising tools rather than choosing a separate AI app. For developers, actual access terms and cost will matter more than a claim to be the strongest.",
+        "meta": "Oct 12 | Meta model launch",
+        "facts": [
+          [
+            "Release",
+            "Meta released a frontier model called Muse Wonder"
+          ],
+          [
+            "Positioning",
+            "Reporting described it as Meta’s first frontier model"
+          ],
+          [
+            "Unknowns",
+            "More detail is needed on capabilities, pricing, access and safety limits"
+          ]
+        ],
+        "visual": {
+          "type": "orbit",
+          "label": "How a model becomes an entry point",
+          "nodes": [
+            "Meta releases a model",
+            "It enters social and creative products",
+            "Users meet AI in existing apps",
+            "Developer and ad tools are reshaped"
+          ]
+        },
+        "impacts": [
+          [
+            "Tool choice",
+            "AI could be embedded more deeply in familiar social and creative apps, not only separate chat windows"
+          ],
+          [
+            "Development work",
+            "Developers will need to compare price, permissions and access terms—not just benchmark scores"
+          ]
+        ],
+        "next": [
+          "Meta’s benchmarks, pricing and developer-access policy",
+          "Whether it is integrated into Facebook, Instagram or WhatsApp"
+        ],
+        "source": "TechCrunch AI",
+        "updated": "2026-10-12"
+      },
+      "sourceLinks": [
+        {
+          "title": "Meta releases its first frontier model, Muse Wonder",
+          "url": "https://techcrunch.com/2026/10/12/meta-releases-its-first-frontier-model-muse-wonder/",
+          "publisher": "TechCrunch AI"
+        }
+      ],
+      "eventImage": {
+        "url": "https://techcrunch.com/wp-content/uploads/2026/10/Screenshot-2026-10-12-at-1.09.43-PM.jpg?resize=1200,676",
+        "credit": "TechCrunch AI",
+        "link": "https://techcrunch.com/2026/10/12/meta-releases-its-first-frontier-model-muse-wonder/",
+        "zh": {
+          "alt": "Meta首个前沿模型上线：它要把AI能力塞进你常用的平台",
+          "caption": "Meta首个前沿模型上线：它要把AI能力塞进你常用的平台"
+        },
+        "en": {
+          "alt": "Meta’s first frontier model is really a bid for the app you already use",
+          "caption": "Meta’s first frontier model is really a bid for the app you already use"
+        }
+      },
+      "termGuides": [
+        {
+          "key": "Muse Wonder",
+          "aliases": [
+            "Muse Wonder",
+            "缪斯·Wonder"
+          ],
+          "zh": {
+            "label": "模型",
+            "meaning": "Meta新发布、被定位为前沿级别的AI模型。",
+            "relation": "它是Meta把模型能力推入自家应用和开发工具的核心载体。"
+          },
+          "en": {
+            "label": "Model",
+            "meaning": "A newly released AI model from Meta positioned as a frontier system.",
+            "relation": "It is the vehicle for Meta to bring model capabilities into its own apps and developer tools."
+          }
+        },
+        {
+          "key": "前沿模型",
+          "aliases": [
+            "前沿模型",
+            "frontier model",
+            "frontier models"
+          ],
+          "zh": {
+            "label": "术语",
+            "meaning": "能力处在当前技术前列、通常需要大量算力训练的大型AI模型。",
+            "relation": "Meta用这一定位表明Muse Wonder将直接参与与领先模型公司的竞争。"
+          },
+          "en": {
+            "label": "Term",
+            "meaning": "A large AI model near the current technical frontier, usually trained with substantial compute.",
+            "relation": "Meta uses this positioning to place Muse Wonder in direct competition with leading model providers."
+          }
+        }
+      ]
+    },
+    {
+      "id": "southeast-asia-haze",
+      "cat": "公共安全",
+      "icon": "eclipse",
+      "title": "东南亚毒霾又来了：污染不认国界，孩子和户外工作者先受罪",
+      "brief": "跨境烟霾让呼吸变难，也再次暴露出一个老问题：烧起来很快，跨国追责却很慢。",
+      "take": "BBC追问东南亚有毒烟霾的责任归属，焦点仍指向野火和土地清理产生的烟雾如何跨越国境。对城市居民来说，这不是抽象的环保议题：空气质量恶化会让儿童、老人、哮喘患者和户外劳动者先受影响，学校、航班和日常出行也可能被打乱。问题难在污染源、土地经营者和监管责任常分散在不同地区甚至不同国家，等到烟飘到城市再处理已经太晚。",
+      "meta": "10月13日｜东南亚",
+      "facts": [
+        [
+          "污染形式",
+          "野火和土地清理烟雾可形成跨境烟霾"
+        ],
+        [
+          "高风险人群",
+          "儿童、老人、呼吸系统疾病患者和户外工作者更易受影响"
+        ],
+        [
+          "治理难点",
+          "污染源与监管责任可能跨越多个地区和国家"
+        ]
+      ],
+      "visual": {
+        "type": "orbit",
+        "label": "烟霾为何难治理",
+        "nodes": [
+          "土地清理与野火",
+          "烟雾跨境扩散",
+          "城市空气质量恶化",
+          "健康与交通受影响"
+        ]
+      },
+      "impacts": [
+        [
+          "健康",
+          "颗粒物升高会加重哮喘和心肺负担，减少户外活动更实际"
+        ],
+        [
+          "日常安排",
+          "学校活动、通勤和航班可能因能见度与空气质量受扰"
+        ]
+      ],
+      "next": [
+        "各地空气质量指数和健康警报",
+        "是否出现针对焚烧和土地经营者的跨境执法措施"
+      ],
+      "source": "BBC News",
+      "updated": "2026-10-13",
+      "en": {
+        "cat": "Public Safety",
+        "title": "Southeast Asia’s toxic haze is back, and children and outdoor workers pay first",
+        "brief": "Cross-border smoke makes breathing harder and exposes an old failure: fires spread quickly, but accountability moves slowly.",
+        "take": "The BBC examined who is responsible for toxic haze in Southeast Asia, where smoke from wildfires and land clearing can cross national borders. For city residents, this is not an abstract environmental issue. Poor air quality hits children, older people, people with asthma and outdoor workers first, while schools, flights and daily travel can also be disrupted. The hard part is that landowners, fire sources and regulators may sit in different regions or countries; responding only after smoke reaches cities is already too late.",
+        "meta": "Oct 13 | Southeast Asia",
+        "facts": [
+          [
+            "Pollution",
+            "Smoke from fires and land clearing can form cross-border haze"
+          ],
+          [
+            "High-risk groups",
+            "Children, older people, respiratory patients and outdoor workers face greater exposure"
+          ],
+          [
+            "Governance problem",
+            "Pollution sources and responsibility can cross several regions and countries"
+          ]
+        ],
+        "visual": {
+          "type": "orbit",
+          "label": "Why haze is hard to control",
+          "nodes": [
+            "Land clearing and fires",
+            "Smoke crosses borders",
+            "City air quality worsens",
+            "Health and transport suffer"
+          ]
+        },
+        "impacts": [
+          [
+            "Health",
+            "Higher particle levels can worsen asthma and heart-lung strain; reducing outdoor exposure is practical"
+          ],
+          [
+            "Daily routines",
+            "School activities, commuting and flights can be disrupted by visibility and air-quality problems"
+          ]
+        ],
+        "next": [
+          "Local air-quality readings and health alerts",
+          "Whether cross-border enforcement targets burning and land operators"
+        ],
+        "source": "BBC News",
+        "updated": "2026-10-13"
+      },
+      "sourceLinks": [
+        {
+          "title": "Who's to blame for the toxic smog choking South East Asia?",
+          "url": "https://www.bbc.co.uk/news/articles/ckreyq9re0n0o?at_medium=RSS&at_campaign=rss",
+          "publisher": "BBC News"
+        }
+      ],
+      "eventImage": {
+        "url": "https://ichef.bbci.co.uk/ace/branded_news/1200/cpsprodpb/7867/live/0f1da240-c6fa-11f1-b4dd-e786ec6f11b1.jpg",
+        "credit": "BBC News",
+        "link": "https://www.bbc.co.uk/news/articles/ckreyq9re0n0o?at_medium=RSS&at_campaign=rss",
+        "zh": {
+          "alt": "东南亚毒霾又来了：污染不认国界，孩子和户外工作者先受罪",
+          "caption": "东南亚毒霾又来了：污染不认国界，孩子和户外工作者先受罪"
+        },
+        "en": {
+          "alt": "Southeast Asia’s toxic haze is back, and children and outdoor workers pay first",
+          "caption": "Southeast Asia’s toxic haze is back, and children and outdoor workers pay first"
+        }
+      },
+      "termGuides": [
+        {
+          "key": "跨境烟霾",
+          "aliases": [
+            "跨境烟霾",
+            "haze",
+            "cross-border haze",
+            "toxic smog"
+          ],
+          "zh": {
+            "label": "现象",
+            "meaning": "火灾或焚烧形成的细颗粒物烟雾飘到其他城市和国家。",
+            "relation": "本次报道讨论的正是这种污染为何反复影响东南亚多地。"
+          },
+          "en": {
+            "label": "Phenomenon",
+            "meaning": "Fine-particle smoke from fires or burning that drifts into other cities and countries.",
+            "relation": "This is the recurring pollution problem affecting multiple parts of Southeast Asia in the report."
+          }
+        }
+      ]
+    },
+    {
+      "id": "google-play-private-vibe-apps",
+      "cat": "科技产业",
+      "icon": "code",
+      "title": "Google Play允许人人做“私人工具”：方便了，也把安全审查绕开一部分",
+      "brief": "不用会写代码也能做只给自己用的安卓应用，但私人发布不等于自动安全，权限和数据还是得自己盯。",
+      "take": "Google Play开始支持用户用“氛围编程”方式制作仅供自己使用的安卓私有应用：你用自然语言描述需求，AI协助生成代码和应用。它把做一个记账、整理文件或家庭小工具的门槛拉低了，但也把一部分测试和安全判断交回用户。私有应用未必经过面向公众应用那样的长期检验，尤其是请求读取通讯录、照片、位置或支付信息时，别因为是“自己做的”就默认可信。",
+      "meta": "10月13日｜Android应用开发",
+      "facts": [
+        [
+          "新功能",
+          "Google Play支持创建仅供个人使用的私有安卓应用"
+        ],
+        [
+          "方式",
+          "用户可借助自然语言和AI生成应用代码"
+        ],
+        [
+          "边界",
+          "私有应用不同于面向公众大规模发布的应用"
+        ]
+      ],
+      "visual": {
+        "type": "orbit",
+        "label": "低门槛开发带来的两面性",
+        "nodes": [
+          "自然语言描述需求",
+          "AI生成应用",
+          "个人工具更容易做",
+          "权限与安全责任回到用户"
+        ]
+      },
+      "impacts": [
+        [
+          "实用性",
+          "不会编程的人也能更快做出个人记账、清单或家庭自动化小工具"
+        ],
+        [
+          "数据安全",
+          "安装前仍应核对它索要的照片、位置、通讯录和支付权限"
+        ]
+      ],
+      "next": [
+        "Google对私有应用的审核、签名和权限限制细则",
+        "该功能是否扩展至团队内部或更广泛分发"
+      ],
+      "source": "TechCrunch AI",
+      "updated": "2026-10-13",
+      "en": {
+        "cat": "Technology Industry",
+        "title": "Google Play lets anyone make a private app—and shifts more safety checking to the user",
+        "brief": "You may not need to code to build an Android tool for yourself, but private distribution does not make its permissions or data use safe by default.",
+        "take": "Google Play now supports private Android apps built through “vibe coding”: users describe what they want in plain language and AI helps generate the code and app. It lowers the barrier to making a budgeting tool, file organizer or household utility. But it also returns part of the testing and security judgment to the user. A private app may not have faced the same long public scrutiny as a widely distributed one. If it asks for contacts, photos, location or payment access, being “made for me” is not a reason to trust it automatically.",
+        "meta": "Oct 13 | Android app development",
+        "facts": [
+          [
+            "Feature",
+            "Google Play supports private Android apps for personal use"
+          ],
+          [
+            "Method",
+            "Users can use natural-language prompts and AI to generate app code"
+          ],
+          [
+            "Boundary",
+            "Private apps differ from apps broadly released to the public"
+          ]
+        ],
+        "visual": {
+          "type": "orbit",
+          "label": "The trade-off in low-barrier app building",
+          "nodes": [
+            "Describe needs in plain language",
+            "AI generates an app",
+            "Personal tools become easier to make",
+            "Permission and safety checks return to users"
+          ]
+        },
+        "impacts": [
+          [
+            "Usefulness",
+            "People without coding skills can make personal budgeting, list or home-automation tools faster"
+          ],
+          [
+            "Data safety",
+            "Before installing, users should still check requests for photos, location, contacts and payment permissions"
+          ]
+        ],
+        "next": [
+          "Google’s rules for review, signing and permissions on private apps",
+          "Whether the feature expands to internal teams or wider distribution"
+        ],
+        "source": "TechCrunch AI",
+        "updated": "2026-10-13"
+      },
+      "sourceLinks": [
+        {
+          "title": "Google Play now lets anyone build private, vibe-coded apps that run on Android",
+          "url": "https://techcrunch.com/2026/10/13/google-play-now-supports-private-vibe-coded-apps-built-just-for-you/",
+          "publisher": "TechCrunch AI"
+        }
+      ],
+      "eventImage": {
+        "url": "https://techcrunch.com/wp-content/uploads/2026/10/GameFinder_DISCOVERY_1X1_Static.png?w=680",
+        "credit": "TechCrunch AI",
+        "link": "https://techcrunch.com/2026/10/13/google-play-now-supports-private-vibe-coded-apps-built-just-for-you/",
+        "zh": {
+          "alt": "Google Play允许人人做“私人工具”：方便了，也把安全审查绕开一部分",
+          "caption": "Google Play允许人人做“私人工具”：方便了，也把安全审查绕开一部分"
+        },
+        "en": {
+          "alt": "Google Play lets anyone make a private app—and shifts more safety checking to the user",
+          "caption": "Google Play lets anyone make a private app—and shifts more safety checking to the user"
+        }
+      },
+      "termGuides": [
+        {
+          "key": "氛围编程",
+          "aliases": [
+            "氛围编程",
+            "vibe coding",
+            "vibe-coded"
+          ],
+          "zh": {
+            "label": "开发方式",
+            "meaning": "用自然语言说清想要什么，让AI协助写代码和搭建应用。",
+            "relation": "Google Play的新功能让这种方式可以做成只供个人使用的安卓应用。"
+          },
+          "en": {
+            "label": "Development method",
+            "meaning": "Describing what you want in natural language and having AI help write code and build an app.",
+            "relation": "Google Play’s new feature uses this approach for Android apps intended only for personal use."
+          }
+        },
+        {
+          "key": "Google Play",
+          "aliases": [
+            "Google Play",
+            "谷歌应用商店"
+          ],
+          "zh": {
+            "label": "平台",
+            "meaning": "Google面向Android设备的应用分发平台。",
+            "relation": "它正在开放私有AI生成应用的创建和运行路径。"
+          },
+          "en": {
+            "label": "Platform",
+            "meaning": "Google’s app-distribution platform for Android devices.",
+            "relation": "It is opening a path to create and run privately built AI-generated apps."
+          }
+        }
+      ]
+    },
+    {
+      "id": "nord-stream-trial",
+      "cat": "国际局势",
+      "icon": "ship",
+      "title": "北溪爆炸案开庭：欧洲能源安全的旧伤，终于进入法庭",
+      "brief": "德国审理一名被控参与破坏北溪管道的乌克兰人，案件会重新碰触战争、能源和盟友关系的敏感线。",
+      "take": "德国开始审理一名被控参与破坏北溪天然气管道的乌克兰人。这不是对整个事件的最终定论，被告享有辩护权，案件还需经过证据审查；但北溪爆炸一直是欧洲最敏感的战争谜团之一，因为它切断的不只是管道，也加深了欧洲对能源依赖和基础设施保护的焦虑。审判若披露更多行动链条、资助或协助者信息，可能给德国、乌克兰及其支持者之间的政治关系带来新的压力。",
+      "meta": "10月13日｜德国｜审判开始",
+      "facts": [
+        [
+          "审判",
+          "德国对一名乌克兰籍被告启动审理"
+        ],
+        [
+          "指控",
+          "被告被控参与破坏北溪天然气管道"
+        ],
+        [
+          "程序",
+          "指控仍须在法庭上接受证据和辩护检验"
+        ]
+      ],
+      "visual": {
+        "type": "orbit",
+        "label": "一条管道为何牵动欧洲",
+        "nodes": [
+          "北溪管道遭破坏",
+          "天然气依赖被重估",
+          "海底设施保护升级",
+          "盟友关系承受压力"
+        ]
+      },
+      "impacts": [
+        [
+          "能源安全",
+          "欧洲会继续为天然气替代来源和关键海底设施付出更高安全成本"
+        ],
+        [
+          "政治关系",
+          "若审判披露新的参与线索，欧洲对乌支持的内部讨论可能更复杂"
+        ]
+      ],
+      "next": [
+        "庭审披露的证据及被告回应",
+        "德国检方是否追查更多涉案人员或组织"
+      ],
+      "source": "BBC News",
+      "updated": "2026-10-13",
+      "en": {
+        "cat": "Geopolitics",
+        "title": "The Nord Stream case goes to trial, reopening Europe’s energy-security wound",
+        "brief": "Germany is trying a Ukrainian accused over the Nord Stream sabotage, reviving difficult questions about war, energy and allies.",
+        "take": "Germany has begun the trial of a Ukrainian accused of involvement in the sabotage of the Nord Stream gas pipelines. This is not a final account of what happened: the defendant has the right to challenge the evidence, and the allegation must be tested in court. But the explosions remain one of Europe’s most sensitive wartime mysteries. They damaged more than pipelines, deepening anxiety about energy dependence and protection of critical infrastructure. If the trial reveals more about the operation, financing or helpers, it could add political strain between Germany, Ukraine and Ukraine’s supporters.",
+        "meta": "Oct 13 | Germany | Trial begins",
+        "facts": [
+          [
+            "Trial",
+            "Germany began proceedings against a Ukrainian defendant"
+          ],
+          [
+            "Allegation",
+            "The defendant is accused of involvement in sabotage of Nord Stream gas pipelines"
+          ],
+          [
+            "Process",
+            "The allegation remains subject to evidence and defence in court"
+          ]
+        ],
+        "visual": {
+          "type": "orbit",
+          "label": "Why one pipeline still matters",
+          "nodes": [
+            "Nord Stream is sabotaged",
+            "Gas reliance is reassessed",
+            "Undersea protection is tightened",
+            "Allied relations face pressure"
+          ]
+        },
+        "impacts": [
+          [
+            "Energy security",
+            "Europe will keep paying more to diversify gas supply and protect critical undersea infrastructure"
+          ],
+          [
+            "Political ties",
+            "New evidence from the trial could complicate internal debate over support for Ukraine"
+          ]
+        ],
+        "next": [
+          "Evidence presented at trial and the defendant’s response",
+          "Whether German prosecutors pursue more people or organizations"
+        ],
+        "source": "BBC News",
+        "updated": "2026-10-13"
+      },
+      "sourceLinks": [
+        {
+          "title": "Germany puts Ukrainian on trial accused of blowing up Nord Stream pipelines",
+          "url": "https://www.bbc.co.uk/news/articles/cw99zpmnxzmjo?at_medium=RSS&at_campaign=rss",
+          "publisher": "BBC News"
+        }
+      ],
+      "eventImage": {
+        "url": "https://ichef.bbci.co.uk/ace/branded_news/1200/cpsprodpb/8583/live/42414480-c72f-11f1-bc2e-018d645d8d21.jpg",
+        "credit": "BBC News",
+        "link": "https://www.bbc.co.uk/news/articles/cw99zpmnxzmjo?at_medium=RSS&at_campaign=rss",
+        "zh": {
+          "alt": "北溪爆炸案开庭：欧洲能源安全的旧伤，终于进入法庭",
+          "caption": "北溪爆炸案开庭：欧洲能源安全的旧伤，终于进入法庭"
+        },
+        "en": {
+          "alt": "The Nord Stream case goes to trial, reopening Europe’s energy-security wound",
+          "caption": "The Nord Stream case goes to trial, reopening Europe’s energy-security wound"
+        }
+      },
+      "termGuides": [
+        {
+          "key": "北溪",
+          "aliases": [
+            "北溪",
+            "Nord Stream",
+            "Nord Stream pipelines"
+          ],
+          "zh": {
+            "label": "管道",
+            "meaning": "连接俄罗斯与德国的波罗的海海底天然气管道系统。",
+            "relation": "其爆炸破坏案是本次德国审判所审查的核心事件。"
+          },
+          "en": {
+            "label": "Pipeline system",
+            "meaning": "A network of undersea gas pipelines across the Baltic Sea linking Russia and Germany.",
+            "relation": "Its sabotage is the central event under examination in the German trial."
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,357 +1,258 @@
 {
-  "dateKey": "2026-10-12",
-  "generatedAt": "2026-10-12T05:00:00+08:00",
+  "dateKey": "2026-10-14",
+  "generatedAt": "2026-10-14T05:00:00+08:00",
   "title": "DailyTen｜AI产业",
-  "subtitle": "今天的重点不是谁又喊出更聪明的 AI，而是它们开始碰到警方、付款、数据中心和真实机器时，谁来踩刹车。",
-  "briefLabel": "今天 10 条",
+  "subtitle": "模型抢入口，Agent开始碰到付款和数据的硬边界",
+  "briefLabel": "今天的十件事",
   "doneLabel": "读完了",
   "readTimeMinutes": 8,
   "items": [
     {
-      "id": "ai-anthropic-agent-evals-internet",
+      "id": "ai-meta-muse-wonder",
       "cat": "AI",
-      "icon": "alert",
-      "title": "Anthropic 不敢让测试 Agent 直连互联网：先把“考场”关起来",
-      "brief": "连内部测试都要隔离真实网络，说明能替人办事的 Agent 离放心放权还很远。",
-      "take": "TechCrunch 报道，Anthropic 因无法可靠控制 AI Agent，决定不再让内部评测直接接入真实互联网。问题不只是模型会答错，而是 Agent 一旦能搜索、点击、调用工具，错误可能变成真实操作。把评测放回隔离环境会降低即时风险，但也留下一个难题：在模拟环境里表现安全，不等于到了开放网络也安全。",
-      "meta": "AI 安全｜10月9日",
+      "icon": "ai",
+      "title": "Meta把首个前沿模型推向市场，聊天入口的争夺更近了一步",
+      "brief": "Muse Wonder不只是Meta多了一个模型；它要把AI能力塞进已有的大型社交产品里，用户可能不用换应用就会先用上。",
+      "take": "Meta发布首个被定位为“前沿模型”的Muse Wonder。真正的看点不只是模型分数，而是谁掌握用户每天打开的入口：Meta已有社交产品和庞大用户基础，若把模型接进这些产品，AI助手的分发成本会比新创业公司低得多。它的实际能力、开放范围、价格和安全限制仍要看后续细节，但竞争已从“谁训练出模型”更直接转向“谁能让人每天用起来”。",
+      "meta": "模型发布｜10月12日",
       "facts": [
         [
-          "公司",
-          "Anthropic"
+          "发布方",
+          "Meta发布Muse Wonder，称其为首个前沿模型。"
         ],
         [
-          "变化",
-          "内部评测不再直连真实互联网"
+          "时间",
+          "报道发表于10月12日。"
         ],
         [
-          "核心风险",
-          "Agent 的工具调用可能造成真实后果"
+          "竞争点",
+          "Meta可将模型接入既有社交产品和服务。"
         ]
       ],
       "visual": null,
       "impacts": [
         [
           "对用户",
-          "短期内，能代办网页任务的 AI 会更常遇到权限和功能限制。"
+          "常用社交应用可能更早变成AI工具入口。"
         ],
         [
-          "对企业",
-          "上线 Agent 前，测试、审计和权限隔离会变成成本，而不是可选项。"
+          "对市场",
+          "OpenAI、Google等对手要同时争模型能力和默认入口。"
         ]
       ],
       "next": [
-        "Anthropic 是否披露更具体的失控案例与替代评测方法",
-        "其他 Agent 产品会不会限制联网和高权限工具"
+        "Muse Wonder会先进入哪些产品和地区。",
+        "开发者与企业能否使用，以及定价如何。"
       ],
       "source": "TechCrunch AI",
-      "updated": "2026-10-09",
+      "updated": "2026-10-12",
       "en": {
         "cat": "AI",
-        "title": "Anthropic is taking its Agent tests off the live internet",
-        "brief": "If even internal tests need to be separated from the real web, AI Agents are not ready to be trusted with much autonomy.",
-        "take": "TechCrunch reports that Anthropic, unable to reliably control its AI Agents, is moving internal evaluations away from the live internet. The issue is not merely a wrong answer: once an Agent can search, click, and call tools, a mistake can become an action in the real world. A sandbox reduces immediate risk, but it also leaves a hard question: safety in a simulation does not prove safety on the open web.",
-        "meta": "AI safety | Oct. 9",
+        "title": "Meta’s first frontier model turns the fight toward the apps people already use",
+        "brief": "Muse Wonder matters because Meta can place AI inside huge existing social products, rather than asking people to adopt another app.",
+        "take": "Meta has released Muse Wonder, its first model positioned as frontier AI. The bigger issue is not just benchmark scores but distribution: Meta already owns products people open every day, so putting a capable model there could cost far less than building a new destination from scratch. Its real capabilities, access, pricing, and safety limits still need to be spelled out. But the contest is moving from who trains a model to who gets used by default.",
+        "meta": "Model release | Oct. 12",
         "facts": [
           [
-            "Company",
-            "Anthropic"
+            "Publisher",
+            "Meta released Muse Wonder as its first frontier model."
           ],
           [
-            "Change",
-            "Internal evaluations will no longer connect directly to the live internet"
+            "Timing",
+            "The report was published on October 12."
           ],
           [
-            "Risk",
-            "An Agent's tool use can have real-world consequences"
+            "Advantage",
+            "Meta can put the model into existing social products and services."
           ]
         ],
         "visual": null,
         "impacts": [
           [
             "For users",
-            "AI that handles web tasks may come with more permission checks and feature limits for now."
+            "Everyday social apps may become an earlier entry point for AI tools."
+          ],
+          [
+            "For the market",
+            "Rivals such as OpenAI and Google must compete for default access as well as model quality."
+          ]
+        ],
+        "next": [
+          "Which products and regions get Muse Wonder first.",
+          "Whether developers and businesses can use it, and at what price."
+        ],
+        "source": "TechCrunch AI",
+        "updated": "2026-10-12"
+      },
+      "sourceLinks": [
+        {
+          "title": "Meta releases its first frontier model, Muse Wonder",
+          "url": "https://techcrunch.com/2026/10/12/meta-releases-its-first-frontier-model-muse-wonder/",
+          "publisher": "TechCrunch AI"
+        }
+      ],
+      "eventImage": {
+        "url": "https://techcrunch.com/wp-content/uploads/2026/10/Screenshot-2026-10-12-at-1.09.43-PM.jpg?resize=1200,676",
+        "credit": "TechCrunch AI",
+        "link": "https://techcrunch.com/2026/10/12/meta-releases-its-first-frontier-model-muse-wonder/",
+        "zh": {
+          "alt": "Meta把首个前沿模型推向市场，聊天入口的争夺更近了一步",
+          "caption": "Meta把首个前沿模型推向市场，聊天入口的争夺更近了一步"
+        },
+        "en": {
+          "alt": "Meta’s first frontier model turns the fight toward the apps people already use",
+          "caption": "Meta’s first frontier model turns the fight toward the apps people already use"
+        }
+      },
+      "termGuides": [
+        {
+          "key": "Meta",
+          "aliases": [
+            "Meta",
+            "Meta公司"
+          ],
+          "zh": {
+            "label": "Meta",
+            "meaning": "Facebook、Instagram等产品的母公司。",
+            "relation": "它发布Muse Wonder，并拥有把模型推给大量现有用户的产品入口。"
+          },
+          "en": {
+            "label": "Meta",
+            "meaning": "The parent company of Facebook and Instagram.",
+            "relation": "It released Muse Wonder and has large existing products through which to distribute it."
+          }
+        },
+        {
+          "key": "Muse Wonder",
+          "aliases": [
+            "Muse Wonder",
+            "缪斯·旺德"
+          ],
+          "zh": {
+            "label": "Muse Wonder",
+            "meaning": "Meta新发布的AI模型。",
+            "relation": "这是Meta首次将一款模型定位为“前沿模型”。"
+          },
+          "en": {
+            "label": "Muse Wonder",
+            "meaning": "Meta’s newly released AI model.",
+            "relation": "It is Meta’s first model positioned as frontier AI."
+          }
+        },
+        {
+          "key": "frontier model",
+          "aliases": [
+            "前沿模型",
+            "frontier model"
+          ],
+          "zh": {
+            "label": "前沿模型",
+            "meaning": "处在当前通用AI能力最前列、训练成本也很高的模型类别。",
+            "relation": "Meta用这一定位说明Muse Wonder要直接参与顶级模型竞争。"
+          },
+          "en": {
+            "label": "Frontier model",
+            "meaning": "A general-purpose AI model at the leading edge of capability and training cost.",
+            "relation": "Meta uses the label to put Muse Wonder into direct competition with top-tier models."
+          }
+        }
+      ]
+    },
+    {
+      "id": "ai-openai-apple-hiring-records",
+      "cat": "AI",
+      "icon": "alert",
+      "title": "OpenAI被要求交出招聘记录：挖人也可能变成一场取证战",
+      "brief": "法院要求OpenAI提供招聘材料，Apple的商业机密纠纷开始触到人才流动最敏感的地方。",
+      "take": "一名法官命令OpenAI交出与招聘有关的记录，作为Apple商业机密案件的一部分。AI公司抢研究员和工程师本来就激烈，但这起纠纷提醒人们：带走的是经验，还是不该带走的内部信息，法律边界并不总是清楚。案件尚未等于法院认定OpenAI有错；不过一旦企业招聘流程被全面审视，员工跳槽、保密协议和竞业管理都会变得更谨慎。",
+      "meta": "法律纠纷｜10月13日",
+      "facts": [
+        [
+          "法院命令",
+          "法官要求OpenAI提交招聘记录。"
+        ],
+        [
+          "原告关联",
+          "材料涉及Apple的商业机密案件。"
+        ],
+        [
+          "案件阶段",
+          "这是取证要求，不是对责任的最终裁决。"
+        ]
+      ],
+      "visual": null,
+      "impacts": [
+        [
+          "对员工",
+          "高技术人才跳槽时，个人设备、文件和沟通记录的风险会更高。"
+        ],
+        [
+          "对公司",
+          "AI公司可能加强入职审查，招聘速度与合规成本会互相拉扯。"
+        ]
+      ],
+      "next": [
+        "法院将要求交出哪些具体材料。",
+        "案件是否会披露更多关于相关招聘行为的事实。"
+      ],
+      "source": "TechCrunch AI",
+      "updated": "2026-10-13",
+      "en": {
+        "cat": "AI",
+        "title": "OpenAI is ordered to hand over hiring records, putting talent poaching under a microscope",
+        "brief": "A court has ordered OpenAI to provide hiring materials, pushing Apple’s trade-secrets dispute into the sensitive territory of employee moves.",
+        "take": "A judge has ordered OpenAI to turn over hiring records in a case involving Apple trade secrets. AI companies are fiercely competing for researchers and engineers, but the dispute highlights a hard line: experience can move with an employee; confidential material cannot. The order is not a final finding that OpenAI did anything wrong. Still, close scrutiny of hiring could make both job changes and corporate onboarding checks more cautious.",
+        "meta": "Legal dispute | Oct. 13",
+        "facts": [
+          [
+            "Court order",
+            "A judge ordered OpenAI to provide hiring records."
+          ],
+          [
+            "Case",
+            "The materials are sought in an Apple trade-secrets case."
+          ],
+          [
+            "Stage",
+            "This is a discovery order, not a final ruling on liability."
+          ]
+        ],
+        "visual": null,
+        "impacts": [
+          [
+            "For workers",
+            "People changing high-tech jobs may face more scrutiny of devices, files, and communications."
           ],
           [
             "For companies",
-            "Testing, auditing, and access controls become a cost of deploying Agents, not an optional extra."
+            "AI firms may tighten onboarding checks, trading hiring speed for compliance cost."
           ]
         ],
         "next": [
-          "Whether Anthropic gives concrete examples and a replacement evaluation method",
-          "Whether other Agent products limit web access and high-privilege tools"
+          "What specific records the court requires.",
+          "Whether the case reveals further facts about the hiring at issue."
         ],
         "source": "TechCrunch AI",
-        "updated": "2026-10-09"
+        "updated": "2026-10-13"
       },
       "sourceLinks": [
         {
-          "title": "Anthropic can’t reliably control its AI agents. It’s cutting off its internal evals from the live internet instead",
-          "url": "https://techcrunch.com/2026/10/09/anthropic-cant-reliably-control-its-ai-agents-its-cutting-off-its-internal-evals-from-the-live-internet-instead/",
+          "title": "Judge orders OpenAI to turn over hiring records in Apple trade secrets case",
+          "url": "https://techcrunch.com/2026/10/13/judge-orders-openai-to-turn-over-hiring-records-in-apple-trade-secrets-case/",
           "publisher": "TechCrunch AI"
         }
       ],
       "eventImage": {
-        "url": "https://techcrunch.com/wp-content/uploads/2026/02/TIm.jpg?w=150",
+        "url": "https://techcrunch.com/wp-content/uploads/2021/01/lwzxxnshgj71bonwbik3.jpg.jpg?w=150",
         "credit": "TechCrunch AI",
-        "link": "https://techcrunch.com/2026/10/09/anthropic-cant-reliably-control-its-ai-agents-its-cutting-off-its-internal-evals-from-the-live-internet-instead/",
+        "link": "https://techcrunch.com/2026/10/13/judge-orders-openai-to-turn-over-hiring-records-in-apple-trade-secrets-case/",
         "zh": {
-          "alt": "Anthropic 不敢让测试 Agent 直连互联网：先把“考场”关起来",
-          "caption": "Anthropic 不敢让测试 Agent 直连互联网：先把“考场”关起来"
+          "alt": "OpenAI被要求交出招聘记录：挖人也可能变成一场取证战",
+          "caption": "OpenAI被要求交出招聘记录：挖人也可能变成一场取证战"
         },
         "en": {
-          "alt": "Anthropic is taking its Agent tests off the live internet",
-          "caption": "Anthropic is taking its Agent tests off the live internet"
-        }
-      },
-      "termGuides": [
-        {
-          "key": "Anthropic",
-          "aliases": [
-            "Anthropic"
-          ],
-          "zh": {
-            "label": "AI 公司",
-            "meaning": "开发 Claude 等大模型的美国公司。",
-            "relation": "它正在调整 Agent 的内部安全测试方式。"
-          },
-          "en": {
-            "label": "AI company",
-            "meaning": "A U.S. company that develops models including Claude.",
-            "relation": "It is changing how it safety-tests Agents internally."
-          }
-        },
-        {
-          "key": "AI Agent",
-          "aliases": [
-            "AI Agent",
-            "Agent",
-            "智能体"
-          ],
-          "zh": {
-            "label": "可执行任务的 AI",
-            "meaning": "不只聊天，还能调用工具、浏览网页和完成步骤的 AI。",
-            "relation": "本次争议在于，它的错误可能直接变成网上的操作。"
-          },
-          "en": {
-            "label": "Task-performing AI",
-            "meaning": "AI that can use tools, browse the web, and carry out multi-step tasks rather than only chat.",
-            "relation": "Here, its errors could turn into actions online."
-          }
-        }
-      ]
-    },
-    {
-      "id": "ai-anthropic-false-police-tip",
-      "cat": "AI",
-      "icon": "alert",
-      "title": "AI 给警方报了假凶案线索：错一次，现实里就有人要出警",
-      "brief": "模型生成的假线索进了警方流程，AI 的“看起来像真的”已经不只是聊天尴尬。",
-      "take": "TechCrunch 报道，一款 Anthropic AI 模型向费城警方发送了错误的凶案线索。公开候选信息没有说明完整处置过程，但事件把一个常被忽略的问题摆到台面上：涉及警方、医疗或公共服务时，模型输出不能因为语气笃定就被当成事实。真正需要补上的，是人工核验、来源记录和明确责任，而不是再加一句“AI 可能出错”。",
-      "meta": "AI 与公共安全｜10月9日",
-      "facts": [
-        [
-          "地点",
-          "美国费城"
-        ],
-        [
-          "事件",
-          "Anthropic 模型发送错误凶案线索"
-        ],
-        [
-          "接收方",
-          "警方"
-        ]
-      ],
-      "visual": null,
-      "impacts": [
-        [
-          "对公众",
-          "错误信息若触发执法流程，可能浪费警力，也可能波及无关的人。"
-        ],
-        [
-          "对产品",
-          "高风险场景需要先核验来源，再让人采取行动。"
-        ]
-      ],
-      "next": [
-        "警方是否说明该线索如何进入和退出处置流程",
-        "Anthropic 是否披露模型、接入方式及改正措施"
-      ],
-      "source": "TechCrunch AI",
-      "updated": "2026-10-09",
-      "en": {
-        "cat": "AI",
-        "title": "An AI sent police a false homicide tip—and someone still has to respond",
-        "brief": "A fabricated lead entered a police workflow, showing that AI sounding convincing is no longer just a chatbot problem.",
-        "take": "TechCrunch reports that an Anthropic AI model sent Philadelphia police a false homicide tip. The available report details do not describe the full response process, but the episode highlights a basic problem: in policing, health care, or public services, confident model output cannot be treated as fact. What is needed is human verification, a record of sources, and clear accountability—not simply another warning that AI can make mistakes.",
-        "meta": "AI and public safety | Oct. 9",
-        "facts": [
-          [
-            "Location",
-            "Philadelphia, U.S."
-          ],
-          [
-            "Event",
-            "An Anthropic model sent a false homicide tip"
-          ],
-          [
-            "Recipient",
-            "Police"
-          ]
-        ],
-        "visual": null,
-        "impacts": [
-          [
-            "For the public",
-            "Bad information can waste emergency resources and may affect people with no connection to a case."
-          ],
-          [
-            "For products",
-            "High-risk uses need source checks before a human acts on an AI output."
-          ]
-        ],
-        "next": [
-          "Whether police explain how the tip entered and left their response process",
-          "Whether Anthropic identifies the model, integration, and corrective steps"
-        ],
-        "source": "TechCrunch AI",
-        "updated": "2026-10-09"
-      },
-      "sourceLinks": [
-        {
-          "title": "An Anthropic AI model sent a false homicide tip to Philadelphia police",
-          "url": "https://techcrunch.com/2026/10/09/an-anthropic-ai-model-sent-a-false-homicide-tip-to-philadelphia-police/",
-          "publisher": "TechCrunch AI"
-        }
-      ],
-      "eventImage": {
-        "url": "https://techcrunch.com/wp-content/uploads/2026/10/GettyImages-1490947739.jpg?resize=1200,797",
-        "credit": "TechCrunch AI",
-        "link": "https://techcrunch.com/2026/10/09/an-anthropic-ai-model-sent-a-false-homicide-tip-to-philadelphia-police/",
-        "zh": {
-          "alt": "AI 给警方报了假凶案线索：错一次，现实里就有人要出警",
-          "caption": "AI 给警方报了假凶案线索：错一次，现实里就有人要出警"
-        },
-        "en": {
-          "alt": "An AI sent police a false homicide tip—and someone still has to respond",
-          "caption": "An AI sent police a false homicide tip—and someone still has to respond"
-        }
-      },
-      "termGuides": [
-        {
-          "key": "Anthropic",
-          "aliases": [
-            "Anthropic"
-          ],
-          "zh": {
-            "label": "AI 公司",
-            "meaning": "开发 Claude 等大模型的美国公司。",
-            "relation": "报道所称发送错误线索的模型来自该公司。"
-          },
-          "en": {
-            "label": "AI company",
-            "meaning": "A U.S. company behind models including Claude.",
-            "relation": "The model reported to have sent the false tip came from the company."
-          }
-        }
-      ]
-    },
-    {
-      "id": "ai-openai-safety-researchers-dispute",
-      "cat": "AI",
-      "icon": "alert",
-      "title": "OpenAI 安全研究员被解雇后反驳指控：内部提风险会不会更难了",
-      "brief": "双方对解雇理由各说各话，最麻烦的是以后谁还敢在公司里按下安全警报。",
-      "take": "多名前 OpenAI 安全研究员在被解雇后，公开否认不当行为指控，并警告这会让内部提出风险的人寒心。现有候选报道没有给出争议的独立裁决，因此不宜把任何一方说法当定论；但在前沿 AI 公司里，安全团队能否独立提出反对意见，本身就是产品安全机制的一部分。若员工担心职业代价，问题可能不会消失，只是更晚被说出来。",
-      "meta": "AI 治理｜10月8日",
-      "facts": [
-        [
-          "公司",
-          "OpenAI"
-        ],
-        [
-          "当事人",
-          "被解雇的安全研究员"
-        ],
-        [
-          "争议",
-          "研究员否认不当行为指控"
-        ]
-      ],
-      "visual": null,
-      "impacts": [
-        [
-          "对用户",
-          "内部风险报告若失灵，产品问题更可能在大规模使用后才暴露。"
-        ],
-        [
-          "对员工",
-          "吹哨与安全审查的边界，会影响研究人员是否敢提出异议。"
-        ]
-      ],
-      "next": [
-        "OpenAI 是否回应具体争议或公布独立审查",
-        "是否有更多前员工或证据公开"
-      ],
-      "source": "TechCrunch AI",
-      "updated": "2026-10-08",
-      "en": {
-        "cat": "AI",
-        "title": "Fired OpenAI safety researchers say the bigger loss may be speaking up",
-        "brief": "Both sides dispute the dismissals; the harder question is whether people will still raise safety concerns inside the company.",
-        "take": "Former OpenAI safety researchers who were fired have publicly disputed misconduct claims and warned of a chilling effect. The available reporting does not provide an independent ruling on the dispute, so neither side’s account should be treated as settled. But at a frontier AI company, a safety team’s ability to raise objections independently is part of the safety system itself. If employees fear career consequences, problems may not disappear—they may simply be reported later.",
-        "meta": "AI governance | Oct. 8",
-        "facts": [
-          [
-            "Company",
-            "OpenAI"
-          ],
-          [
-            "People involved",
-            "Fired safety researchers"
-          ],
-          [
-            "Dispute",
-            "The researchers deny misconduct claims"
-          ]
-        ],
-        "visual": null,
-        "impacts": [
-          [
-            "For users",
-            "If internal risk reporting fails, product problems are more likely to surface after broad release."
-          ],
-          [
-            "For workers",
-            "The line between whistleblowing and internal review shapes whether researchers feel able to object."
-          ]
-        ],
-        "next": [
-          "Whether OpenAI addresses specific claims or publishes an independent review",
-          "Whether more former employees or evidence emerge"
-        ],
-        "source": "TechCrunch AI",
-        "updated": "2026-10-08"
-      },
-      "sourceLinks": [
-        {
-          "title": "Fired OpenAI safety researchers dispute misconduct claims, warn of chilling effect",
-          "url": "https://techcrunch.com/2026/10/08/fired-openai-safety-researchers-dispute-misconduct-claims-warn-of-chilling-effect/",
-          "publisher": "TechCrunch AI"
-        }
-      ],
-      "eventImage": {
-        "url": "https://techcrunch.com/wp-content/uploads/2026/09/openai-getty.jpg?resize=1200,800",
-        "credit": "TechCrunch AI",
-        "link": "https://techcrunch.com/2026/10/08/fired-openai-safety-researchers-dispute-misconduct-claims-warn-of-chilling-effect/",
-        "zh": {
-          "alt": "OpenAI 安全研究员被解雇后反驳指控：内部提风险会不会更难了",
-          "caption": "OpenAI 安全研究员被解雇后反驳指控：内部提风险会不会更难了"
-        },
-        "en": {
-          "alt": "Fired OpenAI safety researchers say the bigger loss may be speaking up",
-          "caption": "Fired OpenAI safety researchers say the bigger loss may be speaking up"
+          "alt": "OpenAI is ordered to hand over hiring records, putting talent poaching under a microscope",
+          "caption": "OpenAI is ordered to hand over hiring records, putting talent poaching under a microscope"
         }
       },
       "termGuides": [
@@ -361,635 +262,302 @@
             "OpenAI"
           ],
           "zh": {
-            "label": "AI 公司",
-            "meaning": "开发 ChatGPT 等产品的美国人工智能公司。",
-            "relation": "被解雇研究员与公司之间的安全争议正在公开化。"
+            "label": "OpenAI",
+            "meaning": "开发通用AI产品和模型的美国公司。",
+            "relation": "它被要求在Apple相关案件中交出招聘记录。"
           },
           "en": {
-            "label": "AI company",
-            "meaning": "The U.S. artificial intelligence company behind ChatGPT.",
-            "relation": "The dispute over the dismissed researchers is unfolding publicly at the company."
+            "label": "OpenAI",
+            "meaning": "A US company developing general-purpose AI models and products.",
+            "relation": "It was ordered to produce hiring records in the Apple-related case."
+          }
+        },
+        {
+          "key": "Apple",
+          "aliases": [
+            "Apple",
+            "苹果"
+          ],
+          "zh": {
+            "label": "Apple",
+            "meaning": "生产iPhone、Mac等产品的科技公司。",
+            "relation": "报道所述的商业机密纠纷与Apple有关。"
+          },
+          "en": {
+            "label": "Apple",
+            "meaning": "The technology company behind the iPhone and Mac.",
+            "relation": "The trade-secrets dispute described in the report involves Apple."
+          }
+        },
+        {
+          "key": "商业机密",
+          "aliases": [
+            "商业机密",
+            "trade secrets"
+          ],
+          "zh": {
+            "label": "商业机密",
+            "meaning": "企业靠保密获得竞争优势的技术、流程或内部信息。",
+            "relation": "案件要查的是招聘过程中是否可能涉及这类信息。"
+          },
+          "en": {
+            "label": "Trade secrets",
+            "meaning": "Confidential technical, business, or process information that gives a company an advantage.",
+            "relation": "The case examines whether such information could have been implicated in hiring."
           }
         }
       ]
     },
     {
-      "id": "ai-jev-valuation",
+      "id": "ai-character-ai-bankruptcy",
       "cat": "AI",
       "icon": "chart",
-      "title": "Jev 刚推出就被估到 75 亿美元：资本在押注“不只会写字”的模型",
-      "brief": "一家非文本 AI 模型公司上线数周就拿到高估值，钱正在追逐下一种模型入口。",
-      "take": "TechCrunch 报道，非文本 AI 模型 Jev 的开发商在产品推出仅数周后，估值已达 75 亿美元。候选报道没有提供足够信息来判断其技术效果或收入，因此这个数字更像资本押注，而不是已验证的商业成绩。值得看的不是估值本身，而是投资人正在把目光从纯文本聊天，转向能处理其他类型信息的模型；这条路若走通，会改变创作、分析和自动化工具的竞争。",
-      "meta": "模型与融资｜10月9日",
+      "title": "Character.AI申请破产：陪聊机器人有用户，不等于生意撑得住",
+      "brief": "上线仅五年，Character.AI已申请破产，说明高人气聊天机器人也可能扛不住算力、内容和合规账单。",
+      "take": "互动聊天机器人平台Character.AI申请破产。它的倒下并不说明人们不想和AI聊天，反而更像一笔现实账：生成内容的计算成本、持续吸引用户的产品成本，以及围绕未成年人和内容安全的压力，都可能很重。对用户而言，最直接的问题是账户、聊天记录和已付费服务如何处理；对整个行业而言，热度不能自动变成稳定的商业模式。",
+      "meta": "公司重组｜10月13日",
       "facts": [
         [
-          "产品",
-          "Jev"
+          "公司动作",
+          "Character.AI已申请破产。"
         ],
         [
-          "定位",
-          "非文本 AI 模型"
+          "成立时间",
+          "报道指出，该平台运营仅约五年。"
         ],
         [
-          "估值",
-          "75 亿美元"
+          "产品类型",
+          "它提供互动式AI聊天机器人服务。"
         ]
       ],
       "visual": null,
       "impacts": [
         [
           "对用户",
-          "未来 AI 工具可能更少依赖打字，更多处理图像、声音或其他输入。"
+          "应留意账号、聊天记录和订阅服务后续安排。"
         ],
         [
-          "对市场",
-          "高估值会让同类团队更容易融资，也会抬高验证真实能力的压力。"
+          "对行业",
+          "面向消费者的AI产品要证明收入能覆盖长期算力和安全成本。"
         ]
       ],
       "next": [
-        "Jev 具体处理哪些非文本信息、面向哪些用户",
-        "估值背后是否有公开的产品使用和收入数据"
+        "破产程序将如何安排平台运营与用户数据。",
+        "是否会有买家接手其技术或用户业务。"
       ],
       "source": "TechCrunch AI",
-      "updated": "2026-10-09",
+      "updated": "2026-10-13",
       "en": {
         "cat": "AI",
-        "title": "Jev reached a $7.5 billion valuation before its case is proven",
-        "brief": "A non-text AI model company gained a huge valuation within weeks, as investors chase the next interface beyond chat.",
-        "take": "TechCrunch reports that the maker of Jev, a non-text AI model, is valued at $7.5 billion only weeks after launch. The candidate report does not provide enough evidence to judge technical performance or revenue, so the figure is a venture bet rather than proof of a working business. The important shift is that investors are looking beyond text chat toward models that handle other kinds of information—potentially changing creative, analytical, and automation tools if they deliver.",
-        "meta": "Models and funding | Oct. 9",
+        "title": "Character.AI’s bankruptcy shows popular chatbots can still be bad businesses",
+        "brief": "Just five years in, Character.AI has filed for bankruptcy—a reminder that user enthusiasm may not cover compute, content, and compliance bills.",
+        "take": "Interactive chatbot platform Character.AI has filed for bankruptcy. That does not mean people have lost interest in talking to AI. It points instead to a difficult business equation: the compute required to generate conversations, the cost of keeping users engaged, and pressure around content and minors can all pile up. Users will want to know what happens to accounts, conversation history, and paid services. For the sector, popularity is not the same as a durable business model.",
+        "meta": "Corporate restructuring | Oct. 13",
         "facts": [
           [
+            "Company action",
+            "Character.AI has filed for bankruptcy."
+          ],
+          [
+            "Age",
+            "The report says the platform is only about five years old."
+          ],
+          [
             "Product",
-            "Jev"
-          ],
-          [
-            "Positioning",
-            "A non-text AI model"
-          ],
-          [
-            "Valuation",
-            "$7.5 billion"
+            "It offers interactive AI chatbot services."
           ]
         ],
         "visual": null,
         "impacts": [
           [
             "For users",
-            "Future AI tools may rely less on typing and handle images, audio, or other inputs more directly."
+            "They should watch for changes to accounts, chat history, and subscriptions."
           ],
           [
-            "For the market",
-            "A large valuation can fund rivals, while raising pressure to prove real capability."
+            "For the industry",
+            "Consumer AI products must show that revenue can cover ongoing compute and safety costs."
           ]
         ],
         "next": [
-          "What non-text information Jev handles and who it is for",
-          "Whether product use and revenue data behind the valuation become public"
+          "How the bankruptcy process handles operations and user data.",
+          "Whether a buyer takes over its technology or consumer business."
         ],
         "source": "TechCrunch AI",
-        "updated": "2026-10-09"
+        "updated": "2026-10-13"
       },
       "sourceLinks": [
         {
-          "title": "The maker of non-text AI model Jev valued at $7.5B just weeks after launch",
-          "url": "https://techcrunch.com/2026/10/09/the-maker-of-non-text-ai-model-jev-valued-at-7-5b-just-weeks-after-launch/",
+          "title": "Just 5 years in, interactive chatbot platform Character.AI files for bankruptcy",
+          "url": "https://techcrunch.com/2026/10/13/just-5-years-in-interactive-chatbot-platform-character-ai-files-for-bankruptcy/",
           "publisher": "TechCrunch AI"
         }
       ],
       "eventImage": {
-        "url": "https://techcrunch.com/wp-content/uploads/2026/09/typesafe-ai.jpg?resize=1174,1200",
+        "url": "https://techcrunch.com/wp-content/uploads/2025/04/Screenshot-2025-04-22-at-1.24.23PM.png?resize=1200,672",
         "credit": "TechCrunch AI",
-        "link": "https://techcrunch.com/2026/10/09/the-maker-of-non-text-ai-model-jev-valued-at-7-5b-just-weeks-after-launch/",
+        "link": "https://techcrunch.com/2026/10/13/just-5-years-in-interactive-chatbot-platform-character-ai-files-for-bankruptcy/",
         "zh": {
-          "alt": "Jev 刚推出就被估到 75 亿美元：资本在押注“不只会写字”的模型",
-          "caption": "Jev 刚推出就被估到 75 亿美元：资本在押注“不只会写字”的模型"
+          "alt": "Character.AI申请破产：陪聊机器人有用户，不等于生意撑得住",
+          "caption": "Character.AI申请破产：陪聊机器人有用户，不等于生意撑得住"
         },
         "en": {
-          "alt": "Jev reached a $7.5 billion valuation before its case is proven",
-          "caption": "Jev reached a $7.5 billion valuation before its case is proven"
+          "alt": "Character.AI’s bankruptcy shows popular chatbots can still be bad businesses",
+          "caption": "Character.AI’s bankruptcy shows popular chatbots can still be bad businesses"
         }
       },
       "termGuides": [
         {
-          "key": "Jev",
+          "key": "Character.AI",
           "aliases": [
-            "Jev"
+            "Character.AI",
+            "Character AI"
           ],
           "zh": {
-            "label": "AI 模型",
-            "meaning": "报道所称的一种非文本 AI 模型。",
-            "relation": "其开发商在推出数周后被估值 75 亿美元。"
+            "label": "Character.AI",
+            "meaning": "让用户与设定角色进行互动对话的AI平台。",
+            "relation": "该公司在运营约五年后申请破产。"
           },
           "en": {
-            "label": "AI model",
-            "meaning": "A non-text AI model described in the report.",
-            "relation": "Its maker was valued at $7.5 billion within weeks of launch."
+            "label": "Character.AI",
+            "meaning": "An AI platform for interactive conversations with created characters.",
+            "relation": "The company filed for bankruptcy after about five years of operation."
+          }
+        },
+        {
+          "key": "破产",
+          "aliases": [
+            "破产",
+            "bankruptcy"
+          ],
+          "zh": {
+            "label": "破产",
+            "meaning": "企业无法按原方式偿还债务或继续经营时进入的法律程序。",
+            "relation": "它不必然代表服务立刻关停，但会改变用户服务和资产的处置方式。"
+          },
+          "en": {
+            "label": "Bankruptcy",
+            "meaning": "A legal process used when a company cannot continue or pay debts in its current form.",
+            "relation": "It does not necessarily mean an immediate shutdown, but it can change how services and assets are handled."
           }
         }
       ]
     },
     {
-      "id": "ai-data-center-ndas",
+      "id": "ai-amex-agent-payments",
       "cat": "AI",
-      "icon": "refinery",
-      "title": "数据中心不再全靠保密协议：居民先想知道电、水和噪声谁买单",
-      "brief": "Amazon 等公司开始少签保密协议，但公开项目不等于当地人自动接受它。",
-      "take": "TechCrunch 报道，Amazon 等企业正减少数据中心交易中的保密协议，希望缓和社区对 AI 基础设施的反弹。透明度是第一步：居民和地方政府至少能更早知道项目规模与谈判内容。但真正的账还在后面——用电是否推高电网成本、取水和柴油备用电源如何管理、税收优惠值不值。AI 服务越依赖数据中心，这些原本藏在合同里的问题越会变成日常公共议题。",
-      "meta": "AI 基础设施｜10月11日",
+      "icon": "alert",
+      "title": "让Agent替你下单之前，美国运通先想给它戴上“付款手铐”",
+      "brief": "AI Agent一旦能买东西，出错就不只是答错题；美国运通的新框架要防止它擅自刷卡。",
+      "take": "美国运通推出一套框架，目标是防止AI Agent进行未经授权的购买。Agent与普通聊天机器人不同，它被设计成能执行任务；一旦接上购物、订票或企业采购系统，授权范围、金额上限和撤销机制就成了关键。这个框架不会自动消除风险，但说明支付行业开始把“AI会不会乱花钱”当成基础设施问题，而不是靠用户多看一眼提示词来解决。",
+      "meta": "支付安全｜10月13日",
       "facts": [
         [
-          "企业",
-          "Amazon 等"
+          "推出方",
+          "美国运通发布Agent支付防护框架。"
         ],
         [
-          "变化",
-          "减少数据中心交易保密协议"
-        ],
-        [
-          "争点",
-          "社区对大型数据中心的信任"
-        ]
-      ],
-      "visual": null,
-      "impacts": [
-        [
-          "对居民",
-          "电力、用水、噪声和税收优惠可能直接影响当地生活与公共预算。"
-        ],
-        [
-          "对 AI 价格",
-          "项目审批变慢或成本上升，最终会传到云服务和 AI 产品价格。"
-        ]
-      ],
-      "next": [
-        "企业会披露哪些合同、能耗和公共补贴信息",
-        "地方政府是否把公开条件写入审批规则"
-      ],
-      "source": "TechCrunch AI",
-      "updated": "2026-10-11",
-      "en": {
-        "cat": "AI",
-        "title": "Data-center secrecy is easing, but communities still want the bill explained",
-        "brief": "Amazon and others are dropping some NDAs, yet disclosure alone will not settle questions about power, water, and local costs.",
-        "take": "TechCrunch reports that Amazon and other companies are reducing nondisclosure agreements around data-center deals, hoping to ease local opposition to AI infrastructure. Transparency is a start: residents and local governments can learn earlier about a project’s scale and negotiations. But the bigger bill remains—whether grid costs rise, how water and diesel backup power are managed, and whether tax incentives are worthwhile. As AI depends more on data centers, contract details are becoming everyday public issues.",
-        "meta": "AI infrastructure | Oct. 11",
-        "facts": [
-          [
-            "Companies",
-            "Amazon and others"
-          ],
-          [
-            "Change",
-            "Fewer NDAs in data-center deals"
-          ],
-          [
-            "Point of dispute",
-            "Community trust in large data centers"
-          ]
-        ],
-        "visual": null,
-        "impacts": [
-          [
-            "For residents",
-            "Power, water, noise, and tax breaks can affect local life and public budgets."
-          ],
-          [
-            "For AI prices",
-            "Slower approvals or higher construction costs can feed into cloud and AI product prices."
-          ]
-        ],
-        "next": [
-          "What contract, energy-use, and subsidy data companies disclose",
-          "Whether local governments make disclosure a condition of approval"
-        ],
-        "source": "TechCrunch AI",
-        "updated": "2026-10-11"
-      },
-      "sourceLinks": [
-        {
-          "title": "Can the AI industry persuade data center opponents by getting rid of NDAs?",
-          "url": "https://techcrunch.com/2026/10/11/can-the-ai-industry-persuade-data-center-opponents-by-getting-rid-of-ndas/",
-          "publisher": "TechCrunch AI"
-        }
-      ],
-      "eventImage": {
-        "url": "https://techcrunch.com/wp-content/uploads/2026/09/9-DSCF1649.jpg?resize=800,1200",
-        "credit": "TechCrunch AI",
-        "link": "https://techcrunch.com/2026/10/11/can-the-ai-industry-persuade-data-center-opponents-by-getting-rid-of-ndas/",
-        "zh": {
-          "alt": "数据中心不再全靠保密协议：居民先想知道电、水和噪声谁买单",
-          "caption": "数据中心不再全靠保密协议：居民先想知道电、水和噪声谁买单"
-        },
-        "en": {
-          "alt": "Data-center secrecy is easing, but communities still want the bill explained",
-          "caption": "Data-center secrecy is easing, but communities still want the bill explained"
-        }
-      },
-      "termGuides": [
-        {
-          "key": "NDA",
-          "aliases": [
-            "NDA",
-            "保密协议",
-            "保密协定"
-          ],
-          "zh": {
-            "label": "保密合同",
-            "meaning": "要求签约方不公开谈判或交易细节的协议。",
-            "relation": "数据中心项目正减少使用它，以回应社区的知情要求。"
-          },
-          "en": {
-            "label": "Confidentiality contract",
-            "meaning": "An agreement that limits disclosure of negotiation or deal details.",
-            "relation": "Data-center projects are using fewer of them in response to demands for public information."
-          }
-        },
-        {
-          "key": "数据中心",
-          "aliases": [
-            "数据中心",
-            "data center"
-          ],
-          "zh": {
-            "label": "算力设施",
-            "meaning": "放置大量服务器、提供云计算和 AI 训练与推理的设施。",
-            "relation": "AI 服务扩张需要更多这类高耗电项目。"
-          },
-          "en": {
-            "label": "Compute facility",
-            "meaning": "A site full of servers that provides cloud computing and AI training or inference.",
-            "relation": "Expanding AI services requires more of these power-hungry projects."
-          }
-        }
-      ]
-    },
-    {
-      "id": "ai-danu-recycling-robot",
-      "cat": "机器人与具身智能",
-      "icon": "drone",
-      "title": "回收机器人想分拣垃圾，难点不是抓起来，而是每天都别抓错",
-      "brief": "Danu Robotics 在做回收分拣机器人，真实垃圾流比实验室里的物体乱得多。",
-      "take": "TechCrunch 报道，Danu Robotics 正尝试打造更好的回收机器人。回收分拣是具身 AI 很实际的考场：物料脏、破、叠在一起，外观每天都不同，机器人必须看得准、抓得住，还要在高节奏产线上少停机。它离“家里有个万能机器人”很远，却可能先在脏、累、重复的工业岗位上证明价值。能否在复杂垃圾流里稳定运行，比演示视频更重要。",
-      "meta": "机器人与具身智能｜10月9日",
-      "facts": [
-        [
-          "公司",
-          "Danu Robotics"
+          "目标",
+          "防止AI Agent进行未经授权的购买。"
         ],
         [
           "场景",
-          "回收分拣"
-        ],
-        [
-          "挑战",
-          "杂乱物料中的识别与抓取稳定性"
+          "框架面向Agent参与付款和采购的风险。"
         ]
       ],
       "visual": null,
       "impacts": [
         [
-          "对工人",
-          "若可靠，机器人可接手重复且环境较差的分拣环节。"
-        ],
-        [
-          "对回收",
-          "分拣更准可能提高可回收物纯度，减少本该回收的材料被丢弃。"
-        ]
-      ],
-      "next": [
-        "机器人是否公布真实工厂的连续运行数据",
-        "系统能否处理更多混杂、破损和污染物料"
-      ],
-      "source": "TechCrunch AI",
-      "updated": "2026-10-09",
-      "en": {
-        "cat": "Robotics and embodied AI",
-        "title": "A recycling robot has to work in the mess, not just pick a clean demo object",
-        "brief": "Danu Robotics is building for recycling lines, where real waste is much more chaotic than a lab table.",
-        "take": "TechCrunch reports that Danu Robotics is trying to build a better recycling robot. Sorting waste is a practical test for embodied AI: materials are dirty, damaged, overlapping, and different every day. A robot must identify them, grasp them, and keep a fast production line moving. This is far from a general-purpose home robot, but it could prove useful first in dirty, tiring, repetitive industrial work. Reliable performance in a messy waste stream matters more than a polished demo.",
-        "meta": "Robotics and embodied AI | Oct. 9",
-        "facts": [
-          [
-            "Company",
-            "Danu Robotics"
-          ],
-          [
-            "Use case",
-            "Recycling sorting"
-          ],
-          [
-            "Challenge",
-            "Reliable recognition and grasping in mixed materials"
-          ]
-        ],
-        "visual": null,
-        "impacts": [
-          [
-            "For workers",
-            "If reliable, robots could take on repetitive sorting work in unpleasant conditions."
-          ],
-          [
-            "For recycling",
-            "More accurate sorting can improve material purity and reduce waste of recoverable goods."
-          ]
-        ],
-        "next": [
-          "Whether the robot publishes continuous-operation data from real facilities",
-          "Whether it can handle more mixed, damaged, and contaminated materials"
-        ],
-        "source": "TechCrunch AI",
-        "updated": "2026-10-09"
-      },
-      "sourceLinks": [
-        {
-          "title": "Danu Robotics’ fight to build a better recycling robot",
-          "url": "https://techcrunch.com/2026/10/09/danu-robotics-fight-to-build-a-better-recycling-robot/",
-          "publisher": "TechCrunch AI"
-        }
-      ],
-      "eventImage": {
-        "url": "https://techcrunch.com/wp-content/uploads/2026/10/Guarding-installed.jpeg?resize=1200,900",
-        "credit": "TechCrunch AI",
-        "link": "https://techcrunch.com/2026/10/09/danu-robotics-fight-to-build-a-better-recycling-robot/",
-        "zh": {
-          "alt": "回收机器人想分拣垃圾，难点不是抓起来，而是每天都别抓错",
-          "caption": "回收机器人想分拣垃圾，难点不是抓起来，而是每天都别抓错"
-        },
-        "en": {
-          "alt": "A recycling robot has to work in the mess, not just pick a clean demo object",
-          "caption": "A recycling robot has to work in the mess, not just pick a clean demo object"
-        }
-      },
-      "termGuides": [
-        {
-          "key": "Danu Robotics",
-          "aliases": [
-            "Danu Robotics",
-            "Danu"
-          ],
-          "zh": {
-            "label": "机器人公司",
-            "meaning": "开发回收分拣机器人的公司。",
-            "relation": "它正试图让机器人在真实垃圾流中完成识别和抓取。"
-          },
-          "en": {
-            "label": "Robotics company",
-            "meaning": "A company developing robots for recycling sorting.",
-            "relation": "It is trying to make robots identify and grasp materials in real waste streams."
-          }
-        },
-        {
-          "key": "具身 AI",
-          "aliases": [
-            "具身 AI",
-            "embodied AI"
-          ],
-          "zh": {
-            "label": "能感知并行动的 AI",
-            "meaning": "让机器人通过摄像头、传感器和机械臂理解环境并动作的 AI。",
-            "relation": "回收分拣需要它把识别结果变成稳定抓取。"
-          },
-          "en": {
-            "label": "AI that acts in the physical world",
-            "meaning": "AI that lets robots use cameras, sensors, and mechanisms to understand and act in an environment.",
-            "relation": "Recycling sorting requires it to turn recognition into reliable grasping."
-          }
-        }
-      ]
-    },
-    {
-      "id": "ai-microsoft-emergency-brake",
-      "cat": "AI",
-      "icon": "alert",
-      "title": "微软 CEO 要给 AI 装“紧急刹车”：关键不是按钮，而是谁有权按",
-      "brief": "模型能做的事越多，用户和企业越需要一个能立刻停下来的办法。",
-      "take": "TechCrunch 报道，微软 CEO 萨提亚·纳德拉表示，AI 模型需要“紧急刹车”。这句话听上去简单，落实却很难：什么行为触发停机、谁能中止、停机后如何保留证据和恢复服务，都得在事故发生前写清楚。对普通用户来说，这关系到越来越多代办工作、客服和内容系统在明显出错时，能不能被及时关掉，而不是继续把错误放大。",
-      "meta": "AI 安全治理｜10月10日",
-      "facts": [
-        [
-          "公司",
-          "Microsoft"
-        ],
-        [
-          "发言人",
-          "萨提亚·纳德拉"
-        ],
-        [
-          "主张",
-          "AI 模型需要紧急刹车"
-        ]
-      ],
-      "visual": null,
-      "impacts": [
-        [
-          "对用户",
-          "处理付款、账号或重要信息的 AI，出错时应有可用的人工中断路径。"
+          "对消费者",
+          "未来让AI代订、代买时，能否设额度和二次确认会很重要。"
         ],
         [
           "对企业",
-          "停机权、日志和恢复流程会成为部署高权限 AI 的基本配置。"
+          "采购自动化要补上授权与审计，否则小错误可能变成一串账单。"
         ]
       ],
       "next": [
-        "微软是否提出具体的技术或产品机制",
-        "“紧急刹车”能否覆盖外部开发者接入的模型服务"
+        "框架是否成为商户、银行和其他支付网络的共同做法。",
+        "具体的额度、身份验证和争议处理规则。"
       ],
       "source": "TechCrunch AI",
-      "updated": "2026-10-10",
+      "updated": "2026-10-13",
       "en": {
         "cat": "AI",
-        "title": "Microsoft’s CEO wants an AI emergency brake—but who gets the switch?",
-        "brief": "As models do more, users and businesses need a way to stop them quickly when something plainly goes wrong.",
-        "take": "TechCrunch reports that Microsoft CEO Satya Nadella said AI models need an “emergency brake.” The phrase is simple; implementation is not. Teams need to decide what triggers a shutdown, who can stop a system, and how to preserve evidence and restore service afterward—before an incident occurs. For ordinary users, this matters as AI handles more work, customer support, and content: can an obvious failure be halted, rather than allowed to compound?",
-        "meta": "AI safety governance | Oct. 10",
+        "title": "Before Agents can shop for you, Amex wants tighter controls on their wallets",
+        "brief": "When an AI Agent can buy things, a mistake is no longer just a wrong answer; Amex is proposing safeguards against unauthorized charges.",
+        "take": "American Express has introduced a framework aimed at preventing AI Agents from making unauthorized purchases. Unlike a normal chatbot, an Agent is designed to carry out tasks. Once it connects to shopping, travel booking, or company procurement, spending limits, permission scope, and ways to cancel matter greatly. The framework will not eliminate the risk, but it shows payments companies are treating “AI spending money without permission” as an infrastructure problem, not something users can solve by reading prompts more carefully.",
+        "meta": "Payment security | Oct. 13",
         "facts": [
           [
-            "Company",
-            "Microsoft"
+            "Issuer",
+            "American Express introduced an Agent-payment safety framework."
           ],
           [
-            "Speaker",
-            "Satya Nadella"
+            "Goal",
+            "It is intended to prevent unauthorized AI Agent purchases."
           ],
           [
-            "Proposal",
-            "AI models need an emergency brake"
+            "Use case",
+            "It addresses risk when Agents take part in payment and procurement."
           ]
         ],
         "visual": null,
         "impacts": [
           [
-            "For users",
-            "AI handling payments, accounts, or important information needs a usable human interruption path."
+            "For consumers",
+            "Spending caps and second confirmations may become essential when AI books or buys things."
           ],
           [
-            "For companies",
-            "Stop authority, logs, and recovery plans become baseline requirements for high-privilege AI."
+            "For businesses",
+            "Procurement automation needs permissions and audit trails, or small errors can become a chain of bills."
           ]
         ],
         "next": [
-          "Whether Microsoft proposes specific technical or product mechanisms",
-          "Whether an emergency brake can cover model services used by outside developers"
+          "Whether merchants, banks, and other payment networks adopt similar practices.",
+          "The detailed rules for limits, identity checks, and disputes."
         ],
         "source": "TechCrunch AI",
-        "updated": "2026-10-10"
+        "updated": "2026-10-13"
       },
       "sourceLinks": [
         {
-          "title": "Microsoft’s Satya Nadella says AI models need an ‘emergency brake’",
-          "url": "https://techcrunch.com/2026/10/10/microsofts-satya-nadella-says-ai-models-need-an-emergency-brake/",
+          "title": "Amex introduces a framework to prevent AI agents from making unauthorized purchases",
+          "url": "https://techcrunch.com/2026/10/13/amex-introduces-a-framework-to-prevent-ai-agents-from-making-unauthorized-purchases/",
           "publisher": "TechCrunch AI"
         }
       ],
       "eventImage": {
-        "url": "https://techcrunch.com/wp-content/uploads/2023/11/satya-nadella-2_web.png?w=1000",
+        "url": "https://techcrunch.com/wp-content/uploads/2026/10/amex-GettyImages-171311164.jpg?resize=1200,800",
         "credit": "TechCrunch AI",
-        "link": "https://techcrunch.com/2026/10/10/microsofts-satya-nadella-says-ai-models-need-an-emergency-brake/",
+        "link": "https://techcrunch.com/2026/10/13/amex-introduces-a-framework-to-prevent-ai-agents-from-making-unauthorized-purchases/",
         "zh": {
-          "alt": "微软 CEO 要给 AI 装“紧急刹车”：关键不是按钮，而是谁有权按",
-          "caption": "微软 CEO 要给 AI 装“紧急刹车”：关键不是按钮，而是谁有权按"
+          "alt": "让Agent替你下单之前，美国运通先想给它戴上“付款手铐”",
+          "caption": "让Agent替你下单之前，美国运通先想给它戴上“付款手铐”"
         },
         "en": {
-          "alt": "Microsoft’s CEO wants an AI emergency brake—but who gets the switch?",
-          "caption": "Microsoft’s CEO wants an AI emergency brake—but who gets the switch?"
+          "alt": "Before Agents can shop for you, Amex wants tighter controls on their wallets",
+          "caption": "Before Agents can shop for you, Amex wants tighter controls on their wallets"
         }
       },
       "termGuides": [
         {
-          "key": "Microsoft",
+          "key": "American Express",
           "aliases": [
-            "Microsoft",
-            "微软"
+            "美国运通",
+            "Amex",
+            "American Express"
           ],
           "zh": {
-            "label": "科技公司",
-            "meaning": "提供 Windows、Azure 云服务和 AI 产品的美国公司。",
-            "relation": "其 CEO 提出 AI 模型需要紧急中止机制。"
+            "label": "美国运通",
+            "meaning": "提供信用卡和支付服务的金融公司。",
+            "relation": "它提出了防止AI Agent越权付款的框架。"
           },
           "en": {
-            "label": "Technology company",
-            "meaning": "The U.S. company behind Windows, Azure cloud services, and AI products.",
-            "relation": "Its CEO argued for an emergency stop mechanism for AI models."
+            "label": "American Express",
+            "meaning": "A financial company that provides card and payment services.",
+            "relation": "It proposed a framework to stop AI Agents from making unauthorized payments."
           }
         },
-        {
-          "key": "紧急刹车",
-          "aliases": [
-            "紧急刹车",
-            "emergency brake"
-          ],
-          "zh": {
-            "label": "快速中止机制",
-            "meaning": "在系统出现危险或异常时，立即限制或停止其行动的控制措施。",
-            "relation": "它被用来描述高风险 AI 出错时的人工干预能力。"
-          },
-          "en": {
-            "label": "Rapid stop mechanism",
-            "meaning": "A control that quickly limits or stops a system when it behaves dangerously or abnormally.",
-            "relation": "It describes human intervention when high-risk AI goes wrong."
-          }
-        }
-      ]
-    },
-    {
-      "id": "ai-agents-in-text-messages",
-      "cat": "AI",
-      "icon": "code",
-      "title": "Agent 要搬进短信：最省一步，也最容易把付款和隐私交出去",
-      "brief": "用短信就能叫 AI 办事很方便，但它也把身份验证、聊天记录和付款授权挤进了同一个入口。",
-      "take": "TechCrunch 盘点了可直接在短信中使用的 AI Agent。把 Agent 放进人们最常用的通信工具，确实省去下载 App、学习新界面的麻烦；但短信不是一个天然适合高风险操作的工作台。用户需要看清它代表谁、能读哪些信息、是否会调用支付，以及号码被盗或被冒用时怎么撤销权限。便利的门槛更低，防错的门槛也必须更低。",
-      "meta": "AI 产品｜10月10日",
-      "facts": [
-        [
-          "产品形态",
-          "短信中的 AI Agent"
-        ],
-        [
-          "入口",
-          "手机短信"
-        ],
-        [
-          "敏感权限",
-          "信息访问与可能的付款操作"
-        ]
-      ],
-      "visual": null,
-      "impacts": [
-        [
-          "对用户",
-          "不要把短信里的自然语言请求，当成默认安全的付款或授权指令。"
-        ],
-        [
-          "对平台",
-          "身份验证、撤销授权和交易确认不能只靠一条聊天消息。"
-        ]
-      ],
-      "next": [
-        "这些 Agent 如何验证身份与确认支付",
-        "运营商和平台是否提供更清晰的反欺诈保护"
-      ],
-      "source": "TechCrunch AI",
-      "updated": "2026-10-10",
-      "en": {
-        "cat": "AI",
-        "title": "AI Agents are moving into text messages—convenient, until money and privacy join the chat",
-        "brief": "Using an AI by text lowers friction, but it also puts identity, chat data, and payment authority at one entry point.",
-        "take": "TechCrunch rounds up AI Agents that can be used through text messages. Putting an Agent inside a familiar communication tool avoids another app and interface. But SMS is not automatically a safe workspace for high-risk actions. Users need to know whom an Agent represents, what information it can read, whether it can initiate payment, and how permission is revoked if a number is stolen or impersonated. The convenience bar is lower; the error-prevention bar must be lower too.",
-        "meta": "AI products | Oct. 10",
-        "facts": [
-          [
-            "Product form",
-            "AI Agents in text messages"
-          ],
-          [
-            "Entry point",
-            "Mobile SMS"
-          ],
-          [
-            "Sensitive permissions",
-            "Information access and possible payment actions"
-          ]
-        ],
-        "visual": null,
-        "impacts": [
-          [
-            "For users",
-            "Do not treat a natural-language text request as automatically safe authorization for payment or account actions."
-          ],
-          [
-            "For platforms",
-            "Identity checks, permission revocation, and transaction confirmation cannot rest on one chat message."
-          ]
-        ],
-        "next": [
-          "How these Agents verify identity and confirm payments",
-          "Whether carriers and platforms offer clearer anti-fraud protections"
-        ],
-        "source": "TechCrunch AI",
-        "updated": "2026-10-10"
-      },
-      "sourceLinks": [
-        {
-          "title": "Here are the top AI agents that can live in your text messages",
-          "url": "https://techcrunch.com/2026/10/10/all-the-ai-agents-that-can-live-in-your-text-messages/",
-          "publisher": "TechCrunch AI"
-        }
-      ],
-      "eventImage": {
-        "url": "https://techcrunch.com/wp-content/uploads/2017/12/gettyimages-673436934.jpg?resize=1200,813",
-        "credit": "TechCrunch AI",
-        "link": "https://techcrunch.com/2026/10/10/all-the-ai-agents-that-can-live-in-your-text-messages/",
-        "zh": {
-          "alt": "Agent 要搬进短信：最省一步，也最容易把付款和隐私交出去",
-          "caption": "Agent 要搬进短信：最省一步，也最容易把付款和隐私交出去"
-        },
-        "en": {
-          "alt": "AI Agents are moving into text messages—convenient, until money and privacy join the chat",
-          "caption": "AI Agents are moving into text messages—convenient, until money and privacy join the chat"
-        }
-      },
-      "termGuides": [
         {
           "key": "AI Agent",
           "aliases": [
@@ -998,301 +566,802 @@
             "智能体"
           ],
           "zh": {
-            "label": "可执行任务的 AI",
-            "meaning": "能按指令完成多步骤任务、并可能调用外部工具的 AI。",
-            "relation": "这类产品开始通过短信接收指令，可能触及账号与付款操作。"
+            "label": "AI Agent",
+            "meaning": "不仅能回答问题，还能按授权调用工具、完成任务的软件。",
+            "relation": "它若能直接付款，就必须有清楚的权限和金额边界。"
           },
           "en": {
-            "label": "Task-performing AI",
-            "meaning": "AI that can complete multi-step tasks and may call outside tools.",
-            "relation": "These products are beginning to take instructions by text, potentially touching accounts and payments."
-          }
-        },
-        {
-          "key": "SMS",
-          "aliases": [
-            "SMS",
-            "短信",
-            "text messages"
-          ],
-          "zh": {
-            "label": "手机短消息",
-            "meaning": "通过手机号发送和接收的文字通信服务。",
-            "relation": "它成为 AI Agent 的新入口，也带来号码冒用风险。"
-          },
-          "en": {
-            "label": "Mobile text messaging",
-            "meaning": "A service for sending and receiving messages through a phone number.",
-            "relation": "It is becoming an entry point for AI Agents, with risks of number impersonation."
+            "label": "AI Agent",
+            "meaning": "Software that can use tools and carry out tasks, not merely answer questions.",
+            "relation": "If it can pay directly, it needs clear permission and spending boundaries."
           }
         }
       ]
     },
     {
-      "id": "ai-designed-viruses",
+      "id": "ai-dead-startup-data",
       "cat": "AI",
-      "icon": "alert",
-      "title": "AI 设计病毒的讨论走到台前：能力能公开，风险不能只靠自觉",
-      "brief": "研究 AI 设计病毒的人公开谈方法，生物安全的门槛正在从实验室延伸到模型和数据。",
-      "take": "MIT Technology Review 刊出对“AI 设计病毒”研究者的访谈。候选信息不足以判断相关工作是否产生了可操作的危险能力，但主题本身已很现实：生成式 AI 降低检索、归纳和设计门槛，也可能让具有生物背景的人更快拼接危险知识。这里不该把所有生命科学 AI 一概视为威胁；关键是模型提供商、研究机构和资助方能否区分正当研究与可被滥用的操作指导，并留下审计痕迹。",
-      "meta": "AI 生物安全｜10月8日",
+      "icon": "code",
+      "title": "倒闭创业公司的数据成了新矿：训练AI的“遗产”该归谁",
+      "brief": "AI实验室正购买倒闭公司的数据来训练模型，但用户当初同意的用途，未必包括下一任买家。",
+      "take": "MIT Technology Review报道，AI实验室正从倒闭创业公司手中购买数据用于训练模型。数据对训练很值钱，可企业关门后，数据的“原用途”与“新买家的训练用途”可能相差很远。麻烦不只在隐私条款写得够不够长，还在用户、员工和客户是否真的知道数据会随资产出售流转。对想清理历史账户的人来说，删数据和公司倒闭后的数据去向，可能是两件不同的事。",
+      "meta": "训练数据｜10月13日",
       "facts": [
         [
-          "报道形式",
-          "研究者访谈"
+          "交易趋势",
+          "报道指AI实验室在购买倒闭创业公司的数据。"
         ],
         [
-          "主题",
-          "AI 设计病毒"
+          "用途",
+          "这些数据被用于训练AI模型。"
         ],
         [
-          "风险领域",
-          "生物安全与双重用途研究"
+          "争议点",
+          "原始数据用途与后续模型训练用途可能不同。"
         ]
       ],
       "visual": null,
       "impacts": [
         [
-          "对公众",
-          "这类风险通常不会先以 App 形式出现，但一旦失控，影响范围可能很大。"
+          "对个人",
+          "过去交给小公司的资料，可能在公司消失后进入新的数据交易。"
         ],
         [
-          "对开发者",
-          "模型的能力评测与访问限制，需要覆盖生物学等高风险领域。"
+          "对企业",
+          "收购数据时若授权不清，隐私、合同和声誉风险会一起出现。"
         ]
       ],
       "next": [
-        "研究者是否披露可复核的安全评测和防护措施",
-        "模型公司会否统一生物风险测试与审计标准"
+        "买卖双方如何核验用户同意和合同限制。",
+        "监管机构是否会更明确限制破产资产中的数据转售。"
       ],
       "source": "MIT Technology Review",
-      "updated": "2026-10-09",
+      "updated": "2026-10-13",
       "en": {
         "cat": "AI",
-        "title": "AI-designed-virus research is no longer a lab-only safety question",
-        "brief": "A public discussion of AI-designed viruses shows that biosecurity now reaches into models, data, and access rules.",
-        "take": "MIT Technology Review published an interview with a creator of AI-designed viruses. The candidate information is not enough to establish whether the work creates an actionable dangerous capability, but the issue is concrete: generative AI can lower the effort needed to search, combine, and design biological knowledge. That does not make all life-science AI a threat. The key question is whether model providers, labs, and funders can separate legitimate research from instructions that can be misused—and retain auditable records.",
-        "meta": "AI biosecurity | Oct. 8",
+        "title": "Data from failed startups is becoming AI training fuel—and consent may not travel with it",
+        "brief": "AI labs are buying data from dead startups for training, even though users may never have agreed to a future buyer using it that way.",
+        "take": "MIT Technology Review reports that AI labs are buying data from failed startups to train models. Training data is valuable, but a company shutting down can turn the original purpose of collection into something very different from a buyer’s training use. The issue is not only whether a privacy notice was long enough; it is whether users, employees, and customers understood that data could move with an asset sale. Deleting an old account and knowing where data goes after a company fails may be two different things.",
+        "meta": "Training data | Oct. 13",
         "facts": [
           [
-            "Format",
-            "Interview with a researcher"
+            "Trend",
+            "The report says AI labs are buying data from failed startups."
           ],
           [
-            "Topic",
-            "AI-designed viruses"
+            "Use",
+            "The data is used to train AI models."
           ],
           [
-            "Risk area",
-            "Biosecurity and dual-use research"
+            "Dispute",
+            "The original purpose for data can differ from later model-training use."
           ]
         ],
         "visual": null,
         "impacts": [
           [
-            "For the public",
-            "The risk may not first arrive as a consumer app, but the consequences of failure could be broad."
+            "For people",
+            "Information given to a small company may enter a new data sale after that company disappears."
           ],
           [
-            "For developers",
-            "Capability evaluations and access limits need to cover high-risk fields such as biology."
+            "For companies",
+            "Buying data with unclear consent can bring privacy, contract, and reputational risk."
           ]
         ],
         "next": [
-          "Whether researchers disclose reviewable safety evaluations and safeguards",
-          "Whether model companies adopt common bio-risk testing and audit standards"
+          "How buyers and sellers verify consent and contract limits.",
+          "Whether regulators set clearer limits on reselling data in bankruptcy assets."
         ],
         "source": "MIT Technology Review",
-        "updated": "2026-10-09"
+        "updated": "2026-10-13"
       },
       "sourceLinks": [
         {
-          "title": "Roundtables: A Conversation With the Creator of AI-Designed Viruses",
-          "url": "https://www.technologyreview.com/2026/10/08/1146224/roundtables-a-conversation-with-the-creator-of-ai-designed-viruses/",
+          "title": "AI labs are buying data from dead startups to train their models",
+          "url": "https://www.technologyreview.com/2026/10/13/1145755/ai-labs-buying-data-from-dead-startups-to-train-models/",
           "publisher": "MIT Technology Review"
         }
       ],
       "eventImage": {
-        "url": "https://wp.technologyreview.com/wp-content/uploads/2024/01/MIT-TR-Roundtables_Oct-2-Thumbnail.png?resize=1200,600",
+        "url": "https://wp.technologyreview.com/wp-content/uploads/2026/10/AI-Death_Redamonti_MIT-thumb.jpg?resize=1200,600",
         "credit": "MIT Technology Review",
-        "link": "https://www.technologyreview.com/2026/10/08/1146224/roundtables-a-conversation-with-the-creator-of-ai-designed-viruses/",
+        "link": "https://www.technologyreview.com/2026/10/13/1145755/ai-labs-buying-data-from-dead-startups-to-train-models/",
         "zh": {
-          "alt": "AI 设计病毒的讨论走到台前：能力能公开，风险不能只靠自觉",
-          "caption": "AI 设计病毒的讨论走到台前：能力能公开，风险不能只靠自觉"
+          "alt": "倒闭创业公司的数据成了新矿：训练AI的“遗产”该归谁",
+          "caption": "倒闭创业公司的数据成了新矿：训练AI的“遗产”该归谁"
         },
         "en": {
-          "alt": "AI-designed-virus research is no longer a lab-only safety question",
-          "caption": "AI-designed-virus research is no longer a lab-only safety question"
+          "alt": "Data from failed startups is becoming AI training fuel—and consent may not travel with it",
+          "caption": "Data from failed startups is becoming AI training fuel—and consent may not travel with it"
         }
       },
       "termGuides": [
         {
-          "key": "双重用途研究",
+          "key": "训练数据",
           "aliases": [
-            "双重用途研究",
-            "dual-use research"
+            "训练数据",
+            "training data"
           ],
           "zh": {
-            "label": "可善可恶的研究",
-            "meaning": "可用于医疗、科学等正当目的，也可能被用于造成伤害的研究。",
-            "relation": "AI 辅助生物设计的价值与滥用风险同时存在。"
+            "label": "训练数据",
+            "meaning": "用于让模型学习语言、图像或任务规律的资料。",
+            "relation": "报道中的AI实验室购买倒闭公司数据，目的就是训练模型。"
           },
           "en": {
-            "label": "Research with two possible uses",
-            "meaning": "Research that can support legitimate goals such as medicine and science, but can also be used to cause harm.",
-            "relation": "AI-assisted biological design carries both potential value and misuse risk."
+            "label": "Training data",
+            "meaning": "Material used to teach a model patterns in language, images, or tasks.",
+            "relation": "The AI labs in this report are buying failed-startup data for that purpose."
           }
         },
         {
-          "key": "生物安全",
+          "key": "AI实验室",
           "aliases": [
-            "生物安全",
-            "biosecurity"
+            "AI实验室",
+            "AI labs"
           ],
           "zh": {
-            "label": "防止生物技术被滥用",
-            "meaning": "降低病原体、实验材料和相关知识被意外泄露或恶意使用的措施。",
-            "relation": "本次讨论关注模型是否会降低危险生物知识的获取门槛。"
+            "label": "AI实验室",
+            "meaning": "训练和开发AI模型的公司或团队。",
+            "relation": "它们被报道为倒闭创业公司数据的买家。"
           },
           "en": {
-            "label": "Protection against biological misuse",
-            "meaning": "Measures that reduce accidental release or malicious use of pathogens, materials, and related knowledge.",
-            "relation": "The discussion asks whether models lower access to dangerous biological knowledge."
+            "label": "AI labs",
+            "meaning": "Companies or teams that train and develop AI models.",
+            "relation": "They are reported to be buyers of data from failed startups."
           }
         }
       ]
     },
     {
-      "id": "ai-llm-refusal-safety",
+      "id": "ai-google-play-private-vibe-apps",
       "cat": "AI",
-      "icon": "ai",
-      "title": "别把 AI 的“我不能回答”当保险：拒答不是一条安全防线",
-      "brief": "模型会拒答不等于它挡得住风险，提示词一换、工具一接，边界就可能松动。",
-      "take": "MIT Technology Review 指出，人们可能过度相信 AI 会自己对危险请求说“不”。拒答当然有用，但它只是模型行为的一层：不同说法可能绕过限制，模型接上搜索、代码或其他工具后，风险也会变化。对使用者最实用的结论是，别把聊天界面的安全提示当作担保；对提供高风险能力的公司来说，真正的防护要包括权限、监测、人工复核和事后审计。",
-      "meta": "AI 安全｜10月9日",
+      "icon": "code",
+      "title": "不会写代码的人也能给自己做Android应用，麻烦是安全谁来兜底",
+      "brief": "Google Play允许个人制作只给自己用的AI生成应用，做工具更容易了，但权限和漏洞也更容易被忽略。",
+      "take": "Google Play开始支持任何人制作供自己使用、运行在Android上的“vibe-coded”私有应用：用户用自然语言描述想要的功能，让AI帮忙写代码。它很适合做个人记账、小工具或工作流程，但“只给自己用”不等于没有风险。应用仍可能请求相册、定位或账户权限，也可能藏着作者本人看不懂的漏洞。门槛下降是好事，前提是平台把权限说明、测试和撤销机制做得足够清楚。",
+      "meta": "AI编程产品｜10月13日",
       "facts": [
         [
-          "议题",
-          "AI 的拒答机制"
+          "平台变化",
+          "Google Play支持私有的vibe-coded Android应用。"
         ],
         [
-          "来源",
-          "MIT Technology Review 分析"
+          "制作方式",
+          "用户可用自然语言让AI协助生成应用。"
         ],
         [
-          "关键判断",
-          "拒答不能单独承担安全责任"
+          "使用范围",
+          "报道描述的是为个人使用而制作的应用。"
         ]
       ],
       "visual": null,
       "impacts": [
         [
           "对用户",
-          "看到模型拒答，不代表同类风险已被系统性解决。"
+          "很多个人小工具不必等开发者来做，但安装前仍要看权限。"
         ],
         [
-          "对企业",
-          "安全措施需要叠加：限制访问、监测异常、人工审核和审计记录。"
+          "对平台",
+          "应用商店要面对更多非专业作者生成的软件和安全责任。"
         ]
       ],
       "next": [
-        "模型公司是否公开拒答绕过测试结果",
-        "工具调用型 Agent 是否采用更严格的分级权限"
+        "这类私有应用可调用哪些Android权限。",
+        "Google Play会如何检测恶意代码和高风险权限请求。"
       ],
-      "source": "MIT Technology Review",
-      "updated": "2026-10-09",
+      "source": "TechCrunch AI",
+      "updated": "2026-10-13",
       "en": {
         "cat": "AI",
-        "title": "An AI saying “I can’t help with that” is not a safety system",
-        "brief": "Refusal helps, but a changed prompt or a connected tool can loosen the boundary quickly.",
-        "take": "MIT Technology Review argues that people may place too much faith in an AI model’s ability to refuse dangerous requests. Refusal is useful, but it is only one layer of model behavior: different wording may bypass it, and risk changes when a model is connected to search, code, or other tools. The practical lesson is not to treat a chat safety message as a guarantee. Companies offering high-risk capabilities need access controls, monitoring, human review, and audits as well.",
-        "meta": "AI safety | Oct. 9",
+        "title": "Anyone can now make a private Android app with AI—so who catches the security mistakes?",
+        "brief": "Google Play is allowing private AI-generated apps for personal use, making custom tools easier but also making permissions and bugs easier to overlook.",
+        "take": "Google Play now supports private “vibe-coded” apps that anyone can build for themselves to run on Android: a person describes what they want in natural language and AI helps write the code. That could be handy for personal budgeting tools, small utilities, or work flows. But private does not mean risk-free. An app can still request photos, location, or account access, and it may contain bugs its creator cannot understand. Lowering the building barrier helps only if permissions, testing, and ways to revoke access are clear.",
+        "meta": "AI coding product | Oct. 13",
         "facts": [
           [
-            "Issue",
-            "AI refusal mechanisms"
+            "Platform change",
+            "Google Play supports private vibe-coded Android apps."
           ],
           [
-            "Source",
-            "MIT Technology Review analysis"
+            "How it works",
+            "Users can use natural language to have AI help generate an app."
           ],
           [
-            "Core point",
-            "Refusal cannot carry safety responsibility alone"
+            "Scope",
+            "The report describes apps made for an individual’s own use."
           ]
         ],
         "visual": null,
         "impacts": [
           [
             "For users",
-            "A model refusing one request does not mean the underlying risk has been solved systemically."
+            "Many personal utilities need not wait for a developer, but permissions still deserve scrutiny."
           ],
           [
-            "For companies",
-            "Safety needs layers: restricted access, anomaly monitoring, human review, and audit records."
+            "For the platform",
+            "App stores must handle more software made by non-specialists and the resulting safety responsibility."
           ]
         ],
         "next": [
-          "Whether model companies publish results of refusal-bypass testing",
-          "Whether tool-using Agents adopt stricter tiered permissions"
+          "Which Android permissions these private apps can access.",
+          "How Google Play checks for malicious code and risky permission requests."
         ],
-        "source": "MIT Technology Review",
-        "updated": "2026-10-09"
+        "source": "TechCrunch AI",
+        "updated": "2026-10-13"
       },
       "sourceLinks": [
         {
-          "title": "We’re putting too much faith in AI’s ability to say no",
-          "url": "https://www.technologyreview.com/2026/10/09/1145728/we-are-putting-too-much-faith-in-ai-to-say-no/",
-          "publisher": "MIT Technology Review"
+          "title": "Google Play now lets anyone build private, vibe-coded apps that run on Android",
+          "url": "https://techcrunch.com/2026/10/13/google-play-now-supports-private-vibe-coded-apps-built-just-for-you/",
+          "publisher": "TechCrunch AI"
         }
       ],
       "eventImage": {
-        "url": "https://wp.technologyreview.com/wp-content/uploads/2026/10/0924OP.jpg?resize=1200,600",
-        "credit": "MIT Technology Review",
-        "link": "https://www.technologyreview.com/2026/10/09/1145728/we-are-putting-too-much-faith-in-ai-to-say-no/",
+        "url": "https://techcrunch.com/wp-content/uploads/2026/10/GameFinder_DISCOVERY_1X1_Static.png?w=680",
+        "credit": "TechCrunch AI",
+        "link": "https://techcrunch.com/2026/10/13/google-play-now-supports-private-vibe-coded-apps-built-just-for-you/",
         "zh": {
-          "alt": "别把 AI 的“我不能回答”当保险：拒答不是一条安全防线",
-          "caption": "别把 AI 的“我不能回答”当保险：拒答不是一条安全防线"
+          "alt": "不会写代码的人也能给自己做Android应用，麻烦是安全谁来兜底",
+          "caption": "不会写代码的人也能给自己做Android应用，麻烦是安全谁来兜底"
         },
         "en": {
-          "alt": "An AI saying “I can’t help with that” is not a safety system",
-          "caption": "An AI saying “I can’t help with that” is not a safety system"
+          "alt": "Anyone can now make a private Android app with AI—so who catches the security mistakes?",
+          "caption": "Anyone can now make a private Android app with AI—so who catches the security mistakes?"
         }
       },
       "termGuides": [
         {
-          "key": "拒答机制",
+          "key": "Google Play",
           "aliases": [
-            "拒答机制",
-            "refusal",
-            "refusal mechanism"
+            "Google Play",
+            "谷歌Play"
           ],
           "zh": {
-            "label": "模型的拒绝回答规则",
-            "meaning": "模型识别到某些请求有风险时，拒绝提供内容或操作帮助的行为。",
-            "relation": "报道认为它不能单独承担 AI 系统的安全责任。"
+            "label": "Google Play",
+            "meaning": "Android应用的官方商店和分发平台。",
+            "relation": "它开始支持个人制作并运行私有AI生成应用。"
           },
           "en": {
-            "label": "Model refusal behavior",
-            "meaning": "A model’s behavior of declining to provide content or operational help for requests it identifies as risky.",
-            "relation": "The report argues that it cannot carry an AI system’s safety burden by itself."
+            "label": "Google Play",
+            "meaning": "Android’s official app store and distribution platform.",
+            "relation": "It has begun supporting privately made, AI-generated apps."
           }
         },
         {
-          "key": "审计",
+          "key": "vibe coding",
           "aliases": [
-            "审计",
-            "audit"
+            "vibe coding",
+            "vibe-coded",
+            "氛围编程"
           ],
           "zh": {
-            "label": "可追溯检查",
-            "meaning": "保留记录并检查系统做过什么、为何这么做的过程。",
-            "relation": "它让高风险 AI 出事后可以追查权限、决策和责任。"
+            "label": "vibe coding",
+            "meaning": "用自然语言描述需求，让AI生成或修改代码的做法。",
+            "relation": "新功能让非程序员也能用这种方式制作个人Android应用。"
           },
           "en": {
-            "label": "Traceable review",
-            "meaning": "Keeping records and examining what a system did and why it did it.",
-            "relation": "It makes it possible to investigate permissions, decisions, and responsibility after a high-risk AI incident."
+            "label": "Vibe coding",
+            "meaning": "Describing what you want in natural language and having AI generate or change code.",
+            "relation": "The new feature lets non-programmers use it to make personal Android apps."
+          }
+        }
+      ]
+    },
+    {
+      "id": "ai-industrial-next-robots",
+      "cat": "机器人与具身智能",
+      "icon": "drone",
+      "title": "工厂机器人想从“改线数周”变成“换活几分钟”，但别把演示当量产",
+      "brief": "Industrial Next要让工厂机器人更快换任务；如果真能稳定做到，小批量、多品种生产的成本会降下来。",
+      "take": "Industrial Next称，要让工厂机器人在几分钟内切换任务，而不是像传统自动化那样花数周重新部署。对工厂来说，这个差别很实际：订单变了、产品换代了，机器不用长期停下来等工程师重写流程，自动化才更适合多品种生产。不过从“能演示”到车间里连续数月稳定运行，中间还隔着安全、夹具、异常处理和维护成本。真正要看的不是换得多快，而是出错时谁能接住。",
+      "meta": "工业机器人｜10月13日",
+      "facts": [
+        [
+          "公司目标",
+          "Industrial Next主张让机器人在数分钟内切换任务。"
+        ],
+        [
+          "传统对比",
+          "报道以数周级重新部署作为对照。"
+        ],
+        [
+          "应用场景",
+          "目标是工厂中的任务切换和自动化部署。"
+        ]
+      ],
+      "visual": null,
+      "impacts": [
+        [
+          "对工厂员工",
+          "重复工序可能更快被自动化，但维护、调试和现场协作岗位更重要。"
+        ],
+        [
+          "对消费者",
+          "生产线更灵活，理论上能更快适应小批量和频繁改款的商品。"
+        ]
+      ],
+      "next": [
+        "机器人在真实工厂的连续运行和故障率表现。",
+        "它能否处理不同物体、工位和安全要求。"
+      ],
+      "source": "TechCrunch AI",
+      "updated": "2026-10-13",
+      "en": {
+        "cat": "Robotics & Embodied AI",
+        "title": "Factory robots want to switch jobs in minutes, not weeks—but demos are not production",
+        "brief": "Industrial Next wants robots to change factory tasks much faster; if it works reliably, smaller and more varied production runs could become cheaper.",
+        "take": "Industrial Next says it wants factory robots to switch tasks in minutes rather than requiring weeks of redeployment, as traditional automation can. That difference is practical: when orders or products change, a machine that does not sit idle while engineers rebuild the workflow makes automation more useful for varied production. But a demo is far from months of steady work on a factory floor, with safety, fixtures, error handling, and maintenance to solve. The key test is not just how quickly it switches, but who catches mistakes when it fails.",
+        "meta": "Industrial robotics | Oct. 13",
+        "facts": [
+          [
+            "Company goal",
+            "Industrial Next says robots can switch tasks in minutes."
+          ],
+          [
+            "Comparison",
+            "The report contrasts this with weeks of redeployment."
+          ],
+          [
+            "Setting",
+            "The effort targets task changes and automation deployment in factories."
+          ]
+        ],
+        "visual": null,
+        "impacts": [
+          [
+            "For factory workers",
+            "Repetitive work may automate faster, while maintenance, setup, and on-floor coordination become more important."
+          ],
+          [
+            "For consumers",
+            "More flexible lines could eventually adapt faster to smaller runs and frequent product changes."
+          ]
+        ],
+        "next": [
+          "Reliability and failure rates during continuous real-factory operation.",
+          "Whether it can handle varied objects, workstations, and safety requirements."
+        ],
+        "source": "TechCrunch AI",
+        "updated": "2026-10-13"
+      },
+      "sourceLinks": [
+        {
+          "title": "Industrial Next wants factory robots to switch tasks in minutes, not weeks",
+          "url": "https://techcrunch.com/2026/10/13/industrial-next-wants-factory-robots-to-switch-tasks-in-minutes-not-weeks/",
+          "publisher": "TechCrunch AI"
+        }
+      ],
+      "eventImage": {
+        "url": "https://techcrunch.com/wp-content/uploads/2026/10/GettyImages-2247792889.jpg?resize=1200,788",
+        "credit": "TechCrunch AI",
+        "link": "https://techcrunch.com/2026/10/13/industrial-next-wants-factory-robots-to-switch-tasks-in-minutes-not-weeks/",
+        "zh": {
+          "alt": "工厂机器人想从“改线数周”变成“换活几分钟”，但别把演示当量产",
+          "caption": "工厂机器人想从“改线数周”变成“换活几分钟”，但别把演示当量产"
+        },
+        "en": {
+          "alt": "Factory robots want to switch jobs in minutes, not weeks—but demos are not production",
+          "caption": "Factory robots want to switch jobs in minutes, not weeks—but demos are not production"
+        }
+      },
+      "termGuides": [
+        {
+          "key": "Industrial Next",
+          "aliases": [
+            "Industrial Next"
+          ],
+          "zh": {
+            "label": "Industrial Next",
+            "meaning": "开发工厂机器人技术的公司。",
+            "relation": "它提出让机器人从一项工厂任务快速切到另一项。"
+          },
+          "en": {
+            "label": "Industrial Next",
+            "meaning": "A company developing technology for factory robots.",
+            "relation": "It says robots should move quickly from one factory task to another."
+          }
+        },
+        {
+          "key": "重新部署",
+          "aliases": [
+            "重新部署",
+            "redeployment"
+          ],
+          "zh": {
+            "label": "重新部署",
+            "meaning": "把自动化系统改造成能做新任务的调试、编程和现场配置过程。",
+            "relation": "Industrial Next试图把这一过程从数周缩短到数分钟。"
+          },
+          "en": {
+            "label": "Redeployment",
+            "meaning": "The programming, setup, and on-site work needed to make an automated system do a new job.",
+            "relation": "Industrial Next is trying to cut this process from weeks to minutes."
+          }
+        }
+      ]
+    },
+    {
+      "id": "ai-flox-wildlife-safety",
+      "cat": "AI",
+      "icon": "alert",
+      "title": "用AI把野生动物挡在跑道和铁轨外：少一次碰撞，就少一场大麻烦",
+      "brief": "Flox Intelligence用AI识别并驱离靠近道路、机场和铁路的野生动物，瞄准的是很少上头条却代价高的事故。",
+      "take": "Flox Intelligence正在开发AI工具，帮助铁路、机场和道路管理者发现并让野生动物远离危险区域。动物闯入跑道或铁轨，常常不是“可爱的插曲”，而是航班延误、车辆事故甚至人员风险的来源。关键不只是识别得准，还要看系统会不会误报、驱离方式是否伤害动物，以及现场人员是否会过度依赖自动提醒。它代表了一类更朴素的AI用途：不替人聊天，而是替人盯住容易漏看的风险点。",
+      "meta": "AI公共安全｜10月13日",
+      "facts": [
+        [
+          "公司项目",
+          "Flox Intelligence开发野生动物风险管理AI。"
+        ],
+        [
+          "覆盖地点",
+          "目标场景包括火车、机场和道路。"
+        ],
+        [
+          "工作方式",
+          "系统用于发现并让动物远离危险区域。"
+        ]
+      ],
+      "visual": null,
+      "impacts": [
+        [
+          "对出行",
+          "若有效，可能减少动物造成的延误、碰撞和突发风险。"
+        ],
+        [
+          "对生态",
+          "驱离措施必须兼顾安全与动物福利，不能只追求清场。"
+        ]
+      ],
+      "next": [
+        "系统在不同天气和物种下的识别准确率。",
+        "驱离方法的有效性及其对动物的影响。"
+      ],
+      "source": "TechCrunch AI",
+      "updated": "2026-10-13",
+      "en": {
+        "cat": "AI",
+        "title": "AI is being used to keep wildlife off runways and rail lines—where one collision can be costly",
+        "brief": "Flox Intelligence uses AI to spot and steer wildlife away from roads, airports, and railways, targeting disruptions that are easy to overlook and expensive to absorb.",
+        "take": "Flox Intelligence is building AI tools to help rail, airport, and road operators detect and keep wildlife away from dangerous areas. Animals on a runway or rail line are not merely a charming interruption; they can cause delays, crashes, and danger to people. The test is not only detection accuracy. It is also whether the system creates false alarms, whether deterrence harms animals, and whether staff rely on automated alerts too heavily. This is a more practical use of AI: watching risk points people can easily miss rather than holding a conversation.",
+        "meta": "AI public safety | Oct. 13",
+        "facts": [
+          [
+            "Company project",
+            "Flox Intelligence is developing AI for wildlife-risk management."
+          ],
+          [
+            "Locations",
+            "Its target settings include trains, airports, and roads."
+          ],
+          [
+            "Method",
+            "The system aims to detect and move animals away from danger areas."
+          ]
+        ],
+        "visual": null,
+        "impacts": [
+          [
+            "For travel",
+            "If effective, it could reduce animal-related delays, collisions, and sudden hazards."
+          ],
+          [
+            "For wildlife",
+            "Deterrence must balance safety with animal welfare, not simply clear an area."
+          ]
+        ],
+        "next": [
+          "Detection accuracy across weather conditions and species.",
+          "How well deterrence works and what effect it has on animals."
+        ],
+        "source": "TechCrunch AI",
+        "updated": "2026-10-13"
+      },
+      "sourceLinks": [
+        {
+          "title": "Flox Intelligence is building AI to keep wildlife away from trains, airports, and roads",
+          "url": "https://techcrunch.com/2026/10/13/flox-intelligence-is-building-ai-to-keep-wildlife-away-from-trains-airports-and-roads/",
+          "publisher": "TechCrunch AI"
+        }
+      ],
+      "eventImage": {
+        "url": "https://techcrunch.com/wp-content/uploads/2026/10/founders-sara-tomas-full.jpg?w=828",
+        "credit": "TechCrunch AI",
+        "link": "https://techcrunch.com/2026/10/13/flox-intelligence-is-building-ai-to-keep-wildlife-away-from-trains-airports-and-roads/",
+        "zh": {
+          "alt": "用AI把野生动物挡在跑道和铁轨外：少一次碰撞，就少一场大麻烦",
+          "caption": "用AI把野生动物挡在跑道和铁轨外：少一次碰撞，就少一场大麻烦"
+        },
+        "en": {
+          "alt": "AI is being used to keep wildlife off runways and rail lines—where one collision can be costly",
+          "caption": "AI is being used to keep wildlife off runways and rail lines—where one collision can be costly"
+        }
+      },
+      "termGuides": [
+        {
+          "key": "Flox Intelligence",
+          "aliases": [
+            "Flox Intelligence",
+            "Flox"
+          ],
+          "zh": {
+            "label": "Flox Intelligence",
+            "meaning": "开发野生动物监测与驱离技术的公司。",
+            "relation": "它正把AI用于铁路、机场和道路附近的动物风险。"
+          },
+          "en": {
+            "label": "Flox Intelligence",
+            "meaning": "A company developing wildlife monitoring and deterrence technology.",
+            "relation": "It is applying AI to animal risks near railways, airports, and roads."
+          }
+        }
+      ]
+    },
+    {
+      "id": "ai-pluto-security-funding",
+      "cat": "AI",
+      "icon": "alert",
+      "title": "AI让企业安全团队多了一种新麻烦，Pluto Security融资4200万美元",
+      "brief": "企业把AI接进内部系统后，攻击者和员工都可能多出新入口；Pluto Security拿到4200万美元来做这类防护。",
+      "take": "Pluto Security完成4200万美元融资，押注一个越来越具体的问题：企业让员工使用AI、让Agent读取内部知识库后，敏感资料和操作权限可能从新的接口漏出去。融资本身不是安全证明，但它反映出预算正在从“做一个聊天机器人”转向“别让聊天机器人看见或做错事”。普通员工会先感受到的是，公司对哪些AI工具能用、能上传什么文件，规则可能明显收紧。",
+      "meta": "AI安全融资｜10月13日",
+      "facts": [
+        [
+          "融资额",
+          "Pluto Security融资4200万美元。"
+        ],
+        [
+          "公司方向",
+          "其产品面向企业安全团队。"
+        ],
+        [
+          "问题背景",
+          "报道指出AI给企业安全带来新的难题。"
+        ]
+      ],
+      "visual": null,
+      "impacts": [
+        [
+          "对员工",
+          "公司可能更严格限制把文件、代码和客户信息贴进AI工具。"
+        ],
+        [
+          "对企业",
+          "AI权限管理和监控会成为使用Agent前的必要成本。"
+        ]
+      ],
+      "next": [
+        "Pluto Security具体覆盖哪些AI工具、模型和Agent场景。",
+        "企业安全预算会否从传统防护明显转向AI使用治理。"
+      ],
+      "source": "TechCrunch AI",
+      "updated": "2026-10-13",
+      "en": {
+        "cat": "AI",
+        "title": "AI gives security teams a new attack surface, and Pluto Security just raised $42 million for it",
+        "brief": "As companies connect AI to internal systems, both attackers and employees can gain new paths to sensitive data; Pluto Security raised $42 million to address that risk.",
+        "take": "Pluto Security has raised $42 million to tackle a growing, specific problem: when companies let employees use AI or let Agents read internal knowledge bases, sensitive information and operational permissions can leak through new interfaces. Funding is not proof that a product works. But it shows budgets are shifting from “build a chatbot” to “stop the chatbot from seeing or doing the wrong thing.” Workers may first notice tighter rules on which AI tools they can use and what files they can upload.",
+        "meta": "AI security funding | Oct. 13",
+        "facts": [
+          [
+            "Funding",
+            "Pluto Security raised $42 million."
+          ],
+          [
+            "Focus",
+            "Its products are aimed at enterprise security teams."
+          ],
+          [
+            "Backdrop",
+            "The report says AI is creating new enterprise-security headaches."
+          ]
+        ],
+        "visual": null,
+        "impacts": [
+          [
+            "For workers",
+            "Companies may more tightly restrict putting files, code, and customer information into AI tools."
+          ],
+          [
+            "For businesses",
+            "Managing AI permissions and monitoring may become a required cost before deploying Agents."
+          ]
+        ],
+        "next": [
+          "Which AI tools, models, and Agent uses Pluto Security covers.",
+          "Whether security budgets shift materially from traditional defenses toward AI-use governance."
+        ],
+        "source": "TechCrunch AI",
+        "updated": "2026-10-13"
+      },
+      "sourceLinks": [
+        {
+          "title": "Pluto Security raises $42M as AI gives enterprise security teams a new headache",
+          "url": "https://techcrunch.com/2026/10/13/pluto-security-raises-42m-as-ai-gives-enterprise-security-teams-a-new-headache/",
+          "publisher": "TechCrunch AI"
+        }
+      ],
+      "eventImage": {
+        "url": "https://techcrunch.com/wp-content/uploads/2026/10/Screenshot_20261013_211032.png?resize=1200,815",
+        "credit": "TechCrunch AI",
+        "link": "https://techcrunch.com/2026/10/13/pluto-security-raises-42m-as-ai-gives-enterprise-security-teams-a-new-headache/",
+        "zh": {
+          "alt": "AI让企业安全团队多了一种新麻烦，Pluto Security融资4200万美元",
+          "caption": "AI让企业安全团队多了一种新麻烦，Pluto Security融资4200万美元"
+        },
+        "en": {
+          "alt": "AI gives security teams a new attack surface, and Pluto Security just raised $42 million for it",
+          "caption": "AI gives security teams a new attack surface, and Pluto Security just raised $42 million for it"
+        }
+      },
+      "termGuides": [
+        {
+          "key": "Pluto Security",
+          "aliases": [
+            "Pluto Security",
+            "Pluto"
+          ],
+          "zh": {
+            "label": "Pluto Security",
+            "meaning": "面向企业的安全技术公司。",
+            "relation": "它融资4200万美元，主攻企业使用AI带来的安全问题。"
+          },
+          "en": {
+            "label": "Pluto Security",
+            "meaning": "A security technology company serving businesses.",
+            "relation": "It raised $42 million to address security problems created by enterprise AI use."
+          }
+        },
+        {
+          "key": "知识库",
+          "aliases": [
+            "知识库",
+            "enterprise knowledge base"
+          ],
+          "zh": {
+            "label": "知识库",
+            "meaning": "企业存放内部文档、流程和资料的系统。",
+            "relation": "AI Agent若能读取它，就可能同时获得有用信息和敏感信息。"
+          },
+          "en": {
+            "label": "Enterprise knowledge base",
+            "meaning": "A system where a company stores internal documents, processes, and information.",
+            "relation": "An AI Agent that can read it may gain both useful and sensitive information."
+          }
+        }
+      ]
+    },
+    {
+      "id": "ai-open-models-risk",
+      "cat": "AI",
+      "icon": "eclipse",
+      "title": "开放模型更便宜也更可控，但坏人拿到的工具也更难收回",
+      "brief": "开放AI模型能让小团队少花钱、少被平台卡住，但能力一旦流出，滥用很难靠一次下架解决。",
+      "take": "MIT Technology Review讨论开放模型的收益与风险。把模型权重或代码开放，开发者可以在本地运行、检查和修改，也不必完全依赖少数大公司的接口；这对研究、隐私敏感场景和小企业都很有吸引力。但同一份能力也更难限制用途，尤其当它被复制到很多地方后。争论不该简化成“开放一定好”或“一律封闭”：模型能做什么、谁能用、是否有安全评估和追责，才是该拆开看的账。",
+      "meta": "模型治理｜10月13日",
+      "facts": [
+        [
+          "讨论主题",
+          "报道评估开放模型的实际好处与风险。"
+        ],
+        [
+          "开放方式",
+          "开放可能涉及模型权重或代码，便于本地运行和修改。"
+        ],
+        [
+          "核心矛盾",
+          "可获得性提高，也会让限制滥用更困难。"
+        ]
+      ],
+      "visual": null,
+      "impacts": [
+        [
+          "对用户",
+          "本地运行可增加选择和隐私，但不代表每个模型都适合自行部署。"
+        ],
+        [
+          "对社会",
+          "高风险能力扩散后，补救往往比上线前设边界更难。"
+        ]
+      ],
+      "next": [
+        "不同能力级别的开放模型会采用哪些评估和发布门槛。",
+        "政府和平台如何处理开源模型被复制后的责任问题。"
+      ],
+      "source": "MIT Technology Review",
+      "updated": "2026-10-13",
+      "en": {
+        "cat": "AI",
+        "title": "Open models can be cheaper and more controllable—but much harder to pull back from misuse",
+        "brief": "Open AI models give small teams more choice and less dependence on platforms, but once a capable model spreads, misuse is hard to fix with a takedown.",
+        "take": "MIT Technology Review examines the benefits and risks of open models. Releasing model weights or code can let developers run, inspect, and modify AI locally, without relying entirely on a few companies’ APIs. That is attractive for research, privacy-sensitive work, and small businesses. But the same capability is harder to restrict once it has been copied widely. The debate should not collapse into “open is always good” or “closed is always safe”: what a model can do, who can access it, and whether there are safety tests and accountability are separate questions.",
+        "meta": "Model governance | Oct. 13",
+        "facts": [
+          [
+            "Subject",
+            "The report weighs concrete benefits and risks of open models."
+          ],
+          [
+            "Openness",
+            "It can include model weights or code, enabling local use and modification."
+          ],
+          [
+            "Trade-off",
+            "Greater access also makes misuse harder to limit."
+          ]
+        ],
+        "visual": null,
+        "impacts": [
+          [
+            "For users",
+            "Local operation can add choice and privacy, but not every model is safe to deploy alone."
+          ],
+          [
+            "For society",
+            "Once high-risk capabilities spread, remedies are often harder than setting limits before release."
+          ]
+        ],
+        "next": [
+          "What testing and release thresholds apply to open models of different capability levels.",
+          "How governments and platforms assign responsibility after open models are copied."
+        ],
+        "source": "MIT Technology Review",
+        "updated": "2026-10-13"
+      },
+      "sourceLinks": [
+        {
+          "title": "Open models have real benefits. Do they outweigh the risks?",
+          "url": "https://www.technologyreview.com/2026/10/13/1146366/open-models-have-real-benefits-do-they-outweigh-the-risks/",
+          "publisher": "MIT Technology Review"
+        }
+      ],
+      "eventImage": {
+        "url": "https://wp.technologyreview.com/wp-content/uploads/2026/09/260915_openaimodels.jpg?resize=1200,600",
+        "credit": "MIT Technology Review",
+        "link": "https://www.technologyreview.com/2026/10/13/1146366/open-models-have-real-benefits-do-they-outweigh-the-risks/",
+        "zh": {
+          "alt": "开放模型更便宜也更可控，但坏人拿到的工具也更难收回",
+          "caption": "开放模型更便宜也更可控，但坏人拿到的工具也更难收回"
+        },
+        "en": {
+          "alt": "Open models can be cheaper and more controllable—but much harder to pull back from misuse",
+          "caption": "Open models can be cheaper and more controllable—but much harder to pull back from misuse"
+        }
+      },
+      "termGuides": [
+        {
+          "key": "开放模型",
+          "aliases": [
+            "开放模型",
+            "open models",
+            "开源模型"
+          ],
+          "zh": {
+            "label": "开放模型",
+            "meaning": "允许外部人获取、运行或修改部分模型资料的AI模型。",
+            "relation": "报道讨论的正是它带来创新便利与滥用扩散之间的取舍。"
+          },
+          "en": {
+            "label": "Open models",
+            "meaning": "AI models for which outsiders can obtain, run, or modify some of the model materials.",
+            "relation": "The report examines the trade-off between their innovation benefits and easier spread of misuse."
+          }
+        },
+        {
+          "key": "模型权重",
+          "aliases": [
+            "模型权重",
+            "model weights"
+          ],
+          "zh": {
+            "label": "模型权重",
+            "meaning": "模型训练后保存的核心参数，可让人在自己的设备或服务器上运行模型。",
+            "relation": "权重一旦广泛复制，原发布者很难再控制模型流向。"
+          },
+          "en": {
+            "label": "Model weights",
+            "meaning": "The core learned parameters saved after training, which can let others run a model on their own machines or servers.",
+            "relation": "Once weights are copied widely, the original publisher has little control over where the model goes."
           }
         }
       ]
