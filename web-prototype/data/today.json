@@ -1,1331 +1,1178 @@
 {
-  "dateKey": "2026-10-15",
-  "generatedAt": "2026-10-15T05:00:00+08:00",
-  "title": "DailyTen｜10月15日",
-  "subtitle": "从红海航运到卫星网络：今天的风险，正在落到价格、通信和安全上。",
-  "briefLabel": "今日十件事",
-  "doneLabel": "读完今日简报",
+  "dateKey": "2026-10-16",
+  "generatedAt": "2026-10-16T05:00:00+08:00",
+  "title": "DailyTen｜10月16日",
+  "subtitle": "今天的关键词：AI开始碰电脑、汽车、购物车，也更直接碰到隐私和工作。",
+  "briefLabel": "今日十条",
+  "doneLabel": "读完了",
   "readTimeMinutes": 8,
   "items": [
     {
-      "id": "openai-saudi-engineer-recording-device",
+      "id": "anthropic-metr-access",
       "cat": "AI",
-      "icon": "alert",
-      "title": "OpenAI办公室疑遭录音：AI公司也成了情报争夺的入口",
-      "brief": "一名沙特籍OpenAI员工被控放置录音设备，连最前沿的AI实验室也得重新防着“身边人”。",
-      "take": "英国广播公司报道，一名沙特籍OpenAI工程师被控在公司办公室放置录音装置。案件仍在司法程序中，不能把指控当成定论；但它把一个现实摆到台面上：掌握模型、芯片采购和产品路线的AI公司，已不只是普通科技企业，也是高价值情报目标。对普通用户来说，短期未必改变聊天机器人怎么用；长期看，企业会更严格控制员工、访客和内部信息，产品发布与技术合作也可能变得更慢、更封闭。",
-      "meta": "美国｜10月13—14日",
+      "icon": "ai",
+      "title": "让外部研究员拿到“员工级权限”，Anthropic把安全测试往里推了一步",
+      "brief": "研究人员不再只能从外面猜模型会不会失控，而是能更深入地检查它。",
+      "take": "Anthropic允许模型评估机构METR获得接近员工级的内部访问权限，研究其AI系统的能力与风险。这不是普通的产品演示：把测试者请进门，能更早发现模型在自主执行任务、绕过限制或被滥用时的盲点；代价是公司也要接受更严格的外部审视。真正要看的是，这种访问是否足够独立，以及研究结论会不会被完整公开。",
+      "meta": "AI安全｜10月15日",
       "facts": [
         [
-          "被告",
-          "BBC称涉案者为沙特籍OpenAI工程师。"
+          "访问对象",
+          "METR研究人员获得员工级访问"
         ],
         [
-          "指控",
-          "检方指其在OpenAI办公室放置录音设备。"
+          "公司",
+          "Anthropic"
         ],
         [
-          "状态",
-          "案件已进入刑事指控与调查阶段。"
+          "重点",
+          "评估模型能力与安全风险"
         ]
       ],
       "visual": null,
       "impacts": [
         [
-          "工作场所",
-          "高敏感技术公司的内部安全和沟通限制可能收紧。"
+          "对用户",
+          "更早发现高风险能力，产品限制可能更有依据"
         ],
         [
-          "AI竞争",
-          "模型能力和商业计划会更像需要严防的战略信息。"
+          "对行业",
+          "前沿AI公司的安全承诺开始接受更深入的外部检验"
         ]
       ],
       "next": [
-        "法院将如何认定证据与动机。",
-        "OpenAI是否披露内部安全措施变化。"
+        "METR将公开哪些评估结果",
+        "其他前沿实验室是否给出同等访问"
       ],
-      "source": "BBC News",
-      "updated": "2026-10-14",
+      "source": "TechCrunch AI",
+      "updated": "2026-10-15",
       "en": {
         "cat": "AI",
-        "title": "An alleged recording device at OpenAI shows AI labs are now intelligence targets",
-        "brief": "A Saudi OpenAI employee has been charged over an alleged recording device, a reminder that frontier AI labs must guard against threats from inside too.",
-        "take": "BBC News reports that a Saudi OpenAI engineer has been charged with placing a recording device in an OpenAI office. The allegation still has to be tested in court. But the case makes a larger point: companies holding model research, chip plans, and product roadmaps are no longer just ordinary tech firms; they are valuable intelligence targets. Most users will not see an immediate change in how they use chatbots. Over time, though, tighter internal controls could make product launches and technical partnerships slower and more closed.",
-        "meta": "United States | Oct. 13–14",
+        "title": "Anthropic lets outside researchers inside: AI safety testing gets a closer look",
+        "brief": "Researchers will no longer have to judge model risks only from the outside; they can inspect more of the system directly.",
+        "take": "Anthropic is giving the model-evaluation group METR access at an employee-like level to study its AI systems’ capabilities and risks. This is more than a product demo: bringing testers closer to the system could expose blind spots in autonomous task execution, safeguards, or misuse earlier. The trade-off is tougher outside scrutiny. The key questions are whether the access is independent enough and whether the findings are fully published.",
+        "meta": "AI safety | Oct. 15",
         "facts": [
           [
-            "Accused",
-            "BBC identifies the defendant as a Saudi OpenAI engineer."
-          ],
-          [
-            "Allegation",
-            "Prosecutors say a recording device was placed in an OpenAI office."
-          ],
-          [
-            "Status",
-            "The matter has moved into a criminal case and investigation."
-          ]
-        ],
-        "visual": null,
-        "impacts": [
-          [
-            "Workplaces",
-            "High-security tech companies may tighten rules for staff, visitors, and internal discussions."
-          ],
-          [
-            "AI race",
-            "Model capabilities and commercial plans are increasingly treated as sensitive strategic information."
-          ]
-        ],
-        "next": [
-          "How a court assesses the evidence and motive.",
-          "Whether OpenAI announces changes to internal security."
-        ],
-        "source": "BBC News",
-        "updated": "2026-10-14"
-      },
-      "sourceLinks": [
-        {
-          "title": "Toilet paper and secret recorders: What we know about the arrest of the Saudi OpenAI engineer",
-          "url": "https://www.bbc.co.uk/news/articles/cm04054ykqqqo?at_medium=RSS&at_campaign=rss",
-          "publisher": "BBC News"
-        },
-        {
-          "title": "Saudi employee charged with planting recording device in OpenAI office",
-          "url": "https://www.bbc.co.uk/news/articles/cwg5jq4vlddzo?at_medium=RSS&at_campaign=rss",
-          "publisher": "BBC News"
-        }
-      ],
-      "eventImage": {
-        "url": "https://ichef.bbci.co.uk/ace/branded_news/1200/cpsprodpb/9074/live/83100400-c7bc-11f1-9a39-31b474234113.jpg",
-        "credit": "BBC News",
-        "link": "https://www.bbc.co.uk/news/articles/cm04054ykqqqo?at_medium=RSS&at_campaign=rss",
-        "zh": {
-          "alt": "OpenAI办公室疑遭录音：AI公司也成了情报争夺的入口",
-          "caption": "OpenAI办公室疑遭录音：AI公司也成了情报争夺的入口"
-        },
-        "en": {
-          "alt": "An alleged recording device at OpenAI shows AI labs are now intelligence targets",
-          "caption": "An alleged recording device at OpenAI shows AI labs are now intelligence targets"
-        }
-      },
-      "termGuides": [
-        {
-          "key": "OpenAI",
-          "aliases": [
-            "OpenAI"
-          ],
-          "zh": {
-            "label": "OpenAI",
-            "meaning": "开发ChatGPT等生成式AI产品的美国公司。",
-            "relation": "这起案件的疑似录音地点，也是被指窃取信息的一方。"
-          },
-          "en": {
-            "label": "OpenAI",
-            "meaning": "The U.S. company behind ChatGPT and other generative AI products.",
-            "relation": "Its office is the alleged site of the recording device."
-          }
-        }
-      ]
-    },
-    {
-      "id": "ukraine-starlink-restrictions",
-      "cat": "国际局势",
-      "icon": "ship",
-      "title": "乌军Starlink突然受限：一家公司也能卡住战场通信",
-      "brief": "前线卫星网络一受限，部队联络、无人机操作和救援协调都可能先变难。",
-      "take": "BBC和《卫报》报道称，乌克兰军方对Starlink卫星互联网的使用突然受到限制；马斯克则表示，任何限制都由美国决定，而非SpaceX单方面决定。具体范围、持续多久以及适用区域仍不清楚。麻烦在于，Starlink并非普通上网服务：在通信设施被毁或信号受干扰的地方，它可连接部队、无人机和救援。战争越来越依赖私营基础设施，也就意味着政府决定、企业规则和战场安全被捆在一起。",
-      "meta": "乌克兰｜10月14日",
-      "facts": [
-        [
-          "变化",
-          "报道称乌克兰军方的Starlink接入突然受限。"
-        ],
-        [
-          "说法",
-          "马斯克称限制决定来自美国，而非其公司。"
-        ],
-        [
-          "用途",
-          "Starlink可在受损地区提供卫星互联网连接。"
-        ]
-      ],
-      "visual": {
-        "type": "orbit",
-        "label": "通信受限如何传导",
-        "nodes": [
-          "接入受限",
-          "前线联络变难",
-          "无人机与协调受影响",
-          "平民救援风险上升"
-        ]
-      },
-      "impacts": [
-        [
-          "战场安全",
-          "通信中断会放大前线判断失误和救援延迟。"
-        ],
-        [
-          "基础设施",
-          "私营卫星网络已成国家安全中的关键单点。"
-        ]
-      ],
-      "next": [
-        "限制覆盖哪些地区和功能。",
-        "美国与SpaceX是否公布正式规则。"
-      ],
-      "source": "BBC News、The Guardian",
-      "updated": "2026-10-14",
-      "en": {
-        "cat": "Geopolitics",
-        "title": "Ukraine’s Starlink limits show one company can bottleneck battlefield communications",
-        "brief": "When frontline satellite access is restricted, unit contact, drone operations, and rescue coordination can become harder fast.",
-        "take": "BBC News and the Guardian report that Ukrainian military access to Starlink was suddenly restricted. Elon Musk said any limits came from the U.S. government rather than a unilateral SpaceX decision. The scope, duration, and affected areas remain unclear. Starlink is not just consumer internet in a war zone: where telecom networks are destroyed or jammed, it can connect units, drones, and emergency responders. The episode shows how government policy, a private company’s rules, and battlefield safety can now be tightly linked.",
-        "meta": "Ukraine | Oct. 14",
-        "facts": [
-          [
-            "Change",
-            "Reports say Ukrainian military access to Starlink was suddenly restricted."
-          ],
-          [
-            "Claim",
-            "Musk said the U.S., not his company alone, determines any limits."
-          ],
-          [
-            "Role",
-            "Starlink provides satellite internet where ground networks are damaged."
-          ]
-        ],
-        "visual": {
-          "type": "orbit",
-          "label": "How a communications limit spreads",
-          "nodes": [
-            "Access restricted",
-            "Frontline contact gets harder",
-            "Drones and coordination suffer",
-            "Civilian rescue risk rises"
-          ]
-        },
-        "impacts": [
-          [
-            "Safety",
-            "Lost communications can worsen errors at the front and delay rescue."
-          ],
-          [
-            "Infrastructure",
-            "A private satellite network has become a critical security dependency."
-          ]
-        ],
-        "next": [
-          "Which areas and functions are covered.",
-          "Whether the U.S. and SpaceX publish formal rules."
-        ],
-        "source": "BBC News and The Guardian",
-        "updated": "2026-10-14"
-      },
-      "sourceLinks": [
-        {
-          "title": "Musk says any limits on Ukraine's Starlink access down to US, not his firm",
-          "url": "https://www.bbc.co.uk/news/articles/c8wy9veedgygo?at_medium=RSS&at_campaign=rss",
-          "publisher": "BBC News"
-        },
-        {
-          "title": "Ukrainian military’s access to Starlink satellite internet suddenly restricted",
-          "url": "https://www.theguardian.com/world/2026/oct/14/ukraine-soldiers-combat-access-starlink-satellite-internet-restricted",
-          "publisher": "The Guardian"
-        }
-      ],
-      "eventImage": {
-        "url": "https://ichef.bbci.co.uk/ace/branded_news/1200/cpsprodpb/a29b/live/2b9027f0-c807-11f1-aff0-65f8bbf884f7.jpg",
-        "credit": "BBC News",
-        "link": "https://www.bbc.co.uk/news/articles/c8wy9veedgygo?at_medium=RSS&at_campaign=rss",
-        "zh": {
-          "alt": "乌军Starlink突然受限：一家公司也能卡住战场通信",
-          "caption": "乌军Starlink突然受限：一家公司也能卡住战场通信"
-        },
-        "en": {
-          "alt": "Ukraine’s Starlink limits show one company can bottleneck battlefield communications",
-          "caption": "Ukraine’s Starlink limits show one company can bottleneck battlefield communications"
-        }
-      },
-      "termGuides": [
-        {
-          "key": "Starlink",
-          "aliases": [
-            "Starlink",
-            "星链"
-          ],
-          "zh": {
-            "label": "Starlink（星链）",
-            "meaning": "SpaceX运营的低轨卫星互联网服务。",
-            "relation": "乌克兰军方被报道突然受到该服务的接入限制。"
-          },
-          "en": {
-            "label": "Starlink",
-            "meaning": "SpaceX’s low-Earth-orbit satellite internet service.",
-            "relation": "Ukrainian military access to it was reportedly suddenly restricted."
-          }
-        },
-        {
-          "key": "SpaceX",
-          "aliases": [
-            "SpaceX"
-          ],
-          "zh": {
-            "label": "SpaceX",
-            "meaning": "马斯克旗下的美国航天与卫星通信公司。",
-            "relation": "Starlink由它运营，但马斯克称限制决定来自美国政府。"
-          },
-          "en": {
-            "label": "SpaceX",
-            "meaning": "Elon Musk’s U.S. space and satellite communications company.",
-            "relation": "It operates Starlink, though Musk says the U.S. sets any limits."
-          }
-        }
-      ]
-    },
-    {
-      "id": "hormuz-container-ships-sink",
-      "cat": "能源",
-      "icon": "oil",
-      "title": "两艘货轮在霍尔木兹附近沉没：油价之外，日用品运费也要防着涨",
-      "brief": "霍尔木兹附近遇袭沉船，会让保险、绕行和运费一起变贵，最后可能传到商品价格上。",
-      "take": "BBC与《卫报》报道，在伊朗袭击增加的背景下，两艘集装箱船在霍尔木兹海峡附近沉没，其中一艘被新加坡方面确认遭到抛射物击中。人员伤亡、责任归属和航道是否持续受扰，仍需要更多官方信息。霍尔木兹海峡是能源运输要道，但风险不只体现在油价：集装箱船若绕航、等待或投保更贵，零售商补货成本也会上升。从燃油到家电、服装，价格压力通常不会当天出现，却会慢慢传到消费者。",
-      "meta": "霍尔木兹海峡｜10月14日",
-      "facts": [
-        [
-          "沉船",
-          "报道称两艘集装箱船在海峡附近沉没。"
-        ],
-        [
-          "确认",
-          "新加坡称其中一艘遭抛射物击中后沉没。"
-        ],
-        [
-          "背景",
-          "报道指当地伊朗袭击活动增加。"
-        ]
-      ],
-      "visual": {
-        "type": "orbit",
-        "label": "航道风险如何影响价格",
-        "nodes": [
-          "船只遇袭",
-          "保险与绕行增加",
-          "运输成本上升",
-          "商品价格承压"
-        ]
-      },
-      "impacts": [
-        [
-          "生活成本",
-          "更高的海运和保险费用可能传入进口商品价格。"
-        ],
-        [
-          "能源安全",
-          "这一关键航道受扰会迅速牵动油气供应预期。"
-        ]
-      ],
-      "next": [
-        "船员伤亡及沉船原因的官方调查。",
-        "航运公司是否大规模改道或暂停通行。"
-      ],
-      "source": "BBC News、The Guardian",
-      "updated": "2026-10-14",
-      "en": {
-        "cat": "Energy",
-        "title": "Two container ships sink near Hormuz: shipping costs, not just oil, are at risk",
-        "brief": "Attacks and sinkings near Hormuz can raise insurance, detour, and freight costs that eventually reach shop prices.",
-        "take": "BBC News and the Guardian report that two container ships sank near the Strait of Hormuz amid an increase in Iranian attacks. Singapore said one vessel was hit by a projectile before it sank. Casualties, responsibility, and the durability of the disruption still need official clarification. Hormuz is an energy chokepoint, but the risk goes beyond oil prices. If container ships must wait, reroute, or pay more for insurance, retailers face higher restocking costs. Those pressures can gradually reach consumers through fuel, appliances, clothing, and other imported goods.",
-        "meta": "Strait of Hormuz | Oct. 14",
-        "facts": [
-          [
-            "Sinkings",
-            "Reports say two container ships sank near the strait."
-          ],
-          [
-            "Confirmation",
-            "Singapore said one was hit by a projectile before sinking."
-          ],
-          [
-            "Context",
-            "Reports describe increased Iranian attacks in the area."
-          ]
-        ],
-        "visual": {
-          "type": "orbit",
-          "label": "How shipping risk reaches prices",
-          "nodes": [
-            "Ships attacked",
-            "Insurance and detours rise",
-            "Transport costs increase",
-            "Goods face price pressure"
-          ]
-        },
-        "impacts": [
-          [
-            "Living costs",
-            "Higher freight and insurance bills can feed into imported-goods prices."
-          ],
-          [
-            "Energy security",
-            "Disruption in this key route quickly affects expectations for oil and gas supply."
-          ]
-        ],
-        "next": [
-          "Official findings on casualties and the cause of the sinkings.",
-          "Whether carriers reroute at scale or suspend transits."
-        ],
-        "source": "BBC News and The Guardian",
-        "updated": "2026-10-14"
-      },
-      "sourceLinks": [
-        {
-          "title": "Container ship hit by projectile sinks in Strait of Hormuz, Singapore says",
-          "url": "https://www.bbc.co.uk/news/articles/crkg7q97z078o?at_medium=RSS&at_campaign=rss",
-          "publisher": "BBC News"
-        },
-        {
-          "title": "Two container ships sink near strait of Hormuz amid surge in Iranian attacks",
-          "url": "https://www.theguardian.com/world/2026/oct/14/container-ship-sinks-strait-of-hormuz-surge-iranian-attacks-iran-us-midterm-elections",
-          "publisher": "The Guardian"
-        }
-      ],
-      "eventImage": {
-        "url": "https://ichef.bbci.co.uk/ace/branded_news/1200/cpsprodpb/638b/live/5f02caa0-c7e6-11f1-a64c-550be9e3c66b.jpg",
-        "credit": "BBC News",
-        "link": "https://www.bbc.co.uk/news/articles/crkg7q97z078o?at_medium=RSS&at_campaign=rss",
-        "zh": {
-          "alt": "两艘货轮在霍尔木兹附近沉没：油价之外，日用品运费也要防着涨",
-          "caption": "两艘货轮在霍尔木兹附近沉没：油价之外，日用品运费也要防着涨"
-        },
-        "en": {
-          "alt": "Two container ships sink near Hormuz: shipping costs, not just oil, are at risk",
-          "caption": "Two container ships sink near Hormuz: shipping costs, not just oil, are at risk"
-        }
-      },
-      "termGuides": [
-        {
-          "key": "霍尔木兹海峡",
-          "aliases": [
-            "霍尔木兹海峡",
-            "Strait of Hormuz"
-          ],
-          "zh": {
-            "label": "霍尔木兹海峡",
-            "meaning": "连接波斯湾与外海的狭窄水道。",
-            "relation": "集装箱船在其附近沉没，令能源与普通货物运输都面临风险。"
-          },
-          "en": {
-            "label": "Strait of Hormuz",
-            "meaning": "The narrow waterway linking the Persian Gulf to open seas.",
-            "relation": "The nearby sinkings threaten energy and ordinary cargo shipping alike."
-          }
-        }
-      ]
-    },
-    {
-      "id": "us-inflation-september",
-      "cat": "全球经济",
-      "icon": "chart",
-      "title": "美国通胀高于预期：降息和全球借钱成本都多了一层变数",
-      "brief": "美国物价涨得比预期快，市场原本盼着的低利率可能没那么快到。",
-      "take": "BBC和NPR报道，美国9月通胀高于预期。报道同时提到，社会保障福利将随通胀调整而上调；但对家庭而言，福利增加并不等于物价压力消失。更棘手的是，美联储若担心通胀反复，就可能更谨慎地下调利率。美国利率会影响美元、全球资金流向和其他国家的融资成本，所以这不只是美国超市账单的问题；房贷、企业贷款和新兴市场汇率都可能跟着承压。",
-      "meta": "美国｜9月数据，10月14日发布",
-      "facts": [
-        [
-          "数据",
-          "美国9月通胀升幅高于市场预期。"
-        ],
-        [
-          "福利",
-          "社会保障福利将按通胀获得调整。"
-        ],
-        [
-          "利率",
-          "更黏的通胀会增加美联储降息难度。"
-        ]
-      ],
-      "visual": {
-        "type": "orbit",
-        "label": "通胀为何外溢",
-        "nodes": [
-          "物价高于预期",
-          "降息更谨慎",
-          "美元与融资成本受影响",
-          "全球借贷压力上升"
-        ]
-      },
-      "impacts": [
-        [
-          "家庭",
-          "日常开支压力未必会因福利调整而立刻缓解。"
-        ],
-        [
-          "全球市场",
-          "美国利率路径会影响汇率、房贷和企业融资。"
-        ]
-      ],
-      "next": [
-        "核心通胀是否也持续偏高。",
-        "美联储下一次会议如何表述利率前景。"
-      ],
-      "source": "BBC News、NPR",
-      "updated": "2026-10-14",
-      "en": {
-        "cat": "Global Economy",
-        "title": "U.S. inflation beats expectations, complicating rate cuts worldwide",
-        "brief": "Faster-than-expected U.S. price growth means the lower interest rates markets wanted may take longer to arrive.",
-        "take": "BBC News and NPR report that U.S. inflation rose more than expected in September. Social Security benefits will be adjusted for inflation, but a larger benefit does not make the underlying cost pressure disappear for households. The harder issue is monetary policy: if the Federal Reserve fears inflation is returning, it may cut rates more cautiously. Because U.S. rates affect the dollar, global capital flows, and borrowing costs elsewhere, this is not only about American grocery bills. Mortgages, business loans, and emerging-market currencies can all feel the effect.",
-        "meta": "United States | September data released Oct. 14",
-        "facts": [
-          [
-            "Data",
-            "U.S. inflation rose more than markets expected in September."
-          ],
-          [
-            "Benefits",
-            "Social Security benefits will be adjusted for inflation."
-          ],
-          [
-            "Rates",
-            "Stickier inflation makes Federal Reserve rate cuts harder."
-          ]
-        ],
-        "visual": {
-          "type": "orbit",
-          "label": "Why U.S. inflation travels",
-          "nodes": [
-            "Prices beat forecasts",
-            "Rate cuts become cautious",
-            "Dollar and funding costs move",
-            "Global borrowing pressure rises"
-          ]
-        },
-        "impacts": [
-          [
-            "Households",
-            "A benefit adjustment may not immediately ease everyday cost pressure."
-          ],
-          [
-            "Global markets",
-            "The U.S. rate path affects exchange rates, mortgages, and business financing."
-          ]
-        ],
-        "next": [
-          "Whether core inflation also stays elevated.",
-          "How the Fed describes the rate outlook at its next meeting."
-        ],
-        "source": "BBC News and NPR",
-        "updated": "2026-10-14"
-      },
-      "sourceLinks": [
-        {
-          "title": "US inflation rises more than expected - here's what is happening with prices",
-          "url": "https://www.bbc.co.uk/news/articles/cwy8lx3pg4k2o?at_medium=RSS&at_campaign=rss",
-          "publisher": "BBC News"
-        },
-        {
-          "title": "Inflation sizzled in September — and Social Security benefits will get a boost",
-          "url": "https://www.npr.org/2026/10/14/nx-s1-6000593/inflation-consumer-prices-cpi-social-security-benefits",
-          "publisher": "NPR"
-        }
-      ],
-      "eventImage": {
-        "url": "https://ichef.bbci.co.uk/ace/branded_news/1200/cpsprodpb/bd50/live/e1cf6860-c7cf-11f1-9e10-4dcbd31d4273.jpg",
-        "credit": "BBC News",
-        "link": "https://www.bbc.co.uk/news/articles/cwy8lx3pg4k2o?at_medium=RSS&at_campaign=rss",
-        "zh": {
-          "alt": "美国通胀高于预期：降息和全球借钱成本都多了一层变数",
-          "caption": "美国通胀高于预期：降息和全球借钱成本都多了一层变数"
-        },
-        "en": {
-          "alt": "U.S. inflation beats expectations, complicating rate cuts worldwide",
-          "caption": "U.S. inflation beats expectations, complicating rate cuts worldwide"
-        }
-      },
-      "termGuides": [
-        {
-          "key": "美联储",
-          "aliases": [
-            "美联储",
-            "Federal Reserve",
-            "Fed"
-          ],
-          "zh": {
-            "label": "美联储",
-            "meaning": "美国的中央银行，负责设定关键利率。",
-            "relation": "通胀偏高会让它更难快速降息。"
-          },
-          "en": {
-            "label": "Federal Reserve",
-            "meaning": "The U.S. central bank, which sets key interest rates.",
-            "relation": "Higher inflation makes it harder for the Fed to cut rates quickly."
-          }
-        }
-      ]
-    },
-    {
-      "id": "saudi-yemen-oil-depots",
-      "cat": "国际局势",
-      "icon": "refinery",
-      "title": "沙特打击也门油库，阿美总部附近再传导弹威胁",
-      "brief": "油库被炸、能源公司总部附近传出导弹威胁，中东冲突正把能源设施推到更危险的位置。",
-      "take": "《卫报》报道，沙特阿拉伯袭击了也门首都附近的战略油库，并称有导弹朝沙特阿美总部所在地的方向发射。袭击造成的损失、导弹是否被拦截及后续报复尚待进一步确认。这类事件的风险在于，能源设施既是经济命脉，也是容易制造全球市场焦虑的目标。即使实际供应没有中断，交易商、保险公司和航运企业也会先按更高风险定价，消费者随后可能在燃油与运输费用上感受到余波。",
-      "meta": "沙特阿拉伯、也门｜10月13日",
-      "facts": [
-        [
-          "空袭",
-          "沙特称打击也门首都附近战略油库。"
-        ],
-        [
-          "导弹",
-          "沙特称有导弹飞向阿美总部所在地的方向。"
-        ],
-        [
-          "设施",
-          "沙特阿美是全球重要的石油生产企业。"
-        ]
-      ],
-      "visual": null,
-      "impacts": [
-        [
-          "油价",
-          "供应未断也可能因风险溢价而出现价格波动。"
-        ],
-        [
-          "地区安全",
-          "能源基础设施遭瞄准会增加误判和报复升级风险。"
-        ]
-      ],
-      "next": [
-        "导弹拦截结果及设施损失。",
-        "冲突是否扩及更多能源与港口目标。"
-      ],
-      "source": "The Guardian",
-      "updated": "2026-10-13",
-      "en": {
-        "cat": "Geopolitics",
-        "title": "Saudi strikes on Yemen put oil infrastructure closer to the line of fire",
-        "brief": "Strikes on oil depots and a reported missile threat near Aramco’s headquarters put energy assets deeper into the conflict zone.",
-        "take": "The Guardian reports that Saudi Arabia struck strategic oil depots near Yemen’s capital and said missiles were launched toward the location of Saudi Aramco’s headquarters. Damage, interception results, and the next round of retaliation still need confirmation. Energy infrastructure is both an economic lifeline and a target that can quickly alarm global markets. Even without an actual supply outage, traders, insurers, and shipping firms price in higher risk first; consumers may later feel it in fuel and transport costs.",
-        "meta": "Saudi Arabia and Yemen | Oct. 13",
-        "facts": [
-          [
-            "Strikes",
-            "Saudi Arabia said it hit strategic oil depots near Yemen’s capital."
-          ],
-          [
-            "Missiles",
-            "Saudi Arabia said missiles were launched toward the area of Aramco’s headquarters."
+            "Access",
+            "METR researchers receive employee-level access"
           ],
           [
             "Company",
-            "Saudi Aramco is one of the world’s major oil producers."
+            "Anthropic"
+          ],
+          [
+            "Focus",
+            "Model capabilities and safety risks"
           ]
         ],
         "visual": null,
         "impacts": [
           [
-            "Oil prices",
-            "Risk premiums can move prices even if physical supply is not interrupted."
+            "For users",
+            "High-risk capabilities may be found earlier, making limits more evidence-based"
           ],
           [
-            "Regional security",
-            "Targeting energy facilities raises the risk of escalation and miscalculation."
+            "For the industry",
+            "Safety promises by frontier AI labs face deeper outside examination"
           ]
         ],
         "next": [
-          "Interception results and damage to facilities.",
-          "Whether fighting spreads to more energy or port targets."
+          "What METR publishes from the work",
+          "Whether rival labs offer comparable access"
         ],
-        "source": "The Guardian",
+        "source": "TechCrunch AI",
+        "updated": "2026-10-15"
+      },
+      "sourceLinks": [
+        {
+          "title": "Anthropic is letting METR researchers look under the hood with employee-level access",
+          "url": "https://techcrunch.com/2026/10/15/anthropic-is-letting-metr-researchers-look-under-the-hood-with-employee-level-access/",
+          "publisher": "TechCrunch AI"
+        }
+      ],
+      "eventImage": {
+        "url": "https://techcrunch.com/wp-content/uploads/2026/06/GettyImages-2278736523.jpeg?resize=1200,798",
+        "credit": "TechCrunch AI",
+        "link": "https://techcrunch.com/2026/10/15/anthropic-is-letting-metr-researchers-look-under-the-hood-with-employee-level-access/",
+        "zh": {
+          "alt": "让外部研究员拿到“员工级权限”，Anthropic把安全测试往里推了一步",
+          "caption": "让外部研究员拿到“员工级权限”，Anthropic把安全测试往里推了一步"
+        },
+        "en": {
+          "alt": "Anthropic lets outside researchers inside: AI safety testing gets a closer look",
+          "caption": "Anthropic lets outside researchers inside: AI safety testing gets a closer look"
+        }
+      },
+      "termGuides": [
+        {
+          "key": "METR",
+          "aliases": [
+            "METR"
+          ],
+          "zh": {
+            "label": "METR",
+            "meaning": "专门测试和评估前沿AI系统风险的研究机构。",
+            "relation": "它将用更深的内部访问来检查Anthropic模型可能出现的危险能力。"
+          },
+          "en": {
+            "label": "METR",
+            "meaning": "A research group that evaluates risks from frontier AI systems.",
+            "relation": "It is receiving deeper access to test potentially dangerous capabilities in Anthropic’s models."
+          }
+        }
+      ]
+    },
+    {
+      "id": "meta-mac-open-model",
+      "cat": "AI",
+      "icon": "code",
+      "title": "Meta把开放权重模型放进Mac：本地跑AI更方便，责任也更多落到用户手里",
+      "brief": "能在电脑上运行的模型，可能少传一些数据上云，但也更难由平台统一管住。",
+      "take": "Meta发布可在Mac上运行的开放权重AI模型。开放权重不等于人人都能轻松训练模型，但开发者和懂技术的用户可以下载并在自己的设备或服务上部署，试验成本和对云端服务的依赖都会下降。好处是数据可少出设备、使用更灵活；难处是模型一旦被复制出去，平台很难统一执行内容和安全限制。",
+      "meta": "AI产品｜10月15日",
+      "facts": [
+        [
+          "发布方",
+          "Meta"
+        ],
+        [
+          "形式",
+          "开放权重AI模型"
+        ],
+        [
+          "设备",
+          "可在Mac上运行"
+        ]
+      ],
+      "visual": null,
+      "impacts": [
+        [
+          "对个人",
+          "部分任务可本地处理，敏感内容未必需要上传云端"
+        ],
+        [
+          "对开发者",
+          "做原型和定制AI工具的门槛下降，但需自己承担部署安全"
+        ]
+      ],
+      "next": [
+        "模型的硬件要求和实际速度",
+        "Meta是否同步提供明确的安全使用规则"
+      ],
+      "source": "TechCrunch AI",
+      "updated": "2026-10-15",
+      "en": {
+        "cat": "AI",
+        "title": "Meta brings an open-weight model to Macs: more local AI, and more responsibility",
+        "brief": "A model that runs on a computer can keep more data off the cloud, but it is also harder for one platform to control.",
+        "take": "Meta has launched an open-weight AI model that runs on Macs. Open weights do not mean everyone can easily train a model, but developers and technical users can download and deploy it on their own machines or services. That lowers reliance on cloud AI and can keep more data local. The harder part is governance: once copies spread, a platform cannot enforce content and safety limits everywhere.",
+        "meta": "AI product | Oct. 15",
+        "facts": [
+          [
+            "Publisher",
+            "Meta"
+          ],
+          [
+            "Format",
+            "Open-weight AI model"
+          ],
+          [
+            "Device",
+            "Runs on Macs"
+          ]
+        ],
+        "visual": null,
+        "impacts": [
+          [
+            "For individuals",
+            "Some tasks can stay on-device instead of sending sensitive material to the cloud"
+          ],
+          [
+            "For developers",
+            "Building and tailoring AI tools gets easier, but deployment safety becomes their job"
+          ]
+        ],
+        "next": [
+          "Hardware needs and real-world speed",
+          "Whether Meta issues clear safety guidance"
+        ],
+        "source": "TechCrunch AI",
+        "updated": "2026-10-15"
+      },
+      "sourceLinks": [
+        {
+          "title": "Meta launches an open-weight AI model that runs on Macs",
+          "url": "https://techcrunch.com/2026/10/15/meta-launches-an-open-weight-model-that-runs-on-macs/",
+          "publisher": "TechCrunch AI"
+        }
+      ],
+      "eventImage": {
+        "url": "https://techcrunch.com/wp-content/uploads/2026/09/GettyImages-2296215726.jpg?resize=1200,799",
+        "credit": "TechCrunch AI",
+        "link": "https://techcrunch.com/2026/10/15/meta-launches-an-open-weight-model-that-runs-on-macs/",
+        "zh": {
+          "alt": "Meta把开放权重模型放进Mac：本地跑AI更方便，责任也更多落到用户手里",
+          "caption": "Meta把开放权重模型放进Mac：本地跑AI更方便，责任也更多落到用户手里"
+        },
+        "en": {
+          "alt": "Meta brings an open-weight model to Macs: more local AI, and more responsibility",
+          "caption": "Meta brings an open-weight model to Macs: more local AI, and more responsibility"
+        }
+      },
+      "termGuides": [
+        {
+          "key": "开放权重",
+          "aliases": [
+            "开放权重",
+            "open-weight",
+            "open weights"
+          ],
+          "zh": {
+            "label": "开放权重",
+            "meaning": "模型参数可供下载，让他人自行部署和改造。",
+            "relation": "Meta这次让模型可以在Mac等本地设备上部署，而不只通过网页服务使用。"
+          },
+          "en": {
+            "label": "Open weights",
+            "meaning": "Model parameters made available for others to download and deploy.",
+            "relation": "Meta’s release lets people run the model locally on hardware such as a Mac."
+          }
+        }
+      ]
+    },
+    {
+      "id": "rivian-ai-agents",
+      "cat": "AI",
+      "icon": "ai",
+      "title": "Rivian要把AI Agent塞进汽车：车更会办事，也更需要一条清楚的刹车线",
+      "brief": "车里的AI若能替你处理任务，误操作或数据越界就不再只是聊天机器人问题。",
+      "take": "电动车公司Rivian计划把AI Agent带进车内。所谓Agent，不只是回答问题，而是能代表用户完成多步骤任务；放进汽车这个场景，便利和风险都会被放大。它可能减少找菜单、查路线或安排车内服务的麻烦，但驾驶相关建议、账户权限、位置和语音数据该如何处理，都不能只靠一句“很聪明”带过。",
+      "meta": "AI与汽车｜10月15日",
+      "facts": [
+        [
+          "公司",
+          "Rivian"
+        ],
+        [
+          "计划",
+          "在汽车中引入AI Agent"
+        ],
+        [
+          "特点",
+          "Agent可处理多步骤任务"
+        ]
+      ],
+      "visual": null,
+      "impacts": [
+        [
+          "对车主",
+          "车机操作可能更像直接交代一句话，而非层层点菜单"
+        ],
+        [
+          "对隐私安全",
+          "位置、语音与账户权限会成为必须说清的边界"
+        ]
+      ],
+      "next": [
+        "Agent首批能执行哪些操作",
+        "驾驶中是否限制高风险指令"
+      ],
+      "source": "TechCrunch AI",
+      "updated": "2026-10-15",
+      "en": {
+        "cat": "AI",
+        "title": "Rivian wants AI Agents in the car: more help, but a clearer brake line is needed",
+        "brief": "If in-car AI can act on your behalf, mistakes and data overreach are no longer just chatbot problems.",
+        "take": "Electric-vehicle maker Rivian plans to bring AI Agents into its cars. An Agent does more than answer questions: it can carry out multi-step tasks for a user. In a vehicle, both convenience and risk are amplified. It could reduce menu-tapping for routes or car services, but rules for driving-related advice, account access, location data, and voice data need to be explicit—not hidden behind claims that the system is smart.",
+        "meta": "AI and cars | Oct. 15",
+        "facts": [
+          [
+            "Company",
+            "Rivian"
+          ],
+          [
+            "Plan",
+            "Bring AI Agents into cars"
+          ],
+          [
+            "Feature",
+            "Agents can handle multi-step tasks"
+          ]
+        ],
+        "visual": null,
+        "impacts": [
+          [
+            "For owners",
+            "Car controls may become a spoken request instead of a sequence of menus"
+          ],
+          [
+            "For privacy and safety",
+            "Location, voice, and account permissions need firm boundaries"
+          ]
+        ],
+        "next": [
+          "Which actions the first version can perform",
+          "Whether risky commands are restricted while driving"
+        ],
+        "source": "TechCrunch AI",
+        "updated": "2026-10-15"
+      },
+      "sourceLinks": [
+        {
+          "title": "AI agents are coming to Rivian’s cars",
+          "url": "https://techcrunch.com/2026/10/15/ai-agents-are-coming-to-rivians-cars/",
+          "publisher": "TechCrunch AI"
+        }
+      ],
+      "eventImage": {
+        "url": "https://techcrunch.com/wp-content/uploads/2026/10/55587802359_b756c3c3bd_k.jpg?resize=1200,800",
+        "credit": "TechCrunch AI",
+        "link": "https://techcrunch.com/2026/10/15/ai-agents-are-coming-to-rivians-cars/",
+        "zh": {
+          "alt": "Rivian要把AI Agent塞进汽车：车更会办事，也更需要一条清楚的刹车线",
+          "caption": "Rivian要把AI Agent塞进汽车：车更会办事，也更需要一条清楚的刹车线"
+        },
+        "en": {
+          "alt": "Rivian wants AI Agents in the car: more help, but a clearer brake line is needed",
+          "caption": "Rivian wants AI Agents in the car: more help, but a clearer brake line is needed"
+        }
+      },
+      "termGuides": [
+        {
+          "key": "AI Agent",
+          "aliases": [
+            "AI Agent",
+            "Agent",
+            "智能体"
+          ],
+          "zh": {
+            "label": "AI Agent",
+            "meaning": "不只对话，还能按目标调用工具、完成多步操作的AI。",
+            "relation": "Rivian计划用它处理车内任务，因此权限与驾驶安全特别关键。"
+          },
+          "en": {
+            "label": "AI Agent",
+            "meaning": "AI that can use tools and complete multi-step actions, not just chat.",
+            "relation": "Rivian plans to use it for in-car tasks, making permissions and driving safety especially important."
+          }
+        }
+      ]
+    },
+    {
+      "id": "google-universal-cart",
+      "cat": "科技产业",
+      "icon": "chart",
+      "title": "Google把不同商家的东西往一个购物车里装：比价更省事，平台入口也更值钱",
+      "brief": "美国用户可以更少来回切换网站下单，但商家和平台争的仍是谁掌握顾客。",
+      "take": "Google在美国推出Universal Cart购物工具，试图让用户把来自不同商家的商品集中处理。对消费者，它瞄准的是购物时反复打开网页、重填信息、分开结账的麻烦；对零售商，这意味着Google更靠近交易的最后一步。工具是否真能省钱，取决于覆盖哪些商家、配送和退换货是否仍要分别处理。",
+      "meta": "电商平台｜10月15日",
+      "facts": [
+        [
+          "产品",
+          "Universal Cart"
+        ],
+        [
+          "公司",
+          "Google"
+        ],
+        [
+          "首发市场",
+          "美国"
+        ]
+      ],
+      "visual": null,
+      "impacts": [
+        [
+          "对消费者",
+          "跨店找货和下单的步骤可能减少"
+        ],
+        [
+          "对商家",
+          "客户入口更可能被搜索和平台产品截走"
+        ]
+      ],
+      "next": [
+        "覆盖的商家和商品范围",
+        "结账、配送与退货能否真正整合"
+      ],
+      "source": "TechCrunch AI",
+      "updated": "2026-10-15",
+      "en": {
+        "cat": "Technology",
+        "title": "Google puts more stores into one cart: easier shopping, and a more valuable entry point",
+        "brief": "US shoppers may switch between sites less often, but the bigger fight is still over who owns the customer relationship.",
+        "take": "Google has launched Universal Cart in the US, aiming to let users handle items from different merchants in one place. For shoppers, it targets the nuisance of opening many sites, re-entering details, and checking out separately. For retailers, it moves Google closer to the last step of a sale. Whether it truly saves money depends on merchant coverage and whether delivery and returns remain fragmented.",
+        "meta": "E-commerce platform | Oct. 15",
+        "facts": [
+          [
+            "Product",
+            "Universal Cart"
+          ],
+          [
+            "Company",
+            "Google"
+          ],
+          [
+            "First market",
+            "United States"
+          ]
+        ],
+        "visual": null,
+        "impacts": [
+          [
+            "For shoppers",
+            "The steps needed to find and buy across stores may fall"
+          ],
+          [
+            "For merchants",
+            "Search and platform products may capture more of the customer entry point"
+          ]
+        ],
+        "next": [
+          "Which retailers and goods are included",
+          "Whether checkout, delivery, and returns are truly integrated"
+        ],
+        "source": "TechCrunch AI",
+        "updated": "2026-10-15"
+      },
+      "sourceLinks": [
+        {
+          "title": "Google’s Universal Cart shopping tool launches in the US",
+          "url": "https://techcrunch.com/2026/10/15/googles-universal-cart-shopping-tool-launches-in-the-us/",
+          "publisher": "TechCrunch AI"
+        }
+      ],
+      "eventImage": {
+        "url": "https://techcrunch.com/wp-content/uploads/2026/10/Google-UniversalCart.png?w=1200",
+        "credit": "TechCrunch AI",
+        "link": "https://techcrunch.com/2026/10/15/googles-universal-cart-shopping-tool-launches-in-the-us/",
+        "zh": {
+          "alt": "Google把不同商家的东西往一个购物车里装：比价更省事，平台入口也更值钱",
+          "caption": "Google把不同商家的东西往一个购物车里装：比价更省事，平台入口也更值钱"
+        },
+        "en": {
+          "alt": "Google puts more stores into one cart: easier shopping, and a more valuable entry point",
+          "caption": "Google puts more stores into one cart: easier shopping, and a more valuable entry point"
+        }
+      },
+      "termGuides": [
+        {
+          "key": "Universal Cart",
+          "aliases": [
+            "Universal Cart",
+            "通用购物车"
+          ],
+          "zh": {
+            "label": "Universal Cart",
+            "meaning": "Google推出的跨商家购物工具。",
+            "relation": "它试图把原本分散在不同网站的购物步骤集中到一个入口。"
+          },
+          "en": {
+            "label": "Universal Cart",
+            "meaning": "Google’s shopping tool for purchases across merchants.",
+            "relation": "It aims to concentrate shopping steps that normally happen across separate websites."
+          }
+        }
+      ]
+    },
+    {
+      "id": "amazon-bee-devices",
+      "cat": "科技产业",
+      "icon": "ai",
+      "title": "75美元起的个人AI设备来了：便宜的不是硬件，可能是你交出去的日常信息",
+      "brief": "Amazon旗下Bee推出两款设备，随身AI从手机软件走向了专门硬件。",
+      "take": "Amazon旗下Bee推出两款个人AI设备，起价75美元。低价会让“随身记录、提醒和协助”的AI更容易被尝试，但这类设备的价值往往来自持续收集语音、习惯或日程线索。买之前别只看价格和功能，也该看它录什么、保存多久、能否关闭，以及数据会不会用于改进服务。",
+      "meta": "消费硬件｜10月15日",
+      "facts": [
+        [
+          "品牌",
+          "Amazon旗下Bee"
+        ],
+        [
+          "新品",
+          "两款个人AI设备"
+        ],
+        [
+          "起价",
+          "75美元"
+        ]
+      ],
+      "visual": null,
+      "impacts": [
+        [
+          "对消费者",
+          "专用AI硬件的试用门槛被压低"
+        ],
+        [
+          "对隐私",
+          "持续记录型设备的收集范围和保存规则更重要"
+        ]
+      ],
+      "next": [
+        "两款设备的录音与数据设置",
+        "数据是否用于训练或改进服务"
+      ],
+      "source": "TechCrunch AI",
+      "updated": "2026-10-15",
+      "en": {
+        "cat": "Technology",
+        "title": "Personal AI devices start at $75: the hardware is cheap, your daily data may not be",
+        "brief": "Amazon-owned Bee has launched two devices, moving personal AI from a phone app into dedicated hardware.",
+        "take": "Amazon-owned Bee has launched two personal AI devices starting at $75. The low price could make always-available AI for reminders, notes, and assistance easier to try. But these devices often get their value from continuously collecting clues about speech, habits, and schedules. Buyers should look beyond the price: what is recorded, how long it is retained, whether recording can be disabled, and whether the data improves the service.",
+        "meta": "Consumer hardware | Oct. 15",
+        "facts": [
+          [
+            "Brand",
+            "Amazon-owned Bee"
+          ],
+          [
+            "Launch",
+            "Two personal AI devices"
+          ],
+          [
+            "Starting price",
+            "$75"
+          ]
+        ],
+        "visual": null,
+        "impacts": [
+          [
+            "For consumers",
+            "The barrier to trying dedicated AI hardware is lower"
+          ],
+          [
+            "For privacy",
+            "Collection scope and retention rules matter more for always-listening devices"
+          ]
+        ],
+        "next": [
+          "Recording and data settings on each device",
+          "Whether data is used to train or improve services"
+        ],
+        "source": "TechCrunch AI",
+        "updated": "2026-10-15"
+      },
+      "sourceLinks": [
+        {
+          "title": "Amazon’s Bee launches two new personal AI devices, starting at $75",
+          "url": "https://techcrunch.com/2026/10/15/amazons-bee-launches-two-new-personal-ai-devices-starting-at-75/",
+          "publisher": "TechCrunch AI"
+        }
+      ],
+      "eventImage": {
+        "url": "https://techcrunch.com/wp-content/uploads/2026/10/BEE_FAMILY_01_1080x1080.jpg?w=1080",
+        "credit": "TechCrunch AI",
+        "link": "https://techcrunch.com/2026/10/15/amazons-bee-launches-two-new-personal-ai-devices-starting-at-75/",
+        "zh": {
+          "alt": "75美元起的个人AI设备来了：便宜的不是硬件，可能是你交出去的日常信息",
+          "caption": "75美元起的个人AI设备来了：便宜的不是硬件，可能是你交出去的日常信息"
+        },
+        "en": {
+          "alt": "Personal AI devices start at $75: the hardware is cheap, your daily data may not be",
+          "caption": "Personal AI devices start at $75: the hardware is cheap, your daily data may not be"
+        }
+      },
+      "termGuides": [
+        {
+          "key": "Bee",
+          "aliases": [
+            "Bee",
+            "Amazon Bee"
+          ],
+          "zh": {
+            "label": "Bee",
+            "meaning": "亚马逊旗下开发个人AI设备的品牌。",
+            "relation": "它刚推出两款低价设备，把个人AI带到专门硬件上。"
+          },
+          "en": {
+            "label": "Bee",
+            "meaning": "An Amazon-owned brand making personal AI devices.",
+            "relation": "It has launched two low-cost devices that put personal AI into dedicated hardware."
+          }
+        }
+      ]
+    },
+    {
+      "id": "youtube-ai-music-labels",
+      "cat": "AI",
+      "icon": "alert",
+      "title": "AI音乐涌进平台，YouTube Music先加标签：听众终于能知道自己听的是什么",
+      "brief": "标签不能阻止AI歌曲出现，但至少让你有机会分清真人创作和机器生成。",
+      "take": "面对大量AI生成音乐进入流媒体，YouTube Music推出新的内容标签。平台没有因此把AI音乐一概下架，而是先解决一个更基础的问题：听众是否被明确告知。对普通人，这是选择权；对音乐人，标签也可能影响推荐、收益和模仿争议。难点在于识别是否准确，以及没有标出的AI作品怎么办。",
+      "meta": "AI与内容｜10月14日",
+      "facts": [
+        [
+          "平台",
+          "YouTube Music"
+        ],
+        [
+          "措施",
+          "推出新的内容标签"
+        ],
+        [
+          "背景",
+          "AI生成音乐大量进入流媒体"
+        ]
+      ],
+      "visual": null,
+      "impacts": [
+        [
+          "对听众",
+          "可更清楚地区分真人和AI参与的内容"
+        ],
+        [
+          "对创作者",
+          "标签可能影响发现机会、收入与署名纠纷"
+        ]
+      ],
+      "next": [
+        "标签适用哪些AI参与方式",
+        "平台如何处理漏标和误标"
+      ],
+      "source": "TechCrunch AI",
+      "updated": "2026-10-14",
+      "en": {
+        "cat": "AI",
+        "title": "AI music is flooding streaming; YouTube Music adds labels so listeners can tell",
+        "brief": "Labels will not stop AI songs, but they give listeners a chance to distinguish machine-made work from human creation.",
+        "take": "As AI-generated music floods streaming services, YouTube Music is introducing new labels. The platform is not simply removing AI music; it is first addressing a basic question: are listeners told clearly what they are hearing? For listeners, that is a choice issue. For musicians, labels could affect discovery, revenue, and disputes over imitation. The hard part is accurate detection and dealing with AI works that go unlabeled.",
+        "meta": "AI and content | Oct. 14",
+        "facts": [
+          [
+            "Platform",
+            "YouTube Music"
+          ],
+          [
+            "Measure",
+            "New content labels"
+          ],
+          [
+            "Background",
+            "AI-generated music is flooding streaming"
+          ]
+        ],
+        "visual": null,
+        "impacts": [
+          [
+            "For listeners",
+            "It may become easier to distinguish human and AI-involved content"
+          ],
+          [
+            "For creators",
+            "Labels could affect discovery, income, and credit disputes"
+          ]
+        ],
+        "next": [
+          "Which forms of AI involvement require labels",
+          "How the platform handles missing or wrong labels"
+        ],
+        "source": "TechCrunch AI",
+        "updated": "2026-10-14"
+      },
+      "sourceLinks": [
+        {
+          "title": "YouTube Music launches new labels as AI-generated music floods streaming platforms",
+          "url": "https://techcrunch.com/2026/10/14/youtube-music-launches-new-labels-as-ai-generated-music-floods-streaming-platforms/",
+          "publisher": "TechCrunch AI"
+        }
+      ],
+      "eventImage": {
+        "url": "https://techcrunch.com/wp-content/uploads/2026/10/youtube-music-gen-ai-labels.png?w=1080",
+        "credit": "TechCrunch AI",
+        "link": "https://techcrunch.com/2026/10/14/youtube-music-launches-new-labels-as-ai-generated-music-floods-streaming-platforms/",
+        "zh": {
+          "alt": "AI音乐涌进平台，YouTube Music先加标签：听众终于能知道自己听的是什么",
+          "caption": "AI音乐涌进平台，YouTube Music先加标签：听众终于能知道自己听的是什么"
+        },
+        "en": {
+          "alt": "AI music is flooding streaming; YouTube Music adds labels so listeners can tell",
+          "caption": "AI music is flooding streaming; YouTube Music adds labels so listeners can tell"
+        }
+      },
+      "termGuides": [
+        {
+          "key": "AI生成音乐",
+          "aliases": [
+            "AI生成音乐",
+            "AI-generated music"
+          ],
+          "zh": {
+            "label": "AI生成音乐",
+            "meaning": "由生成式AI制作或实质参与制作的音乐内容。",
+            "relation": "它大量涌入流媒体，促使YouTube Music新增识别标签。"
+          },
+          "en": {
+            "label": "AI-generated music",
+            "meaning": "Music made, or materially made, with generative AI.",
+            "relation": "Its growing volume on streaming services prompted YouTube Music to add identification labels."
+          }
+        }
+      ]
+    },
+    {
+      "id": "deezer-ai-music-filter",
+      "cat": "AI",
+      "icon": "alert",
+      "title": "Deezer准备让用户过滤AI音乐：选择权开始变成一个开关",
+      "brief": "不想被机器生成歌曲打断的人，很快可以自己把它们筛出去。",
+      "take": "音乐流媒体Deezer表示将允许用户过滤AI生成音乐。这比给内容贴标签更进一步：平台把是否收听的决定交给用户。它满足一部分听众对真人创作的偏好，也可能让依赖AI批量产歌的账号更难获得播放。不过过滤规则必须透明——混音、修音或局部使用AI的作品，算不算AI音乐并不总是简单。",
+      "meta": "AI与内容｜10月14日",
+      "facts": [
+        [
+          "平台",
+          "Deezer"
+        ],
+        [
+          "计划",
+          "允许过滤AI生成音乐"
+        ],
+        [
+          "方式",
+          "由用户自行选择开启"
+        ]
+      ],
+      "visual": null,
+      "impacts": [
+        [
+          "对听众",
+          "播放列表可按自己的接受程度筛选AI内容"
+        ],
+        [
+          "对音乐市场",
+          "批量生成内容更难只靠推荐系统获取曝光"
+        ]
+      ],
+      "next": [
+        "过滤功能何时上线及覆盖哪些地区",
+        "平台对“AI参与”内容的判定标准"
+      ],
+      "source": "TechCrunch AI",
+      "updated": "2026-10-14",
+      "en": {
+        "cat": "AI",
+        "title": "Deezer plans an AI-music filter: listener choice becomes a switch",
+        "brief": "People who do not want machine-generated songs in their listening can soon filter them out themselves.",
+        "take": "Music streaming service Deezer says it will let users filter out AI-generated music. That goes beyond labeling: the platform is handing the listening decision to users. It may serve people who prefer human-made work and make it harder for accounts mass-producing AI songs to gain plays through recommendations. But the rules need to be clear, since remixes, audio repair, or partial AI use do not always fit a simple category.",
+        "meta": "AI and content | Oct. 14",
+        "facts": [
+          [
+            "Platform",
+            "Deezer"
+          ],
+          [
+            "Plan",
+            "Let users filter AI-generated music"
+          ],
+          [
+            "Method",
+            "Users choose whether to turn it on"
+          ]
+        ],
+        "visual": null,
+        "impacts": [
+          [
+            "For listeners",
+            "Playlists can reflect each person’s tolerance for AI-made content"
+          ],
+          [
+            "For the music market",
+            "Mass-generated content may find it harder to win attention through recommendations"
+          ]
+        ],
+        "next": [
+          "Launch timing and regional coverage",
+          "How Deezer defines AI-involved content"
+        ],
+        "source": "TechCrunch AI",
+        "updated": "2026-10-14"
+      },
+      "sourceLinks": [
+        {
+          "title": "Deezer will soon let you filter out AI-generated music",
+          "url": "https://techcrunch.com/2026/10/14/deezer-will-soon-let-you-filter-out-ai-generated-music/",
+          "publisher": "TechCrunch AI"
+        }
+      ],
+      "eventImage": {
+        "url": "https://techcrunch.com/wp-content/uploads/2026/10/Deezer-AI-detection-feat.jpg?w=1067",
+        "credit": "TechCrunch AI",
+        "link": "https://techcrunch.com/2026/10/14/deezer-will-soon-let-you-filter-out-ai-generated-music/",
+        "zh": {
+          "alt": "Deezer准备让用户过滤AI音乐：选择权开始变成一个开关",
+          "caption": "Deezer准备让用户过滤AI音乐：选择权开始变成一个开关"
+        },
+        "en": {
+          "alt": "Deezer plans an AI-music filter: listener choice becomes a switch",
+          "caption": "Deezer plans an AI-music filter: listener choice becomes a switch"
+        }
+      },
+      "termGuides": [
+        {
+          "key": "Deezer",
+          "aliases": [
+            "Deezer"
+          ],
+          "zh": {
+            "label": "Deezer",
+            "meaning": "音乐流媒体服务。",
+            "relation": "它计划增加过滤选项，让用户选择不播放AI生成音乐。"
+          },
+          "en": {
+            "label": "Deezer",
+            "meaning": "A music streaming service.",
+            "relation": "It plans a setting that lets users choose not to play AI-generated music."
+          }
+        }
+      ]
+    },
+    {
+      "id": "flock-microphone-privacy",
+      "cat": "公共安全",
+      "icon": "alert",
+      "title": "Flock说麦克风只听枪声，网站写的却更多：公共安全设备的隐私账对不上",
+      "brief": "装在街头的传感器到底会收集什么，不能只靠公司一句口头保证。",
+      "take": "监控技术公司Flock的CEO称其麦克风“只”侦测枪声，但其网站上的描述显示能力范围可能不止于此。矛盾本身就是问题：公共安全设备常部署在居民日常活动的地方，一旦收集范围、保存方式和使用者说法不一致，人们很难判断自己被记录了什么。需要的不是更漂亮的宣传，而是可核查的技术说明、数据规则和独立审计。",
+      "meta": "隐私与公共安全｜10月14日",
+      "facts": [
+        [
+          "公司",
+          "Flock"
+        ],
+        [
+          "CEO说法",
+          "麦克风只侦测枪声"
+        ],
+        [
+          "争议",
+          "官网描述与该说法不一致"
+        ]
+      ],
+      "visual": null,
+      "impacts": [
+        [
+          "对居民",
+          "街头安全设备可能带来超出预期的声音与行为数据收集"
+        ],
+        [
+          "对政府采购",
+          "部署前应核实功能、保留期限和审计安排"
+        ]
+      ],
+      "next": [
+        "Flock是否澄清功能差异",
+        "使用这些设备的城市是否公开数据政策"
+      ],
+      "source": "TechCrunch AI",
+      "updated": "2026-10-14",
+      "en": {
+        "cat": "Public Safety",
+        "title": "Flock says its microphones hear only gunshots; its website suggests more",
+        "brief": "What a street-side sensor collects cannot rest on a company’s verbal assurance alone.",
+        "take": "The CEO of surveillance-technology company Flock says its microphones detect “just gunshots,” while descriptions on its website suggest a broader capability. The mismatch is the issue: public-safety equipment is often placed where people live their daily lives, and inconsistent claims make it hard to know what is being captured. What is needed is not better marketing, but checkable technical documentation, data rules, and independent audits.",
+        "meta": "Privacy and public safety | Oct. 14",
+        "facts": [
+          [
+            "Company",
+            "Flock"
+          ],
+          [
+            "CEO claim",
+            "Microphones detect only gunshots"
+          ],
+          [
+            "Dispute",
+            "Website language differs from that claim"
+          ]
+        ],
+        "visual": null,
+        "impacts": [
+          [
+            "For residents",
+            "Street-safety tools may collect more sound and behavioral data than expected"
+          ],
+          [
+            "For public buyers",
+            "Cities should verify functions, retention periods, and audit arrangements before deployment"
+          ]
+        ],
+        "next": [
+          "Whether Flock explains the difference",
+          "Whether cities using the tools publish their data policies"
+        ],
+        "source": "TechCrunch AI",
+        "updated": "2026-10-14"
+      },
+      "sourceLinks": [
+        {
+          "title": "Flock CEO says its microphones detect ‘just gunshots’ — its website says different",
+          "url": "https://techcrunch.com/2026/10/14/flock-ceo-says-its-microphones-detect-just-gunshots-its-website-says-different/",
+          "publisher": "TechCrunch AI"
+        }
+      ],
+      "eventImage": {
+        "url": "https://techcrunch.com/wp-content/uploads/2026/10/55589672916_8efa76c0ac_o.jpg?resize=1200,800",
+        "credit": "TechCrunch AI",
+        "link": "https://techcrunch.com/2026/10/14/flock-ceo-says-its-microphones-detect-just-gunshots-its-website-says-different/",
+        "zh": {
+          "alt": "Flock说麦克风只听枪声，网站写的却更多：公共安全设备的隐私账对不上",
+          "caption": "Flock说麦克风只听枪声，网站写的却更多：公共安全设备的隐私账对不上"
+        },
+        "en": {
+          "alt": "Flock says its microphones hear only gunshots; its website suggests more",
+          "caption": "Flock says its microphones hear only gunshots; its website suggests more"
+        }
+      },
+      "termGuides": [
+        {
+          "key": "Flock",
+          "aliases": [
+            "Flock"
+          ],
+          "zh": {
+            "label": "Flock",
+            "meaning": "提供公共安全监控与传感设备的科技公司。",
+            "relation": "其麦克风实际能侦测什么，与公司CEO的说法出现不一致。"
+          },
+          "en": {
+            "label": "Flock",
+            "meaning": "A technology company selling surveillance and public-safety sensors.",
+            "relation": "Questions arose over whether its microphones do more than the CEO described."
+          }
+        }
+      ]
+    },
+    {
+      "id": "ai-labs-dead-startup-data",
+      "cat": "AI",
+      "icon": "code",
+      "title": "倒闭创业公司的数据成了AI实验室的新货源：旧用户资料该归谁？",
+      "brief": "公司关门后留下的数据可能继续训练模型，用户却未必知道或同意。",
+      "take": "MIT Technology Review报道，AI实验室正在购买已倒闭创业公司的数据来训练模型。对买方而言，这是补充训练材料的快捷方式；对原先把信息交给那家小公司的用户而言，问题更棘手：当初同意的是哪种用途，公司倒闭后数据能否被转卖，是否还有退出渠道？这会把隐私条款里容易被忽略的“资产转让”条款推到台前。",
+      "meta": "数据隐私｜10月13日",
+      "facts": [
+        [
+          "买方",
+          "AI实验室"
+        ],
+        [
+          "来源",
+          "已倒闭创业公司的数据"
+        ],
+        [
+          "用途",
+          "训练AI模型"
+        ]
+      ],
+      "visual": null,
+      "impacts": [
+        [
+          "对用户",
+          "曾交给小公司的资料可能在公司消失后换了用途"
+        ],
+        [
+          "对创业公司",
+          "数据处置条款将更直接影响用户信任和收购价值"
+        ]
+      ],
+      "next": [
+        "数据交易是否包含可识别个人信息",
+        "监管者会否要求更明确的再利用同意"
+      ],
+      "source": "MIT Technology Review",
+      "updated": "2026-10-13",
+      "en": {
+        "cat": "AI",
+        "title": "Data from failed startups is becoming AI training fuel: who owns old user data?",
+        "brief": "Data may keep training models after a company closes, even if users never knew or agreed.",
+        "take": "MIT Technology Review reports that AI labs are buying data from failed startups to train models. For buyers, it is a quick source of training material. For people who originally gave information to a small company, the issue is tougher: what use did they agree to, can data be sold after a shutdown, and is there any way to opt out? It puts easily overlooked “asset transfer” clauses in privacy policies under a harsher light.",
+        "meta": "Data privacy | Oct. 13",
+        "facts": [
+          [
+            "Buyers",
+            "AI labs"
+          ],
+          [
+            "Source",
+            "Data from failed startups"
+          ],
+          [
+            "Use",
+            "Training AI models"
+          ]
+        ],
+        "visual": null,
+        "impacts": [
+          [
+            "For users",
+            "Information given to a small company may gain a new use after that company disappears"
+          ],
+          [
+            "For startups",
+            "Data-disposal terms may matter more for trust and acquisition value"
+          ]
+        ],
+        "next": [
+          "Whether transactions include identifiable personal data",
+          "Whether regulators demand clearer consent for reuse"
+        ],
+        "source": "MIT Technology Review",
         "updated": "2026-10-13"
       },
       "sourceLinks": [
         {
-          "title": "Saudi Arabia strikes oil depots in Yemen and says missiles launched toward location of Saudi Aramco HQ",
-          "url": "https://www.theguardian.com/world/2026/oct/13/saudi-arabia-strikes-strategic-oil-depots-near-yemen-capital",
-          "publisher": "The Guardian"
+          "title": "AI labs are buying data from dead startups to train their models",
+          "url": "https://www.technologyreview.com/2026/10/13/1145755/ai-labs-buying-data-from-dead-startups-to-train-models/",
+          "publisher": "MIT Technology Review"
         }
       ],
       "eventImage": {
-        "url": "https://i.guim.co.uk/img/media/a0e9bef078e7fc1f0f1d0a49f0349b500081ee4b/505_0_3581_2864/master/3581.jpg?width=1200&height=630&quality=85&auto=format&fit=crop&precrop=40:21,offset-x50,offset-y0&overlay-align=bottom%2Cleft&overlay-width=100p&overlay-base64=L2ltZy9zdGF0aWMvb3ZlcmxheXMvdGctZGVmYXVsdC5wbmc&enable=upscale&s=5e2be8ae9f8be853f8896a4735d53065",
-        "credit": "The Guardian",
-        "link": "https://www.theguardian.com/world/2026/oct/13/saudi-arabia-strikes-strategic-oil-depots-near-yemen-capital",
+        "url": "https://wp.technologyreview.com/wp-content/uploads/2026/10/AI-Death_Redamonti_MIT-thumb.jpg?resize=1200,600",
+        "credit": "MIT Technology Review",
+        "link": "https://www.technologyreview.com/2026/10/13/1145755/ai-labs-buying-data-from-dead-startups-to-train-models/",
         "zh": {
-          "alt": "沙特打击也门油库，阿美总部附近再传导弹威胁",
-          "caption": "沙特打击也门油库，阿美总部附近再传导弹威胁"
+          "alt": "倒闭创业公司的数据成了AI实验室的新货源：旧用户资料该归谁？",
+          "caption": "倒闭创业公司的数据成了AI实验室的新货源：旧用户资料该归谁？"
         },
         "en": {
-          "alt": "Saudi strikes on Yemen put oil infrastructure closer to the line of fire",
-          "caption": "Saudi strikes on Yemen put oil infrastructure closer to the line of fire"
+          "alt": "Data from failed startups is becoming AI training fuel: who owns old user data?",
+          "caption": "Data from failed startups is becoming AI training fuel: who owns old user data?"
         }
       },
       "termGuides": [
         {
-          "key": "沙特阿美",
+          "key": "训练数据",
           "aliases": [
-            "沙特阿美",
-            "Saudi Aramco",
-            "Aramco"
+            "训练数据",
+            "training data"
           ],
           "zh": {
-            "label": "沙特阿美",
-            "meaning": "沙特阿拉伯国有背景的石油巨头。",
-            "relation": "沙特称导弹飞向其总部所在地的方向。"
+            "label": "训练数据",
+            "meaning": "用来让AI学习语言、图像或行为模式的材料。",
+            "relation": "报道所说的倒闭创业公司数据，正被AI实验室买来作为模型训练材料。"
           },
           "en": {
-            "label": "Saudi Aramco",
-            "meaning": "Saudi Arabia’s state-backed oil giant.",
-            "relation": "Saudi Arabia said missiles were launched toward the area where its headquarters is located."
+            "label": "Training data",
+            "meaning": "Material used to teach an AI patterns in language, images, or behavior.",
+            "relation": "The data left by failed startups is being bought as material for model training."
           }
         }
       ]
     },
     {
-      "id": "kenya-second-ebola-case",
-      "cat": "公共安全",
-      "icon": "alert",
-      "title": "肯尼亚确认第二例埃博拉：接触者追踪成了关键一周",
-      "brief": "第二名患者是首例的亲属，说明防疫现在最要紧的是尽快找全密切接触者。",
-      "take": "BBC报道，肯尼亚确认第二例埃博拉病例，患者是首名死者的亲属。病例数量本身还小，不能据此断言出现大规模传播；但亲属关系提示存在已知接触链，公共卫生部门接下来的速度很重要：隔离、追踪接触者、提供安全就医路径，才能把风险拦在社区扩散之前。对其他国家而言，这也会考验机场筛查、医疗机构识别能力和跨境信息共享，而非只靠旅行限制。",
-      "meta": "肯尼亚｜10月14日",
+      "id": "la-grocery-robots",
+      "cat": "机器人与具身智能",
+      "icon": "drone",
+      "title": "洛杉矶超市里开始有AI机器人巡走：顾客担心被盯着，员工担心被替代",
+      "brief": "零售机器人离普通人的日常更近了，但它到底帮忙还是监控，取决于怎么用。",
+      "take": "《洛杉矶时报》报道，AI机器人已在洛杉矶一些杂货店的过道中活动，顾客和员工对此感到不安。零售商会把它们视为巡检、盘点或安全工具；但在购物和上班的现场，机器人也可能带来持续观察、误判和岗位压力。别把“机器人进店”当成单纯炫技：它收集什么、谁能看、员工是否因此被减时或调岗，才是与日常生活真正相关的部分。",
+      "meta": "零售机器人｜10月15日",
       "facts": [
         [
-          "病例",
-          "肯尼亚确认第二例埃博拉病例。"
+          "地点",
+          "美国洛杉矶杂货店"
         ],
         [
-          "关联",
-          "第二名患者是首例患者的亲属。"
+          "设备",
+          "AI机器人在过道中活动"
         ],
         [
-          "重点",
-          "防控核心是追踪并监测接触者。"
-        ]
-      ],
-      "visual": {
-        "type": "orbit",
-        "label": "早期防疫的关键环节",
-        "nodes": [
-          "发现病例",
-          "确认接触链",
-          "隔离与追踪",
-          "阻断社区传播"
-        ]
-      },
-      "impacts": [
-        [
-          "公共健康",
-          "越早找到接触者，越可能避免医院和社区内扩散。"
-        ],
-        [
-          "出行",
-          "周边国家和航空枢纽可能加强健康监测。"
-        ]
-      ],
-      "next": [
-        "新增病例与接触者追踪结果。",
-        "当地是否启动更广泛的检测和疫苗策略。"
-      ],
-      "source": "BBC News",
-      "updated": "2026-10-14",
-      "en": {
-        "cat": "Public Safety",
-        "title": "Kenya confirms a second Ebola case: contact tracing is now the urgent task",
-        "brief": "The second patient is related to the first, making fast identification of close contacts the immediate priority.",
-        "take": "BBC News reports that Kenya has confirmed a second Ebola case, involving a relative of the first victim. The count is still small and does not by itself prove broad community spread. But a family link points to a known contact chain, which makes the next few days important: isolation, contact tracing, and safe routes to care can stop the risk spreading further. For other countries, the test is not only travel restrictions but also surveillance at ports of entry, clinical recognition, and cross-border information sharing.",
-        "meta": "Kenya | Oct. 14",
-        "facts": [
-          [
-            "Cases",
-            "Kenya has confirmed a second Ebola case."
-          ],
-          [
-            "Link",
-            "The second patient is a relative of the first victim."
-          ],
-          [
-            "Priority",
-            "Tracing and monitoring contacts are central to containment."
-          ]
-        ],
-        "visual": {
-          "type": "orbit",
-          "label": "The early containment sequence",
-          "nodes": [
-            "Case detected",
-            "Contact chain identified",
-            "Isolation and tracing",
-            "Community spread blocked"
-          ]
-        },
-        "impacts": [
-          [
-            "Public health",
-            "Finding contacts early offers the best chance to avoid hospital and community transmission."
-          ],
-          [
-            "Travel",
-            "Nearby countries and aviation hubs may strengthen health monitoring."
-          ]
-        ],
-        "next": [
-          "New cases and results of contact tracing.",
-          "Whether wider testing or vaccination measures begin."
-        ],
-        "source": "BBC News",
-        "updated": "2026-10-14"
-      },
-      "sourceLinks": [
-        {
-          "title": "Kenya confirms second Ebola case - a relative of the first victim",
-          "url": "https://www.bbc.co.uk/news/articles/cw5yn8rn04ljo?at_medium=RSS&at_campaign=rss",
-          "publisher": "BBC News"
-        }
-      ],
-      "eventImage": {
-        "url": "https://ichef.bbci.co.uk/ace/branded_news/1200/cpsprodpb/aa15/live/cb6ea3e0-c7e5-11f1-a64c-550be9e3c66b.jpg",
-        "credit": "BBC News",
-        "link": "https://www.bbc.co.uk/news/articles/cw5yn8rn04ljo?at_medium=RSS&at_campaign=rss",
-        "zh": {
-          "alt": "肯尼亚确认第二例埃博拉：接触者追踪成了关键一周",
-          "caption": "肯尼亚确认第二例埃博拉：接触者追踪成了关键一周"
-        },
-        "en": {
-          "alt": "Kenya confirms a second Ebola case: contact tracing is now the urgent task",
-          "caption": "Kenya confirms a second Ebola case: contact tracing is now the urgent task"
-        }
-      },
-      "termGuides": [
-        {
-          "key": "埃博拉",
-          "aliases": [
-            "埃博拉",
-            "Ebola"
-          ],
-          "zh": {
-            "label": "埃博拉",
-            "meaning": "可引发严重出血热的病毒性疾病。",
-            "relation": "肯尼亚确认第二例病例，防控重点转向接触者追踪。"
-          },
-          "en": {
-            "label": "Ebola",
-            "meaning": "A viral disease that can cause severe hemorrhagic fever.",
-            "relation": "Kenya’s second confirmed case makes contact tracing the main containment task."
-          }
-        }
-      ]
-    },
-    {
-      "id": "eu-china-hybrid-import-limit",
-      "cat": "中国经济",
-      "icon": "chart",
-      "title": "欧盟拟给中国混动车设35万辆年上限：车价选择可能变少",
-      "brief": "如果进口配额落地，欧洲消费者能选的中国混动车会受限，价格竞争也会被削弱。",
-      "take": "《卫报》报道，欧盟将把中国混合动力汽车的年进口量限制在35万辆。报道标题将其称为一项协议，但具体执行时间、车型口径和配额分配方式仍需看正式文本。对欧洲消费者来说，这不是抽象的贸易数字：进口受限会减少部分价格较低、配置较高车型的供给，也可能降低本地车企降价的压力。欧盟则是在保护本土产业、就业与供应链控制力和保持市场竞争之间重新划线。",
-      "meta": "欧盟、中国｜10月12日",
-      "facts": [
-        [
-          "上限",
-          "报道指欧盟拟把年进口量限制为35万辆。"
-        ],
-        [
-          "对象",
-          "限制针对来自中国的混合动力汽车。"
-        ],
-        [
-          "未明",
-          "执行细则与时间表尚待正式文件确认。"
-        ]
-      ],
-      "visual": {
-        "type": "orbit",
-        "label": "进口上限的连锁反应",
-        "nodes": [
-          "进口设限",
-          "可选车型减少",
-          "价格竞争变弱",
-          "本地产业获保护"
-        ]
-      },
-      "impacts": [
-        [
-          "购车",
-          "欧洲消费者可能面对更少的车型与更弱的价格竞争。"
-        ],
-        [
-          "贸易",
-          "中欧汽车贸易摩擦可能扩展到更多技术与供应链环节。"
-        ]
-      ],
-      "next": [
-        "欧盟正式文本中的车型和配额规则。",
-        "中国是否出台对等或其他回应。"
-      ],
-      "source": "The Guardian",
-      "updated": "2026-10-12",
-      "en": {
-        "cat": "Global Economy",
-        "title": "EU plan to cap Chinese hybrid imports could narrow car choices in Europe",
-        "brief": "If the quota takes effect, fewer Chinese hybrids may reach European buyers and price competition could weaken.",
-        "take": "The Guardian reports that the EU will limit annual imports of Chinese hybrid vehicles to 350,000. The headline describes an agreement, but the implementation date, vehicle definitions, and quota allocation still need to be checked in the formal text. This is not just a trade statistic for European drivers: a cap could reduce the supply of lower-priced, feature-rich models and lessen pressure on local makers to cut prices. The EU is redrawing the line between protecting domestic industry, jobs, and supply-chain control on one hand, and keeping the market competitive on the other.",
-        "meta": "European Union and China | Oct. 12",
-        "facts": [
-          [
-            "Cap",
-            "The report says annual imports would be limited to 350,000."
-          ],
-          [
-            "Products",
-            "The restriction targets hybrid vehicles from China."
-          ],
-          [
-            "Unknowns",
-            "Detailed rules and timing await formal documentation."
-          ]
-        ],
-        "visual": {
-          "type": "orbit",
-          "label": "What an import cap can do",
-          "nodes": [
-            "Imports capped",
-            "Fewer models available",
-            "Price competition weakens",
-            "Local industry gains protection"
-          ]
-        },
-        "impacts": [
-          [
-            "Car buyers",
-            "European consumers could face fewer choices and less price competition."
-          ],
-          [
-            "Trade",
-            "China-EU friction may spread further across vehicles, technology, and supply chains."
-          ]
-        ],
-        "next": [
-          "The formal EU text on vehicles and quota rules.",
-          "Whether China responds with countermeasures or other action."
-        ],
-        "source": "The Guardian",
-        "updated": "2026-10-12"
-      },
-      "sourceLinks": [
-        {
-          "title": "EU to limit Chinese hybrid vehicle imports to 350,000 a year",
-          "url": "https://www.theguardian.com/environment/2026/oct/12/eu-deal-china-limit-imports-hybrid-electric-vehicles",
-          "publisher": "The Guardian"
-        }
-      ],
-      "eventImage": {
-        "url": "https://i.guim.co.uk/img/media/9b1bc334f5fc5243721e7b1a8d59c7c49217b34c/326_0_6827_5464/master/6827.jpg?width=1200&height=630&quality=85&auto=format&fit=crop&precrop=40:21,offset-x50,offset-y0&overlay-align=bottom%2Cleft&overlay-width=100p&overlay-base64=L2ltZy9zdGF0aWMvb3ZlcmxheXMvdGctZGVmYXVsdC5wbmc&enable=upscale&s=7ad22c99c05dc40fb328174cf276777f",
-        "credit": "The Guardian",
-        "link": "https://www.theguardian.com/environment/2026/oct/12/eu-deal-china-limit-imports-hybrid-electric-vehicles",
-        "zh": {
-          "alt": "欧盟拟给中国混动车设35万辆年上限：车价选择可能变少",
-          "caption": "欧盟拟给中国混动车设35万辆年上限：车价选择可能变少"
-        },
-        "en": {
-          "alt": "EU plan to cap Chinese hybrid imports could narrow car choices in Europe",
-          "caption": "EU plan to cap Chinese hybrid imports could narrow car choices in Europe"
-        }
-      },
-      "termGuides": [
-        {
-          "key": "混合动力汽车",
-          "aliases": [
-            "混合动力汽车",
-            "hybrid vehicle",
-            "hybrid vehicles"
-          ],
-          "zh": {
-            "label": "混合动力汽车",
-            "meaning": "同时使用内燃机和电力驱动系统的汽车。",
-            "relation": "欧盟报道中的进口上限直接针对这一类中国汽车。"
-          },
-          "en": {
-            "label": "Hybrid vehicle",
-            "meaning": "A car that combines an internal-combustion engine with electric propulsion.",
-            "relation": "The reported EU import cap directly targets Chinese vehicles in this category."
-          }
-        }
-      ]
-    },
-    {
-      "id": "germany-nord-stream-trial",
-      "cat": "国际局势",
-      "icon": "refinery",
-      "title": "北溪爆炸案在德国开审：欧洲能源安全的旧伤还没结痂",
-      "brief": "被控破坏北溪管道的乌克兰人受审，谁袭击了欧洲能源设施将进入更公开的司法追问。",
-      "take": "BBC报道，德国开始审理一名被控参与破坏北溪天然气管道的乌克兰人。被告享有无罪推定，审判结果尚不可预判；但案件进入法庭，意味着爆炸案的证据、行动链和责任归属可能得到更公开的检视。北溪管道已停止输气，审判不会立刻改变欧洲能源价格，但它触及一个仍未解决的问题：跨境关键基础设施在冲突中如何保护，遭破坏后谁承担政治、法律和经济代价。",
-      "meta": "德国｜10月14日",
-      "facts": [
-        [
-          "审判",
-          "德国审理一名被控破坏北溪管道的乌克兰人。"
-        ],
-        [
-          "原则",
-          "被告在法院判决前应视为无罪。"
-        ],
-        [
-          "设施",
-          "北溪是连接俄罗斯与德国的海底天然气管道系统。"
+          "反应",
+          "顾客和员工表达担忧"
         ]
       ],
       "visual": null,
       "impacts": [
         [
-          "能源安全",
-          "案件会推动欧洲重新审视海底管道等关键设施的防护。"
+          "对消费者",
+          "购物空间可能增加移动监控和自动化服务"
         ],
         [
-          "国际关系",
-          "责任认定可能影响欧洲与乌克兰、俄罗斯的政治关系。"
+          "对员工",
+          "工作内容、排班和被系统评价的方式可能改变"
         ]
       ],
       "next": [
-        "庭审披露哪些证据和涉案网络。",
-        "德国法院的裁决与后续外交反应。"
+        "机器人具体承担巡检、盘点还是安保",
+        "门店如何告知并处理采集的数据"
       ],
-      "source": "BBC News",
-      "updated": "2026-10-14",
+      "source": "Los Angeles Times",
+      "updated": "2026-10-15",
       "en": {
-        "cat": "Geopolitics",
-        "title": "Nord Stream sabotage reaches a German court, reopening Europe’s energy-security wound",
-        "brief": "A Ukrainian defendant is on trial over the Nord Stream attack, bringing public legal scrutiny to who targeted Europe’s energy infrastructure.",
-        "take": "BBC News reports that Germany has put a Ukrainian man on trial over alleged involvement in the sabotage of the Nord Stream gas pipelines. He is presumed innocent unless proven guilty, and the outcome is unknown. But a courtroom process may expose more evidence about the operation, its chain of command, and responsibility. Nord Stream is no longer delivering gas, so the trial will not immediately alter energy prices. It does reopen a core question: how should cross-border critical infrastructure be protected in conflict, and who bears the political, legal, and financial cost when it is attacked?",
-        "meta": "Germany | Oct. 14",
+        "cat": "Robotics and Embodied AI",
+        "title": "AI robots are roaming LA grocery aisles: shoppers feel watched, workers fear replacement",
+        "brief": "Retail robots are getting closer to daily life, but whether they help or monitor depends on how they are used.",
+        "take": "The Los Angeles Times reports that AI robots are operating in aisles at some Los Angeles grocery stores, making shoppers and workers uneasy. Retailers may see them as tools for inspection, inventory, or security. On the shop floor, though, they can also mean continual observation, mistaken judgments, and pressure on jobs. This is not just a flashy robot story: what data is collected, who sees it, and whether workers lose hours or are moved to other roles are the questions that affect daily life.",
+        "meta": "Retail robotics | Oct. 15",
         "facts": [
           [
-            "Trial",
-            "Germany is trying a Ukrainian man accused over the Nord Stream sabotage."
+            "Location",
+            "Los Angeles grocery stores"
           ],
           [
-            "Principle",
-            "The defendant is presumed innocent before a court verdict."
+            "Device",
+            "AI robots operating in aisles"
           ],
           [
-            "Infrastructure",
-            "Nord Stream is a subsea gas-pipeline system linking Russia and Germany."
+            "Reaction",
+            "Shoppers and workers raise concerns"
           ]
         ],
         "visual": null,
         "impacts": [
           [
-            "Energy security",
-            "The case will sharpen scrutiny of protection for subsea pipelines and other critical assets."
+            "For shoppers",
+            "Shopping spaces may add mobile monitoring alongside automated services"
           ],
           [
-            "Foreign relations",
-            "Findings on responsibility could affect Europe’s relations with Ukraine and Russia."
+            "For workers",
+            "Job tasks, scheduling, and system-based evaluation may change"
           ]
         ],
         "next": [
-          "What evidence and networks emerge in court.",
-          "The German verdict and ensuing diplomatic reaction."
+          "Whether robots are used for inspection, inventory, or security",
+          "How stores disclose and handle collected data"
         ],
-        "source": "BBC News",
-        "updated": "2026-10-14"
+        "source": "Los Angeles Times",
+        "updated": "2026-10-15"
       },
       "sourceLinks": [
         {
-          "title": "Germany puts Ukrainian on trial accused of blowing up Nord Stream pipelines",
-          "url": "https://www.bbc.co.uk/news/articles/cw99zpmnxzmjo?at_medium=RSS&at_campaign=rss",
-          "publisher": "BBC News"
+          "title": "AI robots are roaming L.A. grocery store aisles. Shoppers and workers are worried",
+          "url": "https://www.latimes.com/business/story/2026-10-15/ai-robots-are-roaming-la-grocery-store-aisles-shoppers-workers-are-worried",
+          "publisher": "Los Angeles Times"
         }
       ],
       "eventImage": {
-        "url": "https://ichef.bbci.co.uk/ace/branded_news/1200/cpsprodpb/41b7/live/66289890-c7c4-11f1-993a-152cbb068da1.jpg",
-        "credit": "BBC News",
-        "link": "https://www.bbc.co.uk/news/articles/cw99zpmnxzmjo?at_medium=RSS&at_campaign=rss",
+        "url": "https://ca-times.brightspotcdn.com/dims4/default/c1cf93d/2147483647/strip/true/crop/7523x3950+0+533/resize/1200x630!/quality/75/?url=https%3A%2F%2Fcalifornia-times-brightspot.s3.amazonaws.com%2F5a%2F85%2Ff745569b480689e66f9e446b4eca%2F1572559-fi-inventory-robot-groceries-eat-0003.jpg",
+        "credit": "Los Angeles Times",
+        "link": "https://www.latimes.com/business/story/2026-10-15/ai-robots-are-roaming-la-grocery-store-aisles-shoppers-workers-are-worried",
         "zh": {
-          "alt": "北溪爆炸案在德国开审：欧洲能源安全的旧伤还没结痂",
-          "caption": "北溪爆炸案在德国开审：欧洲能源安全的旧伤还没结痂"
+          "alt": "洛杉矶超市里开始有AI机器人巡走：顾客担心被盯着，员工担心被替代",
+          "caption": "洛杉矶超市里开始有AI机器人巡走：顾客担心被盯着，员工担心被替代"
         },
         "en": {
-          "alt": "Nord Stream sabotage reaches a German court, reopening Europe’s energy-security wound",
-          "caption": "Nord Stream sabotage reaches a German court, reopening Europe’s energy-security wound"
+          "alt": "AI robots are roaming LA grocery aisles: shoppers feel watched, workers fear replacement",
+          "caption": "AI robots are roaming LA grocery aisles: shoppers feel watched, workers fear replacement"
         }
       },
       "termGuides": [
         {
-          "key": "北溪",
+          "key": "零售机器人",
           "aliases": [
-            "北溪",
-            "Nord Stream",
-            "Nord Stream pipelines"
+            "零售机器人",
+            "retail robots",
+            "AI robots"
           ],
           "zh": {
-            "label": "北溪",
-            "meaning": "连接俄罗斯和德国的海底天然气管道系统。",
-            "relation": "德国正审理一名被控参与破坏该系统的人。"
+            "label": "零售机器人",
+            "meaning": "在商店内移动、感知环境并执行巡检或服务任务的机器人。",
+            "relation": "它们已出现在洛杉矶杂货店，带来便利之外的监控和就业担忧。"
           },
           "en": {
-            "label": "Nord Stream",
-            "meaning": "A subsea natural-gas pipeline system linking Russia and Germany.",
-            "relation": "Germany is trying a man accused of helping sabotage it."
-          }
-        }
-      ]
-    },
-    {
-      "id": "india-voter-roll-protests",
-      "cat": "国际局势",
-      "icon": "alert",
-      "title": "印度选民名册删名争议升级：1300万人“去哪了”成街头问题",
-      "brief": "大规模删改选民登记引发抗议，争的不是技术流程，而是谁还有投票资格。",
-      "take": "《卫报》报道，印度围绕选民名册修订爆发抗议，示威者质问为何有1300万个名字被删除；反对派人士还带队前往最高法院附近，警方设置路障并关闭部分地铁站。政府或选举机构对每一项删名的解释、数字范围及最终名单仍值得核实。但对民主制度而言，选票不是小事：登记程序若缺乏透明申诉渠道，最先失去声音的往往是迁徙者、贫困群体和资料不完整的人。",
-      "meta": "印度｜10月12—14日",
-      "facts": [
-        [
-          "争议",
-          "抗议者质疑选民名册删除1300万个名字。"
-        ],
-        [
-          "行动",
-          "反对派人士带队向最高法院附近行进。"
-        ],
-        [
-          "管控",
-          "报道指警方设路障并关闭部分地铁站。"
-        ]
-      ],
-      "visual": {
-        "type": "orbit",
-        "label": "名册争议为何危险",
-        "nodes": [
-          "大量名字删除",
-          "申诉与核验受考验",
-          "投票资格受影响",
-          "选举公信力承压"
-        ]
-      },
-      "impacts": [
-        [
-          "权利",
-          "登记错误或不透明程序可能让合资格选民无法投票。"
-        ],
-        [
-          "政治风险",
-          "名册争议会加深社会对选举公平的怀疑。"
-        ]
-      ],
-      "next": [
-        "选举机构如何解释删名标准和复核程序。",
-        "法院是否介入并要求暂停或修正修订。"
-      ],
-      "source": "The Guardian",
-      "updated": "2026-10-14",
-      "en": {
-        "cat": "Geopolitics",
-        "title": "India’s voter-roll dispute turns into a street fight over who gets to vote",
-        "brief": "Protests over millions of deleted voter names are not about paperwork alone; they are about who retains a ballot.",
-        "take": "The Guardian reports protests in India over voter-roll revisions, with demonstrators asking why 130 million names were deleted. Opposition figures also marched toward the Supreme Court area, where police erected barricades and closed some metro stations. The government’s and election authorities’ explanations for each removal, the scope of the figures, and the final rolls still need scrutiny. In any democracy, voter registration is not a technical footnote: when appeal routes are opaque, migrants, poorer people, and those with incomplete paperwork can be the first to lose their voice.",
-        "meta": "India | Oct. 12–14",
-        "facts": [
-          [
-            "Dispute",
-            "Protesters question the deletion of 130 million names from voter rolls."
-          ],
-          [
-            "Action",
-            "Opposition figures marched toward the Supreme Court area."
-          ],
-          [
-            "Restrictions",
-            "Reports say police erected barricades and closed some metro stations."
-          ]
-        ],
-        "visual": {
-          "type": "orbit",
-          "label": "Why a voter-roll dispute matters",
-          "nodes": [
-            "Many names deleted",
-            "Appeals and checks tested",
-            "Voting rights affected",
-            "Trust in elections strained"
-          ]
-        },
-        "impacts": [
-          [
-            "Rights",
-            "Errors or opaque procedures can prevent eligible voters from casting ballots."
-          ],
-          [
-            "Political risk",
-            "The dispute can deepen public doubt about electoral fairness."
-          ]
-        ],
-        "next": [
-          "How election authorities explain standards and review procedures.",
-          "Whether courts intervene to pause or revise the process."
-        ],
-        "source": "The Guardian",
-        "updated": "2026-10-14"
-      },
-      "sourceLinks": [
-        {
-          "title": "‘How do you explain the deletion of 130 million names?’: why Indian voters are on the streets",
-          "url": "https://www.theguardian.com/world/2026/oct/14/india-protests-election-commission-gyanesh-kumar",
-          "publisher": "The Guardian"
-        },
-        {
-          "title": "Indian opposition figures lead march to police barricades around supreme court",
-          "url": "https://www.theguardian.com/world/2026/oct/12/india-election-protests-delhi-police-shut-metro-stations-ahead-march",
-          "publisher": "The Guardian"
-        }
-      ],
-      "eventImage": {
-        "url": "https://i.guim.co.uk/img/media/461d064cfe98335b0bdbed60f3824c89a8794839/0_0_4320_3456/master/4320.jpg?width=1200&height=630&quality=85&auto=format&fit=crop&precrop=40:21,offset-x50,offset-y0&overlay-align=bottom%2Cleft&overlay-width=100p&overlay-base64=L2ltZy9zdGF0aWMvb3ZlcmxheXMvdGctZGVmYXVsdC5wbmc&enable=upscale&s=057c6fa437a922eb24e8e062a80e5624",
-        "credit": "The Guardian",
-        "link": "https://www.theguardian.com/world/2026/oct/14/india-protests-election-commission-gyanesh-kumar",
-        "zh": {
-          "alt": "印度选民名册删名争议升级：1300万人“去哪了”成街头问题",
-          "caption": "印度选民名册删名争议升级：1300万人“去哪了”成街头问题"
-        },
-        "en": {
-          "alt": "India’s voter-roll dispute turns into a street fight over who gets to vote",
-          "caption": "India’s voter-roll dispute turns into a street fight over who gets to vote"
-        }
-      },
-      "termGuides": [
-        {
-          "key": "选民名册",
-          "aliases": [
-            "选民名册",
-            "voter roll",
-            "voter rolls"
-          ],
-          "zh": {
-            "label": "选民名册",
-            "meaning": "记录有资格参加选举的选民名单。",
-            "relation": "印度的修订行动被抗议者指称删除了大量名字。"
-          },
-          "en": {
-            "label": "Voter roll",
-            "meaning": "The official list of people eligible to vote in an election.",
-            "relation": "Protesters say India’s revision removed millions of names from it."
-          }
-        }
-      ]
-    },
-    {
-      "id": "netflix-job-cuts",
-      "cat": "科技产业",
-      "icon": "chart",
-      "title": "Netflix拟裁1000人：流媒体不再只靠增长故事养团队",
-      "brief": "Netflix据报将裁员1000人，订阅生意再大，也躲不开控制成本和重排岗位。",
-      "take": "BBC报道，Netflix计划裁减约1000个岗位，规模为该公司自2022年以来最大。哪些部门受影响、裁员时间和背后具体财务原因，仍需等待公司更完整说明。流媒体行业早已从“多烧钱抢用户”转到更看重利润、广告收入和内容投入回报；裁员不是观众明天就看不到剧，但可能影响节目开发、客服、推荐产品和与创作者的合作。对科技和媒体从业者，这也是一个提醒：成熟平台仍会在增长放缓时重做组织。",
-      "meta": "美国｜10月14日",
-      "facts": [
-        [
-          "规模",
-          "BBC称Netflix拟裁减约1000个岗位。"
-        ],
-        [
-          "纪录",
-          "这是该公司自2022年以来最大规模裁员。"
-        ],
-        [
-          "行业",
-          "流媒体公司正更强调利润与内容投入回报。"
-        ]
-      ],
-      "visual": null,
-      "impacts": [
-        [
-          "就业",
-          "媒体、内容和技术岗位都可能受到组织重组波及。"
-        ],
-        [
-          "用户体验",
-          "节目开发、产品更新和服务响应可能出现取舍。"
-        ]
-      ],
-      "next": [
-        "Netflix披露受影响团队及时间表。",
-        "裁员是否伴随内容预算或订阅策略调整。"
-      ],
-      "source": "BBC News",
-      "updated": "2026-10-14",
-      "en": {
-        "cat": "Tech Industry",
-        "title": "Netflix plans 1,000 cuts: streaming growth no longer funds every team",
-        "brief": "Netflix is reportedly cutting 1,000 jobs, showing that even a huge subscription business is reshuffling costs and roles.",
-        "take": "BBC News reports that Netflix plans to cut about 1,000 jobs, its steepest reduction since 2022. The affected teams, timing, and specific financial rationale still need fuller company disclosure. Streaming has shifted from spending heavily to win users toward a tougher focus on profit, advertising, and returns on content. A layoff does not mean viewers lose shows tomorrow, but it can shape development slates, customer support, recommendation products, and work with creators. For media and tech workers, it is a reminder that mature platforms can still redraw the organisation when growth slows.",
-        "meta": "United States | Oct. 14",
-        "facts": [
-          [
-            "Scale",
-            "BBC says Netflix plans to cut about 1,000 jobs."
-          ],
-          [
-            "Record",
-            "It would be the company’s largest reduction since 2022."
-          ],
-          [
-            "Industry",
-            "Streaming companies are placing more weight on profit and content returns."
-          ]
-        ],
-        "visual": null,
-        "impacts": [
-          [
-            "Jobs",
-            "Media, content, and technology roles may all be hit by restructuring."
-          ],
-          [
-            "User experience",
-            "Programming, product updates, and service response may face trade-offs."
-          ]
-        ],
-        "next": [
-          "Which teams Netflix identifies and its timeline.",
-          "Whether cuts are paired with changes to content budgets or subscriptions."
-        ],
-        "source": "BBC News",
-        "updated": "2026-10-14"
-      },
-      "sourceLinks": [
-        {
-          "title": "Netflix to shed 1,000 jobs in steepest cuts since 2022",
-          "url": "https://www.bbc.co.uk/news/articles/c6zxj0gzk4x4o?at_medium=RSS&at_campaign=rss",
-          "publisher": "BBC News"
-        }
-      ],
-      "eventImage": {
-        "url": "https://ichef.bbci.co.uk/ace/branded_news/1200/cpsprodpb/877e/live/417f8270-c7f0-11f1-a64c-550be9e3c66b.jpg",
-        "credit": "BBC News",
-        "link": "https://www.bbc.co.uk/news/articles/c6zxj0gzk4x4o?at_medium=RSS&at_campaign=rss",
-        "zh": {
-          "alt": "Netflix拟裁1000人：流媒体不再只靠增长故事养团队",
-          "caption": "Netflix拟裁1000人：流媒体不再只靠增长故事养团队"
-        },
-        "en": {
-          "alt": "Netflix plans 1,000 cuts: streaming growth no longer funds every team",
-          "caption": "Netflix plans 1,000 cuts: streaming growth no longer funds every team"
-        }
-      },
-      "termGuides": [
-        {
-          "key": "Netflix",
-          "aliases": [
-            "Netflix",
-            "奈飞"
-          ],
-          "zh": {
-            "label": "Netflix",
-            "meaning": "面向全球用户的订阅制流媒体公司。",
-            "relation": "该公司据报计划裁减约1000个岗位。"
-          },
-          "en": {
-            "label": "Netflix",
-            "meaning": "A global subscription streaming company.",
-            "relation": "It reportedly plans to cut about 1,000 jobs."
+            "label": "Retail robots",
+            "meaning": "Robots that move through stores, sense their surroundings, and perform inspection or service tasks.",
+            "relation": "Their use in Los Angeles grocery stores is raising concerns about surveillance and jobs."
           }
         }
       ]

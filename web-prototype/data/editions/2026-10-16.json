@@ -1,0 +1,1181 @@
+{
+  "dateKey": "2026-10-16",
+  "generatedAt": "2026-10-16T05:00:00+08:00",
+  "title": "DailyTen｜10月16日",
+  "subtitle": "今天的关键词：AI开始碰电脑、汽车、购物车，也更直接碰到隐私和工作。",
+  "briefLabel": "今日十条",
+  "doneLabel": "读完了",
+  "readTimeMinutes": 8,
+  "items": [
+    {
+      "id": "anthropic-metr-access",
+      "cat": "AI",
+      "icon": "ai",
+      "title": "让外部研究员拿到“员工级权限”，Anthropic把安全测试往里推了一步",
+      "brief": "研究人员不再只能从外面猜模型会不会失控，而是能更深入地检查它。",
+      "take": "Anthropic允许模型评估机构METR获得接近员工级的内部访问权限，研究其AI系统的能力与风险。这不是普通的产品演示：把测试者请进门，能更早发现模型在自主执行任务、绕过限制或被滥用时的盲点；代价是公司也要接受更严格的外部审视。真正要看的是，这种访问是否足够独立，以及研究结论会不会被完整公开。",
+      "meta": "AI安全｜10月15日",
+      "facts": [
+        [
+          "访问对象",
+          "METR研究人员获得员工级访问"
+        ],
+        [
+          "公司",
+          "Anthropic"
+        ],
+        [
+          "重点",
+          "评估模型能力与安全风险"
+        ]
+      ],
+      "visual": null,
+      "impacts": [
+        [
+          "对用户",
+          "更早发现高风险能力，产品限制可能更有依据"
+        ],
+        [
+          "对行业",
+          "前沿AI公司的安全承诺开始接受更深入的外部检验"
+        ]
+      ],
+      "next": [
+        "METR将公开哪些评估结果",
+        "其他前沿实验室是否给出同等访问"
+      ],
+      "source": "TechCrunch AI",
+      "updated": "2026-10-15",
+      "en": {
+        "cat": "AI",
+        "title": "Anthropic lets outside researchers inside: AI safety testing gets a closer look",
+        "brief": "Researchers will no longer have to judge model risks only from the outside; they can inspect more of the system directly.",
+        "take": "Anthropic is giving the model-evaluation group METR access at an employee-like level to study its AI systems’ capabilities and risks. This is more than a product demo: bringing testers closer to the system could expose blind spots in autonomous task execution, safeguards, or misuse earlier. The trade-off is tougher outside scrutiny. The key questions are whether the access is independent enough and whether the findings are fully published.",
+        "meta": "AI safety | Oct. 15",
+        "facts": [
+          [
+            "Access",
+            "METR researchers receive employee-level access"
+          ],
+          [
+            "Company",
+            "Anthropic"
+          ],
+          [
+            "Focus",
+            "Model capabilities and safety risks"
+          ]
+        ],
+        "visual": null,
+        "impacts": [
+          [
+            "For users",
+            "High-risk capabilities may be found earlier, making limits more evidence-based"
+          ],
+          [
+            "For the industry",
+            "Safety promises by frontier AI labs face deeper outside examination"
+          ]
+        ],
+        "next": [
+          "What METR publishes from the work",
+          "Whether rival labs offer comparable access"
+        ],
+        "source": "TechCrunch AI",
+        "updated": "2026-10-15"
+      },
+      "sourceLinks": [
+        {
+          "title": "Anthropic is letting METR researchers look under the hood with employee-level access",
+          "url": "https://techcrunch.com/2026/10/15/anthropic-is-letting-metr-researchers-look-under-the-hood-with-employee-level-access/",
+          "publisher": "TechCrunch AI"
+        }
+      ],
+      "eventImage": {
+        "url": "https://techcrunch.com/wp-content/uploads/2026/06/GettyImages-2278736523.jpeg?resize=1200,798",
+        "credit": "TechCrunch AI",
+        "link": "https://techcrunch.com/2026/10/15/anthropic-is-letting-metr-researchers-look-under-the-hood-with-employee-level-access/",
+        "zh": {
+          "alt": "让外部研究员拿到“员工级权限”，Anthropic把安全测试往里推了一步",
+          "caption": "让外部研究员拿到“员工级权限”，Anthropic把安全测试往里推了一步"
+        },
+        "en": {
+          "alt": "Anthropic lets outside researchers inside: AI safety testing gets a closer look",
+          "caption": "Anthropic lets outside researchers inside: AI safety testing gets a closer look"
+        }
+      },
+      "termGuides": [
+        {
+          "key": "METR",
+          "aliases": [
+            "METR"
+          ],
+          "zh": {
+            "label": "METR",
+            "meaning": "专门测试和评估前沿AI系统风险的研究机构。",
+            "relation": "它将用更深的内部访问来检查Anthropic模型可能出现的危险能力。"
+          },
+          "en": {
+            "label": "METR",
+            "meaning": "A research group that evaluates risks from frontier AI systems.",
+            "relation": "It is receiving deeper access to test potentially dangerous capabilities in Anthropic’s models."
+          }
+        }
+      ]
+    },
+    {
+      "id": "meta-mac-open-model",
+      "cat": "AI",
+      "icon": "code",
+      "title": "Meta把开放权重模型放进Mac：本地跑AI更方便，责任也更多落到用户手里",
+      "brief": "能在电脑上运行的模型，可能少传一些数据上云，但也更难由平台统一管住。",
+      "take": "Meta发布可在Mac上运行的开放权重AI模型。开放权重不等于人人都能轻松训练模型，但开发者和懂技术的用户可以下载并在自己的设备或服务上部署，试验成本和对云端服务的依赖都会下降。好处是数据可少出设备、使用更灵活；难处是模型一旦被复制出去，平台很难统一执行内容和安全限制。",
+      "meta": "AI产品｜10月15日",
+      "facts": [
+        [
+          "发布方",
+          "Meta"
+        ],
+        [
+          "形式",
+          "开放权重AI模型"
+        ],
+        [
+          "设备",
+          "可在Mac上运行"
+        ]
+      ],
+      "visual": null,
+      "impacts": [
+        [
+          "对个人",
+          "部分任务可本地处理，敏感内容未必需要上传云端"
+        ],
+        [
+          "对开发者",
+          "做原型和定制AI工具的门槛下降，但需自己承担部署安全"
+        ]
+      ],
+      "next": [
+        "模型的硬件要求和实际速度",
+        "Meta是否同步提供明确的安全使用规则"
+      ],
+      "source": "TechCrunch AI",
+      "updated": "2026-10-15",
+      "en": {
+        "cat": "AI",
+        "title": "Meta brings an open-weight model to Macs: more local AI, and more responsibility",
+        "brief": "A model that runs on a computer can keep more data off the cloud, but it is also harder for one platform to control.",
+        "take": "Meta has launched an open-weight AI model that runs on Macs. Open weights do not mean everyone can easily train a model, but developers and technical users can download and deploy it on their own machines or services. That lowers reliance on cloud AI and can keep more data local. The harder part is governance: once copies spread, a platform cannot enforce content and safety limits everywhere.",
+        "meta": "AI product | Oct. 15",
+        "facts": [
+          [
+            "Publisher",
+            "Meta"
+          ],
+          [
+            "Format",
+            "Open-weight AI model"
+          ],
+          [
+            "Device",
+            "Runs on Macs"
+          ]
+        ],
+        "visual": null,
+        "impacts": [
+          [
+            "For individuals",
+            "Some tasks can stay on-device instead of sending sensitive material to the cloud"
+          ],
+          [
+            "For developers",
+            "Building and tailoring AI tools gets easier, but deployment safety becomes their job"
+          ]
+        ],
+        "next": [
+          "Hardware needs and real-world speed",
+          "Whether Meta issues clear safety guidance"
+        ],
+        "source": "TechCrunch AI",
+        "updated": "2026-10-15"
+      },
+      "sourceLinks": [
+        {
+          "title": "Meta launches an open-weight AI model that runs on Macs",
+          "url": "https://techcrunch.com/2026/10/15/meta-launches-an-open-weight-model-that-runs-on-macs/",
+          "publisher": "TechCrunch AI"
+        }
+      ],
+      "eventImage": {
+        "url": "https://techcrunch.com/wp-content/uploads/2026/09/GettyImages-2296215726.jpg?resize=1200,799",
+        "credit": "TechCrunch AI",
+        "link": "https://techcrunch.com/2026/10/15/meta-launches-an-open-weight-model-that-runs-on-macs/",
+        "zh": {
+          "alt": "Meta把开放权重模型放进Mac：本地跑AI更方便，责任也更多落到用户手里",
+          "caption": "Meta把开放权重模型放进Mac：本地跑AI更方便，责任也更多落到用户手里"
+        },
+        "en": {
+          "alt": "Meta brings an open-weight model to Macs: more local AI, and more responsibility",
+          "caption": "Meta brings an open-weight model to Macs: more local AI, and more responsibility"
+        }
+      },
+      "termGuides": [
+        {
+          "key": "开放权重",
+          "aliases": [
+            "开放权重",
+            "open-weight",
+            "open weights"
+          ],
+          "zh": {
+            "label": "开放权重",
+            "meaning": "模型参数可供下载，让他人自行部署和改造。",
+            "relation": "Meta这次让模型可以在Mac等本地设备上部署，而不只通过网页服务使用。"
+          },
+          "en": {
+            "label": "Open weights",
+            "meaning": "Model parameters made available for others to download and deploy.",
+            "relation": "Meta’s release lets people run the model locally on hardware such as a Mac."
+          }
+        }
+      ]
+    },
+    {
+      "id": "rivian-ai-agents",
+      "cat": "AI",
+      "icon": "ai",
+      "title": "Rivian要把AI Agent塞进汽车：车更会办事，也更需要一条清楚的刹车线",
+      "brief": "车里的AI若能替你处理任务，误操作或数据越界就不再只是聊天机器人问题。",
+      "take": "电动车公司Rivian计划把AI Agent带进车内。所谓Agent，不只是回答问题，而是能代表用户完成多步骤任务；放进汽车这个场景，便利和风险都会被放大。它可能减少找菜单、查路线或安排车内服务的麻烦，但驾驶相关建议、账户权限、位置和语音数据该如何处理，都不能只靠一句“很聪明”带过。",
+      "meta": "AI与汽车｜10月15日",
+      "facts": [
+        [
+          "公司",
+          "Rivian"
+        ],
+        [
+          "计划",
+          "在汽车中引入AI Agent"
+        ],
+        [
+          "特点",
+          "Agent可处理多步骤任务"
+        ]
+      ],
+      "visual": null,
+      "impacts": [
+        [
+          "对车主",
+          "车机操作可能更像直接交代一句话，而非层层点菜单"
+        ],
+        [
+          "对隐私安全",
+          "位置、语音与账户权限会成为必须说清的边界"
+        ]
+      ],
+      "next": [
+        "Agent首批能执行哪些操作",
+        "驾驶中是否限制高风险指令"
+      ],
+      "source": "TechCrunch AI",
+      "updated": "2026-10-15",
+      "en": {
+        "cat": "AI",
+        "title": "Rivian wants AI Agents in the car: more help, but a clearer brake line is needed",
+        "brief": "If in-car AI can act on your behalf, mistakes and data overreach are no longer just chatbot problems.",
+        "take": "Electric-vehicle maker Rivian plans to bring AI Agents into its cars. An Agent does more than answer questions: it can carry out multi-step tasks for a user. In a vehicle, both convenience and risk are amplified. It could reduce menu-tapping for routes or car services, but rules for driving-related advice, account access, location data, and voice data need to be explicit—not hidden behind claims that the system is smart.",
+        "meta": "AI and cars | Oct. 15",
+        "facts": [
+          [
+            "Company",
+            "Rivian"
+          ],
+          [
+            "Plan",
+            "Bring AI Agents into cars"
+          ],
+          [
+            "Feature",
+            "Agents can handle multi-step tasks"
+          ]
+        ],
+        "visual": null,
+        "impacts": [
+          [
+            "For owners",
+            "Car controls may become a spoken request instead of a sequence of menus"
+          ],
+          [
+            "For privacy and safety",
+            "Location, voice, and account permissions need firm boundaries"
+          ]
+        ],
+        "next": [
+          "Which actions the first version can perform",
+          "Whether risky commands are restricted while driving"
+        ],
+        "source": "TechCrunch AI",
+        "updated": "2026-10-15"
+      },
+      "sourceLinks": [
+        {
+          "title": "AI agents are coming to Rivian’s cars",
+          "url": "https://techcrunch.com/2026/10/15/ai-agents-are-coming-to-rivians-cars/",
+          "publisher": "TechCrunch AI"
+        }
+      ],
+      "eventImage": {
+        "url": "https://techcrunch.com/wp-content/uploads/2026/10/55587802359_b756c3c3bd_k.jpg?resize=1200,800",
+        "credit": "TechCrunch AI",
+        "link": "https://techcrunch.com/2026/10/15/ai-agents-are-coming-to-rivians-cars/",
+        "zh": {
+          "alt": "Rivian要把AI Agent塞进汽车：车更会办事，也更需要一条清楚的刹车线",
+          "caption": "Rivian要把AI Agent塞进汽车：车更会办事，也更需要一条清楚的刹车线"
+        },
+        "en": {
+          "alt": "Rivian wants AI Agents in the car: more help, but a clearer brake line is needed",
+          "caption": "Rivian wants AI Agents in the car: more help, but a clearer brake line is needed"
+        }
+      },
+      "termGuides": [
+        {
+          "key": "AI Agent",
+          "aliases": [
+            "AI Agent",
+            "Agent",
+            "智能体"
+          ],
+          "zh": {
+            "label": "AI Agent",
+            "meaning": "不只对话，还能按目标调用工具、完成多步操作的AI。",
+            "relation": "Rivian计划用它处理车内任务，因此权限与驾驶安全特别关键。"
+          },
+          "en": {
+            "label": "AI Agent",
+            "meaning": "AI that can use tools and complete multi-step actions, not just chat.",
+            "relation": "Rivian plans to use it for in-car tasks, making permissions and driving safety especially important."
+          }
+        }
+      ]
+    },
+    {
+      "id": "google-universal-cart",
+      "cat": "科技产业",
+      "icon": "chart",
+      "title": "Google把不同商家的东西往一个购物车里装：比价更省事，平台入口也更值钱",
+      "brief": "美国用户可以更少来回切换网站下单，但商家和平台争的仍是谁掌握顾客。",
+      "take": "Google在美国推出Universal Cart购物工具，试图让用户把来自不同商家的商品集中处理。对消费者，它瞄准的是购物时反复打开网页、重填信息、分开结账的麻烦；对零售商，这意味着Google更靠近交易的最后一步。工具是否真能省钱，取决于覆盖哪些商家、配送和退换货是否仍要分别处理。",
+      "meta": "电商平台｜10月15日",
+      "facts": [
+        [
+          "产品",
+          "Universal Cart"
+        ],
+        [
+          "公司",
+          "Google"
+        ],
+        [
+          "首发市场",
+          "美国"
+        ]
+      ],
+      "visual": null,
+      "impacts": [
+        [
+          "对消费者",
+          "跨店找货和下单的步骤可能减少"
+        ],
+        [
+          "对商家",
+          "客户入口更可能被搜索和平台产品截走"
+        ]
+      ],
+      "next": [
+        "覆盖的商家和商品范围",
+        "结账、配送与退货能否真正整合"
+      ],
+      "source": "TechCrunch AI",
+      "updated": "2026-10-15",
+      "en": {
+        "cat": "Technology",
+        "title": "Google puts more stores into one cart: easier shopping, and a more valuable entry point",
+        "brief": "US shoppers may switch between sites less often, but the bigger fight is still over who owns the customer relationship.",
+        "take": "Google has launched Universal Cart in the US, aiming to let users handle items from different merchants in one place. For shoppers, it targets the nuisance of opening many sites, re-entering details, and checking out separately. For retailers, it moves Google closer to the last step of a sale. Whether it truly saves money depends on merchant coverage and whether delivery and returns remain fragmented.",
+        "meta": "E-commerce platform | Oct. 15",
+        "facts": [
+          [
+            "Product",
+            "Universal Cart"
+          ],
+          [
+            "Company",
+            "Google"
+          ],
+          [
+            "First market",
+            "United States"
+          ]
+        ],
+        "visual": null,
+        "impacts": [
+          [
+            "For shoppers",
+            "The steps needed to find and buy across stores may fall"
+          ],
+          [
+            "For merchants",
+            "Search and platform products may capture more of the customer entry point"
+          ]
+        ],
+        "next": [
+          "Which retailers and goods are included",
+          "Whether checkout, delivery, and returns are truly integrated"
+        ],
+        "source": "TechCrunch AI",
+        "updated": "2026-10-15"
+      },
+      "sourceLinks": [
+        {
+          "title": "Google’s Universal Cart shopping tool launches in the US",
+          "url": "https://techcrunch.com/2026/10/15/googles-universal-cart-shopping-tool-launches-in-the-us/",
+          "publisher": "TechCrunch AI"
+        }
+      ],
+      "eventImage": {
+        "url": "https://techcrunch.com/wp-content/uploads/2026/10/Google-UniversalCart.png?w=1200",
+        "credit": "TechCrunch AI",
+        "link": "https://techcrunch.com/2026/10/15/googles-universal-cart-shopping-tool-launches-in-the-us/",
+        "zh": {
+          "alt": "Google把不同商家的东西往一个购物车里装：比价更省事，平台入口也更值钱",
+          "caption": "Google把不同商家的东西往一个购物车里装：比价更省事，平台入口也更值钱"
+        },
+        "en": {
+          "alt": "Google puts more stores into one cart: easier shopping, and a more valuable entry point",
+          "caption": "Google puts more stores into one cart: easier shopping, and a more valuable entry point"
+        }
+      },
+      "termGuides": [
+        {
+          "key": "Universal Cart",
+          "aliases": [
+            "Universal Cart",
+            "通用购物车"
+          ],
+          "zh": {
+            "label": "Universal Cart",
+            "meaning": "Google推出的跨商家购物工具。",
+            "relation": "它试图把原本分散在不同网站的购物步骤集中到一个入口。"
+          },
+          "en": {
+            "label": "Universal Cart",
+            "meaning": "Google’s shopping tool for purchases across merchants.",
+            "relation": "It aims to concentrate shopping steps that normally happen across separate websites."
+          }
+        }
+      ]
+    },
+    {
+      "id": "amazon-bee-devices",
+      "cat": "科技产业",
+      "icon": "ai",
+      "title": "75美元起的个人AI设备来了：便宜的不是硬件，可能是你交出去的日常信息",
+      "brief": "Amazon旗下Bee推出两款设备，随身AI从手机软件走向了专门硬件。",
+      "take": "Amazon旗下Bee推出两款个人AI设备，起价75美元。低价会让“随身记录、提醒和协助”的AI更容易被尝试，但这类设备的价值往往来自持续收集语音、习惯或日程线索。买之前别只看价格和功能，也该看它录什么、保存多久、能否关闭，以及数据会不会用于改进服务。",
+      "meta": "消费硬件｜10月15日",
+      "facts": [
+        [
+          "品牌",
+          "Amazon旗下Bee"
+        ],
+        [
+          "新品",
+          "两款个人AI设备"
+        ],
+        [
+          "起价",
+          "75美元"
+        ]
+      ],
+      "visual": null,
+      "impacts": [
+        [
+          "对消费者",
+          "专用AI硬件的试用门槛被压低"
+        ],
+        [
+          "对隐私",
+          "持续记录型设备的收集范围和保存规则更重要"
+        ]
+      ],
+      "next": [
+        "两款设备的录音与数据设置",
+        "数据是否用于训练或改进服务"
+      ],
+      "source": "TechCrunch AI",
+      "updated": "2026-10-15",
+      "en": {
+        "cat": "Technology",
+        "title": "Personal AI devices start at $75: the hardware is cheap, your daily data may not be",
+        "brief": "Amazon-owned Bee has launched two devices, moving personal AI from a phone app into dedicated hardware.",
+        "take": "Amazon-owned Bee has launched two personal AI devices starting at $75. The low price could make always-available AI for reminders, notes, and assistance easier to try. But these devices often get their value from continuously collecting clues about speech, habits, and schedules. Buyers should look beyond the price: what is recorded, how long it is retained, whether recording can be disabled, and whether the data improves the service.",
+        "meta": "Consumer hardware | Oct. 15",
+        "facts": [
+          [
+            "Brand",
+            "Amazon-owned Bee"
+          ],
+          [
+            "Launch",
+            "Two personal AI devices"
+          ],
+          [
+            "Starting price",
+            "$75"
+          ]
+        ],
+        "visual": null,
+        "impacts": [
+          [
+            "For consumers",
+            "The barrier to trying dedicated AI hardware is lower"
+          ],
+          [
+            "For privacy",
+            "Collection scope and retention rules matter more for always-listening devices"
+          ]
+        ],
+        "next": [
+          "Recording and data settings on each device",
+          "Whether data is used to train or improve services"
+        ],
+        "source": "TechCrunch AI",
+        "updated": "2026-10-15"
+      },
+      "sourceLinks": [
+        {
+          "title": "Amazon’s Bee launches two new personal AI devices, starting at $75",
+          "url": "https://techcrunch.com/2026/10/15/amazons-bee-launches-two-new-personal-ai-devices-starting-at-75/",
+          "publisher": "TechCrunch AI"
+        }
+      ],
+      "eventImage": {
+        "url": "https://techcrunch.com/wp-content/uploads/2026/10/BEE_FAMILY_01_1080x1080.jpg?w=1080",
+        "credit": "TechCrunch AI",
+        "link": "https://techcrunch.com/2026/10/15/amazons-bee-launches-two-new-personal-ai-devices-starting-at-75/",
+        "zh": {
+          "alt": "75美元起的个人AI设备来了：便宜的不是硬件，可能是你交出去的日常信息",
+          "caption": "75美元起的个人AI设备来了：便宜的不是硬件，可能是你交出去的日常信息"
+        },
+        "en": {
+          "alt": "Personal AI devices start at $75: the hardware is cheap, your daily data may not be",
+          "caption": "Personal AI devices start at $75: the hardware is cheap, your daily data may not be"
+        }
+      },
+      "termGuides": [
+        {
+          "key": "Bee",
+          "aliases": [
+            "Bee",
+            "Amazon Bee"
+          ],
+          "zh": {
+            "label": "Bee",
+            "meaning": "亚马逊旗下开发个人AI设备的品牌。",
+            "relation": "它刚推出两款低价设备，把个人AI带到专门硬件上。"
+          },
+          "en": {
+            "label": "Bee",
+            "meaning": "An Amazon-owned brand making personal AI devices.",
+            "relation": "It has launched two low-cost devices that put personal AI into dedicated hardware."
+          }
+        }
+      ]
+    },
+    {
+      "id": "youtube-ai-music-labels",
+      "cat": "AI",
+      "icon": "alert",
+      "title": "AI音乐涌进平台，YouTube Music先加标签：听众终于能知道自己听的是什么",
+      "brief": "标签不能阻止AI歌曲出现，但至少让你有机会分清真人创作和机器生成。",
+      "take": "面对大量AI生成音乐进入流媒体，YouTube Music推出新的内容标签。平台没有因此把AI音乐一概下架，而是先解决一个更基础的问题：听众是否被明确告知。对普通人，这是选择权；对音乐人，标签也可能影响推荐、收益和模仿争议。难点在于识别是否准确，以及没有标出的AI作品怎么办。",
+      "meta": "AI与内容｜10月14日",
+      "facts": [
+        [
+          "平台",
+          "YouTube Music"
+        ],
+        [
+          "措施",
+          "推出新的内容标签"
+        ],
+        [
+          "背景",
+          "AI生成音乐大量进入流媒体"
+        ]
+      ],
+      "visual": null,
+      "impacts": [
+        [
+          "对听众",
+          "可更清楚地区分真人和AI参与的内容"
+        ],
+        [
+          "对创作者",
+          "标签可能影响发现机会、收入与署名纠纷"
+        ]
+      ],
+      "next": [
+        "标签适用哪些AI参与方式",
+        "平台如何处理漏标和误标"
+      ],
+      "source": "TechCrunch AI",
+      "updated": "2026-10-14",
+      "en": {
+        "cat": "AI",
+        "title": "AI music is flooding streaming; YouTube Music adds labels so listeners can tell",
+        "brief": "Labels will not stop AI songs, but they give listeners a chance to distinguish machine-made work from human creation.",
+        "take": "As AI-generated music floods streaming services, YouTube Music is introducing new labels. The platform is not simply removing AI music; it is first addressing a basic question: are listeners told clearly what they are hearing? For listeners, that is a choice issue. For musicians, labels could affect discovery, revenue, and disputes over imitation. The hard part is accurate detection and dealing with AI works that go unlabeled.",
+        "meta": "AI and content | Oct. 14",
+        "facts": [
+          [
+            "Platform",
+            "YouTube Music"
+          ],
+          [
+            "Measure",
+            "New content labels"
+          ],
+          [
+            "Background",
+            "AI-generated music is flooding streaming"
+          ]
+        ],
+        "visual": null,
+        "impacts": [
+          [
+            "For listeners",
+            "It may become easier to distinguish human and AI-involved content"
+          ],
+          [
+            "For creators",
+            "Labels could affect discovery, income, and credit disputes"
+          ]
+        ],
+        "next": [
+          "Which forms of AI involvement require labels",
+          "How the platform handles missing or wrong labels"
+        ],
+        "source": "TechCrunch AI",
+        "updated": "2026-10-14"
+      },
+      "sourceLinks": [
+        {
+          "title": "YouTube Music launches new labels as AI-generated music floods streaming platforms",
+          "url": "https://techcrunch.com/2026/10/14/youtube-music-launches-new-labels-as-ai-generated-music-floods-streaming-platforms/",
+          "publisher": "TechCrunch AI"
+        }
+      ],
+      "eventImage": {
+        "url": "https://techcrunch.com/wp-content/uploads/2026/10/youtube-music-gen-ai-labels.png?w=1080",
+        "credit": "TechCrunch AI",
+        "link": "https://techcrunch.com/2026/10/14/youtube-music-launches-new-labels-as-ai-generated-music-floods-streaming-platforms/",
+        "zh": {
+          "alt": "AI音乐涌进平台，YouTube Music先加标签：听众终于能知道自己听的是什么",
+          "caption": "AI音乐涌进平台，YouTube Music先加标签：听众终于能知道自己听的是什么"
+        },
+        "en": {
+          "alt": "AI music is flooding streaming; YouTube Music adds labels so listeners can tell",
+          "caption": "AI music is flooding streaming; YouTube Music adds labels so listeners can tell"
+        }
+      },
+      "termGuides": [
+        {
+          "key": "AI生成音乐",
+          "aliases": [
+            "AI生成音乐",
+            "AI-generated music"
+          ],
+          "zh": {
+            "label": "AI生成音乐",
+            "meaning": "由生成式AI制作或实质参与制作的音乐内容。",
+            "relation": "它大量涌入流媒体，促使YouTube Music新增识别标签。"
+          },
+          "en": {
+            "label": "AI-generated music",
+            "meaning": "Music made, or materially made, with generative AI.",
+            "relation": "Its growing volume on streaming services prompted YouTube Music to add identification labels."
+          }
+        }
+      ]
+    },
+    {
+      "id": "deezer-ai-music-filter",
+      "cat": "AI",
+      "icon": "alert",
+      "title": "Deezer准备让用户过滤AI音乐：选择权开始变成一个开关",
+      "brief": "不想被机器生成歌曲打断的人，很快可以自己把它们筛出去。",
+      "take": "音乐流媒体Deezer表示将允许用户过滤AI生成音乐。这比给内容贴标签更进一步：平台把是否收听的决定交给用户。它满足一部分听众对真人创作的偏好，也可能让依赖AI批量产歌的账号更难获得播放。不过过滤规则必须透明——混音、修音或局部使用AI的作品，算不算AI音乐并不总是简单。",
+      "meta": "AI与内容｜10月14日",
+      "facts": [
+        [
+          "平台",
+          "Deezer"
+        ],
+        [
+          "计划",
+          "允许过滤AI生成音乐"
+        ],
+        [
+          "方式",
+          "由用户自行选择开启"
+        ]
+      ],
+      "visual": null,
+      "impacts": [
+        [
+          "对听众",
+          "播放列表可按自己的接受程度筛选AI内容"
+        ],
+        [
+          "对音乐市场",
+          "批量生成内容更难只靠推荐系统获取曝光"
+        ]
+      ],
+      "next": [
+        "过滤功能何时上线及覆盖哪些地区",
+        "平台对“AI参与”内容的判定标准"
+      ],
+      "source": "TechCrunch AI",
+      "updated": "2026-10-14",
+      "en": {
+        "cat": "AI",
+        "title": "Deezer plans an AI-music filter: listener choice becomes a switch",
+        "brief": "People who do not want machine-generated songs in their listening can soon filter them out themselves.",
+        "take": "Music streaming service Deezer says it will let users filter out AI-generated music. That goes beyond labeling: the platform is handing the listening decision to users. It may serve people who prefer human-made work and make it harder for accounts mass-producing AI songs to gain plays through recommendations. But the rules need to be clear, since remixes, audio repair, or partial AI use do not always fit a simple category.",
+        "meta": "AI and content | Oct. 14",
+        "facts": [
+          [
+            "Platform",
+            "Deezer"
+          ],
+          [
+            "Plan",
+            "Let users filter AI-generated music"
+          ],
+          [
+            "Method",
+            "Users choose whether to turn it on"
+          ]
+        ],
+        "visual": null,
+        "impacts": [
+          [
+            "For listeners",
+            "Playlists can reflect each person’s tolerance for AI-made content"
+          ],
+          [
+            "For the music market",
+            "Mass-generated content may find it harder to win attention through recommendations"
+          ]
+        ],
+        "next": [
+          "Launch timing and regional coverage",
+          "How Deezer defines AI-involved content"
+        ],
+        "source": "TechCrunch AI",
+        "updated": "2026-10-14"
+      },
+      "sourceLinks": [
+        {
+          "title": "Deezer will soon let you filter out AI-generated music",
+          "url": "https://techcrunch.com/2026/10/14/deezer-will-soon-let-you-filter-out-ai-generated-music/",
+          "publisher": "TechCrunch AI"
+        }
+      ],
+      "eventImage": {
+        "url": "https://techcrunch.com/wp-content/uploads/2026/10/Deezer-AI-detection-feat.jpg?w=1067",
+        "credit": "TechCrunch AI",
+        "link": "https://techcrunch.com/2026/10/14/deezer-will-soon-let-you-filter-out-ai-generated-music/",
+        "zh": {
+          "alt": "Deezer准备让用户过滤AI音乐：选择权开始变成一个开关",
+          "caption": "Deezer准备让用户过滤AI音乐：选择权开始变成一个开关"
+        },
+        "en": {
+          "alt": "Deezer plans an AI-music filter: listener choice becomes a switch",
+          "caption": "Deezer plans an AI-music filter: listener choice becomes a switch"
+        }
+      },
+      "termGuides": [
+        {
+          "key": "Deezer",
+          "aliases": [
+            "Deezer"
+          ],
+          "zh": {
+            "label": "Deezer",
+            "meaning": "音乐流媒体服务。",
+            "relation": "它计划增加过滤选项，让用户选择不播放AI生成音乐。"
+          },
+          "en": {
+            "label": "Deezer",
+            "meaning": "A music streaming service.",
+            "relation": "It plans a setting that lets users choose not to play AI-generated music."
+          }
+        }
+      ]
+    },
+    {
+      "id": "flock-microphone-privacy",
+      "cat": "公共安全",
+      "icon": "alert",
+      "title": "Flock说麦克风只听枪声，网站写的却更多：公共安全设备的隐私账对不上",
+      "brief": "装在街头的传感器到底会收集什么，不能只靠公司一句口头保证。",
+      "take": "监控技术公司Flock的CEO称其麦克风“只”侦测枪声，但其网站上的描述显示能力范围可能不止于此。矛盾本身就是问题：公共安全设备常部署在居民日常活动的地方，一旦收集范围、保存方式和使用者说法不一致，人们很难判断自己被记录了什么。需要的不是更漂亮的宣传，而是可核查的技术说明、数据规则和独立审计。",
+      "meta": "隐私与公共安全｜10月14日",
+      "facts": [
+        [
+          "公司",
+          "Flock"
+        ],
+        [
+          "CEO说法",
+          "麦克风只侦测枪声"
+        ],
+        [
+          "争议",
+          "官网描述与该说法不一致"
+        ]
+      ],
+      "visual": null,
+      "impacts": [
+        [
+          "对居民",
+          "街头安全设备可能带来超出预期的声音与行为数据收集"
+        ],
+        [
+          "对政府采购",
+          "部署前应核实功能、保留期限和审计安排"
+        ]
+      ],
+      "next": [
+        "Flock是否澄清功能差异",
+        "使用这些设备的城市是否公开数据政策"
+      ],
+      "source": "TechCrunch AI",
+      "updated": "2026-10-14",
+      "en": {
+        "cat": "Public Safety",
+        "title": "Flock says its microphones hear only gunshots; its website suggests more",
+        "brief": "What a street-side sensor collects cannot rest on a company’s verbal assurance alone.",
+        "take": "The CEO of surveillance-technology company Flock says its microphones detect “just gunshots,” while descriptions on its website suggest a broader capability. The mismatch is the issue: public-safety equipment is often placed where people live their daily lives, and inconsistent claims make it hard to know what is being captured. What is needed is not better marketing, but checkable technical documentation, data rules, and independent audits.",
+        "meta": "Privacy and public safety | Oct. 14",
+        "facts": [
+          [
+            "Company",
+            "Flock"
+          ],
+          [
+            "CEO claim",
+            "Microphones detect only gunshots"
+          ],
+          [
+            "Dispute",
+            "Website language differs from that claim"
+          ]
+        ],
+        "visual": null,
+        "impacts": [
+          [
+            "For residents",
+            "Street-safety tools may collect more sound and behavioral data than expected"
+          ],
+          [
+            "For public buyers",
+            "Cities should verify functions, retention periods, and audit arrangements before deployment"
+          ]
+        ],
+        "next": [
+          "Whether Flock explains the difference",
+          "Whether cities using the tools publish their data policies"
+        ],
+        "source": "TechCrunch AI",
+        "updated": "2026-10-14"
+      },
+      "sourceLinks": [
+        {
+          "title": "Flock CEO says its microphones detect ‘just gunshots’ — its website says different",
+          "url": "https://techcrunch.com/2026/10/14/flock-ceo-says-its-microphones-detect-just-gunshots-its-website-says-different/",
+          "publisher": "TechCrunch AI"
+        }
+      ],
+      "eventImage": {
+        "url": "https://techcrunch.com/wp-content/uploads/2026/10/55589672916_8efa76c0ac_o.jpg?resize=1200,800",
+        "credit": "TechCrunch AI",
+        "link": "https://techcrunch.com/2026/10/14/flock-ceo-says-its-microphones-detect-just-gunshots-its-website-says-different/",
+        "zh": {
+          "alt": "Flock说麦克风只听枪声，网站写的却更多：公共安全设备的隐私账对不上",
+          "caption": "Flock说麦克风只听枪声，网站写的却更多：公共安全设备的隐私账对不上"
+        },
+        "en": {
+          "alt": "Flock says its microphones hear only gunshots; its website suggests more",
+          "caption": "Flock says its microphones hear only gunshots; its website suggests more"
+        }
+      },
+      "termGuides": [
+        {
+          "key": "Flock",
+          "aliases": [
+            "Flock"
+          ],
+          "zh": {
+            "label": "Flock",
+            "meaning": "提供公共安全监控与传感设备的科技公司。",
+            "relation": "其麦克风实际能侦测什么，与公司CEO的说法出现不一致。"
+          },
+          "en": {
+            "label": "Flock",
+            "meaning": "A technology company selling surveillance and public-safety sensors.",
+            "relation": "Questions arose over whether its microphones do more than the CEO described."
+          }
+        }
+      ]
+    },
+    {
+      "id": "ai-labs-dead-startup-data",
+      "cat": "AI",
+      "icon": "code",
+      "title": "倒闭创业公司的数据成了AI实验室的新货源：旧用户资料该归谁？",
+      "brief": "公司关门后留下的数据可能继续训练模型，用户却未必知道或同意。",
+      "take": "MIT Technology Review报道，AI实验室正在购买已倒闭创业公司的数据来训练模型。对买方而言，这是补充训练材料的快捷方式；对原先把信息交给那家小公司的用户而言，问题更棘手：当初同意的是哪种用途，公司倒闭后数据能否被转卖，是否还有退出渠道？这会把隐私条款里容易被忽略的“资产转让”条款推到台前。",
+      "meta": "数据隐私｜10月13日",
+      "facts": [
+        [
+          "买方",
+          "AI实验室"
+        ],
+        [
+          "来源",
+          "已倒闭创业公司的数据"
+        ],
+        [
+          "用途",
+          "训练AI模型"
+        ]
+      ],
+      "visual": null,
+      "impacts": [
+        [
+          "对用户",
+          "曾交给小公司的资料可能在公司消失后换了用途"
+        ],
+        [
+          "对创业公司",
+          "数据处置条款将更直接影响用户信任和收购价值"
+        ]
+      ],
+      "next": [
+        "数据交易是否包含可识别个人信息",
+        "监管者会否要求更明确的再利用同意"
+      ],
+      "source": "MIT Technology Review",
+      "updated": "2026-10-13",
+      "en": {
+        "cat": "AI",
+        "title": "Data from failed startups is becoming AI training fuel: who owns old user data?",
+        "brief": "Data may keep training models after a company closes, even if users never knew or agreed.",
+        "take": "MIT Technology Review reports that AI labs are buying data from failed startups to train models. For buyers, it is a quick source of training material. For people who originally gave information to a small company, the issue is tougher: what use did they agree to, can data be sold after a shutdown, and is there any way to opt out? It puts easily overlooked “asset transfer” clauses in privacy policies under a harsher light.",
+        "meta": "Data privacy | Oct. 13",
+        "facts": [
+          [
+            "Buyers",
+            "AI labs"
+          ],
+          [
+            "Source",
+            "Data from failed startups"
+          ],
+          [
+            "Use",
+            "Training AI models"
+          ]
+        ],
+        "visual": null,
+        "impacts": [
+          [
+            "For users",
+            "Information given to a small company may gain a new use after that company disappears"
+          ],
+          [
+            "For startups",
+            "Data-disposal terms may matter more for trust and acquisition value"
+          ]
+        ],
+        "next": [
+          "Whether transactions include identifiable personal data",
+          "Whether regulators demand clearer consent for reuse"
+        ],
+        "source": "MIT Technology Review",
+        "updated": "2026-10-13"
+      },
+      "sourceLinks": [
+        {
+          "title": "AI labs are buying data from dead startups to train their models",
+          "url": "https://www.technologyreview.com/2026/10/13/1145755/ai-labs-buying-data-from-dead-startups-to-train-models/",
+          "publisher": "MIT Technology Review"
+        }
+      ],
+      "eventImage": {
+        "url": "https://wp.technologyreview.com/wp-content/uploads/2026/10/AI-Death_Redamonti_MIT-thumb.jpg?resize=1200,600",
+        "credit": "MIT Technology Review",
+        "link": "https://www.technologyreview.com/2026/10/13/1145755/ai-labs-buying-data-from-dead-startups-to-train-models/",
+        "zh": {
+          "alt": "倒闭创业公司的数据成了AI实验室的新货源：旧用户资料该归谁？",
+          "caption": "倒闭创业公司的数据成了AI实验室的新货源：旧用户资料该归谁？"
+        },
+        "en": {
+          "alt": "Data from failed startups is becoming AI training fuel: who owns old user data?",
+          "caption": "Data from failed startups is becoming AI training fuel: who owns old user data?"
+        }
+      },
+      "termGuides": [
+        {
+          "key": "训练数据",
+          "aliases": [
+            "训练数据",
+            "training data"
+          ],
+          "zh": {
+            "label": "训练数据",
+            "meaning": "用来让AI学习语言、图像或行为模式的材料。",
+            "relation": "报道所说的倒闭创业公司数据，正被AI实验室买来作为模型训练材料。"
+          },
+          "en": {
+            "label": "Training data",
+            "meaning": "Material used to teach an AI patterns in language, images, or behavior.",
+            "relation": "The data left by failed startups is being bought as material for model training."
+          }
+        }
+      ]
+    },
+    {
+      "id": "la-grocery-robots",
+      "cat": "机器人与具身智能",
+      "icon": "drone",
+      "title": "洛杉矶超市里开始有AI机器人巡走：顾客担心被盯着，员工担心被替代",
+      "brief": "零售机器人离普通人的日常更近了，但它到底帮忙还是监控，取决于怎么用。",
+      "take": "《洛杉矶时报》报道，AI机器人已在洛杉矶一些杂货店的过道中活动，顾客和员工对此感到不安。零售商会把它们视为巡检、盘点或安全工具；但在购物和上班的现场，机器人也可能带来持续观察、误判和岗位压力。别把“机器人进店”当成单纯炫技：它收集什么、谁能看、员工是否因此被减时或调岗，才是与日常生活真正相关的部分。",
+      "meta": "零售机器人｜10月15日",
+      "facts": [
+        [
+          "地点",
+          "美国洛杉矶杂货店"
+        ],
+        [
+          "设备",
+          "AI机器人在过道中活动"
+        ],
+        [
+          "反应",
+          "顾客和员工表达担忧"
+        ]
+      ],
+      "visual": null,
+      "impacts": [
+        [
+          "对消费者",
+          "购物空间可能增加移动监控和自动化服务"
+        ],
+        [
+          "对员工",
+          "工作内容、排班和被系统评价的方式可能改变"
+        ]
+      ],
+      "next": [
+        "机器人具体承担巡检、盘点还是安保",
+        "门店如何告知并处理采集的数据"
+      ],
+      "source": "Los Angeles Times",
+      "updated": "2026-10-15",
+      "en": {
+        "cat": "Robotics and Embodied AI",
+        "title": "AI robots are roaming LA grocery aisles: shoppers feel watched, workers fear replacement",
+        "brief": "Retail robots are getting closer to daily life, but whether they help or monitor depends on how they are used.",
+        "take": "The Los Angeles Times reports that AI robots are operating in aisles at some Los Angeles grocery stores, making shoppers and workers uneasy. Retailers may see them as tools for inspection, inventory, or security. On the shop floor, though, they can also mean continual observation, mistaken judgments, and pressure on jobs. This is not just a flashy robot story: what data is collected, who sees it, and whether workers lose hours or are moved to other roles are the questions that affect daily life.",
+        "meta": "Retail robotics | Oct. 15",
+        "facts": [
+          [
+            "Location",
+            "Los Angeles grocery stores"
+          ],
+          [
+            "Device",
+            "AI robots operating in aisles"
+          ],
+          [
+            "Reaction",
+            "Shoppers and workers raise concerns"
+          ]
+        ],
+        "visual": null,
+        "impacts": [
+          [
+            "For shoppers",
+            "Shopping spaces may add mobile monitoring alongside automated services"
+          ],
+          [
+            "For workers",
+            "Job tasks, scheduling, and system-based evaluation may change"
+          ]
+        ],
+        "next": [
+          "Whether robots are used for inspection, inventory, or security",
+          "How stores disclose and handle collected data"
+        ],
+        "source": "Los Angeles Times",
+        "updated": "2026-10-15"
+      },
+      "sourceLinks": [
+        {
+          "title": "AI robots are roaming L.A. grocery store aisles. Shoppers and workers are worried",
+          "url": "https://www.latimes.com/business/story/2026-10-15/ai-robots-are-roaming-la-grocery-store-aisles-shoppers-workers-are-worried",
+          "publisher": "Los Angeles Times"
+        }
+      ],
+      "eventImage": {
+        "url": "https://ca-times.brightspotcdn.com/dims4/default/c1cf93d/2147483647/strip/true/crop/7523x3950+0+533/resize/1200x630!/quality/75/?url=https%3A%2F%2Fcalifornia-times-brightspot.s3.amazonaws.com%2F5a%2F85%2Ff745569b480689e66f9e446b4eca%2F1572559-fi-inventory-robot-groceries-eat-0003.jpg",
+        "credit": "Los Angeles Times",
+        "link": "https://www.latimes.com/business/story/2026-10-15/ai-robots-are-roaming-la-grocery-store-aisles-shoppers-workers-are-worried",
+        "zh": {
+          "alt": "洛杉矶超市里开始有AI机器人巡走：顾客担心被盯着，员工担心被替代",
+          "caption": "洛杉矶超市里开始有AI机器人巡走：顾客担心被盯着，员工担心被替代"
+        },
+        "en": {
+          "alt": "AI robots are roaming LA grocery aisles: shoppers feel watched, workers fear replacement",
+          "caption": "AI robots are roaming LA grocery aisles: shoppers feel watched, workers fear replacement"
+        }
+      },
+      "termGuides": [
+        {
+          "key": "零售机器人",
+          "aliases": [
+            "零售机器人",
+            "retail robots",
+            "AI robots"
+          ],
+          "zh": {
+            "label": "零售机器人",
+            "meaning": "在商店内移动、感知环境并执行巡检或服务任务的机器人。",
+            "relation": "它们已出现在洛杉矶杂货店，带来便利之外的监控和就业担忧。"
+          },
+          "en": {
+            "label": "Retail robots",
+            "meaning": "Robots that move through stores, sense their surroundings, and perform inspection or service tasks.",
+            "relation": "Their use in Los Angeles grocery stores is raising concerns about surveillance and jobs."
+          }
+        }
+      ]
+    }
+  ]
+}
