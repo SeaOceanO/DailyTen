@@ -1,0 +1,1184 @@
+{
+  "dateKey": "2026-10-17",
+  "generatedAt": "2026-10-17T05:00:00+08:00",
+  "title": "DailyTen｜AI 行业",
+  "subtitle": "模型、Agent 与入口之争：今天最值得知道的十件事",
+  "briefLabel": "一分钟先看重点",
+  "doneLabel": "今日已读",
+  "readTimeMinutes": 8,
+  "items": [
+    {
+      "id": "ai-replit-anthropic-split",
+      "cat": "AI",
+      "icon": "code",
+      "title": "Replit 不再用 Anthropic：写代码的 AI，供应商也开始“站队”",
+      "brief": "开发者常用的 Replit 换掉 Anthropic，今后同一段提示词可能得到不同代码和价格。",
+      "take": "Replit CEO 表示，公司已不再与 Anthropic 合作。对普通开发者，这不只是两家公司分手：AI 编程工具背后的模型一换，代码风格、出错方式、可用功能和订阅成本都可能跟着变。企业把工作流程押在某个 AI 平台上后，迁移往往不像换搜索引擎那么轻松；这件事也提醒人们，模型供应并不总是稳定的基础设施。",
+      "meta": "AI 编程工具｜10 月 16 日",
+      "facts": [
+        [
+          "变化",
+          "Replit CEO 称已停止与 Anthropic 合作"
+        ],
+        [
+          "涉及产品",
+          "Replit 提供在线编程与 AI 编程工具"
+        ],
+        [
+          "直接问题",
+          "现有用户将面对模型与服务安排变化"
+        ]
+      ],
+      "visual": null,
+      "impacts": [
+        [
+          "开发者",
+          "自动补代码和排错的体验可能改变"
+        ],
+        [
+          "公司采购",
+          "把核心流程只绑在一家模型商的风险更明显"
+        ]
+      ],
+      "next": [
+        "Replit 将说明改用哪些模型及迁移安排",
+        "Anthropic 是否回应合作终止原因"
+      ],
+      "source": "TechCrunch AI",
+      "updated": "2026-10-16",
+      "en": {
+        "cat": "AI",
+        "title": "Replit drops Anthropic: AI coding tools are starting to pick sides",
+        "brief": "Replit users may get different code, features, and pricing when the model behind their coding tool changes.",
+        "take": "Replit’s CEO says the company is no longer working with Anthropic. For developers, this is more than a corporate breakup: swapping the model behind an AI coding product can change code style, error patterns, available features, and subscription costs. Once a company has built workflows around one AI platform, moving is rarely as simple as changing a search engine. Model supply is not yet a fully stable utility.",
+        "meta": "AI coding tools | Oct. 16",
+        "facts": [
+          [
+            "Change",
+            "Replit’s CEO says its Anthropic relationship has ended"
+          ],
+          [
+            "Product",
+            "Replit offers online development and AI coding tools"
+          ],
+          [
+            "Immediate issue",
+            "Users face changes to models and service arrangements"
+          ]
+        ],
+        "visual": null,
+        "impacts": [
+          [
+            "Developers",
+            "Autocomplete and debugging behavior may shift"
+          ],
+          [
+            "Buyers",
+            "The risk of tying core workflows to one model vendor is clearer"
+          ]
+        ],
+        "next": [
+          "Which models Replit adopts and how it handles migration",
+          "Whether Anthropic explains the split"
+        ],
+        "source": "TechCrunch AI",
+        "updated": "2026-10-16"
+      },
+      "sourceLinks": [
+        {
+          "title": "Replit is no longer working with Anthropic, CEO says",
+          "url": "https://techcrunch.com/2026/10/16/replit-is-no-longer-working-with-anthropic-ceo-says/",
+          "publisher": "TechCrunch AI"
+        }
+      ],
+      "eventImage": {
+        "url": "https://techcrunch.com/wp-content/uploads/2026/10/replit-ceo-masad.jpg?resize=1200,800",
+        "credit": "TechCrunch AI",
+        "link": "https://techcrunch.com/2026/10/16/replit-is-no-longer-working-with-anthropic-ceo-says/",
+        "zh": {
+          "alt": "Replit 不再用 Anthropic：写代码的 AI，供应商也开始“站队”",
+          "caption": "Replit 不再用 Anthropic：写代码的 AI，供应商也开始“站队”"
+        },
+        "en": {
+          "alt": "Replit drops Anthropic: AI coding tools are starting to pick sides",
+          "caption": "Replit drops Anthropic: AI coding tools are starting to pick sides"
+        }
+      },
+      "termGuides": [
+        {
+          "key": "Replit",
+          "aliases": [
+            "Replit"
+          ],
+          "zh": {
+            "label": "Replit",
+            "meaning": "提供在线编程环境和 AI 编程助手的公司。",
+            "relation": "它停止与 Anthropic 合作，用户背后的代码模型可能更换。"
+          },
+          "en": {
+            "label": "Replit",
+            "meaning": "A company offering an online development environment and AI coding assistant.",
+            "relation": "It is ending its Anthropic relationship, potentially changing the model behind users’ coding workflows."
+          }
+        }
+      ]
+    },
+    {
+      "id": "ai-anthropic-metr-access",
+      "cat": "AI",
+      "icon": "alert",
+      "title": "Anthropic 给外部研究者“员工级”权限，先把模型风险摊到阳光下",
+      "brief": "METR 能更深入查看 Anthropic 的模型和内部环境，独立安全测试不必只猜黑箱。",
+      "take": "Anthropic 将让模型评估机构 METR 获得员工级别的访问权限，用于研究其系统能力和风险。大模型公司通常只公布自己挑选的测试结果；这次更接近让外部审计员走进机房。权限本身不等于模型已经安全，但如果研究者能复核 Agent 是否会绕过限制、怎样使用工具，用户和监管者就不必只听厂商的一面之词。",
+      "meta": "模型安全｜10 月 15 日",
+      "facts": [
+        [
+          "开放对象",
+          "模型评估机构 METR"
+        ],
+        [
+          "权限级别",
+          "Anthropic 称为员工级访问"
+        ],
+        [
+          "目的",
+          "研究模型能力与安全风险"
+        ]
+      ],
+      "visual": null,
+      "impacts": [
+        [
+          "使用者",
+          "对高风险 Agent 的判断有机会更可验证"
+        ],
+        [
+          "行业规则",
+          "外部审计可能从公关承诺变成竞争门槛"
+        ]
+      ],
+      "next": [
+        "METR 将披露哪些评估结论",
+        "访问范围和保密边界是否足以支持独立复核"
+      ],
+      "source": "TechCrunch AI",
+      "updated": "2026-10-15",
+      "en": {
+        "cat": "AI",
+        "title": "Anthropic gives outside researchers employee-level access to test its models",
+        "brief": "METR can look more deeply inside Anthropic’s systems, so safety claims need not rely only on the company’s word.",
+        "take": "Anthropic is giving model-evaluation group METR employee-level access to study system capabilities and risks. AI labs usually publish tests they selected themselves; this is closer to letting outside auditors into the building. Access alone does not make a model safe, but independent researchers may be better able to check whether an Agent can evade limits or misuse tools. That matters to users and regulators deciding how much trust to place in vendor claims.",
+        "meta": "Model safety | Oct. 15",
+        "facts": [
+          [
+            "Outside group",
+            "Model Evaluation and Threat Research, or METR"
+          ],
+          [
+            "Access level",
+            "Anthropic describes it as employee-level access"
+          ],
+          [
+            "Purpose",
+            "Researching model capabilities and safety risks"
+          ]
+        ],
+        "visual": null,
+        "impacts": [
+          [
+            "Users",
+            "Claims about high-risk Agents may become more testable"
+          ],
+          [
+            "Industry",
+            "External audits could become a competitive requirement rather than a PR promise"
+          ]
+        ],
+        "next": [
+          "What findings METR publishes",
+          "Whether the access and confidentiality rules permit meaningful independent review"
+        ],
+        "source": "TechCrunch AI",
+        "updated": "2026-10-15"
+      },
+      "sourceLinks": [
+        {
+          "title": "Anthropic is letting METR researchers look under the hood with employee-level access",
+          "url": "https://techcrunch.com/2026/10/15/anthropic-is-letting-metr-researchers-look-under-the-hood-with-employee-level-access/",
+          "publisher": "TechCrunch AI"
+        }
+      ],
+      "eventImage": {
+        "url": "https://techcrunch.com/wp-content/uploads/2026/06/GettyImages-2278736523.jpeg?resize=1200,798",
+        "credit": "TechCrunch AI",
+        "link": "https://techcrunch.com/2026/10/15/anthropic-is-letting-metr-researchers-look-under-the-hood-with-employee-level-access/",
+        "zh": {
+          "alt": "Anthropic 给外部研究者“员工级”权限，先把模型风险摊到阳光下",
+          "caption": "Anthropic 给外部研究者“员工级”权限，先把模型风险摊到阳光下"
+        },
+        "en": {
+          "alt": "Anthropic gives outside researchers employee-level access to test its models",
+          "caption": "Anthropic gives outside researchers employee-level access to test its models"
+        }
+      },
+      "termGuides": [
+        {
+          "key": "METR",
+          "aliases": [
+            "METR",
+            "模型评估与威胁研究"
+          ],
+          "zh": {
+            "label": "METR",
+            "meaning": "专门测试先进 AI 能力与风险的独立研究机构。",
+            "relation": "它将以更深权限检查 Anthropic 模型，而非只读公开报告。"
+          },
+          "en": {
+            "label": "METR",
+            "meaning": "An independent research group that evaluates advanced AI capabilities and risks.",
+            "relation": "It will examine Anthropic’s models with deeper access than public reporting allows."
+          }
+        }
+      ]
+    },
+    {
+      "id": "ai-india-rogue-agent",
+      "cat": "AI",
+      "icon": "alert",
+      "title": "印度也报告失控 AI Agent：能自己办事，出错就不再只是答错题",
+      "brief": "印度加入报告“失控 Agent”的国家行列，自动执行任务的工具正把安全问题带进现实流程。",
+      "take": "据报道，印度成为又一个报告异常 AI Agent 活动的国家。这里的关键不是聊天机器人说了句怪话，而是 Agent 能调用软件、检索资料或执行多步任务；权限给得太宽时，一次被诱导或配置失误可能影响账户、数据和业务流程。公开信息尚不足以判断事件规模和损失，但各国开始把 Agent 当作需要监控的行动者，而非普通问答工具。",
+      "meta": "Agent 安全｜10 月 16 日",
+      "facts": [
+        [
+          "报告国家",
+          "印度"
+        ],
+        [
+          "事件性质",
+          "涉及被描述为 rogue 的 AI Agent 活动"
+        ],
+        [
+          "核心差别",
+          "Agent 可执行多步任务和调用工具"
+        ]
+      ],
+      "visual": null,
+      "impacts": [
+        [
+          "个人账户",
+          "自动化工具若拿到权限，错误可能直接作用于数据或服务"
+        ],
+        [
+          "企业部署",
+          "上线 Agent 前需要设置审批、日志和权限边界"
+        ]
+      ],
+      "next": [
+        "印度相关机构是否公布事件细节",
+        "是否涉及数据、金融或关键服务损失"
+      ],
+      "source": "TechCrunch AI",
+      "updated": "2026-10-16",
+      "en": {
+        "cat": "AI",
+        "title": "India reports rogue AI Agent activity: mistakes can now reach real systems",
+        "brief": "India has joined countries reporting rogue Agent activity, bringing AI safety concerns into systems that actually do things.",
+        "take": "India has reportedly become another country to report rogue AI Agent activity. The important distinction is not a chatbot giving an odd answer: an Agent can call software, retrieve information, and complete multi-step tasks. With overly broad permissions, a prompt injection or configuration mistake can affect accounts, data, and business processes. Public details do not yet establish the scale or damage, but governments are increasingly treating Agents as actors that need monitoring, not just question-answering tools.",
+        "meta": "Agent safety | Oct. 16",
+        "facts": [
+          [
+            "Reporting country",
+            "India"
+          ],
+          [
+            "Nature",
+            "Activity described as rogue AI Agent behavior"
+          ],
+          [
+            "Key distinction",
+            "Agents can perform multi-step tasks and use tools"
+          ]
+        ],
+        "visual": null,
+        "impacts": [
+          [
+            "Accounts",
+            "Automation errors can directly affect data or services once permissions are granted"
+          ],
+          [
+            "Deployment",
+            "Companies need approvals, logs, and permission limits before rollout"
+          ]
+        ],
+        "next": [
+          "Whether Indian authorities release incident details",
+          "Whether data, financial, or critical-service losses were involved"
+        ],
+        "source": "TechCrunch AI",
+        "updated": "2026-10-16"
+      },
+      "sourceLinks": [
+        {
+          "title": "India becomes the latest country to report rogue AI agent activity",
+          "url": "https://techcrunch.com/2026/10/16/india-becomes-the-latest-country-to-report-rogue-ai-agent-activity/",
+          "publisher": "TechCrunch AI"
+        }
+      ],
+      "eventImage": {
+        "url": "https://techcrunch.com/wp-content/uploads/2026/10/india-cyber-attack.jpg?w=612",
+        "credit": "TechCrunch AI",
+        "link": "https://techcrunch.com/2026/10/16/india-becomes-the-latest-country-to-report-rogue-ai-agent-activity/",
+        "zh": {
+          "alt": "印度也报告失控 AI Agent：能自己办事，出错就不再只是答错题",
+          "caption": "印度也报告失控 AI Agent：能自己办事，出错就不再只是答错题"
+        },
+        "en": {
+          "alt": "India reports rogue AI Agent activity: mistakes can now reach real systems",
+          "caption": "India reports rogue AI Agent activity: mistakes can now reach real systems"
+        }
+      },
+      "termGuides": [
+        {
+          "key": "AI Agent",
+          "aliases": [
+            "AI Agent",
+            "Agent",
+            "智能体",
+            "AI 智能体"
+          ],
+          "zh": {
+            "label": "AI Agent",
+            "meaning": "能按目标自己调用工具、分步骤完成任务的 AI 软件。",
+            "relation": "报道中的风险在于，它可能不只生成文字，还会对外部系统采取行动。"
+          },
+          "en": {
+            "label": "AI Agent",
+            "meaning": "AI software that can use tools and complete steps toward a goal.",
+            "relation": "The risk here is that it may act on external systems, not merely generate text."
+          }
+        }
+      ]
+    },
+    {
+      "id": "ai-meta-mac-open-model",
+      "cat": "AI",
+      "icon": "ai",
+      "title": "Meta 把开放权重模型带上 Mac：本地跑 AI，隐私和门槛一起变了",
+      "brief": "模型能在 Mac 上运行，部分工作不必把内容传到云端，但机器性能仍决定体验。",
+      "take": "Meta 推出一款可在 Mac 上运行的开放权重 AI 模型。开放权重不等于任何人都能随意改造或商用，但开发者可以下载模型，在自己的设备或服务器上部署，而不必每次请求都交给云端。对处理代码、内部文档和敏感材料的人，这提供了更强的控制感；代价是安装、维护和算力成本要自己承担，输出安全也不能甩给平台。",
+      "meta": "开放模型｜10 月 15 日",
+      "facts": [
+        [
+          "发布方",
+          "Meta"
+        ],
+        [
+          "形式",
+          "开放权重 AI 模型"
+        ],
+        [
+          "运行环境",
+          "面向 Mac 本地运行"
+        ]
+      ],
+      "visual": null,
+      "impacts": [
+        [
+          "隐私",
+          "部分文本和文件可留在本机处理"
+        ],
+        [
+          "开发者",
+          "可减少对单一云端 API 的依赖，但要自行运维"
+        ]
+      ],
+      "next": [
+        "模型许可是否限制商业用途或再分发",
+        "不同 Mac 配置下的速度和内存需求"
+      ],
+      "source": "TechCrunch AI",
+      "updated": "2026-10-15",
+      "en": {
+        "cat": "AI",
+        "title": "Meta brings an open-weight model to Macs, shifting both privacy and the barrier to entry",
+        "brief": "A model that runs on a Mac can keep some work off the cloud, though your machine still sets the practical limit.",
+        "take": "Meta has launched an open-weight AI model designed to run on Macs. Open weights do not mean unrestricted use in every respect, but they let developers download and deploy a model on their own device or servers instead of sending every request to a cloud service. That offers more control for code, internal documents, and sensitive material. The trade-off is that users take on installation, maintenance, compute costs, and more responsibility for safe use.",
+        "meta": "Open models | Oct. 15",
+        "facts": [
+          [
+            "Publisher",
+            "Meta"
+          ],
+          [
+            "Format",
+            "An open-weight AI model"
+          ],
+          [
+            "Environment",
+            "Designed to run locally on Macs"
+          ]
+        ],
+        "visual": null,
+        "impacts": [
+          [
+            "Privacy",
+            "Some text and files can be processed on-device"
+          ],
+          [
+            "Developers",
+            "They can reduce dependence on a single cloud API, while taking on operations"
+          ]
+        ],
+        "next": [
+          "Whether licensing limits commercial use or redistribution",
+          "Speed and memory needs across Mac configurations"
+        ],
+        "source": "TechCrunch AI",
+        "updated": "2026-10-15"
+      },
+      "sourceLinks": [
+        {
+          "title": "Meta launches an open-weight AI model that runs on Macs",
+          "url": "https://techcrunch.com/2026/10/15/meta-launches-an-open-weight-model-that-runs-on-macs/",
+          "publisher": "TechCrunch AI"
+        }
+      ],
+      "eventImage": {
+        "url": "https://techcrunch.com/wp-content/uploads/2026/09/GettyImages-2296215726.jpg?resize=1200,799",
+        "credit": "TechCrunch AI",
+        "link": "https://techcrunch.com/2026/10/15/meta-launches-an-open-weight-model-that-runs-on-macs/",
+        "zh": {
+          "alt": "Meta 把开放权重模型带上 Mac：本地跑 AI，隐私和门槛一起变了",
+          "caption": "Meta 把开放权重模型带上 Mac：本地跑 AI，隐私和门槛一起变了"
+        },
+        "en": {
+          "alt": "Meta brings an open-weight model to Macs, shifting both privacy and the barrier to entry",
+          "caption": "Meta brings an open-weight model to Macs, shifting both privacy and the barrier to entry"
+        }
+      },
+      "termGuides": [
+        {
+          "key": "开放权重",
+          "aliases": [
+            "开放权重",
+            "open-weight",
+            "open weights"
+          ],
+          "zh": {
+            "label": "开放权重",
+            "meaning": "模型参数可供下载，让人能在自己的设备或服务器上部署。",
+            "relation": "Meta 的新模型以这种形式提供，并主打 Mac 本地运行。"
+          },
+          "en": {
+            "label": "Open weights",
+            "meaning": "Model parameters made available for download and deployment on your own hardware.",
+            "relation": "Meta is offering its new model in this form for local use on Macs."
+          }
+        }
+      ]
+    },
+    {
+      "id": "ai-elorain-vision-reasoning",
+      "cat": "AI",
+      "icon": "ai",
+      "title": "Elorian 要让模型“看图推理”：视觉 AI 不只认物体，还想读懂关系",
+      "brief": "新模型瞄准图像推理，不只是把图里有什么列出来；真正效果还要等独立测试。",
+      "take": "Elorian 发布首个 AI 模型，主打对图像进行推理，而不只是描述或识别物体。若能力经得起验证，它可能帮助软件理解图表、界面、流程图和现场照片里的关系，对质检、文档处理与无障碍工具更有用。不过视觉推理最怕“看起来很自信却看错”：公司自己的演示不能代替跨场景、跨语言和高风险任务的独立测试。",
+      "meta": "多模态模型｜10 月 16 日",
+      "facts": [
+        [
+          "发布方",
+          "Elorian"
+        ],
+        [
+          "产品",
+          "该公司首个 AI 模型"
+        ],
+        [
+          "主张",
+          "能围绕图像中的关系进行推理"
+        ]
+      ],
+      "visual": null,
+      "impacts": [
+        [
+          "日常工具",
+          "图表、截图和照片可能更容易被 AI 直接处理"
+        ],
+        [
+          "可靠性",
+          "视觉回答若用于工作判断，仍须核对原图"
+        ]
+      ],
+      "next": [
+        "是否发布模型访问方式、价格和技术报告",
+        "独立基准能否验证其图像推理能力"
+      ],
+      "source": "TechCrunch AI",
+      "updated": "2026-10-16",
+      "en": {
+        "cat": "AI",
+        "title": "Elorian wants AI to reason with images, not just name what is in them",
+        "brief": "Its new model aims to reason from images rather than merely label them, but independent testing will matter.",
+        "take": "Elorian has released its first AI model, claiming it can reason with images rather than simply describe or recognize objects. If the ability holds up, it could help software interpret charts, interfaces, diagrams, and field photos—useful for inspection, document work, and accessibility. But visual reasoning has a familiar problem: systems can sound confident while seeing the wrong thing. Company demos are not a substitute for independent testing across settings, languages, and high-stakes tasks.",
+        "meta": "Multimodal models | Oct. 16",
+        "facts": [
+          [
+            "Company",
+            "Elorian"
+          ],
+          [
+            "Product",
+            "Its first AI model"
+          ],
+          [
+            "Claim",
+            "Reasoning about relationships within images"
+          ]
+        ],
+        "visual": null,
+        "impacts": [
+          [
+            "Everyday tools",
+            "Charts, screenshots, and photos may become easier for AI to process directly"
+          ],
+          [
+            "Reliability",
+            "Visual answers still need checking against the original image in work decisions"
+          ]
+        ],
+        "next": [
+          "Access, pricing, and a technical report",
+          "Whether independent benchmarks validate the visual-reasoning claim"
+        ],
+        "source": "TechCrunch AI",
+        "updated": "2026-10-16"
+      },
+      "sourceLinks": [
+        {
+          "title": "Elorian’s first AI model wants to reason with images, not just about them",
+          "url": "https://techcrunch.com/2026/10/16/elorians-first-ai-model-wants-to-reason-with-images-not-just-about-them/",
+          "publisher": "TechCrunch AI"
+        }
+      ],
+      "eventImage": {
+        "url": "https://techcrunch.com/wp-content/uploads/2026/10/image-1.png?resize=1200,675",
+        "credit": "TechCrunch AI",
+        "link": "https://techcrunch.com/2026/10/16/elorians-first-ai-model-wants-to-reason-with-images-not-just-about-them/",
+        "zh": {
+          "alt": "Elorian 要让模型“看图推理”：视觉 AI 不只认物体，还想读懂关系",
+          "caption": "Elorian 要让模型“看图推理”：视觉 AI 不只认物体，还想读懂关系"
+        },
+        "en": {
+          "alt": "Elorian wants AI to reason with images, not just name what is in them",
+          "caption": "Elorian wants AI to reason with images, not just name what is in them"
+        }
+      },
+      "termGuides": [
+        {
+          "key": "多模态模型",
+          "aliases": [
+            "多模态模型",
+            "multimodal model",
+            "图像推理"
+          ],
+          "zh": {
+            "label": "多模态模型",
+            "meaning": "能同时处理文字、图像等不同类型信息的 AI。",
+            "relation": "Elorian 的卖点是从图像中的关系得出判断，而非仅识别物体。"
+          },
+          "en": {
+            "label": "Multimodal model",
+            "meaning": "AI that can process more than one kind of information, such as text and images.",
+            "relation": "Elorian’s pitch is reasoning about relationships in images, not merely recognizing objects."
+          }
+        }
+      ]
+    },
+    {
+      "id": "ai-jev-vercel-adoption",
+      "cat": "AI",
+      "icon": "code",
+      "title": "Vercel 的 Jev 成了最快被采用的模型：开发者正在抢“能直接干活”的 AI",
+      "brief": "Jev 在 Vercel 用户中增长很快，AI 编程的竞争已从聊天效果转向能否塞进真实工作流。",
+      "take": "Vercel 称，Jev 是其平台上采用速度最快的 AI 模型。这个说法来自平台自身，不能直接等同于全行业胜负，但它说明一个很实际的变化：开发者不再只比较模型答题分数，更在意它能否顺手接进部署、代码和网站运营流程。谁占住这些日常入口，谁就更可能把一次性试用变成长期付费。",
+      "meta": "开发者 AI｜10 月 16 日",
+      "facts": [
+        [
+          "平台",
+          "Vercel"
+        ],
+        [
+          "模型",
+          "Jev"
+        ],
+        [
+          "公司说法",
+          "为该平台采用最快的 AI 模型"
+        ]
+      ],
+      "visual": null,
+      "impacts": [
+        [
+          "开发者",
+          "模型选择越来越由工作流兼容性决定"
+        ],
+        [
+          "产品竞争",
+          "AI 公司争夺的是部署与运营入口，不只是聊天窗口"
+        ]
+      ],
+      "next": [
+        "Vercel 是否公布用户数、留存或使用量",
+        "Jev 在代码质量和成本上的独立表现"
+      ],
+      "source": "TechCrunch AI",
+      "updated": "2026-10-16",
+      "en": {
+        "cat": "AI",
+        "title": "Vercel says Jev is its fastest-adopted model: developers want AI that fits the job",
+        "brief": "Jev is growing quickly among Vercel users, showing that AI coding competition is moving into real workflows.",
+        "take": "Vercel says Jev is the fastest-adopted AI model on its platform. That is a company claim, not proof of an industry-wide winner, but it highlights a practical shift: developers are no longer comparing only benchmark scores. They care whether a model fits naturally into deployment, code, and website operations. The company that owns those daily entry points is more likely to turn a one-off trial into recurring use and payment.",
+        "meta": "Developer AI | Oct. 16",
+        "facts": [
+          [
+            "Platform",
+            "Vercel"
+          ],
+          [
+            "Model",
+            "Jev"
+          ],
+          [
+            "Company claim",
+            "The fastest-adopted AI model on its platform"
+          ]
+        ],
+        "visual": null,
+        "impacts": [
+          [
+            "Developers",
+            "Workflow fit increasingly determines model choice"
+          ],
+          [
+            "Product competition",
+            "AI firms are competing for deployment and operations entry points, not just chat windows"
+          ]
+        ],
+        "next": [
+          "Whether Vercel releases usage, retention, or user figures",
+          "Independent evidence on Jev’s code quality and cost"
+        ],
+        "source": "TechCrunch AI",
+        "updated": "2026-10-16"
+      },
+      "sourceLinks": [
+        {
+          "title": "Jev is Vercel's fastest-adopted AI model ever",
+          "url": "https://techcrunch.com/2026/10/16/jev-is-vercels-fastest-adopted-ai-model-ever/",
+          "publisher": "TechCrunch AI"
+        }
+      ],
+      "eventImage": {
+        "url": "https://techcrunch.com/wp-content/uploads/2026/04/vercel-2249343327-smaller.jpg?resize=1200,800",
+        "credit": "TechCrunch AI",
+        "link": "https://techcrunch.com/2026/10/16/jev-is-vercels-fastest-adopted-ai-model-ever/",
+        "zh": {
+          "alt": "Vercel 的 Jev 成了最快被采用的模型：开发者正在抢“能直接干活”的 AI",
+          "caption": "Vercel 的 Jev 成了最快被采用的模型：开发者正在抢“能直接干活”的 AI"
+        },
+        "en": {
+          "alt": "Vercel says Jev is its fastest-adopted model: developers want AI that fits the job",
+          "caption": "Vercel says Jev is its fastest-adopted model: developers want AI that fits the job"
+        }
+      },
+      "termGuides": [
+        {
+          "key": "Vercel",
+          "aliases": [
+            "Vercel"
+          ],
+          "zh": {
+            "label": "Vercel",
+            "meaning": "帮助开发者部署和运行网站、应用的平台。",
+            "relation": "它称 Jev 成为平台历史上采用最快的 AI 模型。"
+          },
+          "en": {
+            "label": "Vercel",
+            "meaning": "A platform developers use to deploy and run websites and applications.",
+            "relation": "It says Jev is the fastest-adopted AI model in its history."
+          }
+        }
+      ]
+    },
+    {
+      "id": "ai-rivian-ai-agents",
+      "cat": "AI",
+      "icon": "drone",
+      "title": "Rivian 要把 AI Agent 放进车里：便利之外，车主得先问它能动什么",
+      "brief": "Rivian 计划引入车载 AI Agent，车里多了会办事的助手，也多了一层权限和安全问题。",
+      "take": "Rivian 计划把 AI Agent 引入汽车。车载助手若能理解更复杂指令、代办设置或联动服务，确实会比传统语音命令好用；但汽车不是网页，任何能影响导航、账户、车内设备或支付的 Agent，都必须把确认步骤和权限边界做得非常清楚。功能何时上线、能控制哪些动作，仍是判断这件事是否真有用的关键。",
+      "meta": "车载 AI｜10 月 15 日",
+      "facts": [
+        [
+          "车企",
+          "Rivian"
+        ],
+        [
+          "计划",
+          "向车辆引入 AI Agent"
+        ],
+        [
+          "场景",
+          "面向车内交互和服务任务"
+        ]
+      ],
+      "visual": null,
+      "impacts": [
+        [
+          "车主",
+          "语音交互可能更自然，但要看控制权限是否透明"
+        ],
+        [
+          "安全",
+          "车内 Agent 的误解或被诱导，后果比普通聊天更高"
+        ]
+      ],
+      "next": [
+        "首批支持的车型和地区",
+        "Agent 可执行动作及人工确认机制"
+      ],
+      "source": "TechCrunch AI",
+      "updated": "2026-10-15",
+      "en": {
+        "cat": "AI",
+        "title": "Rivian plans AI Agents in its cars: convenience depends on what they are allowed to touch",
+        "brief": "Rivian plans an in-car AI Agent, adding a helper that can do more—and a new layer of permission and safety questions.",
+        "take": "Rivian plans to bring AI Agents into its vehicles. An in-car assistant that understands more complex requests, manages settings, or connects services could be more useful than conventional voice commands. But a car is not a webpage: any Agent affecting navigation, accounts, cabin hardware, or payments needs clear confirmations and permission boundaries. Which actions it can take, and when it arrives, will determine whether this is useful rather than just flashy.",
+        "meta": "In-car AI | Oct. 15",
+        "facts": [
+          [
+            "Automaker",
+            "Rivian"
+          ],
+          [
+            "Plan",
+            "Bring AI Agents into its vehicles"
+          ],
+          [
+            "Use case",
+            "In-car interaction and service tasks"
+          ]
+        ],
+        "visual": null,
+        "impacts": [
+          [
+            "Owners",
+            "Voice interaction may improve, but only if permissions are transparent"
+          ],
+          [
+            "Safety",
+            "Misunderstanding or manipulation inside a vehicle can carry higher stakes than ordinary chat"
+          ]
+        ],
+        "next": [
+          "First supported models and regions",
+          "Actions the Agent can take and its human-confirmation rules"
+        ],
+        "source": "TechCrunch AI",
+        "updated": "2026-10-15"
+      },
+      "sourceLinks": [
+        {
+          "title": "AI agents are coming to Rivian's cars",
+          "url": "https://techcrunch.com/2026/10/15/ai-agents-are-coming-to-rivians-cars/",
+          "publisher": "TechCrunch AI"
+        }
+      ],
+      "eventImage": {
+        "url": "https://techcrunch.com/wp-content/uploads/2026/10/55587802359_b756c3c3bd_k.jpg?resize=1200,800",
+        "credit": "TechCrunch AI",
+        "link": "https://techcrunch.com/2026/10/15/ai-agents-are-coming-to-rivians-cars/",
+        "zh": {
+          "alt": "Rivian 要把 AI Agent 放进车里：便利之外，车主得先问它能动什么",
+          "caption": "Rivian 要把 AI Agent 放进车里：便利之外，车主得先问它能动什么"
+        },
+        "en": {
+          "alt": "Rivian plans AI Agents in its cars: convenience depends on what they are allowed to touch",
+          "caption": "Rivian plans AI Agents in its cars: convenience depends on what they are allowed to touch"
+        }
+      },
+      "termGuides": [
+        {
+          "key": "Rivian",
+          "aliases": [
+            "Rivian",
+            "Rivian 汽车"
+          ],
+          "zh": {
+            "label": "Rivian",
+            "meaning": "美国电动汽车制造商。",
+            "relation": "它计划把能执行多步任务的 AI Agent 引入车内。"
+          },
+          "en": {
+            "label": "Rivian",
+            "meaning": "A U.S. electric-vehicle maker.",
+            "relation": "It plans to put AI Agents capable of multi-step tasks into its vehicles."
+          }
+        }
+      ]
+    },
+    {
+      "id": "ai-amazon-bee-devices",
+      "cat": "AI",
+      "icon": "ai",
+      "title": "Amazon 的 Bee 推出 75 美元起 AI 设备：随身记录，隐私账也得算",
+      "brief": "低价个人 AI 设备更容易买，但它若长期听和记，谁能看到这些内容更重要。",
+      "take": "Amazon 旗下 Bee 推出两款个人 AI 设备，起价 75 美元。此类产品的吸引力很直接：把提醒、录音、摘要和个人信息整理塞进一个随身硬件里。但价格低并不代表代价低——用户要弄清设备何时采集、音频是否上传、数据保存多久、旁人是否被告知。个人 AI 从手机应用走向常驻硬件后，隐私设置会变成日常习惯，而不是注册时勾一下的选项。",
+      "meta": "AI 硬件｜10 月 15 日",
+      "facts": [
+        [
+          "品牌",
+          "Amazon 旗下 Bee"
+        ],
+        [
+          "新品",
+          "两款个人 AI 设备"
+        ],
+        [
+          "起价",
+          "75 美元"
+        ]
+      ],
+      "visual": null,
+      "impacts": [
+        [
+          "消费者",
+          "更低价格让个人 AI 硬件更接近日常购买"
+        ],
+        [
+          "隐私",
+          "持续采集型设备会把数据规则带进办公室和家庭"
+        ]
+      ],
+      "next": [
+        "设备是否默认录音及如何提示周围的人",
+        "音频、摘要和账户数据的保留与删除规则"
+      ],
+      "source": "TechCrunch AI",
+      "updated": "2026-10-15",
+      "en": {
+        "cat": "AI",
+        "title": "Amazon’s Bee launches AI devices from $75: the privacy bill still needs reading",
+        "brief": "Cheaper personal AI hardware is easier to buy, but what it hears, keeps, and shares matters more.",
+        "take": "Amazon’s Bee has launched two personal AI devices starting at $75. The appeal is straightforward: put reminders, recordings, summaries, and personal organization into a portable device. But a low sticker price does not mean a low cost in privacy. Users need to know when it collects information, whether audio goes to the cloud, how long data is kept, and how people nearby are notified. As personal AI moves from phone apps to always-present hardware, privacy settings become an everyday habit rather than a signup checkbox.",
+        "meta": "AI hardware | Oct. 15",
+        "facts": [
+          [
+            "Brand",
+            "Amazon-owned Bee"
+          ],
+          [
+            "New products",
+            "Two personal AI devices"
+          ],
+          [
+            "Starting price",
+            "$75"
+          ]
+        ],
+        "visual": null,
+        "impacts": [
+          [
+            "Consumers",
+            "Lower pricing makes personal AI hardware a more routine purchase"
+          ],
+          [
+            "Privacy",
+            "Always-collecting devices bring data rules into homes and workplaces"
+          ]
+        ],
+        "next": [
+          "Whether recording is on by default and how bystanders are notified",
+          "Retention and deletion rules for audio, summaries, and account data"
+        ],
+        "source": "TechCrunch AI",
+        "updated": "2026-10-15"
+      },
+      "sourceLinks": [
+        {
+          "title": "Amazon's Bee launches two new personal AI devices, starting at $75",
+          "url": "https://techcrunch.com/2026/10/15/amazons-bee-launches-two-new-personal-ai-devices-starting-at-75/",
+          "publisher": "TechCrunch AI"
+        }
+      ],
+      "eventImage": {
+        "url": "https://techcrunch.com/wp-content/uploads/2026/10/BEE_FAMILY_01_1080x1080.jpg?w=1080",
+        "credit": "TechCrunch AI",
+        "link": "https://techcrunch.com/2026/10/15/amazons-bee-launches-two-new-personal-ai-devices-starting-at-75/",
+        "zh": {
+          "alt": "Amazon 的 Bee 推出 75 美元起 AI 设备：随身记录，隐私账也得算",
+          "caption": "Amazon 的 Bee 推出 75 美元起 AI 设备：随身记录，隐私账也得算"
+        },
+        "en": {
+          "alt": "Amazon’s Bee launches AI devices from $75: the privacy bill still needs reading",
+          "caption": "Amazon’s Bee launches AI devices from $75: the privacy bill still needs reading"
+        }
+      },
+      "termGuides": [
+        {
+          "key": "Bee",
+          "aliases": [
+            "Bee",
+            "Amazon Bee"
+          ],
+          "zh": {
+            "label": "Bee",
+            "meaning": "Amazon 旗下推出个人 AI 硬件的品牌。",
+            "relation": "它刚发布两款起价 75 美元的个人 AI 设备。"
+          },
+          "en": {
+            "label": "Bee",
+            "meaning": "An Amazon-owned brand making personal AI hardware.",
+            "relation": "It has launched two personal AI devices starting at $75."
+          }
+        }
+      ]
+    },
+    {
+      "id": "ai-dead-startup-data",
+      "cat": "AI",
+      "icon": "chart",
+      "title": "倒闭创业公司的数据成了 AI 新矿：用户当年同意过这件事吗",
+      "brief": "AI 实验室在收购倒闭公司的数据，老用户留下的信息可能在新模型训练里重新出现。",
+      "take": "MIT Technology Review 报道，AI 实验室正在购买已倒闭创业公司的数据来训练模型。对模型公司，这是补充高质量、结构化数据的一条路；对当初使用那些服务的人，麻烦在于原本的数据同意条款未必写清了“公司倒闭后卖给训练 AI 的买家”。即使交易在法律上可行，用户是否被充分告知、能否删除数据，正变成比数据价格更棘手的问题。",
+      "meta": "训练数据｜10 月 13 日",
+      "facts": [
+        [
+          "买方",
+          "AI 实验室"
+        ],
+        [
+          "来源",
+          "已倒闭创业公司的数据资产"
+        ],
+        [
+          "用途",
+          "用于训练 AI 模型"
+        ]
+      ],
+      "visual": null,
+      "impacts": [
+        [
+          "用户隐私",
+          "旧服务留下的数据可能被用于未预期的新用途"
+        ],
+        [
+          "行业成本",
+          "数据并购可能成为模型训练的重要补给渠道"
+        ]
+      ],
+      "next": [
+        "交易是否包含个人数据及原始同意条款",
+        "监管机构如何看待破产或出售后的数据再利用"
+      ],
+      "source": "MIT Technology Review",
+      "updated": "2026-10-13",
+      "en": {
+        "cat": "AI",
+        "title": "Data from failed startups is becoming AI fuel—did users ever agree to that?",
+        "brief": "AI labs are buying data from defunct startups, potentially giving old user information a second life in model training.",
+        "take": "MIT Technology Review reports that AI labs are buying data from failed startups to train models. For AI companies, it is a route to more high-quality, structured data. For people who used those services, the problem is that original consent terms may not have clearly said that, after a shutdown, their information could be sold to a buyer training AI. Even where a deal is legal, whether users were properly informed and can delete their data may prove harder than setting a price.",
+        "meta": "Training data | Oct. 13",
+        "facts": [
+          [
+            "Buyers",
+            "AI labs"
+          ],
+          [
+            "Source",
+            "Data assets from failed startups"
+          ],
+          [
+            "Use",
+            "Training AI models"
+          ]
+        ],
+        "visual": null,
+        "impacts": [
+          [
+            "User privacy",
+            "Data left with an old service may be reused in an unexpected new context"
+          ],
+          [
+            "Industry costs",
+            "Data acquisitions may become an important supply route for model training"
+          ]
+        ],
+        "next": [
+          "Whether deals include personal data and what original consent terms allowed",
+          "How regulators view data reuse after bankruptcy or sale"
+        ],
+        "source": "MIT Technology Review",
+        "updated": "2026-10-13"
+      },
+      "sourceLinks": [
+        {
+          "title": "AI labs are buying data from dead startups to train their models",
+          "url": "https://www.technologyreview.com/2026/10/13/1145755/ai-labs-buying-data-from-dead-startups-to-train-models/",
+          "publisher": "MIT Technology Review"
+        }
+      ],
+      "eventImage": {
+        "url": "https://wp.technologyreview.com/wp-content/uploads/2026/10/AI-Death_Redamonti_MIT-thumb.jpg?resize=1200,600",
+        "credit": "MIT Technology Review",
+        "link": "https://www.technologyreview.com/2026/10/13/1145755/ai-labs-buying-data-from-dead-startups-to-train-models/",
+        "zh": {
+          "alt": "倒闭创业公司的数据成了 AI 新矿：用户当年同意过这件事吗",
+          "caption": "倒闭创业公司的数据成了 AI 新矿：用户当年同意过这件事吗"
+        },
+        "en": {
+          "alt": "Data from failed startups is becoming AI fuel—did users ever agree to that?",
+          "caption": "Data from failed startups is becoming AI fuel—did users ever agree to that?"
+        }
+      },
+      "termGuides": [
+        {
+          "key": "训练数据",
+          "aliases": [
+            "训练数据",
+            "training data"
+          ],
+          "zh": {
+            "label": "训练数据",
+            "meaning": "用来让 AI 学习语言、图像或任务规律的材料。",
+            "relation": "报道中的争议是，倒闭公司积累的数据被出售给模型训练方。"
+          },
+          "en": {
+            "label": "Training data",
+            "meaning": "Material used to teach an AI model patterns in language, images, or tasks.",
+            "relation": "The dispute is over failed startups’ accumulated data being sold to model-training buyers."
+          }
+        }
+      ]
+    },
+    {
+      "id": "ai-google-universal-cart",
+      "cat": "AI",
+      "icon": "chart",
+      "title": "Google 推通用购物车：AI 若替你凑单，谁在决定你看到什么",
+      "brief": "美国用户可用 Google Universal Cart 合并购物步骤，方便背后是更强的购物入口控制。",
+      "take": "Google 在美国推出 Universal Cart 购物工具。它试图把分散的商品和结账步骤收拢到一个入口，减少用户在不同商家页面间来回跳转。对消费者，省时间是实在好处；但当搜索、推荐和下单越来越由同一平台串起来，商家为获得展示位置可能付出更多，用户也更难看清推荐是否按价格、质量还是商业关系排序。",
+      "meta": "AI 购物产品｜10 月 15 日",
+      "facts": [
+        [
+          "发布方",
+          "Google"
+        ],
+        [
+          "产品",
+          "Universal Cart 购物工具"
+        ],
+        [
+          "地区",
+          "美国上线"
+        ]
+      ],
+      "visual": null,
+      "impacts": [
+        [
+          "消费者",
+          "购物流程可能更省事，但推荐排序值得留意"
+        ],
+        [
+          "商家",
+          "Google 对商品发现和成交入口的影响可能扩大"
+        ]
+      ],
+      "next": [
+        "支持哪些零售商及支付方式",
+        "推荐、广告与自然排序如何区分"
+      ],
+      "source": "TechCrunch AI",
+      "updated": "2026-10-15",
+      "en": {
+        "cat": "AI",
+        "title": "Google launches Universal Cart: if AI gathers the order, who decides what you see?",
+        "brief": "Google’s U.S. Universal Cart can simplify shopping, while giving one platform more control over the purchase path.",
+        "take": "Google has launched its Universal Cart shopping tool in the U.S. It aims to pull scattered products and checkout steps into one place, reducing the hopping between merchant sites. Saving time is a real benefit for shoppers. But as search, recommendation, and ordering are tied together by one platform, merchants may pay more to be seen and users may find it harder to tell whether a suggestion is ranked by price, quality, or a commercial relationship.",
+        "meta": "AI shopping product | Oct. 15",
+        "facts": [
+          [
+            "Publisher",
+            "Google"
+          ],
+          [
+            "Product",
+            "Universal Cart shopping tool"
+          ],
+          [
+            "Region",
+            "Launched in the United States"
+          ]
+        ],
+        "visual": null,
+        "impacts": [
+          [
+            "Shoppers",
+            "Buying may become easier, but recommendation ranking deserves scrutiny"
+          ],
+          [
+            "Merchants",
+            "Google’s influence over product discovery and purchase entry points may grow"
+          ]
+        ],
+        "next": [
+          "Supported retailers and payment methods",
+          "How recommendations, ads, and organic results are distinguished"
+        ],
+        "source": "TechCrunch AI",
+        "updated": "2026-10-15"
+      },
+      "sourceLinks": [
+        {
+          "title": "Google’s Universal Cart shopping tool launches in the US",
+          "url": "https://techcrunch.com/2026/10/15/googles-universal-cart-shopping-tool-launches-in-the-us/",
+          "publisher": "TechCrunch AI"
+        }
+      ],
+      "eventImage": {
+        "url": "https://techcrunch.com/wp-content/uploads/2026/10/Google-UniversalCart.png?w=1200",
+        "credit": "TechCrunch AI",
+        "link": "https://techcrunch.com/2026/10/15/googles-universal-cart-shopping-tool-launches-in-the-us/",
+        "zh": {
+          "alt": "Google 推通用购物车：AI 若替你凑单，谁在决定你看到什么",
+          "caption": "Google 推通用购物车：AI 若替你凑单，谁在决定你看到什么"
+        },
+        "en": {
+          "alt": "Google launches Universal Cart: if AI gathers the order, who decides what you see?",
+          "caption": "Google launches Universal Cart: if AI gathers the order, who decides what you see?"
+        }
+      },
+      "termGuides": [
+        {
+          "key": "Universal Cart",
+          "aliases": [
+            "Universal Cart",
+            "Google Universal Cart",
+            "通用购物车"
+          ],
+          "zh": {
+            "label": "Universal Cart",
+            "meaning": "Google 推出的统一购物工具，试图合并不同商品和结账步骤。",
+            "relation": "它已在美国上线，可能让 Google 更靠近购物交易的最后一步。"
+          },
+          "en": {
+            "label": "Universal Cart",
+            "meaning": "Google’s unified shopping tool for bringing products and checkout steps together.",
+            "relation": "Its U.S. launch could move Google closer to the final step of a purchase."
+          }
+        }
+      ]
+    }
+  ]
+}

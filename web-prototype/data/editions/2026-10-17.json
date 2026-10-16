@@ -1,0 +1,1271 @@
+{
+  "dateKey": "2026-10-17",
+  "generatedAt": "2026-10-17T05:00:00+08:00",
+  "title": "DailyTen｜10月17日",
+  "subtitle": "从 AI 的信任账，到战争里的网络和油路",
+  "briefLabel": "今日十件事",
+  "doneLabel": "读完今日简报",
+  "readTimeMinutes": 8,
+  "items": [
+    {
+      "id": "replit-anthropic-split",
+      "cat": "AI",
+      "icon": "ai",
+      "title": "Replit 不再用 Anthropic：写代码的 AI 平台先碰上了“断供”问题",
+      "brief": "开发者常用的 Replit 与 Anthropic 终止合作，企业把工作流绑在单一模型上会更不踏实。",
+      "take": "Replit CEO 表示，公司已不再与 Anthropic 合作。两家公司没有在候选报道中说明分手的具体条款，但这件事点出了 AI 编程工具的现实风险：你今天习惯的模型、价格和功能，明天可能因供应商关系变化而被替换。对普通开发者，麻烦不只是换一个聊天机器人，而是提示词、代码审查和团队流程都得重新适应。",
+      "meta": "AI · 10月16日",
+      "facts": [
+        [
+          "双方",
+          "Replit CEO 称已不再与 Anthropic 合作"
+        ],
+        [
+          "产品",
+          "Replit 是面向开发者的云端编程平台"
+        ],
+        [
+          "未知",
+          "合作终止的具体原因尚未公开"
+        ]
+      ],
+      "visual": null,
+      "impacts": [
+        [
+          "开发者",
+          "依赖某一家模型的编程流程可能被迫调整"
+        ],
+        [
+          "企业",
+          "采购 AI 工具时会更在意可替换性和数据迁移"
+        ]
+      ],
+      "next": [
+        "Replit 将转向哪些模型供应商",
+        "现有用户的功能、价格和数据政策是否变化"
+      ],
+      "source": "TechCrunch AI",
+      "updated": "2026-10-16",
+      "en": {
+        "cat": "AI",
+        "title": "Replit drops Anthropic, exposing a supply risk in AI coding tools",
+        "brief": "Replit and Anthropic have ended their relationship, a reminder that teams built around one model can be forced to change quickly.",
+        "take": "Replit’s CEO says the company is no longer working with Anthropic. The available reporting does not spell out why, but the split highlights a practical weakness of AI coding tools: the model, pricing, and features a team builds around can change when a vendor relationship changes. For developers, this is more than switching chatbots; prompts, code-review habits, and team workflows may all need to be rebuilt.",
+        "meta": "AI · Oct 16",
+        "facts": [
+          [
+            "Parties",
+            "Replit’s CEO said it is no longer working with Anthropic"
+          ],
+          [
+            "Product",
+            "Replit is a cloud-based coding platform for developers"
+          ],
+          [
+            "Unknown",
+            "The specific reason for the split has not been disclosed"
+          ]
+        ],
+        "visual": null,
+        "impacts": [
+          [
+            "Developers",
+            "Coding workflows tied to one model provider may need to change"
+          ],
+          [
+            "Businesses",
+            "Buyers will care more about portability and moving their data"
+          ]
+        ],
+        "next": [
+          "Which model providers Replit adopts",
+          "Whether features, pricing, or data policies change for users"
+        ],
+        "source": "TechCrunch AI",
+        "updated": "2026-10-16"
+      },
+      "sourceLinks": [
+        {
+          "title": "Replit is no longer working with Anthropic, CEO says",
+          "url": "https://techcrunch.com/2026/10/16/replit-is-no-longer-working-with-anthropic-ceo-says/",
+          "publisher": "TechCrunch AI"
+        }
+      ],
+      "eventImage": {
+        "url": "https://techcrunch.com/wp-content/uploads/2026/10/replit-ceo-masad.jpg?resize=1200,800",
+        "credit": "TechCrunch AI",
+        "link": "https://techcrunch.com/2026/10/16/replit-is-no-longer-working-with-anthropic-ceo-says/",
+        "zh": {
+          "alt": "Replit 不再用 Anthropic：写代码的 AI 平台先碰上了“断供”问题",
+          "caption": "Replit 不再用 Anthropic：写代码的 AI 平台先碰上了“断供”问题"
+        },
+        "en": {
+          "alt": "Replit drops Anthropic, exposing a supply risk in AI coding tools",
+          "caption": "Replit drops Anthropic, exposing a supply risk in AI coding tools"
+        }
+      },
+      "termGuides": [
+        {
+          "key": "Replit",
+          "aliases": [
+            "Replit"
+          ],
+          "zh": {
+            "label": "云端编程平台",
+            "meaning": "让用户在浏览器里写、运行和部署代码的服务。",
+            "relation": "它的 AI 编程功能此前与 Anthropic 的模型合作。"
+          },
+          "en": {
+            "label": "Cloud coding platform",
+            "meaning": "A service for writing, running, and deploying code in a browser.",
+            "relation": "Its AI coding features had worked with Anthropic’s models."
+          }
+        },
+        {
+          "key": "Anthropic",
+          "aliases": [
+            "Anthropic",
+            "Anthropic 公司"
+          ],
+          "zh": {
+            "label": "AI 公司",
+            "meaning": "开发 Claude 等大语言模型的美国公司。",
+            "relation": "它是 Replit 此次终止合作的模型供应方。"
+          },
+          "en": {
+            "label": "AI company",
+            "meaning": "The US company behind large language models including Claude.",
+            "relation": "It was the model supplier in Replit’s ended partnership."
+          }
+        }
+      ]
+    },
+    {
+      "id": "anthropic-metr-access",
+      "cat": "AI",
+      "icon": "alert",
+      "title": "Anthropic 让外部研究者看“员工级”资料，AI 安全审计往里走了一步",
+      "brief": "模型公司愿意给外部团队更深权限，至少不再只让人看它自己挑出来的测试结果。",
+      "take": "Anthropic 将让模型评估机构 METR 的研究人员获得接近员工级别的内部访问权限，用来研究其系统的能力和风险。这并不等于模型已经安全，而是把评估从“公司自测后公布结论”往独立核查推了一步。真正难的部分在后面：研究者能否公开不舒服的发现，以及其他头部 AI 公司会不会接受同样的检查。",
+      "meta": "AI · 10月15日",
+      "facts": [
+        [
+          "访问权限",
+          "METR 研究人员将获员工级别的内部访问"
+        ],
+        [
+          "机构",
+          "METR 专门研究和评估前沿 AI 系统"
+        ],
+        [
+          "目的",
+          "研究模型能力及潜在风险"
+        ]
+      ],
+      "visual": null,
+      "impacts": [
+        [
+          "用户",
+          "更独立的测试有机会更早发现高风险功能"
+        ],
+        [
+          "行业",
+          "这给“AI 公司自己说安全”增加了外部验证标准"
+        ]
+      ],
+      "next": [
+        "METR 能公开到什么程度",
+        "其他模型公司是否跟进类似安排"
+      ],
+      "source": "TechCrunch AI",
+      "updated": "2026-10-15",
+      "en": {
+        "cat": "AI",
+        "title": "Anthropic opens deeper access to outside AI safety researchers",
+        "brief": "Giving an outside team employee-level access is a move away from asking the public to trust only the company’s own tests.",
+        "take": "Anthropic is allowing researchers at METR, an AI evaluation group, access at an employee-like level to study its systems’ capabilities and risks. That does not make a model safe by itself. It does move evaluation one step beyond a company testing itself and choosing what to publish. The harder questions come next: whether researchers can report uncomfortable findings, and whether other leading labs will accept comparable scrutiny.",
+        "meta": "AI · Oct 15",
+        "facts": [
+          [
+            "Access",
+            "METR researchers will receive employee-level internal access"
+          ],
+          [
+            "Group",
+            "METR studies and evaluates frontier AI systems"
+          ],
+          [
+            "Purpose",
+            "The work examines model capabilities and potential risks"
+          ]
+        ],
+        "visual": null,
+        "impacts": [
+          [
+            "Users",
+            "More independent testing could uncover risky capabilities earlier"
+          ],
+          [
+            "Industry",
+            "It raises the bar beyond companies simply declaring their own systems safe"
+          ]
+        ],
+        "next": [
+          "How freely METR can publish its findings",
+          "Whether other leading labs offer comparable access"
+        ],
+        "source": "TechCrunch AI",
+        "updated": "2026-10-15"
+      },
+      "sourceLinks": [
+        {
+          "title": "Anthropic is letting METR researchers look under the hood with employee-level access",
+          "url": "https://techcrunch.com/2026/10/15/anthropic-is-letting-metr-researchers-look-under-the-hood-with-employee-level-access/",
+          "publisher": "TechCrunch AI"
+        }
+      ],
+      "eventImage": {
+        "url": "https://techcrunch.com/wp-content/uploads/2026/06/GettyImages-2278736523.jpeg?resize=1200,798",
+        "credit": "TechCrunch AI",
+        "link": "https://techcrunch.com/2026/10/15/anthropic-is-letting-metr-researchers-look-under-the-hood-with-employee-level-access/",
+        "zh": {
+          "alt": "Anthropic 让外部研究者看“员工级”资料，AI 安全审计往里走了一步",
+          "caption": "Anthropic 让外部研究者看“员工级”资料，AI 安全审计往里走了一步"
+        },
+        "en": {
+          "alt": "Anthropic opens deeper access to outside AI safety researchers",
+          "caption": "Anthropic opens deeper access to outside AI safety researchers"
+        }
+      },
+      "termGuides": [
+        {
+          "key": "Anthropic",
+          "aliases": [
+            "Anthropic",
+            "Anthropic 公司"
+          ],
+          "zh": {
+            "label": "AI 公司",
+            "meaning": "Claude 等大语言模型的开发者。",
+            "relation": "它向外部评估团队开放更深层的内部访问。"
+          },
+          "en": {
+            "label": "AI company",
+            "meaning": "The developer of large language models including Claude.",
+            "relation": "It is opening deeper internal access to an outside evaluation team."
+          }
+        },
+        {
+          "key": "METR",
+          "aliases": [
+            "METR"
+          ],
+          "zh": {
+            "label": "AI 评估机构",
+            "meaning": "研究先进 AI 系统能力、可靠性和风险的独立团队。",
+            "relation": "它将利用此次权限检查 Anthropic 系统。"
+          },
+          "en": {
+            "label": "AI evaluation group",
+            "meaning": "An independent team studying capabilities, reliability, and risks in advanced AI systems.",
+            "relation": "It will use the new access to examine Anthropic’s systems."
+          }
+        }
+      ]
+    },
+    {
+      "id": "meta-mac-open-model",
+      "cat": "AI",
+      "icon": "code",
+      "title": "Meta 把开源权重模型带到 Mac：本地跑 AI 更方便，责任也更难外包",
+      "brief": "新模型可在 Mac 上运行，敏感内容不必全传云端，但滥用和维护也更多落到用户手里。",
+      "take": "Meta 推出一款可在 Mac 上运行的开放权重模型。所谓开放权重，简单说就是开发者能下载模型参数，在自己的设备或服务器上部署，而不是只能调用云端接口。它对隐私敏感的小团队和想控制成本的开发者很有吸引力；但模型离开平台的护栏后，内容过滤、更新和防滥用也更难由一家公司统一处理。",
+      "meta": "AI · 10月15日",
+      "facts": [
+        [
+          "发布方",
+          "Meta 推出开放权重 AI 模型"
+        ],
+        [
+          "设备",
+          "报道指模型可在 Mac 上运行"
+        ],
+        [
+          "部署",
+          "用户可自行下载并部署模型权重"
+        ]
+      ],
+      "visual": null,
+      "impacts": [
+        [
+          "隐私",
+          "部分任务可留在本机或自有服务器处理"
+        ],
+        [
+          "开发者",
+          "少依赖云端调用，但要自己承担运维和安全责任"
+        ]
+      ],
+      "next": [
+        "模型对不同 Mac 硬件的实际要求",
+        "Meta 提供哪些安全更新与使用限制"
+      ],
+      "source": "TechCrunch AI",
+      "updated": "2026-10-15",
+      "en": {
+        "cat": "AI",
+        "title": "Meta brings an open-weight model to Macs, making local AI easier—and responsibility harder to outsource",
+        "brief": "The model can run on Macs, keeping some sensitive work off the cloud, but leaving more safety and upkeep with the user.",
+        "take": "Meta has released an open-weight AI model that can run on Macs. Open weights means developers can download the model parameters and deploy them on their own devices or servers rather than only calling a cloud API. That can appeal to privacy-sensitive teams and developers watching costs. But once a model leaves a platform’s guardrails, content controls, updates, and misuse prevention are also harder for one company to manage centrally.",
+        "meta": "AI · Oct 15",
+        "facts": [
+          [
+            "Publisher",
+            "Meta released an open-weight AI model"
+          ],
+          [
+            "Device",
+            "The report says the model can run on Macs"
+          ],
+          [
+            "Deployment",
+            "Users can download and deploy the model weights themselves"
+          ]
+        ],
+        "visual": null,
+        "impacts": [
+          [
+            "Privacy",
+            "Some work can stay on a local machine or private server"
+          ],
+          [
+            "Developers",
+            "They rely less on cloud APIs but take on more operations and safety work"
+          ]
+        ],
+        "next": [
+          "Real hardware requirements across Mac models",
+          "What safety updates and usage restrictions Meta provides"
+        ],
+        "source": "TechCrunch AI",
+        "updated": "2026-10-15"
+      },
+      "sourceLinks": [
+        {
+          "title": "Meta launches an open-weight AI model that runs on Macs",
+          "url": "https://techcrunch.com/2026/10/15/meta-launches-an-open-weight-model-that-runs-on-macs/",
+          "publisher": "TechCrunch AI"
+        }
+      ],
+      "eventImage": {
+        "url": "https://techcrunch.com/wp-content/uploads/2026/09/GettyImages-2296215726.jpg?resize=1200,799",
+        "credit": "TechCrunch AI",
+        "link": "https://techcrunch.com/2026/10/15/meta-launches-an-open-weight-model-that-runs-on-macs/",
+        "zh": {
+          "alt": "Meta 把开源权重模型带到 Mac：本地跑 AI 更方便，责任也更难外包",
+          "caption": "Meta 把开源权重模型带到 Mac：本地跑 AI 更方便，责任也更难外包"
+        },
+        "en": {
+          "alt": "Meta brings an open-weight model to Macs, making local AI easier—and responsibility harder to outsource",
+          "caption": "Meta brings an open-weight model to Macs, making local AI easier—and responsibility harder to outsource"
+        }
+      },
+      "termGuides": [
+        {
+          "key": "Meta",
+          "aliases": [
+            "Meta",
+            "元宇宙公司 Meta"
+          ],
+          "zh": {
+            "label": "科技公司",
+            "meaning": "拥有 Facebook、Instagram 等产品，也开发 AI 模型。",
+            "relation": "它发布了这款可在 Mac 上部署的开放权重模型。"
+          },
+          "en": {
+            "label": "Technology company",
+            "meaning": "The company behind Facebook and Instagram, which also develops AI models.",
+            "relation": "It released the open-weight model for Macs."
+          }
+        },
+        {
+          "key": "开放权重",
+          "aliases": [
+            "开放权重",
+            "open-weight"
+          ],
+          "zh": {
+            "label": "可下载模型参数",
+            "meaning": "开发者能取得模型核心参数并自行部署。",
+            "relation": "这使模型可以离开 Meta 的云端服务运行。"
+          },
+          "en": {
+            "label": "Downloadable model parameters",
+            "meaning": "Model parameters that developers can obtain and deploy themselves.",
+            "relation": "They let the model run outside Meta’s cloud service."
+          }
+        }
+      ]
+    },
+    {
+      "id": "ai-debt-selloff",
+      "cat": "全球经济",
+      "icon": "chart",
+      "title": "市场开始担心 AI 账单：科技股下跌不只是在嫌“贵”",
+      "brief": "美国通胀担忧叠加 AI 基建借债，投资者开始追问：数据中心的巨额投入多久能赚回来。",
+      "take": "科技股抛售加深，报道将其与美国通胀担忧以及 AI 基础设施融资压力联系在一起。市场并非突然不相信 AI，而是在重新计算数据中心、芯片和电力的投入能否带来足够快的收入。若融资成本持续偏高，最先被压缩的可能是烧钱扩张的项目，最终也会传到云服务价格、招聘和养老金持有的科技股表现上。",
+      "meta": "全球经济 · 10月15日",
+      "facts": [
+        [
+          "市场",
+          "科技股抛售进一步加深"
+        ],
+        [
+          "通胀",
+          "美国通胀担忧上升"
+        ],
+        [
+          "融资",
+          "AI 基建相关债务成为焦点"
+        ]
+      ],
+      "visual": null,
+      "impacts": [
+        [
+          "价格",
+          "昂贵的融资会推高数据中心和云服务的成本压力"
+        ],
+        [
+          "就业与投资",
+          "尚未赚钱的 AI 项目更可能放慢招聘和扩张"
+        ]
+      ],
+      "next": [
+        "美国通胀数据与利率预期",
+        "大型科技公司的资本开支和融资安排"
+      ],
+      "source": "The Guardian",
+      "updated": "2026-10-15",
+      "en": {
+        "cat": "Global Economy",
+        "title": "Markets are starting to question the AI bill, not just AI hype",
+        "brief": "Inflation fears and debt for AI infrastructure are making investors ask when massive data-center spending will actually pay back.",
+        "take": "A deeper technology sell-off has been linked in reporting to US inflation worries and the financing burden behind AI infrastructure. Investors have not suddenly stopped believing in AI; they are recalculating whether spending on data centers, chips, and power can produce revenue quickly enough. If borrowing stays expensive, cash-burning expansion plans may be cut first—eventually affecting cloud costs, hiring, and the tech shares held in retirement funds.",
+        "meta": "Global Economy · Oct 15",
+        "facts": [
+          [
+            "Markets",
+            "The technology sell-off deepened"
+          ],
+          [
+            "Inflation",
+            "US inflation concerns increased"
+          ],
+          [
+            "Financing",
+            "Debt connected to AI infrastructure became a focus"
+          ]
+        ],
+        "visual": null,
+        "impacts": [
+          [
+            "Prices",
+            "Expensive financing adds pressure to data-center and cloud-service costs"
+          ],
+          [
+            "Jobs and investment",
+            "AI projects without profits may slow hiring and expansion"
+          ]
+        ],
+        "next": [
+          "US inflation data and interest-rate expectations",
+          "Capital spending and financing plans at major tech companies"
+        ],
+        "source": "The Guardian",
+        "updated": "2026-10-15"
+      },
+      "sourceLinks": [
+        {
+          "title": "Tech market sell-off deepens amid fears over US inflation and AI debt",
+          "url": "https://www.theguardian.com/business/2026/oct/15/tech-market-sell-off-deepens-amid-fears-over-us-inflation-and-ai-debt",
+          "publisher": "The Guardian"
+        }
+      ],
+      "eventImage": {
+        "url": "https://i.guim.co.uk/img/media/db77d2497ad333f58b03bc024b156cdce2973b96/1166_0_4632_3706/master/4632.jpg?width=1200&height=630&quality=85&auto=format&fit=crop&precrop=40:21,offset-x50,offset-y0&overlay-align=bottom%2Cleft&overlay-width=100p&overlay-base64=L2ltZy9zdGF0aWMvb3ZlcmxheXMvdGctZGVmYXVsdC5wbmc&enable=upscale&s=26f439c39962e1c5d649ac0c857b9a3b",
+        "credit": "The Guardian",
+        "link": "https://www.theguardian.com/business/2026/oct/15/tech-market-sell-off-deepens-amid-fears-over-us-inflation-and-ai-debt",
+        "zh": {
+          "alt": "市场开始担心 AI 账单：科技股下跌不只是在嫌“贵”",
+          "caption": "市场开始担心 AI 账单：科技股下跌不只是在嫌“贵”"
+        },
+        "en": {
+          "alt": "Markets are starting to question the AI bill, not just AI hype",
+          "caption": "Markets are starting to question the AI bill, not just AI hype"
+        }
+      },
+      "termGuides": [
+        {
+          "key": "AI 基建",
+          "aliases": [
+            "AI 基建",
+            "AI infrastructure",
+            "数据中心"
+          ],
+          "zh": {
+            "label": "AI 的底层设施",
+            "meaning": "运行和训练模型所需的数据中心、芯片、网络和电力。",
+            "relation": "其高额建设费用正成为市场担心的债务来源。"
+          },
+          "en": {
+            "label": "AI’s underlying infrastructure",
+            "meaning": "The data centers, chips, networks, and power needed to train and run models.",
+            "relation": "Its large construction bill is driving the debt concerns in this story."
+          }
+        }
+      ]
+    },
+    {
+      "id": "hormuz-ship-attacks",
+      "cat": "能源",
+      "icon": "ship",
+      "title": "霍尔木兹附近船只遇袭报告创新高，石油出口开始变慢",
+      "brief": "油还没断，但船东若持续绕路或停航，运费、保险和油价都会先紧起来。",
+      "take": "BBC 报道称，霍尔木兹海峡附近的船只遇袭报告达到纪录水平，石油出口已经放缓。这里是全球最关键的能源水道之一，风险一升高，油轮就会面临更高的保险费、更慢的通行和改道选择。普通人未必立刻在加油站看到价格变化，但运输成本会先沿着油价、航运和化工品往外传。",
+      "meta": "能源 · 10月16日",
+      "facts": [
+        [
+          "地点",
+          "风险集中在霍尔木兹海峡附近"
+        ],
+        [
+          "事件",
+          "船只遇袭报告达到纪录高位"
+        ],
+        [
+          "出口",
+          "报道指石油出口已放缓"
+        ]
+      ],
+      "visual": {
+        "type": "orbit",
+        "label": "风险如何传到价格",
+        "nodes": [
+          "船只遇袭",
+          "保险涨价",
+          "油轮放慢",
+          "能源变贵"
+        ]
+      },
+      "impacts": [
+        [
+          "油价",
+          "出口和航运受阻会增加国际油价波动"
+        ],
+        [
+          "日常成本",
+          "燃料、物流和部分化工品的成本可能上升"
+        ]
+      ],
+      "next": [
+        "油轮是否继续改道或停航",
+        "主要产油国的出口量与保险报价"
+      ],
+      "source": "BBC News",
+      "updated": "2026-10-16",
+      "en": {
+        "cat": "Energy",
+        "title": "Record ship-attack reports near Hormuz are already slowing oil exports",
+        "brief": "Oil has not stopped flowing, but if tankers keep detouring or waiting, freight, insurance, and fuel prices will tighten first.",
+        "take": "The BBC reports that ship-attack reports near the Strait of Hormuz have hit a record high and oil exports have slowed. This is one of the world’s most important energy waterways. Higher risk means higher insurance costs, slower crossings, and more detours for tankers. Drivers may not see an immediate change at the pump, but the added transport cost can move through oil, shipping, and chemical products.",
+        "meta": "Energy · Oct 16",
+        "facts": [
+          [
+            "Location",
+            "The risk is concentrated near the Strait of Hormuz"
+          ],
+          [
+            "Incident",
+            "Ship-attack reports reached a record high"
+          ],
+          [
+            "Exports",
+            "Oil exports have slowed, according to the report"
+          ]
+        ],
+        "visual": {
+          "type": "orbit",
+          "label": "How risk reaches prices",
+          "nodes": [
+            "Ship attacks",
+            "Costlier insurance",
+            "Slower tankers",
+            "Higher energy costs"
+          ]
+        },
+        "impacts": [
+          [
+            "Oil prices",
+            "Disrupted exports and shipping can increase global oil-price swings"
+          ],
+          [
+            "Daily costs",
+            "Fuel, logistics, and some chemical-product costs may rise"
+          ]
+        ],
+        "next": [
+          "Whether tankers continue to detour or pause sailings",
+          "Export volumes and insurance quotes from major producers"
+        ],
+        "source": "BBC News",
+        "updated": "2026-10-16"
+      },
+      "sourceLinks": [
+        {
+          "title": "Ship attack reports near Hormuz reach record high as oil exports slow",
+          "url": "https://www.bbc.co.uk/news/articles/cmde8dpg8g0no?at_medium=RSS&at_campaign=rss",
+          "publisher": "BBC News"
+        }
+      ],
+      "eventImage": {
+        "url": "https://ichef.bbci.co.uk/ace/branded_news/1200/cpsprodpb/139a/live/0f24b0c0-c8b3-11f1-bc2e-018d645d8d21.png",
+        "credit": "BBC News",
+        "link": "https://www.bbc.co.uk/news/articles/cmde8dpg8g0no?at_medium=RSS&at_campaign=rss",
+        "zh": {
+          "alt": "霍尔木兹附近船只遇袭报告创新高，石油出口开始变慢",
+          "caption": "霍尔木兹附近船只遇袭报告创新高，石油出口开始变慢"
+        },
+        "en": {
+          "alt": "Record ship-attack reports near Hormuz are already slowing oil exports",
+          "caption": "Record ship-attack reports near Hormuz are already slowing oil exports"
+        }
+      },
+      "termGuides": [
+        {
+          "key": "霍尔木兹海峡",
+          "aliases": [
+            "霍尔木兹海峡",
+            "Strait of Hormuz",
+            "Hormuz"
+          ],
+          "zh": {
+            "label": "关键能源水道",
+            "meaning": "连接波斯湾与外海的狭窄航道，大量石油经此运输。",
+            "relation": "此次袭击报告和出口放缓发生在其附近。"
+          },
+          "en": {
+            "label": "Critical energy waterway",
+            "meaning": "A narrow passage linking the Persian Gulf to open seas, used by large volumes of oil exports.",
+            "relation": "The reported attacks and export slowdown are near it."
+          }
+        }
+      ]
+    },
+    {
+      "id": "ukraine-starlink-access",
+      "cat": "国际局势",
+      "icon": "drone",
+      "title": "乌军的 Starlink 仍未完全恢复：一张商业网络卡住了前线通信",
+      "brief": "乌克兰说军方网络尚未完全恢复，战场上连得上网，已不只是技术问题。",
+      "take": "泽连斯基表示，乌克兰军方对 Starlink 的访问仍未完全恢复；特朗普则否认限制乌克兰使用该网络。两种说法并存，能确定的是：卫星网络已深度嵌入前线通信、无人机协同和部队联络。一家商业公司的服务规则或覆盖状态，足以影响作战能力，也让盟友越来越警惕关键基础设施不能只押在单一私营平台上。",
+      "meta": "国际局势 · 10月16日",
+      "facts": [
+        [
+          "乌方说法",
+          "泽连斯基称军方接入尚未完全恢复"
+        ],
+        [
+          "美方说法",
+          "特朗普否认限制乌方使用 Starlink"
+        ],
+        [
+          "用途",
+          "卫星网络支撑前线通信与无人机协同"
+        ]
+      ],
+      "visual": null,
+      "impacts": [
+        [
+          "前线风险",
+          "通信不稳会削弱部队协调和无人机使用"
+        ],
+        [
+          "依赖问题",
+          "战争关键网络依赖单一商业平台的风险更突出"
+        ]
+      ],
+      "next": [
+        "乌军接入是否恢复正常",
+        "服务限制由谁决定、规则是否公开"
+      ],
+      "source": "BBC News / The Guardian",
+      "updated": "2026-10-16",
+      "en": {
+        "cat": "Geopolitics",
+        "title": "Ukraine says military Starlink is still not fully restored—a commercial network is affecting the front line",
+        "brief": "Ukraine says military access is still incomplete, showing that getting online in a war is no longer just a technical issue.",
+        "take": "Zelenskyy says Starlink access for Ukraine’s military has not been fully restored, while Trump denies restricting Ukraine’s use of the network. Both claims remain in the picture. What is clear is that satellite connectivity is deeply woven into frontline communications, drone coordination, and unit contact. The rules or coverage of one commercial service can affect military capability, sharpening allies’ concerns about relying on a single private platform for critical infrastructure.",
+        "meta": "Geopolitics · Oct 16",
+        "facts": [
+          [
+            "Ukraine’s account",
+            "Zelenskyy says military access is not fully restored"
+          ],
+          [
+            "US account",
+            "Trump denies restricting Ukraine’s Starlink access"
+          ],
+          [
+            "Use",
+            "Satellite connectivity supports frontline communications and drone coordination"
+          ]
+        ],
+        "visual": null,
+        "impacts": [
+          [
+            "Front-line risk",
+            "Unreliable connections can weaken coordination and drone operations"
+          ],
+          [
+            "Dependence",
+            "The risks of relying on one commercial platform in war are more visible"
+          ]
+        ],
+        "next": [
+          "Whether military access returns to normal",
+          "Who sets service limits and whether the rules become public"
+        ],
+        "source": "BBC News / The Guardian",
+        "updated": "2026-10-16"
+      },
+      "sourceLinks": [
+        {
+          "title": "Trump denies limiting Ukraine access to Starlink network",
+          "url": "https://www.bbc.co.uk/news/articles/ckz65g34wyd8o?at_medium=RSS&at_campaign=rss",
+          "publisher": "BBC News"
+        },
+        {
+          "title": "Starlink access still not fully restored for Ukraine’s military, says Zelenskyy",
+          "url": "https://www.theguardian.com/world/2026/oct/16/ukraine-military-starlink-access-starshield-volodymyr-zelenskyy",
+          "publisher": "The Guardian"
+        }
+      ],
+      "eventImage": {
+        "url": "https://ichef.bbci.co.uk/ace/branded_news/1200/cpsprodpb/8a95/live/08a3c460-c990-11f1-adc3-01d8629f0470.jpg",
+        "credit": "BBC News",
+        "link": "https://www.bbc.co.uk/news/articles/ckz65g34wyd8o?at_medium=RSS&at_campaign=rss",
+        "zh": {
+          "alt": "乌军的 Starlink 仍未完全恢复：一张商业网络卡住了前线通信",
+          "caption": "乌军的 Starlink 仍未完全恢复：一张商业网络卡住了前线通信"
+        },
+        "en": {
+          "alt": "Ukraine says military Starlink is still not fully restored—a commercial network is affecting the front line",
+          "caption": "Ukraine says military Starlink is still not fully restored—a commercial network is affecting the front line"
+        }
+      },
+      "termGuides": [
+        {
+          "key": "Starlink",
+          "aliases": [
+            "Starlink",
+            "星链"
+          ],
+          "zh": {
+            "label": "卫星互联网",
+            "meaning": "由大量低轨卫星提供网络连接的服务。",
+            "relation": "乌军称其军用接入尚未完全恢复。"
+          },
+          "en": {
+            "label": "Satellite internet",
+            "meaning": "A connectivity service provided by a large network of low-Earth-orbit satellites.",
+            "relation": "Ukraine says its military access has not been fully restored."
+          }
+        },
+        {
+          "key": "Starshield",
+          "aliases": [
+            "Starshield"
+          ],
+          "zh": {
+            "label": "政府与军用版本",
+            "meaning": "面向政府和国防客户的卫星通信服务。",
+            "relation": "它与乌军接入争议相关。"
+          },
+          "en": {
+            "label": "Government and defense service",
+            "meaning": "A satellite communications service for government and defense customers.",
+            "relation": "It is connected to the dispute over Ukrainian military access."
+          }
+        }
+      ]
+    },
+    {
+      "id": "uk-ev-tariff-option",
+      "cat": "中国经济",
+      "icon": "chart",
+      "title": "英国给中国电动车关税留了后门，买车选择可能更少也更贵",
+      "brief": "若英国加入欧盟本地化计划，政府可能对中国电动车加税，价格战未必还能这么打。",
+      "take": "英国首相府表示，如果英国加入欧盟“欧洲制造”计划，仍保留对中国电动车征收关税的选项。现在不是立刻加税，但政策方向会影响车企把车卖到哪里、在哪儿建厂，以及消费者能买到哪些价位的电动车。保护本地制造能争取就业，代价则可能是廉价车型减少、竞争变弱。",
+      "meta": "全球经济 · 10月16日",
+      "facts": [
+        [
+          "政策选项",
+          "英国未排除对中国电动车加征关税"
+        ],
+        [
+          "触发条件",
+          "与是否加入欧盟相关计划有关"
+        ],
+        [
+          "对象",
+          "中国制造的电动车可能受影响"
+        ]
+      ],
+      "visual": null,
+      "impacts": [
+        [
+          "购车",
+          "低价电动车的选择和价格可能受影响"
+        ],
+        [
+          "供应链",
+          "车企可能重新安排英国和欧洲的生产、销售"
+        ]
+      ],
+      "next": [
+        "英国是否加入欧盟相关计划",
+        "关税门槛、税率和适用车型"
+      ],
+      "source": "The Guardian",
+      "updated": "2026-10-16",
+      "en": {
+        "cat": "Global Economy",
+        "title": "Britain keeps a tariff option open on Chinese EVs, putting cheaper car choices at risk",
+        "brief": "If the UK joins an EU local-production scheme, it may tax Chinese EVs, and today’s price competition may not last.",
+        "take": "The UK government says it has kept open the option of tariffs on Chinese electric vehicles if Britain joins an EU “Made in Europe” scheme. This is not an immediate tariff decision, but the direction matters for where carmakers sell vehicles, build factories, and which price points reach buyers. Protecting local production can support jobs; the trade-off may be fewer low-cost models and weaker competition.",
+        "meta": "Global Economy · Oct 16",
+        "facts": [
+          [
+            "Policy option",
+            "The UK has not ruled out tariffs on Chinese EVs"
+          ],
+          [
+            "Condition",
+            "The option is linked to joining an EU-related scheme"
+          ],
+          [
+            "Target",
+            "China-made electric vehicles could be affected"
+          ]
+        ],
+        "visual": null,
+        "impacts": [
+          [
+            "Car buyers",
+            "The choice and price of lower-cost EVs could change"
+          ],
+          [
+            "Supply chain",
+            "Carmakers may rearrange production and sales across the UK and Europe"
+          ]
+        ],
+        "next": [
+          "Whether the UK joins the EU-linked scheme",
+          "Tariff thresholds, rates, and affected models"
+        ],
+        "source": "The Guardian",
+        "updated": "2026-10-16"
+      },
+      "sourceLinks": [
+        {
+          "title": "No 10 leaves option open to impose Chinese EV tariffs if UK joins EU scheme",
+          "url": "https://www.theguardian.com/politics/2026/oct/16/uk-chinese-electric-vehicle-ev-tariffs-eu-made-in-europe-scheme",
+          "publisher": "The Guardian"
+        }
+      ],
+      "eventImage": {
+        "url": "https://i.guim.co.uk/img/media/d50e0bb4a5fc6d77b7f869e6a131ef2969dbc048/1000_0_5000_4000/master/5000.jpg?width=1200&height=630&quality=85&auto=format&fit=crop&precrop=40:21,offset-x50,offset-y0&overlay-align=bottom%2Cleft&overlay-width=100p&overlay-base64=L2ltZy9zdGF0aWMvb3ZlcmxheXMvdGctZGVmYXVsdC5wbmc&enable=upscale&s=df846db4654f171badd8e783969f6519",
+        "credit": "The Guardian",
+        "link": "https://www.theguardian.com/politics/2026/oct/16/uk-chinese-electric-vehicle-ev-tariffs-eu-made-in-europe-scheme",
+        "zh": {
+          "alt": "英国给中国电动车关税留了后门，买车选择可能更少也更贵",
+          "caption": "英国给中国电动车关税留了后门，买车选择可能更少也更贵"
+        },
+        "en": {
+          "alt": "Britain keeps a tariff option open on Chinese EVs, putting cheaper car choices at risk",
+          "caption": "Britain keeps a tariff option open on Chinese EVs, putting cheaper car choices at risk"
+        }
+      },
+      "termGuides": [
+        {
+          "key": "电动车关税",
+          "aliases": [
+            "电动车关税",
+            "EV tariffs"
+          ],
+          "zh": {
+            "label": "进口税",
+            "meaning": "政府对进口汽车征收的额外税费。",
+            "relation": "英国正保留对中国制造电动车使用这一工具的可能。"
+          },
+          "en": {
+            "label": "Import tax",
+            "meaning": "An additional tax a government charges on imported vehicles.",
+            "relation": "The UK is keeping open the possibility of using it on China-made EVs."
+          }
+        }
+      ]
+    },
+    {
+      "id": "brazil-shorter-week",
+      "cat": "全球经济",
+      "icon": "chart",
+      "title": "巴西通过缩短工时：多一天时间，还是更高的用工成本？",
+      "brief": "巴西国会批准更短工作周，员工可能多些休息，但企业如何补人和付钱才是下一道题。",
+      "take": "巴西国会批准缩短工作周，这是卢拉政府的一项重要劳动政策胜利。报道未在候选材料中给出最终工时细节，但改革的拉扯很直白：员工希望少一些长工时，雇主则要面对排班、加班费和可能新增的人手。它能否真正改善生活，不只看法案通过，更看执行规则是否让低收入劳动者少丢收入。",
+      "meta": "全球经济 · 10月15日",
+      "facts": [
+        [
+          "立法",
+          "巴西国会批准缩短工作周"
+        ],
+        [
+          "政治",
+          "这是卢拉政府的重要政策胜利"
+        ],
+        [
+          "细节",
+          "候选报道未列出最终工时安排"
+        ]
+      ],
+      "visual": null,
+      "impacts": [
+        [
+          "劳动者",
+          "更多休息时间可能改善家庭生活和健康"
+        ],
+        [
+          "企业与价格",
+          "排班和人力成本变化可能传到服务价格"
+        ]
+      ],
+      "next": [
+        "最终工时、加班和薪酬细则",
+        "企业是否通过增聘或压缩岗位应对"
+      ],
+      "source": "BBC News",
+      "updated": "2026-10-15",
+      "en": {
+        "cat": "Global Economy",
+        "title": "Brazil approves a shorter workweek: more time off, or higher labor costs?",
+        "brief": "Brazil’s Congress has approved a shorter workweek; workers may gain time, but employers still have to solve staffing and pay.",
+        "take": "Brazil’s Congress has approved a shorter workweek, a major labor-policy win for Lula’s government. The available candidate report does not state the final hours in detail, but the trade-off is plain: workers want fewer long hours, while employers face scheduling, overtime, and possibly more hiring. Whether it improves daily life will depend not only on passage, but on whether implementation protects lower-income workers from losing pay.",
+        "meta": "Global Economy · Oct 15",
+        "facts": [
+          [
+            "Legislation",
+            "Brazil’s Congress approved a shorter workweek"
+          ],
+          [
+            "Politics",
+            "It is an important policy win for Lula’s government"
+          ],
+          [
+            "Details",
+            "The candidate report does not give the final hours arrangement"
+          ]
+        ],
+        "visual": null,
+        "impacts": [
+          [
+            "Workers",
+            "More rest time could improve family life and health"
+          ],
+          [
+            "Businesses and prices",
+            "Scheduling and labor-cost changes may feed into service prices"
+          ]
+        ],
+        "next": [
+          "Final rules on hours, overtime, and pay",
+          "Whether businesses respond by hiring or cutting positions"
+        ],
+        "source": "BBC News",
+        "updated": "2026-10-15"
+      },
+      "sourceLinks": [
+        {
+          "title": "Brazil's Congress approves shorter working week in win for Lula",
+          "url": "https://www.bbc.co.uk/news/articles/cmwy43pp08elo?at_medium=RSS&at_campaign=rss",
+          "publisher": "BBC News"
+        }
+      ],
+      "eventImage": {
+        "url": "https://ichef.bbci.co.uk/ace/branded_news/1200/cpsprodpb/de61/live/a7661b70-c87d-11f1-8101-e3c2ed61ec71.jpg",
+        "credit": "BBC News",
+        "link": "https://www.bbc.co.uk/news/articles/cmwy43pp08elo?at_medium=RSS&at_campaign=rss",
+        "zh": {
+          "alt": "巴西通过缩短工时：多一天时间，还是更高的用工成本？",
+          "caption": "巴西通过缩短工时：多一天时间，还是更高的用工成本？"
+        },
+        "en": {
+          "alt": "Brazil approves a shorter workweek: more time off, or higher labor costs?",
+          "caption": "Brazil approves a shorter workweek: more time off, or higher labor costs?"
+        }
+      },
+      "termGuides": [
+        {
+          "key": "卢拉",
+          "aliases": [
+            "卢拉",
+            "Lula"
+          ],
+          "zh": {
+            "label": "巴西总统",
+            "meaning": "巴西现任总统路易斯·伊纳西奥·卢拉·达席尔瓦。",
+            "relation": "缩短工作周被视为其政府的一项政策胜利。"
+          },
+          "en": {
+            "label": "Brazil’s president",
+            "meaning": "Luiz Inácio Lula da Silva, Brazil’s current president.",
+            "relation": "The shorter workweek is seen as a policy win for his government."
+          }
+        }
+      ]
+    },
+    {
+      "id": "pakistan-school-roof",
+      "cat": "公共安全",
+      "icon": "quake",
+      "title": "巴基斯坦学校屋顶坍塌致至少34人死亡，校舍安全不能只等事故后追责",
+      "brief": "遇难者包括33名学生和一名教师，学校建筑的日常检查比事后道歉更要紧。",
+      "take": "BBC 报道，巴基斯坦一所学校屋顶坍塌，至少造成33名学生和一名教师死亡。这类灾难最刺眼的地方是，孩子每天必须进入的建筑，本应是最不能靠运气的地方。事故原因、建筑维护记录和是否存在预警仍待调查；但对家长和教育部门而言，校舍检查、承载改造和责任追溯都不应等到下一次坍塌才开始。",
+      "meta": "公共安全 · 10月15日",
+      "facts": [
+        [
+          "死亡人数",
+          "至少33名学生和1名教师死亡"
+        ],
+        [
+          "地点",
+          "事故发生在巴基斯坦一所学校"
+        ],
+        [
+          "原因",
+          "屋顶坍塌原因仍有待调查"
+        ]
+      ],
+      "visual": null,
+      "impacts": [
+        [
+          "家庭",
+          "遇难和受伤会给学生家庭带来长期创伤"
+        ],
+        [
+          "学校安全",
+          "校舍巡检、维修记录和应急预案将受更严格审视"
+        ]
+      ],
+      "next": [
+        "官方对坍塌原因的调查",
+        "是否开展更大范围的校舍安全检查"
+      ],
+      "source": "BBC News",
+      "updated": "2026-10-15",
+      "en": {
+        "cat": "Public Safety",
+        "title": "At least 34 die in Pakistan school roof collapse—school safety cannot wait for the next disaster",
+        "brief": "The dead include 33 pupils and a teacher; routine checks of school buildings matter more than apologies afterward.",
+        "take": "The BBC reports that a school roof collapse in Pakistan killed at least 33 pupils and one teacher. The cruel fact is that a building children must enter every day should never depend on luck. The cause, maintenance record, and any missed warnings still need investigation. But for parents and education authorities, building inspections, structural repairs, and accountability should not begin only after another collapse.",
+        "meta": "Public Safety · Oct 15",
+        "facts": [
+          [
+            "Deaths",
+            "At least 33 pupils and one teacher were killed"
+          ],
+          [
+            "Location",
+            "The collapse happened at a school in Pakistan"
+          ],
+          [
+            "Cause",
+            "The reason for the roof collapse remains under investigation"
+          ]
+        ],
+        "visual": null,
+        "impacts": [
+          [
+            "Families",
+            "Deaths and injuries can leave lasting trauma for students’ families"
+          ],
+          [
+            "School safety",
+            "Inspections, maintenance records, and emergency plans will face closer scrutiny"
+          ]
+        ],
+        "next": [
+          "The official investigation into the collapse",
+          "Whether wider school-building safety checks follow"
+        ],
+        "source": "BBC News",
+        "updated": "2026-10-15"
+      },
+      "sourceLinks": [
+        {
+          "title": "At least 33 pupils and teacher killed after school roof collapses in Pakistan",
+          "url": "https://www.bbc.co.uk/news/articles/cked326llddgo?at_medium=RSS&at_campaign=rss",
+          "publisher": "BBC News"
+        }
+      ],
+      "eventImage": {
+        "url": "https://ichef.bbci.co.uk/ace/branded_news/1200/cpsprodpb/c260/live/a3e37d00-c880-11f1-a2e8-f71844f8002e.jpg",
+        "credit": "BBC News",
+        "link": "https://www.bbc.co.uk/news/articles/cked326llddgo?at_medium=RSS&at_campaign=rss",
+        "zh": {
+          "alt": "巴基斯坦学校屋顶坍塌致至少34人死亡，校舍安全不能只等事故后追责",
+          "caption": "巴基斯坦学校屋顶坍塌致至少34人死亡，校舍安全不能只等事故后追责"
+        },
+        "en": {
+          "alt": "At least 34 die in Pakistan school roof collapse—school safety cannot wait for the next disaster",
+          "caption": "At least 34 die in Pakistan school roof collapse—school safety cannot wait for the next disaster"
+        }
+      },
+      "termGuides": [
+        {
+          "key": "校舍安全检查",
+          "aliases": [
+            "校舍安全检查",
+            "school-building safety checks"
+          ],
+          "zh": {
+            "label": "建筑风险排查",
+            "meaning": "检查学校建筑是否存在结构、维护或消防等危险。",
+            "relation": "这起屋顶坍塌后，它将成为调查与整改的重点。"
+          },
+          "en": {
+            "label": "Building risk inspection",
+            "meaning": "Checks for structural, maintenance, fire, and other dangers in school buildings.",
+            "relation": "It is likely to be central to the investigation and any corrective action after this collapse."
+          }
+        }
+      ]
+    },
+    {
+      "id": "oregon-school-shooting",
+      "cat": "公共安全",
+      "icon": "alert",
+      "title": "俄勒冈小学枪击致4人死亡，学校的“最后一道防线”又被击穿",
+      "brief": "一名青少年在小学杀害4人，事后再完善预案，仍替代不了提前识别风险和限制枪支接触。",
+      "take": "美国俄勒冈州发生小学枪击案，报道指一名青少年杀害4人。事件的具体经过和嫌疑人背景仍会由调查厘清，但校园暴力的难题从来不只在事发当刻：学校怎样接住明显求助或危险信号、家庭如何安全保管枪支、警方和心理服务能否及时衔接，往往决定悲剧有没有机会被提前挡住。",
+      "meta": "公共安全 · 10月16日",
+      "facts": [
+        [
+          "伤亡",
+          "报道指4人在俄勒冈州一所小学遇害"
+        ],
+        [
+          "嫌疑人",
+          "嫌疑人为青少年"
+        ],
+        [
+          "调查",
+          "案件经过与动机仍待警方调查"
+        ]
+      ],
+      "visual": null,
+      "impacts": [
+        [
+          "儿童与家长",
+          "校园安全焦虑会直接改变家庭的日常安排"
+        ],
+        [
+          "政策",
+          "枪支保管、风险干预和校园安保将再成争议焦点"
+        ]
+      ],
+      "next": [
+        "警方公布的作案经过与动机",
+        "学校和地方政府的后续安全措施"
+      ],
+      "source": "NPR",
+      "updated": "2026-10-16",
+      "en": {
+        "cat": "Public Safety",
+        "title": "Four killed in an Oregon elementary-school shooting, again breaching the last line of school safety",
+        "brief": "A teenager killed four people at an elementary school; post-attack plans cannot replace early risk detection and safe gun storage.",
+        "take": "An elementary-school shooting in Oregon killed four people, with reporting identifying the suspect as a teenager. Investigators still need to establish the sequence of events and motive. But the central problem in school violence is not only the moment of attack: whether schools catch warning signs, families secure firearms, and police and mental-health services connect in time can determine whether a tragedy has a chance to be stopped earlier.",
+        "meta": "Public Safety · Oct 16",
+        "facts": [
+          [
+            "Casualties",
+            "Reports say four people were killed at an Oregon elementary school"
+          ],
+          [
+            "Suspect",
+            "The suspect is a teenager"
+          ],
+          [
+            "Investigation",
+            "Police are still investigating the events and motive"
+          ]
+        ],
+        "visual": null,
+        "impacts": [
+          [
+            "Children and parents",
+            "Fear over school safety directly changes daily family routines"
+          ],
+          [
+            "Policy",
+            "Gun storage, risk intervention, and school security will again be contested"
+          ]
+        ],
+        "next": [
+          "Police findings on events and motive",
+          "Safety measures from the school and local government"
+        ],
+        "source": "NPR",
+        "updated": "2026-10-16"
+      },
+      "sourceLinks": [
+        {
+          "title": "Teen kills 4 at Oregon school. And, DOJ sues California over alleged noncitizens",
+          "url": "https://www.npr.org/2026/10/16/g-s1-148373/up-first-newsletter-bend-oregon-school-shooting-california-doj-voters-presidential-papers",
+          "publisher": "NPR"
+        }
+      ],
+      "eventImage": {
+        "url": "https://npr.brightspotcdn.com/dims3/default/strip/false/crop/8256x4644+0+430/resize/1400/quality/85/format/jpeg/?url=http%3A%2F%2Fnpr-brightspot.s3.amazonaws.com%2F72%2F30%2F2ee46d124d148ea4cd726cface47%2Fgettyimages-2299891035.jpg",
+        "credit": "NPR",
+        "link": "https://www.npr.org/2026/10/16/g-s1-148373/up-first-newsletter-bend-oregon-school-shooting-california-doj-voters-presidential-papers",
+        "zh": {
+          "alt": "俄勒冈小学枪击致4人死亡，学校的“最后一道防线”又被击穿",
+          "caption": "俄勒冈小学枪击致4人死亡，学校的“最后一道防线”又被击穿"
+        },
+        "en": {
+          "alt": "Four killed in an Oregon elementary-school shooting, again breaching the last line of school safety",
+          "caption": "Four killed in an Oregon elementary-school shooting, again breaching the last line of school safety"
+        }
+      },
+      "termGuides": [
+        {
+          "key": "风险干预",
+          "aliases": [
+            "风险干预",
+            "risk intervention"
+          ],
+          "zh": {
+            "label": "提前防止伤害",
+            "meaning": "在暴力发生前识别威胁，并由学校、家庭、警方和心理服务共同处理。",
+            "relation": "它是这起校园枪击后绕不开的预防问题。"
+          },
+          "en": {
+            "label": "Early harm prevention",
+            "meaning": "Identifying threats before violence and responding through schools, families, police, and mental-health services.",
+            "relation": "It is a central prevention question raised by this school shooting."
+          }
+        }
+      ]
+    }
+  ]
+}

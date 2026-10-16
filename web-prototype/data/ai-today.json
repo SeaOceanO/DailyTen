@@ -1,85 +1,201 @@
 {
-  "dateKey": "2026-10-16",
-  "generatedAt": "2026-10-16T05:00:00+08:00",
-  "title": "DailyTen｜AI 产业早报",
-  "subtitle": "模型更开放，Agent 开始碰车和设计工具，安全边界也被推到台前。",
-  "briefLabel": "今天先看这十件",
+  "dateKey": "2026-10-17",
+  "generatedAt": "2026-10-17T05:00:00+08:00",
+  "title": "DailyTen｜AI 行业",
+  "subtitle": "模型、Agent 与入口之争：今天最值得知道的十件事",
+  "briefLabel": "一分钟先看重点",
   "doneLabel": "今日已读",
   "readTimeMinutes": 8,
   "items": [
     {
+      "id": "ai-replit-anthropic-split",
+      "cat": "AI",
+      "icon": "code",
+      "title": "Replit 不再用 Anthropic：写代码的 AI，供应商也开始“站队”",
+      "brief": "开发者常用的 Replit 换掉 Anthropic，今后同一段提示词可能得到不同代码和价格。",
+      "take": "Replit CEO 表示，公司已不再与 Anthropic 合作。对普通开发者，这不只是两家公司分手：AI 编程工具背后的模型一换，代码风格、出错方式、可用功能和订阅成本都可能跟着变。企业把工作流程押在某个 AI 平台上后，迁移往往不像换搜索引擎那么轻松；这件事也提醒人们，模型供应并不总是稳定的基础设施。",
+      "meta": "AI 编程工具｜10 月 16 日",
+      "facts": [
+        [
+          "变化",
+          "Replit CEO 称已停止与 Anthropic 合作"
+        ],
+        [
+          "涉及产品",
+          "Replit 提供在线编程与 AI 编程工具"
+        ],
+        [
+          "直接问题",
+          "现有用户将面对模型与服务安排变化"
+        ]
+      ],
+      "visual": null,
+      "impacts": [
+        [
+          "开发者",
+          "自动补代码和排错的体验可能改变"
+        ],
+        [
+          "公司采购",
+          "把核心流程只绑在一家模型商的风险更明显"
+        ]
+      ],
+      "next": [
+        "Replit 将说明改用哪些模型及迁移安排",
+        "Anthropic 是否回应合作终止原因"
+      ],
+      "source": "TechCrunch AI",
+      "updated": "2026-10-16",
+      "en": {
+        "cat": "AI",
+        "title": "Replit drops Anthropic: AI coding tools are starting to pick sides",
+        "brief": "Replit users may get different code, features, and pricing when the model behind their coding tool changes.",
+        "take": "Replit’s CEO says the company is no longer working with Anthropic. For developers, this is more than a corporate breakup: swapping the model behind an AI coding product can change code style, error patterns, available features, and subscription costs. Once a company has built workflows around one AI platform, moving is rarely as simple as changing a search engine. Model supply is not yet a fully stable utility.",
+        "meta": "AI coding tools | Oct. 16",
+        "facts": [
+          [
+            "Change",
+            "Replit’s CEO says its Anthropic relationship has ended"
+          ],
+          [
+            "Product",
+            "Replit offers online development and AI coding tools"
+          ],
+          [
+            "Immediate issue",
+            "Users face changes to models and service arrangements"
+          ]
+        ],
+        "visual": null,
+        "impacts": [
+          [
+            "Developers",
+            "Autocomplete and debugging behavior may shift"
+          ],
+          [
+            "Buyers",
+            "The risk of tying core workflows to one model vendor is clearer"
+          ]
+        ],
+        "next": [
+          "Which models Replit adopts and how it handles migration",
+          "Whether Anthropic explains the split"
+        ],
+        "source": "TechCrunch AI",
+        "updated": "2026-10-16"
+      },
+      "sourceLinks": [
+        {
+          "title": "Replit is no longer working with Anthropic, CEO says",
+          "url": "https://techcrunch.com/2026/10/16/replit-is-no-longer-working-with-anthropic-ceo-says/",
+          "publisher": "TechCrunch AI"
+        }
+      ],
+      "eventImage": {
+        "url": "https://techcrunch.com/wp-content/uploads/2026/10/replit-ceo-masad.jpg?resize=1200,800",
+        "credit": "TechCrunch AI",
+        "link": "https://techcrunch.com/2026/10/16/replit-is-no-longer-working-with-anthropic-ceo-says/",
+        "zh": {
+          "alt": "Replit 不再用 Anthropic：写代码的 AI，供应商也开始“站队”",
+          "caption": "Replit 不再用 Anthropic：写代码的 AI，供应商也开始“站队”"
+        },
+        "en": {
+          "alt": "Replit drops Anthropic: AI coding tools are starting to pick sides",
+          "caption": "Replit drops Anthropic: AI coding tools are starting to pick sides"
+        }
+      },
+      "termGuides": [
+        {
+          "key": "Replit",
+          "aliases": [
+            "Replit"
+          ],
+          "zh": {
+            "label": "Replit",
+            "meaning": "提供在线编程环境和 AI 编程助手的公司。",
+            "relation": "它停止与 Anthropic 合作，用户背后的代码模型可能更换。"
+          },
+          "en": {
+            "label": "Replit",
+            "meaning": "A company offering an online development environment and AI coding assistant.",
+            "relation": "It is ending its Anthropic relationship, potentially changing the model behind users’ coding workflows."
+          }
+        }
+      ]
+    },
+    {
       "id": "ai-anthropic-metr-access",
       "cat": "AI",
       "icon": "alert",
-      "title": "Anthropic把“看底牌”的权限交给外部安全研究者",
-      "brief": "研究人员将获得接近员工级的系统访问权，模型到底有多危险不再只靠公司自己说。",
-      "take": "Anthropic允许模型评估机构 METR 以接近员工的权限研究其系统。这不是一次普通合作：外部研究者能更接近真实部署环境，检验模型是否会规避限制、误导使用者或表现出难以控制的能力。结果未必好看，但比只看厂商自测更值得信；以后企业和普通用户选 AI 工具，也更有机会看到独立的安全证据。",
-      "meta": "安全研究｜10月15日",
+      "title": "Anthropic 给外部研究者“员工级”权限，先把模型风险摊到阳光下",
+      "brief": "METR 能更深入查看 Anthropic 的模型和内部环境，独立安全测试不必只猜黑箱。",
+      "take": "Anthropic 将让模型评估机构 METR 获得员工级别的访问权限，用于研究其系统能力和风险。大模型公司通常只公布自己挑选的测试结果；这次更接近让外部审计员走进机房。权限本身不等于模型已经安全，但如果研究者能复核 Agent 是否会绕过限制、怎样使用工具，用户和监管者就不必只听厂商的一面之词。",
+      "meta": "模型安全｜10 月 15 日",
       "facts": [
         [
           "开放对象",
           "模型评估机构 METR"
         ],
         [
-          "访问程度",
-          "接近 Anthropic 员工级权限"
+          "权限级别",
+          "Anthropic 称为员工级访问"
         ],
         [
-          "核心目的",
-          "独立检查模型行为与风险"
+          "目的",
+          "研究模型能力与安全风险"
         ]
       ],
       "visual": null,
       "impacts": [
         [
-          "信任",
-          "安全结论更可能接受外部检验，而非厂商单方面声明"
+          "使用者",
+          "对高风险 Agent 的判断有机会更可验证"
         ],
         [
-          "使用",
-          "企业采购 AI 时，可能更看重可复核的评估结果"
+          "行业规则",
+          "外部审计可能从公关承诺变成竞争门槛"
         ]
       ],
       "next": [
-        "METR 会披露哪些测试结果和限制",
-        "其他前沿模型公司是否接受同等深度审查"
+        "METR 将披露哪些评估结论",
+        "访问范围和保密边界是否足以支持独立复核"
       ],
       "source": "TechCrunch AI",
       "updated": "2026-10-15",
       "en": {
         "cat": "AI",
-        "title": "Anthropic lets outside safety researchers get close to the keys",
-        "brief": "Researchers will receive near employee-level access, so claims about model risk will not rest only on Anthropic’s word.",
-        "take": "Anthropic is giving the model-evaluation group METR access close to what employees receive. This is more than a routine partnership: outside researchers can examine systems nearer to real deployment and test whether models evade limits, mislead users, or show hard-to-control behavior. The findings may be uncomfortable, but independent evidence is more useful than a company’s own testing. It could also give businesses and everyday users better grounds for judging AI safety claims.",
-        "meta": "Safety research | Oct. 15",
+        "title": "Anthropic gives outside researchers employee-level access to test its models",
+        "brief": "METR can look more deeply inside Anthropic’s systems, so safety claims need not rely only on the company’s word.",
+        "take": "Anthropic is giving model-evaluation group METR employee-level access to study system capabilities and risks. AI labs usually publish tests they selected themselves; this is closer to letting outside auditors into the building. Access alone does not make a model safe, but independent researchers may be better able to check whether an Agent can evade limits or misuse tools. That matters to users and regulators deciding how much trust to place in vendor claims.",
+        "meta": "Model safety | Oct. 15",
         "facts": [
           [
-            "Recipient",
-            "Model Evaluation and Threat Research (METR)"
+            "Outside group",
+            "Model Evaluation and Threat Research, or METR"
           ],
           [
             "Access level",
-            "Near employee-level access at Anthropic"
+            "Anthropic describes it as employee-level access"
           ],
           [
             "Purpose",
-            "Independent checks of model behavior and risk"
+            "Researching model capabilities and safety risks"
           ]
         ],
         "visual": null,
         "impacts": [
           [
-            "Trust",
-            "Safety claims can face outside scrutiny rather than company-only review"
+            "Users",
+            "Claims about high-risk Agents may become more testable"
           ],
           [
-            "Use",
-            "Businesses may put more weight on auditable evaluations when buying AI tools"
+            "Industry",
+            "External audits could become a competitive requirement rather than a PR promise"
           ]
         ],
         "next": [
-          "What test results and limits METR publishes",
-          "Whether other frontier labs allow comparable scrutiny"
+          "What findings METR publishes",
+          "Whether the access and confidentiality rules permit meaningful independent review"
         ],
         "source": "TechCrunch AI",
         "updated": "2026-10-15"
@@ -96,123 +212,226 @@
         "credit": "TechCrunch AI",
         "link": "https://techcrunch.com/2026/10/15/anthropic-is-letting-metr-researchers-look-under-the-hood-with-employee-level-access/",
         "zh": {
-          "alt": "Anthropic把“看底牌”的权限交给外部安全研究者",
-          "caption": "Anthropic把“看底牌”的权限交给外部安全研究者"
+          "alt": "Anthropic 给外部研究者“员工级”权限，先把模型风险摊到阳光下",
+          "caption": "Anthropic 给外部研究者“员工级”权限，先把模型风险摊到阳光下"
         },
         "en": {
-          "alt": "Anthropic lets outside safety researchers get close to the keys",
-          "caption": "Anthropic lets outside safety researchers get close to the keys"
+          "alt": "Anthropic gives outside researchers employee-level access to test its models",
+          "caption": "Anthropic gives outside researchers employee-level access to test its models"
         }
       },
       "termGuides": [
         {
-          "key": "Anthropic",
-          "aliases": [
-            "Anthropic"
-          ],
-          "zh": {
-            "label": "公司",
-            "meaning": "开发 Claude 等大模型的美国 AI 公司。",
-            "relation": "这次由它向外部机构开放接近内部的研究权限。"
-          },
-          "en": {
-            "label": "Company",
-            "meaning": "A US AI company best known for the Claude models.",
-            "relation": "It is granting an outside group unusually deep research access."
-          }
-        },
-        {
           "key": "METR",
           "aliases": [
             "METR",
-            "Model Evaluation and Threat Research"
+            "模型评估与威胁研究"
           ],
           "zh": {
-            "label": "评估机构",
-            "meaning": "专门测试先进 AI 能力与风险的研究机构。",
-            "relation": "它将用更深的系统访问权检查 Anthropic 模型。"
+            "label": "METR",
+            "meaning": "专门测试先进 AI 能力与风险的独立研究机构。",
+            "relation": "它将以更深权限检查 Anthropic 模型，而非只读公开报告。"
           },
           "en": {
-            "label": "Evaluation group",
-            "meaning": "A research organization that tests advanced AI capabilities and risks.",
-            "relation": "It will examine Anthropic’s models with deeper system access."
+            "label": "METR",
+            "meaning": "An independent research group that evaluates advanced AI capabilities and risks.",
+            "relation": "It will examine Anthropic’s models with deeper access than public reporting allows."
           }
         }
       ]
     },
     {
-      "id": "ai-meta-open-mac-model",
+      "id": "ai-india-rogue-agent",
       "cat": "AI",
-      "icon": "code",
-      "title": "Meta把开源权重模型放进 Mac：本地跑 AI 的门槛再降一截",
-      "brief": "模型能在 Mac 上运行，部分文字和代码任务不必先把内容发去云端。",
-      "take": "Meta发布了可在 Mac 上运行的开放权重模型。所谓开放权重，是开发者能下载模型参数并自行部署，不必每次调用都经过一家云服务商。对写代码、整理私密文档或做离线原型的人，这意味着更多选择，也可能少一笔按量付费的账；代价是电脑性能、安装难度和本地模型的安全管理都要自己负责。",
-      "meta": "模型与开发者工具｜10月15日",
+      "icon": "alert",
+      "title": "印度也报告失控 AI Agent：能自己办事，出错就不再只是答错题",
+      "brief": "印度加入报告“失控 Agent”的国家行列，自动执行任务的工具正把安全问题带进现实流程。",
+      "take": "据报道，印度成为又一个报告异常 AI Agent 活动的国家。这里的关键不是聊天机器人说了句怪话，而是 Agent 能调用软件、检索资料或执行多步任务；权限给得太宽时，一次被诱导或配置失误可能影响账户、数据和业务流程。公开信息尚不足以判断事件规模和损失，但各国开始把 Agent 当作需要监控的行动者，而非普通问答工具。",
+      "meta": "Agent 安全｜10 月 16 日",
+      "facts": [
+        [
+          "报告国家",
+          "印度"
+        ],
+        [
+          "事件性质",
+          "涉及被描述为 rogue 的 AI Agent 活动"
+        ],
+        [
+          "核心差别",
+          "Agent 可执行多步任务和调用工具"
+        ]
+      ],
+      "visual": null,
+      "impacts": [
+        [
+          "个人账户",
+          "自动化工具若拿到权限，错误可能直接作用于数据或服务"
+        ],
+        [
+          "企业部署",
+          "上线 Agent 前需要设置审批、日志和权限边界"
+        ]
+      ],
+      "next": [
+        "印度相关机构是否公布事件细节",
+        "是否涉及数据、金融或关键服务损失"
+      ],
+      "source": "TechCrunch AI",
+      "updated": "2026-10-16",
+      "en": {
+        "cat": "AI",
+        "title": "India reports rogue AI Agent activity: mistakes can now reach real systems",
+        "brief": "India has joined countries reporting rogue Agent activity, bringing AI safety concerns into systems that actually do things.",
+        "take": "India has reportedly become another country to report rogue AI Agent activity. The important distinction is not a chatbot giving an odd answer: an Agent can call software, retrieve information, and complete multi-step tasks. With overly broad permissions, a prompt injection or configuration mistake can affect accounts, data, and business processes. Public details do not yet establish the scale or damage, but governments are increasingly treating Agents as actors that need monitoring, not just question-answering tools.",
+        "meta": "Agent safety | Oct. 16",
+        "facts": [
+          [
+            "Reporting country",
+            "India"
+          ],
+          [
+            "Nature",
+            "Activity described as rogue AI Agent behavior"
+          ],
+          [
+            "Key distinction",
+            "Agents can perform multi-step tasks and use tools"
+          ]
+        ],
+        "visual": null,
+        "impacts": [
+          [
+            "Accounts",
+            "Automation errors can directly affect data or services once permissions are granted"
+          ],
+          [
+            "Deployment",
+            "Companies need approvals, logs, and permission limits before rollout"
+          ]
+        ],
+        "next": [
+          "Whether Indian authorities release incident details",
+          "Whether data, financial, or critical-service losses were involved"
+        ],
+        "source": "TechCrunch AI",
+        "updated": "2026-10-16"
+      },
+      "sourceLinks": [
+        {
+          "title": "India becomes the latest country to report rogue AI agent activity",
+          "url": "https://techcrunch.com/2026/10/16/india-becomes-the-latest-country-to-report-rogue-ai-agent-activity/",
+          "publisher": "TechCrunch AI"
+        }
+      ],
+      "eventImage": {
+        "url": "https://techcrunch.com/wp-content/uploads/2026/10/india-cyber-attack.jpg?w=612",
+        "credit": "TechCrunch AI",
+        "link": "https://techcrunch.com/2026/10/16/india-becomes-the-latest-country-to-report-rogue-ai-agent-activity/",
+        "zh": {
+          "alt": "印度也报告失控 AI Agent：能自己办事，出错就不再只是答错题",
+          "caption": "印度也报告失控 AI Agent：能自己办事，出错就不再只是答错题"
+        },
+        "en": {
+          "alt": "India reports rogue AI Agent activity: mistakes can now reach real systems",
+          "caption": "India reports rogue AI Agent activity: mistakes can now reach real systems"
+        }
+      },
+      "termGuides": [
+        {
+          "key": "AI Agent",
+          "aliases": [
+            "AI Agent",
+            "Agent",
+            "智能体",
+            "AI 智能体"
+          ],
+          "zh": {
+            "label": "AI Agent",
+            "meaning": "能按目标自己调用工具、分步骤完成任务的 AI 软件。",
+            "relation": "报道中的风险在于，它可能不只生成文字，还会对外部系统采取行动。"
+          },
+          "en": {
+            "label": "AI Agent",
+            "meaning": "AI software that can use tools and complete steps toward a goal.",
+            "relation": "The risk here is that it may act on external systems, not merely generate text."
+          }
+        }
+      ]
+    },
+    {
+      "id": "ai-meta-mac-open-model",
+      "cat": "AI",
+      "icon": "ai",
+      "title": "Meta 把开放权重模型带上 Mac：本地跑 AI，隐私和门槛一起变了",
+      "brief": "模型能在 Mac 上运行，部分工作不必把内容传到云端，但机器性能仍决定体验。",
+      "take": "Meta 推出一款可在 Mac 上运行的开放权重 AI 模型。开放权重不等于任何人都能随意改造或商用，但开发者可以下载模型，在自己的设备或服务器上部署，而不必每次请求都交给云端。对处理代码、内部文档和敏感材料的人，这提供了更强的控制感；代价是安装、维护和算力成本要自己承担，输出安全也不能甩给平台。",
+      "meta": "开放模型｜10 月 15 日",
       "facts": [
         [
           "发布方",
           "Meta"
         ],
         [
-          "模型形式",
-          "开放权重模型"
+          "形式",
+          "开放权重 AI 模型"
         ],
         [
           "运行环境",
-          "Mac"
+          "面向 Mac 本地运行"
         ]
       ],
       "visual": null,
       "impacts": [
         [
           "隐私",
-          "部分任务可留在本机处理，减少把原始内容上传云端的需要"
+          "部分文本和文件可留在本机处理"
         ],
         [
-          "开发成本",
-          "小团队可先本地试用，少依赖按调用收费的 API"
+          "开发者",
+          "可减少对单一云端 API 的依赖，但要自行运维"
         ]
       ],
       "next": [
-        "模型的硬件要求和实际速度",
-        "是否出现面向普通用户的一键安装工具"
+        "模型许可是否限制商业用途或再分发",
+        "不同 Mac 配置下的速度和内存需求"
       ],
       "source": "TechCrunch AI",
       "updated": "2026-10-15",
       "en": {
         "cat": "AI",
-        "title": "Meta brings an open-weight model to Macs, lowering the bar for local AI",
-        "brief": "Because the model can run on a Mac, some writing and coding work need not send content to a cloud service first.",
-        "take": "Meta has released an open-weight model that runs on Macs. “Open weight” means developers can download the model parameters and deploy it themselves rather than route every request through a cloud provider. That gives people handling private documents, code, or offline prototypes more choice and may cut usage-based bills. The trade-off is that they must handle hardware limits, installation, and local-model security themselves.",
-        "meta": "Models and developer tools | Oct. 15",
+        "title": "Meta brings an open-weight model to Macs, shifting both privacy and the barrier to entry",
+        "brief": "A model that runs on a Mac can keep some work off the cloud, though your machine still sets the practical limit.",
+        "take": "Meta has launched an open-weight AI model designed to run on Macs. Open weights do not mean unrestricted use in every respect, but they let developers download and deploy a model on their own device or servers instead of sending every request to a cloud service. That offers more control for code, internal documents, and sensitive material. The trade-off is that users take on installation, maintenance, compute costs, and more responsibility for safe use.",
+        "meta": "Open models | Oct. 15",
         "facts": [
           [
             "Publisher",
             "Meta"
           ],
           [
-            "Model type",
-            "Open-weight model"
+            "Format",
+            "An open-weight AI model"
           ],
           [
-            "Runtime",
-            "Mac"
+            "Environment",
+            "Designed to run locally on Macs"
           ]
         ],
         "visual": null,
         "impacts": [
           [
             "Privacy",
-            "Some work can stay on a device instead of sending raw material to the cloud"
+            "Some text and files can be processed on-device"
           ],
           [
-            "Developer cost",
-            "Small teams can test locally before relying on pay-per-call APIs"
+            "Developers",
+            "They can reduce dependence on a single cloud API, while taking on operations"
           ]
         ],
         "next": [
-          "Hardware requirements and real-world speed",
-          "Whether consumer-friendly one-click installers emerge"
+          "Whether licensing limits commercial use or redistribution",
+          "Speed and memory needs across Mac configurations"
         ],
         "source": "TechCrunch AI",
         "updated": "2026-10-15"
@@ -229,46 +448,265 @@
         "credit": "TechCrunch AI",
         "link": "https://techcrunch.com/2026/10/15/meta-launches-an-open-weight-model-that-runs-on-macs/",
         "zh": {
-          "alt": "Meta把开源权重模型放进 Mac：本地跑 AI 的门槛再降一截",
-          "caption": "Meta把开源权重模型放进 Mac：本地跑 AI 的门槛再降一截"
+          "alt": "Meta 把开放权重模型带上 Mac：本地跑 AI，隐私和门槛一起变了",
+          "caption": "Meta 把开放权重模型带上 Mac：本地跑 AI，隐私和门槛一起变了"
         },
         "en": {
-          "alt": "Meta brings an open-weight model to Macs, lowering the bar for local AI",
-          "caption": "Meta brings an open-weight model to Macs, lowering the bar for local AI"
+          "alt": "Meta brings an open-weight model to Macs, shifting both privacy and the barrier to entry",
+          "caption": "Meta brings an open-weight model to Macs, shifting both privacy and the barrier to entry"
         }
       },
       "termGuides": [
         {
-          "key": "Meta",
-          "aliases": [
-            "Meta"
-          ],
-          "zh": {
-            "label": "公司",
-            "meaning": "Facebook、Instagram 和 WhatsApp 的母公司。",
-            "relation": "它发布了这款可在 Mac 上运行的开放权重模型。"
-          },
-          "en": {
-            "label": "Company",
-            "meaning": "The parent company of Facebook, Instagram, and WhatsApp.",
-            "relation": "It released the open-weight model for Macs."
-          }
-        },
-        {
           "key": "开放权重",
           "aliases": [
             "开放权重",
-            "open-weight"
+            "open-weight",
+            "open weights"
           ],
           "zh": {
-            "label": "模型方式",
-            "meaning": "可下载模型参数、自己部署的发布方式。",
-            "relation": "这让开发者不必只通过 Meta 或其他云端接口使用该模型。"
+            "label": "开放权重",
+            "meaning": "模型参数可供下载，让人能在自己的设备或服务器上部署。",
+            "relation": "Meta 的新模型以这种形式提供，并主打 Mac 本地运行。"
           },
           "en": {
-            "label": "Model release",
-            "meaning": "A release in which model parameters can be downloaded and run by others.",
-            "relation": "It lets developers use the model without relying only on a hosted interface."
+            "label": "Open weights",
+            "meaning": "Model parameters made available for download and deployment on your own hardware.",
+            "relation": "Meta is offering its new model in this form for local use on Macs."
+          }
+        }
+      ]
+    },
+    {
+      "id": "ai-elorain-vision-reasoning",
+      "cat": "AI",
+      "icon": "ai",
+      "title": "Elorian 要让模型“看图推理”：视觉 AI 不只认物体，还想读懂关系",
+      "brief": "新模型瞄准图像推理，不只是把图里有什么列出来；真正效果还要等独立测试。",
+      "take": "Elorian 发布首个 AI 模型，主打对图像进行推理，而不只是描述或识别物体。若能力经得起验证，它可能帮助软件理解图表、界面、流程图和现场照片里的关系，对质检、文档处理与无障碍工具更有用。不过视觉推理最怕“看起来很自信却看错”：公司自己的演示不能代替跨场景、跨语言和高风险任务的独立测试。",
+      "meta": "多模态模型｜10 月 16 日",
+      "facts": [
+        [
+          "发布方",
+          "Elorian"
+        ],
+        [
+          "产品",
+          "该公司首个 AI 模型"
+        ],
+        [
+          "主张",
+          "能围绕图像中的关系进行推理"
+        ]
+      ],
+      "visual": null,
+      "impacts": [
+        [
+          "日常工具",
+          "图表、截图和照片可能更容易被 AI 直接处理"
+        ],
+        [
+          "可靠性",
+          "视觉回答若用于工作判断，仍须核对原图"
+        ]
+      ],
+      "next": [
+        "是否发布模型访问方式、价格和技术报告",
+        "独立基准能否验证其图像推理能力"
+      ],
+      "source": "TechCrunch AI",
+      "updated": "2026-10-16",
+      "en": {
+        "cat": "AI",
+        "title": "Elorian wants AI to reason with images, not just name what is in them",
+        "brief": "Its new model aims to reason from images rather than merely label them, but independent testing will matter.",
+        "take": "Elorian has released its first AI model, claiming it can reason with images rather than simply describe or recognize objects. If the ability holds up, it could help software interpret charts, interfaces, diagrams, and field photos—useful for inspection, document work, and accessibility. But visual reasoning has a familiar problem: systems can sound confident while seeing the wrong thing. Company demos are not a substitute for independent testing across settings, languages, and high-stakes tasks.",
+        "meta": "Multimodal models | Oct. 16",
+        "facts": [
+          [
+            "Company",
+            "Elorian"
+          ],
+          [
+            "Product",
+            "Its first AI model"
+          ],
+          [
+            "Claim",
+            "Reasoning about relationships within images"
+          ]
+        ],
+        "visual": null,
+        "impacts": [
+          [
+            "Everyday tools",
+            "Charts, screenshots, and photos may become easier for AI to process directly"
+          ],
+          [
+            "Reliability",
+            "Visual answers still need checking against the original image in work decisions"
+          ]
+        ],
+        "next": [
+          "Access, pricing, and a technical report",
+          "Whether independent benchmarks validate the visual-reasoning claim"
+        ],
+        "source": "TechCrunch AI",
+        "updated": "2026-10-16"
+      },
+      "sourceLinks": [
+        {
+          "title": "Elorian’s first AI model wants to reason with images, not just about them",
+          "url": "https://techcrunch.com/2026/10/16/elorians-first-ai-model-wants-to-reason-with-images-not-just-about-them/",
+          "publisher": "TechCrunch AI"
+        }
+      ],
+      "eventImage": {
+        "url": "https://techcrunch.com/wp-content/uploads/2026/10/image-1.png?resize=1200,675",
+        "credit": "TechCrunch AI",
+        "link": "https://techcrunch.com/2026/10/16/elorians-first-ai-model-wants-to-reason-with-images-not-just-about-them/",
+        "zh": {
+          "alt": "Elorian 要让模型“看图推理”：视觉 AI 不只认物体，还想读懂关系",
+          "caption": "Elorian 要让模型“看图推理”：视觉 AI 不只认物体，还想读懂关系"
+        },
+        "en": {
+          "alt": "Elorian wants AI to reason with images, not just name what is in them",
+          "caption": "Elorian wants AI to reason with images, not just name what is in them"
+        }
+      },
+      "termGuides": [
+        {
+          "key": "多模态模型",
+          "aliases": [
+            "多模态模型",
+            "multimodal model",
+            "图像推理"
+          ],
+          "zh": {
+            "label": "多模态模型",
+            "meaning": "能同时处理文字、图像等不同类型信息的 AI。",
+            "relation": "Elorian 的卖点是从图像中的关系得出判断，而非仅识别物体。"
+          },
+          "en": {
+            "label": "Multimodal model",
+            "meaning": "AI that can process more than one kind of information, such as text and images.",
+            "relation": "Elorian’s pitch is reasoning about relationships in images, not merely recognizing objects."
+          }
+        }
+      ]
+    },
+    {
+      "id": "ai-jev-vercel-adoption",
+      "cat": "AI",
+      "icon": "code",
+      "title": "Vercel 的 Jev 成了最快被采用的模型：开发者正在抢“能直接干活”的 AI",
+      "brief": "Jev 在 Vercel 用户中增长很快，AI 编程的竞争已从聊天效果转向能否塞进真实工作流。",
+      "take": "Vercel 称，Jev 是其平台上采用速度最快的 AI 模型。这个说法来自平台自身，不能直接等同于全行业胜负，但它说明一个很实际的变化：开发者不再只比较模型答题分数，更在意它能否顺手接进部署、代码和网站运营流程。谁占住这些日常入口，谁就更可能把一次性试用变成长期付费。",
+      "meta": "开发者 AI｜10 月 16 日",
+      "facts": [
+        [
+          "平台",
+          "Vercel"
+        ],
+        [
+          "模型",
+          "Jev"
+        ],
+        [
+          "公司说法",
+          "为该平台采用最快的 AI 模型"
+        ]
+      ],
+      "visual": null,
+      "impacts": [
+        [
+          "开发者",
+          "模型选择越来越由工作流兼容性决定"
+        ],
+        [
+          "产品竞争",
+          "AI 公司争夺的是部署与运营入口，不只是聊天窗口"
+        ]
+      ],
+      "next": [
+        "Vercel 是否公布用户数、留存或使用量",
+        "Jev 在代码质量和成本上的独立表现"
+      ],
+      "source": "TechCrunch AI",
+      "updated": "2026-10-16",
+      "en": {
+        "cat": "AI",
+        "title": "Vercel says Jev is its fastest-adopted model: developers want AI that fits the job",
+        "brief": "Jev is growing quickly among Vercel users, showing that AI coding competition is moving into real workflows.",
+        "take": "Vercel says Jev is the fastest-adopted AI model on its platform. That is a company claim, not proof of an industry-wide winner, but it highlights a practical shift: developers are no longer comparing only benchmark scores. They care whether a model fits naturally into deployment, code, and website operations. The company that owns those daily entry points is more likely to turn a one-off trial into recurring use and payment.",
+        "meta": "Developer AI | Oct. 16",
+        "facts": [
+          [
+            "Platform",
+            "Vercel"
+          ],
+          [
+            "Model",
+            "Jev"
+          ],
+          [
+            "Company claim",
+            "The fastest-adopted AI model on its platform"
+          ]
+        ],
+        "visual": null,
+        "impacts": [
+          [
+            "Developers",
+            "Workflow fit increasingly determines model choice"
+          ],
+          [
+            "Product competition",
+            "AI firms are competing for deployment and operations entry points, not just chat windows"
+          ]
+        ],
+        "next": [
+          "Whether Vercel releases usage, retention, or user figures",
+          "Independent evidence on Jev’s code quality and cost"
+        ],
+        "source": "TechCrunch AI",
+        "updated": "2026-10-16"
+      },
+      "sourceLinks": [
+        {
+          "title": "Jev is Vercel's fastest-adopted AI model ever",
+          "url": "https://techcrunch.com/2026/10/16/jev-is-vercels-fastest-adopted-ai-model-ever/",
+          "publisher": "TechCrunch AI"
+        }
+      ],
+      "eventImage": {
+        "url": "https://techcrunch.com/wp-content/uploads/2026/04/vercel-2249343327-smaller.jpg?resize=1200,800",
+        "credit": "TechCrunch AI",
+        "link": "https://techcrunch.com/2026/10/16/jev-is-vercels-fastest-adopted-ai-model-ever/",
+        "zh": {
+          "alt": "Vercel 的 Jev 成了最快被采用的模型：开发者正在抢“能直接干活”的 AI",
+          "caption": "Vercel 的 Jev 成了最快被采用的模型：开发者正在抢“能直接干活”的 AI"
+        },
+        "en": {
+          "alt": "Vercel says Jev is its fastest-adopted model: developers want AI that fits the job",
+          "caption": "Vercel says Jev is its fastest-adopted model: developers want AI that fits the job"
+        }
+      },
+      "termGuides": [
+        {
+          "key": "Vercel",
+          "aliases": [
+            "Vercel"
+          ],
+          "zh": {
+            "label": "Vercel",
+            "meaning": "帮助开发者部署和运行网站、应用的平台。",
+            "relation": "它称 Jev 成为平台历史上采用最快的 AI 模型。"
+          },
+          "en": {
+            "label": "Vercel",
+            "meaning": "A platform developers use to deploy and run websites and applications.",
+            "relation": "It says Jev is the fastest-adopted AI model in its history."
           }
         }
       ]
@@ -277,46 +715,46 @@
       "id": "ai-rivian-ai-agents",
       "cat": "AI",
       "icon": "drone",
-      "title": "Rivian要把 Agent 放进车里：便利先来，谁替它的失误买单？",
-      "brief": "车内 AI Agent 若能替人办事，驾驶者也得先弄清它能动什么、会把数据发到哪里。",
-      "take": "Rivian计划把 AI Agent 引入汽车。与只回答问题的语音助手不同，Agent 的卖点是理解目标后串联多步操作；放在车里，可能涉及车辆功能、行程和个人账户。真正的难题不是它会不会聊天，而是权限怎么分、误操作时能否立刻收回、驾驶和位置数据如何保存。汽车不是浏览器标签页，出错的代价通常更高。",
-      "meta": "车载 AI｜10月15日",
+      "title": "Rivian 要把 AI Agent 放进车里：便利之外，车主得先问它能动什么",
+      "brief": "Rivian 计划引入车载 AI Agent，车里多了会办事的助手，也多了一层权限和安全问题。",
+      "take": "Rivian 计划把 AI Agent 引入汽车。车载助手若能理解更复杂指令、代办设置或联动服务，确实会比传统语音命令好用；但汽车不是网页，任何能影响导航、账户、车内设备或支付的 Agent，都必须把确认步骤和权限边界做得非常清楚。功能何时上线、能控制哪些动作，仍是判断这件事是否真有用的关键。",
+      "meta": "车载 AI｜10 月 15 日",
       "facts": [
         [
           "车企",
           "Rivian"
         ],
         [
-          "新方向",
-          "在汽车中引入 AI Agent"
+          "计划",
+          "向车辆引入 AI Agent"
         ],
         [
-          "Agent 特点",
-          "可围绕目标执行多步操作"
+          "场景",
+          "面向车内交互和服务任务"
         ]
       ],
       "visual": null,
       "impacts": [
         [
-          "控制权",
-          "车主需要看懂 Agent 能访问车辆、账户和位置中的哪些内容"
+          "车主",
+          "语音交互可能更自然，但要看控制权限是否透明"
         ],
         [
           "安全",
-          "车内自动操作必须有清晰确认、撤销和人工接管机制"
+          "车内 Agent 的误解或被诱导，后果比普通聊天更高"
         ]
       ],
       "next": [
-        "Rivian 首批开放哪些车内任务",
-        "涉及车辆控制时会设置哪些权限限制"
+        "首批支持的车型和地区",
+        "Agent 可执行动作及人工确认机制"
       ],
       "source": "TechCrunch AI",
       "updated": "2026-10-15",
       "en": {
         "cat": "AI",
-        "title": "Rivian wants Agents in the car. The harder question is who pays for mistakes.",
-        "brief": "If an in-car AI Agent can act for you, drivers need to know what it can touch and where their data goes.",
-        "take": "Rivian plans to bring AI Agents into its vehicles. Unlike a voice assistant that merely answers questions, an Agent is meant to complete several steps toward a goal; in a car, that could involve vehicle functions, trips, and personal accounts. The real issue is not chat quality. It is permissions, immediate reversal when something goes wrong, and the handling of driving and location data. A car is not a browser tab, and mistakes can cost more.",
+        "title": "Rivian plans AI Agents in its cars: convenience depends on what they are allowed to touch",
+        "brief": "Rivian plans an in-car AI Agent, adding a helper that can do more—and a new layer of permission and safety questions.",
+        "take": "Rivian plans to bring AI Agents into its vehicles. An in-car assistant that understands more complex requests, manages settings, or connects services could be more useful than conventional voice commands. But a car is not a webpage: any Agent affecting navigation, accounts, cabin hardware, or payments needs clear confirmations and permission boundaries. Which actions it can take, and when it arrives, will determine whether this is useful rather than just flashy.",
         "meta": "In-car AI | Oct. 15",
         "facts": [
           [
@@ -324,35 +762,35 @@
             "Rivian"
           ],
           [
-            "Direction",
-            "AI Agents in vehicles"
+            "Plan",
+            "Bring AI Agents into its vehicles"
           ],
           [
-            "Agent trait",
-            "Can carry out multi-step tasks toward a goal"
+            "Use case",
+            "In-car interaction and service tasks"
           ]
         ],
         "visual": null,
         "impacts": [
           [
-            "Control",
-            "Owners need to understand what vehicle, account, and location data an Agent can access"
+            "Owners",
+            "Voice interaction may improve, but only if permissions are transparent"
           ],
           [
             "Safety",
-            "Automated in-car actions need clear confirmation, reversal, and human takeover"
+            "Misunderstanding or manipulation inside a vehicle can carry higher stakes than ordinary chat"
           ]
         ],
         "next": [
-          "Which in-car tasks Rivian opens first",
-          "What permission limits apply to vehicle-related actions"
+          "First supported models and regions",
+          "Actions the Agent can take and its human-confirmation rules"
         ],
         "source": "TechCrunch AI",
         "updated": "2026-10-15"
       },
       "sourceLinks": [
         {
-          "title": "AI agents are coming to Rivian’s cars",
+          "title": "AI agents are coming to Rivian's cars",
           "url": "https://techcrunch.com/2026/10/15/ai-agents-are-coming-to-rivians-cars/",
           "publisher": "TechCrunch AI"
         }
@@ -362,95 +800,78 @@
         "credit": "TechCrunch AI",
         "link": "https://techcrunch.com/2026/10/15/ai-agents-are-coming-to-rivians-cars/",
         "zh": {
-          "alt": "Rivian要把 Agent 放进车里：便利先来，谁替它的失误买单？",
-          "caption": "Rivian要把 Agent 放进车里：便利先来，谁替它的失误买单？"
+          "alt": "Rivian 要把 AI Agent 放进车里：便利之外，车主得先问它能动什么",
+          "caption": "Rivian 要把 AI Agent 放进车里：便利之外，车主得先问它能动什么"
         },
         "en": {
-          "alt": "Rivian wants Agents in the car. The harder question is who pays for mistakes.",
-          "caption": "Rivian wants Agents in the car. The harder question is who pays for mistakes."
+          "alt": "Rivian plans AI Agents in its cars: convenience depends on what they are allowed to touch",
+          "caption": "Rivian plans AI Agents in its cars: convenience depends on what they are allowed to touch"
         }
       },
       "termGuides": [
         {
           "key": "Rivian",
           "aliases": [
-            "Rivian"
+            "Rivian",
+            "Rivian 汽车"
           ],
           "zh": {
-            "label": "车企",
+            "label": "Rivian",
             "meaning": "美国电动汽车制造商。",
-            "relation": "它计划把 AI Agent 引入自家汽车。"
+            "relation": "它计划把能执行多步任务的 AI Agent 引入车内。"
           },
           "en": {
-            "label": "Automaker",
-            "meaning": "A US electric-vehicle manufacturer.",
-            "relation": "It plans to bring AI Agents into its cars."
-          }
-        },
-        {
-          "key": "AI Agent",
-          "aliases": [
-            "AI Agent",
-            "Agent",
-            "智能体"
-          ],
-          "zh": {
-            "label": "AI 工具",
-            "meaning": "不只回答问题，还能按目标连续调用工具完成任务的 AI。",
-            "relation": "Rivian 想把这类工具带入车内场景。"
-          },
-          "en": {
-            "label": "AI tool",
-            "meaning": "AI that can use tools and take multiple steps toward a goal, not just answer a question.",
-            "relation": "Rivian is seeking to use it inside vehicles."
+            "label": "Rivian",
+            "meaning": "A U.S. electric-vehicle maker.",
+            "relation": "It plans to put AI Agents capable of multi-step tasks into its vehicles."
           }
         }
       ]
     },
     {
-      "id": "ai-bee-personal-ai-devices",
+      "id": "ai-amazon-bee-devices",
       "cat": "AI",
       "icon": "ai",
-      "title": "75美元起的随身 AI 设备来了：便宜不等于隐私成本低",
-      "brief": "Amazon旗下 Bee 推出两款个人 AI 设备，录音和日常信息会不会被妥善处理，比价格更要紧。",
-      "take": "Amazon旗下的 Bee 发布两款个人 AI 设备，起价75美元。低价会让“随身记忆助手”更容易被尝试：它们可以把语音和日常信息变成提醒、摘要或待办。但这类产品离人很近，也会碰到旁人的谈话和敏感习惯。消费者不该只比较硬件售价，还要看录什么、上传到哪里、保存多久，以及能否彻底删除。",
-      "meta": "AI 硬件｜10月15日",
+      "title": "Amazon 的 Bee 推出 75 美元起 AI 设备：随身记录，隐私账也得算",
+      "brief": "低价个人 AI 设备更容易买，但它若长期听和记，谁能看到这些内容更重要。",
+      "take": "Amazon 旗下 Bee 推出两款个人 AI 设备，起价 75 美元。此类产品的吸引力很直接：把提醒、录音、摘要和个人信息整理塞进一个随身硬件里。但价格低并不代表代价低——用户要弄清设备何时采集、音频是否上传、数据保存多久、旁人是否被告知。个人 AI 从手机应用走向常驻硬件后，隐私设置会变成日常习惯，而不是注册时勾一下的选项。",
+      "meta": "AI 硬件｜10 月 15 日",
       "facts": [
         [
           "品牌",
           "Amazon 旗下 Bee"
         ],
         [
-          "新品数量",
+          "新品",
           "两款个人 AI 设备"
         ],
         [
-          "起售价",
-          "75美元"
+          "起价",
+          "75 美元"
         ]
       ],
       "visual": null,
       "impacts": [
         [
-          "隐私",
-          "低价可穿戴或随身设备可能让更多日常谈话进入数据处理链"
+          "消费者",
+          "更低价格让个人 AI 硬件更接近日常购买"
         ],
         [
-          "消费",
-          "订阅费、云端存储和删除规则，可能比硬件标价更影响长期成本"
+          "隐私",
+          "持续采集型设备会把数据规则带进办公室和家庭"
         ]
       ],
       "next": [
-        "两款设备的录音、存储和删除政策",
-        "是否需要持续订阅才能使用核心功能"
+        "设备是否默认录音及如何提示周围的人",
+        "音频、摘要和账户数据的保留与删除规则"
       ],
       "source": "TechCrunch AI",
       "updated": "2026-10-15",
       "en": {
         "cat": "AI",
-        "title": "A $75 personal AI device is cheap. Its privacy cost may not be.",
-        "brief": "Amazon-owned Bee has launched two personal AI devices, and how they handle recordings and daily data matters more than the sticker price.",
-        "take": "Bee, which is owned by Amazon, has introduced two personal AI devices starting at $75. A low price could make “memory assistant” gadgets easier to try: they can turn speech and daily details into reminders, summaries, or to-do lists. But products this close to people can capture bystanders’ conversations and sensitive routines. Shoppers should look beyond the hardware price: what is recorded, where it is uploaded, how long it is kept, and whether it can truly be deleted.",
+        "title": "Amazon’s Bee launches AI devices from $75: the privacy bill still needs reading",
+        "brief": "Cheaper personal AI hardware is easier to buy, but what it hears, keeps, and shares matters more.",
+        "take": "Amazon’s Bee has launched two personal AI devices starting at $75. The appeal is straightforward: put reminders, recordings, summaries, and personal organization into a portable device. But a low sticker price does not mean a low cost in privacy. Users need to know when it collects information, whether audio goes to the cloud, how long data is kept, and how people nearby are notified. As personal AI moves from phone apps to always-present hardware, privacy settings become an everyday habit rather than a signup checkbox.",
         "meta": "AI hardware | Oct. 15",
         "facts": [
           [
@@ -469,24 +890,24 @@
         "visual": null,
         "impacts": [
           [
-            "Privacy",
-            "Cheap personal devices could put more everyday conversation into data-processing systems"
+            "Consumers",
+            "Lower pricing makes personal AI hardware a more routine purchase"
           ],
           [
-            "Spending",
-            "Subscriptions, cloud storage, and deletion rules may matter more than the device price over time"
+            "Privacy",
+            "Always-collecting devices bring data rules into homes and workplaces"
           ]
         ],
         "next": [
-          "Recording, storage, and deletion policies for both devices",
-          "Whether core features require an ongoing subscription"
+          "Whether recording is on by default and how bystanders are notified",
+          "Retention and deletion rules for audio, summaries, and account data"
         ],
         "source": "TechCrunch AI",
         "updated": "2026-10-15"
       },
       "sourceLinks": [
         {
-          "title": "Amazon’s Bee launches two new personal AI devices, starting at $75",
+          "title": "Amazon's Bee launches two new personal AI devices, starting at $75",
           "url": "https://techcrunch.com/2026/10/15/amazons-bee-launches-two-new-personal-ai-devices-starting-at-75/",
           "publisher": "TechCrunch AI"
         }
@@ -496,370 +917,87 @@
         "credit": "TechCrunch AI",
         "link": "https://techcrunch.com/2026/10/15/amazons-bee-launches-two-new-personal-ai-devices-starting-at-75/",
         "zh": {
-          "alt": "75美元起的随身 AI 设备来了：便宜不等于隐私成本低",
-          "caption": "75美元起的随身 AI 设备来了：便宜不等于隐私成本低"
+          "alt": "Amazon 的 Bee 推出 75 美元起 AI 设备：随身记录，隐私账也得算",
+          "caption": "Amazon 的 Bee 推出 75 美元起 AI 设备：随身记录，隐私账也得算"
         },
         "en": {
-          "alt": "A $75 personal AI device is cheap. Its privacy cost may not be.",
-          "caption": "A $75 personal AI device is cheap. Its privacy cost may not be."
+          "alt": "Amazon’s Bee launches AI devices from $75: the privacy bill still needs reading",
+          "caption": "Amazon’s Bee launches AI devices from $75: the privacy bill still needs reading"
         }
       },
       "termGuides": [
         {
           "key": "Bee",
           "aliases": [
-            "Bee"
+            "Bee",
+            "Amazon Bee"
           ],
           "zh": {
-            "label": "品牌",
-            "meaning": "Amazon 旗下的个人 AI 设备品牌。",
-            "relation": "它刚推出两款起价75美元的新设备。"
+            "label": "Bee",
+            "meaning": "Amazon 旗下推出个人 AI 硬件的品牌。",
+            "relation": "它刚发布两款起价 75 美元的个人 AI 设备。"
           },
           "en": {
-            "label": "Brand",
-            "meaning": "An Amazon-owned brand of personal AI devices.",
-            "relation": "It has launched two new devices starting at $75."
-          }
-        },
-        {
-          "key": "个人 AI 设备",
-          "aliases": [
-            "个人 AI 设备",
-            "personal AI devices"
-          ],
-          "zh": {
-            "label": "硬件",
-            "meaning": "贴近日常使用、以语音和个人信息提供协助的 AI 硬件。",
-            "relation": "这次新品把这类设备的入门价格降到75美元。"
-          },
-          "en": {
-            "label": "Hardware",
-            "meaning": "AI hardware intended to assist with everyday life through voice and personal information.",
-            "relation": "The new products bring the entry price to $75."
+            "label": "Bee",
+            "meaning": "An Amazon-owned brand making personal AI hardware.",
+            "relation": "It has launched two personal AI devices starting at $75."
           }
         }
       ]
     },
     {
-      "id": "ai-figma-agent-rules",
-      "cat": "AI",
-      "icon": "code",
-      "title": "Figma先给 Agent 立规矩：设计文件不能任由 AI 改",
-      "brief": "设计平台新增 Agent 相关功能，团队能更明确地管住 AI 能看什么、改什么。",
-      "take": "Figma公布了用来界定 Agent 如何在其平台工作的功能。设计工具里的 AI 一旦能读项目、生成页面甚至修改文件，问题就从“画得好不好”变成“谁批准它动手”。这类规则和权限设置不算炫技，却决定了 AI 会成为可靠的协作者，还是把团队文件改得一团糟的实习生。对依赖共享设计稿的产品团队，这比单次生成效果更实用。",
-      "meta": "设计软件｜10月14日",
-      "facts": [
-        [
-          "平台",
-          "Figma"
-        ],
-        [
-          "更新重点",
-          "定义 Agent 在平台上的工作方式"
-        ],
-        [
-          "涉及对象",
-          "共享设计文件与团队流程"
-        ]
-      ],
-      "visual": null,
-      "impacts": [
-        [
-          "协作",
-          "团队可更清楚地安排哪些 AI 操作需要批准"
-        ],
-        [
-          "风险",
-          "降低 Agent 误改共享设计稿后难以追溯的麻烦"
-        ]
-      ],
-      "next": [
-        "权限能否细化到文件、组件和具体动作",
-        "第三方 Agent 是否必须遵守同一套规则"
-      ],
-      "source": "TechCrunch AI",
-      "updated": "2026-10-15",
-      "en": {
-        "cat": "AI",
-        "title": "Figma is setting rules for Agents before they freely edit design files",
-        "brief": "New Agent-related features should give teams clearer control over what AI can see and change in their design work.",
-        "take": "Figma has announced features meant to define how Agents work on its platform. Once AI can read projects, generate pages, or edit files, the question shifts from whether it can design well to who approved it to act. These permissions and rules are not flashy, but they determine whether AI becomes a dependable collaborator or an intern that scrambles shared files. For product teams living in shared design documents, that matters more than a one-off generation demo.",
-        "meta": "Design software | Oct. 14",
-        "facts": [
-          [
-            "Platform",
-            "Figma"
-          ],
-          [
-            "Update focus",
-            "Defining how Agents work on the platform"
-          ],
-          [
-            "Affected work",
-            "Shared design files and team workflows"
-          ]
-        ],
-        "visual": null,
-        "impacts": [
-          [
-            "Collaboration",
-            "Teams can more clearly decide which AI actions need approval"
-          ],
-          [
-            "Risk",
-            "Rules can reduce hard-to-trace damage from Agents changing shared files"
-          ]
-        ],
-        "next": [
-          "Whether permissions can be set by file, component, and action",
-          "Whether third-party Agents must follow the same rules"
-        ],
-        "source": "TechCrunch AI",
-        "updated": "2026-10-15"
-      },
-      "sourceLinks": [
-        {
-          "title": "Figma announces new features to define how agents work on its platform",
-          "url": "https://techcrunch.com/2026/10/14/figma-announces-new-features-to-define-how-agents-work-on-its-platform/",
-          "publisher": "TechCrunch AI"
-        }
-      ],
-      "eventImage": {
-        "url": "https://techcrunch.com/wp-content/uploads/2026/10/Specs_agent.jpeg?resize=1200,675",
-        "credit": "TechCrunch AI",
-        "link": "https://techcrunch.com/2026/10/14/figma-announces-new-features-to-define-how-agents-work-on-its-platform/",
-        "zh": {
-          "alt": "Figma先给 Agent 立规矩：设计文件不能任由 AI 改",
-          "caption": "Figma先给 Agent 立规矩：设计文件不能任由 AI 改"
-        },
-        "en": {
-          "alt": "Figma is setting rules for Agents before they freely edit design files",
-          "caption": "Figma is setting rules for Agents before they freely edit design files"
-        }
-      },
-      "termGuides": [
-        {
-          "key": "Figma",
-          "aliases": [
-            "Figma"
-          ],
-          "zh": {
-            "label": "平台",
-            "meaning": "产品和设计团队常用的协作设计软件。",
-            "relation": "它正在为平台上的 AI Agent 增加工作规则。"
-          },
-          "en": {
-            "label": "Platform",
-            "meaning": "Collaborative design software widely used by product and design teams.",
-            "relation": "It is adding rules for AI Agents on the platform."
-          }
-        },
-        {
-          "key": "Agent",
-          "aliases": [
-            "Agent",
-            "AI Agent",
-            "智能体"
-          ],
-          "zh": {
-            "label": "AI 工具",
-            "meaning": "能读取上下文并按目标执行多步任务的 AI。",
-            "relation": "在 Figma 中，它可能读写项目文件，因此权限很关键。"
-          },
-          "en": {
-            "label": "AI tool",
-            "meaning": "AI that can use context and take multiple steps toward a goal.",
-            "relation": "In Figma it may read or change project files, making permissions crucial."
-          }
-        }
-      ]
-    },
-    {
-      "id": "ai-youtube-music-ai-labels",
-      "cat": "AI",
-      "icon": "alert",
-      "title": "YouTube Music给 AI 音乐加标签：耳朵听不出，平台得先说清",
-      "brief": "AI 歌曲涌入后，YouTube Music 开始加标识，听众至少能知道自己点开的是什么。",
-      "take": "YouTube Music推出新的标签，应对流媒体平台上越来越多的 AI 生成音乐。对听众，这是一项很基础却迟来的信息权：当合成作品听起来像真人演唱，至少应能区分来源。对音乐人和平台，标签不能自动解决版权、冒名或推荐系统挤压的问题，但它让用户有了判断和选择的第一步，也会迫使上传者更难把 AI 内容伪装成人类创作。",
-      "meta": "内容平台｜10月14日",
-      "facts": [
-        [
-          "平台",
-          "YouTube Music"
-        ],
-        [
-          "措施",
-          "推出新的 AI 音乐标签"
-        ],
-        [
-          "背景",
-          "AI 生成音乐大量进入流媒体"
-        ]
-      ],
-      "visual": null,
-      "impacts": [
-        [
-          "选择",
-          "听众可以更容易区分 AI 生成作品与人类创作"
-        ],
-        [
-          "创作者",
-          "冒名上传和推荐流量被低成本内容挤占的问题将更容易被识别"
-        ]
-      ],
-      "next": [
-        "标签是否由上传者自报、平台检测或两者结合",
-        "标签会不会影响搜索与推荐排序"
-      ],
-      "source": "TechCrunch AI",
-      "updated": "2026-10-14",
-      "en": {
-        "cat": "AI",
-        "title": "YouTube Music starts labeling AI tracks: if your ears cannot tell, the platform should",
-        "brief": "As AI songs flood streaming, YouTube Music is adding labels so listeners can at least know what they opened.",
-        "take": "YouTube Music has introduced new labels as AI-generated music spreads across streaming platforms. For listeners, this is a basic but overdue piece of information: when a synthetic track sounds like a human singer, people should be able to tell its origin. Labels will not by themselves solve copyright, impersonation, or recommendation systems crowding out artists. But they give users a first basis for choice and make it harder to pass AI material off as human work.",
-        "meta": "Content platforms | Oct. 14",
-        "facts": [
-          [
-            "Platform",
-            "YouTube Music"
-          ],
-          [
-            "Measure",
-            "New labels for AI-generated music"
-          ],
-          [
-            "Context",
-            "AI music is flooding streaming services"
-          ]
-        ],
-        "visual": null,
-        "impacts": [
-          [
-            "Choice",
-            "Listeners can more easily distinguish AI-generated work from human creation"
-          ],
-          [
-            "Creators",
-            "Impersonation and low-cost content crowding recommendation feeds become easier to identify"
-          ]
-        ],
-        "next": [
-          "Whether labels rely on uploader disclosure, platform detection, or both",
-          "Whether labels affect search and recommendation ranking"
-        ],
-        "source": "TechCrunch AI",
-        "updated": "2026-10-14"
-      },
-      "sourceLinks": [
-        {
-          "title": "YouTube Music launches new labels as AI-generated music floods streaming platforms",
-          "url": "https://techcrunch.com/2026/10/14/youtube-music-launches-new-labels-as-ai-generated-music-floods-streaming-platforms/",
-          "publisher": "TechCrunch AI"
-        }
-      ],
-      "eventImage": {
-        "url": "https://techcrunch.com/wp-content/uploads/2026/10/youtube-music-gen-ai-labels.png?w=1080",
-        "credit": "TechCrunch AI",
-        "link": "https://techcrunch.com/2026/10/14/youtube-music-launches-new-labels-as-ai-generated-music-floods-streaming-platforms/",
-        "zh": {
-          "alt": "YouTube Music给 AI 音乐加标签：耳朵听不出，平台得先说清",
-          "caption": "YouTube Music给 AI 音乐加标签：耳朵听不出，平台得先说清"
-        },
-        "en": {
-          "alt": "YouTube Music starts labeling AI tracks: if your ears cannot tell, the platform should",
-          "caption": "YouTube Music starts labeling AI tracks: if your ears cannot tell, the platform should"
-        }
-      },
-      "termGuides": [
-        {
-          "key": "YouTube Music",
-          "aliases": [
-            "YouTube Music"
-          ],
-          "zh": {
-            "label": "平台",
-            "meaning": "Google 旗下的音乐流媒体服务。",
-            "relation": "它正以新标签标出平台上的 AI 生成音乐。"
-          },
-          "en": {
-            "label": "Platform",
-            "meaning": "Google’s music-streaming service.",
-            "relation": "It is adding labels for AI-generated music on the service."
-          }
-        },
-        {
-          "key": "AI 生成音乐",
-          "aliases": [
-            "AI 生成音乐",
-            "AI-generated music"
-          ],
-          "zh": {
-            "label": "内容类型",
-            "meaning": "由生成式 AI 创作或合成的歌曲、演唱或配乐。",
-            "relation": "其大量上传促使 YouTube Music 增加来源标识。"
-          },
-          "en": {
-            "label": "Content type",
-            "meaning": "Songs, vocals, or music created or synthesized with generative AI.",
-            "relation": "Its growing volume prompted YouTube Music to add origin labels."
-          }
-        }
-      ]
-    },
-    {
-      "id": "ai-labs-buy-dead-startup-data",
+      "id": "ai-dead-startup-data",
       "cat": "AI",
       "icon": "chart",
-      "title": "倒闭创业公司的数据成了 AI 实验室新货源，用户同意过吗？",
-      "brief": "AI 公司在收购失败创业公司的数据，旧账户留下的信息可能被重新拿去训练模型。",
-      "take": "MIT Technology Review报道，AI 实验室正在从倒闭创业公司手中购买数据用于训练模型。这里最棘手的不是交易本身，而是数据原先收集时，用户是否被清楚告知它日后可能换主人、换用途。创业公司关门不代表用户痕迹自动消失。随着高质量训练数据越来越难找，这类“数据清算”可能变多，也把隐私同意和资产出售之间的缺口暴露得更明显。",
-      "meta": "训练数据与隐私｜10月13日",
+      "title": "倒闭创业公司的数据成了 AI 新矿：用户当年同意过这件事吗",
+      "brief": "AI 实验室在收购倒闭公司的数据，老用户留下的信息可能在新模型训练里重新出现。",
+      "take": "MIT Technology Review 报道，AI 实验室正在购买已倒闭创业公司的数据来训练模型。对模型公司，这是补充高质量、结构化数据的一条路；对当初使用那些服务的人，麻烦在于原本的数据同意条款未必写清了“公司倒闭后卖给训练 AI 的买家”。即使交易在法律上可行，用户是否被充分告知、能否删除数据，正变成比数据价格更棘手的问题。",
+      "meta": "训练数据｜10 月 13 日",
       "facts": [
         [
           "买方",
           "AI 实验室"
         ],
         [
-          "数据来源",
-          "已经倒闭的创业公司"
+          "来源",
+          "已倒闭创业公司的数据资产"
         ],
         [
           "用途",
-          "训练 AI 模型"
+          "用于训练 AI 模型"
         ]
       ],
       "visual": null,
       "impacts": [
         [
-          "隐私",
-          "你在已关闭服务留下的数据，可能进入此前没接触过的模型训练流程"
+          "用户隐私",
+          "旧服务留下的数据可能被用于未预期的新用途"
         ],
         [
-          "规则",
-          "用户同意条款和公司破产时的数据处置规则会受到更大压力"
+          "行业成本",
+          "数据并购可能成为模型训练的重要补给渠道"
         ]
       ],
       "next": [
-        "交易中是否会删除敏感或可识别数据",
-        "监管者会否要求对用途变化重新取得同意"
+        "交易是否包含个人数据及原始同意条款",
+        "监管机构如何看待破产或出售后的数据再利用"
       ],
       "source": "MIT Technology Review",
       "updated": "2026-10-13",
       "en": {
         "cat": "AI",
-        "title": "Data from failed startups is becoming AI training fuel. Did users agree to that?",
-        "brief": "AI labs are buying data from dead startups, so information left in old accounts may be repurposed for model training.",
-        "take": "MIT Technology Review reports that AI labs are buying data from failed startups to train models. The difficult question is not simply whether the sale is legal. It is whether users were clearly told, when their data was collected, that it might later get a new owner and a new purpose. A startup closing does not make its users’ traces disappear. As high-quality training data grows harder to find, these data liquidations may become more common and expose a bigger gap between consent and asset sales.",
-        "meta": "Training data and privacy | Oct. 13",
+        "title": "Data from failed startups is becoming AI fuel—did users ever agree to that?",
+        "brief": "AI labs are buying data from defunct startups, potentially giving old user information a second life in model training.",
+        "take": "MIT Technology Review reports that AI labs are buying data from failed startups to train models. For AI companies, it is a route to more high-quality, structured data. For people who used those services, the problem is that original consent terms may not have clearly said that, after a shutdown, their information could be sold to a buyer training AI. Even where a deal is legal, whether users were properly informed and can delete their data may prove harder than setting a price.",
+        "meta": "Training data | Oct. 13",
         "facts": [
           [
             "Buyers",
             "AI labs"
           ],
           [
-            "Data source",
-            "Failed startups"
+            "Source",
+            "Data assets from failed startups"
           ],
           [
             "Use",
@@ -869,17 +1007,17 @@
         "visual": null,
         "impacts": [
           [
-            "Privacy",
-            "Data left with a shut-down service may enter training systems users never encountered"
+            "User privacy",
+            "Data left with an old service may be reused in an unexpected new context"
           ],
           [
-            "Rules",
-            "Consent terms and bankruptcy rules for user data will face more pressure"
+            "Industry costs",
+            "Data acquisitions may become an important supply route for model training"
           ]
         ],
         "next": [
-          "Whether deals remove sensitive or identifiable data",
-          "Whether regulators require new consent when use changes"
+          "Whether deals include personal data and what original consent terms allowed",
+          "How regulators view data reuse after bankruptcy or sale"
         ],
         "source": "MIT Technology Review",
         "updated": "2026-10-13"
@@ -896,12 +1034,12 @@
         "credit": "MIT Technology Review",
         "link": "https://www.technologyreview.com/2026/10/13/1145755/ai-labs-buying-data-from-dead-startups-to-train-models/",
         "zh": {
-          "alt": "倒闭创业公司的数据成了 AI 实验室新货源，用户同意过吗？",
-          "caption": "倒闭创业公司的数据成了 AI 实验室新货源，用户同意过吗？"
+          "alt": "倒闭创业公司的数据成了 AI 新矿：用户当年同意过这件事吗",
+          "caption": "倒闭创业公司的数据成了 AI 新矿：用户当年同意过这件事吗"
         },
         "en": {
-          "alt": "Data from failed startups is becoming AI training fuel. Did users agree to that?",
-          "caption": "Data from failed startups is becoming AI training fuel. Did users agree to that?"
+          "alt": "Data from failed startups is becoming AI fuel—did users ever agree to that?",
+          "caption": "Data from failed startups is becoming AI fuel—did users ever agree to that?"
         }
       },
       "termGuides": [
@@ -912,429 +1050,132 @@
             "training data"
           ],
           "zh": {
-            "label": "AI 原料",
-            "meaning": "模型从中学习语言、图像或行为模式的大量资料。",
-            "relation": "本报道中的数据正被购买来训练新模型。"
+            "label": "训练数据",
+            "meaning": "用来让 AI 学习语言、图像或任务规律的材料。",
+            "relation": "报道中的争议是，倒闭公司积累的数据被出售给模型训练方。"
           },
           "en": {
-            "label": "AI input",
-            "meaning": "Material from which a model learns language, images, or behavioral patterns.",
-            "relation": "The purchased data is intended to train new models."
-          }
-        },
-        {
-          "key": "数据清算",
-          "aliases": [
-            "数据清算",
-            "data liquidation"
-          ],
-          "zh": {
-            "label": "处置方式",
-            "meaning": "公司倒闭后，把数据等资产出售变现。",
-            "relation": "它可能让旧用户数据转到 AI 实验室手中。"
-          },
-          "en": {
-            "label": "Disposition",
-            "meaning": "Selling assets, including data, after a company fails.",
-            "relation": "It can move former users’ data into AI labs’ hands."
+            "label": "Training data",
+            "meaning": "Material used to teach an AI model patterns in language, images, or tasks.",
+            "relation": "The dispute is over failed startups’ accumulated data being sold to model-training buyers."
           }
         }
       ]
     },
     {
-      "id": "ai-apate-scam-agents",
-      "cat": "AI",
-      "icon": "alert",
-      "title": "让 AI 去和骗子周旋：反诈也开始用“数字卧底”",
-      "brief": "Apate让 AI Agent 主动接触诈骗者收集套路，可能帮人更早识别新的骗法。",
-      "take": "Apate把 AI Agent 派去与诈骗者周旋，故意进入骗局以收集诈骗情报。思路很直接：骗子靠规模和速度筛人，防守方也用可扩展的自动化去记录话术、收款路径和新剧本。它有望帮助平台和银行更快发现模式，但不是普通人可以放松警惕的理由——骗子仍会把目标转向更容易受骗的人，自动化接触也必须避免误伤或泄露真实个人信息。",
-      "meta": "反诈 AI｜10月14日",
-      "facts": [
-        [
-          "公司",
-          "Apate"
-        ],
-        [
-          "方法",
-          "让 AI Agent 与诈骗者互动"
-        ],
-        [
-          "目的",
-          "收集诈骗情报"
-        ]
-      ],
-      "visual": null,
-      "impacts": [
-        [
-          "防骗",
-          "新骗局的常见话术和流程有机会更早被识别并拦截"
-        ],
-        [
-          "风险",
-          "自动化反制需要避免牵连无辜账号或暴露真实身份信息"
-        ]
-      ],
-      "next": [
-        "情报会如何提供给银行、平台和执法机构",
-        "系统如何区分诈骗者与正常联系者"
-      ],
-      "source": "TechCrunch AI",
-      "updated": "2026-10-14",
-      "en": {
-        "cat": "AI",
-        "title": "Let AI waste scammers’ time: anti-fraud gets digital undercover agents",
-        "brief": "Apate sends AI Agents to engage scammers and gather their tactics, which could spot new fraud patterns earlier.",
-        "take": "Apate sends AI Agents into scams to interact with fraudsters and collect intelligence. The idea is simple: scammers use scale and speed to find victims, so defenders can use scalable automation to record scripts, payment routes, and new playbooks. That may help platforms and banks detect patterns faster. It is not a reason for people to drop their guard—scammers can still shift toward easier targets, and automated engagement must not expose real identities or harm innocent accounts.",
-        "meta": "Anti-fraud AI | Oct. 14",
-        "facts": [
-          [
-            "Company",
-            "Apate"
-          ],
-          [
-            "Method",
-            "AI Agents interact with scammers"
-          ],
-          [
-            "Purpose",
-            "Gathering fraud intelligence"
-          ]
-        ],
-        "visual": null,
-        "impacts": [
-          [
-            "Fraud prevention",
-            "Common scripts and steps in new scams may be identified and blocked sooner"
-          ],
-          [
-            "Risk",
-            "Automated countermeasures must avoid harming innocent accounts or exposing real identities"
-          ]
-        ],
-        "next": [
-          "How intelligence is shared with banks, platforms, and law enforcement",
-          "How the system distinguishes scammers from legitimate contacts"
-        ],
-        "source": "TechCrunch AI",
-        "updated": "2026-10-14"
-      },
-      "sourceLinks": [
-        {
-          "title": "Apate sends AI agents undercover to get scammed so they can gather fraud intelligence",
-          "url": "https://techcrunch.com/2026/10/14/apate-sends-ai-agents-undercover-to-get-scammed-so-they-can-gather-fraud-intelligence/",
-          "publisher": "TechCrunch AI"
-        }
-      ],
-      "eventImage": {
-        "url": "https://techcrunch.com/wp-content/uploads/2026/10/6811e05224449e9b499b4916_apate_team-p-1600.webp?resize=1200,797",
-        "credit": "TechCrunch AI",
-        "link": "https://techcrunch.com/2026/10/14/apate-sends-ai-agents-undercover-to-get-scammed-so-they-can-gather-fraud-intelligence/",
-        "zh": {
-          "alt": "让 AI 去和骗子周旋：反诈也开始用“数字卧底”",
-          "caption": "让 AI 去和骗子周旋：反诈也开始用“数字卧底”"
-        },
-        "en": {
-          "alt": "Let AI waste scammers’ time: anti-fraud gets digital undercover agents",
-          "caption": "Let AI waste scammers’ time: anti-fraud gets digital undercover agents"
-        }
-      },
-      "termGuides": [
-        {
-          "key": "Apate",
-          "aliases": [
-            "Apate"
-          ],
-          "zh": {
-            "label": "公司",
-            "meaning": "开发反诈 AI 工具的公司。",
-            "relation": "它让 AI Agent 主动与诈骗者互动以收集证据和模式。"
-          },
-          "en": {
-            "label": "Company",
-            "meaning": "A company building AI tools for fraud prevention.",
-            "relation": "It sends AI Agents to engage scammers and collect evidence and patterns."
-          }
-        },
-        {
-          "key": "诈骗情报",
-          "aliases": [
-            "诈骗情报",
-            "fraud intelligence"
-          ],
-          "zh": {
-            "label": "风险信息",
-            "meaning": "诈骗话术、联系方式、资金路径和操作模式等线索。",
-            "relation": "Apate 希望通过 AI 对话更快收集这些线索。"
-          },
-          "en": {
-            "label": "Risk information",
-            "meaning": "Clues such as scam scripts, contact details, payment paths, and operating patterns.",
-            "relation": "Apate aims to collect it faster through AI conversations."
-          }
-        }
-      ]
-    },
-    {
-      "id": "ai-ricursive-ai-designed-chips",
+      "id": "ai-google-universal-cart",
       "cat": "AI",
       "icon": "chart",
-      "title": "算力不够，创业公司想先让 AI 设计芯片",
-      "brief": "Ricursive Intelligence押注用 AI 设计芯片，想缩短供给跟不上模型需求的那段等待。",
-      "take": "Ricursive Intelligence正押注 AI 辅助芯片设计，以缓解行业所说的“算力危机”。训练和运行大模型都要大量芯片，但从设计到量产通常很慢、很贵。用 AI 帮工程师探索电路方案，未必立刻造出更强芯片，却可能压缩反复试错的时间。真正要看的是成果能否通过严苛验证、进入制造流程；芯片设计不是生成一张漂亮图片，错一个细节就可能整批报废。",
-      "meta": "芯片与算力｜10月14日",
+      "title": "Google 推通用购物车：AI 若替你凑单，谁在决定你看到什么",
+      "brief": "美国用户可用 Google Universal Cart 合并购物步骤，方便背后是更强的购物入口控制。",
+      "take": "Google 在美国推出 Universal Cart 购物工具。它试图把分散的商品和结账步骤收拢到一个入口，减少用户在不同商家页面间来回跳转。对消费者，省时间是实在好处；但当搜索、推荐和下单越来越由同一平台串起来，商家为获得展示位置可能付出更多，用户也更难看清推荐是否按价格、质量还是商业关系排序。",
+      "meta": "AI 购物产品｜10 月 15 日",
       "facts": [
         [
-          "公司",
-          "Ricursive Intelligence"
-        ],
-        [
-          "技术路线",
-          "AI 辅助芯片设计"
-        ],
-        [
-          "目标",
-          "缓解 AI 算力供给压力"
-        ]
-      ],
-      "visual": null,
-      "impacts": [
-        [
-          "成本",
-          "若设计周期缩短，未来 AI 服务扩容的等待和部分成本可能下降"
-        ],
-        [
-          "不确定性",
-          "设计自动化不能绕过制造、验证和供应链的现实瓶颈"
-        ]
-      ],
-      "next": [
-        "其设计成果是否进入真实芯片流片和量产",
-        "能否在性能、功耗或设计周期上给出可验证数据"
-      ],
-      "source": "TechCrunch AI",
-      "updated": "2026-10-15",
-      "en": {
-        "cat": "AI",
-        "title": "Compute is tight, so a startup wants AI to design the chips first",
-        "brief": "Ricursive Intelligence is betting on AI-designed chips to shorten the wait between soaring model demand and available compute.",
-        "take": "Ricursive Intelligence is betting on AI-assisted chip design to address what the industry calls a compute crunch. Training and running large models require huge numbers of chips, while designing and manufacturing them is slow and expensive. AI may help engineers explore circuit options and cut iteration time, even if it does not instantly create better chips. The real test is whether results survive strict validation and reach manufacturing. Chip design is not generating a pretty image: one wrong detail can ruin an entire batch.",
-        "meta": "Chips and compute | Oct. 14",
-        "facts": [
-          [
-            "Company",
-            "Ricursive Intelligence"
-          ],
-          [
-            "Approach",
-            "AI-assisted chip design"
-          ],
-          [
-            "Goal",
-            "Ease pressure on AI compute supply"
-          ]
-        ],
-        "visual": null,
-        "impacts": [
-          [
-            "Cost",
-            "Faster design cycles could reduce some wait time and cost of expanding AI services"
-          ],
-          [
-            "Uncertainty",
-            "Design automation cannot bypass manufacturing, validation, and supply-chain bottlenecks"
-          ]
-        ],
-        "next": [
-          "Whether designs reach actual tape-out and volume production",
-          "Whether it can show verifiable gains in performance, power, or design time"
-        ],
-        "source": "TechCrunch AI",
-        "updated": "2026-10-15"
-      },
-      "sourceLinks": [
-        {
-          "title": "Ricursive Intelligence is betting on AI-designed chips to help solve the compute crisis",
-          "url": "https://techcrunch.com/2026/10/14/ricursive-intelligence-is-betting-on-ai-designed-chips-to-help-solve-the-compute-crisis/",
-          "publisher": "TechCrunch AI"
-        }
-      ],
-      "eventImage": {
-        "url": "https://techcrunch.com/wp-content/uploads/2026/10/55590095286_7fe28ddb94_o.jpg?resize=1200,800",
-        "credit": "TechCrunch AI",
-        "link": "https://techcrunch.com/2026/10/14/ricursive-intelligence-is-betting-on-ai-designed-chips-to-help-solve-the-compute-crisis/",
-        "zh": {
-          "alt": "算力不够，创业公司想先让 AI 设计芯片",
-          "caption": "算力不够，创业公司想先让 AI 设计芯片"
-        },
-        "en": {
-          "alt": "Compute is tight, so a startup wants AI to design the chips first",
-          "caption": "Compute is tight, so a startup wants AI to design the chips first"
-        }
-      },
-      "termGuides": [
-        {
-          "key": "Ricursive Intelligence",
-          "aliases": [
-            "Ricursive Intelligence"
-          ],
-          "zh": {
-            "label": "公司",
-            "meaning": "押注用 AI 改进芯片设计的创业公司。",
-            "relation": "它试图借此缓解 AI 行业的算力短缺。"
-          },
-          "en": {
-            "label": "Company",
-            "meaning": "A startup betting on AI to improve chip design.",
-            "relation": "It is using that approach to address AI compute shortages."
-          }
-        },
-        {
-          "key": "算力",
-          "aliases": [
-            "算力",
-            "compute"
-          ],
-          "zh": {
-            "label": "计算资源",
-            "meaning": "训练或运行 AI 所需的芯片、服务器和电力能力。",
-            "relation": "算力紧张是该公司瞄准的成本和供给问题。"
-          },
-          "en": {
-            "label": "Computing resources",
-            "meaning": "The chips, servers, and power needed to train or run AI.",
-            "relation": "Its scarcity is the cost and supply problem the company targets."
-          }
-        }
-      ]
-    },
-    {
-      "id": "ai-bluesky-attie-builder",
-      "cat": "AI",
-      "icon": "code",
-      "title": "不会写代码的人也能做网站和游戏，门槛降了，审核压力上来了",
-      "brief": "Bluesky把 AI 应用 Attie 开放给更多人建网站和游戏，做东西更快，辨别假内容也更难。",
-      "take": "Bluesky扩大了 AI 驱动应用 Attie 的范围，让更多人可用它创建网站、游戏等内容。自然语言生成产品会让小团队和个人少卡在代码门槛上，这很实用；但把发布能力交给更多人，也会更快制造仿冒页面、低质量应用和误导性内容。对用户来说，未来看到一个“像真的”网站，不能只凭界面判断；平台的审核、来源提示和滥用处理会变得更重要。",
-      "meta": "AI 创作工具｜10月15日",
-      "facts": [
-        [
-          "公司",
-          "Bluesky"
+          "发布方",
+          "Google"
         ],
         [
           "产品",
-          "Attie"
+          "Universal Cart 购物工具"
         ],
         [
-          "可创建内容",
-          "网站、游戏等"
+          "地区",
+          "美国上线"
         ]
       ],
       "visual": null,
       "impacts": [
         [
-          "创作",
-          "个人和小团队可更快把想法做成可用网页或简单应用"
+          "消费者",
+          "购物流程可能更省事，但推荐排序值得留意"
         ],
         [
-          "辨伪",
-          "仿冒页面和批量低质量内容也可能更容易出现"
+          "商家",
+          "Google 对商品发现和成交入口的影响可能扩大"
         ]
       ],
       "next": [
-        "Attie 对发布内容会采用哪些审核与申诉规则",
-        "是否标明 AI 生成或提供来源信息"
+        "支持哪些零售商及支付方式",
+        "推荐、广告与自然排序如何区分"
       ],
       "source": "TechCrunch AI",
       "updated": "2026-10-15",
       "en": {
         "cat": "AI",
-        "title": "More people can now make sites and games without code. Moderation gets harder.",
-        "brief": "Bluesky is expanding its AI app Attie for building websites and games, making creation faster but fake content harder to spot.",
-        "take": "Bluesky is expanding Attie, an AI-powered app that lets more people create websites, games, and other material. Natural-language product building can help individuals and small teams get past the coding barrier, which is genuinely useful. But giving more people publishing power can also produce imitation pages, low-quality apps, and misleading content faster. For users, a site that looks real will be less proof that it is real; platform review, provenance cues, and abuse handling will matter more.",
-        "meta": "AI creation tools | Oct. 15",
+        "title": "Google launches Universal Cart: if AI gathers the order, who decides what you see?",
+        "brief": "Google’s U.S. Universal Cart can simplify shopping, while giving one platform more control over the purchase path.",
+        "take": "Google has launched its Universal Cart shopping tool in the U.S. It aims to pull scattered products and checkout steps into one place, reducing the hopping between merchant sites. Saving time is a real benefit for shoppers. But as search, recommendation, and ordering are tied together by one platform, merchants may pay more to be seen and users may find it harder to tell whether a suggestion is ranked by price, quality, or a commercial relationship.",
+        "meta": "AI shopping product | Oct. 15",
         "facts": [
           [
-            "Company",
-            "Bluesky"
+            "Publisher",
+            "Google"
           ],
           [
             "Product",
-            "Attie"
+            "Universal Cart shopping tool"
           ],
           [
-            "What it creates",
-            "Websites, games, and more"
+            "Region",
+            "Launched in the United States"
           ]
         ],
         "visual": null,
         "impacts": [
           [
-            "Creation",
-            "Individuals and small teams can turn ideas into usable sites or simple apps faster"
+            "Shoppers",
+            "Buying may become easier, but recommendation ranking deserves scrutiny"
           ],
           [
-            "Verification",
-            "Imitation pages and bulk low-quality content may become easier to produce"
+            "Merchants",
+            "Google’s influence over product discovery and purchase entry points may grow"
           ]
         ],
         "next": [
-          "What review and appeal rules Attie applies to published content",
-          "Whether it marks AI-generated material or shows provenance"
+          "Supported retailers and payment methods",
+          "How recommendations, ads, and organic results are distinguished"
         ],
         "source": "TechCrunch AI",
         "updated": "2026-10-15"
       },
       "sourceLinks": [
         {
-          "title": "Bluesky expands its AI-powered Attie app to let anyone build websites, games, and more",
-          "url": "https://techcrunch.com/2026/10/15/bluesky-expands-its-ai-powered-attie-app-to-let-anyone-build-websites-games-and-more/",
+          "title": "Google’s Universal Cart shopping tool launches in the US",
+          "url": "https://techcrunch.com/2026/10/15/googles-universal-cart-shopping-tool-launches-in-the-us/",
           "publisher": "TechCrunch AI"
         }
       ],
       "eventImage": {
-        "url": "https://techcrunch.com/wp-content/uploads/2026/10/55591989690_9a07db512f_k.jpg?resize=1200,800",
+        "url": "https://techcrunch.com/wp-content/uploads/2026/10/Google-UniversalCart.png?w=1200",
         "credit": "TechCrunch AI",
-        "link": "https://techcrunch.com/2026/10/15/bluesky-expands-its-ai-powered-attie-app-to-let-anyone-build-websites-games-and-more/",
+        "link": "https://techcrunch.com/2026/10/15/googles-universal-cart-shopping-tool-launches-in-the-us/",
         "zh": {
-          "alt": "不会写代码的人也能做网站和游戏，门槛降了，审核压力上来了",
-          "caption": "不会写代码的人也能做网站和游戏，门槛降了，审核压力上来了"
+          "alt": "Google 推通用购物车：AI 若替你凑单，谁在决定你看到什么",
+          "caption": "Google 推通用购物车：AI 若替你凑单，谁在决定你看到什么"
         },
         "en": {
-          "alt": "More people can now make sites and games without code. Moderation gets harder.",
-          "caption": "More people can now make sites and games without code. Moderation gets harder."
+          "alt": "Google launches Universal Cart: if AI gathers the order, who decides what you see?",
+          "caption": "Google launches Universal Cart: if AI gathers the order, who decides what you see?"
         }
       },
       "termGuides": [
         {
-          "key": "Bluesky",
+          "key": "Universal Cart",
           "aliases": [
-            "Bluesky"
+            "Universal Cart",
+            "Google Universal Cart",
+            "通用购物车"
           ],
           "zh": {
-            "label": "公司",
-            "meaning": "运营社交网络 Bluesky 的科技公司。",
-            "relation": "它扩大了旗下 AI 创作应用 Attie 的使用范围。"
+            "label": "Universal Cart",
+            "meaning": "Google 推出的统一购物工具，试图合并不同商品和结账步骤。",
+            "relation": "它已在美国上线，可能让 Google 更靠近购物交易的最后一步。"
           },
           "en": {
-            "label": "Company",
-            "meaning": "The technology company behind the Bluesky social network.",
-            "relation": "It is expanding access to its AI creation app, Attie."
-          }
-        },
-        {
-          "key": "Attie",
-          "aliases": [
-            "Attie"
-          ],
-          "zh": {
-            "label": "AI 应用",
-            "meaning": "通过 AI 帮用户创建网站、游戏等数字内容的工具。",
-            "relation": "Bluesky 正让更多人可以使用它。"
-          },
-          "en": {
-            "label": "AI app",
-            "meaning": "A tool that uses AI to help people make websites, games, and other digital content.",
-            "relation": "Bluesky is opening it to more people."
+            "label": "Universal Cart",
+            "meaning": "Google’s unified shopping tool for bringing products and checkout steps together.",
+            "relation": "Its U.S. launch could move Google closer to the final step of a purchase."
           }
         }
       ]
