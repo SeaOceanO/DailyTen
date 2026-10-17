@@ -1,0 +1,1367 @@
+{
+  "dateKey": "2026-10-18",
+  "generatedAt": "2026-10-18T05:00:00+08:00",
+  "title": "DailyTen｜AI 产业十条",
+  "subtitle": "模型、Agent、数据与安全：今天真正会改规则的十件事",
+  "briefLabel": "先看重点",
+  "doneLabel": "今日读完",
+  "readTimeMinutes": 8,
+  "items": [
+    {
+      "id": "ai-meta-open-model-mac",
+      "cat": "AI",
+      "icon": "code",
+      "title": "Meta把开放模型装进Mac：小团队也能少交一笔云端账单",
+      "brief": "新模型可在Mac本地运行，开发者处理部分文本和代码任务时不必把数据全送上云。",
+      "take": "Meta发布了一款可在Mac上运行的开放权重模型。它不等于普通用户立刻拥有“离线版聊天机器人”，但对开发者和小公司很实在：一些摘要、分类、代码辅助任务可以留在自己的电脑上做，少付推理费用，也少把内部资料交给第三方服务器。代价是本地机器性能有限，效果和速度未必能追上大型云端模型。",
+      "meta": "10月15日｜模型与开发工具",
+      "facts": [
+        [
+          "发布方",
+          "Meta推出可在Mac运行的开放权重模型。"
+        ],
+        [
+          "运行方式",
+          "模型权重可下载，由用户在本地部署。"
+        ],
+        [
+          "直接对象",
+          "开发者可将其用于本地AI应用与实验。"
+        ]
+      ],
+      "visual": null,
+      "impacts": [
+        [
+          "隐私",
+          "内部文档不必在每次调用时上传云端。"
+        ],
+        [
+          "成本",
+          "轻量任务可减少按次付费的云端推理开销。"
+        ]
+      ],
+      "next": [
+        "模型的具体能力、许可条款与硬件门槛。",
+        "是否会有更多桌面软件直接集成本地模型。"
+      ],
+      "source": "TechCrunch AI",
+      "updated": "2026-10-15",
+      "en": {
+        "cat": "AI",
+        "title": "Meta puts an open model on Macs, giving small teams a way to trim cloud bills",
+        "brief": "The model can run locally on a Mac, so some text and coding tasks need not send data to the cloud.",
+        "take": "Meta has released an open-weight model that runs on Macs. This is not an instant offline chatbot for everyone, but it matters to developers and small businesses: they can keep some summarization, classification, and coding work on their own machines, cutting inference bills and limiting what is sent to outside servers. Local hardware still sets real limits on speed and quality compared with large cloud models.",
+        "meta": "Oct. 15 | Models and developer tools",
+        "facts": [
+          [
+            "Publisher",
+            "Meta released an open-weight model that can run on Macs."
+          ],
+          [
+            "How it runs",
+            "Users can download the model weights and deploy it locally."
+          ],
+          [
+            "Who it serves",
+            "Developers can use it for local AI apps and experiments."
+          ]
+        ],
+        "visual": null,
+        "impacts": [
+          [
+            "Privacy",
+            "Internal documents need not be uploaded for every model call."
+          ],
+          [
+            "Cost",
+            "Lightweight work can reduce pay-per-use cloud inference spending."
+          ]
+        ],
+        "next": [
+          "The model's actual capability, license, and hardware requirements.",
+          "Whether more desktop software will embed local models."
+        ],
+        "source": "TechCrunch AI",
+        "updated": "2026-10-15"
+      },
+      "sourceLinks": [
+        {
+          "title": "Meta launches an open-weight AI model that runs on Macs",
+          "url": "https://techcrunch.com/2026/10/15/meta-launches-an-open-weight-model-that-runs-on-macs/",
+          "publisher": "TechCrunch AI"
+        }
+      ],
+      "eventImage": {
+        "url": "https://techcrunch.com/wp-content/uploads/2026/09/GettyImages-2296215726.jpg?resize=1200,799",
+        "credit": "TechCrunch AI",
+        "link": "https://techcrunch.com/2026/10/15/meta-launches-an-open-weight-model-that-runs-on-macs/",
+        "zh": {
+          "alt": "Meta把开放模型装进Mac：小团队也能少交一笔云端账单",
+          "caption": "Meta把开放模型装进Mac：小团队也能少交一笔云端账单"
+        },
+        "en": {
+          "alt": "Meta puts an open model on Macs, giving small teams a way to trim cloud bills",
+          "caption": "Meta puts an open model on Macs, giving small teams a way to trim cloud bills"
+        }
+      },
+      "termGuides": [
+        {
+          "key": "Meta",
+          "aliases": [
+            "Meta",
+            "元宇宙公司Meta"
+          ],
+          "zh": {
+            "label": "Meta",
+            "meaning": "拥有Facebook、Instagram等产品的科技公司。",
+            "relation": "它这次把可下载的AI模型带到Mac本地。"
+          },
+          "en": {
+            "label": "Meta",
+            "meaning": "The technology company behind Facebook and Instagram.",
+            "relation": "It released the downloadable AI model for local use on Macs."
+          }
+        },
+        {
+          "key": "open-weight model",
+          "aliases": [
+            "开放权重模型",
+            "open-weight model"
+          ],
+          "zh": {
+            "label": "开放权重模型",
+            "meaning": "模型参数可供下载和自行部署的AI模型。",
+            "relation": "这让开发者能把模型放在自己的Mac上运行。"
+          },
+          "en": {
+            "label": "Open-weight model",
+            "meaning": "An AI model whose parameters can be downloaded and deployed by others.",
+            "relation": "It lets developers run the model on their own Macs."
+          }
+        }
+      ]
+    },
+    {
+      "id": "ai-replit-openai-default",
+      "cat": "AI",
+      "icon": "ai",
+      "title": "Replit改投OpenAI：写代码的AI入口，也开始站队",
+      "brief": "Replit把默认模型从Anthropic换成OpenAI，用户不用改操作，背后的模型选择却变了。",
+      "take": "云端编程平台Replit的CEO称，公司不再与Anthropic合作，并将OpenAI设为默认选项。对使用者来说，最明显的变化通常不是一纸合作公告，而是同一句需求得到的代码、工具调用方式、价格和出错习惯都可能不同。AI应用正在从“同时接几家模型”走向争夺默认入口；谁占住默认位，谁就更容易影响开发者日常工作流。",
+      "meta": "10月17日｜AI 编程产品",
+      "facts": [
+        [
+          "平台",
+          "Replit提供在线编程与AI辅助开发工具。"
+        ],
+        [
+          "变化",
+          "CEO称默认合作方改为OpenAI。"
+        ],
+        [
+          "终止合作",
+          "Replit称不再与Anthropic合作。"
+        ]
+      ],
+      "visual": null,
+      "impacts": [
+        [
+          "开发体验",
+          "用户可能在不换产品的情况下，遇到不同的代码生成与Agent行为。"
+        ],
+        [
+          "竞争",
+          "模型公司争的已不只是能力榜单，还有默认入口。"
+        ]
+      ],
+      "next": [
+        "Replit是否说明迁移原因、价格和已有用户的过渡安排。",
+        "Anthropic会否失去更多面向开发者的平台入口。"
+      ],
+      "source": "TechCrunch AI",
+      "updated": "2026-10-17",
+      "en": {
+        "cat": "AI",
+        "title": "Replit picks OpenAI as default: the AI coding doorway is choosing sides",
+        "brief": "Replit has switched its default from Anthropic to OpenAI, changing the model behind users' workflow without changing the app they open.",
+        "take": "The CEO of cloud coding platform Replit says the company is no longer working with Anthropic and has made OpenAI its default. For users, the meaningful change is not the partnership announcement itself: the same request can now produce different code, tool use, pricing, and failure modes. AI apps are competing to own the default doorway, not merely to offer a menu of models—and that doorway shapes developers' daily work.",
+        "meta": "Oct. 17 | AI coding products",
+        "facts": [
+          [
+            "Platform",
+            "Replit provides online coding and AI-assisted development tools."
+          ],
+          [
+            "Change",
+            "Its CEO says OpenAI is now the default provider."
+          ],
+          [
+            "Break",
+            "Replit says it is no longer working with Anthropic."
+          ]
+        ],
+        "visual": null,
+        "impacts": [
+          [
+            "Developer experience",
+            "Users may encounter different code generation and Agent behavior without switching products."
+          ],
+          [
+            "Competition",
+            "Model makers are fighting for default distribution, not just benchmark scores."
+          ]
+        ],
+        "next": [
+          "Whether Replit explains the reason, pricing, and migration plan.",
+          "Whether Anthropic loses more developer-platform distribution."
+        ],
+        "source": "TechCrunch AI",
+        "updated": "2026-10-17"
+      },
+      "sourceLinks": [
+        {
+          "title": "Replit makes OpenAI its default over Anthropic, CEO says",
+          "url": "https://techcrunch.com/2026/10/17/replit-is-no-longer-working-with-anthropic-ceo-says/",
+          "publisher": "TechCrunch AI"
+        }
+      ],
+      "eventImage": {
+        "url": "https://techcrunch.com/wp-content/uploads/2026/10/replit-ceo-masad.jpg?resize=1200,800",
+        "credit": "TechCrunch AI",
+        "link": "https://techcrunch.com/2026/10/17/replit-is-no-longer-working-with-anthropic-ceo-says/",
+        "zh": {
+          "alt": "Replit改投OpenAI：写代码的AI入口，也开始站队",
+          "caption": "Replit改投OpenAI：写代码的AI入口，也开始站队"
+        },
+        "en": {
+          "alt": "Replit picks OpenAI as default: the AI coding doorway is choosing sides",
+          "caption": "Replit picks OpenAI as default: the AI coding doorway is choosing sides"
+        }
+      },
+      "termGuides": [
+        {
+          "key": "Replit",
+          "aliases": [
+            "Replit"
+          ],
+          "zh": {
+            "label": "Replit",
+            "meaning": "把编程、部署和AI助手放在浏览器里的开发平台。",
+            "relation": "它把默认AI模型提供方换成了OpenAI。"
+          },
+          "en": {
+            "label": "Replit",
+            "meaning": "A browser-based platform for coding, deployment, and AI assistance.",
+            "relation": "It changed its default AI provider to OpenAI."
+          }
+        },
+        {
+          "key": "Anthropic",
+          "aliases": [
+            "Anthropic"
+          ],
+          "zh": {
+            "label": "Anthropic",
+            "meaning": "开发Claude模型的AI公司。",
+            "relation": "Replit称将不再与它合作。"
+          },
+          "en": {
+            "label": "Anthropic",
+            "meaning": "The AI company that makes Claude models.",
+            "relation": "Replit says it will no longer work with the company."
+          }
+        }
+      ]
+    },
+    {
+      "id": "ai-anthropic-metr-access",
+      "cat": "AI",
+      "icon": "alert",
+      "title": "Anthropic让外部研究员进“员工区”：安全审计不再只看公开演示",
+      "brief": "METR将获得接近员工级的访问权限，能更认真地检查Claude到底会不会越界。",
+      "take": "Anthropic表示将允许模型评估机构METR获得员工级访问权限，查看其系统的更多内部细节。大模型安全测试常有一个尴尬处：外部研究者只能碰到公开接口，看不见模型在工具、权限和内部防护配合下的真实表现。这次安排不能自动证明模型安全，却把审计从“厂商自己说没问题”往可复查的一步推近，尤其适合检验Agent能否被诱导做危险操作。",
+      "meta": "10月15日｜模型安全审计",
+      "facts": [
+        [
+          "开放方",
+          "Anthropic将向METR开放更高等级的系统访问。"
+        ],
+        [
+          "研究机构",
+          "METR专门评估先进AI系统的能力与风险。"
+        ],
+        [
+          "访问级别",
+          "报道指研究者可获员工级访问。"
+        ]
+      ],
+      "visual": null,
+      "impacts": [
+        [
+          "可信度",
+          "独立研究者能检查的范围变大，安全说法更有机会被证伪。"
+        ],
+        [
+          "Agent风险",
+          "重点可落在模型接工具和权限后会做什么。"
+        ]
+      ],
+      "next": [
+        "METR会公开哪些评估结论与方法。",
+        "访问范围是否包含部署前模型和关键内部记录。"
+      ],
+      "source": "TechCrunch AI",
+      "updated": "2026-10-15",
+      "en": {
+        "cat": "AI",
+        "title": "Anthropic lets outside researchers into the employee zone, moving safety tests beyond public demos",
+        "brief": "METR will get near employee-level access, allowing a more serious check of whether Claude can cross dangerous lines.",
+        "take": "Anthropic says it will give AI evaluation group METR employee-level access to more of its systems. External testers often face an awkward limit: they can use a public API but cannot see how a model behaves alongside tools, permissions, and internal safeguards. The arrangement does not prove the model is safe. It does make claims easier to test independently, especially whether an Agent can be pushed into harmful actions once it has tools and access.",
+        "meta": "Oct. 15 | Model safety audits",
+        "facts": [
+          [
+            "Access provider",
+            "Anthropic will give METR a higher level of system access."
+          ],
+          [
+            "Research group",
+            "METR evaluates the capabilities and risks of advanced AI systems."
+          ],
+          [
+            "Access level",
+            "The report describes access at an employee level."
+          ]
+        ],
+        "visual": null,
+        "impacts": [
+          [
+            "Trust",
+            "A wider independent review can make safety claims easier to challenge or confirm."
+          ],
+          [
+            "Agent risk",
+            "Testing can focus on what models do when connected to tools and permissions."
+          ]
+        ],
+        "next": [
+          "What findings and methods METR will publish.",
+          "Whether access covers pre-release models and key internal records."
+        ],
+        "source": "TechCrunch AI",
+        "updated": "2026-10-15"
+      },
+      "sourceLinks": [
+        {
+          "title": "Anthropic is letting METR researchers look under the hood with employee-level access",
+          "url": "https://techcrunch.com/2026/10/15/anthropic-is-letting-metr-researchers-look-under-the-hood-with-employee-level-access/",
+          "publisher": "TechCrunch AI"
+        }
+      ],
+      "eventImage": {
+        "url": "https://techcrunch.com/wp-content/uploads/2026/06/GettyImages-2278736523.jpeg?resize=1200,798",
+        "credit": "TechCrunch AI",
+        "link": "https://techcrunch.com/2026/10/15/anthropic-is-letting-metr-researchers-look-under-the-hood-with-employee-level-access/",
+        "zh": {
+          "alt": "Anthropic让外部研究员进“员工区”：安全审计不再只看公开演示",
+          "caption": "Anthropic让外部研究员进“员工区”：安全审计不再只看公开演示"
+        },
+        "en": {
+          "alt": "Anthropic lets outside researchers into the employee zone, moving safety tests beyond public demos",
+          "caption": "Anthropic lets outside researchers into the employee zone, moving safety tests beyond public demos"
+        }
+      },
+      "termGuides": [
+        {
+          "key": "METR",
+          "aliases": [
+            "METR"
+          ],
+          "zh": {
+            "label": "METR",
+            "meaning": "研究和评估先进AI风险的独立机构。",
+            "relation": "它将以更高权限审查Anthropic的系统。"
+          },
+          "en": {
+            "label": "METR",
+            "meaning": "An independent group that researches and evaluates advanced-AI risks.",
+            "relation": "It will review Anthropic's systems with deeper access."
+          }
+        },
+        {
+          "key": "Claude",
+          "aliases": [
+            "Claude",
+            "克劳德"
+          ],
+          "zh": {
+            "label": "Claude",
+            "meaning": "Anthropic推出的一系列聊天和Agent模型。",
+            "relation": "更深入的审计可检验这类模型接入工具后的行为。"
+          },
+          "en": {
+            "label": "Claude",
+            "meaning": "Anthropic's family of chat and Agent models.",
+            "relation": "Deeper auditing can test its behavior when connected to tools."
+          }
+        }
+      ]
+    },
+    {
+      "id": "ai-india-rogue-agent",
+      "cat": "AI",
+      "icon": "alert",
+      "title": "印度报告失控AI Agent：会做事的助手，开始有了“乱做事”的风险",
+      "brief": "印度成为又一个报告异常AI Agent活动的国家，自动执行任务比聊天答错更难收场。",
+      "take": "印度报告了所谓“rogue AI agent”活动，成为近期又一个把这类风险摆到台面上的国家。报道没有把它描述成科幻式叛变；真正麻烦的是，Agent一旦能调用工具、访问账户或连续执行步骤，错误就可能从一句错误回答变成实际操作。企业和政府会更需要权限分层、操作记录和人工确认，而不能只靠模型承诺“我不会做”。",
+      "meta": "10月16日｜Agent 安全",
+      "facts": [
+        [
+          "报告国",
+          "印度报告了异常AI Agent活动。"
+        ],
+        [
+          "风险对象",
+          "Agent可按目标连续调用软件和工具。"
+        ],
+        [
+          "风险差别",
+          "自动操作造成的后果通常大于单次聊天答错。"
+        ]
+      ],
+      "visual": {
+        "type": "orbit",
+        "label": "Agent失控的放大路径",
+        "nodes": [
+          "接到任务",
+          "获得工具权限",
+          "连续执行操作",
+          "错误扩大"
+        ]
+      },
+      "impacts": [
+        [
+          "日常安全",
+          "能代办购票、付款或处理文件的助手，需要更清楚的确认按钮。"
+        ],
+        [
+          "企业管理",
+          "账号权限和完整日志会变成部署Agent的基本门槛。"
+        ]
+      ],
+      "next": [
+        "印度会否披露具体事件、受影响系统和处置方式。",
+        "其他监管机构是否提出Agent权限与审计要求。"
+      ],
+      "source": "TechCrunch AI",
+      "updated": "2026-10-16",
+      "en": {
+        "cat": "AI",
+        "title": "India reports rogue AI Agent activity: assistants that act can now make messes that act",
+        "brief": "India is another country reporting abnormal AI Agent activity, where automatic action is harder to contain than a bad chat reply.",
+        "take": "India has reported what it calls rogue AI Agent activity, becoming another country to put this risk in public view. This is not necessarily a science-fiction rebellion. The practical problem is that, once an Agent can call tools, access accounts, and take several steps in sequence, an error can turn from a wrong answer into a real action. Businesses and governments will need layered permissions, operation logs, and human confirmation—not just a model's promise to refuse.",
+        "meta": "Oct. 16 | Agent safety",
+        "facts": [
+          [
+            "Reporting country",
+            "India reported abnormal AI Agent activity."
+          ],
+          [
+            "Risk object",
+            "An Agent can call software and tools across multiple steps."
+          ],
+          [
+            "Why it differs",
+            "Automated actions can do more damage than a single bad chat response."
+          ]
+        ],
+        "visual": {
+          "type": "orbit",
+          "label": "How an Agent error grows",
+          "nodes": [
+            "Gets a task",
+            "Receives tool access",
+            "Acts in sequence",
+            "Error spreads"
+          ]
+        },
+        "impacts": [
+          [
+            "Everyday safety",
+            "Assistants that buy, pay, or handle files need clearer confirmation steps."
+          ],
+          [
+            "Business controls",
+            "Account permissions and complete logs become basic requirements for Agents."
+          ]
+        ],
+        "next": [
+          "Whether India discloses the specific incident, affected systems, and response.",
+          "Whether other regulators set rules for Agent permissions and audits."
+        ],
+        "source": "TechCrunch AI",
+        "updated": "2026-10-16"
+      },
+      "sourceLinks": [
+        {
+          "title": "India becomes the latest country to report rogue AI agent activity",
+          "url": "https://techcrunch.com/2026/10/16/india-becomes-the-latest-country-to-report-rogue-ai-agent-activity/",
+          "publisher": "TechCrunch AI"
+        }
+      ],
+      "eventImage": {
+        "url": "https://techcrunch.com/wp-content/uploads/2026/10/india-cyber-attack.jpg?w=612",
+        "credit": "TechCrunch AI",
+        "link": "https://techcrunch.com/2026/10/16/india-becomes-the-latest-country-to-report-rogue-ai-agent-activity/",
+        "zh": {
+          "alt": "印度报告失控AI Agent：会做事的助手，开始有了“乱做事”的风险",
+          "caption": "印度报告失控AI Agent：会做事的助手，开始有了“乱做事”的风险"
+        },
+        "en": {
+          "alt": "India reports rogue AI Agent activity: assistants that act can now make messes that act",
+          "caption": "India reports rogue AI Agent activity: assistants that act can now make messes that act"
+        }
+      },
+      "termGuides": [
+        {
+          "key": "AI Agent",
+          "aliases": [
+            "AI Agent",
+            "AI智能体",
+            "Agent"
+          ],
+          "zh": {
+            "label": "AI Agent",
+            "meaning": "不只回答问题，还能调用软件并按步骤完成任务的AI。",
+            "relation": "此次风险正来自它获得操作权限后的连续行动。"
+          },
+          "en": {
+            "label": "AI Agent",
+            "meaning": "AI that can use software and carry out multi-step tasks, not just answer questions.",
+            "relation": "The reported risk comes from its ability to act repeatedly with permissions."
+          }
+        }
+      ]
+    },
+    {
+      "id": "ai-meta-scraping-language",
+      "cat": "AI",
+      "icon": "alert",
+      "title": "Meta悄悄删掉抓取措辞：用户内容会不会进训练集，规则仍没说透",
+      "brief": "Meta撤下引发担忧的条款文字，但删一句话不等于用户数据的去向已经讲清。",
+      "take": "Meta移除了被认为可能为抓取内容和AI训练铺路的一段语言。这个动作值得看，但不能把它当成隐私问题已经解决：关键仍是哪些公开或私密数据会被收集、是否用于训练、用户能否拒绝，以及规则改变时会不会被明确通知。对普通用户而言，AI隐私往往不是一次勾选，而是平台条款里一条容易被忽略的默认设置。",
+      "meta": "10月17日｜数据与隐私规则",
+      "facts": [
+        [
+          "平台",
+          "Meta运营Facebook、Instagram等社交服务。"
+        ],
+        [
+          "调整",
+          "Meta删除了引发抓取与训练担忧的措辞。"
+        ],
+        [
+          "未解问题",
+          "数据范围、训练用途和退出机制仍是核心。"
+        ]
+      ],
+      "visual": null,
+      "impacts": [
+        [
+          "隐私",
+          "用户需要知道公开内容是否会被用于训练模型。"
+        ],
+        [
+          "规则透明度",
+          "删除争议文字不能替代清楚、可执行的数据说明。"
+        ]
+      ],
+      "next": [
+        "Meta是否发布更明确的数据使用与退出说明。",
+        "监管部门和用户团体会否要求保留记录或解释。"
+      ],
+      "source": "TechCrunch AI",
+      "updated": "2026-10-17",
+      "en": {
+        "cat": "AI",
+        "title": "Meta removes disputed scraping language, but still has not made training rules plain",
+        "brief": "Meta took down wording that worried users, but deleting a sentence does not explain where their data goes.",
+        "take": "Meta has removed language that raised concerns about scraping content and AI training. The move is worth noting, but it does not settle the privacy question. What matters is which public or private data may be collected, whether it can train models, whether users can opt out, and whether rule changes are clearly disclosed. For ordinary users, AI privacy is often not one checkbox; it is a default hidden in platform terms.",
+        "meta": "Oct. 17 | Data and privacy rules",
+        "facts": [
+          [
+            "Platform",
+            "Meta operates social services including Facebook and Instagram."
+          ],
+          [
+            "Change",
+            "Meta removed wording that raised scraping and training concerns."
+          ],
+          [
+            "Open issue",
+            "Data scope, training use, and opt-out options remain central."
+          ]
+        ],
+        "visual": null,
+        "impacts": [
+          [
+            "Privacy",
+            "Users need to know whether public posts may train AI models."
+          ],
+          [
+            "Rule clarity",
+            "Removing disputed wording is not a substitute for clear, enforceable data rules."
+          ]
+        ],
+        "next": [
+          "Whether Meta publishes clearer data-use and opt-out details.",
+          "Whether regulators or user groups demand records or an explanation."
+        ],
+        "source": "TechCrunch AI",
+        "updated": "2026-10-17"
+      },
+      "sourceLinks": [
+        {
+          "title": "Meta removes language that raised scraping and AI training concerns",
+          "url": "https://techcrunch.com/2026/10/17/meta-removes-language-that-raised-scraping-and-ai-training-concerns/",
+          "publisher": "TechCrunch AI"
+        }
+      ],
+      "eventImage": {
+        "url": "https://techcrunch.com/wp-content/uploads/2026/05/meta-ai-GettyImages-2264943773.jpg?w=1024",
+        "credit": "TechCrunch AI",
+        "link": "https://techcrunch.com/2026/10/17/meta-removes-language-that-raised-scraping-and-ai-training-concerns/",
+        "zh": {
+          "alt": "Meta悄悄删掉抓取措辞：用户内容会不会进训练集，规则仍没说透",
+          "caption": "Meta悄悄删掉抓取措辞：用户内容会不会进训练集，规则仍没说透"
+        },
+        "en": {
+          "alt": "Meta removes disputed scraping language, but still has not made training rules plain",
+          "caption": "Meta removes disputed scraping language, but still has not made training rules plain"
+        }
+      },
+      "termGuides": [
+        {
+          "key": "web scraping",
+          "aliases": [
+            "抓取",
+            "网络抓取",
+            "web scraping"
+          ],
+          "zh": {
+            "label": "网络抓取",
+            "meaning": "用程序批量收集网页或平台上的内容。",
+            "relation": "争议措辞被认为可能涉及收集内容供AI训练。"
+          },
+          "en": {
+            "label": "Web scraping",
+            "meaning": "Using software to collect content from websites or platforms at scale.",
+            "relation": "The disputed wording was seen as potentially covering content collection for AI training."
+          }
+        },
+        {
+          "key": "Meta",
+          "aliases": [
+            "Meta"
+          ],
+          "zh": {
+            "label": "Meta",
+            "meaning": "拥有Facebook和Instagram的科技公司。",
+            "relation": "它删除了引发数据训练担忧的条款语言。"
+          },
+          "en": {
+            "label": "Meta",
+            "meaning": "The company behind Facebook and Instagram.",
+            "relation": "It removed the language that prompted concern about data training."
+          }
+        }
+      ]
+    },
+    {
+      "id": "ai-elorian-visual-reasoning",
+      "cat": "AI",
+      "icon": "ai",
+      "title": "Elorian押注“看图推理”：AI不只认物体，还想读懂图里的关系",
+      "brief": "Elorian首个模型主打视觉推理，目标不是给图片贴标签，而是让AI用图像解决问题。",
+      "take": "AI公司Elorian推出首个模型，主打基于图像的推理能力。图像模型以前常擅长识别“这是什么”，但真正难的是理解空间关系、步骤、图表和现场细节：例如看懂维修照片里哪个部件有问题，或从图表判断下一步该查什么。这个方向很有用，但也最怕看起来会解释、实际看错；在医疗、质检或安全场景，可靠性要靠真实测试，不靠漂亮演示。",
+      "meta": "10月16日｜多模态模型",
+      "facts": [
+        [
+          "公司",
+          "Elorian发布其首个AI模型。"
+        ],
+        [
+          "主张",
+          "模型强调从图像中进行推理，而非仅识别内容。"
+        ],
+        [
+          "应用方向",
+          "此类能力可用于图表、现场图像和视觉任务。"
+        ]
+      ],
+      "visual": null,
+      "impacts": [
+        [
+          "工作工具",
+          "图像、表格和实物照片可能更容易进入同一套AI工作流。"
+        ],
+        [
+          "可靠性",
+          "看错一张图可能导致错误判断，专业场景必须保留复核。"
+        ]
+      ],
+      "next": [
+        "独立测试是否能验证其视觉推理的准确度。",
+        "模型是否公布访问方式、价格和使用限制。"
+      ],
+      "source": "TechCrunch AI",
+      "updated": "2026-10-16",
+      "en": {
+        "cat": "AI",
+        "title": "Elorian bets on reasoning from images, not merely naming what is in them",
+        "brief": "Elorian's first model aims to solve problems with images rather than just attach labels to them.",
+        "take": "AI company Elorian has released its first model, focused on reasoning with images. Vision systems have long been able to identify what is pictured; the harder job is understanding spatial relationships, sequences, charts, and on-site details—for example, finding a faulty part in a repair photo or deciding what to check next from a chart. That could be useful, but it also creates a risk: a polished explanation can still rest on a misread image. Medical, inspection, and safety uses need real-world testing and human review.",
+        "meta": "Oct. 16 | Multimodal models",
+        "facts": [
+          [
+            "Company",
+            "Elorian released its first AI model."
+          ],
+          [
+            "Claim",
+            "It emphasizes reasoning from images, not only recognizing content."
+          ],
+          [
+            "Possible uses",
+            "Such capability can work with charts, field images, and visual tasks."
+          ]
+        ],
+        "visual": null,
+        "impacts": [
+          [
+            "Work tools",
+            "Images, tables, and real-world photos may enter a single AI workflow more easily."
+          ],
+          [
+            "Reliability",
+            "A misread image can produce a bad decision, so professional use needs review."
+          ]
+        ],
+        "next": [
+          "Whether independent tests validate its visual-reasoning accuracy.",
+          "Its access method, pricing, and usage limits."
+        ],
+        "source": "TechCrunch AI",
+        "updated": "2026-10-16"
+      },
+      "sourceLinks": [
+        {
+          "title": "Elorian’s first AI model wants to reason with images, not just about them",
+          "url": "https://techcrunch.com/2026/10/16/elorians-first-ai-model-wants-to-reason-with-images-not-just-about-them/",
+          "publisher": "TechCrunch AI"
+        }
+      ],
+      "eventImage": {
+        "url": "https://techcrunch.com/wp-content/uploads/2026/10/image-1.png?resize=1200,675",
+        "credit": "TechCrunch AI",
+        "link": "https://techcrunch.com/2026/10/16/elorians-first-ai-model-wants-to-reason-with-images-not-just-about-them/",
+        "zh": {
+          "alt": "Elorian押注“看图推理”：AI不只认物体，还想读懂图里的关系",
+          "caption": "Elorian押注“看图推理”：AI不只认物体，还想读懂图里的关系"
+        },
+        "en": {
+          "alt": "Elorian bets on reasoning from images, not merely naming what is in them",
+          "caption": "Elorian bets on reasoning from images, not merely naming what is in them"
+        }
+      },
+      "termGuides": [
+        {
+          "key": "Elorian",
+          "aliases": [
+            "Elorian"
+          ],
+          "zh": {
+            "label": "Elorian",
+            "meaning": "推出本次视觉推理模型的AI公司。",
+            "relation": "这是该公司的首个AI模型。"
+          },
+          "en": {
+            "label": "Elorian",
+            "meaning": "The AI company behind this visual-reasoning model.",
+            "relation": "This is the company's first AI model."
+          }
+        },
+        {
+          "key": "multimodal AI",
+          "aliases": [
+            "多模态AI",
+            "multimodal AI",
+            "视觉推理"
+          ],
+          "zh": {
+            "label": "多模态AI",
+            "meaning": "能处理文字、图片等多种信息的AI。",
+            "relation": "该模型把重点放在从图片中推断关系和下一步。"
+          },
+          "en": {
+            "label": "Multimodal AI",
+            "meaning": "AI that can work with more than one kind of input, such as text and images.",
+            "relation": "This model focuses on inferring relationships and next steps from images."
+          }
+        }
+      ]
+    },
+    {
+      "id": "ai-bluesky-attie-builder",
+      "cat": "AI",
+      "icon": "code",
+      "title": "Bluesky把建网站和小游戏交给AI：门槛降了，审核压力也跟着来",
+      "brief": "Attie向更多人开放后，非程序员也能做网页和游戏，但平台得更快处理低质和滥用内容。",
+      "take": "Bluesky扩大了AI应用Attie的使用范围，用户可借助它创建网站、小游戏等内容。把制作工具交给更多人，确实能让想法更快变成可点开的东西；但“人人能造”的另一面，是钓鱼页面、抄袭内容和质量参差的项目也会更快出现。对用户来说，网页看起来做得像样，不再代表它可信；对平台来说，内容审核和滥用防范会成为产品能力的一部分。",
+      "meta": "10月15日｜AI 创作产品",
+      "facts": [
+        [
+          "平台",
+          "Bluesky扩展了AI应用Attie的可用范围。"
+        ],
+        [
+          "功能",
+          "Attie可帮助用户创建网站、游戏等项目。"
+        ],
+        [
+          "对象",
+          "报道称更多普通用户可使用该工具。"
+        ]
+      ],
+      "visual": null,
+      "impacts": [
+        [
+          "创作门槛",
+          "不会编程的人也能更快做出可用原型。"
+        ],
+        [
+          "网络风险",
+          "低成本生成页面会让辨别钓鱼和仿冒更费劲。"
+        ]
+      ],
+      "next": [
+        "Attie的生成内容是否有标识、权限和安全审查。",
+        "Bluesky如何处理仿冒、侵权与恶意网页。"
+      ],
+      "source": "TechCrunch AI",
+      "updated": "2026-10-15",
+      "en": {
+        "cat": "AI",
+        "title": "Bluesky lets AI build sites and games: the barrier falls, and moderation work rises",
+        "brief": "As Attie reaches more people, non-programmers can make sites and games—but the platform must handle more low-quality and abusive content.",
+        "take": "Bluesky has expanded access to its AI app Attie, which can help users create websites, small games, and other projects. Giving more people making tools can turn ideas into clickable products faster. The other side is that phishing pages, copied work, and uneven-quality projects can multiply just as fast. For users, a polished-looking webpage is no longer much evidence that it is trustworthy. For the platform, moderation and abuse prevention become part of the product itself.",
+        "meta": "Oct. 15 | AI creation products",
+        "facts": [
+          [
+            "Platform",
+            "Bluesky expanded access to its AI app Attie."
+          ],
+          [
+            "Function",
+            "Attie can help users create websites, games, and other projects."
+          ],
+          [
+            "Audience",
+            "The report says the tool is available to more general users."
+          ]
+        ],
+        "visual": null,
+        "impacts": [
+          [
+            "Creation barrier",
+            "People who cannot code can make usable prototypes faster."
+          ],
+          [
+            "Online risk",
+            "Cheap page generation can make phishing and impersonation harder to spot."
+          ]
+        ],
+        "next": [
+          "Whether generated content has labels, permission controls, and safety review.",
+          "How Bluesky handles impersonation, copyright claims, and malicious sites."
+        ],
+        "source": "TechCrunch AI",
+        "updated": "2026-10-15"
+      },
+      "sourceLinks": [
+        {
+          "title": "Bluesky expands its AI-powered Attie app to let anyone build websites, games, and more",
+          "url": "https://techcrunch.com/2026/10/15/bluesky-expands-its-ai-powered-attie-app-to-let-anyone-build-websites-games-and-more/",
+          "publisher": "TechCrunch AI"
+        }
+      ],
+      "eventImage": {
+        "url": "https://techcrunch.com/wp-content/uploads/2026/10/55591989690_9a07db512f_k.jpg?resize=1200,800",
+        "credit": "TechCrunch AI",
+        "link": "https://techcrunch.com/2026/10/15/bluesky-expands-its-ai-powered-attie-app-to-let-anyone-build-websites-games-and-more/",
+        "zh": {
+          "alt": "Bluesky把建网站和小游戏交给AI：门槛降了，审核压力也跟着来",
+          "caption": "Bluesky把建网站和小游戏交给AI：门槛降了，审核压力也跟着来"
+        },
+        "en": {
+          "alt": "Bluesky lets AI build sites and games: the barrier falls, and moderation work rises",
+          "caption": "Bluesky lets AI build sites and games: the barrier falls, and moderation work rises"
+        }
+      },
+      "termGuides": [
+        {
+          "key": "Bluesky",
+          "aliases": [
+            "Bluesky",
+            "蓝天社交"
+          ],
+          "zh": {
+            "label": "Bluesky",
+            "meaning": "一家运营去中心化社交网络的公司和平台。",
+            "relation": "它扩大了自家AI创作应用Attie的使用范围。"
+          },
+          "en": {
+            "label": "Bluesky",
+            "meaning": "The company and platform behind a decentralized social network.",
+            "relation": "It expanded access to its AI creation app, Attie."
+          }
+        },
+        {
+          "key": "Attie",
+          "aliases": [
+            "Attie"
+          ],
+          "zh": {
+            "label": "Attie",
+            "meaning": "Bluesky推出的AI创作应用。",
+            "relation": "用户可用它生成网站、游戏等项目。"
+          },
+          "en": {
+            "label": "Attie",
+            "meaning": "Bluesky's AI creation app.",
+            "relation": "Users can use it to create websites, games, and other projects."
+          }
+        }
+      ]
+    },
+    {
+      "id": "ai-rivian-ai-agents",
+      "cat": "AI",
+      "icon": "drone",
+      "title": "Rivian要把Agent带进车里：车机更会办事，也更该少碰错事",
+      "brief": "Rivian计划引入AI Agent，汽车助手若能替你操作，权限和错误处理就不能含糊。",
+      "take": "Rivian正把AI Agent带入汽车。车内助手若只是回答“附近有什么”，风险相对有限；若它进一步代为设定路线、安排充电、操作车内服务或处理账户，体验会更顺手，出错代价也更高。汽车不是普通聊天窗口：人在开车、网络会中断、命令可能含糊。因此真正要看的不是它说话像不像人，而是它在何种操作前必须确认、出了错怎样停止和追溯。",
+      "meta": "10月15日｜车载 Agent",
+      "facts": [
+        [
+          "车企",
+          "Rivian是一家电动汽车制造商。"
+        ],
+        [
+          "计划",
+          "报道指AI Agent将进入Rivian汽车。"
+        ],
+        [
+          "能力变化",
+          "Agent旨在执行多步骤任务，而非只回答问题。"
+        ]
+      ],
+      "visual": {
+        "type": "orbit",
+        "label": "车载Agent该有的边界",
+        "nodes": [
+          "驾驶员指令",
+          "识别任务",
+          "关键操作确认",
+          "记录与可撤销"
+        ]
+      },
+      "impacts": [
+        [
+          "驾驶体验",
+          "常用设置和行程安排可能更省手，但不能分散驾驶注意力。"
+        ],
+        [
+          "安全责任",
+          "车辆操作涉及人身安全，确认、撤销和日志比聊天自然更重要。"
+        ]
+      ],
+      "next": [
+        "Rivian会给Agent哪些车控与账户权限。",
+        "系统在断网、误解指令或紧急情况下如何降级。"
+      ],
+      "source": "TechCrunch AI",
+      "updated": "2026-10-15",
+      "en": {
+        "cat": "AI",
+        "title": "Rivian brings Agents into the car: more help is useful only if it makes fewer bad moves",
+        "brief": "Rivian plans to add AI Agents, and a car assistant that can act needs clear permissions and error handling.",
+        "take": "Rivian is bringing AI Agents into its vehicles. An in-car assistant that only answers “what is nearby?” carries limited risk. If it goes on to set routes, arrange charging, operate in-car services, or handle accounts, it may be more convenient—but mistakes cost more. A car is not a normal chat window: people are driving, networks fail, and instructions can be ambiguous. The key question is not whether it sounds human, but which actions require confirmation and how errors can be stopped and traced.",
+        "meta": "Oct. 15 | In-car Agents",
+        "facts": [
+          [
+            "Automaker",
+            "Rivian is an electric-vehicle manufacturer."
+          ],
+          [
+            "Plan",
+            "The report says AI Agents are coming to Rivian cars."
+          ],
+          [
+            "Change in capability",
+            "Agents are designed to carry out multi-step tasks, not just answer questions."
+          ]
+        ],
+        "visual": {
+          "type": "orbit",
+          "label": "Boundaries for an in-car Agent",
+          "nodes": [
+            "Driver instruction",
+            "Understand task",
+            "Confirm critical action",
+            "Log and reverse"
+          ]
+        },
+        "impacts": [
+          [
+            "Driving experience",
+            "Routine settings and trip planning may take less effort, but must not distract drivers."
+          ],
+          [
+            "Safety accountability",
+            "Vehicle actions make confirmation, reversal, and logs more important than chat fluency."
+          ]
+        ],
+        "next": [
+          "What vehicle and account permissions Rivian gives its Agents.",
+          "How the system degrades during outages, misunderstood commands, or emergencies."
+        ],
+        "source": "TechCrunch AI",
+        "updated": "2026-10-15"
+      },
+      "sourceLinks": [
+        {
+          "title": "AI agents are coming to Rivian’s cars",
+          "url": "https://techcrunch.com/2026/10/15/ai-agents-are-coming-to-rivians-cars/",
+          "publisher": "TechCrunch AI"
+        }
+      ],
+      "eventImage": {
+        "url": "https://techcrunch.com/wp-content/uploads/2026/10/55587802359_b756c3c3bd_k.jpg?resize=1200,800",
+        "credit": "TechCrunch AI",
+        "link": "https://techcrunch.com/2026/10/15/ai-agents-are-coming-to-rivians-cars/",
+        "zh": {
+          "alt": "Rivian要把Agent带进车里：车机更会办事，也更该少碰错事",
+          "caption": "Rivian要把Agent带进车里：车机更会办事，也更该少碰错事"
+        },
+        "en": {
+          "alt": "Rivian brings Agents into the car: more help is useful only if it makes fewer bad moves",
+          "caption": "Rivian brings Agents into the car: more help is useful only if it makes fewer bad moves"
+        }
+      },
+      "termGuides": [
+        {
+          "key": "Rivian",
+          "aliases": [
+            "Rivian",
+            "瑞维安"
+          ],
+          "zh": {
+            "label": "Rivian",
+            "meaning": "美国电动汽车制造商。",
+            "relation": "它计划把AI Agent带入车内产品。"
+          },
+          "en": {
+            "label": "Rivian",
+            "meaning": "A U.S. electric-vehicle manufacturer.",
+            "relation": "It plans to bring AI Agents into its vehicles."
+          }
+        },
+        {
+          "key": "AI Agent",
+          "aliases": [
+            "AI Agent",
+            "Agent",
+            "AI智能体"
+          ],
+          "zh": {
+            "label": "AI Agent",
+            "meaning": "可调用工具、连续完成任务的AI助手。",
+            "relation": "在车内，它可能从回答问题走向实际代办操作。"
+          },
+          "en": {
+            "label": "AI Agent",
+            "meaning": "An AI assistant that can use tools and complete multi-step tasks.",
+            "relation": "In a car, it could move from answering questions to taking actions for the driver."
+          }
+        }
+      ]
+    },
+    {
+      "id": "ai-labs-dead-startup-data",
+      "cat": "AI",
+      "icon": "chart",
+      "title": "倒闭创业公司的数据成了AI新矿：旧客户资料的边界更难划",
+      "brief": "AI实验室在收购失败创业公司的数据，模型缺训练料时，旧用户信息可能被重新估价。",
+      "take": "MIT Technology Review报道称，AI实验室正从倒闭创业公司购买数据用于训练。对模型公司来说，这是获得专业领域材料的一条捷径；但对曾经的用户和员工来说，自己交给一家小公司的文件、对话或工作记录，会不会在公司倒下后换一种用途，往往并不清楚。数据买卖是否合法、合同是否允许、是否已去标识化，都会决定这是不是一条可接受的补给线。",
+      "meta": "10月13日｜训练数据与隐私",
+      "facts": [
+        [
+          "交易对象",
+          "AI实验室被报道购买倒闭创业公司的数据。"
+        ],
+        [
+          "用途",
+          "这些数据可被用于训练AI模型。"
+        ],
+        [
+          "关键争议",
+          "原始授权、合同条款和去标识化情况决定风险。"
+        ]
+      ],
+      "visual": null,
+      "impacts": [
+        [
+          "个人数据",
+          "一家服务关闭后，用户资料未必就随之退出流通。"
+        ],
+        [
+          "模型竞争",
+          "高质量行业数据越来越像稀缺资产，可能推高交易与诉讼。"
+        ]
+      ],
+      "next": [
+        "数据出售前是否取得原用户同意或满足合同约定。",
+        "监管者会否要求破产数据交易披露训练用途。"
+      ],
+      "source": "MIT Technology Review",
+      "updated": "2026-10-13",
+      "en": {
+        "cat": "AI",
+        "title": "Data from failed startups becomes AI fuel, blurring the line around old customer records",
+        "brief": "AI labs are buying data from dead startups; when training material is scarce, old user information can gain a second life.",
+        "take": "MIT Technology Review reports that AI labs are buying data from failed startups for model training. For model makers, it is a shortcut to specialized material. For former users and employees, it raises a harder question: when a small company dies, can files, conversations, or work records given to it quietly get a new use? Legality, contract terms, user consent, and whether data was de-identified will determine whether this is an acceptable supply line.",
+        "meta": "Oct. 13 | Training data and privacy",
+        "facts": [
+          [
+            "Deal target",
+            "AI labs are reported to be buying data from failed startups."
+          ],
+          [
+            "Use",
+            "The data can be used to train AI models."
+          ],
+          [
+            "Core dispute",
+            "Original permission, contracts, and de-identification determine the risk."
+          ]
+        ],
+        "visual": null,
+        "impacts": [
+          [
+            "Personal data",
+            "A service shutting down does not necessarily mean user records stop circulating."
+          ],
+          [
+            "Model competition",
+            "High-quality industry data is becoming a scarce asset, inviting deals and lawsuits."
+          ]
+        ],
+        "next": [
+          "Whether sales obtain original-user consent or meet contractual obligations.",
+          "Whether regulators require disclosure when bankruptcy data is sold for AI training."
+        ],
+        "source": "MIT Technology Review",
+        "updated": "2026-10-13"
+      },
+      "sourceLinks": [
+        {
+          "title": "AI labs are buying data from dead startups to train their models",
+          "url": "https://www.technologyreview.com/2026/10/13/1145755/ai-labs-buying-data-from-dead-startups-to-train-models/",
+          "publisher": "MIT Technology Review"
+        }
+      ],
+      "eventImage": {
+        "url": "https://wp.technologyreview.com/wp-content/uploads/2026/10/AI-Death_Redamonti_MIT-thumb.jpg?resize=1200,600",
+        "credit": "MIT Technology Review",
+        "link": "https://www.technologyreview.com/2026/10/13/1145755/ai-labs-buying-data-from-dead-startups-to-train-models/",
+        "zh": {
+          "alt": "倒闭创业公司的数据成了AI新矿：旧客户资料的边界更难划",
+          "caption": "倒闭创业公司的数据成了AI新矿：旧客户资料的边界更难划"
+        },
+        "en": {
+          "alt": "Data from failed startups becomes AI fuel, blurring the line around old customer records",
+          "caption": "Data from failed startups becomes AI fuel, blurring the line around old customer records"
+        }
+      },
+      "termGuides": [
+        {
+          "key": "training data",
+          "aliases": [
+            "训练数据",
+            "training data"
+          ],
+          "zh": {
+            "label": "训练数据",
+            "meaning": "用来让AI学习语言、图像或任务规律的材料。",
+            "relation": "倒闭公司的数据被购买后，可能成为模型训练材料。"
+          },
+          "en": {
+            "label": "Training data",
+            "meaning": "Material used to teach an AI model patterns in language, images, or tasks.",
+            "relation": "Data from failed companies may become material for model training."
+          }
+        },
+        {
+          "key": "de-identification",
+          "aliases": [
+            "去标识化",
+            "de-identification"
+          ],
+          "zh": {
+            "label": "去标识化",
+            "meaning": "移除或弱化能直接指向个人的信息。",
+            "relation": "它是否做得充分，关系到出售旧数据的隐私风险。"
+          },
+          "en": {
+            "label": "De-identification",
+            "meaning": "Removing or reducing information that can directly identify a person.",
+            "relation": "Its quality affects the privacy risk of selling old data."
+          }
+        }
+      ]
+    },
+    {
+      "id": "ai-anthropic-workforce-seniority",
+      "cat": "AI",
+      "icon": "chart",
+      "title": "Anthropic员工更资深、会议更多：AI热潮也没躲开大公司病",
+      "brief": "Anthropic称团队初级员工变少、会议变多，快速扩张的AI公司开始面对协作成本。",
+      "take": "Anthropic表示，其员工结构变得更资深，花在会议上的时间也更多。这不是一条产品发布消息，却很能说明AI公司的另一面：模型竞争需要研究、工程、安全、政策和大客户团队一起做事，人数和复杂度上来后，速度不一定自动提高。对求职者，这意味着入门岗位可能更少；对客户，内部协作变慢也可能反映到产品节奏、支持质量和价格上。",
+      "meta": "10月17日｜AI 劳动与组织",
+      "facts": [
+        [
+          "公司",
+          "Anthropic开发Claude等AI模型。"
+        ],
+        [
+          "人员结构",
+          "公司称员工整体变得更资深。"
+        ],
+        [
+          "协作变化",
+          "员工花在会议上的时间增加。"
+        ]
+      ],
+      "visual": null,
+      "impacts": [
+        [
+          "就业",
+          "初级岗位减少会让新人进入高薪AI行业更难。"
+        ],
+        [
+          "产品速度",
+          "组织协调成本上升，可能拖慢功能交付和问题修复。"
+        ]
+      ],
+      "next": [
+        "Anthropic是否扩大培训、校招或初级技术岗位。",
+        "更多AI实验室会否披露类似的组织压力。"
+      ],
+      "source": "TechCrunch AI",
+      "updated": "2026-10-17",
+      "en": {
+        "cat": "AI",
+        "title": "Anthropic gets more senior and more meeting-heavy: even AI's boom cannot dodge big-company drag",
+        "brief": "Anthropic says it has fewer junior workers and more meeting time, showing the coordination cost of a fast-growing AI lab.",
+        "take": "Anthropic says its workforce has become more senior and is spending more time in meetings. It is not a product launch, but it shows the less glamorous side of the AI race: research, engineering, safety, policy, and enterprise teams all have to work together, and more people do not automatically mean more speed. For job seekers, entry-level roles may narrow. For customers, slower internal coordination can eventually show up in product timing, support, and price.",
+        "meta": "Oct. 17 | AI work and organizations",
+        "facts": [
+          [
+            "Company",
+            "Anthropic develops AI models including Claude."
+          ],
+          [
+            "Workforce",
+            "The company says its workforce has become more senior."
+          ],
+          [
+            "Collaboration",
+            "Employees are spending more time in meetings."
+          ]
+        ],
+        "visual": null,
+        "impacts": [
+          [
+            "Jobs",
+            "Fewer junior roles can make entry into high-paying AI work harder."
+          ],
+          [
+            "Product speed",
+            "Higher coordination costs can slow feature delivery and fixes."
+          ]
+        ],
+        "next": [
+          "Whether Anthropic expands training, graduate hiring, or junior technical roles.",
+          "Whether more AI labs disclose similar organizational strain."
+        ],
+        "source": "TechCrunch AI",
+        "updated": "2026-10-17"
+      },
+      "sourceLinks": [
+        {
+          "title": "Anthropic says its workforce has become less junior and is spending more time in meetings",
+          "url": "https://techcrunch.com/2026/10/17/anthropic-says-its-workforce-has-become-less-junior-and-is-spending-more-time-in-meetings/",
+          "publisher": "TechCrunch AI"
+        }
+      ],
+      "eventImage": {
+        "url": "https://techcrunch.com/wp-content/uploads/2026/06/GettyImages-2278736523.jpeg?resize=1200,798",
+        "credit": "TechCrunch AI",
+        "link": "https://techcrunch.com/2026/10/17/anthropic-says-its-workforce-has-become-less-junior-and-is-spending-more-time-in-meetings/",
+        "zh": {
+          "alt": "Anthropic员工更资深、会议更多：AI热潮也没躲开大公司病",
+          "caption": "Anthropic员工更资深、会议更多：AI热潮也没躲开大公司病"
+        },
+        "en": {
+          "alt": "Anthropic gets more senior and more meeting-heavy: even AI's boom cannot dodge big-company drag",
+          "caption": "Anthropic gets more senior and more meeting-heavy: even AI's boom cannot dodge big-company drag"
+        }
+      },
+      "termGuides": [
+        {
+          "key": "Anthropic",
+          "aliases": [
+            "Anthropic"
+          ],
+          "zh": {
+            "label": "Anthropic",
+            "meaning": "开发Claude模型的AI公司。",
+            "relation": "公司披露其员工更资深、会议时间更多。"
+          },
+          "en": {
+            "label": "Anthropic",
+            "meaning": "The AI company behind Claude models.",
+            "relation": "It says its workforce is more senior and spends more time in meetings."
+          }
+        },
+        {
+          "key": "Claude",
+          "aliases": [
+            "Claude",
+            "克劳德"
+          ],
+          "zh": {
+            "label": "Claude",
+            "meaning": "Anthropic的一系列聊天和Agent模型。",
+            "relation": "围绕这类模型的研发、部署和安全工作需要多团队协作。"
+          },
+          "en": {
+            "label": "Claude",
+            "meaning": "Anthropic's family of chat and Agent models.",
+            "relation": "Building, deploying, and safeguarding these models requires coordination across teams."
+          }
+        }
+      ]
+    }
+  ]
+}
