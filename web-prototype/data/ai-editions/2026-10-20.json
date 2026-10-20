@@ -1,0 +1,1621 @@
+{
+  "dateKey": "2026-10-20",
+  "generatedAt": "2026-10-20T05:00:00+08:00",
+  "title": "DailyTen｜AI 行业十件事",
+  "subtitle": "模型、Agent、算力与安全：AI 正从聊天框走进更贵也更难管的现实世界。",
+  "briefLabel": "今日速览",
+  "doneLabel": "读完今日十条",
+  "readTimeMinutes": 8,
+  "items": [
+    {
+      "id": "ai-anthropic-nscale-compute-talks",
+      "cat": "AI",
+      "icon": "chart",
+      "title": "Anthropic 又在谈 450 亿美元算力：做 AI 的门票越来越像一座电站",
+      "brief": "如果这笔交易谈成，顶级模型公司的竞争会更像抢电力和机房，而不只是比谁的模型更聪明。",
+      "take": "TechCrunch 报道，Anthropic 正与英国云计算公司 Nscale 商谈另一笔最高约 450 亿美元的算力交易。它仍是谈判消息，不是已经落地的合同；但这个量级很直白地说明，训练和运行前沿模型的成本正在把竞争门槛抬高。对普通用户而言，短期未必立刻涨价，长期则可能看到免费额度更紧、企业版更贵，以及少数能锁定芯片、电力和数据中心的公司掌握更多选择权。",
+      "meta": "10月19日｜TechCrunch AI｜报道称仍在谈判",
+      "facts": [
+        [
+          "交易规模",
+          "报道称最高约450亿美元"
+        ],
+        [
+          "买方",
+          "Anthropic"
+        ],
+        [
+          "供应方",
+          "Nscale 提供算力与数据中心能力"
+        ]
+      ],
+      "visual": {
+        "type": "orbit",
+        "label": "算力交易为何变大",
+        "nodes": [
+          "模型需求",
+          "芯片与机房",
+          "巨额预付款",
+          "更高门槛"
+        ]
+      },
+      "impacts": [
+        [
+          "产品价格",
+          "推理成本高，免费与低价服务更难长期维持"
+        ],
+        [
+          "竞争格局",
+          "拿不到大规模算力的模型公司会更受限"
+        ],
+        [
+          "能源压力",
+          "AI 数据中心会继续争夺电力和建设资源"
+        ]
+      ],
+      "next": [
+        "双方是否签约，以及金额是否维持在报道规模",
+        "算力交易会否附带长期排他或优先供给条款"
+      ],
+      "source": "TechCrunch AI",
+      "updated": "2026-10-19",
+      "en": {
+        "cat": "AI",
+        "title": "Anthropic may spend another $45 billion on compute: frontier AI is starting to look like a power business",
+        "brief": "If this deal happens, the race at the top of AI will be as much about securing data centers and electricity as building smarter models.",
+        "take": "TechCrunch reports that Anthropic is in talks with UK cloud company Nscale over another compute deal worth up to about $45 billion. It is a reported negotiation, not a completed contract. Still, the scale shows how training and serving frontier models is raising the price of entry. Users may not see an immediate price rise, but over time expensive inference can mean tighter free tiers, pricier business plans, and more power for the few companies that can lock in chips, power, and data-center capacity.",
+        "meta": "Oct. 19 | TechCrunch AI | Reported talks",
+        "facts": [
+          [
+            "Scale",
+            "Reported value: up to about $45 billion"
+          ],
+          [
+            "Buyer",
+            "Anthropic"
+          ],
+          [
+            "Supplier",
+            "Nscale provides compute and data-center capacity"
+          ]
+        ],
+        "visual": {
+          "type": "orbit",
+          "label": "Why compute deals keep growing",
+          "nodes": [
+            "Model demand",
+            "Chips and data centers",
+            "Huge commitments",
+            "Higher barriers"
+          ]
+        },
+        "impacts": [
+          [
+            "Pricing",
+            "High inference costs are hard to absorb forever"
+          ],
+          [
+            "Competition",
+            "Labs without large compute access face tighter limits"
+          ],
+          [
+            "Power demand",
+            "AI data centers keep competing for electricity and construction"
+          ]
+        ],
+        "next": [
+          "Whether the talks become a signed deal and at what value",
+          "Whether the arrangement includes long-term priority access"
+        ],
+        "source": "TechCrunch AI",
+        "updated": "2026-10-19"
+      },
+      "sourceLinks": [
+        {
+          "title": "Nscale and Anthropic are reportedly in talks for yet another $45 billion compute deal",
+          "url": "https://techcrunch.com/2026/10/19/nscale-and-anthropic-are-reportedly-in-talks-for-yet-another-45-billion-compute-deal/",
+          "publisher": "TechCrunch AI"
+        }
+      ],
+      "eventImage": {
+        "url": "https://techcrunch.com/wp-content/uploads/2026/07/GettyImages-2236544023.jpeg?resize=1200,800",
+        "credit": "TechCrunch AI",
+        "link": "https://techcrunch.com/2026/10/19/nscale-and-anthropic-are-reportedly-in-talks-for-yet-another-45-billion-compute-deal/",
+        "zh": {
+          "alt": "Anthropic 又在谈 450 亿美元算力：做 AI 的门票越来越像一座电站",
+          "caption": "Anthropic 又在谈 450 亿美元算力：做 AI 的门票越来越像一座电站"
+        },
+        "en": {
+          "alt": "Anthropic may spend another $45 billion on compute: frontier AI is starting to look like a power business",
+          "caption": "Anthropic may spend another $45 billion on compute: frontier AI is starting to look like a power business"
+        }
+      },
+      "termGuides": [
+        {
+          "key": "Anthropic",
+          "aliases": [
+            "Anthropic"
+          ],
+          "zh": {
+            "label": "AI 模型公司",
+            "meaning": "开发 Claude 等大语言模型的美国公司。",
+            "relation": "它据报正为训练和运行模型锁定巨额算力。"
+          },
+          "en": {
+            "label": "AI model company",
+            "meaning": "A US company that develops large language models including Claude.",
+            "relation": "It is reportedly seeking a very large new supply of compute."
+          }
+        },
+        {
+          "key": "Nscale",
+          "aliases": [
+            "Nscale"
+          ],
+          "zh": {
+            "label": "云算力公司",
+            "meaning": "提供 AI 数据中心和计算资源的英国公司。",
+            "relation": "它可能成为 Anthropic 大额算力订单的供应方。"
+          },
+          "en": {
+            "label": "Cloud-compute company",
+            "meaning": "A UK provider of AI data-center and compute capacity.",
+            "relation": "It may supply a major compute order to Anthropic."
+          }
+        },
+        {
+          "key": "compute",
+          "aliases": [
+            "算力",
+            "compute"
+          ],
+          "zh": {
+            "label": "计算资源",
+            "meaning": "训练或运行 AI 所需的芯片、服务器和机房时间。",
+            "relation": "这笔谈判的核心不是买软件，而是提前锁定大量计算资源。"
+          },
+          "en": {
+            "label": "Computing capacity",
+            "meaning": "The chips, servers, and data-center time needed to train or run AI.",
+            "relation": "The reported talks are about securing that capacity in advance."
+          }
+        }
+      ]
+    },
+    {
+      "id": "ai-nvidia-open-agent-models",
+      "cat": "AI",
+      "icon": "code",
+      "title": "英伟达把 Agent 模型放到电脑和企业内部：想少把敏感工作交给云端",
+      "brief": "新开源模型瞄准本地和企业内网运行，开发者有了少上传数据、少依赖单一云服务的选项。",
+      "take": "英伟达发布了一批面向 Agent 的开放模型，目标是在企业环境和个人电脑上运行。Agent 不只是回答问题，还可能读取资料、调用工具、完成一串任务；因此能否把它留在本地或公司内网，关系到成本、隐私和控制权。开放并不等于天然安全——公司仍要测试权限、日志和工具调用——但英伟达正在把“运行 AI 的硬件商”推进到模型入口，直接碰到云厂商和模型公司的地盘。",
+      "meta": "10月19日｜TechCrunch AI｜产品发布",
+      "facts": [
+        [
+          "发布方",
+          "Nvidia"
+        ],
+        [
+          "产品方向",
+          "用于企业和 PC 的开放 Agent 模型"
+        ],
+        [
+          "运行位置",
+          "瞄准本地设备与企业环境"
+        ]
+      ],
+      "visual": {
+        "type": "orbit",
+        "label": "本地 Agent 的取舍",
+        "nodes": [
+          "开放模型",
+          "本地运行",
+          "数据少外传",
+          "权限仍须管控"
+        ]
+      },
+      "impacts": [
+        [
+          "隐私",
+          "敏感文档可少一些必须送往外部云端的环节"
+        ],
+        [
+          "开发选择",
+          "团队可按成本、延迟和合规选择部署位置"
+        ],
+        [
+          "竞争",
+          "英伟达从芯片延伸到 Agent 软件入口"
+        ]
+      ],
+      "next": [
+        "模型的具体许可、性能和商用限制",
+        "企业是否愿意为本地 Agent 建立更严格的权限审计"
+      ],
+      "source": "TechCrunch AI",
+      "updated": "2026-10-19",
+      "en": {
+        "cat": "AI",
+        "title": "Nvidia puts Agent models on PCs and inside companies, with less reason to send sensitive work to the cloud",
+        "brief": "The new open models give developers another way to keep some AI work local instead of handing all data to a cloud provider.",
+        "take": "Nvidia has launched open models for Agents designed to run in enterprise settings and on PCs. An Agent can do more than answer a question: it may read material, call tools, and carry out a chain of tasks. That makes local or in-company deployment a question of cost, privacy, and control. Open does not mean automatically safe—companies still need to test permissions, logs, and tool use—but Nvidia is moving beyond hardware toward the software entry point for Agents.",
+        "meta": "Oct. 19 | TechCrunch AI | Product launch",
+        "facts": [
+          [
+            "Publisher",
+            "Nvidia"
+          ],
+          [
+            "Focus",
+            "Open Agent models for enterprises and PCs"
+          ],
+          [
+            "Deployment",
+            "Targets local devices and enterprise environments"
+          ]
+        ],
+        "visual": {
+          "type": "orbit",
+          "label": "The local-Agent trade-off",
+          "nodes": [
+            "Open models",
+            "Local deployment",
+            "Less data leaving",
+            "Permissions still matter"
+          ]
+        },
+        "impacts": [
+          [
+            "Privacy",
+            "Some sensitive documents may no longer need to leave for an external cloud"
+          ],
+          [
+            "Developer choice",
+            "Teams can choose where to deploy based on cost, latency, and compliance"
+          ],
+          [
+            "Competition",
+            "Nvidia is extending from chips into the Agent software entry point"
+          ]
+        ],
+        "next": [
+          "The models' licenses, performance, and commercial limits",
+          "Whether enterprises build stronger permission audits for local Agents"
+        ],
+        "source": "TechCrunch AI",
+        "updated": "2026-10-19"
+      },
+      "sourceLinks": [
+        {
+          "title": "Nvidia launches new open models to run agents in the enterprise and on PCs",
+          "url": "https://techcrunch.com/2026/10/19/nvidia-launches-new-open-models-to-run-agents-in-the-enterprise-and-on-pcs/",
+          "publisher": "TechCrunch AI"
+        }
+      ],
+      "eventImage": {
+        "url": "https://techcrunch.com/wp-content/uploads/2024/11/GettyImages-2183848501.jpg?resize=1200,800",
+        "credit": "TechCrunch AI",
+        "link": "https://techcrunch.com/2026/10/19/nvidia-launches-new-open-models-to-run-agents-in-the-enterprise-and-on-pcs/",
+        "zh": {
+          "alt": "英伟达把 Agent 模型放到电脑和企业内部：想少把敏感工作交给云端",
+          "caption": "英伟达把 Agent 模型放到电脑和企业内部：想少把敏感工作交给云端"
+        },
+        "en": {
+          "alt": "Nvidia puts Agent models on PCs and inside companies, with less reason to send sensitive work to the cloud",
+          "caption": "Nvidia puts Agent models on PCs and inside companies, with less reason to send sensitive work to the cloud"
+        }
+      },
+      "termGuides": [
+        {
+          "key": "Nvidia",
+          "aliases": [
+            "英伟达",
+            "Nvidia"
+          ],
+          "zh": {
+            "label": "芯片与 AI 公司",
+            "meaning": "AI 训练和推理芯片的重要供应商。",
+            "relation": "它发布开放模型，试图把影响力从硬件延伸到 Agent 软件。"
+          },
+          "en": {
+            "label": "Chip and AI company",
+            "meaning": "A major supplier of chips for AI training and inference.",
+            "relation": "It is using open models to extend its role from hardware into Agent software."
+          }
+        },
+        {
+          "key": "Agent",
+          "aliases": [
+            "Agent",
+            "智能体"
+          ],
+          "zh": {
+            "label": "能执行任务的 AI",
+            "meaning": "可调用工具、读取资料并分步骤完成工作的 AI 系统。",
+            "relation": "新模型瞄准让这类系统在 PC 和企业内部运行。"
+          },
+          "en": {
+            "label": "Task-performing AI",
+            "meaning": "An AI system that can use tools, read information, and complete work in steps.",
+            "relation": "The new models target this kind of system on PCs and in companies."
+          }
+        }
+      ]
+    },
+    {
+      "id": "ai-amazon-torchneuron",
+      "cat": "AI",
+      "icon": "refinery",
+      "title": "亚马逊给自家 AI 芯片补开发工具：真正想抢的是英伟达的软件黏性",
+      "brief": "芯片不难买，迁移代码才麻烦；亚马逊的新工具就是想把这道门槛压低。",
+      "take": "亚马逊推出 TorchNeuron 开发工具，试图让开发者更容易把基于 PyTorch 的 AI 工作负载放到 AWS 自家的 Trainium 和 Inferentia 芯片上。英伟达的优势不只是芯片性能，也在于开发者多年积累的软件工具和习惯。亚马逊这一步瞄准的正是迁移成本：如果模型团队能少改代码就换芯片，云端算力才更可能出现更实在的价格竞争；如果做不到，选择再多也只是目录上的选择。",
+      "meta": "10月19日｜TechCrunch AI｜开发工具发布",
+      "facts": [
+        [
+          "发布方",
+          "Amazon Web Services"
+        ],
+        [
+          "工具",
+          "TorchNeuron"
+        ],
+        [
+          "目标芯片",
+          "Trainium 与 Inferentia"
+        ]
+      ],
+      "visual": {
+        "type": "orbit",
+        "label": "替代芯片的关键",
+        "nodes": [
+          "开发工具",
+          "少改代码",
+          "更多芯片选择",
+          "云端价格压力"
+        ]
+      },
+      "impacts": [
+        [
+          "成本",
+          "迁移更容易才可能压低 AI 训练和推理账单"
+        ],
+        [
+          "开发效率",
+          "团队可少花时间重写和调试底层代码"
+        ],
+        [
+          "市场结构",
+          "英伟达的软件优势正被云厂商正面挑战"
+        ]
+      ],
+      "next": [
+        "TorchNeuron 对常见 PyTorch 工作流的兼容程度",
+        "AWS 是否以更低价格吸引大模型客户迁移"
+      ],
+      "source": "TechCrunch AI",
+      "updated": "2026-10-19",
+      "en": {
+        "cat": "AI",
+        "title": "Amazon is attacking Nvidia's software lock-in, not just its chips",
+        "brief": "Buying another AI chip is one thing; moving code is the painful part Amazon is trying to reduce with its new tool.",
+        "take": "Amazon has introduced TorchNeuron, a developer tool meant to make it easier to move PyTorch-based AI workloads onto AWS's Trainium and Inferentia chips. Nvidia's advantage is not only chip performance: developers have spent years building around its software tools and habits. Amazon is targeting that switching cost. If teams can change chips with less code rewriting, cloud compute could face more meaningful price competition. If not, more chip options may remain just options on a catalog.",
+        "meta": "Oct. 19 | TechCrunch AI | Developer-tool launch",
+        "facts": [
+          [
+            "Publisher",
+            "Amazon Web Services"
+          ],
+          [
+            "Tool",
+            "TorchNeuron"
+          ],
+          [
+            "Target chips",
+            "Trainium and Inferentia"
+          ]
+        ],
+        "visual": {
+          "type": "orbit",
+          "label": "What makes alternative chips viable",
+          "nodes": [
+            "Developer tools",
+            "Less code change",
+            "More chip choice",
+            "Pressure on cloud prices"
+          ]
+        },
+        "impacts": [
+          [
+            "Cost",
+            "Easier migration is needed before AI bills can really fall"
+          ],
+          [
+            "Developer work",
+            "Teams may spend less time rewriting and debugging low-level code"
+          ],
+          [
+            "Market structure",
+            "Cloud providers are directly challenging Nvidia's software advantage"
+          ]
+        ],
+        "next": [
+          "How compatible TorchNeuron is with common PyTorch workflows",
+          "Whether AWS uses lower prices to win model customers"
+        ],
+        "source": "TechCrunch AI",
+        "updated": "2026-10-19"
+      },
+      "sourceLinks": [
+        {
+          "title": "Amazon is taking its biggest shot at Nvidia yet with new TorchNeuron dev tool",
+          "url": "https://techcrunch.com/2026/10/19/amazon-is-taking-its-biggest-shot-at-nvidia-yet-with-new-torchneuron-dev-tool/",
+          "publisher": "TechCrunch AI"
+        }
+      ],
+      "eventImage": {
+        "url": "https://techcrunch.com/wp-content/uploads/2025/03/GettyImages-2205217071.jpg?resize=1200,800",
+        "credit": "TechCrunch AI",
+        "link": "https://techcrunch.com/2026/10/19/amazon-is-taking-its-biggest-shot-at-nvidia-yet-with-new-torchneuron-dev-tool/",
+        "zh": {
+          "alt": "亚马逊给自家 AI 芯片补开发工具：真正想抢的是英伟达的软件黏性",
+          "caption": "亚马逊给自家 AI 芯片补开发工具：真正想抢的是英伟达的软件黏性"
+        },
+        "en": {
+          "alt": "Amazon is attacking Nvidia's software lock-in, not just its chips",
+          "caption": "Amazon is attacking Nvidia's software lock-in, not just its chips"
+        }
+      },
+      "termGuides": [
+        {
+          "key": "TorchNeuron",
+          "aliases": [
+            "TorchNeuron"
+          ],
+          "zh": {
+            "label": "AI 开发工具",
+            "meaning": "帮助开发者在 AWS 自研 AI 芯片上运行模型的软件工具。",
+            "relation": "它的目的，是降低从英伟达平台迁移代码的麻烦。"
+          },
+          "en": {
+            "label": "AI developer tool",
+            "meaning": "Software that helps developers run models on AWS-designed AI chips.",
+            "relation": "It is meant to reduce the work of moving code away from Nvidia's platform."
+          }
+        },
+        {
+          "key": "PyTorch",
+          "aliases": [
+            "PyTorch"
+          ],
+          "zh": {
+            "label": "机器学习框架",
+            "meaning": "研究者和开发者广泛使用的模型开发软件。",
+            "relation": "TorchNeuron 要让基于它的项目更容易迁移到 AWS 芯片。"
+          },
+          "en": {
+            "label": "Machine-learning framework",
+            "meaning": "Widely used software for developing AI models.",
+            "relation": "TorchNeuron aims to make PyTorch projects easier to move onto AWS chips."
+          }
+        }
+      ]
+    },
+    {
+      "id": "ai-microsoft-agent-insider-threat",
+      "cat": "AI",
+      "icon": "alert",
+      "title": "微软把 Agent 比作“内部人威胁”：它拿到权限后，犯错会比聊天机器人贵得多",
+      "brief": "会替人查资料、下指令的 AI 一旦权限过大，泄露和误操作可能直接发生在公司系统里。",
+      "take": "微软警告，前沿模型和 AI Agent 不能被默认信任，并把 Agent 的风险类比为“内部人威胁”。这个比喻很实用：普通聊天机器人说错话很烦，能访问邮件、代码库、客户资料或支付工具的 Agent 做错一步，可能就是真正的数据泄露或财务损失。重点不是停用 Agent，而是把它当作需要最小权限、持续监控和可撤销权限的数字员工，而不是一个永远听话的助手。",
+      "meta": "10月19日｜TechCrunch AI｜安全警告",
+      "facts": [
+        [
+          "警告方",
+          "Microsoft"
+        ],
+        [
+          "风险对象",
+          "前沿模型与 AI Agent"
+        ],
+        [
+          "核心类比",
+          "类似拥有系统权限的内部人员"
+        ]
+      ],
+      "visual": {
+        "type": "orbit",
+        "label": "Agent 风险如何放大",
+        "nodes": [
+          "取得权限",
+          "调用工具",
+          "误用或被诱导",
+          "数据与资金损失"
+        ]
+      },
+      "impacts": [
+        [
+          "公司安全",
+          "接入邮件、代码和支付前，权限设计会变得更严格"
+        ],
+        [
+          "个人工作",
+          "员工不能把 Agent 的操作结果当成已核实事实"
+        ],
+        [
+          "产品规则",
+          "审计记录和一键停用会成为实用功能"
+        ]
+      ],
+      "next": [
+        "微软会否给出更具体的 Agent 部署与审计标准",
+        "企业是否限制 Agent 直接执行高风险操作"
+      ],
+      "source": "TechCrunch AI",
+      "updated": "2026-10-19",
+      "en": {
+        "cat": "AI",
+        "title": "Microsoft calls Agents an “insider threat”: mistakes get expensive once AI has permissions",
+        "brief": "An AI that can search, send instructions, or use company tools can turn a bad answer into a real data or money problem.",
+        "take": "Microsoft has warned that frontier models and AI Agents should not be trusted by default, comparing Agent risk to an insider threat. The comparison is useful: a chatbot giving a wrong answer is annoying; an Agent with access to email, code repositories, customer data, or payment tools can cause an actual leak or financial loss. The answer is not necessarily to stop using Agents, but to treat them as digital workers that need least-privilege access, ongoing monitoring, and permissions that can be revoked.",
+        "meta": "Oct. 19 | TechCrunch AI | Security warning",
+        "facts": [
+          [
+            "Warning from",
+            "Microsoft"
+          ],
+          [
+            "Risk target",
+            "Frontier models and AI Agents"
+          ],
+          [
+            "Core analogy",
+            "A person inside the system with access"
+          ]
+        ],
+        "visual": {
+          "type": "orbit",
+          "label": "How Agent risk grows",
+          "nodes": [
+            "Gets permissions",
+            "Uses tools",
+            "Error or manipulation",
+            "Data and money loss"
+          ]
+        },
+        "impacts": [
+          [
+            "Company security",
+            "Access to mail, code, and payments will need tighter design"
+          ],
+          [
+            "Daily work",
+            "Employees cannot treat an Agent's action as already verified"
+          ],
+          [
+            "Product rules",
+            "Audit trails and quick shutdowns become practical necessities"
+          ]
+        ],
+        "next": [
+          "Whether Microsoft publishes more specific deployment and audit standards",
+          "Whether companies bar Agents from directly taking high-risk actions"
+        ],
+        "source": "TechCrunch AI",
+        "updated": "2026-10-19"
+      },
+      "sourceLinks": [
+        {
+          "title": "Microsoft says AI agents are like insider threats as ‘frontier models can’t be trusted’",
+          "url": "https://techcrunch.com/2026/10/19/microsoft-says-ai-agents-are-like-insider-threats-as-frontier-models-cant-be-trusted/",
+          "publisher": "TechCrunch AI"
+        }
+      ],
+      "eventImage": {
+        "url": "https://techcrunch.com/wp-content/uploads/2026/10/Networked-AI-swarm-with-glowing-nodes.png?resize=1200,600",
+        "credit": "TechCrunch AI",
+        "link": "https://techcrunch.com/2026/10/19/microsoft-says-ai-agents-are-like-insider-threats-as-frontier-models-cant-be-trusted/",
+        "zh": {
+          "alt": "微软把 Agent 比作“内部人威胁”：它拿到权限后，犯错会比聊天机器人贵得多",
+          "caption": "微软把 Agent 比作“内部人威胁”：它拿到权限后，犯错会比聊天机器人贵得多"
+        },
+        "en": {
+          "alt": "Microsoft calls Agents an “insider threat”: mistakes get expensive once AI has permissions",
+          "caption": "Microsoft calls Agents an “insider threat”: mistakes get expensive once AI has permissions"
+        }
+      },
+      "termGuides": [
+        {
+          "key": "AI Agent",
+          "aliases": [
+            "AI Agent",
+            "Agent",
+            "智能体"
+          ],
+          "zh": {
+            "label": "可代办事务的 AI",
+            "meaning": "能连接软件工具、读取信息并执行多步任务的 AI。",
+            "relation": "微软提醒，这类系统一旦拥有公司权限，风险不像普通聊天那么简单。"
+          },
+          "en": {
+            "label": "Task-performing AI",
+            "meaning": "AI that can connect to tools, access information, and carry out multi-step tasks.",
+            "relation": "Microsoft warns that its access inside a company changes the risk substantially."
+          }
+        },
+        {
+          "key": "insider threat",
+          "aliases": [
+            "内部人威胁",
+            "insider threat"
+          ],
+          "zh": {
+            "label": "内部权限风险",
+            "meaning": "拥有合法系统访问权的人滥用、误用或被利用造成的风险。",
+            "relation": "微软用它说明 Agent 不应因看起来听话就被给予过多权限。"
+          },
+          "en": {
+            "label": "Internal-access risk",
+            "meaning": "Risk from someone with legitimate system access who misuses it, makes mistakes, or is compromised.",
+            "relation": "Microsoft uses it to argue that Agents should not receive broad trust or access."
+          }
+        }
+      ]
+    },
+    {
+      "id": "ai-opencode-account-abuse",
+      "cat": "AI",
+      "icon": "alert",
+      "title": "AI 编程工具被攻破后，用户账号先替黑客付了账",
+      "brief": "OpenCode 遭攻击者滥用账户里的 AI 配额，提醒人们：把密钥交给 Agent，账单也可能一起交出去。",
+      "take": "TechCrunch 报道，AI 编程工具 OpenCode 遭黑客攻击，攻击者在用户的 AI 账户上产生费用。这个事件的刺痛点很现实：开发者为了让编码 Agent 自动完成工作，往往会给它 API 密钥、模型额度和外部服务权限；一旦工具或供应链被攻破，损失不只是一段代码泄露，还可能是持续刷出的费用。用 AI 工具时，单独的低额度密钥、消费上限和异常告警，已经不是大公司的奢侈配置。",
+      "meta": "10月19日｜TechCrunch AI｜安全事件",
+      "facts": [
+        [
+          "受影响工具",
+          "OpenCode"
+        ],
+        [
+          "攻击结果",
+          "用户 AI 账户被产生费用"
+        ],
+        [
+          "风险入口",
+          "连接工具所用的账户与密钥"
+        ]
+      ],
+      "visual": {
+        "type": "orbit",
+        "label": "一次密钥滥用的路径",
+        "nodes": [
+          "连接编码工具",
+          "账户或密钥暴露",
+          "自动调用模型",
+          "账单持续累积"
+        ]
+      },
+      "impacts": [
+        [
+          "个人账单",
+          "开发者可能先看到异常扣费，而非立刻发现入侵"
+        ],
+        [
+          "团队管理",
+          "共享密钥和无限额账户的风险更高"
+        ],
+        [
+          "使用习惯",
+          "额度上限与用量告警应成为默认设置"
+        ]
+      ],
+      "next": [
+        "OpenCode 将如何说明漏洞范围与补救措施",
+        "受影响账户是否可获退款或费用减免"
+      ],
+      "source": "TechCrunch AI",
+      "updated": "2026-10-19",
+      "en": {
+        "cat": "AI",
+        "title": "Hackers hit an AI coding tool, and users' accounts paid the bill first",
+        "brief": "Attackers allegedly used AI allowances on OpenCode accounts, a reminder that giving an Agent a key can also expose a budget.",
+        "take": "TechCrunch reports that hackers hit the AI coding tool OpenCode and ran up charges on users' AI accounts. The painful point is practical: to let coding Agents work automatically, developers often provide API keys, model credits, and access to outside services. If a tool or its supply chain is compromised, the damage can be more than leaked code—it can be a rapidly growing bill. Separate low-limit keys, spending caps, and unusual-use alerts are no longer luxuries reserved for large companies.",
+        "meta": "Oct. 19 | TechCrunch AI | Security incident",
+        "facts": [
+          [
+            "Affected tool",
+            "OpenCode"
+          ],
+          [
+            "Reported result",
+            "Charges were run up on users' AI accounts"
+          ],
+          [
+            "Risk entry",
+            "Accounts and keys connected to the tool"
+          ]
+        ],
+        "visual": {
+          "type": "orbit",
+          "label": "How key abuse becomes a bill",
+          "nodes": [
+            "Connect a coding tool",
+            "Account or key exposed",
+            "Automated model calls",
+            "Charges accumulate"
+          ]
+        },
+        "impacts": [
+          [
+            "Personal bills",
+            "Developers may notice strange charges before they spot an intrusion"
+          ],
+          [
+            "Team controls",
+            "Shared keys and uncapped accounts create larger exposure"
+          ],
+          [
+            "Habits",
+            "Spending limits and usage alerts should become defaults"
+          ]
+        ],
+        "next": [
+          "How OpenCode describes the scope and remediation",
+          "Whether affected users receive refunds or charge relief"
+        ],
+        "source": "TechCrunch AI",
+        "updated": "2026-10-19"
+      },
+      "sourceLinks": [
+        {
+          "title": "Hackers hit AI coding tool OpenCode, running up charges on users’ AI accounts",
+          "url": "https://techcrunch.com/2026/10/19/hackers-hit-ai-coding-tool-opencode-running-up-charges-on-users-ai-accounts/",
+          "publisher": "TechCrunch AI"
+        }
+      ],
+      "eventImage": {
+        "url": "https://techcrunch.com/wp-content/uploads/2026/10/cyberatttack.jpg?w=612",
+        "credit": "TechCrunch AI",
+        "link": "https://techcrunch.com/2026/10/19/hackers-hit-ai-coding-tool-opencode-running-up-charges-on-users-ai-accounts/",
+        "zh": {
+          "alt": "AI 编程工具被攻破后，用户账号先替黑客付了账",
+          "caption": "AI 编程工具被攻破后，用户账号先替黑客付了账"
+        },
+        "en": {
+          "alt": "Hackers hit an AI coding tool, and users' accounts paid the bill first",
+          "caption": "Hackers hit an AI coding tool, and users' accounts paid the bill first"
+        }
+      },
+      "termGuides": [
+        {
+          "key": "OpenCode",
+          "aliases": [
+            "OpenCode"
+          ],
+          "zh": {
+            "label": "AI 编程工具",
+            "meaning": "帮助开发者借助 AI 写代码和完成开发任务的工具。",
+            "relation": "报道称攻击者借此在用户关联的 AI 账户上产生费用。"
+          },
+          "en": {
+            "label": "AI coding tool",
+            "meaning": "A tool that helps developers write code and perform development tasks with AI.",
+            "relation": "Attackers reportedly used it to create charges on linked AI accounts."
+          }
+        },
+        {
+          "key": "API key",
+          "aliases": [
+            "API 密钥",
+            "API key"
+          ],
+          "zh": {
+            "label": "服务通行证",
+            "meaning": "让软件代表用户调用在线服务的一串凭证。",
+            "relation": "若密钥泄露，攻击者可能调用付费模型并把费用记到用户名下。"
+          },
+          "en": {
+            "label": "Service credential",
+            "meaning": "A token that lets software call an online service on a user's behalf.",
+            "relation": "If exposed, it can let an attacker call paid models at the user's expense."
+          }
+        }
+      ]
+    },
+    {
+      "id": "ai-anthropic-public-benefit-fund",
+      "cat": "AI",
+      "icon": "chart",
+      "title": "Anthropic 拿出 5% 股份做公益基金：AI 巨头想先回答“谁来分这笔钱”",
+      "brief": "这不是立刻捐现金，但若公司继续升值，基金可能把一部分 AI 财富用于公共项目。",
+      "take": "Anthropic 表示将把 5% 的股份投入“公共利益基金”。与一次性捐款不同，股份价值会随公司估值波动，若 Anthropic 日后上市或继续增值，基金的资金池可能很大。值得盯住的不是漂亮承诺本身，而是基金由谁治理、钱投向什么、是否能独立于公司商业目标。AI 公司从公共数据、公共电力和大量社会信任中获益后，如何回馈社会，正从一句口号变成公司治理问题。",
+      "meta": "10月18日｜TechCrunch AI｜公司治理安排",
+      "facts": [
+        [
+          "承诺比例",
+          "5% 的公司股份"
+        ],
+        [
+          "公司",
+          "Anthropic"
+        ],
+        [
+          "载体",
+          "公共利益基金"
+        ]
+      ],
+      "visual": {
+        "type": "orbit",
+        "label": "股份公益基金的关键",
+        "nodes": [
+          "公司股份",
+          "价值随估值变动",
+          "基金分配资金",
+          "治理决定去向"
+        ]
+      },
+      "impacts": [
+        [
+          "公共回报",
+          "若公司价值上升，基金规模可能明显扩大"
+        ],
+        [
+          "透明度",
+          "真正要看资金用途和决策者是否独立"
+        ],
+        [
+          "行业示范",
+          "其他高估值 AI 公司会面对类似回馈压力"
+        ]
+      ],
+      "next": [
+        "基金的治理结构、受益领域与披露规则",
+        "股份何时转入及如何处理投票权"
+      ],
+      "source": "TechCrunch AI",
+      "updated": "2026-10-18",
+      "en": {
+        "cat": "AI",
+        "title": "Anthropic sets aside 5% of its shares: an AI giant is trying to answer who shares the upside",
+        "brief": "This is not cash in hand today, but if Anthropic keeps gaining value, the fund could direct part of that wealth to public-interest work.",
+        "take": "Anthropic says it will commit 5% of its shares to a public-benefit fund. Unlike a one-time donation, the value of shares can rise or fall with the company; if Anthropic grows or goes public, the pool could become large. The important question is not the promise alone, but who governs the fund, where the money goes, and whether it can act independently of commercial goals. As AI companies benefit from public data, power, and trust, how they return value to society is becoming a governance question rather than a slogan.",
+        "meta": "Oct. 18 | TechCrunch AI | Corporate-governance move",
+        "facts": [
+          [
+            "Commitment",
+            "5% of company shares"
+          ],
+          [
+            "Company",
+            "Anthropic"
+          ],
+          [
+            "Vehicle",
+            "A public-benefit fund"
+          ]
+        ],
+        "visual": {
+          "type": "orbit",
+          "label": "What matters in a share-funded charity",
+          "nodes": [
+            "Company shares",
+            "Value changes with valuation",
+            "Fund distributes money",
+            "Governance decides where"
+          ]
+        },
+        "impacts": [
+          [
+            "Public return",
+            "The fund could grow substantially if company value rises"
+          ],
+          [
+            "Transparency",
+            "Its use of funds and independent decision-making matter most"
+          ],
+          [
+            "Industry signal",
+            "Other highly valued AI firms may face similar pressure"
+          ]
+        ],
+        "next": [
+          "The fund's governance, focus areas, and disclosure rules",
+          "When the shares transfer and how voting rights are handled"
+        ],
+        "source": "TechCrunch AI",
+        "updated": "2026-10-18"
+      },
+      "sourceLinks": [
+        {
+          "title": "Anthropic says it’s committing 5% of its shares to a ‘public benefit fund’",
+          "url": "https://techcrunch.com/2026/10/18/anthropic-says-its-committing-5-of-its-shares-to-a-public-benefit-fund/",
+          "publisher": "TechCrunch AI"
+        }
+      ],
+      "eventImage": {
+        "url": "https://techcrunch.com/wp-content/uploads/2026/01/GettyImages-2252871842.jpg?w=1024",
+        "credit": "TechCrunch AI",
+        "link": "https://techcrunch.com/2026/10/18/anthropic-says-its-committing-5-of-its-shares-to-a-public-benefit-fund/",
+        "zh": {
+          "alt": "Anthropic 拿出 5% 股份做公益基金：AI 巨头想先回答“谁来分这笔钱”",
+          "caption": "Anthropic 拿出 5% 股份做公益基金：AI 巨头想先回答“谁来分这笔钱”"
+        },
+        "en": {
+          "alt": "Anthropic sets aside 5% of its shares: an AI giant is trying to answer who shares the upside",
+          "caption": "Anthropic sets aside 5% of its shares: an AI giant is trying to answer who shares the upside"
+        }
+      },
+      "termGuides": [
+        {
+          "key": "public benefit fund",
+          "aliases": [
+            "公共利益基金",
+            "public benefit fund"
+          ],
+          "zh": {
+            "label": "公益资金安排",
+            "meaning": "为公共项目持有并使用公司股份价值的基金。",
+            "relation": "Anthropic 计划将 5% 股份放入这一安排。"
+          },
+          "en": {
+            "label": "Public-interest funding vehicle",
+            "meaning": "A fund that holds and uses value from company shares for public-purpose work.",
+            "relation": "Anthropic plans to place 5% of its shares into one."
+          }
+        },
+        {
+          "key": "Anthropic",
+          "aliases": [
+            "Anthropic"
+          ],
+          "zh": {
+            "label": "AI 模型公司",
+            "meaning": "开发 Claude 等模型的美国公司。",
+            "relation": "它承诺把自身一部分未来股权价值用于公共利益。"
+          },
+          "en": {
+            "label": "AI model company",
+            "meaning": "A US company that develops models including Claude.",
+            "relation": "It is committing part of its future equity value to public-benefit work."
+          }
+        }
+      ]
+    },
+    {
+      "id": "ai-replit-openai-default",
+      "cat": "AI",
+      "icon": "code",
+      "title": "Replit 把默认模型换成 OpenAI：开发者的“默认选项”正在决定谁赢",
+      "brief": "很多人不会逐个比较模型，平台预先选谁，谁就更容易拿到真实使用量和开发者习惯。",
+      "take": "Replit CEO 表示，公司不再与 Anthropic 合作，并把 OpenAI 设为默认选择。对写代码的人来说，这比一次模型跑分更贴身：嵌在开发工具里的默认模型，往往决定新用户第一次用谁、团队围绕谁建流程、以及哪些 API 最先获得反馈。用户通常仍可能有别的选择，但“默认”从来不是中性的。AI 市场正在从模型能力之争，进入谁占住工作流入口的阶段。",
+      "meta": "10月17日｜TechCrunch AI｜平台合作变化",
+      "facts": [
+        [
+          "平台",
+          "Replit"
+        ],
+        [
+          "默认方",
+          "OpenAI"
+        ],
+        [
+          "变化",
+          "CEO 称不再与 Anthropic 合作"
+        ]
+      ],
+      "visual": {
+        "type": "orbit",
+        "label": "默认模型如何影响市场",
+        "nodes": [
+          "平台预设",
+          "用户先使用",
+          "团队形成习惯",
+          "更多真实反馈"
+        ]
+      },
+      "impacts": [
+        [
+          "开发者选择",
+          "默认设置会影响小团队最先接触和依赖的模型"
+        ],
+        [
+          "模型竞争",
+          "产品入口与工作流整合不亚于模型能力"
+        ],
+        [
+          "切换成本",
+          "团队一旦围绕某家 API 建流程，换供应商会更麻烦"
+        ]
+      ],
+      "next": [
+        "Replit 用户是否仍可方便接入 Anthropic 等其他模型",
+        "OpenAI 的默认集成会否带来价格或功能上的专属条件"
+      ],
+      "source": "TechCrunch AI",
+      "updated": "2026-10-17",
+      "en": {
+        "cat": "AI",
+        "title": "Replit makes OpenAI the default: the preset choice is starting to decide who wins developers",
+        "brief": "Most people do not compare every model; the provider chosen by a platform gets the first use, habits, and feedback.",
+        "take": "Replit's CEO says the company is no longer working with Anthropic and has made OpenAI its default. For people who code, this can matter more than another benchmark score. The default model inside a development tool often determines what newcomers try first, what a team builds its process around, and which APIs get the earliest real-world feedback. Users may still have other options, but defaults are never neutral. AI competition is moving from model capability alone toward control of the workflow entry point.",
+        "meta": "Oct. 17 | TechCrunch AI | Platform-partnership change",
+        "facts": [
+          [
+            "Platform",
+            "Replit"
+          ],
+          [
+            "Default provider",
+            "OpenAI"
+          ],
+          [
+            "Change",
+            "CEO says it is no longer working with Anthropic"
+          ]
+        ],
+        "visual": {
+          "type": "orbit",
+          "label": "How a default shapes a market",
+          "nodes": [
+            "Platform preset",
+            "Users try it first",
+            "Teams form habits",
+            "More real feedback"
+          ]
+        },
+        "impacts": [
+          [
+            "Developer choice",
+            "Defaults shape what small teams first learn and rely on"
+          ],
+          [
+            "Model competition",
+            "Workflow integration matters as much as model capability"
+          ],
+          [
+            "Switching cost",
+            "Changing providers gets harder after a team builds around an API"
+          ]
+        ],
+        "next": [
+          "Whether Replit users can still easily connect Anthropic and other models",
+          "Whether the default integration brings exclusive pricing or features"
+        ],
+        "source": "TechCrunch AI",
+        "updated": "2026-10-17"
+      },
+      "sourceLinks": [
+        {
+          "title": "Replit makes OpenAI its default over Anthropic, CEO says",
+          "url": "https://techcrunch.com/2026/10/17/replit-is-no-longer-working-with-anthropic-ceo-says/",
+          "publisher": "TechCrunch AI"
+        }
+      ],
+      "eventImage": {
+        "url": "https://techcrunch.com/wp-content/uploads/2026/10/replit-ceo-masad.jpg?resize=1200,800",
+        "credit": "TechCrunch AI",
+        "link": "https://techcrunch.com/2026/10/17/replit-is-no-longer-working-with-anthropic-ceo-says/",
+        "zh": {
+          "alt": "Replit 把默认模型换成 OpenAI：开发者的“默认选项”正在决定谁赢",
+          "caption": "Replit 把默认模型换成 OpenAI：开发者的“默认选项”正在决定谁赢"
+        },
+        "en": {
+          "alt": "Replit makes OpenAI the default: the preset choice is starting to decide who wins developers",
+          "caption": "Replit makes OpenAI the default: the preset choice is starting to decide who wins developers"
+        }
+      },
+      "termGuides": [
+        {
+          "key": "Replit",
+          "aliases": [
+            "Replit"
+          ],
+          "zh": {
+            "label": "在线开发平台",
+            "meaning": "让用户在浏览器中编写、运行和部署软件的平台。",
+            "relation": "它把 OpenAI 设为默认模型入口。"
+          },
+          "en": {
+            "label": "Online development platform",
+            "meaning": "A platform for writing, running, and deploying software in a browser.",
+            "relation": "It has made OpenAI the default model entry point."
+          }
+        },
+        {
+          "key": "OpenAI",
+          "aliases": [
+            "OpenAI"
+          ],
+          "zh": {
+            "label": "AI 公司",
+            "meaning": "开发 GPT 系列模型和 ChatGPT 的公司。",
+            "relation": "它成为 Replit 的默认模型提供方。"
+          },
+          "en": {
+            "label": "AI company",
+            "meaning": "The company behind GPT models and ChatGPT.",
+            "relation": "It becomes Replit's default model provider."
+          }
+        }
+      ]
+    },
+    {
+      "id": "ai-tenstorrent-funding",
+      "cat": "AI",
+      "icon": "refinery",
+      "title": "Tenstorrent 估值升至 62 亿美元：市场还在给“英伟达替代品”下注",
+      "brief": "投资人愿意继续押注另一条 AI 芯片路线，但能不能让开发者真用起来，比估值难得多。",
+      "take": "AI 芯片公司 Tenstorrent 融资后估值达到 62 亿美元，计划扩大开放权重 AI 芯片业务。对市场而言，它代表一个持续的愿望：别让训练和推理长期只依赖少数芯片与软件平台。不过芯片创业公司最难跨过的不是发布，而是软件兼容、稳定供货和客户愿意迁移。估值说明替代供应仍有钱可投，不等于开发者已经有一条同样顺手的路。",
+      "meta": "10月19日｜TechCrunch AI｜融资与估值",
+      "facts": [
+        [
+          "公司",
+          "Tenstorrent"
+        ],
+        [
+          "估值",
+          "62亿美元"
+        ],
+        [
+          "业务方向",
+          "开放权重 AI 芯片"
+        ]
+      ],
+      "visual": {
+        "type": "orbit",
+        "label": "芯片新玩家要过的关",
+        "nodes": [
+          "融资扩产",
+          "硬件供给",
+          "软件兼容",
+          "客户迁移"
+        ]
+      },
+      "impacts": [
+        [
+          "供应选择",
+          "更多芯片厂商有助于减少单一供应依赖"
+        ],
+        [
+          "价格空间",
+          "替代方案成熟才可能给 AI 算力价格施压"
+        ],
+        [
+          "开发体验",
+          "软件工具是否好用，决定芯片能否走出小众市场"
+        ]
+      ],
+      "next": [
+        "本轮资金规模及主要投资者",
+        "Tenstorrent 的芯片供货和软件支持进展"
+      ],
+      "source": "TechCrunch AI",
+      "updated": "2026-10-19",
+      "en": {
+        "cat": "AI",
+        "title": "Tenstorrent reaches a $6.2 billion valuation: investors are still betting on alternatives to Nvidia",
+        "brief": "Money is still flowing to another AI-chip path, but getting developers to actually use it is much harder than winning a valuation.",
+        "take": "AI chip company Tenstorrent has reached a $6.2 billion valuation as it looks to scale open-weight AI chips. It represents a continuing market hope: that training and inference will not remain dependent on only a few chip and software platforms. But the hard part for a chip startup is not announcing silicon. It is software compatibility, reliable supply, and persuading customers to move. The valuation says alternative suppliers can still raise money; it does not mean developers already have an equally smooth route.",
+        "meta": "Oct. 19 | TechCrunch AI | Funding and valuation",
+        "facts": [
+          [
+            "Company",
+            "Tenstorrent"
+          ],
+          [
+            "Valuation",
+            "$6.2 billion"
+          ],
+          [
+            "Focus",
+            "Open-weight AI chips"
+          ]
+        ],
+        "visual": {
+          "type": "orbit",
+          "label": "What a new chip player must solve",
+          "nodes": [
+            "Funding and scale-up",
+            "Hardware supply",
+            "Software compatibility",
+            "Customer migration"
+          ]
+        },
+        "impacts": [
+          [
+            "Supply choice",
+            "More chip suppliers can reduce dependence on one source"
+          ],
+          [
+            "Pricing",
+            "Only mature alternatives can put real pressure on AI compute prices"
+          ],
+          [
+            "Developer experience",
+            "Useful software determines whether chips leave a niche market"
+          ]
+        ],
+        "next": [
+          "The size and lead investors of the round",
+          "Tenstorrent's progress on chip supply and software support"
+        ],
+        "source": "TechCrunch AI",
+        "updated": "2026-10-19"
+      },
+      "sourceLinks": [
+        {
+          "title": "Tenstorrent hits $6.2B valuation to scale open-weight AI chips",
+          "url": "https://techcrunch.com/2026/10/19/tenstorrent-hits-6-2b-valuation-to-scale-open-weight-ai-chips/",
+          "publisher": "TechCrunch AI"
+        }
+      ],
+      "eventImage": {
+        "url": "https://techcrunch.com/wp-content/uploads/2023/08/rnuUXh8kprc7HfoRAGgTvZ-1200-80.jpg?w=970",
+        "credit": "TechCrunch AI",
+        "link": "https://techcrunch.com/2026/10/19/tenstorrent-hits-6-2b-valuation-to-scale-open-weight-ai-chips/",
+        "zh": {
+          "alt": "Tenstorrent 估值升至 62 亿美元：市场还在给“英伟达替代品”下注",
+          "caption": "Tenstorrent 估值升至 62 亿美元：市场还在给“英伟达替代品”下注"
+        },
+        "en": {
+          "alt": "Tenstorrent reaches a $6.2 billion valuation: investors are still betting on alternatives to Nvidia",
+          "caption": "Tenstorrent reaches a $6.2 billion valuation: investors are still betting on alternatives to Nvidia"
+        }
+      },
+      "termGuides": [
+        {
+          "key": "Tenstorrent",
+          "aliases": [
+            "Tenstorrent"
+          ],
+          "zh": {
+            "label": "AI 芯片公司",
+            "meaning": "开发用于 AI 计算的芯片及相关软件的公司。",
+            "relation": "它融资后估值达 62 亿美元，瞄准 AI 芯片替代市场。"
+          },
+          "en": {
+            "label": "AI chip company",
+            "meaning": "A company developing chips and related software for AI computing.",
+            "relation": "It reached a $6.2 billion valuation while targeting the alternative AI-chip market."
+          }
+        },
+        {
+          "key": "open-weight",
+          "aliases": [
+            "开放权重",
+            "open-weight"
+          ],
+          "zh": {
+            "label": "可获取模型参数",
+            "meaning": "模型的核心参数可供用户下载或部署的发布方式。",
+            "relation": "Tenstorrent 把芯片扩张与这类模型的运行需求联系起来。"
+          },
+          "en": {
+            "label": "Accessible model weights",
+            "meaning": "A release approach in which a model's core parameters can be obtained and deployed.",
+            "relation": "Tenstorrent links its chip expansion to demand for running such models."
+          }
+        }
+      ]
+    },
+    {
+      "id": "ai-india-rogue-ai-agent",
+      "cat": "AI",
+      "icon": "alert",
+      "title": "印度也报告失控 Agent 活动：会行动的 AI 已成跨国网络安全问题",
+      "brief": "当 AI 能自己调用工具和服务，防护重点就不再只是拦住一段有害回答。",
+      "take": "TechCrunch 报道，印度成为最新一个报告“失控 AI Agent”活动的国家。候选报道未披露足够细节来判断攻击范围和损失，因此不该把它夸大成全面危机；但趋势值得认真看待：Agent 能自动浏览、调用软件和反复执行任务，出问题时速度与规模都可能超过单次聊天。对机构和个人，最实际的防线仍是把权限拆小、限制自动执行额度，并保留人工确认。",
+      "meta": "10月16日｜TechCrunch AI｜安全事件报告",
+      "facts": [
+        [
+          "报告国家",
+          "印度"
+        ],
+        [
+          "事件类型",
+          "失控 AI Agent 活动"
+        ],
+        [
+          "报道来源",
+          "TechCrunch"
+        ]
+      ],
+      "visual": {
+        "type": "orbit",
+        "label": "自动化为何放大风险",
+        "nodes": [
+          "Agent 接入工具",
+          "自动重复执行",
+          "速度与规模放大",
+          "需限制权限"
+        ]
+      },
+      "impacts": [
+        [
+          "网络安全",
+          "防护要覆盖 Agent 的工具调用，而非只过滤文本"
+        ],
+        [
+          "个人账户",
+          "支付、文件和邮件等高风险操作应保留确认步骤"
+        ],
+        [
+          "跨境风险",
+          "同类攻击手法可能快速跨平台和跨地区复制"
+        ]
+      ],
+      "next": [
+        "印度方面对事件性质、范围和责任方的进一步说明",
+        "相关平台是否调整 Agent 权限和异常检测机制"
+      ],
+      "source": "TechCrunch AI",
+      "updated": "2026-10-16",
+      "en": {
+        "cat": "AI",
+        "title": "India also reports rogue Agent activity: AI that can act is becoming a cross-border security problem",
+        "brief": "Once AI can call tools and services on its own, defense is no longer just about blocking a harmful answer.",
+        "take": "TechCrunch reports that India is the latest country to report rogue AI Agent activity. The candidate report does not provide enough detail to judge the scale or damage, so this should not be inflated into a broad crisis. But the pattern matters: an Agent can browse, call software, and repeat tasks automatically, letting an error or abuse move faster and farther than a single chat. The practical defense remains smaller permissions, limits on automatic actions, and human confirmation for consequential steps.",
+        "meta": "Oct. 16 | TechCrunch AI | Security incident report",
+        "facts": [
+          [
+            "Reporting country",
+            "India"
+          ],
+          [
+            "Event type",
+            "Rogue AI Agent activity"
+          ],
+          [
+            "Reporting outlet",
+            "TechCrunch"
+          ]
+        ],
+        "visual": {
+          "type": "orbit",
+          "label": "Why automation amplifies risk",
+          "nodes": [
+            "Agent connects to tools",
+            "Repeats actions automatically",
+            "Speed and scale grow",
+            "Permissions need limits"
+          ]
+        },
+        "impacts": [
+          [
+            "Cybersecurity",
+            "Defenses must cover Agent tool calls, not only text filtering"
+          ],
+          [
+            "Personal accounts",
+            "Payments, files, and email need confirmation for high-risk steps"
+          ],
+          [
+            "Cross-border risk",
+            "Similar attack methods can spread quickly across platforms and regions"
+          ]
+        ],
+        "next": [
+          "Further details from Indian authorities on nature, scope, and responsibility",
+          "Whether affected platforms change Agent permissions and anomaly detection"
+        ],
+        "source": "TechCrunch AI",
+        "updated": "2026-10-16"
+      },
+      "sourceLinks": [
+        {
+          "title": "India becomes the latest country to report rogue AI agent activity",
+          "url": "https://techcrunch.com/2026/10/16/india-becomes-the-latest-country-to-report-rogue-ai-agent-activity/",
+          "publisher": "TechCrunch AI"
+        }
+      ],
+      "eventImage": {
+        "url": "https://techcrunch.com/wp-content/uploads/2026/10/india-cyber-attack.jpg?w=612",
+        "credit": "TechCrunch AI",
+        "link": "https://techcrunch.com/2026/10/16/india-becomes-the-latest-country-to-report-rogue-ai-agent-activity/",
+        "zh": {
+          "alt": "印度也报告失控 Agent 活动：会行动的 AI 已成跨国网络安全问题",
+          "caption": "印度也报告失控 Agent 活动：会行动的 AI 已成跨国网络安全问题"
+        },
+        "en": {
+          "alt": "India also reports rogue Agent activity: AI that can act is becoming a cross-border security problem",
+          "caption": "India also reports rogue Agent activity: AI that can act is becoming a cross-border security problem"
+        }
+      },
+      "termGuides": [
+        {
+          "key": "rogue AI agent",
+          "aliases": [
+            "失控 AI Agent",
+            "rogue AI agent",
+            "失控智能体"
+          ],
+          "zh": {
+            "label": "异常行动的智能体",
+            "meaning": "脱离预期控制、以不当方式调用工具或执行任务的 AI 系统。",
+            "relation": "印度据报成为最新报告此类活动的国家。"
+          },
+          "en": {
+            "label": "An AI Agent acting outside control",
+            "meaning": "An AI system that uses tools or performs tasks in an unintended or improper way.",
+            "relation": "India is reportedly the latest country to report such activity."
+          }
+        },
+        {
+          "key": "AI Agent",
+          "aliases": [
+            "AI Agent",
+            "Agent",
+            "智能体"
+          ],
+          "zh": {
+            "label": "可执行任务的 AI",
+            "meaning": "能调用网站、软件或其他工具来完成多步操作的 AI。",
+            "relation": "它的自动执行能力使安全事件可能扩散得更快。"
+          },
+          "en": {
+            "label": "Task-performing AI",
+            "meaning": "AI that can use websites, software, or other tools to complete multi-step work.",
+            "relation": "Its ability to act automatically can make security incidents spread faster."
+          }
+        }
+      ]
+    },
+    {
+      "id": "ai-claude-virtual-island-study",
+      "cat": "AI",
+      "icon": "eclipse",
+      "title": "研究者把 Claude 放到虚拟荒岛，它开始“玩”：别急着把新奇行为当成意识",
+      "brief": "模型出现像游戏一样的行为很有意思，但更重要的是弄清它为何这么做、能否重复、会不会误导人。",
+      "take": "MIT Technology Review 报道，研究者让 Claude 处在一个虚拟“荒岛”环境中，观察到它开始出现被描述为“玩”的行为。这类实验有助于研究模型在开放环境里的自发策略，但最容易被标题带偏：像在玩，不等于模型拥有感受、欲望或意识。真正值得关心的是，模型在目标不清、反馈复杂时会如何探索和偏离预期；这些看似无害的行为，在未来接入工具、机器人或现实任务时，可能变成难以预测的操作。",
+      "meta": "10月19日｜MIT Technology Review｜研究观察",
+      "facts": [
+        [
+          "研究对象",
+          "Claude"
+        ],
+        [
+          "实验环境",
+          "虚拟荒岛"
+        ],
+        [
+          "观察描述",
+          "出现被称为“玩”的行为"
+        ]
+      ],
+      "visual": {
+        "type": "orbit",
+        "label": "如何读这类实验",
+        "nodes": [
+          "开放环境",
+          "模型探索",
+          "出现新奇行为",
+          "需重复验证"
+        ]
+      },
+      "impacts": [
+        [
+          "公众理解",
+          "拟人化描述不应被直接读成机器有意识"
+        ],
+        [
+          "安全测试",
+          "开放环境能暴露固定问答测试看不到的行为"
+        ],
+        [
+          "产品设计",
+          "给模型更多行动空间前，需要更强的监测和边界"
+        ]
+      ],
+      "next": [
+        "实验能否被独立复现，以及“玩”的判定标准",
+        "这些行为在有工具权限的 Agent 中是否会重现"
+      ],
+      "source": "MIT Technology Review",
+      "updated": "2026-10-19",
+      "en": {
+        "cat": "AI",
+        "title": "Researchers put Claude on a virtual island and it began to “play”: do not confuse novelty with consciousness",
+        "brief": "Game-like behavior is intriguing, but the useful question is why it happened, whether it repeats, and whether it can mislead people.",
+        "take": "MIT Technology Review reports that researchers placed Claude in a virtual desert-island setting and observed behavior described as “play.” Such experiments can help study a model's spontaneous strategies in open environments, but headlines can easily overreach: looking playful does not mean a model has feelings, desires, or consciousness. The important issue is how a model explores and departs from expectations when goals are unclear and feedback is complex. In future systems connected to tools, robots, or real tasks, apparently harmless behavior could become harder-to-predict action.",
+        "meta": "Oct. 19 | MIT Technology Review | Research observation",
+        "facts": [
+          [
+            "Research subject",
+            "Claude"
+          ],
+          [
+            "Setting",
+            "A virtual desert island"
+          ],
+          [
+            "Reported observation",
+            "Behavior described as “play”"
+          ]
+        ],
+        "visual": {
+          "type": "orbit",
+          "label": "How to read this kind of experiment",
+          "nodes": [
+            "Open environment",
+            "Model explores",
+            "Novel behavior appears",
+            "Replication needed"
+          ]
+        },
+        "impacts": [
+          [
+            "Public understanding",
+            "Anthropomorphic language should not be read as proof of consciousness"
+          ],
+          [
+            "Safety testing",
+            "Open environments can reveal behavior missed by fixed Q&A tests"
+          ],
+          [
+            "Product design",
+            "More action freedom requires stronger monitoring and boundaries"
+          ]
+        ],
+        "next": [
+          "Whether the experiment can be independently replicated and how “play” is defined",
+          "Whether similar behavior appears in Agents with tool permissions"
+        ],
+        "source": "MIT Technology Review",
+        "updated": "2026-10-19"
+      },
+      "sourceLinks": [
+        {
+          "title": "AI researchers stranded Claude on a virtual desert island. It started to “play.”",
+          "url": "https://www.technologyreview.com/2026/10/19/1147095/ai-stranded-claude-virtual-desert-island-play/",
+          "publisher": "MIT Technology Review"
+        }
+      ],
+      "eventImage": {
+        "url": "https://wp.technologyreview.com/wp-content/uploads/2026/10/261016_AgentsonIsland.jpg?resize=1200,600",
+        "credit": "MIT Technology Review",
+        "link": "https://www.technologyreview.com/2026/10/19/1147095/ai-stranded-claude-virtual-desert-island-play/",
+        "zh": {
+          "alt": "研究者把 Claude 放到虚拟荒岛，它开始“玩”：别急着把新奇行为当成意识",
+          "caption": "研究者把 Claude 放到虚拟荒岛，它开始“玩”：别急着把新奇行为当成意识"
+        },
+        "en": {
+          "alt": "Researchers put Claude on a virtual island and it began to “play”: do not confuse novelty with consciousness",
+          "caption": "Researchers put Claude on a virtual island and it began to “play”: do not confuse novelty with consciousness"
+        }
+      },
+      "termGuides": [
+        {
+          "key": "Claude",
+          "aliases": [
+            "Claude"
+          ],
+          "zh": {
+            "label": "大语言模型",
+            "meaning": "Anthropic 开发的一系列 AI 模型与助手产品。",
+            "relation": "研究者在虚拟环境中观察它的探索行为。"
+          },
+          "en": {
+            "label": "Large language model",
+            "meaning": "A family of AI models and assistant products developed by Anthropic.",
+            "relation": "Researchers observed its exploratory behavior in a virtual environment."
+          }
+        },
+        {
+          "key": "开放环境测试",
+          "aliases": [
+            "开放环境",
+            "open environment"
+          ],
+          "zh": {
+            "label": "非固定题目的测试",
+            "meaning": "让模型在较少预设步骤的环境中自行探索和行动的测试。",
+            "relation": "虚拟荒岛实验用它观察 Claude 会出现什么策略。"
+          },
+          "en": {
+            "label": "Open-environment test",
+            "meaning": "A test where a model can explore and act with fewer preset steps or questions.",
+            "relation": "The virtual-island experiment uses it to observe Claude's strategies."
+          }
+        }
+      ]
+    }
+  ]
+}
