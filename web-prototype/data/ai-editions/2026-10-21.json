@@ -1,0 +1,1434 @@
+{
+  "dateKey": "2026-10-21",
+  "generatedAt": "2026-10-21T05:00:00+08:00",
+  "title": "DailyTen｜AI产业",
+  "subtitle": "模型不只是在变强：它们开始碰到生物、政府系统、芯片入口和你的私密聊天。",
+  "briefLabel": "今天最该知道的十件事",
+  "doneLabel": "今日已读",
+  "readTimeMinutes": 8,
+  "items": [
+    {
+      "id": "ai-anthropic-safety-bill-kill-threshold",
+      "cat": "AI",
+      "icon": "alert",
+      "title": "Anthropic想给高风险模型设“50人死亡线”",
+      "brief": "如果模型被判断可能帮人造成大规模伤害，它或许得先被拦在上线前。",
+      "take": "Anthropic正在推动一项AI安全法案：当一个模型可能促成造成50人或以上死亡的事件时，监管可要求阻止其部署。门槛怎么评估、谁来判定风险，仍是最难的部分；但讨论已经从“模型会不会说错话”，推进到“模型能不能被用于制造真实灾害”。对普通人来说，未来医疗、化学、网络安全类AI工具可能会多一道限制，也少一点“先上线再补洞”的做法。",
+      "meta": "AI安全｜美国｜10月20日",
+      "facts": [
+        [
+          "提案方",
+          "Anthropic正推介一项AI安全法案。"
+        ],
+        [
+          "触发线",
+          "模型若可能促成50人以上死亡，可能被阻止部署。"
+        ],
+        [
+          "争议点",
+          "风险预测与执行标准尚未明确。"
+        ]
+      ],
+      "visual": null,
+      "impacts": [
+        [
+          "安全",
+          "高能力模型进入敏感领域前，审查可能更严格。"
+        ],
+        [
+          "使用",
+          "生物、化学和网络安全工具的开放速度可能变慢。"
+        ],
+        [
+          "规则",
+          "企业不能只靠自我承诺来决定风险边界。"
+        ]
+      ],
+      "next": [
+        "法案由谁提出、适用哪些模型",
+        "“可能造成伤害”的测试标准能否落地"
+      ],
+      "source": "TechCrunch AI",
+      "updated": "2026-10-20",
+      "en": {
+        "cat": "AI",
+        "title": "Anthropic wants a “50-death threshold” for high-risk AI",
+        "brief": "A model judged capable of helping cause mass harm could be stopped before it is released.",
+        "take": "Anthropic is pitching an AI safety bill under which deployment could be blocked if a model might enable an event causing 50 or more deaths. The hard questions remain: how would that risk be measured, and who gets to make the call? Still, the debate is moving beyond bad chatbot answers toward whether models can enable real-world disasters. For everyday users, AI tools in medicine, chemistry, and cybersecurity may face more limits—and less of a launch-first, fix-later approach.",
+        "meta": "AI safety | United States | Oct. 20",
+        "facts": [
+          [
+            "Proponent",
+            "Anthropic is pitching an AI safety bill."
+          ],
+          [
+            "Threshold",
+            "A model tied to possible harm to 50+ people could be blocked."
+          ],
+          [
+            "Open question",
+            "Risk tests and enforcement standards are not yet clear."
+          ]
+        ],
+        "visual": null,
+        "impacts": [
+          [
+            "Safety",
+            "Powerful models may face tougher checks before entering sensitive fields."
+          ],
+          [
+            "Access",
+            "Biology, chemistry, and cyber tools could roll out more slowly."
+          ],
+          [
+            "Rules",
+            "Companies may not be able to set risk boundaries by themselves."
+          ]
+        ],
+        "next": [
+          "Who introduces the bill and which models it covers",
+          "Whether a workable test for possible harm emerges"
+        ],
+        "source": "TechCrunch AI",
+        "updated": "2026-10-20"
+      },
+      "sourceLinks": [
+        {
+          "title": "Anthropic pitches AI safety bill that may block a model if 50+ people could be killed",
+          "url": "https://techcrunch.com/2026/10/20/anthropic-pitches-ai-safety-bill-that-may-block-a-model-if-50-people-could-be-killed/",
+          "publisher": "TechCrunch AI"
+        }
+      ],
+      "eventImage": {
+        "url": "https://techcrunch.com/wp-content/uploads/2026/08/GettyImages-2282033342.jpg?w=1024",
+        "credit": "TechCrunch AI",
+        "link": "https://techcrunch.com/2026/10/20/anthropic-pitches-ai-safety-bill-that-may-block-a-model-if-50-people-could-be-killed/",
+        "zh": {
+          "alt": "Anthropic想给高风险模型设“50人死亡线”",
+          "caption": "Anthropic想给高风险模型设“50人死亡线”"
+        },
+        "en": {
+          "alt": "Anthropic wants a “50-death threshold” for high-risk AI",
+          "caption": "Anthropic wants a “50-death threshold” for high-risk AI"
+        }
+      },
+      "termGuides": [
+        {
+          "key": "Anthropic",
+          "aliases": [
+            "Anthropic",
+            "Anthropic公司"
+          ],
+          "zh": {
+            "label": "AI公司",
+            "meaning": "开发Claude等大模型的美国公司。",
+            "relation": "它正在推动把极端伤害风险写进模型部署规则。"
+          },
+          "en": {
+            "label": "AI company",
+            "meaning": "The US company behind models including Claude.",
+            "relation": "It is advocating deployment rules tied to extreme-harm risks."
+          }
+        },
+        {
+          "key": "frontier model",
+          "aliases": [
+            "前沿模型",
+            "frontier model",
+            "高能力模型"
+          ],
+          "zh": {
+            "label": "高能力AI",
+            "meaning": "能力最强、用途也最广的一类大模型。",
+            "relation": "法案关注这类模型被用于生物、化学或网络攻击的风险。"
+          },
+          "en": {
+            "label": "high-capability AI",
+            "meaning": "A model at the leading edge of general-purpose AI capability.",
+            "relation": "The proposal focuses on their potential use in biological, chemical, or cyber harm."
+          }
+        }
+      ]
+    },
+    {
+      "id": "ai-deepseek-us-federal-removal",
+      "cat": "AI",
+      "icon": "alert",
+      "title": "美国联邦机构被要求移除DeepSeek，AI工具开始按国别分阵营",
+      "brief": "在政府电脑上，模型好不好用已不够，数据会流向哪里同样决定能不能用。",
+      "take": "据报道，美国已要求联邦机构从系统中移除中国的DeepSeek AI。这不是一次普通的软件替换：政府担心的是数据处理、供应链和外国影响风险。DeepSeek对普通消费者未必马上不可用，但这类禁令会让跨国公司和公共部门更常把AI按来源国分开采购，开发者也可能面对不同市场、不同模型和不同合规清单。",
+      "meta": "AI治理｜美国与中国｜10月20日",
+      "facts": [
+        [
+          "命令",
+          "美国要求联邦机构移除DeepSeek AI。"
+        ],
+        [
+          "对象",
+          "受影响的是联邦政府系统。"
+        ],
+        [
+          "核心顾虑",
+          "数据与国家安全风险成为重点。"
+        ]
+      ],
+      "visual": null,
+      "impacts": [
+        [
+          "选择",
+          "政府和企业采购AI时会更看重模型来源。"
+        ],
+        [
+          "开发",
+          "同一款AI产品可能得为不同国家准备不同版本。"
+        ],
+        [
+          "竞争",
+          "AI市场更可能按地缘政治边界切开。"
+        ]
+      ],
+      "next": [
+        "禁令是否扩大到承包商或州政府",
+        "DeepSeek和中国方面是否回应"
+      ],
+      "source": "TechCrunch AI",
+      "updated": "2026-10-20",
+      "en": {
+        "cat": "AI",
+        "title": "US agencies are told to remove DeepSeek, splitting AI tools by country of origin",
+        "brief": "For government computers, where an AI tool comes from can now matter as much as what it can do.",
+        "take": "The US has reportedly ordered federal agencies to remove China’s DeepSeek AI from their systems. This is more than an ordinary software swap: the concern is data handling, supply chains, and foreign influence. DeepSeek may not suddenly disappear for consumers, but such orders push public bodies and multinational companies to buy AI by country of origin. Developers may increasingly need different models, products, and compliance lists for different markets.",
+        "meta": "AI governance | United States and China | Oct. 20",
+        "facts": [
+          [
+            "Order",
+            "US federal agencies have been told to remove DeepSeek AI."
+          ],
+          [
+            "Scope",
+            "The reported order concerns federal government systems."
+          ],
+          [
+            "Concern",
+            "Data and national-security risks are central."
+          ]
+        ],
+        "visual": null,
+        "impacts": [
+          [
+            "Choice",
+            "AI buyers may weigh a model’s origin more heavily."
+          ],
+          [
+            "Development",
+            "One AI product may need separate versions for separate countries."
+          ],
+          [
+            "Competition",
+            "The AI market may divide along geopolitical lines."
+          ]
+        ],
+        "next": [
+          "Whether the restriction reaches contractors or state governments",
+          "Responses from DeepSeek and Chinese authorities"
+        ],
+        "source": "TechCrunch AI",
+        "updated": "2026-10-20"
+      },
+      "sourceLinks": [
+        {
+          "title": "US orders federal agencies to remove China’s DeepSeek AI from their systems",
+          "url": "https://techcrunch.com/2026/10/20/us-orders-federal-agencies-to-remove-chinas-deepseek-ai-from-their-systems/",
+          "publisher": "TechCrunch AI"
+        }
+      ],
+      "eventImage": {
+        "url": "https://techcrunch.com/wp-content/uploads/2025/01/GettyImages-2195703830.jpg?w=1024",
+        "credit": "TechCrunch AI",
+        "link": "https://techcrunch.com/2026/10/20/us-orders-federal-agencies-to-remove-chinas-deepseek-ai-from-their-systems/",
+        "zh": {
+          "alt": "美国联邦机构被要求移除DeepSeek，AI工具开始按国别分阵营",
+          "caption": "美国联邦机构被要求移除DeepSeek，AI工具开始按国别分阵营"
+        },
+        "en": {
+          "alt": "US agencies are told to remove DeepSeek, splitting AI tools by country of origin",
+          "caption": "US agencies are told to remove DeepSeek, splitting AI tools by country of origin"
+        }
+      },
+      "termGuides": [
+        {
+          "key": "DeepSeek",
+          "aliases": [
+            "DeepSeek",
+            "深度求索",
+            "DeepSeek AI"
+          ],
+          "zh": {
+            "label": "AI公司与模型",
+            "meaning": "中国公司DeepSeek开发的大模型及相关服务。",
+            "relation": "其AI服务被报道将从美国联邦机构系统中移除。"
+          },
+          "en": {
+            "label": "AI company and models",
+            "meaning": "The models and services made by China-based DeepSeek.",
+            "relation": "Its AI service is reportedly being removed from US federal systems."
+          }
+        },
+        {
+          "key": "federal agencies",
+          "aliases": [
+            "联邦机构",
+            "美国联邦机构",
+            "federal agencies"
+          ],
+          "zh": {
+            "label": "美国中央政府部门",
+            "meaning": "美国联邦政府下属的行政机构。",
+            "relation": "它们是这次移除DeepSeek命令的直接对象。"
+          },
+          "en": {
+            "label": "US national government bodies",
+            "meaning": "Executive agencies of the US federal government.",
+            "relation": "They are the direct target of the reported removal order."
+          }
+        }
+      ]
+    },
+    {
+      "id": "ai-openai-orchestra-bio-acquisition",
+      "cat": "AI",
+      "icon": "ai",
+      "title": "OpenAI买下生物科技创业公司，ChatGPT式入口正伸向实验室",
+      "brief": "AI公司不只想帮你写邮件，也想进入找药和做生物研究这门更高风险的生意。",
+      "take": "OpenAI收购了生物科技创业公司Orchestra Bio，以加强其生物技术业务。交易金额未披露，但方向很清楚：通用模型公司正在争夺实验设计、药物研发和生命科学数据分析这些高价值场景。好处是研究人员或许能更快筛选假设；麻烦也在这里，生物能力越容易获得，安全审核、数据权限和误用防护就越不能靠一句“请勿滥用”。",
+      "meta": "AI与生物科技｜10月20日",
+      "facts": [
+        [
+          "收购方",
+          "OpenAI收购Orchestra Bio。"
+        ],
+        [
+          "目的",
+          "OpenAI称将加强生物科技业务。"
+        ],
+        [
+          "价格",
+          "交易金额尚未披露。"
+        ]
+      ],
+      "visual": null,
+      "impacts": [
+        [
+          "医疗",
+          "研发团队可能更快用AI整理实验思路和数据。"
+        ],
+        [
+          "安全",
+          "更易用的生物AI也会提高误用防护的要求。"
+        ],
+        [
+          "竞争",
+          "大模型公司正把业务从聊天工具推向专业行业。"
+        ]
+      ],
+      "next": [
+        "Orchestra Bio的产品如何并入OpenAI",
+        "OpenAI会公布哪些生物安全限制"
+      ],
+      "source": "TechCrunch AI",
+      "updated": "2026-10-20",
+      "en": {
+        "cat": "AI",
+        "title": "OpenAI buys a biotech startup as the ChatGPT-style interface moves into labs",
+        "brief": "AI companies are not just chasing email and code; they want a role in drug discovery and biological research too.",
+        "take": "OpenAI has acquired biotech startup Orchestra Bio to strengthen its biotechnology business. No price was disclosed, but the direction is clear: general-purpose AI companies are competing for high-value work in experiment design, drug research, and life-science data analysis. Researchers may test ideas faster. The trade-off is that easier access to biological capability raises the bar for safety review, data permissions, and misuse prevention.",
+        "meta": "AI and biotechnology | Oct. 20",
+        "facts": [
+          [
+            "Buyer",
+            "OpenAI acquired Orchestra Bio."
+          ],
+          [
+            "Purpose",
+            "OpenAI says it will strengthen its biotech business."
+          ],
+          [
+            "Price",
+            "The deal value was not disclosed."
+          ]
+        ],
+        "visual": null,
+        "impacts": [
+          [
+            "Health",
+            "Research teams may use AI to sort experimental ideas and data faster."
+          ],
+          [
+            "Safety",
+            "More accessible biological AI demands stronger misuse safeguards."
+          ],
+          [
+            "Competition",
+            "Model makers are moving beyond chat tools into specialist work."
+          ]
+        ],
+        "next": [
+          "How Orchestra Bio’s products are folded into OpenAI",
+          "What biological-safety limits OpenAI publishes"
+        ],
+        "source": "TechCrunch AI",
+        "updated": "2026-10-20"
+      },
+      "sourceLinks": [
+        {
+          "title": "OpenAI acquires startup Orchestra Bio⁠ to beef up its biotech business",
+          "url": "https://techcrunch.com/2026/10/20/openai-acquires-startup-orchestra-bio%e2%81%a0-to-beef-up-its-biotech-business/",
+          "publisher": "TechCrunch AI"
+        }
+      ],
+      "eventImage": {
+        "url": "https://techcrunch.com/wp-content/uploads/2026/10/pills-GettyImages-157287767.jpg?resize=1200,800",
+        "credit": "TechCrunch AI",
+        "link": "https://techcrunch.com/2026/10/20/openai-acquires-startup-orchestra-bio%e2%81%a0-to-beef-up-its-biotech-business/",
+        "zh": {
+          "alt": "OpenAI买下生物科技创业公司，ChatGPT式入口正伸向实验室",
+          "caption": "OpenAI买下生物科技创业公司，ChatGPT式入口正伸向实验室"
+        },
+        "en": {
+          "alt": "OpenAI buys a biotech startup as the ChatGPT-style interface moves into labs",
+          "caption": "OpenAI buys a biotech startup as the ChatGPT-style interface moves into labs"
+        }
+      },
+      "termGuides": [
+        {
+          "key": "OpenAI",
+          "aliases": [
+            "OpenAI"
+          ],
+          "zh": {
+            "label": "AI公司",
+            "meaning": "开发ChatGPT和GPT系列模型的美国公司。",
+            "relation": "它通过收购进入更深的生物科技工作流。"
+          },
+          "en": {
+            "label": "AI company",
+            "meaning": "The US company behind ChatGPT and the GPT model family.",
+            "relation": "It is using an acquisition to move further into biotech workflows."
+          }
+        },
+        {
+          "key": "Orchestra Bio",
+          "aliases": [
+            "Orchestra Bio",
+            "Orchestra Bio公司"
+          ],
+          "zh": {
+            "label": "生物科技创业公司",
+            "meaning": "一家面向生物技术领域的创业公司。",
+            "relation": "OpenAI收购它以补强自己的生物科技业务。"
+          },
+          "en": {
+            "label": "biotech startup",
+            "meaning": "A startup working in biotechnology.",
+            "relation": "OpenAI bought it to strengthen its biotech effort."
+          }
+        }
+      ]
+    },
+    {
+      "id": "ai-anthropic-cloud-partnerships",
+      "cat": "AI",
+      "icon": "chart",
+      "title": "Anthropic的云端靠山越来越多，账单和控制权也更难算",
+      "brief": "训练Claude要租到海量算力；合作伙伴越多，谁付钱、谁掌握客户入口就越容易起冲突。",
+      "take": "Anthropic与云服务商的合作据报正变得复杂。对一家训练和运行前沿模型的公司来说，算力不是普通采购，而是可能锁定多年、耗资巨大的生命线。多家云伙伴能减少被单一供应商卡住的风险，却也会带来客户归属、芯片选择、资金承诺和产品优先级的拉扯。最终这些合同的成本，往往会通过企业订阅和开发者API价格传下去。",
+      "meta": "AI算力｜云服务｜10月20日",
+      "facts": [
+        [
+          "主角",
+          "Anthropic的云合作关系据报更复杂。"
+        ],
+        [
+          "关键资源",
+          "训练和推理都依赖大量云端算力。"
+        ],
+        [
+          "矛盾",
+          "多云合作可分散风险，也会增加利益冲突。"
+        ]
+      ],
+      "visual": null,
+      "impacts": [
+        [
+          "价格",
+          "昂贵的算力合同可能影响AI订阅和API收费。"
+        ],
+        [
+          "稳定性",
+          "供应商之间的安排会影响模型服务是否顺畅。"
+        ],
+        [
+          "选择",
+          "开发者可能被迫适应不同云平台的限制。"
+        ]
+      ],
+      "next": [
+        "合作是否出现新的独家或长期算力承诺",
+        "云伙伴如何划分企业客户和模型服务收入"
+      ],
+      "source": "TechCrunch AI",
+      "updated": "2026-10-20",
+      "en": {
+        "cat": "AI",
+        "title": "Anthropic has more cloud backers—and a harder fight over bills and control",
+        "brief": "Claude needs huge amounts of compute; more cloud partners can also mean more arguments over who pays and owns the customer.",
+        "take": "Anthropic’s cloud partnerships are reportedly becoming more complicated. For a frontier-model company, compute is not a routine purchase—it is a huge, multi-year lifeline for training and inference. Multiple cloud partners reduce dependence on any one supplier, but can create friction over customer ownership, chip choices, funding commitments, and product priority. Those costs can eventually show up in enterprise subscriptions and developer API prices.",
+        "meta": "AI compute | Cloud services | Oct. 20",
+        "facts": [
+          [
+            "Company",
+            "Anthropic’s cloud relationships are reportedly getting more complex."
+          ],
+          [
+            "Resource",
+            "Training and inference both require large amounts of cloud compute."
+          ],
+          [
+            "Trade-off",
+            "More cloud partners diversify risk but add conflicts."
+          ]
+        ],
+        "visual": null,
+        "impacts": [
+          [
+            "Prices",
+            "Expensive compute contracts can affect AI subscriptions and API bills."
+          ],
+          [
+            "Reliability",
+            "Supplier arrangements can shape how smoothly a model service runs."
+          ],
+          [
+            "Choice",
+            "Developers may have to work around limits set by different cloud platforms."
+          ]
+        ],
+        "next": [
+          "Whether new exclusive or long-term compute commitments emerge",
+          "How cloud partners split enterprise customers and model-service revenue"
+        ],
+        "source": "TechCrunch AI",
+        "updated": "2026-10-20"
+      },
+      "sourceLinks": [
+        {
+          "title": "Anthropic’s cloud partnerships are getting messy",
+          "url": "https://techcrunch.com/2026/10/20/anthropics-cloud-partnerships-are-getting-messy/",
+          "publisher": "TechCrunch AI"
+        }
+      ],
+      "eventImage": {
+        "url": "https://techcrunch.com/wp-content/uploads/2026/10/GettyImages-2295579000.jpg?resize=1200,800",
+        "credit": "TechCrunch AI",
+        "link": "https://techcrunch.com/2026/10/20/anthropics-cloud-partnerships-are-getting-messy/",
+        "zh": {
+          "alt": "Anthropic的云端靠山越来越多，账单和控制权也更难算",
+          "caption": "Anthropic的云端靠山越来越多，账单和控制权也更难算"
+        },
+        "en": {
+          "alt": "Anthropic has more cloud backers—and a harder fight over bills and control",
+          "caption": "Anthropic has more cloud backers—and a harder fight over bills and control"
+        }
+      },
+      "termGuides": [
+        {
+          "key": "Anthropic",
+          "aliases": [
+            "Anthropic",
+            "Claude开发商"
+          ],
+          "zh": {
+            "label": "AI公司",
+            "meaning": "Claude模型的开发商。",
+            "relation": "它需要通过云伙伴取得和管理大规模算力。"
+          },
+          "en": {
+            "label": "AI company",
+            "meaning": "The maker of Claude models.",
+            "relation": "It relies on cloud partners to secure and manage large-scale compute."
+          }
+        },
+        {
+          "key": "inference",
+          "aliases": [
+            "推理",
+            "inference"
+          ],
+          "zh": {
+            "label": "模型运行",
+            "meaning": "把训练好的模型拿来回答问题、生成内容或执行任务。",
+            "relation": "用户每次调用Claude，都会消耗云端推理算力。"
+          },
+          "en": {
+            "label": "model runtime",
+            "meaning": "Using a trained model to answer, generate, or perform a task.",
+            "relation": "Each Claude request consumes cloud inference compute."
+          }
+        }
+      ]
+    },
+    {
+      "id": "ai-google-amazon-nvidia-developer-entry",
+      "cat": "AI",
+      "icon": "code",
+      "title": "Google和Amazon从开发者入口夹击Nvidia，AI芯片不只比性能了",
+      "brief": "谁让开发者更省事地写和迁移AI应用，谁就更有机会把Nvidia的芯片订单拉走。",
+      "take": "Google加入Amazon的行列，试图争夺原本更靠近Nvidia的AI应用开发者。真正的战场不只是芯片跑分，而是开发工具、云服务和代码兼容性：开发者若能少改代码就把模型部署到别家的硬件，Nvidia的护城河会变浅。短期内Nvidia仍很强，但竞争若让替代硬件更容易用，企业训练和运行AI的成本有机会下降。",
+      "meta": "AI芯片｜开发工具｜10月20日",
+      "facts": [
+        [
+          "挑战者",
+          "Google与Amazon都在争取AI应用开发者。"
+        ],
+        [
+          "目标",
+          "竞争直指Nvidia在AI计算平台上的优势。"
+        ],
+        [
+          "关键",
+          "开发工具和软件兼容性成为竞争重点。"
+        ]
+      ],
+      "visual": null,
+      "impacts": [
+        [
+          "成本",
+          "硬件替代方案更好用，企业AI支出可能下降。"
+        ],
+        [
+          "开发",
+          "开发者可望更少被单一芯片平台绑住。"
+        ],
+        [
+          "市场",
+          "芯片竞争从硬件延伸到工具链和云服务。"
+        ]
+      ],
+      "next": [
+        "Google和Amazon是否推出更强的迁移工具",
+        "开发者是否真的把生产工作负载迁离Nvidia"
+      ],
+      "source": "TechCrunch AI",
+      "updated": "2026-10-20",
+      "en": {
+        "cat": "AI",
+        "title": "Google and Amazon attack Nvidia through the developer doorway",
+        "brief": "The company that makes AI apps easier to build and move may win chip orders away from Nvidia.",
+        "take": "Google has joined Amazon in trying to win over AI application developers who have tended to sit closer to Nvidia’s platform. The real contest is not just chip benchmarks; it is development tools, cloud services, and code compatibility. If developers can deploy on other hardware with fewer code changes, Nvidia’s moat gets shallower. Nvidia remains powerful in the near term, but easier alternatives could lower the cost of training and running AI for businesses.",
+        "meta": "AI chips | Developer tools | Oct. 20",
+        "facts": [
+          [
+            "Challengers",
+            "Google and Amazon are courting AI application developers."
+          ],
+          [
+            "Target",
+            "The effort challenges Nvidia’s AI-computing platform advantage."
+          ],
+          [
+            "Key battleground",
+            "Developer tools and software compatibility matter heavily."
+          ]
+        ],
+        "visual": null,
+        "impacts": [
+          [
+            "Cost",
+            "More usable hardware alternatives could lower business AI spending."
+          ],
+          [
+            "Development",
+            "Developers may be less locked into one chip platform."
+          ],
+          [
+            "Market",
+            "Competition is spreading from chips into tools and cloud services."
+          ]
+        ],
+        "next": [
+          "Whether Google and Amazon release stronger migration tools",
+          "Whether production workloads actually move away from Nvidia"
+        ],
+        "source": "TechCrunch AI",
+        "updated": "2026-10-20"
+      },
+      "sourceLinks": [
+        {
+          "title": "Google has joined Amazon in attacking Nvidia’s stronghold with AI app developers",
+          "url": "https://techcrunch.com/2026/10/20/google-has-joined-amazon-in-attacking-nvidias-stronghold-with-ai-app-developers/",
+          "publisher": "TechCrunch AI"
+        }
+      ],
+      "eventImage": {
+        "url": "https://techcrunch.com/wp-content/uploads/2025/05/GettyImages-2215577882.jpg?resize=1200,800",
+        "credit": "TechCrunch AI",
+        "link": "https://techcrunch.com/2026/10/20/google-has-joined-amazon-in-attacking-nvidias-stronghold-with-ai-app-developers/",
+        "zh": {
+          "alt": "Google和Amazon从开发者入口夹击Nvidia，AI芯片不只比性能了",
+          "caption": "Google和Amazon从开发者入口夹击Nvidia，AI芯片不只比性能了"
+        },
+        "en": {
+          "alt": "Google and Amazon attack Nvidia through the developer doorway",
+          "caption": "Google and Amazon attack Nvidia through the developer doorway"
+        }
+      },
+      "termGuides": [
+        {
+          "key": "Nvidia",
+          "aliases": [
+            "Nvidia",
+            "英伟达"
+          ],
+          "zh": {
+            "label": "芯片公司",
+            "meaning": "AI训练和推理常用GPU的重要供应商。",
+            "relation": "Google和Amazon正试图从软件工具层面削弱其平台黏性。"
+          },
+          "en": {
+            "label": "chip company",
+            "meaning": "A major supplier of GPUs used for AI training and inference.",
+            "relation": "Google and Amazon are trying to weaken its platform lock-in through software tools."
+          }
+        },
+        {
+          "key": "GPU",
+          "aliases": [
+            "GPU",
+            "图形处理器"
+          ],
+          "zh": {
+            "label": "计算芯片",
+            "meaning": "擅长同时处理大量计算任务的芯片，是训练AI的主力硬件。",
+            "relation": "替代GPU平台是否好用，取决于开发工具能否跟上。"
+          },
+          "en": {
+            "label": "computing chip",
+            "meaning": "A chip good at many parallel calculations and central to AI training.",
+            "relation": "Alternative GPU platforms need usable developer tooling to compete."
+          }
+        }
+      ]
+    },
+    {
+      "id": "ai-amazon-torchneuron-nvidia",
+      "cat": "AI",
+      "icon": "code",
+      "title": "Amazon拿TorchNeuron抢AI开发流程，想让客户少依赖Nvidia",
+      "brief": "AWS的新工具瞄准的是最麻烦的一步：把现有AI代码顺手搬到Amazon自家芯片上。",
+      "take": "Amazon推出TorchNeuron开发工具，被视为其迄今对Nvidia最直接的一次软件攻势。芯片便宜不等于有人用；企业最怕的是改完代码，性能、稳定性和团队经验全得重来。TorchNeuron若能让PyTorch开发者更容易使用AWS的Trainium和Inferentia芯片，Amazon就不只是卖云服务器，而是在争夺AI工作流的默认入口。效果还要看真实项目是否愿意迁移。",
+      "meta": "AI芯片｜AWS｜10月19日",
+      "facts": [
+        [
+          "发布方",
+          "Amazon推出TorchNeuron开发工具。"
+        ],
+        [
+          "目标用户",
+          "工具面向使用PyTorch的AI开发者。"
+        ],
+        [
+          "战略",
+          "AWS希望推广Trainium和Inferentia芯片。"
+        ]
+      ],
+      "visual": null,
+      "impacts": [
+        [
+          "迁移",
+          "企业或能以较低改造成本尝试非Nvidia硬件。"
+        ],
+        [
+          "价格",
+          "云端AI计算若多一个可用选择，议价空间会变大。"
+        ],
+        [
+          "风险",
+          "工具成熟度不足时，迁移会带来性能和运维成本。"
+        ]
+      ],
+      "next": [
+        "TorchNeuron支持范围和性能表现",
+        "AWS客户是否把关键模型迁到自研芯片"
+      ],
+      "source": "TechCrunch AI",
+      "updated": "2026-10-19",
+      "en": {
+        "cat": "AI",
+        "title": "Amazon’s TorchNeuron is a bid to make AI teams less dependent on Nvidia",
+        "brief": "AWS is targeting the hardest part: moving existing AI code onto Amazon’s own chips without making teams start over.",
+        "take": "Amazon has released the TorchNeuron developer tool, described as its most direct software push yet against Nvidia. A cheaper chip is not enough if teams must rewrite code, lose performance, and relearn their operations. If TorchNeuron makes it easier for PyTorch developers to use AWS Trainium and Inferentia chips, Amazon is not merely selling cloud servers—it is competing to be the default AI workflow. The real test is whether production projects move.",
+        "meta": "AI chips | AWS | Oct. 19",
+        "facts": [
+          [
+            "Launch",
+            "Amazon released the TorchNeuron developer tool."
+          ],
+          [
+            "Users",
+            "It targets AI developers using PyTorch."
+          ],
+          [
+            "Strategy",
+            "AWS is promoting its Trainium and Inferentia chips."
+          ]
+        ],
+        "visual": null,
+        "impacts": [
+          [
+            "Migration",
+            "Businesses may test non-Nvidia hardware with less rebuilding work."
+          ],
+          [
+            "Prices",
+            "A viable extra cloud-compute option could improve bargaining power."
+          ],
+          [
+            "Risk",
+            "Immature tools can add performance and operations costs during migration."
+          ]
+        ],
+        "next": [
+          "TorchNeuron’s support coverage and real-world performance",
+          "Whether AWS customers move important models onto its chips"
+        ],
+        "source": "TechCrunch AI",
+        "updated": "2026-10-19"
+      },
+      "sourceLinks": [
+        {
+          "title": "Amazon is taking its biggest shot at Nvidia yet with new TorchNeuron dev tool",
+          "url": "https://techcrunch.com/2026/10/19/amazon-is-taking-its-biggest-shot-at-nvidia-yet-with-new-torchneuron-dev-tool/",
+          "publisher": "TechCrunch AI"
+        }
+      ],
+      "eventImage": {
+        "url": "https://techcrunch.com/wp-content/uploads/2025/03/GettyImages-2205217071.jpg?resize=1200,800",
+        "credit": "TechCrunch AI",
+        "link": "https://techcrunch.com/2026/10/19/amazon-is-taking-its-biggest-shot-at-nvidia-yet-with-new-torchneuron-dev-tool/",
+        "zh": {
+          "alt": "Amazon拿TorchNeuron抢AI开发流程，想让客户少依赖Nvidia",
+          "caption": "Amazon拿TorchNeuron抢AI开发流程，想让客户少依赖Nvidia"
+        },
+        "en": {
+          "alt": "Amazon’s TorchNeuron is a bid to make AI teams less dependent on Nvidia",
+          "caption": "Amazon’s TorchNeuron is a bid to make AI teams less dependent on Nvidia"
+        }
+      },
+      "termGuides": [
+        {
+          "key": "TorchNeuron",
+          "aliases": [
+            "TorchNeuron",
+            "Torch Neuron"
+          ],
+          "zh": {
+            "label": "开发工具",
+            "meaning": "AWS为其AI芯片提供的软件工具。",
+            "relation": "它试图让PyTorch项目更容易跑在AWS自研芯片上。"
+          },
+          "en": {
+            "label": "developer tool",
+            "meaning": "AWS software for using its AI chips.",
+            "relation": "It aims to make PyTorch projects easier to run on AWS’s own chips."
+          }
+        },
+        {
+          "key": "PyTorch",
+          "aliases": [
+            "PyTorch"
+          ],
+          "zh": {
+            "label": "AI开发框架",
+            "meaning": "研究人员和工程师常用的模型训练、运行软件框架。",
+            "relation": "TorchNeuron瞄准使用该框架的开发者。"
+          },
+          "en": {
+            "label": "AI software framework",
+            "meaning": "A widely used framework for training and running models.",
+            "relation": "TorchNeuron is aimed at developers working with it."
+          }
+        },
+        {
+          "key": "Trainium and Inferentia",
+          "aliases": [
+            "Trainium",
+            "Inferentia",
+            "AWS芯片"
+          ],
+          "zh": {
+            "label": "AWS AI芯片",
+            "meaning": "Amazon为训练和运行AI设计的自研芯片系列。",
+            "relation": "TorchNeuron是把开发者带向这些芯片的配套工具。"
+          },
+          "en": {
+            "label": "AWS AI chips",
+            "meaning": "Amazon-designed chips for AI training and inference.",
+            "relation": "TorchNeuron is the tooling meant to bring developers onto them."
+          }
+        }
+      ]
+    },
+    {
+      "id": "ai-microsoft-agents-insider-threat",
+      "cat": "AI",
+      "icon": "alert",
+      "title": "微软把AI Agent比作“内部威胁”：会做事，不等于该放权",
+      "brief": "能替你点按钮、读文件的Agent，也可能像拿到工牌的陌生人一样越权。",
+      "take": "微软警告，前沿模型驱动的AI Agent不能被默认信任，并将其类比为“内部威胁”。原因很直白：Agent为了完成任务，需要访问邮件、文档、代码库或付款流程；一旦被提示注入诱导、配置出错或权限给多了，它造成的损失比聊天机器人答错一句话大得多。企业接下来不能只看Agent会不会干活，还得给它最小权限、留操作记录，并在关键动作前让人确认。",
+      "meta": "AI Agent安全｜10月19日",
+      "facts": [
+        [
+          "警告方",
+          "微软称前沿模型不能被完全信任。"
+        ],
+        [
+          "类比",
+          "微软把AI Agent比作内部威胁。"
+        ],
+        [
+          "风险来源",
+          "Agent可能接触文件、账户和业务流程。"
+        ]
+      ],
+      "visual": null,
+      "impacts": [
+        [
+          "工作",
+          "公司部署自动化助手时，审批步骤可能不会消失。"
+        ],
+        [
+          "隐私",
+          "接入邮件和文档的Agent需要更细的权限控制。"
+        ],
+        [
+          "责任",
+          "出错后谁负责、怎样追查会成为采购重点。"
+        ]
+      ],
+      "next": [
+        "微软将提供哪些Agent权限与审计工具",
+        "企业是否要求高风险操作必须人工确认"
+      ],
+      "source": "TechCrunch AI",
+      "updated": "2026-10-19",
+      "en": {
+        "cat": "AI",
+        "title": "Microsoft calls AI agents an “insider threat”: capable does not mean trustworthy",
+        "brief": "An agent that can click buttons and read files can also overstep like a stranger with an employee badge.",
+        "take": "Microsoft warns that AI agents powered by frontier models should not be trusted by default, comparing them to insider threats. The reason is plain: agents need access to email, documents, code repositories, or payment flows to get work done. If prompt injection, bad configuration, or excessive permissions steer them wrong, the damage can be far greater than a chatbot giving a bad answer. Companies will need least-privilege access, audit trails, and human approval for consequential actions.",
+        "meta": "AI agent security | Oct. 19",
+        "facts": [
+          [
+            "Warning",
+            "Microsoft says frontier models cannot be fully trusted."
+          ],
+          [
+            "Analogy",
+            "It compares AI agents with insider threats."
+          ],
+          [
+            "Exposure",
+            "Agents can access files, accounts, and business processes."
+          ]
+        ],
+        "visual": null,
+        "impacts": [
+          [
+            "Work",
+            "Approval steps may remain when companies deploy automation agents."
+          ],
+          [
+            "Privacy",
+            "Agents connected to email and documents need tighter permissions."
+          ],
+          [
+            "Accountability",
+            "Who is responsible and how actions are traced will drive buying decisions."
+          ]
+        ],
+        "next": [
+          "Which agent-permission and audit tools Microsoft provides",
+          "Whether firms require human confirmation for high-risk actions"
+        ],
+        "source": "TechCrunch AI",
+        "updated": "2026-10-19"
+      },
+      "sourceLinks": [
+        {
+          "title": "Microsoft says AI agents are like insider threats as ‘frontier models can’t be trusted’",
+          "url": "https://techcrunch.com/2026/10/19/microsoft-says-ai-agents-are-like-insider-threats-as-frontier-models-cant-be-trusted/",
+          "publisher": "TechCrunch AI"
+        }
+      ],
+      "eventImage": {
+        "url": "https://techcrunch.com/wp-content/uploads/2026/10/Networked-AI-swarm-with-glowing-nodes.png?resize=1200,600",
+        "credit": "TechCrunch AI",
+        "link": "https://techcrunch.com/2026/10/19/microsoft-says-ai-agents-are-like-insider-threats-as-frontier-models-cant-be-trusted/",
+        "zh": {
+          "alt": "微软把AI Agent比作“内部威胁”：会做事，不等于该放权",
+          "caption": "微软把AI Agent比作“内部威胁”：会做事，不等于该放权"
+        },
+        "en": {
+          "alt": "Microsoft calls AI agents an “insider threat”: capable does not mean trustworthy",
+          "caption": "Microsoft calls AI agents an “insider threat”: capable does not mean trustworthy"
+        }
+      },
+      "termGuides": [
+        {
+          "key": "AI Agent",
+          "aliases": [
+            "AI Agent",
+            "Agent",
+            "智能体"
+          ],
+          "zh": {
+            "label": "可执行任务的AI",
+            "meaning": "不只聊天，还能调用工具、读取资料和操作软件的AI系统。",
+            "relation": "微软提醒这类系统一旦权限过大，可能造成实际业务损失。"
+          },
+          "en": {
+            "label": "task-performing AI",
+            "meaning": "An AI system that can use tools, read information, and operate software, not just chat.",
+            "relation": "Microsoft warns that excessive permissions can let it cause real business harm."
+          }
+        },
+        {
+          "key": "prompt injection",
+          "aliases": [
+            "提示注入",
+            "prompt injection"
+          ],
+          "zh": {
+            "label": "诱导攻击",
+            "meaning": "攻击者把恶意指令藏进网页、邮件或文件，骗AI违背原任务。",
+            "relation": "它可能诱使有权限的Agent泄露资料或做错操作。"
+          },
+          "en": {
+            "label": "instruction-hijacking attack",
+            "meaning": "Malicious instructions hidden in a webpage, email, or file that trick an AI away from its task.",
+            "relation": "It can push a privileged agent to expose data or take the wrong action."
+          }
+        }
+      ]
+    },
+    {
+      "id": "ai-chatgpt-lock-chats",
+      "cat": "AI",
+      "icon": "alert",
+      "title": "ChatGPT可锁聊天记录，AI隐私终于补上一道日常门锁",
+      "brief": "把聊天锁起来不能解决所有数据问题，但至少别人拿到你的设备时不该顺手翻到。",
+      "take": "ChatGPT现在允许用户锁定聊天记录。这个小功能之所以重要，是因为人们越来越把AI当作私人写作助手、工作草稿本，甚至情绪倾诉窗口。锁聊天主要防的是旁人直接查看设备上的内容，并不等于平台不再处理数据，也不能替代企业账户的权限管理。它把一个常被忽略的问题摆到台面上：AI聊天记录已经和短信、相册一样，需要日常隐私习惯。",
+      "meta": "AI产品｜隐私｜10月20日",
+      "facts": [
+        [
+          "功能",
+          "ChatGPT新增锁定聊天记录的功能。"
+        ],
+        [
+          "场景",
+          "聊天内容常含工作、个人和敏感信息。"
+        ],
+        [
+          "边界",
+          "聊天锁不等同于改变平台的数据处理方式。"
+        ]
+      ],
+      "visual": null,
+      "impacts": [
+        [
+          "隐私",
+          "共用设备或临时借手机时，多一层防窥保护。"
+        ],
+        [
+          "习惯",
+          "用户应把AI聊天记录当作需要管理的私密资料。"
+        ],
+        [
+          "企业",
+          "公司仍需依靠账户权限和数据政策保护内部内容。"
+        ]
+      ],
+      "next": [
+        "锁定功能覆盖哪些设备和账户类型",
+        "OpenAI是否说明锁定聊天的具体保护范围"
+      ],
+      "source": "TechCrunch AI",
+      "updated": "2026-10-20",
+      "en": {
+        "cat": "AI",
+        "title": "ChatGPT can now lock chats, adding a basic daily privacy door",
+        "brief": "Locking chats does not solve every data issue, but someone borrowing your device should not be able to browse them casually.",
+        "take": "ChatGPT now lets users lock their chats. The feature matters because people increasingly use AI as a private writing aide, work scratchpad, and sometimes an emotional sounding board. A chat lock mainly protects against someone directly viewing content on a device; it does not mean the platform no longer processes data, nor does it replace access controls for company accounts. It makes a neglected point more obvious: AI chat histories now deserve the same everyday privacy habits as messages and photos.",
+        "meta": "AI product | Privacy | Oct. 20",
+        "facts": [
+          [
+            "Feature",
+            "ChatGPT has added a chat-locking feature."
+          ],
+          [
+            "Use case",
+            "Chats often contain work, personal, and sensitive information."
+          ],
+          [
+            "Limit",
+            "A chat lock does not itself change platform data handling."
+          ]
+        ],
+        "visual": null,
+        "impacts": [
+          [
+            "Privacy",
+            "It adds a layer against casual snooping on shared or borrowed devices."
+          ],
+          [
+            "Habits",
+            "Users should treat AI chat histories as private material to manage."
+          ],
+          [
+            "Workplace",
+            "Companies still need account controls and data policies for internal content."
+          ]
+        ],
+        "next": [
+          "Which devices and account types support chat locking",
+          "Whether OpenAI details exactly what the lock protects"
+        ],
+        "source": "TechCrunch AI",
+        "updated": "2026-10-20"
+      },
+      "sourceLinks": [
+        {
+          "title": "ChatGPT now lets you lock your chats",
+          "url": "https://techcrunch.com/2026/10/20/chatgpt-now-lets-you-lock-your-chats/",
+          "publisher": "TechCrunch AI"
+        }
+      ],
+      "eventImage": {
+        "url": "https://techcrunch.com/wp-content/uploads/2026/09/openai-getty.jpg?resize=1200,800",
+        "credit": "TechCrunch AI",
+        "link": "https://techcrunch.com/2026/10/20/chatgpt-now-lets-you-lock-your-chats/",
+        "zh": {
+          "alt": "ChatGPT可锁聊天记录，AI隐私终于补上一道日常门锁",
+          "caption": "ChatGPT可锁聊天记录，AI隐私终于补上一道日常门锁"
+        },
+        "en": {
+          "alt": "ChatGPT can now lock chats, adding a basic daily privacy door",
+          "caption": "ChatGPT can now lock chats, adding a basic daily privacy door"
+        }
+      },
+      "termGuides": [
+        {
+          "key": "ChatGPT",
+          "aliases": [
+            "ChatGPT"
+          ],
+          "zh": {
+            "label": "AI聊天产品",
+            "meaning": "OpenAI面向个人和企业提供的对话式AI服务。",
+            "relation": "它新增了锁定聊天记录的隐私功能。"
+          },
+          "en": {
+            "label": "AI chat product",
+            "meaning": "OpenAI’s conversational AI service for consumers and businesses.",
+            "relation": "It has added a feature for locking chat histories."
+          }
+        }
+      ]
+    },
+    {
+      "id": "ai-eka-physical-ai-valuation",
+      "cat": "机器人与具身智能",
+      "icon": "drone",
+      "title": "Eka估值升至14.5亿美元，投资人押注AI能先学会“物理世界”",
+      "brief": "能理解屏幕上的文字不够，下一轮AI想学的是怎么碰、拿、移动和不撞坏东西。",
+      "take": "Eka凭借其“物理AI”模型获得14.5亿美元估值，并得到行业专家的积极评价。所谓物理AI，目标是让模型理解现实中的空间、物体和动作，为机器人、制造和仓储等场景服务。估值并不等于产品已大规模可用，尤其现实环境比网页复杂得多；但资本正把钱从纯聊天应用转向“让机器真正动起来”的底层能力。普通人最先可能在仓库配送、工厂和服务机器人中感受到这类变化。",
+      "meta": "具身AI｜融资｜10月20日",
+      "facts": [
+        [
+          "公司",
+          "Eka的估值达到14.5亿美元。"
+        ],
+        [
+          "卖点",
+          "该公司主打物理AI模型。"
+        ],
+        [
+          "方向",
+          "模型瞄准理解空间、物体与动作的任务。"
+        ]
+      ],
+      "visual": null,
+      "impacts": [
+        [
+          "机器人",
+          "仓储、制造和服务机器人可能更快获得通用能力。"
+        ],
+        [
+          "工作",
+          "重复搬运、分拣和巡检任务更可能先被自动化。"
+        ],
+        [
+          "风险",
+          "真实世界的失误会碰到人和物，安全验证不能只看演示。"
+        ]
+      ],
+      "next": [
+        "Eka公布哪些真实部署或客户",
+        "其模型在复杂现实环境中的可靠性数据"
+      ],
+      "source": "TechCrunch AI",
+      "updated": "2026-10-20",
+      "en": {
+        "cat": "Robotics and embodied AI",
+        "title": "Eka reaches a $1.45 billion valuation on a bet that AI must learn the physical world",
+        "brief": "Understanding text on a screen is not enough; the next wave of AI wants to learn how to grasp, move, and avoid breaking things.",
+        "take": "Eka has reached a $1.45 billion valuation for its physical AI model and has drawn positive attention from experts. Physical AI aims to help models understand real-world space, objects, and actions for robotics, manufacturing, and warehouses. A valuation does not mean the product already works at scale—reality is far messier than the web—but investors are shifting money from chat apps toward the foundations for machines that can act. People may first notice the change in warehouses, factories, and service robots.",
+        "meta": "Embodied AI | Funding | Oct. 20",
+        "facts": [
+          [
+            "Company",
+            "Eka is valued at $1.45 billion."
+          ],
+          [
+            "Pitch",
+            "It is built around a physical AI model."
+          ],
+          [
+            "Focus",
+            "The model targets understanding of space, objects, and actions."
+          ]
+        ],
+        "visual": null,
+        "impacts": [
+          [
+            "Robotics",
+            "Warehouse, manufacturing, and service robots may gain more general skills."
+          ],
+          [
+            "Work",
+            "Repetitive moving, sorting, and inspection tasks are likelier to automate first."
+          ],
+          [
+            "Risk",
+            "Real-world mistakes can hit people and objects, so demos are not enough."
+          ]
+        ],
+        "next": [
+          "What real deployments or customers Eka discloses",
+          "Reliability data from complex real-world settings"
+        ],
+        "source": "TechCrunch AI",
+        "updated": "2026-10-20"
+      },
+      "sourceLinks": [
+        {
+          "title": "Eka is worth $1.45B thanks to a physical AI model that has experts raving",
+          "url": "https://techcrunch.com/2026/10/20/eka-is-worth-1-45-billion-thanks-to-a-physical-ai-model-that-has-experts-raving/",
+          "publisher": "TechCrunch AI"
+        }
+      ],
+      "eventImage": {
+        "url": "https://techcrunch.com/wp-content/uploads/2026/10/Screenshot-2026-10-19-at-1.21.23-PM.png?resize=1200,974",
+        "credit": "TechCrunch AI",
+        "link": "https://techcrunch.com/2026/10/20/eka-is-worth-1-45-billion-thanks-to-a-physical-ai-model-that-has-experts-raving/",
+        "zh": {
+          "alt": "Eka估值升至14.5亿美元，投资人押注AI能先学会“物理世界”",
+          "caption": "Eka估值升至14.5亿美元，投资人押注AI能先学会“物理世界”"
+        },
+        "en": {
+          "alt": "Eka reaches a $1.45 billion valuation on a bet that AI must learn the physical world",
+          "caption": "Eka reaches a $1.45 billion valuation on a bet that AI must learn the physical world"
+        }
+      },
+      "termGuides": [
+        {
+          "key": "Eka",
+          "aliases": [
+            "Eka",
+            "Eka公司"
+          ],
+          "zh": {
+            "label": "具身AI创业公司",
+            "meaning": "开发“物理AI”模型的创业公司。",
+            "relation": "它以该模型获得14.5亿美元估值。"
+          },
+          "en": {
+            "label": "embodied-AI startup",
+            "meaning": "A startup developing a physical AI model.",
+            "relation": "Its model is behind the reported $1.45 billion valuation."
+          }
+        },
+        {
+          "key": "physical AI",
+          "aliases": [
+            "物理AI",
+            "physical AI",
+            "具身AI"
+          ],
+          "zh": {
+            "label": "理解现实的AI",
+            "meaning": "让AI处理空间、物体、动作和真实环境限制的技术方向。",
+            "relation": "Eka用它瞄准机器人和工业现场任务。"
+          },
+          "en": {
+            "label": "AI for the physical world",
+            "meaning": "AI designed to handle space, objects, actions, and real-world constraints.",
+            "relation": "Eka is targeting robotics and industrial tasks with it."
+          }
+        }
+      ]
+    },
+    {
+      "id": "ai-otter-ai-320m",
+      "cat": "AI",
+      "icon": "ai",
+      "title": "会议记录AI Otter.ai融到3.2亿美元，办公室里的每句话更可能被存下来",
+      "brief": "开会自动记笔记很省事，但谁能看、保存多久、会不会被误记，开始比转写速度更重要。",
+      "take": "会议转写工具Otter.ai从General Catalyst成长基金获得3.2亿美元融资。资金说明投资人仍相信“会议即数据”是一门大生意：AI可以把录音变成纪要、待办和可搜索的工作记忆。但它也让办公室隐私更棘手——参会者是否知道被记录、错误转写怎样更正、敏感讨论留存多久，都不能只靠员工自己小心。企业买这类工具时，权限和保留规则应与准确率同样重要。",
+      "meta": "AI办公产品｜融资｜10月20日",
+      "facts": [
+        [
+          "融资",
+          "Otter.ai获得3.2亿美元融资。"
+        ],
+        [
+          "投资方",
+          "资金来自General Catalyst成长基金。"
+        ],
+        [
+          "产品",
+          "Otter.ai提供会议录音与转写工具。"
+        ]
+      ],
+      "visual": null,
+      "impacts": [
+        [
+          "效率",
+          "会议纪要和待办整理可少花不少人工时间。"
+        ],
+        [
+          "隐私",
+          "办公室谈话被长期保存的范围会扩大。"
+        ],
+        [
+          "管理",
+          "企业需要明确录音同意、访问权限和删除规则。"
+        ]
+      ],
+      "next": [
+        "Otter.ai如何使用这笔资金扩张",
+        "其企业版是否加强同意与数据保留控制"
+      ],
+      "source": "TechCrunch AI",
+      "updated": "2026-10-20",
+      "en": {
+        "cat": "AI",
+        "title": "Otter.ai raises $320 million, making more office talk likely to be stored",
+        "brief": "Automatic meeting notes are convenient, but who can see them, how long they last, and how errors get fixed now matter as much as transcription speed.",
+        "take": "Meeting-transcription company Otter.ai has raised $320 million from General Catalyst’s growth fund. The funding shows investors still see “meetings as data” as a major business: AI can turn recordings into notes, tasks, and searchable workplace memory. But it also makes office privacy harder. Participants need to know they are being recorded, errors need a correction path, and sensitive discussions need retention limits. For employers, consent, access, and deletion rules matter as much as accuracy.",
+        "meta": "AI workplace product | Funding | Oct. 20",
+        "facts": [
+          [
+            "Funding",
+            "Otter.ai raised $320 million."
+          ],
+          [
+            "Investor",
+            "The money came from General Catalyst’s growth fund."
+          ],
+          [
+            "Product",
+            "Otter.ai offers meeting recording and transcription tools."
+          ]
+        ],
+        "visual": null,
+        "impacts": [
+          [
+            "Efficiency",
+            "Teams can spend less time writing notes and extracting tasks."
+          ],
+          [
+            "Privacy",
+            "More workplace conversation may be kept for longer."
+          ],
+          [
+            "Management",
+            "Employers need rules for consent, access, and deletion."
+          ]
+        ],
+        "next": [
+          "How Otter.ai uses the new funding",
+          "Whether its business product adds stronger consent and retention controls"
+        ],
+        "source": "TechCrunch AI",
+        "updated": "2026-10-20"
+      },
+      "sourceLinks": [
+        {
+          "title": "Otter.ai raises $320 million from General Catalyst’s growth fund for its meeting tool",
+          "url": "https://techcrunch.com/2026/10/20/otter-ai-raises-320-million-from-general-catalysts-growth-fund-for-its-meeting-tool/",
+          "publisher": "TechCrunch AI"
+        }
+      ],
+      "eventImage": {
+        "url": "https://techcrunch.com/wp-content/uploads/2026/04/Otter-feat.jpg?resize=1200,675",
+        "credit": "TechCrunch AI",
+        "link": "https://techcrunch.com/2026/10/20/otter-ai-raises-320-million-from-general-catalysts-growth-fund-for-its-meeting-tool/",
+        "zh": {
+          "alt": "会议记录AI Otter.ai融到3.2亿美元，办公室里的每句话更可能被存下来",
+          "caption": "会议记录AI Otter.ai融到3.2亿美元，办公室里的每句话更可能被存下来"
+        },
+        "en": {
+          "alt": "Otter.ai raises $320 million, making more office talk likely to be stored",
+          "caption": "Otter.ai raises $320 million, making more office talk likely to be stored"
+        }
+      },
+      "termGuides": [
+        {
+          "key": "Otter.ai",
+          "aliases": [
+            "Otter.ai",
+            "Otter"
+          ],
+          "zh": {
+            "label": "会议AI工具",
+            "meaning": "把会议录音转成文字、摘要和待办事项的服务。",
+            "relation": "它获得3.2亿美元融资，准备扩大会议AI业务。"
+          },
+          "en": {
+            "label": "meeting AI tool",
+            "meaning": "A service that turns meeting audio into text, summaries, and action items.",
+            "relation": "It raised $320 million to expand its meeting-AI business."
+          }
+        },
+        {
+          "key": "General Catalyst",
+          "aliases": [
+            "General Catalyst",
+            "GC"
+          ],
+          "zh": {
+            "label": "投资机构",
+            "meaning": "一家投资科技和医疗等领域的美国风险投资机构。",
+            "relation": "其成长基金领投或提供了Otter.ai本轮资金。"
+          },
+          "en": {
+            "label": "investment firm",
+            "meaning": "A US venture firm that invests in technology and healthcare, among other fields.",
+            "relation": "Its growth fund provided the Otter.ai financing."
+          }
+        }
+      ]
+    }
+  ]
+}

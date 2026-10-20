@@ -1,0 +1,1271 @@
+{
+  "dateKey": "2026-10-21",
+  "generatedAt": "2026-10-21T05:00:00+08:00",
+  "title": "DailyTen｜十件值得知道的事",
+  "subtitle": "从AI安全、芯片竞争到战场与公共卫生：今天先看会改变规则、价格或安全感的消息。",
+  "briefLabel": "今日简报",
+  "doneLabel": "读完了",
+  "readTimeMinutes": 8,
+  "items": [
+    {
+      "id": "anthropic-safety-bill",
+      "cat": "AI",
+      "icon": "ai",
+      "title": "AI若可能造成50人死亡，Anthropic想让它先别上线",
+      "brief": "Anthropic提出按“潜在致死规模”卡住高风险模型，AI公司可能要为最坏后果提前交代。",
+      "take": "Anthropic正在推动一项AI安全法案：如果模型被评估为可能导致50人或以上死亡，监管可阻止其部署。它不是现行禁令，而是把争论从“模型聪不聪明”拉到“出事谁能拦住”。门槛怎么测、谁来评估仍是难题，但医疗、生物、网络攻击等高风险用途，今后可能多一道外部刹车。",
+      "meta": "AI安全｜美国｜10月20日",
+      "facts": [
+        [
+          "提案方",
+          "Anthropic提出AI安全法案构想"
+        ],
+        [
+          "触发线",
+          "潜在造成50人以上死亡"
+        ],
+        [
+          "关键动作",
+          "高风险模型可被阻止部署"
+        ]
+      ],
+      "visual": null,
+      "impacts": [
+        [
+          "普通用户",
+          "高能力AI产品的上线可能更慢，但风险披露会更多"
+        ],
+        [
+          "开发者",
+          "涉生物、网络和自动化操作的工具可能面对更严格测试"
+        ]
+      ],
+      "next": [
+        "法案是否获得议员支持",
+        "死亡风险的评估标准如何定义"
+      ],
+      "source": "TechCrunch AI",
+      "updated": "2026-10-20",
+      "en": {
+        "cat": "AI",
+        "title": "Anthropic wants a stop button for AI that could plausibly kill 50 people",
+        "brief": "Anthropic is proposing a threshold based on potential deaths, pushing AI companies to account for worst-case harms before release.",
+        "take": "Anthropic is backing an AI safety bill that could block deployment when a model is assessed as capable of causing 50 or more deaths. This is not a ban in force; it shifts the argument from whether a model is impressive to who can stop it before harm occurs. Measuring that risk and deciding who evaluates it remain hard questions, but high-risk uses in biology, cyberattacks, and automated operations could face an outside brake.",
+        "meta": "AI safety | United States | Oct. 20",
+        "facts": [
+          [
+            "Proposer",
+            "Anthropic is advancing an AI-safety bill concept"
+          ],
+          [
+            "Threshold",
+            "Potential to cause 50 or more deaths"
+          ],
+          [
+            "Action",
+            "Deployment of high-risk models could be blocked"
+          ]
+        ],
+        "visual": null,
+        "impacts": [
+          [
+            "For users",
+            "Powerful AI products may arrive more slowly, with more risk disclosure"
+          ],
+          [
+            "For developers",
+            "Tools for biology, cyber, and automated action may face stricter testing"
+          ]
+        ],
+        "next": [
+          "Whether lawmakers back the bill",
+          "How a death-risk assessment would be defined"
+        ],
+        "source": "TechCrunch AI",
+        "updated": "2026-10-20"
+      },
+      "sourceLinks": [
+        {
+          "title": "Anthropic pitches AI safety bill that may block a model if 50+ people could be killed",
+          "url": "https://techcrunch.com/2026/10/20/anthropic-pitches-ai-safety-bill-that-may-block-a-model-if-50-people-could-be-killed/",
+          "publisher": "TechCrunch AI"
+        }
+      ],
+      "eventImage": {
+        "url": "https://techcrunch.com/wp-content/uploads/2026/08/GettyImages-2282033342.jpg?w=1024",
+        "credit": "TechCrunch AI",
+        "link": "https://techcrunch.com/2026/10/20/anthropic-pitches-ai-safety-bill-that-may-block-a-model-if-50-people-could-be-killed/",
+        "zh": {
+          "alt": "AI若可能造成50人死亡，Anthropic想让它先别上线",
+          "caption": "AI若可能造成50人死亡，Anthropic想让它先别上线"
+        },
+        "en": {
+          "alt": "Anthropic wants a stop button for AI that could plausibly kill 50 people",
+          "caption": "Anthropic wants a stop button for AI that could plausibly kill 50 people"
+        }
+      },
+      "termGuides": [
+        {
+          "key": "Anthropic",
+          "aliases": [
+            "Anthropic",
+            "Anthropic公司"
+          ],
+          "zh": {
+            "label": "Anthropic",
+            "meaning": "开发Claude等大模型的美国AI公司。",
+            "relation": "它正推动以严重人身伤害风险为门槛的AI监管方案。"
+          },
+          "en": {
+            "label": "Anthropic",
+            "meaning": "A U.S. AI company best known for the Claude models.",
+            "relation": "It is pushing a regulatory proposal tied to severe human-harm risk."
+          }
+        },
+        {
+          "key": "AI safety bill",
+          "aliases": [
+            "AI安全法案",
+            "AI safety bill"
+          ],
+          "zh": {
+            "label": "AI安全法案",
+            "meaning": "用法律规定AI系统测试、披露和上线边界的规则。",
+            "relation": "这项构想允许在极端风险达到门槛时阻止部署。"
+          },
+          "en": {
+            "label": "AI safety bill",
+            "meaning": "Legislation setting testing, disclosure, and deployment rules for AI systems.",
+            "relation": "This proposal could halt deployment at an extreme-risk threshold."
+          }
+        }
+      ]
+    },
+    {
+      "id": "openai-orchestra-bio",
+      "cat": "AI",
+      "icon": "ai",
+      "title": "OpenAI买下生物科技创业公司，AI开始更深地碰实验室",
+      "brief": "OpenAI收购Orchestra Bio，想把模型能力接到生物研发流程里，药物和医疗研究会更快也更难管。",
+      "take": "OpenAI收购了生物科技创业公司Orchestra Bio，以加强其生物技术业务。收购细节和价格尚未公开，但方向很明确：AI公司不只做聊天和写代码，也在争夺实验设计、数据分析和药物研发的入口。研发提速对患者是好事；麻烦在于，能帮人设计有益生物研究的能力，也可能降低危险研究的门槛。",
+      "meta": "AI｜生物技术｜10月20日",
+      "facts": [
+        [
+          "收购方",
+          "OpenAI"
+        ],
+        [
+          "被收购方",
+          "生物科技创业公司Orchestra Bio"
+        ],
+        [
+          "目标",
+          "加强OpenAI的生物技术业务"
+        ]
+      ],
+      "visual": null,
+      "impacts": [
+        [
+          "医疗研发",
+          "实验设计和数据分析可能更快进入AI辅助模式"
+        ],
+        [
+          "安全边界",
+          "生物能力越强，滥用筛查和权限控制越重要"
+        ]
+      ],
+      "next": [
+        "交易条款及团队去向",
+        "OpenAI会把哪些生物工具推向市场"
+      ],
+      "source": "TechCrunch AI",
+      "updated": "2026-10-20",
+      "en": {
+        "cat": "AI",
+        "title": "OpenAI buys a biotech startup, taking AI deeper into the lab",
+        "brief": "OpenAI’s purchase of Orchestra Bio points toward AI woven into biotech R&D, where faster discovery also raises harder safety questions.",
+        "take": "OpenAI has acquired biotech startup Orchestra Bio to strengthen its biotech business. Terms and price were not disclosed, but the direction is clear: AI companies are competing not only for chat and coding, but for access to experimental design, data analysis, and drug discovery. Faster research could help patients; the harder part is that capabilities useful for beneficial biology can also lower barriers to dangerous work.",
+        "meta": "AI | Biotechnology | Oct. 20",
+        "facts": [
+          [
+            "Buyer",
+            "OpenAI"
+          ],
+          [
+            "Acquired company",
+            "Biotech startup Orchestra Bio"
+          ],
+          [
+            "Aim",
+            "Strengthen OpenAI’s biotech business"
+          ]
+        ],
+        "visual": null,
+        "impacts": [
+          [
+            "Medical research",
+            "Experimental design and data analysis may move faster into AI-assisted work"
+          ],
+          [
+            "Safety boundary",
+            "More biological capability makes misuse screening and access controls more important"
+          ]
+        ],
+        "next": [
+          "Deal terms and team plans",
+          "Which biotech tools OpenAI brings to market"
+        ],
+        "source": "TechCrunch AI",
+        "updated": "2026-10-20"
+      },
+      "sourceLinks": [
+        {
+          "title": "OpenAI acquires startup Orchestra Bio to beef up its biotech business",
+          "url": "https://techcrunch.com/2026/10/20/openai-acquires-startup-orchestra-bio%e2%81%a0-to-beef-up-its-biotech-business/",
+          "publisher": "TechCrunch AI"
+        }
+      ],
+      "eventImage": {
+        "url": "https://techcrunch.com/wp-content/uploads/2026/10/pills-GettyImages-157287767.jpg?resize=1200,800",
+        "credit": "TechCrunch AI",
+        "link": "https://techcrunch.com/2026/10/20/openai-acquires-startup-orchestra-bio%e2%81%a0-to-beef-up-its-biotech-business/",
+        "zh": {
+          "alt": "OpenAI买下生物科技创业公司，AI开始更深地碰实验室",
+          "caption": "OpenAI买下生物科技创业公司，AI开始更深地碰实验室"
+        },
+        "en": {
+          "alt": "OpenAI buys a biotech startup, taking AI deeper into the lab",
+          "caption": "OpenAI buys a biotech startup, taking AI deeper into the lab"
+        }
+      },
+      "termGuides": [
+        {
+          "key": "OpenAI",
+          "aliases": [
+            "OpenAI"
+          ],
+          "zh": {
+            "label": "OpenAI",
+            "meaning": "开发ChatGPT的美国人工智能公司。",
+            "relation": "它通过收购进入更具体的生物研发工作流。"
+          },
+          "en": {
+            "label": "OpenAI",
+            "meaning": "The U.S. AI company behind ChatGPT.",
+            "relation": "It is entering more of the practical biotech research workflow through the acquisition."
+          }
+        },
+        {
+          "key": "Orchestra Bio",
+          "aliases": [
+            "Orchestra Bio",
+            "Orchestra"
+          ],
+          "zh": {
+            "label": "Orchestra Bio",
+            "meaning": "一家生物科技创业公司。",
+            "relation": "它被OpenAI收购，用来加强后者的生物技术业务。"
+          },
+          "en": {
+            "label": "Orchestra Bio",
+            "meaning": "A biotechnology startup.",
+            "relation": "It was acquired by OpenAI to build out OpenAI’s biotech business."
+          }
+        }
+      ]
+    },
+    {
+      "id": "deepseek-us-removal",
+      "cat": "AI",
+      "icon": "alert",
+      "title": "美国联邦机构被要求移除DeepSeek，AI工具先过“国籍关”",
+      "brief": "美国政府要求联邦系统删除中国的DeepSeek，员工和供应商选AI工具时，数据去向会更敏感。",
+      "take": "美国已命令联邦机构从系统中移除中国AI模型DeepSeek。报道没有给出完整执行细则，但这类决定会把AI采购变成安全和地缘政治问题，而不只是好不好用、便不便宜。对普通人来说，短期未必影响日常使用；对给政府供货的公司和跨国团队，模型、数据和云服务的选择会更受限制。",
+      "meta": "AI｜美国政策｜10月20日",
+      "facts": [
+        [
+          "命令对象",
+          "美国联邦机构"
+        ],
+        [
+          "涉及产品",
+          "中国AI模型DeepSeek"
+        ],
+        [
+          "要求",
+          "从机构系统中移除"
+        ]
+      ],
+      "visual": null,
+      "impacts": [
+        [
+          "企业采购",
+          "政府供应商可能需重新审查模型来源和数据路径"
+        ],
+        [
+          "跨境竞争",
+          "AI市场正在出现按安全阵营分开的风险"
+        ]
+      ],
+      "next": [
+        "适用范围是否扩展至承包商",
+        "其他国家会否采取类似限制"
+      ],
+      "source": "TechCrunch AI",
+      "updated": "2026-10-20",
+      "en": {
+        "cat": "AI",
+        "title": "U.S. agencies are told to remove DeepSeek: AI tools now face a nationality test",
+        "brief": "Washington has ordered DeepSeek removed from federal systems, making data destination more consequential when workers and vendors choose AI tools.",
+        "take": "The U.S. has ordered federal agencies to remove the Chinese AI model DeepSeek from their systems. Full implementation details were not reported, but the decision makes AI procurement a security and geopolitical question, not just one of price or usefulness. It may not immediately change everyday use, but government suppliers and cross-border teams could face tighter limits on which models, data routes, and cloud services they use.",
+        "meta": "AI | U.S. policy | Oct. 20",
+        "facts": [
+          [
+            "Covered bodies",
+            "U.S. federal agencies"
+          ],
+          [
+            "Product involved",
+            "Chinese AI model DeepSeek"
+          ],
+          [
+            "Requirement",
+            "Remove it from agency systems"
+          ]
+        ],
+        "visual": null,
+        "impacts": [
+          [
+            "Company procurement",
+            "Government vendors may need to review model origin and data paths"
+          ],
+          [
+            "Cross-border competition",
+            "AI markets risk splitting along security blocs"
+          ]
+        ],
+        "next": [
+          "Whether contractors are also covered",
+          "Whether other governments follow with similar restrictions"
+        ],
+        "source": "TechCrunch AI",
+        "updated": "2026-10-20"
+      },
+      "sourceLinks": [
+        {
+          "title": "US orders federal agencies to remove China’s DeepSeek AI from their systems",
+          "url": "https://techcrunch.com/2026/10/20/us-orders-federal-agencies-to-remove-chinas-deepseek-ai-from-their-systems/",
+          "publisher": "TechCrunch AI"
+        }
+      ],
+      "eventImage": {
+        "url": "https://techcrunch.com/wp-content/uploads/2025/01/GettyImages-2195703830.jpg?w=1024",
+        "credit": "TechCrunch AI",
+        "link": "https://techcrunch.com/2026/10/20/us-orders-federal-agencies-to-remove-chinas-deepseek-ai-from-their-systems/",
+        "zh": {
+          "alt": "美国联邦机构被要求移除DeepSeek，AI工具先过“国籍关”",
+          "caption": "美国联邦机构被要求移除DeepSeek，AI工具先过“国籍关”"
+        },
+        "en": {
+          "alt": "U.S. agencies are told to remove DeepSeek: AI tools now face a nationality test",
+          "caption": "U.S. agencies are told to remove DeepSeek: AI tools now face a nationality test"
+        }
+      },
+      "termGuides": [
+        {
+          "key": "DeepSeek",
+          "aliases": [
+            "DeepSeek",
+            "深度求索"
+          ],
+          "zh": {
+            "label": "DeepSeek",
+            "meaning": "中国的人工智能模型和产品品牌。",
+            "relation": "美国联邦机构被要求将其从系统中移除。"
+          },
+          "en": {
+            "label": "DeepSeek",
+            "meaning": "A Chinese AI model and product brand.",
+            "relation": "U.S. federal agencies have been ordered to remove it from their systems."
+          }
+        },
+        {
+          "key": "federal agencies",
+          "aliases": [
+            "联邦机构",
+            "federal agencies"
+          ],
+          "zh": {
+            "label": "联邦机构",
+            "meaning": "美国中央政府的部门和执行机构。",
+            "relation": "它们是这项移除命令的直接对象。"
+          },
+          "en": {
+            "label": "Federal agencies",
+            "meaning": "Departments and executive bodies of the U.S. national government.",
+            "relation": "They are the direct targets of the removal order."
+          }
+        }
+      ]
+    },
+    {
+      "id": "cloud-chips-nvidia-challenge",
+      "cat": "科技产业",
+      "icon": "code",
+      "title": "Google和Amazon一起抢Nvidia的入口，开发者的AI成本可能有得谈",
+      "brief": "云厂商正把自家AI芯片更紧地塞进开发工具，想让开发者少买Nvidia，算力价格才可能松动。",
+      "take": "Google加入Amazon的行列，正从AI应用开发者这一端挑战Nvidia的主导地位。真正争的不是一块芯片，而是开发者写一次代码后能否顺畅地运行在自家芯片上：如果工具链足够好，企业就不必只盯着Nvidia GPU。竞争若奏效，训练和推理的选择会更多；但迁移成本、性能和软件兼容性，仍会决定客户会不会真换。",
+      "meta": "科技产业｜AI芯片｜10月20日",
+      "facts": [
+        [
+          "挑战者",
+          "Google与Amazon"
+        ],
+        [
+          "被挑战者",
+          "Nvidia"
+        ],
+        [
+          "争夺点",
+          "AI应用开发者与软件工具链"
+        ]
+      ],
+      "visual": null,
+      "impacts": [
+        [
+          "企业成本",
+          "更多可用芯片选择有机会压低AI算力议价压力"
+        ],
+        [
+          "开发团队",
+          "代码和工具若被云厂商绑定，迁移会更麻烦"
+        ]
+      ],
+      "next": [
+        "开发工具是否被广泛采用",
+        "客户能否在性能与成本上接受替代芯片"
+      ],
+      "source": "TechCrunch AI",
+      "updated": "2026-10-20",
+      "en": {
+        "cat": "Technology",
+        "title": "Google and Amazon are attacking Nvidia at the developer doorway",
+        "brief": "Cloud providers are weaving their own AI chips more tightly into developer tools, and that could finally give buyers more room to negotiate compute costs.",
+        "take": "Google has joined Amazon in challenging Nvidia from the AI application-developer side. The real contest is not one chip: it is whether developers can write code once and run it smoothly on a cloud provider’s hardware. If the tooling becomes good enough, companies will not have to default to Nvidia GPUs. That could broaden choices for training and inference, though switching costs, performance, and software compatibility will decide whether customers actually move.",
+        "meta": "Technology | AI chips | Oct. 20",
+        "facts": [
+          [
+            "Challengers",
+            "Google and Amazon"
+          ],
+          [
+            "Company challenged",
+            "Nvidia"
+          ],
+          [
+            "Battleground",
+            "AI developers and software tooling"
+          ]
+        ],
+        "visual": null,
+        "impacts": [
+          [
+            "Business cost",
+            "More viable chips could ease buyers’ compute bargaining pressure"
+          ],
+          [
+            "Development teams",
+            "Cloud-tied code and tools can make future migration harder"
+          ]
+        ],
+        "next": [
+          "Whether developers adopt the tooling broadly",
+          "Whether customers accept alternatives on cost and performance"
+        ],
+        "source": "TechCrunch AI",
+        "updated": "2026-10-20"
+      },
+      "sourceLinks": [
+        {
+          "title": "Google has joined Amazon in attacking Nvidia’s stronghold with AI app developers",
+          "url": "https://techcrunch.com/2026/10/20/google-has-joined-amazon-in-attacking-nvidias-stronghold-with-ai-app-developers/",
+          "publisher": "TechCrunch AI"
+        }
+      ],
+      "eventImage": {
+        "url": "https://techcrunch.com/wp-content/uploads/2025/05/GettyImages-2215577882.jpg?resize=1200,800",
+        "credit": "TechCrunch AI",
+        "link": "https://techcrunch.com/2026/10/20/google-has-joined-amazon-in-attacking-nvidias-stronghold-with-ai-app-developers/",
+        "zh": {
+          "alt": "Google和Amazon一起抢Nvidia的入口，开发者的AI成本可能有得谈",
+          "caption": "Google和Amazon一起抢Nvidia的入口，开发者的AI成本可能有得谈"
+        },
+        "en": {
+          "alt": "Google and Amazon are attacking Nvidia at the developer doorway",
+          "caption": "Google and Amazon are attacking Nvidia at the developer doorway"
+        }
+      },
+      "termGuides": [
+        {
+          "key": "Nvidia",
+          "aliases": [
+            "Nvidia",
+            "英伟达"
+          ],
+          "zh": {
+            "label": "Nvidia",
+            "meaning": "主导AI训练和推理芯片市场的美国公司。",
+            "relation": "Google和Amazon正试图从开发工具端削弱其默认选择地位。"
+          },
+          "en": {
+            "label": "Nvidia",
+            "meaning": "The U.S. company dominant in AI training and inference chips.",
+            "relation": "Google and Amazon are trying to weaken its default position through developer tools."
+          }
+        },
+        {
+          "key": "inference",
+          "aliases": [
+            "推理",
+            "inference"
+          ],
+          "zh": {
+            "label": "推理",
+            "meaning": "把训练好的AI模型实际拿来回答、生成或执行任务。",
+            "relation": "企业长期运行AI服务的推理成本是芯片竞争的核心。"
+          },
+          "en": {
+            "label": "Inference",
+            "meaning": "Using a trained AI model to answer, generate, or perform tasks.",
+            "relation": "The ongoing cost of inference is central to the chip competition."
+          }
+        }
+      ]
+    },
+    {
+      "id": "hormuz-container-attacks",
+      "cat": "能源",
+      "icon": "ship",
+      "title": "伊朗袭击集装箱船，霍尔木兹海峡的运费风险又抬头",
+      "brief": "船只在霍尔木兹海峡遇袭并有货物散落，油气和日用品的运输保险都可能更贵。",
+      "take": "报道称，伊朗袭击霍尔木兹海峡的集装箱船，民众正在海峡沿岸搜寻散落货物。这里是全球最敏感的能源和航运咽喉之一，任何持续的船舶风险都会先推高保险、绕航和运输时间，再传到油价、化工品和进口商品。一次事件不等于立即断航，但商家和消费者都该盯着它会不会变成连续风险。",
+      "meta": "能源｜中东航运｜10月19日",
+      "facts": [
+        [
+          "事发地",
+          "霍尔木兹海峡"
+        ],
+        [
+          "事件",
+          "伊朗袭击集装箱船"
+        ],
+        [
+          "现场影响",
+          "货物落入或散落在海峡附近"
+        ]
+      ],
+      "visual": null,
+      "impacts": [
+        [
+          "能源价格",
+          "这条航道受扰会放大油气供应担忧"
+        ],
+        [
+          "日常商品",
+          "保险费和绕航增加，最终可能传导到进口商品价格"
+        ]
+      ],
+      "next": [
+        "商船是否改道或暂停通行",
+        "袭击是否扩大为持续航运风险"
+      ],
+      "source": "The Guardian",
+      "updated": "2026-10-19",
+      "en": {
+        "cat": "Energy",
+        "title": "Iranian attacks on container ships put Hormuz shipping costs back in focus",
+        "brief": "Ships were attacked in the Strait of Hormuz and cargo spilled; insurance for energy and everyday goods could become more expensive.",
+        "take": "Iran attacked container ships in the Strait of Hormuz, according to the report, and people have been searching nearby waters for spilled cargo. This is one of the world’s most sensitive energy and shipping chokepoints. Sustained risk to vessels would first raise insurance, detours, and delivery times, then feed into oil, chemicals, and imported-goods prices. One incident does not mean shipping stops, but the key question is whether it becomes a pattern.",
+        "meta": "Energy | Middle East shipping | Oct. 19",
+        "facts": [
+          [
+            "Location",
+            "Strait of Hormuz"
+          ],
+          [
+            "Incident",
+            "Iran attacked container ships"
+          ],
+          [
+            "Immediate effect",
+            "Cargo spilled in or near the strait"
+          ]
+        ],
+        "visual": null,
+        "impacts": [
+          [
+            "Energy prices",
+            "Disruption on this route magnifies worries about oil and gas supply"
+          ],
+          [
+            "Everyday goods",
+            "Higher insurance and detours can reach consumers through imported prices"
+          ]
+        ],
+        "next": [
+          "Whether commercial ships reroute or pause transit",
+          "Whether attacks become a sustained shipping risk"
+        ],
+        "source": "The Guardian",
+        "updated": "2026-10-19"
+      },
+      "sourceLinks": [
+        {
+          "title": "People scour strait of Hormuz for spilt cargo after Iran attacks container ships",
+          "url": "https://www.theguardian.com/world/2026/oct/19/strait-of-hormuz-spilt-cargo-iran-attacks-container-ships",
+          "publisher": "The Guardian"
+        }
+      ],
+      "eventImage": {
+        "url": "https://i.guim.co.uk/img/media/0d4cf88c5f52288ec22b532a48cb137684da74e9/0_0_5000_4000/master/5000.jpg?width=1200&height=630&quality=85&auto=format&fit=crop&precrop=40:21,offset-x50,offset-y0&overlay-align=bottom%2Cleft&overlay-width=100p&overlay-base64=L2ltZy9zdGF0aWMvb3ZlcmxheXMvdGctZGVmYXVsdC5wbmc&enable=upscale&s=378001bce6600e307cdc4cbfda6718f4",
+        "credit": "The Guardian",
+        "link": "https://www.theguardian.com/world/2026/oct/19/strait-of-hormuz-spilt-cargo-iran-attacks-container-ships",
+        "zh": {
+          "alt": "伊朗袭击集装箱船，霍尔木兹海峡的运费风险又抬头",
+          "caption": "伊朗袭击集装箱船，霍尔木兹海峡的运费风险又抬头"
+        },
+        "en": {
+          "alt": "Iranian attacks on container ships put Hormuz shipping costs back in focus",
+          "caption": "Iranian attacks on container ships put Hormuz shipping costs back in focus"
+        }
+      },
+      "termGuides": [
+        {
+          "key": "Strait of Hormuz",
+          "aliases": [
+            "霍尔木兹海峡",
+            "Strait of Hormuz"
+          ],
+          "zh": {
+            "label": "霍尔木兹海峡",
+            "meaning": "连接波斯湾与外海的狭窄航道，是油气和货运的重要通路。",
+            "relation": "袭击发生在这里，因此会立刻牵动全球航运和能源市场。"
+          },
+          "en": {
+            "label": "Strait of Hormuz",
+            "meaning": "A narrow waterway linking the Persian Gulf to open seas and a major route for energy and cargo.",
+            "relation": "Because the attacks occurred here, they quickly affect global shipping and energy concerns."
+          }
+        }
+      ]
+    },
+    {
+      "id": "ukraine-us-intelligence",
+      "cat": "国际局势",
+      "icon": "drone",
+      "title": "美国恢复分享俄军袭击情报，乌克兰的防空多了一双眼睛",
+      "brief": "泽连斯基称美方情报共享“现在有效”，导弹来袭预警和拦截部署可能更及时。",
+      "take": "乌克兰总统泽连斯基说，在奥斯陆与特朗普特使会谈后，美国分享俄方袭击相关情报的安排“现在有效”。美国情报并不会替乌克兰发射拦截弹，但能帮助预判导弹和无人机威胁、安排防空资源。问题也在这里：这项支持能否稳定延续，仍取决于美国政治和双方关系，而战场上的人最怕的就是预警忽有忽无。",
+      "meta": "国际局势｜俄乌战争｜10月20日",
+      "facts": [
+        [
+          "表态者",
+          "乌克兰总统泽连斯基"
+        ],
+        [
+          "会谈地点",
+          "奥斯陆"
+        ],
+        [
+          "变化",
+          "称美国袭击情报共享已有效运作"
+        ]
+      ],
+      "visual": null,
+      "impacts": [
+        [
+          "平民安全",
+          "更及时的预警可能帮助城市提前避险"
+        ],
+        [
+          "战场能力",
+          "乌军可更有针对性地配置有限防空资源"
+        ]
+      ],
+      "next": [
+        "情报共享是否持续稳定",
+        "美乌关系会否影响支持范围"
+      ],
+      "source": "BBC News",
+      "updated": "2026-10-20",
+      "en": {
+        "cat": "Geopolitics",
+        "title": "U.S. intelligence sharing gives Ukraine’s air defenses another set of eyes",
+        "brief": "Zelensky says U.S. intelligence sharing is now working, which could improve warning and interception planning for incoming strikes.",
+        "take": "Ukrainian President Volodymyr Zelensky said arrangements for U.S. intelligence sharing on Russian strikes are “working now” after talks with a Trump envoy in Oslo. Intelligence does not fire interceptor missiles, but it can help anticipate missile and drone threats and place scarce air defenses. The uncertainty is whether this support remains steady: for people under attack, warnings that appear and disappear are especially costly.",
+        "meta": "Geopolitics | Russia-Ukraine war | Oct. 20",
+        "facts": [
+          [
+            "Speaker",
+            "Ukrainian President Volodymyr Zelensky"
+          ],
+          [
+            "Meeting location",
+            "Oslo"
+          ],
+          [
+            "Change",
+            "He said U.S. strike-intelligence sharing is now working"
+          ]
+        ],
+        "visual": null,
+        "impacts": [
+          [
+            "Civilian safety",
+            "More timely warning can give cities more time to shelter"
+          ],
+          [
+            "Military capability",
+            "Ukraine can place limited air-defense assets more precisely"
+          ]
+        ],
+        "next": [
+          "Whether intelligence sharing stays consistent",
+          "Whether U.S.-Ukraine relations alter its scope"
+        ],
+        "source": "BBC News",
+        "updated": "2026-10-20"
+      },
+      "sourceLinks": [
+        {
+          "title": "Zelensky says US intelligence sharing 'works now' after talks with Trump envoy in Oslo",
+          "url": "https://www.bbc.co.uk/news/articles/cq5ynkx3xy11o?at_medium=RSS&at_campaign=rss",
+          "publisher": "BBC News"
+        },
+        {
+          "title": "US has resumed sharing intelligence with Ukraine about Russian strikes, says Zelenskyy",
+          "url": "https://www.theguardian.com/world/2026/oct/20/us-has-resumed-sharing-intelligence-with-ukraine-about-russian-strikes-says-zelenskyy",
+          "publisher": "The Guardian"
+        }
+      ],
+      "eventImage": {
+        "url": "https://ichef.bbci.co.uk/ace/branded_news/1200/cpsprodpb/c49a/live/3ca9cb60-ccba-11f1-9a39-31b474234113.jpg",
+        "credit": "BBC News",
+        "link": "https://www.bbc.co.uk/news/articles/cq5ynkx3xy11o?at_medium=RSS&at_campaign=rss",
+        "zh": {
+          "alt": "美国恢复分享俄军袭击情报，乌克兰的防空多了一双眼睛",
+          "caption": "美国恢复分享俄军袭击情报，乌克兰的防空多了一双眼睛"
+        },
+        "en": {
+          "alt": "U.S. intelligence sharing gives Ukraine’s air defenses another set of eyes",
+          "caption": "U.S. intelligence sharing gives Ukraine’s air defenses another set of eyes"
+        }
+      },
+      "termGuides": [
+        {
+          "key": "air defense",
+          "aliases": [
+            "防空",
+            "air defense"
+          ],
+          "zh": {
+            "label": "防空",
+            "meaning": "用雷达、预警和拦截武器应对导弹、无人机和飞机的系统。",
+            "relation": "更好的情报能帮助乌克兰把有限防空力量放到更需要的地方。"
+          },
+          "en": {
+            "label": "Air defense",
+            "meaning": "Systems using radar, warning, and interceptors against missiles, drones, and aircraft.",
+            "relation": "Better intelligence can help Ukraine place scarce defenses where they are most needed."
+          }
+        }
+      ]
+    },
+    {
+      "id": "sudan-drone-massacre",
+      "cat": "国际局势",
+      "icon": "drone",
+      "title": "苏丹无人机袭击葬礼和燃料市场，逾300人死亡",
+      "brief": "平民聚集的葬礼和燃料市场遭无人机打击，苏丹战事正在把最基本的生活场所变成高风险区。",
+      "take": "BBC援引消息人士称，苏丹军方无人机击中哀悼者聚集处和燃料市场，造成300多人死亡。伤亡数字在战区往往仍需独立核实，但袭击目标本身说明平民风险已不仅在前线：买燃料、参加葬礼也可能成为致命行程。燃料市场受袭还会让交通、发电和救援更难维持。",
+      "meta": "国际局势｜苏丹冲突｜10月20日",
+      "facts": [
+        [
+          "被指行动方",
+          "苏丹军方无人机"
+        ],
+        [
+          "遇袭地点",
+          "葬礼现场与燃料市场"
+        ],
+        [
+          "死亡数字",
+          "消息人士称超过300人"
+        ]
+      ],
+      "visual": null,
+      "impacts": [
+        [
+          "平民风险",
+          "日常聚集和获取燃料都可能变成高危行为"
+        ],
+        [
+          "人道救援",
+          "燃料供应受打击会拖累交通、医院和援助"
+        ]
+      ],
+      "next": [
+        "伤亡数字能否获得独立核实",
+        "袭击地区的人道通道是否开放"
+      ],
+      "source": "BBC News",
+      "updated": "2026-10-20",
+      "en": {
+        "cat": "Geopolitics",
+        "title": "Drone strikes on mourners and a fuel market kill more than 300 in Sudan",
+        "brief": "A funeral gathering and fuel market were hit, turning basic daily places into danger zones in Sudan’s war.",
+        "take": "BBC, citing sources, reported that Sudanese army drones struck mourners and a fuel market, killing more than 300 people. Casualty figures in a war zone still need independent verification, but the reported targets show how civilian danger has spread beyond the front line: attending a funeral or buying fuel can become lethal. A hit on fuel also makes transport, electricity, and relief work harder to sustain.",
+        "meta": "Geopolitics | Sudan conflict | Oct. 20",
+        "facts": [
+          [
+            "Accused force",
+            "Sudanese army drones"
+          ],
+          [
+            "Locations hit",
+            "A mourning gathering and a fuel market"
+          ],
+          [
+            "Death toll",
+            "Sources said more than 300 people were killed"
+          ]
+        ],
+        "visual": null,
+        "impacts": [
+          [
+            "Civilian risk",
+            "Everyday gatherings and access to fuel can become high-risk activities"
+          ],
+          [
+            "Humanitarian relief",
+            "Lost fuel supply undermines transport, hospitals, and aid"
+          ]
+        ],
+        "next": [
+          "Whether the toll can be independently verified",
+          "Whether humanitarian access opens in affected areas"
+        ],
+        "source": "BBC News",
+        "updated": "2026-10-20"
+      },
+      "sourceLinks": [
+        {
+          "title": "Sudan army drones hit mourners and fuel market killing more than 300 people, sources say",
+          "url": "https://www.bbc.co.uk/news/articles/cr3el70jz1nqo?at_medium=RSS&at_campaign=rss",
+          "publisher": "BBC News"
+        }
+      ],
+      "eventImage": {
+        "url": "https://ichef.bbci.co.uk/ace/branded_news/1200/cpsprodpb/008d/live/4e35d850-cc8e-11f1-bc2e-018d645d8d21.png",
+        "credit": "BBC News",
+        "link": "https://www.bbc.co.uk/news/articles/cr3el70jz1nqo?at_medium=RSS&at_campaign=rss",
+        "zh": {
+          "alt": "苏丹无人机袭击葬礼和燃料市场，逾300人死亡",
+          "caption": "苏丹无人机袭击葬礼和燃料市场，逾300人死亡"
+        },
+        "en": {
+          "alt": "Drone strikes on mourners and a fuel market kill more than 300 in Sudan",
+          "caption": "Drone strikes on mourners and a fuel market kill more than 300 in Sudan"
+        }
+      },
+      "termGuides": [
+        {
+          "key": "Sudan conflict",
+          "aliases": [
+            "苏丹冲突",
+            "Sudan conflict"
+          ],
+          "zh": {
+            "label": "苏丹冲突",
+            "meaning": "苏丹境内持续的武装冲突和权力争夺。",
+            "relation": "这次大规模平民伤亡发生在冲突升级的背景下。"
+          },
+          "en": {
+            "label": "Sudan conflict",
+            "meaning": "The continuing armed conflict and power struggle inside Sudan.",
+            "relation": "This mass-casualty attack occurred amid that escalating conflict."
+          }
+        }
+      ]
+    },
+    {
+      "id": "ebola-abkhazia",
+      "cat": "公共安全",
+      "icon": "alert",
+      "title": "尼日利亚首都确认埃博拉病例，机场和医院得先把链条截住",
+      "brief": "一名从乌干达抵达的女子在阿布贾检测阳性，关键不是恐慌，而是尽快追踪接触者。",
+      "take": "尼日利亚确认首都阿布贾出现一例埃博拉病例：一名从乌干达抵达的女性检测呈阳性。单一病例不代表暴发，但埃博拉防控特别依赖速度——隔离患者、追踪密接者、让医院做好防护。对旅行者而言，眼下更该看官方卫生提示而非社交媒体传言；对当地医疗系统，这是一次能否把输入风险关在早期的压力测试。",
+      "meta": "公共安全｜传染病｜10月20日",
+      "facts": [
+        [
+          "地点",
+          "尼日利亚首都阿布贾"
+        ],
+        [
+          "病例",
+          "一名自乌干达抵达的女性"
+        ],
+        [
+          "检测结果",
+          "埃博拉病毒阳性"
+        ]
+      ],
+      "visual": null,
+      "impacts": [
+        [
+          "公共卫生",
+          "越早找到并观察接触者，越可能避免扩散"
+        ],
+        [
+          "出行决策",
+          "旅行者应以卫生部门通知和机场要求为准"
+        ]
+      ],
+      "next": [
+        "密切接触者追踪结果",
+        "是否发现更多关联病例"
+      ],
+      "source": "NPR",
+      "updated": "2026-10-20",
+      "en": {
+        "cat": "Public safety",
+        "title": "An Ebola case in Nigeria’s capital makes speed the whole game",
+        "brief": "A woman arriving from Uganda tested positive in Abuja; the urgent task is contact tracing, not panic.",
+        "take": "Nigeria has confirmed an Ebola case in Abuja, its capital: a woman who arrived from Uganda tested positive. One case does not equal an outbreak, but Ebola control depends heavily on speed—isolating the patient, tracing close contacts, and protecting hospitals. Travelers should follow official health guidance rather than social-media rumors. For the local health system, this is an early test of whether an imported risk can be contained.",
+        "meta": "Public safety | Infectious disease | Oct. 20",
+        "facts": [
+          [
+            "Location",
+            "Abuja, Nigeria’s capital"
+          ],
+          [
+            "Patient",
+            "A woman arriving from Uganda"
+          ],
+          [
+            "Test result",
+            "Positive for Ebola"
+          ]
+        ],
+        "visual": null,
+        "impacts": [
+          [
+            "Public health",
+            "Finding and monitoring contacts quickly offers the best chance to prevent spread"
+          ],
+          [
+            "Travel decisions",
+            "Travelers should follow health-authority notices and airport requirements"
+          ]
+        ],
+        "next": [
+          "Results of contact tracing",
+          "Whether linked cases are found"
+        ],
+        "source": "NPR",
+        "updated": "2026-10-20"
+      },
+      "sourceLinks": [
+        {
+          "title": "Nigeria confirms an Ebola case in Abuja as a woman arriving from Uganda tests positive",
+          "url": "https://www.npr.org/2026/10/20/g-s1-148975/nigeria-confirms-an-ebola-case",
+          "publisher": "NPR"
+        }
+      ],
+      "eventImage": {
+        "url": "https://npr.brightspotcdn.com/dims3/default/strip/false/crop/5760x3240+0+300/resize/1400/quality/85/format/jpeg/?url=http%3A%2F%2Fnpr-brightspot.s3.amazonaws.com%2F5f%2F08%2F95973b6c4216b275907f27dea332%2Fap26289768195932.jpg",
+        "credit": "NPR",
+        "link": "https://www.npr.org/2026/10/20/g-s1-148975/nigeria-confirms-an-ebola-case",
+        "zh": {
+          "alt": "尼日利亚首都确认埃博拉病例，机场和医院得先把链条截住",
+          "caption": "尼日利亚首都确认埃博拉病例，机场和医院得先把链条截住"
+        },
+        "en": {
+          "alt": "An Ebola case in Nigeria’s capital makes speed the whole game",
+          "caption": "An Ebola case in Nigeria’s capital makes speed the whole game"
+        }
+      },
+      "termGuides": [
+        {
+          "key": "Ebola",
+          "aliases": [
+            "埃博拉",
+            "Ebola"
+          ],
+          "zh": {
+            "label": "埃博拉",
+            "meaning": "可引发严重出血热的病毒性疾病。",
+            "relation": "阿布贾确认的病例需要快速隔离和接触者追踪。"
+          },
+          "en": {
+            "label": "Ebola",
+            "meaning": "A viral disease that can cause severe hemorrhagic fever.",
+            "relation": "The confirmed Abuja case requires rapid isolation and contact tracing."
+          }
+        },
+        {
+          "key": "contact tracing",
+          "aliases": [
+            "接触者追踪",
+            "contact tracing"
+          ],
+          "zh": {
+            "label": "接触者追踪",
+            "meaning": "找出患者发病期间接触过的人并跟踪健康状况。",
+            "relation": "它是阻断这起病例后续传播的核心手段。"
+          },
+          "en": {
+            "label": "Contact tracing",
+            "meaning": "Finding people exposed to a patient and monitoring their health.",
+            "relation": "It is central to stopping further spread from this case."
+          }
+        }
+      ]
+    },
+    {
+      "id": "china-ai-export-growth",
+      "cat": "中国经济",
+      "icon": "chart",
+      "title": "AI相关出口把中国增长推过预期，但不能只看总数",
+      "brief": "中国经济增速高于预期，AI热潮带动出口；居民消费和企业利润能否跟上，才决定体感。",
+      "take": "英国《卫报》报道，中国经济增长快于预期，AI热潮带动了出口。出口走强能托住制造业订单和就业，但宏观数字好看不一定等于每个家庭马上感觉宽裕：内需、房地产、就业质量和企业利润仍决定消费是否敢花钱。对全球市场而言，中国的AI硬件和相关产品出口继续增长，也会加剧供应链和贸易摩擦的讨论。",
+      "meta": "中国经济｜出口｜10月19日",
+      "facts": [
+        [
+          "经济表现",
+          "增长快于市场预期"
+        ],
+        [
+          "主要拉动",
+          "AI热潮带动出口"
+        ],
+        [
+          "外溢领域",
+          "AI硬件与相关供应链"
+        ]
+      ],
+      "visual": null,
+      "impacts": [
+        [
+          "家庭体感",
+          "出口增长不自动转化为收入和消费信心"
+        ],
+        [
+          "全球贸易",
+          "更多AI相关出口可能带来供应链机会和贸易摩擦"
+        ]
+      ],
+      "next": [
+        "内需与就业数据是否同步改善",
+        "贸易伙伴是否推出新的限制措施"
+      ],
+      "source": "The Guardian",
+      "updated": "2026-10-19",
+      "en": {
+        "cat": "China economy",
+        "title": "AI-linked exports beat expectations for China, but the headline is not the whole household story",
+        "brief": "China grew faster than forecast as the AI boom lifted exports; jobs, incomes, and consumer confidence will decide whether people feel it.",
+        "take": "The Guardian reports that China’s economy grew faster than forecast, with the AI boom boosting exports. Strong exports can support factory orders and employment, but a better top-line number does not automatically make households feel more comfortable. Domestic demand, housing, job quality, and company profits still shape whether consumers spend. Globally, growing exports of AI hardware and related products also sharpen debates over supply chains and trade friction.",
+        "meta": "China economy | Exports | Oct. 19",
+        "facts": [
+          [
+            "Economic result",
+            "Growth beat market forecasts"
+          ],
+          [
+            "Main support",
+            "The AI boom lifted exports"
+          ],
+          [
+            "Spillover area",
+            "AI hardware and related supply chains"
+          ]
+        ],
+        "visual": null,
+        "impacts": [
+          [
+            "Household experience",
+            "Export growth does not automatically become higher incomes or confidence"
+          ],
+          [
+            "Global trade",
+            "More AI-related exports can bring supply-chain opportunities and trade friction"
+          ]
+        ],
+        "next": [
+          "Whether domestic demand and employment improve too",
+          "Whether trading partners impose new restrictions"
+        ],
+        "source": "The Guardian",
+        "updated": "2026-10-19"
+      },
+      "sourceLinks": [
+        {
+          "title": "China’s economy grows faster than forecast after AI boom boosts exports",
+          "url": "https://www.theguardian.com/world/2026/oct/19/china-economy-grows-faster-than-forecast-after-ai-boom-boosted-exports",
+          "publisher": "The Guardian"
+        }
+      ],
+      "eventImage": {
+        "url": "https://i.guim.co.uk/img/media/892bb878342a5fcbb68c7a85fb2b553e42c94669/495_0_4953_3962/master/4953.jpg?width=1200&height=630&quality=85&auto=format&fit=crop&precrop=40:21,offset-x50,offset-y0&overlay-align=bottom%2Cleft&overlay-width=100p&overlay-base64=L2ltZy9zdGF0aWMvb3ZlcmxheXMvdGctZGVmYXVsdC5wbmc&enable=upscale&s=4bd93bdedc7ef2dd117591adb07e0cab",
+        "credit": "The Guardian",
+        "link": "https://www.theguardian.com/world/2026/oct/19/china-economy-grows-faster-than-forecast-after-ai-boom-boosted-exports",
+        "zh": {
+          "alt": "AI相关出口把中国增长推过预期，但不能只看总数",
+          "caption": "AI相关出口把中国增长推过预期，但不能只看总数"
+        },
+        "en": {
+          "alt": "AI-linked exports beat expectations for China, but the headline is not the whole household story",
+          "caption": "AI-linked exports beat expectations for China, but the headline is not the whole household story"
+        }
+      },
+      "termGuides": [
+        {
+          "key": "AI hardware",
+          "aliases": [
+            "AI硬件",
+            "AI hardware"
+          ],
+          "zh": {
+            "label": "AI硬件",
+            "meaning": "运行或制造人工智能所需的芯片、服务器和相关设备。",
+            "relation": "这类产品的出口增长是本轮经济表现的一个推动因素。"
+          },
+          "en": {
+            "label": "AI hardware",
+            "meaning": "Chips, servers, and related equipment used to run or build AI.",
+            "relation": "Exports of these products are part of what supported this economic performance."
+          }
+        }
+      ]
+    },
+    {
+      "id": "canada-tariffs-lawsuit",
+      "cat": "全球经济",
+      "icon": "chart",
+      "title": "特朗普对加拿大关税又被起诉，跨境生意先得面对不确定账单",
+      "brief": "美国对加拿大关税遭法律挑战，企业最怕的不是一时税率高，而是报价和供应链规则反复变。",
+      "take": "美国总统特朗普因对加拿大征收关税面临最新一宗诉讼。案件结果尚未可知，但它提醒跨境企业：关税不只是政府间口水战，它会进入零件、食品、汽车和零售商品的成本表。只要政策和诉讼悬着，进口商很难定长期合同，消费者也可能在价格里为这种不确定性买单。",
+      "meta": "全球经济｜美加贸易｜10月20日",
+      "facts": [
+        [
+          "被诉对象",
+          "特朗普政府的加拿大关税"
+        ],
+        [
+          "案件性质",
+          "最新法律挑战"
+        ],
+        [
+          "涉及关系",
+          "美国与加拿大跨境贸易"
+        ]
+      ],
+      "visual": null,
+      "impacts": [
+        [
+          "企业经营",
+          "进口商更难锁定长期价格和供货合同"
+        ],
+        [
+          "消费者价格",
+          "关税和合规成本可能传到商品售价"
+        ]
+      ],
+      "next": [
+        "法院是否暂停或推翻关税",
+        "加拿大是否采取进一步回应"
+      ],
+      "source": "BBC News",
+      "updated": "2026-10-20",
+      "en": {
+        "cat": "Global economy",
+        "title": "Trump’s Canada tariffs face another lawsuit, leaving cross-border businesses with an uncertain bill",
+        "brief": "A legal challenge to U.S. tariffs on Canada matters because unstable trade rules make pricing and supply planning harder.",
+        "take": "President Trump faces a new lawsuit over tariffs on Canada. The outcome is uncertain, but the case is a reminder that tariffs are not just government sparring: they enter the cost sheets for parts, food, cars, and retail goods. While policy and litigation remain unresolved, importers struggle to set long-term contracts, and consumers can end up paying for that uncertainty through prices.",
+        "meta": "Global economy | U.S.-Canada trade | Oct. 20",
+        "facts": [
+          [
+            "Target of lawsuit",
+            "Trump administration tariffs on Canada"
+          ],
+          [
+            "Case type",
+            "A new legal challenge"
+          ],
+          [
+            "Trade relationship",
+            "Cross-border commerce between the U.S. and Canada"
+          ]
+        ],
+        "visual": null,
+        "impacts": [
+          [
+            "Business operations",
+            "Importers have a harder time locking in long-term prices and supply contracts"
+          ],
+          [
+            "Consumer prices",
+            "Tariffs and compliance costs can flow into retail prices"
+          ]
+        ],
+        "next": [
+          "Whether a court pauses or overturns the tariffs",
+          "Whether Canada takes further action"
+        ],
+        "source": "BBC News",
+        "updated": "2026-10-20"
+      },
+      "sourceLinks": [
+        {
+          "title": "Trump sued over Canadian tariffs in latest legal challenge",
+          "url": "https://www.bbc.co.uk/news/articles/cqrkyj13m588o?at_medium=RSS&at_campaign=rss",
+          "publisher": "BBC News"
+        }
+      ],
+      "eventImage": {
+        "url": "https://ichef.bbci.co.uk/ace/branded_news/1200/cpsprodpb/18fe/live/5bca92c0-ccb7-11f1-a64c-550be9e3c66b.jpg",
+        "credit": "BBC News",
+        "link": "https://www.bbc.co.uk/news/articles/cqrkyj13m588o?at_medium=RSS&at_campaign=rss",
+        "zh": {
+          "alt": "特朗普对加拿大关税又被起诉，跨境生意先得面对不确定账单",
+          "caption": "特朗普对加拿大关税又被起诉，跨境生意先得面对不确定账单"
+        },
+        "en": {
+          "alt": "Trump’s Canada tariffs face another lawsuit, leaving cross-border businesses with an uncertain bill",
+          "caption": "Trump’s Canada tariffs face another lawsuit, leaving cross-border businesses with an uncertain bill"
+        }
+      },
+      "termGuides": [
+        {
+          "key": "tariff",
+          "aliases": [
+            "关税",
+            "tariff",
+            "tariffs"
+          ],
+          "zh": {
+            "label": "关税",
+            "meaning": "进口商品过境时征收的税。",
+            "relation": "美国对加拿大商品的关税正面临法律挑战，成本可能落在供应链和消费者身上。"
+          },
+          "en": {
+            "label": "Tariff",
+            "meaning": "A tax charged on imported goods.",
+            "relation": "The U.S. tariffs on Canadian goods are being challenged, with costs potentially reaching supply chains and consumers."
+          }
+        }
+      ]
+    }
+  ]
+}
