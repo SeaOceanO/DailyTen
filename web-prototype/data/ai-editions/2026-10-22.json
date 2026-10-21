@@ -1,0 +1,1535 @@
+{
+  "dateKey": "2026-10-22",
+  "generatedAt": "2026-10-22T05:00:00+08:00",
+  "title": "DailyTen｜AI产业十件事",
+  "subtitle": "模型开始换入口，Agent开始碰钱和机器；真正难题从“会不会答”变成“能不能放心交给它”。",
+  "briefLabel": "今日要点",
+  "doneLabel": "读完了",
+  "readTimeMinutes": 8,
+  "items": [
+    {
+      "id": "ai-anthropic-claude-duet",
+      "cat": "AI",
+      "icon": "ai",
+      "title": "Claude Duet 想做你的个人 Agent：方便之前，先得交出多少权限",
+      "brief": "Anthropic 预览的 Claude Duet 想替人处理日常任务，真正的门槛是它能否安全接触你的账号、文件和支付信息。",
+      "take": "Anthropic 预览了 Claude Duet，这是一款面向个人任务的 AI Agent，瞄准的是不只聊天、而是代替用户跨应用办事的产品位置。Agent 要真正省时间，往往得读取邮件、日历、文件，甚至代表用户下单；也正因如此，权限、误操作和责任归属会比回答是否聪明更早影响人们敢不敢用。它将与 Muse、Dots 等个人 Agent 产品争夺入口，但公开范围、收费方式和实际可完成的任务仍待观察。",
+      "meta": "AI产品｜10月21日",
+      "facts": [
+        [
+          "产品",
+          "Anthropic 预览 Claude Duet"
+        ],
+        [
+          "定位",
+          "面向个人日常任务的 AI Agent"
+        ],
+        [
+          "竞争",
+          "瞄准 Muse、Dots 等同类产品"
+        ]
+      ],
+      "visual": {
+        "type": "orbit",
+        "label": "个人 Agent 的信任门槛",
+        "nodes": [
+          "读取信息",
+          "执行任务",
+          "发生误操作",
+          "谁来负责"
+        ]
+      },
+      "impacts": [
+        [
+          "普通用户",
+          "省事的前提，是愿意把更多数字生活权限交给 AI。"
+        ],
+        [
+          "产品选择",
+          "未来比拼不只是模型能力，还包括权限管理和撤销机制。"
+        ]
+      ],
+      "next": [
+        "Duet 何时开放测试，以及可连接哪些应用",
+        "Anthropic 会怎样设置支付、删除和高风险操作的确认步骤"
+      ],
+      "source": "CNBC",
+      "updated": "2026-10-21",
+      "en": {
+        "cat": "AI",
+        "title": "Claude Duet wants to be a personal Agent. The first question is how much access it gets.",
+        "brief": "Anthropic's Claude Duet is meant to handle personal tasks, but people will judge it on whether it can safely access accounts, files, and payments.",
+        "take": "Anthropic previewed Claude Duet, a personal AI Agent aimed at doing more than chatting and taking actions across apps. To save real time, an Agent may need access to email, calendars, files, or even purchases. That makes permissions, mistakes, and accountability more immediate concerns than a clever answer. It will compete with products such as Muse and Dots, while its rollout, pricing, and real task coverage remain unclear.",
+        "meta": "AI product｜Oct. 21",
+        "facts": [
+          [
+            "Product",
+            "Anthropic previewed Claude Duet"
+          ],
+          [
+            "Role",
+            "A personal-task AI Agent"
+          ],
+          [
+            "Competition",
+            "It targets products such as Muse and Dots"
+          ]
+        ],
+        "visual": {
+          "type": "orbit",
+          "label": "The trust problem for personal Agents",
+          "nodes": [
+            "Read information",
+            "Take actions",
+            "Make a mistake",
+            "Who is responsible?"
+          ]
+        },
+        "impacts": [
+          [
+            "For users",
+            "Convenience requires giving an AI more access to digital life."
+          ],
+          [
+            "For products",
+            "Permission controls and undo options may matter as much as model quality."
+          ]
+        ],
+        "next": [
+          "When Duet enters testing and which apps it can connect to",
+          "How Anthropic handles confirmation for payments, deletion, and other risky actions"
+        ],
+        "source": "CNBC",
+        "updated": "2026-10-21"
+      },
+      "sourceLinks": [
+        {
+          "title": "Anthropic preview of Claude Duet, personal AI agent take on Muse, Dots",
+          "url": "https://www.cnbc.com/2026/10/21/anthropic-preview-of-claude-duet-personal-ai-agent-take-on-muse-dots.html",
+          "publisher": "CNBC"
+        }
+      ],
+      "eventImage": {
+        "url": "https://image.cnbcfm.com/api/v1/image/108338734-1784745509530-gettyimages-2280291449-ANTHROPIC_CIRCUIT.jpeg?v=1787672726&w=1920&h=1080",
+        "credit": "CNBC",
+        "link": "https://www.cnbc.com/2026/10/21/anthropic-preview-of-claude-duet-personal-ai-agent-take-on-muse-dots.html",
+        "zh": {
+          "alt": "Claude Duet 想做你的个人 Agent：方便之前，先得交出多少权限",
+          "caption": "Claude Duet 想做你的个人 Agent：方便之前，先得交出多少权限"
+        },
+        "en": {
+          "alt": "Claude Duet wants to be a personal Agent. The first question is how much access it gets.",
+          "caption": "Claude Duet wants to be a personal Agent. The first question is how much access it gets."
+        }
+      },
+      "termGuides": [
+        {
+          "key": "Claude Duet",
+          "aliases": [
+            "Claude Duet",
+            "Duet"
+          ],
+          "zh": {
+            "label": "Claude Duet",
+            "meaning": "Anthropic 预览的个人 AI Agent 产品。",
+            "relation": "这次产品瞄准替用户完成日常任务，而不只是回答问题。"
+          },
+          "en": {
+            "label": "Claude Duet",
+            "meaning": "Anthropic's previewed personal AI Agent product.",
+            "relation": "In this story, it is positioned to carry out everyday tasks rather than just answer prompts."
+          }
+        },
+        {
+          "key": "Agent",
+          "aliases": [
+            "Agent",
+            "AI Agent",
+            "智能体"
+          ],
+          "zh": {
+            "label": "AI Agent",
+            "meaning": "能读取信息并调用工具完成多步任务的 AI。",
+            "relation": "Duet 若要替人办事，就需要获得跨应用的操作权限。"
+          },
+          "en": {
+            "label": "AI Agent",
+            "meaning": "AI that can use tools and complete multi-step tasks.",
+            "relation": "Duet would need cross-app permissions to act on a user's behalf."
+          }
+        }
+      ]
+    },
+    {
+      "id": "ai-openai-google-cloud",
+      "cat": "AI",
+      "icon": "chart",
+      "title": "OpenAI 把模型卖到 Google Cloud：不再只走微软这一扇门",
+      "brief": "企业以后可在 Google Cloud 采购 OpenAI 模型，OpenAI 对微软云的依赖又少了一层。",
+      "take": "OpenAI 将把其模型带到 Google Cloud，并扩展至 Antigravity 等渠道。对企业客户而言，这可能让他们在既有的 Google Cloud 采购、数据管理和部署流程中使用 OpenAI 模型，不必为接入另建一套云架构。更大的变化在于 OpenAI 正继续分散基础设施和销售渠道：模型公司、云平台与芯片供应商之间原本清晰的站位，正变成彼此合作也彼此竞争。具体可用模型、地区与价格仍要看正式上线安排。",
+      "meta": "AI基础设施｜10月21日",
+      "facts": [
+        [
+          "合作",
+          "OpenAI 模型将进入 Google Cloud"
+        ],
+        [
+          "渠道",
+          "报道提及 Antigravity"
+        ],
+        [
+          "背景",
+          "OpenAI 此前与 Microsoft 云关系紧密"
+        ]
+      ],
+      "visual": {
+        "type": "orbit",
+        "label": "模型服务换更多入口",
+        "nodes": [
+          "OpenAI 模型",
+          "Google Cloud",
+          "企业采购",
+          "微软不再独占"
+        ]
+      },
+      "impacts": [
+        [
+          "企业用户",
+          "已用 Google Cloud 的公司接入 OpenAI 可能少一道迁移工序。"
+        ],
+        [
+          "行业格局",
+          "头部模型商正避免被单一云平台卡住销售与算力。"
+        ]
+      ],
+      "next": [
+        "首批上线的模型、地区和企业定价",
+        "这项安排会否改变 Microsoft Azure 上的产品条件"
+      ],
+      "source": "CNBC、Ars Technica",
+      "updated": "2026-10-21",
+      "en": {
+        "cat": "AI",
+        "title": "OpenAI is selling through Google Cloud, not just Microsoft’s door anymore",
+        "brief": "Companies will be able to buy OpenAI models through Google Cloud, reducing OpenAI's reliance on a single cloud route.",
+        "take": "OpenAI is bringing its models to Google Cloud and expanding to channels including Antigravity. For companies, that could mean using OpenAI models within existing Google Cloud purchasing, data-management, and deployment workflows instead of building a separate setup. The larger shift is that OpenAI is spreading both infrastructure and distribution. Model makers, cloud platforms, and chip suppliers increasingly cooperate and compete at the same time. Which models, regions, and prices are included remains to be seen.",
+        "meta": "AI infrastructure｜Oct. 21",
+        "facts": [
+          [
+            "Deal",
+            "OpenAI models are coming to Google Cloud"
+          ],
+          [
+            "Channels",
+            "Reports also mention Antigravity"
+          ],
+          [
+            "Context",
+            "OpenAI has had close cloud ties with Microsoft"
+          ]
+        ],
+        "visual": {
+          "type": "orbit",
+          "label": "More routes for model access",
+          "nodes": [
+            "OpenAI models",
+            "Google Cloud",
+            "Enterprise buying",
+            "Microsoft no longer sole route"
+          ]
+        },
+        "impacts": [
+          [
+            "For companies",
+            "Google Cloud customers may face less setup work to use OpenAI models."
+          ],
+          [
+            "For the market",
+            "Leading model firms are trying not to depend on one cloud provider for sales or compute."
+          ]
+        ],
+        "next": [
+          "Which models, regions, and prices arrive first",
+          "Whether the deal changes product terms on Microsoft Azure"
+        ],
+        "source": "CNBC and Ars Technica",
+        "updated": "2026-10-21"
+      },
+      "sourceLinks": [
+        {
+          "title": "OpenAI bring its AI models to Google cloud, expands beyond Microsoft",
+          "url": "https://www.cnbc.com/2026/10/21/openai-bring-its-ai-models-to-googles-cloud-expands-beyond-microsoft.html",
+          "publisher": "CNBC"
+        },
+        {
+          "title": "OpenAI's latest AI models are coming to Google Cloud and Antigravity",
+          "url": "https://arstechnica.com/ai/2026/10/openais-latest-ai-models-are-coming-to-google-cloud-and-antigravity/",
+          "publisher": "Ars Technica"
+        }
+      ],
+      "eventImage": {
+        "url": "https://image.cnbcfm.com/api/v1/image/108369650-17907047662026-09-29t175655z_1984658352_rc25tna4oh81_rtrmadp_0_ai-openai.jpeg?v=1792537167&w=1920&h=1080",
+        "credit": "CNBC",
+        "link": "https://www.cnbc.com/2026/10/21/openai-bring-its-ai-models-to-googles-cloud-expands-beyond-microsoft.html",
+        "zh": {
+          "alt": "OpenAI 把模型卖到 Google Cloud：不再只走微软这一扇门",
+          "caption": "OpenAI 把模型卖到 Google Cloud：不再只走微软这一扇门"
+        },
+        "en": {
+          "alt": "OpenAI is selling through Google Cloud, not just Microsoft’s door anymore",
+          "caption": "OpenAI is selling through Google Cloud, not just Microsoft’s door anymore"
+        }
+      },
+      "termGuides": [
+        {
+          "key": "Google Cloud",
+          "aliases": [
+            "Google Cloud",
+            "谷歌云"
+          ],
+          "zh": {
+            "label": "Google Cloud",
+            "meaning": "Google 面向企业提供计算、存储和 AI 服务的云平台。",
+            "relation": "OpenAI 将通过这个平台向企业提供模型。"
+          },
+          "en": {
+            "label": "Google Cloud",
+            "meaning": "Google's cloud-computing platform for businesses.",
+            "relation": "OpenAI will offer models to enterprise customers through it."
+          }
+        },
+        {
+          "key": "Antigravity",
+          "aliases": [
+            "Antigravity"
+          ],
+          "zh": {
+            "label": "Antigravity",
+            "meaning": "报道提及的 OpenAI 模型接入渠道。",
+            "relation": "它和 Google Cloud 一起构成 OpenAI 扩大分发的安排。"
+          },
+          "en": {
+            "label": "Antigravity",
+            "meaning": "A model-access channel named in the reports.",
+            "relation": "It is part of OpenAI's broader distribution expansion alongside Google Cloud."
+          }
+        }
+      ]
+    },
+    {
+      "id": "ai-deepseek-inference-tool",
+      "cat": "AI",
+      "icon": "code",
+      "title": "DeepSeek 开源推理工具：模型便宜之外，运行成本也要再打一仗",
+      "brief": "DeepSeek 把推理工具开源，开发者可能更容易把模型跑在自己的硬件上，少受单一平台价格牵制。",
+      "take": "DeepSeek 发布开源推理工具，把竞争从“谁的模型更会答题”拉到“谁能把模型更便宜、更快地跑起来”。推理是模型上线后每次回答、生成或执行任务所消耗的计算过程，长期成本往往比一次训练更贴近企业账单。开源工具不等于人人都能零成本部署：仍需要芯片、工程团队和安全运维。但它给希望自建服务的开发者多了一条路，也会给闭源模型与托管平台的定价增加压力。",
+      "meta": "开源与推理｜10月20日",
+      "facts": [
+        [
+          "发布方",
+          "DeepSeek"
+        ],
+        [
+          "内容",
+          "开源推理工具"
+        ],
+        [
+          "用途",
+          "帮助模型在部署时运行"
+        ]
+      ],
+      "visual": {
+        "type": "orbit",
+        "label": "推理成本如何传导",
+        "nodes": [
+          "开源工具",
+          "自建部署",
+          "成本选择增加",
+          "平台价格承压"
+        ]
+      },
+      "impacts": [
+        [
+          "开发者",
+          "有条件自建的团队可多一种部署与调优选择。"
+        ],
+        [
+          "普通用户",
+          "如果服务商成本下降，AI 功能的价格和限额可能更有竞争。"
+        ]
+      ],
+      "next": [
+        "工具支持哪些模型、芯片和许可证",
+        "实际吞吐量与运维成本能否优于现有方案"
+      ],
+      "source": "Gizmodo",
+      "updated": "2026-10-20",
+      "en": {
+        "cat": "AI",
+        "title": "DeepSeek open-sources an inference tool: the next fight is the cost of running AI",
+        "brief": "DeepSeek's open-source inference tool could make it easier to run models on your own hardware and reduce dependence on one platform's pricing.",
+        "take": "DeepSeek released an open-source inference tool, shifting part of the contest from which model answers best to who can run a model faster and more cheaply. Inference is the compute used every time a deployed model responds, generates, or takes an action; over time, it can dominate an AI service bill. Open source does not make deployment free: teams still need chips, engineering, and secure operations. But it gives capable developers another route and could put pricing pressure on closed-model and hosted platforms.",
+        "meta": "Open source and inference｜Oct. 20",
+        "facts": [
+          [
+            "Publisher",
+            "DeepSeek"
+          ],
+          [
+            "Release",
+            "An open-source inference tool"
+          ],
+          [
+            "Use",
+            "Runs models after deployment"
+          ]
+        ],
+        "visual": {
+          "type": "orbit",
+          "label": "How inference costs spread",
+          "nodes": [
+            "Open tool",
+            "Self-hosting",
+            "More cost choices",
+            "Pressure on pricing"
+          ]
+        },
+        "impacts": [
+          [
+            "For developers",
+            "Teams able to self-host gain another deployment and tuning option."
+          ],
+          [
+            "For users",
+            "Lower service costs could eventually mean better prices or fewer AI usage limits."
+          ]
+        ],
+        "next": [
+          "Which models, chips, and licenses the tool supports",
+          "Whether real throughput and operations costs beat existing options"
+        ],
+        "source": "Gizmodo",
+        "updated": "2026-10-20"
+      },
+      "sourceLinks": [
+        {
+          "title": "DeepSeek Dials Up the Pressure on OpenAI and Anthropic With Open-Source Inference Tool",
+          "url": "https://gizmodo.com/deepseek-dials-up-the-pressure-on-openai-and-anthropic-with-open-source-inference-tool-2000828261",
+          "publisher": "Gizmodo"
+        }
+      ],
+      "eventImage": null,
+      "termGuides": [
+        {
+          "key": "DeepSeek",
+          "aliases": [
+            "DeepSeek",
+            "深度求索"
+          ],
+          "zh": {
+            "label": "DeepSeek",
+            "meaning": "开发 AI 模型和工具的中国公司。",
+            "relation": "它这次发布的是帮助部署阶段运行模型的开源工具。"
+          },
+          "en": {
+            "label": "DeepSeek",
+            "meaning": "A Chinese company that develops AI models and tools.",
+            "relation": "It released an open tool for running models in deployment."
+          }
+        },
+        {
+          "key": "Inference",
+          "aliases": [
+            "inference",
+            "推理"
+          ],
+          "zh": {
+            "label": "推理",
+            "meaning": "模型上线后每次接收请求并给出结果时的计算。",
+            "relation": "这是 DeepSeek 此次工具希望降低或优化的成本。"
+          },
+          "en": {
+            "label": "Inference",
+            "meaning": "The compute used when a deployed model handles a request and produces an output.",
+            "relation": "This is the cost and performance target of DeepSeek's new tool."
+          }
+        }
+      ]
+    },
+    {
+      "id": "ai-openai-humanoid-2027",
+      "cat": "机器人与具身智能",
+      "icon": "drone",
+      "title": "OpenAI 盯上人形机器人，2027 演示目标先别当成量产承诺",
+      "brief": "OpenAI 据报计划研发人形机器人，但离真正能进工厂或家庭，还有硬件可靠性和安全两道大关。",
+      "take": "多家报道援引 OpenAI 的计划称，公司将进入人形机器人研发，并瞄准 2027 年展示原型。若属实，这会让 OpenAI 从软件模型进一步走向“让 AI 在真实世界动手”的具身 AI 竞争。不过演示和量产之间差得很远：机器人要在杂乱环境中稳定识别、抓取、移动，还得做到不伤人、能维修、成本可接受。普通人最该盯住的不是一段炫技视频，而是它能否在重复、危险或缺人的工作里持续可靠地完成一件事。",
+      "meta": "具身AI｜10月19日至21日",
+      "facts": [
+        [
+          "计划",
+          "OpenAI 据报研发人形机器人"
+        ],
+        [
+          "时间",
+          "目标为 2027 年演示"
+        ],
+        [
+          "难点",
+          "真实环境中的可靠性与安全"
+        ]
+      ],
+      "visual": {
+        "type": "orbit",
+        "label": "从模型到机器人，少不了四关",
+        "nodes": [
+          "AI 模型",
+          "机器人硬件",
+          "真实环境",
+          "安全可靠"
+        ]
+      },
+      "impacts": [
+        [
+          "工作场景",
+          "仓储、制造和服务业可能先成为测试机器人价值的地方。"
+        ],
+        [
+          "消费者",
+          "能走能说不等于能放心进家门，安全和售后会决定接受度。"
+        ]
+      ],
+      "next": [
+        "OpenAI 是否发布正式产品细节或合作方",
+        "原型将优先展示通用能力还是某个具体工作任务"
+      ],
+      "source": "Euronews、Infobae 等多家报道",
+      "updated": "2026-10-21",
+      "en": {
+        "cat": "Robotics and embodied AI",
+        "title": "OpenAI is eyeing humanoids, but a 2027 demo is not a mass-production promise",
+        "brief": "OpenAI is reportedly developing a humanoid robot, but reliable and safe work in the real world remains a much harder test.",
+        "take": "Multiple reports say OpenAI plans to develop a humanoid robot and is targeting a prototype demonstration in 2027. If confirmed, it would move OpenAI from software models toward embodied AI: making AI act in the physical world. But a demo is a long way from production. A useful robot must recognize, grasp, and move reliably in messy places, while staying safe, repairable, and affordable. The meaningful test is not a flashy video; it is whether the machine can repeatedly do one useful job in dangerous, dull, or understaffed settings.",
+        "meta": "Embodied AI｜Oct. 19–21",
+        "facts": [
+          [
+            "Plan",
+            "OpenAI is reportedly developing a humanoid"
+          ],
+          [
+            "Timing",
+            "A 2027 demonstration is the target"
+          ],
+          [
+            "Challenge",
+            "Reliability and safety in real environments"
+          ]
+        ],
+        "visual": {
+          "type": "orbit",
+          "label": "Four steps from model to robot",
+          "nodes": [
+            "AI model",
+            "Robot hardware",
+            "Real environment",
+            "Safe reliability"
+          ]
+        },
+        "impacts": [
+          [
+            "For work",
+            "Warehouses, manufacturing, and service jobs may be early tests of value."
+          ],
+          [
+            "For consumers",
+            "Walking and talking are not enough; safety and service support decide home adoption."
+          ]
+        ],
+        "next": [
+          "Whether OpenAI gives formal details or names partners",
+          "Whether the prototype shows general capability or one specific job"
+        ],
+        "source": "Euronews, Infobae, and other reports",
+        "updated": "2026-10-21"
+      },
+      "sourceLinks": [
+        {
+          "title": "OpenAI enters humanoid robot race as Altman teases demo for 2027",
+          "url": "https://bdnews24.com/technology/jejshz6eu5",
+          "publisher": "bdnews24.com"
+        },
+        {
+          "title": "Sam Altman confirmó un robot humanoide: creado por OpenAI y con ChatGPT",
+          "url": "https://www.infobae.com/tecno/2026/10/19/sam-altman-confirmo-un-robot-humanoide-creado-por-openai-y-con-chatgpt/",
+          "publisher": "Infobae"
+        }
+      ],
+      "eventImage": {
+        "url": "https://media.assettype.com/bdnews24-english/2026-10-20/vxkrgxv9/openai-201026.jpg?w=1200&ar=40%3A21&auto=format%2Ccompress&ogImage=true&mode=crop&enlarge=true&overlay=https%3A%2F%2Fmedia.assettype.com%2Fbdnews24-english%2F2026-08-19%2Fv2z58b9u%2Fbdnews24_default_social_strip.jpg&overlay_position=bottom&overlay_width=100",
+        "credit": "bdnews24.com",
+        "link": "https://bdnews24.com/technology/jejshz6eu5",
+        "zh": {
+          "alt": "OpenAI 盯上人形机器人，2027 演示目标先别当成量产承诺",
+          "caption": "OpenAI 盯上人形机器人，2027 演示目标先别当成量产承诺"
+        },
+        "en": {
+          "alt": "OpenAI is eyeing humanoids, but a 2027 demo is not a mass-production promise",
+          "caption": "OpenAI is eyeing humanoids, but a 2027 demo is not a mass-production promise"
+        }
+      },
+      "termGuides": [
+        {
+          "key": "Embodied AI",
+          "aliases": [
+            "具身AI",
+            "embodied AI"
+          ],
+          "zh": {
+            "label": "具身 AI",
+            "meaning": "让 AI 通过机器人、传感器和机械结构在现实中感知、移动和操作。",
+            "relation": "OpenAI 的人形机器人计划正是把模型能力带到实体机器上的尝试。"
+          },
+          "en": {
+            "label": "Embodied AI",
+            "meaning": "AI that senses and acts in the physical world through robots and hardware.",
+            "relation": "OpenAI's reported humanoid effort would bring model capability into a physical machine."
+          }
+        },
+        {
+          "key": "Humanoid robot",
+          "aliases": [
+            "人形机器人",
+            "humanoid robot"
+          ],
+          "zh": {
+            "label": "人形机器人",
+            "meaning": "外形和动作设计接近人的通用机器人。",
+            "relation": "OpenAI 据报计划研发的就是这类机器人。"
+          },
+          "en": {
+            "label": "Humanoid robot",
+            "meaning": "A general-purpose robot built around a human-like body and movement.",
+            "relation": "This is the kind of robot OpenAI is reportedly pursuing."
+          }
+        }
+      ]
+    },
+    {
+      "id": "ai-agent-guardrail-flaw",
+      "cat": "AI",
+      "icon": "alert",
+      "title": "三款 Agent 平台被曝可绕过护栏：会说“不”不等于不会乱做",
+      "brief": "研究发现三大 Agent 平台的防护可能被绕过，企业若让 AI 接触系统和资金，不能只信聊天界面的拒答。",
+      "take": "一项针对三款主要 AI Agent 平台的安全问题报告指出，现有护栏可能被绕过。风险不在于模型说错一句话，而在于 Agent 连接浏览器、内部数据库、代码工具或付款流程后，错误指令可能变成真实操作。很多产品把“模型会拒绝危险请求”当作安全展示，但真正可用的防线还应包括最小权限、操作前确认、隔离环境和完整日志。报道没有在候选材料中给出受影响平台和修复细节，因此影响范围仍需等各方确认。",
+      "meta": "AI安全｜10月20日",
+      "facts": [
+        [
+          "发现",
+          "报告称三款主要 Agent 平台有缺陷"
+        ],
+        [
+          "风险",
+          "护栏可能被绕过"
+        ],
+        [
+          "关键",
+          "Agent 可连接外部工具并执行操作"
+        ]
+      ],
+      "visual": {
+        "type": "orbit",
+        "label": "护栏失效如何变成事故",
+        "nodes": [
+          "恶意指令",
+          "绕过护栏",
+          "调用工具",
+          "造成真实损失"
+        ]
+      },
+      "impacts": [
+        [
+          "企业",
+          "接入付款、代码或客户数据的 Agent 需要分级权限和审计。"
+        ],
+        [
+          "个人用户",
+          "不要把 AI 的礼貌拒答当成账户与文件的安全保证。"
+        ]
+      ],
+      "next": [
+        "平台方是否确认漏洞并发布补丁",
+        "研究者披露的攻击条件和受影响版本"
+      ],
+      "source": "Stacker / KESQ",
+      "updated": "2026-10-21",
+      "en": {
+        "cat": "AI",
+        "title": "Three Agent platforms reportedly have guardrail flaws: saying “no” is not the same as staying safe",
+        "brief": "A report says safeguards in three major Agent platforms can be bypassed, so companies cannot rely on a chat refusal when AI can touch systems or money.",
+        "take": "A report on flaws in three major AI Agent platforms says existing guardrails may be bypassed. The risk is not simply a bad answer. Once an Agent connects to a browser, internal data, coding tools, or payments, a harmful instruction can become a real action. Products often showcase a model refusing dangerous prompts, but practical defenses also need least-privilege access, confirmation before actions, isolated environments, and logs. The candidate material does not name the platforms or fixes, so the scope still needs confirmation.",
+        "meta": "AI safety｜Oct. 20",
+        "facts": [
+          [
+            "Finding",
+            "A report alleges flaws in three major Agent platforms"
+          ],
+          [
+            "Risk",
+            "Guardrails may be bypassed"
+          ],
+          [
+            "Key issue",
+            "Agents can connect to tools and take actions"
+          ]
+        ],
+        "visual": {
+          "type": "orbit",
+          "label": "How a guardrail failure becomes harm",
+          "nodes": [
+            "Malicious instruction",
+            "Bypass guardrails",
+            "Use a tool",
+            "Cause real loss"
+          ]
+        },
+        "impacts": [
+          [
+            "For companies",
+            "Agents touching payments, code, or customer data need tiered access and audit trails."
+          ],
+          [
+            "For users",
+            "A polite AI refusal is not proof that accounts and files are safe."
+          ]
+        ],
+        "next": [
+          "Whether platforms confirm the issue and issue patches",
+          "The attack conditions and affected versions disclosed by researchers"
+        ],
+        "source": "Stacker / KESQ",
+        "updated": "2026-10-21"
+      },
+      "sourceLinks": [
+        {
+          "title": "A flaw in three major AI agent platforms shows why guardrails don't work",
+          "url": "https://kesq.com/stacker-ai/2026/10/20/a-flaw-in-three-major-ai-agent-platforms-shows-why-guardrails-dont-work/",
+          "publisher": "KESQ / Stacker"
+        }
+      ],
+      "eventImage": {
+        "url": "https://kesq.com/wp-content/uploads/2026/10/Redpanda-A-flaw-in-three-major-AI-agent-platforms-shows-why-guardrails-dont-work.jpg",
+        "credit": "KESQ / Stacker",
+        "link": "https://kesq.com/stacker-ai/2026/10/20/a-flaw-in-three-major-ai-agent-platforms-shows-why-guardrails-dont-work/",
+        "zh": {
+          "alt": "三款 Agent 平台被曝可绕过护栏：会说“不”不等于不会乱做",
+          "caption": "三款 Agent 平台被曝可绕过护栏：会说“不”不等于不会乱做"
+        },
+        "en": {
+          "alt": "Three Agent platforms reportedly have guardrail flaws: saying “no” is not the same as staying safe",
+          "caption": "Three Agent platforms reportedly have guardrail flaws: saying “no” is not the same as staying safe"
+        }
+      },
+      "termGuides": [
+        {
+          "key": "Guardrails",
+          "aliases": [
+            "guardrails",
+            "护栏"
+          ],
+          "zh": {
+            "label": "护栏",
+            "meaning": "限制 AI 输出或操作危险内容与行为的规则和技术措施。",
+            "relation": "报告称这些限制在部分 Agent 平台上可能被绕过。"
+          },
+          "en": {
+            "label": "Guardrails",
+            "meaning": "Rules and technical controls meant to stop unsafe AI outputs or actions.",
+            "relation": "The report says these controls may be bypassed on some Agent platforms."
+          }
+        },
+        {
+          "key": "Least privilege",
+          "aliases": [
+            "最小权限",
+            "least privilege"
+          ],
+          "zh": {
+            "label": "最小权限",
+            "meaning": "只给系统完成当前任务所必需的最少访问权。",
+            "relation": "它能限制 Agent 即使被诱导后可造成的损害范围。"
+          },
+          "en": {
+            "label": "Least privilege",
+            "meaning": "Giving a system only the minimum access needed for its current task.",
+            "relation": "It limits the damage an Agent can cause if it is manipulated."
+          }
+        }
+      ]
+    },
+    {
+      "id": "ai-mcp-figma-critique",
+      "cat": "AI",
+      "icon": "code",
+      "title": "Figma 联创给 MCP 泼冷水：Agent 接工具的“万能插头”还不够稳",
+      "brief": "MCP 让 AI 更容易接入外部工具，但 Figma 联合创始人提醒：标准接口不等于权限和体验问题已经解决。",
+      "take": "Figma 联合创始人 Dylan Field 表示，MCP 并不是一个完美协议。MCP，即 Model Context Protocol，常被比作让 AI Agent 接上不同软件和数据源的通用插头；它的价值在于减少每个工具都单独开发连接器的麻烦。但一旦 Agent 能调用设计、文档、数据库或工作流，权限颗粒度、错误恢复和用户是否看得懂它在做什么，都会成为产品体验的一部分。这个批评不是否定 MCP，而是提醒行业：连得上只是第一步，能被人放心控制才是下一步。",
+      "meta": "协议与Agent｜10月20日",
+      "facts": [
+        [
+          "发言者",
+          "Figma 联合创始人 Dylan Field"
+        ],
+        [
+          "对象",
+          "MCP 协议"
+        ],
+        [
+          "观点",
+          "MCP 并不完美"
+        ]
+      ],
+      "visual": {
+        "type": "orbit",
+        "label": "工具连接后的新问题",
+        "nodes": [
+          "统一接口",
+          "Agent 调工具",
+          "权限与错误",
+          "用户能否掌控"
+        ]
+      },
+      "impacts": [
+        [
+          "办公用户",
+          "AI 能跨工具办事后，误改文件或误发内容的代价更高。"
+        ],
+        [
+          "开发者",
+          "接入 MCP 不能只做连通性，还要设计授权、预览与撤销。"
+        ]
+      ],
+      "next": [
+        "MCP 社区将如何补强授权与安全规范",
+        "主流办公和设计工具会否采用更细的操作确认"
+      ],
+      "source": "TechCrunch",
+      "updated": "2026-10-20",
+      "en": {
+        "cat": "AI",
+        "title": "Figma co-founder cools the MCP hype: an Agent’s universal plug is not stable enough yet",
+        "brief": "MCP makes it easier for AI to connect with outside tools, but a standard interface does not solve permissions or user-control problems.",
+        "take": "Figma co-founder Dylan Field said MCP is not a perfect protocol. Model Context Protocol, or MCP, is often described as a common plug that lets AI Agents connect to different software and data sources without custom connectors for every tool. But once an Agent can call design, document, database, or workflow tools, fine-grained permissions, error recovery, and clear user visibility become part of the product. This is not a rejection of MCP; it is a reminder that connecting systems is only step one. People must still be able to control what happens.",
+        "meta": "Protocols and Agents｜Oct. 20",
+        "facts": [
+          [
+            "Speaker",
+            "Figma co-founder Dylan Field"
+          ],
+          [
+            "Subject",
+            "The MCP protocol"
+          ],
+          [
+            "View",
+            "MCP is not perfect"
+          ]
+        ],
+        "visual": {
+          "type": "orbit",
+          "label": "The problems after connection",
+          "nodes": [
+            "Common interface",
+            "Agent uses tools",
+            "Permissions and errors",
+            "Can users stay in control?"
+          ]
+        },
+        "impacts": [
+          [
+            "For office users",
+            "When AI works across tools, accidental edits or messages become more costly."
+          ],
+          [
+            "For developers",
+            "MCP integration needs authorization, previews, and undo—not just connectivity."
+          ]
+        ],
+        "next": [
+          "How the MCP community improves authorization and security guidance",
+          "Whether major work and design tools require more action confirmations"
+        ],
+        "source": "TechCrunch",
+        "updated": "2026-10-20"
+      },
+      "sourceLinks": [
+        {
+          "title": "Figma co-founder Dylan Field thinks MCP is not a perfect protocol",
+          "url": "https://techcrunch.com/2026/10/20/figma-co-founder-dylan-field-thinks-mcp-is-not-a-perfect-protocol/",
+          "publisher": "TechCrunch"
+        }
+      ],
+      "eventImage": {
+        "url": "https://techcrunch.com/wp-content/uploads/2023/05/GettyImages-1233645802.jpg?resize=1200,800",
+        "credit": "TechCrunch",
+        "link": "https://techcrunch.com/2026/10/20/figma-co-founder-dylan-field-thinks-mcp-is-not-a-perfect-protocol/",
+        "zh": {
+          "alt": "Figma 联创给 MCP 泼冷水：Agent 接工具的“万能插头”还不够稳",
+          "caption": "Figma 联创给 MCP 泼冷水：Agent 接工具的“万能插头”还不够稳"
+        },
+        "en": {
+          "alt": "Figma co-founder cools the MCP hype: an Agent’s universal plug is not stable enough yet",
+          "caption": "Figma co-founder cools the MCP hype: an Agent’s universal plug is not stable enough yet"
+        }
+      },
+      "termGuides": [
+        {
+          "key": "MCP",
+          "aliases": [
+            "MCP",
+            "Model Context Protocol",
+            "模型上下文协议"
+          ],
+          "zh": {
+            "label": "MCP",
+            "meaning": "让 AI 模型或 Agent 用较统一方式连接外部工具和数据的协议。",
+            "relation": "Field 质疑的正是这种连接方式在实际产品中的不足。"
+          },
+          "en": {
+            "label": "MCP",
+            "meaning": "A protocol for connecting AI models or Agents to outside tools and data in a more standard way.",
+            "relation": "It is the connection approach Field says still has practical shortcomings."
+          }
+        },
+        {
+          "key": "Figma",
+          "aliases": [
+            "Figma"
+          ],
+          "zh": {
+            "label": "Figma",
+            "meaning": "多人协作设计软件公司。",
+            "relation": "其联合创始人从软件产品使用角度评价 MCP 的局限。"
+          },
+          "en": {
+            "label": "Figma",
+            "meaning": "A collaborative design-software company.",
+            "relation": "Its co-founder is assessing MCP from the perspective of real software products."
+          }
+        }
+      ]
+    },
+    {
+      "id": "ai-robot-trigger-word-security",
+      "cat": "机器人与具身智能",
+      "icon": "alert",
+      "title": "一句暗号可能让机器人伤人：具身 AI 的安全不能只靠“听话”",
+      "brief": "研究人员警告，隐藏触发词可能诱导 AI 机器人做危险动作；机器人一旦能动，提示注入就不再只是屏幕上的麻烦。",
+      "take": "研究人员发布了针对 AI 驱动机器人的安全研究，指出隐藏的触发词可能诱导系统执行危险动作，并提出相应防御方法。对聊天机器人而言，提示注入可能只是泄露信息或生成不当内容；但机器人的输出会经过机械臂、刀具或移动底盘变成物理动作，后果更难撤回。候选报道以“可能伤到手指”为例，提醒厂商不能只在语言模型层面做过滤，还需要传感器交叉检查、动作边界、紧急停止和现场测试。研究结论不等于所有商用机器人都存在同样漏洞，但它点出了规模部署前必须补的一课。",
+      "meta": "机器人安全｜10月20日至21日",
+      "facts": [
+        [
+          "研究",
+          "发现隐藏触发词可诱导危险行为"
+        ],
+        [
+          "对象",
+          "AI 驱动的机器人"
+        ],
+        [
+          "防御",
+          "研究团队提出了防护方法"
+        ]
+      ],
+      "visual": {
+        "type": "orbit",
+        "label": "文字攻击为何会变成物理风险",
+        "nodes": [
+          "隐藏触发词",
+          "模型被诱导",
+          "机器人动作",
+          "人员或设备受损"
+        ]
+      },
+      "impacts": [
+        [
+          "使用者",
+          "在人旁工作的机器人，急停和物理限位不是可选项。"
+        ],
+        [
+          "厂商",
+          "安全测试需要覆盖语言输入到机械动作的整条链路。"
+        ]
+      ],
+      "next": [
+        "防御方法能否被独立复现并进入产品",
+        "机器人厂商会否披露提示注入与动作安全测试"
+      ],
+      "source": "Newswise、Popular Science",
+      "updated": "2026-10-21",
+      "en": {
+        "cat": "Robotics and embodied AI",
+        "title": "A hidden phrase could make a robot hurt someone: embodied AI cannot rely on “obedience” alone",
+        "brief": "Researchers warn that secret trigger words can push AI robots toward dangerous actions; once a machine moves, prompt injection is no longer just a screen problem.",
+        "take": "Researchers released safety work showing that hidden trigger words may induce dangerous behavior in AI-powered robots, along with a proposed defense. With a chatbot, prompt injection may leak data or create bad text. With a robot, the output can become physical movement through an arm, a blade, or a mobile base, making mistakes harder to undo. Candidate reports use injuries to fingers as an example. The lesson is that filtering language at the model layer is not enough: systems need sensor checks, motion limits, emergency stops, and real-world testing. The finding does not prove every commercial robot has this flaw, but it highlights a gap that must close before broad deployment.",
+        "meta": "Robot safety｜Oct. 20–21",
+        "facts": [
+          [
+            "Research",
+            "Hidden triggers may induce dangerous actions"
+          ],
+          [
+            "Target",
+            "AI-powered robots"
+          ],
+          [
+            "Defense",
+            "The team proposed a protection method"
+          ]
+        ],
+        "visual": {
+          "type": "orbit",
+          "label": "How a text attack becomes physical risk",
+          "nodes": [
+            "Hidden trigger",
+            "Model is manipulated",
+            "Robot moves",
+            "People or equipment harmed"
+          ]
+        },
+        "impacts": [
+          [
+            "For users",
+            "Robots working near people need emergency stops and physical motion limits."
+          ],
+          [
+            "For makers",
+            "Safety tests must cover the full chain from language input to mechanical action."
+          ]
+        ],
+        "next": [
+          "Whether the defense can be independently reproduced and put into products",
+          "Whether robot makers disclose prompt-injection and motion-safety testing"
+        ],
+        "source": "Newswise and Popular Science",
+        "updated": "2026-10-21"
+      },
+      "sourceLinks": [
+        {
+          "title": "Secret trigger words could make AI-powered robots dangerous -- and these researchers developed a defense",
+          "url": "https://www.newswise.com/articles/secret-trigger-words-could-make-ai-powered-robots-dangerous-and-these-researchers-developed-a-defense",
+          "publisher": "Newswise"
+        },
+        {
+          "title": "AI-powered robots can be tricked into slicing off fingers",
+          "url": "https://www.popsci.com/technology/ai-powered-robot-slices-fingers/",
+          "publisher": "Popular Science"
+        }
+      ],
+      "eventImage": {
+        "url": "https://media.newswise.com/pio/articles/856973/6ad7a380b3bc9_20260921_robotics06_jwc_856973.jpg",
+        "credit": "Newswise",
+        "link": "https://www.newswise.com/articles/secret-trigger-words-could-make-ai-powered-robots-dangerous-and-these-researchers-developed-a-defense",
+        "zh": {
+          "alt": "一句暗号可能让机器人伤人：具身 AI 的安全不能只靠“听话”",
+          "caption": "一句暗号可能让机器人伤人：具身 AI 的安全不能只靠“听话”"
+        },
+        "en": {
+          "alt": "A hidden phrase could make a robot hurt someone: embodied AI cannot rely on “obedience” alone",
+          "caption": "A hidden phrase could make a robot hurt someone: embodied AI cannot rely on “obedience” alone"
+        }
+      },
+      "termGuides": [
+        {
+          "key": "Prompt injection",
+          "aliases": [
+            "提示注入",
+            "prompt injection",
+            "隐藏触发词"
+          ],
+          "zh": {
+            "label": "提示注入",
+            "meaning": "把恶意指令藏进文本或数据，诱导 AI 忽略原本规则的攻击方式。",
+            "relation": "研究称这类隐藏触发内容可能使机器人执行危险动作。"
+          },
+          "en": {
+            "label": "Prompt injection",
+            "meaning": "An attack that hides malicious instructions in text or data to make AI ignore intended rules.",
+            "relation": "The research says such hidden triggers can steer a robot toward unsafe actions."
+          }
+        },
+        {
+          "key": "Emergency stop",
+          "aliases": [
+            "急停",
+            "emergency stop"
+          ],
+          "zh": {
+            "label": "急停",
+            "meaning": "让机器立即停止运动的独立安全装置或机制。",
+            "relation": "当 AI 的动作判断出错时，它是最后一道物理防线。"
+          },
+          "en": {
+            "label": "Emergency stop",
+            "meaning": "An independent mechanism that immediately stops a machine's movement.",
+            "relation": "It is a final physical safeguard when an AI-driven action goes wrong."
+          }
+        }
+      ]
+    },
+    {
+      "id": "ai-unitree-h2x",
+      "cat": "机器人与具身智能",
+      "icon": "drone",
+      "title": "宇树展示 H2-X“保镖”人形机：八小时续航不等于能上岗八小时",
+      "brief": "宇树发布 H2-X 人形机器人并称续航八小时，但它能否安全、稳定地做安保工作，比武术动作更重要。",
+      "take": "宇树展示 H2-X 人形机器人，报道将其定位为“保镖”式机器，并提到约八小时续航和武术动作能力。长续航对移动机器人确实是实用指标：不必频繁充电，才有机会覆盖一整段班次。但安保并非表演任务，机器必须准确识别风险、避免误判、在人群中可靠移动，并且在它不确定时知道停下和叫人。现有信息主要来自产品展示，尚不足以证明它已适合真实安保部署。对这类人形机器人，演示中的力量与平衡是一回事，日常工作的安全与责任则是另一回事。",
+      "meta": "人形机器人｜10月21日",
+      "facts": [
+        [
+          "产品",
+          "宇树 H2-X 人形机器人"
+        ],
+        [
+          "卖点",
+          "报道提及约 8 小时续航"
+        ],
+        [
+          "定位",
+          "展示为“保镖”型机器人"
+        ]
+      ],
+      "visual": {
+        "type": "orbit",
+        "label": "安保机器人真正要过的关",
+        "nodes": [
+          "续航移动",
+          "识别环境",
+          "避免误判",
+          "人工接管"
+        ]
+      },
+      "impacts": [
+        [
+          "场所管理者",
+          "采购安保机器人前，要验证误报率、急停与人工接管流程。"
+        ],
+        [
+          "公众",
+          "在人群中部署机器，隐私、拍摄范围和责任人都需说清。"
+        ]
+      ],
+      "next": [
+        "宇树是否公布具体传感器、试点客户与安全认证",
+        "八小时续航是在何种任务和负载下测得"
+      ],
+      "source": "TechRadar",
+      "updated": "2026-10-21",
+      "en": {
+        "cat": "Robotics and embodied AI",
+        "title": "Unitree shows the H2-X “bodyguard” humanoid. Eight-hour battery life does not mean eight hours on duty.",
+        "brief": "Unitree unveiled the H2-X humanoid with a reported eight-hour battery life, but safe and reliable security work matters more than martial-arts moves.",
+        "take": "Unitree showed its H2-X humanoid, described in coverage as a bodyguard-style robot with an eight-hour battery claim and martial-arts capability. Longer battery life matters for mobile robots because frequent charging makes shift-length work difficult. But security is not a stage performance. The machine must identify risks accurately, avoid false judgments, move safely around crowds, and know when to stop and call a person. The available information is mainly a product demonstration, not evidence that it is ready for real security deployment. Strength and balance in a demo are one thing; safety and accountability in daily work are another.",
+        "meta": "Humanoid robotics｜Oct. 21",
+        "facts": [
+          [
+            "Product",
+            "Unitree H2-X humanoid robot"
+          ],
+          [
+            "Claim",
+            "Coverage cites about eight hours of battery life"
+          ],
+          [
+            "Positioning",
+            "Presented as a bodyguard-style robot"
+          ]
+        ],
+        "visual": {
+          "type": "orbit",
+          "label": "What a security robot must prove",
+          "nodes": [
+            "Battery and movement",
+            "Read environment",
+            "Avoid false calls",
+            "Human takeover"
+          ]
+        },
+        "impacts": [
+          [
+            "For venue operators",
+            "They need to test false alarms, emergency stops, and human takeover before buying."
+          ],
+          [
+            "For the public",
+            "Crowd deployment raises questions about privacy, recording scope, and accountability."
+          ]
+        ],
+        "next": [
+          "Whether Unitree names sensors, pilot customers, and safety certification",
+          "Under what tasks and load the eight-hour figure was measured"
+        ],
+        "source": "TechRadar",
+        "updated": "2026-10-21"
+      },
+      "sourceLinks": [
+        {
+          "title": "Unitree reveals its H2-X bodyguard robot, a Kung Fu humanoid with an 8-hour battery life",
+          "url": "https://www.techradar.com/ai-platforms-assistants/unitree-reveals-its-h2-x-bodyguard-robot-a-kung-fu-humanoid-with-an-8-hour-battery-life-and-some-serious-martial-arts-skills",
+          "publisher": "TechRadar"
+        }
+      ],
+      "eventImage": {
+        "url": "https://cdn.mos.cms.futurecdn.net/k2SxPcYMeT7qWB8dU7ZK46-2000-80.jpg",
+        "credit": "TechRadar",
+        "link": "https://www.techradar.com/ai-platforms-assistants/unitree-reveals-its-h2-x-bodyguard-robot-a-kung-fu-humanoid-with-an-8-hour-battery-life-and-some-serious-martial-arts-skills",
+        "zh": {
+          "alt": "宇树展示 H2-X“保镖”人形机：八小时续航不等于能上岗八小时",
+          "caption": "宇树展示 H2-X“保镖”人形机：八小时续航不等于能上岗八小时"
+        },
+        "en": {
+          "alt": "Unitree shows the H2-X “bodyguard” humanoid. Eight-hour battery life does not mean eight hours on duty.",
+          "caption": "Unitree shows the H2-X “bodyguard” humanoid. Eight-hour battery life does not mean eight hours on duty."
+        }
+      },
+      "termGuides": [
+        {
+          "key": "Unitree",
+          "aliases": [
+            "宇树",
+            "Unitree"
+          ],
+          "zh": {
+            "label": "宇树",
+            "meaning": "开发四足和人形机器人的中国公司。",
+            "relation": "它这次展示了 H2-X 人形机器人。"
+          },
+          "en": {
+            "label": "Unitree",
+            "meaning": "A Chinese maker of quadruped and humanoid robots.",
+            "relation": "It is the company showing the H2-X humanoid in this story."
+          }
+        },
+        {
+          "key": "H2-X",
+          "aliases": [
+            "H2-X",
+            "宇树 H2-X"
+          ],
+          "zh": {
+            "label": "H2-X",
+            "meaning": "宇树展示的一款人形机器人。",
+            "relation": "报道把它描述为面向安保展示的“保镖”式机器人。"
+          },
+          "en": {
+            "label": "H2-X",
+            "meaning": "A humanoid robot shown by Unitree.",
+            "relation": "Coverage presents it as a bodyguard-style robot concept."
+          }
+        }
+      ]
+    },
+    {
+      "id": "ai-ace-robot-spatial-model",
+      "cat": "机器人与具身智能",
+      "icon": "drone",
+      "title": "ACE Robotics 推出空间感知模型：机器人先得看懂桌边和门槛",
+      "brief": "ACE Robotics 发布空间感知模型，目标是让机器人更好理解距离、物体位置和可行动空间。",
+      "take": "由商汤联合创始人参与的 ACE Robotics 发布了一款用于机器人空间感知的模型。对机器人来说，“看见杯子”还不够；它还得判断杯子有多远、能不能抓、旁边有没有人或障碍物，以及下一步移动会不会碰撞。空间理解是家庭、仓储和工厂机器人从演示走向实用的基础能力。候选报道提到模型发布，但公开信息未足以判断它在复杂真实场景、不同硬件和长时间任务中的表现，因此不宜只看基准成绩。",
+      "meta": "具身模型｜10月20日",
+      "facts": [
+        [
+          "公司",
+          "ACE Robotics"
+        ],
+        [
+          "发布",
+          "机器人空间感知模型"
+        ],
+        [
+          "关联",
+          "公司与商汤联合创始人有关"
+        ]
+      ],
+      "visual": {
+        "type": "orbit",
+        "label": "机器人“看懂空间”的四步",
+        "nodes": [
+          "识别物体",
+          "判断距离",
+          "规划动作",
+          "避免碰撞"
+        ]
+      },
+      "impacts": [
+        [
+          "机器人用户",
+          "更好的空间感知可能减少机器人撞物、抓空和卡住。"
+        ],
+        [
+          "行业",
+          "真正价值要看模型离开实验室后，能否适配不同摄像头和机器本体。"
+        ]
+      ],
+      "next": [
+        "模型是否开放，以及支持哪些机器人硬件",
+        "在真实家庭、仓储或工厂中的长期测试结果"
+      ],
+      "source": "TechNode",
+      "updated": "2026-10-20",
+      "en": {
+        "cat": "Robotics and embodied AI",
+        "title": "ACE Robotics releases a spatial model: robots first need to understand the edge of a table and a doorway",
+        "brief": "ACE Robotics released a spatial-perception model aimed at helping robots understand distance, object positions, and where they can move.",
+        "take": "ACE Robotics, linked to a SenseTime co-founder, released a model for robot spatial perception. For a robot, seeing a cup is not enough. It also has to judge how far away it is, whether it can grasp it, whether people or obstacles are nearby, and whether its next move will collide with something. Spatial understanding is a basic capability for useful home, warehouse, and factory robots. The candidate report confirms the release, but does not provide enough public evidence about performance across messy real settings, hardware types, or long tasks, so benchmark claims should not be the only measure.",
+        "meta": "Embodied models｜Oct. 20",
+        "facts": [
+          [
+            "Company",
+            "ACE Robotics"
+          ],
+          [
+            "Release",
+            "A robot spatial-perception model"
+          ],
+          [
+            "Link",
+            "The company is tied to a SenseTime co-founder"
+          ]
+        ],
+        "visual": {
+          "type": "orbit",
+          "label": "Four parts of understanding space",
+          "nodes": [
+            "Identify object",
+            "Judge distance",
+            "Plan movement",
+            "Avoid collision"
+          ]
+        },
+        "impacts": [
+          [
+            "For robot users",
+            "Better spatial perception could mean fewer crashes, missed grasps, and stuck machines."
+          ],
+          [
+            "For the industry",
+            "The test is whether the model adapts to varied cameras and robot bodies outside the lab."
+          ]
+        ],
+        "next": [
+          "Whether the model is open and which robot hardware it supports",
+          "Longer tests in real homes, warehouses, or factories"
+        ],
+        "source": "TechNode",
+        "updated": "2026-10-20"
+      },
+      "sourceLinks": [
+        {
+          "title": "SenseTime co-founder ACE Robotics releases model for robot spatial perception",
+          "url": "https://technode.com/2026/10/20/sensetime-co-founders-ace-robotics-releases-model-for-robot-spatial-perception/",
+          "publisher": "TechNode"
+        }
+      ],
+      "eventImage": {
+        "url": "https://i0.wp.com/technode.com/wp-content/uploads/2026/10/feed-20261020-cn-371523.png?fit=1920%2C816&ssl=1",
+        "credit": "TechNode",
+        "link": "https://technode.com/2026/10/20/sensetime-co-founders-ace-robotics-releases-model-for-robot-spatial-perception/",
+        "zh": {
+          "alt": "ACE Robotics 推出空间感知模型：机器人先得看懂桌边和门槛",
+          "caption": "ACE Robotics 推出空间感知模型：机器人先得看懂桌边和门槛"
+        },
+        "en": {
+          "alt": "ACE Robotics releases a spatial model: robots first need to understand the edge of a table and a doorway",
+          "caption": "ACE Robotics releases a spatial model: robots first need to understand the edge of a table and a doorway"
+        }
+      },
+      "termGuides": [
+        {
+          "key": "ACE Robotics",
+          "aliases": [
+            "ACE Robotics",
+            "ACE 机器人"
+          ],
+          "zh": {
+            "label": "ACE Robotics",
+            "meaning": "专注机器人技术的公司。",
+            "relation": "它发布了帮助机器人判断三维空间关系的模型。"
+          },
+          "en": {
+            "label": "ACE Robotics",
+            "meaning": "A robotics-focused company.",
+            "relation": "It released the model intended to help robots understand three-dimensional space."
+          }
+        },
+        {
+          "key": "Spatial perception",
+          "aliases": [
+            "空间感知",
+            "spatial perception"
+          ],
+          "zh": {
+            "label": "空间感知",
+            "meaning": "机器判断物体位置、距离、方向和可移动区域的能力。",
+            "relation": "这是新模型试图改善的机器人基础能力。"
+          },
+          "en": {
+            "label": "Spatial perception",
+            "meaning": "A machine's ability to judge positions, distance, direction, and navigable space.",
+            "relation": "This is the core robot capability the new model aims to improve."
+          }
+        }
+      ]
+    },
+    {
+      "id": "ai-nvidia-europe-modular-dc",
+      "cat": "AI",
+      "icon": "refinery",
+      "title": "英伟达谈欧洲 AI 算力，难点不是买到芯片，而是电和机房能否跟上",
+      "brief": "英伟达在欧洲推动模块化数据中心构想，AI 算力扩张先会撞上供电、建设速度和本地部署限制。",
+      "take": "英伟达 CEO 黄仁勋在欧洲描绘了以“即插即用”式数据中心支撑 AI 发展的设想。模块化建设有助于缩短部署周期，但数据中心不是把服务器运到现场就结束：高功率 AI 芯片需要稳定电网、散热、土地、审批和网络连接。对欧洲企业和政府来说，本地算力意味着数据处理选择更多，也可能减少对境外资源的依赖；代价则是电力需求和基础设施投资更快摆到台面上。真正的进度要看项目是否拿到电力与许可，而不是发布会上的机柜数量。",
+      "meta": "AI算力｜10月21日",
+      "facts": [
+        [
+          "人物",
+          "英伟达 CEO 黄仁勋"
+        ],
+        [
+          "地点",
+          "欧洲"
+        ],
+        [
+          "方案",
+          "模块化、快速部署的数据中心"
+        ]
+      ],
+      "visual": {
+        "type": "orbit",
+        "label": "AI 数据中心不只缺芯片",
+        "nodes": [
+          "AI 芯片",
+          "模块机房",
+          "电网与散热",
+          "企业算力"
+        ]
+      },
+      "impacts": [
+        [
+          "企业",
+          "本地算力增加可改善部署选择，但未必立刻降低 AI 使用成本。"
+        ],
+        [
+          "居民与政策",
+          "大规模数据中心会把电网容量、用电价格和选址争议带到身边。"
+        ]
+      ],
+      "next": [
+        "欧洲各地项目的电力合同、审批和实际开工",
+        "模块化方案能否缩短建设时间而不推高电网压力"
+      ],
+      "source": "Wired",
+      "updated": "2026-10-21",
+      "en": {
+        "cat": "AI",
+        "title": "Nvidia’s Europe AI-compute vision hits a basic constraint: power and buildings, not only chips",
+        "brief": "Nvidia is pitching modular data centers in Europe, but AI expansion will first run into electricity, construction speed, and local deployment limits.",
+        "take": "Nvidia CEO Jensen Huang outlined a vision for European AI built around plug-in-style data centers. Modular construction can shorten deployment time, but a data center is not finished when servers arrive. Power-hungry AI chips need reliable grids, cooling, land, permits, and network links. For European businesses and governments, more local compute can offer more choices about where data is processed and reduce dependence on outside capacity. The trade-off is that electricity demand and infrastructure spending become more visible. The real test is power contracts and permits, not rack counts in a presentation.",
+        "meta": "AI compute｜Oct. 21",
+        "facts": [
+          [
+            "Figure",
+            "Nvidia CEO Jensen Huang"
+          ],
+          [
+            "Place",
+            "Europe"
+          ],
+          [
+            "Approach",
+            "Modular, rapidly deployed data centers"
+          ]
+        ],
+        "visual": {
+          "type": "orbit",
+          "label": "AI data centers need more than chips",
+          "nodes": [
+            "AI chips",
+            "Modular facilities",
+            "Grid and cooling",
+            "Business compute"
+          ]
+        },
+        "impacts": [
+          [
+            "For businesses",
+            "More local compute may widen deployment choices, though it may not quickly lower AI costs."
+          ],
+          [
+            "For communities",
+            "Large data centers can bring grid capacity, power-price, and siting debates closer to home."
+          ]
+        ],
+        "next": [
+          "Power deals, permits, and construction starts for European projects",
+          "Whether modular designs cut build time without worsening grid strain"
+        ],
+        "source": "Wired",
+        "updated": "2026-10-21"
+      },
+      "sourceLinks": [
+        {
+          "title": "Jensen Huang's Vision for Europe Runs on Plug-In Data Centers",
+          "url": "https://www.wired.com/story/jensen-huangs-vision-for-europe-runs-on-plug-in-data-centers/",
+          "publisher": "Wired"
+        }
+      ],
+      "eventImage": {
+        "url": "https://media.wired.com/photos/6ad8c8882adb51db52e1a235/191:100/w_1280,c_limit/GettyImages-2301295306.jpg",
+        "credit": "Wired",
+        "link": "https://www.wired.com/story/jensen-huangs-vision-for-europe-runs-on-plug-in-data-centers/",
+        "zh": {
+          "alt": "英伟达谈欧洲 AI 算力，难点不是买到芯片，而是电和机房能否跟上",
+          "caption": "英伟达谈欧洲 AI 算力，难点不是买到芯片，而是电和机房能否跟上"
+        },
+        "en": {
+          "alt": "Nvidia’s Europe AI-compute vision hits a basic constraint: power and buildings, not only chips",
+          "caption": "Nvidia’s Europe AI-compute vision hits a basic constraint: power and buildings, not only chips"
+        }
+      },
+      "termGuides": [
+        {
+          "key": "Nvidia",
+          "aliases": [
+            "英伟达",
+            "Nvidia"
+          ],
+          "zh": {
+            "label": "英伟达",
+            "meaning": "主要生产 AI 计算芯片及相关系统的美国公司。",
+            "relation": "黄仁勋此次在欧洲讨论以数据中心承接 AI 算力需求。"
+          },
+          "en": {
+            "label": "Nvidia",
+            "meaning": "A U.S. company best known for AI computing chips and related systems.",
+            "relation": "Its CEO is discussing data centers to meet Europe's AI compute demand."
+          }
+        },
+        {
+          "key": "Data center",
+          "aliases": [
+            "数据中心",
+            "data center"
+          ],
+          "zh": {
+            "label": "数据中心",
+            "meaning": "集中放置服务器、网络和散热供电设施的场所。",
+            "relation": "模块化数据中心是英伟达欧洲算力设想的基础设施。"
+          },
+          "en": {
+            "label": "Data center",
+            "meaning": "A facility that houses servers, networking, cooling, and power systems.",
+            "relation": "Modular data centers are the infrastructure at the center of Nvidia's Europe vision."
+          }
+        }
+      ]
+    }
+  ]
+}
