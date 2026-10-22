@@ -1,0 +1,1489 @@
+{
+  "dateKey": "2026-10-23",
+  "generatedAt": "2026-10-23T05:00:00+08:00",
+  "title": "DailyTen｜AI产业",
+  "subtitle": "模型开始替人做决定，入口、密码和算力账单都在重写规则。",
+  "briefLabel": "今天先看",
+  "doneLabel": "读完了",
+  "readTimeMinutes": 8,
+  "items": [
+    {
+      "id": "ai-openai-jev-availability",
+      "cat": "AI",
+      "icon": "ai",
+      "title": "OpenAI把“决策模型”推向更广用户：AI不只回答，开始替你选",
+      "brief": "能在复杂选项里做取舍的模型一旦普及，工作流会更快，但也更难追问“它为什么这么决定”。",
+      "take": "OpenAI 将其被报道为 JEV 竞争对手的决策模型扩大开放。和擅长写字、聊天的通用模型不同，这类模型主打在多步骤、多个约束之间权衡并给出行动选择。对开发者和企业，它可能把排班、采购、客服分流等工作交给 Agent；麻烦也在这里：模型选错不只是答错一句话，而可能让订单、预算或权限走向错误的一边。",
+      "meta": "10月22日｜模型与Agent",
+      "facts": [
+        [
+          "变化",
+          "OpenAI扩大决策模型的可用范围"
+        ],
+        [
+          "能力",
+          "重点是多约束下的选择与规划"
+        ],
+        [
+          "竞争",
+          "决策模型赛道竞争正在升温"
+        ]
+      ],
+      "visual": {
+        "type": "orbit",
+        "label": "从回答到行动",
+        "nodes": [
+          "读取目标",
+          "比较选项",
+          "作出选择",
+          "触发执行"
+        ]
+      },
+      "impacts": [
+        [
+          "工作",
+          "重复性的判断环节更可能被自动化"
+        ],
+        [
+          "风险",
+          "企业需要保留复核、撤销和责任记录"
+        ]
+      ],
+      "next": [
+        "开放对象和定价是否继续扩大",
+        "是否披露在真实任务中的错误率"
+      ],
+      "source": "TechCrunch AI",
+      "updated": "2026-10-22",
+      "en": {
+        "cat": "AI",
+        "title": "OpenAI broadens a “decision model”: AI may start choosing, not just answering",
+        "brief": "Once models can weigh messy options, work can move faster—but it gets harder to ask why a decision was made.",
+        "take": "OpenAI has broadened access to a decision model reported as a competitor to JEV. Unlike a general chatbot that mainly writes or talks, this kind of model is meant to weigh constraints across several steps and choose an action. Developers and companies could use it in scheduling, procurement, or customer routing. The catch is clear: a bad choice is not merely a bad sentence; it can send an order, budget, or permission down the wrong path.",
+        "meta": "Oct. 22 | Models and Agents",
+        "facts": [
+          [
+            "Change",
+            "OpenAI widened availability of its decision model"
+          ],
+          [
+            "Capability",
+            "It focuses on planning and choices under constraints"
+          ],
+          [
+            "Competition",
+            "Competition in decision models is intensifying"
+          ]
+        ],
+        "visual": {
+          "type": "orbit",
+          "label": "From answer to action",
+          "nodes": [
+            "Read goal",
+            "Compare options",
+            "Make choice",
+            "Trigger action"
+          ]
+        },
+        "impacts": [
+          [
+            "Work",
+            "Routine judgment calls are more likely to be automated"
+          ],
+          [
+            "Risk",
+            "Companies need review, rollback, and accountability logs"
+          ]
+        ],
+        "next": [
+          "Whether access and pricing expand further",
+          "Whether real-world error rates are disclosed"
+        ],
+        "source": "TechCrunch AI",
+        "updated": "2026-10-22"
+      },
+      "sourceLinks": [
+        {
+          "title": "OpenAI makes its Jev competitor widely available as decision model competition heats up",
+          "url": "https://techcrunch.com/2026/10/22/openai-makes-its-jev-competitor-widely-available-as-decision-model-competition-heats-up/",
+          "publisher": "TechCrunch AI"
+        }
+      ],
+      "eventImage": {
+        "url": "https://techcrunch.com/wp-content/uploads/2026/10/Screenshot-2026-10-22-at-12.17.11-PM-1.png?resize=1200,988",
+        "credit": "TechCrunch AI",
+        "link": "https://techcrunch.com/2026/10/22/openai-makes-its-jev-competitor-widely-available-as-decision-model-competition-heats-up/",
+        "zh": {
+          "alt": "OpenAI把“决策模型”推向更广用户：AI不只回答，开始替你选",
+          "caption": "OpenAI把“决策模型”推向更广用户：AI不只回答，开始替你选"
+        },
+        "en": {
+          "alt": "OpenAI broadens a “decision model”: AI may start choosing, not just answering",
+          "caption": "OpenAI broadens a “decision model”: AI may start choosing, not just answering"
+        }
+      },
+      "termGuides": [
+        {
+          "key": "OpenAI",
+          "aliases": [
+            "OpenAI"
+          ],
+          "zh": {
+            "label": "OpenAI",
+            "meaning": "开发 ChatGPT 的美国人工智能公司。",
+            "relation": "这次扩大了其决策模型的可用范围。"
+          },
+          "en": {
+            "label": "OpenAI",
+            "meaning": "The U.S. AI company behind ChatGPT.",
+            "relation": "It is widening access to its decision model in this story."
+          }
+        },
+        {
+          "key": "decision-model",
+          "aliases": [
+            "决策模型",
+            "decision model",
+            "JEV"
+          ],
+          "zh": {
+            "label": "决策模型",
+            "meaning": "把目标和限制条件放在一起，帮助选择下一步行动的模型。",
+            "relation": "它的价值不只是写答案，而是可能直接影响业务选择。"
+          },
+          "en": {
+            "label": "Decision model",
+            "meaning": "A model that weighs goals and constraints to choose a next action.",
+            "relation": "Its value here is not just writing an answer but influencing a business choice."
+          }
+        }
+      ]
+    },
+    {
+      "id": "ai-anthropic-claude-duet",
+      "cat": "AI",
+      "icon": "ai",
+      "title": "Claude Duet押注双Agent协作：办公室里可能多了两名不会下班的助手",
+      "brief": "Anthropic想把Agent做成能分工配合的应用，真正考验是它们会不会替你把错误也高效地做完。",
+      "take": "Anthropic 推出 Claude Duet 应用，把重点放在 Agent 协作：不是一个聊天框接一条指令，而是让多个 AI 分担研究、执行和检查。对个人和小团队，这种产品若可靠，能把零碎任务串成一条流程；但它也让授权范围变得更敏感。两个 Agent 能互相接力，并不等于它们知道何时该停下，人仍要看住付款、发送和删改等不可逆动作。",
+      "meta": "10月22日｜Agent产品",
+      "facts": [
+        [
+          "产品",
+          "Anthropic发布Claude Duet应用"
+        ],
+        [
+          "方向",
+          "主打多个Agent协作完成任务"
+        ],
+        [
+          "关键",
+          "授权与人工复核仍是使用门槛"
+        ]
+      ],
+      "visual": {
+        "type": "orbit",
+        "label": "双Agent的工作链",
+        "nodes": [
+          "拆分任务",
+          "分别执行",
+          "交叉检查",
+          "交给用户"
+        ]
+      },
+      "impacts": [
+        [
+          "效率",
+          "小团队可少做复制、汇总和跟进"
+        ],
+        [
+          "控制",
+          "涉及邮件、付款和文件时必须设权限边界"
+        ]
+      ],
+      "next": [
+        "Duet能接入哪些工作工具",
+        "协作Agent是否提供清晰的操作记录"
+      ],
+      "source": "TechCrunch AI",
+      "updated": "2026-10-22",
+      "en": {
+        "cat": "AI",
+        "title": "Claude Duet bets on paired Agents: the office may get two helpers that never clock out",
+        "brief": "Anthropic wants Agents to divide work together; the real test is whether they can avoid making mistakes efficiently, too.",
+        "take": "Anthropic has launched the Claude Duet app, centered on Agent collaboration. Rather than one chat box receiving one instruction, it lets multiple AIs divide research, execution, and checking. If reliable, it could turn scattered tasks into a workflow for individuals and small teams. But it also makes permissions more sensitive. Two Agents can hand work to each other; that does not mean they know when to stop. People still need to oversee irreversible actions such as payments, sending messages, and deleting files.",
+        "meta": "Oct. 22 | Agent product",
+        "facts": [
+          [
+            "Product",
+            "Anthropic launched the Claude Duet app"
+          ],
+          [
+            "Approach",
+            "It emphasizes multiple Agents working together"
+          ],
+          [
+            "Constraint",
+            "Permissions and human review remain essential"
+          ]
+        ],
+        "visual": {
+          "type": "orbit",
+          "label": "A paired-Agent loop",
+          "nodes": [
+            "Split task",
+            "Execute separately",
+            "Cross-check",
+            "Return to user"
+          ]
+        },
+        "impacts": [
+          [
+            "Efficiency",
+            "Small teams may spend less time copying, compiling, and following up"
+          ],
+          [
+            "Control",
+            "Email, payments, and files need firm permission limits"
+          ]
+        ],
+        "next": [
+          "Which work tools Duet can connect to",
+          "Whether it provides clear action logs"
+        ],
+        "source": "TechCrunch AI",
+        "updated": "2026-10-22"
+      },
+      "sourceLinks": [
+        {
+          "title": "Claude Duet app is Anthropic’s bet on agents",
+          "url": "https://techcrunch.com/2026/10/22/claude-duet-app-is-anthropics-bet-on-agents/",
+          "publisher": "TechCrunch AI"
+        }
+      ],
+      "eventImage": {
+        "url": "https://techcrunch.com/wp-content/uploads/2026/10/Claude-Duet.jpg?resize=1200,675",
+        "credit": "TechCrunch AI",
+        "link": "https://techcrunch.com/2026/10/22/claude-duet-app-is-anthropics-bet-on-agents/",
+        "zh": {
+          "alt": "Claude Duet押注双Agent协作：办公室里可能多了两名不会下班的助手",
+          "caption": "Claude Duet押注双Agent协作：办公室里可能多了两名不会下班的助手"
+        },
+        "en": {
+          "alt": "Claude Duet bets on paired Agents: the office may get two helpers that never clock out",
+          "caption": "Claude Duet bets on paired Agents: the office may get two helpers that never clock out"
+        }
+      },
+      "termGuides": [
+        {
+          "key": "Anthropic",
+          "aliases": [
+            "Anthropic",
+            "Anthropic公司"
+          ],
+          "zh": {
+            "label": "Anthropic",
+            "meaning": "开发Claude模型的美国AI公司。",
+            "relation": "它用Duet测试多个Agent协作的产品形态。"
+          },
+          "en": {
+            "label": "Anthropic",
+            "meaning": "The U.S. AI company that makes Claude.",
+            "relation": "It is using Duet to test a multi-Agent product."
+          }
+        },
+        {
+          "key": "Claude-Duet",
+          "aliases": [
+            "Claude Duet",
+            "Duet"
+          ],
+          "zh": {
+            "label": "Claude Duet",
+            "meaning": "Anthropic新推出的Agent应用。",
+            "relation": "它让多个AI分工协作，而非只做单轮对话。"
+          },
+          "en": {
+            "label": "Claude Duet",
+            "meaning": "Anthropic’s new Agent application.",
+            "relation": "It assigns work across multiple AIs instead of relying on a single chat turn."
+          }
+        },
+        {
+          "key": "Agent",
+          "aliases": [
+            "Agent",
+            "智能体"
+          ],
+          "zh": {
+            "label": "Agent",
+            "meaning": "能调用工具、分步骤完成任务的AI程序。",
+            "relation": "Duet的核心是让多个Agent接力工作。"
+          },
+          "en": {
+            "label": "Agent",
+            "meaning": "An AI program that can use tools and complete a task in steps.",
+            "relation": "Duet is built around several Agents handing work to one another."
+          }
+        }
+      ]
+    },
+    {
+      "id": "ai-canva-image-model",
+      "cat": "AI",
+      "icon": "ai",
+      "title": "Canva自己训练生图模型：设计软件不想再把核心能力交给别人",
+      "brief": "做海报和演示文稿的人会更方便，但生成图片的风格、版权和可控性也更集中到Canva手里。",
+      "take": "Canva 发布首个自研图像生成模型。对普通用户，最直接的变化是生图能力可更紧地嵌进模板、品牌素材和编辑流程，不必在多个应用间来回搬图。对 Canva 而言，这也是抢回关键技术入口：它不想长期完全依赖外部模型供应商。问题尚未消失——商用图片的训练来源、相似风格争议和错误生成，仍需要产品规则和申诉机制来兜底。",
+      "meta": "10月22日｜创意工具",
+      "facts": [
+        [
+          "发布",
+          "Canva推出首个图像生成模型"
+        ],
+        [
+          "用途",
+          "可嵌入其模板与编辑工具"
+        ],
+        [
+          "竞争",
+          "Canva减少对外部模型的依赖"
+        ]
+      ],
+      "visual": null,
+      "impacts": [
+        [
+          "创作",
+          "非设计师做图时少一次工具切换"
+        ],
+        [
+          "版权",
+          "商用素材的来源和相似风格仍可能引发争议"
+        ]
+      ],
+      "next": [
+        "模型是否提供训练数据和版权说明",
+        "品牌控制功能是否面向所有付费层级"
+      ],
+      "source": "TechCrunch AI",
+      "updated": "2026-10-22",
+      "en": {
+        "cat": "AI",
+        "title": "Canva trains its own image model: the design app does not want to outsource its core",
+        "brief": "Making slides and posters may get easier, but Canva will also hold more control over style, copyright, and image generation.",
+        "take": "Canva has released its first in-house image-generation model. For ordinary users, the immediate benefit is tighter integration with templates, brand assets, and editing, without shuttling images between apps. For Canva, it is a move to regain a key entry point rather than depend entirely on outside model providers. The hard questions remain: training-data provenance, disputes over similar styles, and bad outputs still need clear product rules and an appeals process.",
+        "meta": "Oct. 22 | Creative tools",
+        "facts": [
+          [
+            "Launch",
+            "Canva released its first image-generation model"
+          ],
+          [
+            "Use",
+            "It can be built into Canva templates and editing tools"
+          ],
+          [
+            "Competition",
+            "Canva reduces reliance on outside models"
+          ]
+        ],
+        "visual": null,
+        "impacts": [
+          [
+            "Creation",
+            "Non-designers may need one less tool switch"
+          ],
+          [
+            "Copyright",
+            "Commercial-image sources and look-alike styles remain disputed"
+          ]
+        ],
+        "next": [
+          "Whether Canva explains training data and copyright rules",
+          "Whether brand controls reach every paid tier"
+        ],
+        "source": "TechCrunch AI",
+        "updated": "2026-10-22"
+      },
+      "sourceLinks": [
+        {
+          "title": "Canva releases its first image generation model",
+          "url": "https://techcrunch.com/2026/10/22/canva-releases-its-first-image-generation-model/",
+          "publisher": "TechCrunch AI"
+        }
+      ],
+      "eventImage": {
+        "url": "https://techcrunch.com/wp-content/uploads/2026/10/Sample-Outputs.jpeg?resize=1200,675",
+        "credit": "TechCrunch AI",
+        "link": "https://techcrunch.com/2026/10/22/canva-releases-its-first-image-generation-model/",
+        "zh": {
+          "alt": "Canva自己训练生图模型：设计软件不想再把核心能力交给别人",
+          "caption": "Canva自己训练生图模型：设计软件不想再把核心能力交给别人"
+        },
+        "en": {
+          "alt": "Canva trains its own image model: the design app does not want to outsource its core",
+          "caption": "Canva trains its own image model: the design app does not want to outsource its core"
+        }
+      },
+      "termGuides": [
+        {
+          "key": "Canva",
+          "aliases": [
+            "Canva"
+          ],
+          "zh": {
+            "label": "Canva",
+            "meaning": "面向大众的在线设计和演示文稿工具。",
+            "relation": "它发布自研模型，把生图更深地放进自己的编辑流程。"
+          },
+          "en": {
+            "label": "Canva",
+            "meaning": "An online design and presentation tool for mainstream users.",
+            "relation": "It is putting an in-house image model deeper into its own editing flow."
+          }
+        },
+        {
+          "key": "image-generation-model",
+          "aliases": [
+            "图像生成模型",
+            "image generation model"
+          ],
+          "zh": {
+            "label": "图像生成模型",
+            "meaning": "根据文字或参考图制作新图片的AI模型。",
+            "relation": "Canva用它降低用户制作视觉素材的门槛。"
+          },
+          "en": {
+            "label": "Image-generation model",
+            "meaning": "An AI model that creates images from text or reference images.",
+            "relation": "Canva is using it to lower the barrier to making visual assets."
+          }
+        }
+      ]
+    },
+    {
+      "id": "ai-openai-fundraise",
+      "cat": "AI",
+      "icon": "chart",
+      "title": "OpenAI据报再筹300亿美元：AI竞赛的门票越来越像一座电站",
+      "brief": "这笔钱若落地，会继续推高头部AI公司的算力投入，也让后来者更难靠一个好模型追上。",
+      "take": "TechCrunch 报道称，OpenAI 正筹备一轮约300亿美元融资，估值或达1.25万亿美元，并为未来上市铺路。交易尚未得到官方确认，不能当作既成事实；但数字本身说明了前沿AI的现实：训练和运行模型都要持续购买芯片、数据中心和电力。对用户未必马上意味着订阅涨价，却会让最强模型的竞争更集中在少数能长期烧钱的公司手中。",
+      "meta": "10月22日｜融资报道",
+      "facts": [
+        [
+          "金额",
+          "报道称融资规模约300亿美元"
+        ],
+        [
+          "估值",
+          "报道称目标估值约1.25万亿美元"
+        ],
+        [
+          "状态",
+          "OpenAI尚未正式确认该交易"
+        ]
+      ],
+      "visual": {
+        "type": "orbit",
+        "label": "资金如何变成模型",
+        "nodes": [
+          "融资",
+          "购买芯片",
+          "建设算力",
+          "服务用户"
+        ]
+      },
+      "impacts": [
+        [
+          "竞争",
+          "资金门槛抬高，独立模型公司更难追赶"
+        ],
+        [
+          "价格",
+          "算力成本最终可能反映在企业服务和订阅里"
+        ]
+      ],
+      "next": [
+        "融资是否获正式确认",
+        "资金中有多少用于数据中心与芯片"
+      ],
+      "source": "TechCrunch AI",
+      "updated": "2026-10-22",
+      "en": {
+        "cat": "AI",
+        "title": "OpenAI is reportedly seeking $30 billion: frontier AI’s entry ticket now looks like a power plant",
+        "brief": "If it closes, the deal would raise the compute stakes again and make it harder to catch up with one good model alone.",
+        "take": "TechCrunch reports that OpenAI is working on a roughly $30 billion raise at a possible $1.25 trillion valuation, ahead of a future IPO. OpenAI has not formally confirmed the deal, so it is not settled fact. Still, the numbers capture the reality of frontier AI: training and running models require continuing purchases of chips, data centers, and power. Users may not see an immediate subscription increase, but competition for the strongest models becomes even more concentrated among companies able to spend for years.",
+        "meta": "Oct. 22 | Funding report",
+        "facts": [
+          [
+            "Amount",
+            "The reported raise is about $30 billion"
+          ],
+          [
+            "Valuation",
+            "The reported target valuation is about $1.25 trillion"
+          ],
+          [
+            "Status",
+            "OpenAI has not formally confirmed the transaction"
+          ]
+        ],
+        "visual": {
+          "type": "orbit",
+          "label": "How money becomes a model",
+          "nodes": [
+            "Raise funds",
+            "Buy chips",
+            "Build compute",
+            "Serve users"
+          ]
+        },
+        "impacts": [
+          [
+            "Competition",
+            "The capital barrier rises for independent model builders"
+          ],
+          [
+            "Pricing",
+            "Compute costs may eventually show up in business services and subscriptions"
+          ]
+        ],
+        "next": [
+          "Whether the funding is formally confirmed",
+          "How much would go to data centers and chips"
+        ],
+        "source": "TechCrunch AI",
+        "updated": "2026-10-22"
+      },
+      "sourceLinks": [
+        {
+          "title": "OpenAI working on new $30B raise at $1.25T valuation ahead of IPO",
+          "url": "https://techcrunch.com/2026/10/22/openai-working-on-new-30b-raise-at-1-25t-valuation-ahead-of-ipo/",
+          "publisher": "TechCrunch AI"
+        }
+      ],
+      "eventImage": {
+        "url": "https://techcrunch.com/wp-content/uploads/2023/11/Sam-Altman-OpenAI.jpg?resize=1200,680",
+        "credit": "TechCrunch AI",
+        "link": "https://techcrunch.com/2026/10/22/openai-working-on-new-30b-raise-at-1-25t-valuation-ahead-of-ipo/",
+        "zh": {
+          "alt": "OpenAI据报再筹300亿美元：AI竞赛的门票越来越像一座电站",
+          "caption": "OpenAI据报再筹300亿美元：AI竞赛的门票越来越像一座电站"
+        },
+        "en": {
+          "alt": "OpenAI is reportedly seeking $30 billion: frontier AI’s entry ticket now looks like a power plant",
+          "caption": "OpenAI is reportedly seeking $30 billion: frontier AI’s entry ticket now looks like a power plant"
+        }
+      },
+      "termGuides": [
+        {
+          "key": "OpenAI",
+          "aliases": [
+            "OpenAI"
+          ],
+          "zh": {
+            "label": "OpenAI",
+            "meaning": "开发ChatGPT的美国人工智能公司。",
+            "relation": "据报道，它正为模型、芯片和数据中心筹集巨额资金。"
+          },
+          "en": {
+            "label": "OpenAI",
+            "meaning": "The U.S. AI company behind ChatGPT.",
+            "relation": "It is reportedly seeking a huge pool of capital for models, chips, and data centers."
+          }
+        },
+        {
+          "key": "compute",
+          "aliases": [
+            "算力",
+            "compute"
+          ],
+          "zh": {
+            "label": "算力",
+            "meaning": "运行和训练AI所需的芯片、服务器与电力能力。",
+            "relation": "这轮融资的核心用途很可能是购买和建设算力。"
+          },
+          "en": {
+            "label": "Compute",
+            "meaning": "The chips, servers, and power needed to train and run AI.",
+            "relation": "Buying and building compute is likely central to the reported raise."
+          }
+        }
+      ]
+    },
+    {
+      "id": "ai-php-security-ai-discovery",
+      "cat": "AI",
+      "icon": "alert",
+      "title": "AI翻出PHP老漏洞，互联网先要补一堂“历史欠债”课",
+      "brief": "不少网站靠老PHP代码运转；一旦漏洞能被大规模复现，修补速度比AI发现得多快更重要。",
+      "take": "OpenAI 与 Google 旗下安全公司 Wiz 发现 PHP 生态中长期存在的漏洞，引发网站运营者紧急排查。这里的刺痛点不是“AI 又会写代码”，而是 AI 和自动化工具也能更快地从海量旧代码里找出可利用的缺口。大量中小网站、后台和插件依赖 PHP，维护资源却有限。用户最实际的风险是账户、支付资料或服务可用性受影响；管理员需要尽快更新，而不是等攻击发生。",
+      "meta": "10月21日｜AI与网络安全",
+      "facts": [
+        [
+          "发现者",
+          "OpenAI与Google旗下Wiz参与发现"
+        ],
+        [
+          "对象",
+          "问题涉及PHP生态的长期代码缺口"
+        ],
+        [
+          "范围",
+          "许多网站和插件依赖PHP"
+        ]
+      ],
+      "visual": {
+        "type": "orbit",
+        "label": "漏洞扩散与修补",
+        "nodes": [
+          "发现缺口",
+          "发布补丁",
+          "网站更新",
+          "阻断攻击"
+        ]
+      },
+      "impacts": [
+        [
+          "用户",
+          "未修补网站可能面临数据泄露或服务中断"
+        ],
+        [
+          "维护",
+          "小网站的更新能力成为薄弱环节"
+        ]
+      ],
+      "next": [
+        "受影响版本和补丁范围",
+        "是否出现大规模在野利用"
+      ],
+      "source": "TechCrunch AI",
+      "updated": "2026-10-21",
+      "en": {
+        "cat": "AI",
+        "title": "AI helps unearth old PHP flaws: the internet now has to pay an old maintenance bill",
+        "brief": "Many sites run on aging PHP code; if flaws can be reproduced at scale, patch speed matters more than how fast AI found them.",
+        "take": "OpenAI and Wiz, Google’s security company, uncovered long-standing holes in the PHP ecosystem, prompting website operators to check their systems urgently. The sting is not simply that “AI can write code.” AI and automation can also search enormous bodies of old code for exploitable gaps faster. Many small sites, back-office systems, and plugins rely on PHP with limited maintenance resources. For users, the practical risk is exposed accounts, payment information, or outages; administrators need to update before attacks arrive.",
+        "meta": "Oct. 21 | AI and cybersecurity",
+        "facts": [
+          [
+            "Finders",
+            "OpenAI and Google-owned Wiz helped identify the issue"
+          ],
+          [
+            "Target",
+            "The issue concerns long-standing gaps in the PHP ecosystem"
+          ],
+          [
+            "Reach",
+            "Many websites and plugins depend on PHP"
+          ]
+        ],
+        "visual": {
+          "type": "orbit",
+          "label": "Patch before spread",
+          "nodes": [
+            "Find flaw",
+            "Release patch",
+            "Update sites",
+            "Block attacks"
+          ]
+        },
+        "impacts": [
+          [
+            "Users",
+            "Unpatched sites can face data exposure or outages"
+          ],
+          [
+            "Maintenance",
+            "Small sites’ ability to update becomes the weak link"
+          ]
+        ],
+        "next": [
+          "Affected versions and patch scope",
+          "Whether mass exploitation appears in the wild"
+        ],
+        "source": "TechCrunch AI",
+        "updated": "2026-10-21"
+      },
+      "sourceLinks": [
+        {
+          "title": "PHP Armageddon: OpenAI, Google’s Wiz find ancient holes, panicking the internet",
+          "url": "https://techcrunch.com/2026/10/21/php-armageddon-openai-googles-wiz-find-ancient-holes-panicking-the-internet/",
+          "publisher": "TechCrunch AI"
+        }
+      ],
+      "eventImage": {
+        "url": "https://techcrunch.com/wp-content/uploads/2021/12/GettyImages-460689215.jpg?resize=1200,801",
+        "credit": "TechCrunch AI",
+        "link": "https://techcrunch.com/2026/10/21/php-armageddon-openai-googles-wiz-find-ancient-holes-panicking-the-internet/",
+        "zh": {
+          "alt": "AI翻出PHP老漏洞，互联网先要补一堂“历史欠债”课",
+          "caption": "AI翻出PHP老漏洞，互联网先要补一堂“历史欠债”课"
+        },
+        "en": {
+          "alt": "AI helps unearth old PHP flaws: the internet now has to pay an old maintenance bill",
+          "caption": "AI helps unearth old PHP flaws: the internet now has to pay an old maintenance bill"
+        }
+      },
+      "termGuides": [
+        {
+          "key": "PHP",
+          "aliases": [
+            "PHP"
+          ],
+          "zh": {
+            "label": "PHP",
+            "meaning": "大量网站后台使用的编程语言。",
+            "relation": "老旧PHP代码中的安全缺口成为这次排查对象。"
+          },
+          "en": {
+            "label": "PHP",
+            "meaning": "A programming language used by many website back ends.",
+            "relation": "Security gaps in older PHP code are the focus of this incident."
+          }
+        },
+        {
+          "key": "Wiz",
+          "aliases": [
+            "Wiz",
+            "Google Wiz"
+          ],
+          "zh": {
+            "label": "Wiz",
+            "meaning": "Google旗下的云安全公司。",
+            "relation": "它与OpenAI一道发现并披露了相关问题。"
+          },
+          "en": {
+            "label": "Wiz",
+            "meaning": "A Google-owned cloud security company.",
+            "relation": "It helped OpenAI identify and disclose the issue."
+          }
+        }
+      ]
+    },
+    {
+      "id": "ai-1password-agent-login",
+      "cat": "AI",
+      "icon": "code",
+      "title": "让Agent代你登录，但不交出密码：1Password在补自动化的危险缺口",
+      "brief": "AI替你办事时最怕它拿着完整密码到处跑；新方案想让它拿一次性权限而非钥匙串。",
+      "take": "密码管理器 1Password 推出让 AI Agent 代为登录的机制，设计目标是让 Agent 完成受授权的网站操作，却看不到用户的原始密码。这解决了 Agent 真正进入工作流时的一道硬门槛：它不能既要访问账户、又把主密码复制给模型或脚本。它不是万能保险箱——用户仍得决定哪些站点、哪些动作可授权，并警惕 Agent 被诱导在错误页面操作。",
+      "meta": "10月22日｜Agent安全",
+      "facts": [
+        [
+          "产品",
+          "1Password推出Agent代理登录方式"
+        ],
+        [
+          "原则",
+          "Agent不直接读取原始密码"
+        ],
+        [
+          "场景",
+          "用于已获授权的网站操作"
+        ]
+      ],
+      "visual": {
+        "type": "orbit",
+        "label": "不交密码的授权",
+        "nodes": [
+          "用户授权",
+          "生成凭证",
+          "Agent登录",
+          "权限结束"
+        ]
+      },
+      "impacts": [
+        [
+          "安全",
+          "减少密码被模型、日志或插件暴露的机会"
+        ],
+        [
+          "便利",
+          "Agent更可能安全地处理跨网站任务"
+        ]
+      ],
+      "next": [
+        "支持哪些浏览器和Agent框架",
+        "凭证能否限制金额、时间和操作类型"
+      ],
+      "source": "TechCrunch AI",
+      "updated": "2026-10-22",
+      "en": {
+        "cat": "AI",
+        "title": "Let an Agent log in without handing it your password: 1Password closes a dangerous gap",
+        "brief": "The danger in AI doing errands is giving it full passwords; this approach aims to give it limited permission instead.",
+        "take": "Password manager 1Password has launched a way for AI Agents to log in on a user’s behalf without seeing the original password. It addresses a hard problem as Agents enter real workflows: they may need account access, but copying a master credential into a model or script is unsafe. It is not a magic safe. Users still must choose which sites and actions are allowed, and must guard against an Agent being tricked into acting on the wrong page.",
+        "meta": "Oct. 22 | Agent security",
+        "facts": [
+          [
+            "Product",
+            "1Password introduced an Agent-mediated login method"
+          ],
+          [
+            "Principle",
+            "The Agent does not read the original password"
+          ],
+          [
+            "Use",
+            "It is for authorized website actions"
+          ]
+        ],
+        "visual": {
+          "type": "orbit",
+          "label": "Permission without password",
+          "nodes": [
+            "User authorizes",
+            "Create credential",
+            "Agent logs in",
+            "Permission ends"
+          ]
+        },
+        "impacts": [
+          [
+            "Security",
+            "It reduces chances that passwords leak through models, logs, or plugins"
+          ],
+          [
+            "Convenience",
+            "Agents can more safely handle tasks spanning websites"
+          ]
+        ],
+        "next": [
+          "Which browsers and Agent frameworks are supported",
+          "Whether credentials can limit amount, time, and action type"
+        ],
+        "source": "TechCrunch AI",
+        "updated": "2026-10-22"
+      },
+      "sourceLinks": [
+        {
+          "title": "1Password launches a way for AI agents to log in on your behalf without seeing your password",
+          "url": "https://techcrunch.com/2026/10/22/1password-launches-a-way-for-ai-agents-to-log-in-on-your-behalf-without-seeing-your-password/",
+          "publisher": "TechCrunch AI"
+        }
+      ],
+      "eventImage": {
+        "url": "https://techcrunch.com/wp-content/uploads/2026/10/AI-agents.jpg?resize=1200,675",
+        "credit": "TechCrunch AI",
+        "link": "https://techcrunch.com/2026/10/22/1password-launches-a-way-for-ai-agents-to-log-in-on-your-behalf-without-seeing-your-password/",
+        "zh": {
+          "alt": "让Agent代你登录，但不交出密码：1Password在补自动化的危险缺口",
+          "caption": "让Agent代你登录，但不交出密码：1Password在补自动化的危险缺口"
+        },
+        "en": {
+          "alt": "Let an Agent log in without handing it your password: 1Password closes a dangerous gap",
+          "caption": "Let an Agent log in without handing it your password: 1Password closes a dangerous gap"
+        }
+      },
+      "termGuides": [
+        {
+          "key": "1Password",
+          "aliases": [
+            "1Password"
+          ],
+          "zh": {
+            "label": "1Password",
+            "meaning": "保存和管理登录密码的服务。",
+            "relation": "它为Agent设计了不暴露原始密码的登录方式。"
+          },
+          "en": {
+            "label": "1Password",
+            "meaning": "A service for storing and managing login passwords.",
+            "relation": "It built a login method for Agents that does not expose the original password."
+          }
+        },
+        {
+          "key": "Agent",
+          "aliases": [
+            "Agent",
+            "AI Agent",
+            "智能体"
+          ],
+          "zh": {
+            "label": "Agent",
+            "meaning": "能按指令调用工具、完成多步任务的AI程序。",
+            "relation": "这里的Agent需要登录网站来替用户做事。"
+          },
+          "en": {
+            "label": "Agent",
+            "meaning": "An AI program that can use tools to complete multi-step tasks.",
+            "relation": "The Agent here needs website access to act for the user."
+          }
+        }
+      ]
+    },
+    {
+      "id": "ai-amazon-walmart-agent-shopping",
+      "cat": "AI",
+      "icon": "ship",
+      "title": "亚马逊拦Agent、沃尔玛欢迎它：购物入口的争夺已到结账前",
+      "brief": "以后AI替你比价下单时，谁让它进门，谁就更可能决定你看到什么、买什么。",
+      "take": "当亚马逊阻挡 AI Agent 访问时，沃尔玛选择向它们开放，双方对购物入口给出了相反答案。Agent 购物能替用户搜索、比较和下单，但平台担心失去页面流量、广告位和对推荐的控制。对消费者而言，开放不必然更便宜：如果 Agent 只看得到愿意接入的商家，所谓“帮你全网比价”可能只是一个较小的货架。真正值得看的是价格、库存和退货规则是否能被透明比较。",
+      "meta": "10月21日｜Agent与电商",
+      "facts": [
+        [
+          "分歧",
+          "亚马逊限制AI Agent访问"
+        ],
+        [
+          "开放",
+          "沃尔玛向Agent提供入口"
+        ],
+        [
+          "场景",
+          "Agent可参与搜索、比较和下单"
+        ]
+      ],
+      "visual": {
+        "type": "orbit",
+        "label": "Agent购物入口",
+        "nodes": [
+          "用户委托",
+          "Agent搜索",
+          "平台筛选",
+          "完成下单"
+        ]
+      },
+      "impacts": [
+        [
+          "选择",
+          "可见商品范围可能由平台接入规则决定"
+        ],
+        [
+          "价格",
+          "比价是否真实取决于商品和费用是否完整开放"
+        ]
+      ],
+      "next": [
+        "两家公司对第三方Agent的具体规则",
+        "退货、会员价和广告如何呈现给Agent"
+      ],
+      "source": "TechCrunch AI",
+      "updated": "2026-10-21",
+      "en": {
+        "cat": "AI",
+        "title": "Amazon blocks Agents while Walmart welcomes them: the fight has reached the checkout door",
+        "brief": "When AI shops for you, the platform that lets it in may shape what you see and what you buy.",
+        "take": "Amazon is blocking AI Agents while Walmart is opening the door, giving opposite answers to who controls the shopping entry point. Shopping Agents can search, compare, and order for users, but platforms risk losing page traffic, ad space, and control over recommendations. Openness does not automatically mean lower prices for consumers: if an Agent can see only merchants that agree to connect, “web-wide comparison” may be a much smaller shelf. The real test is whether prices, inventory, and return rules can be compared transparently.",
+        "meta": "Oct. 21 | Agents and retail",
+        "facts": [
+          [
+            "Split",
+            "Amazon restricts AI Agent access"
+          ],
+          [
+            "Access",
+            "Walmart is opening an entry point for Agents"
+          ],
+          [
+            "Use case",
+            "Agents can search, compare, and place orders"
+          ]
+        ],
+        "visual": {
+          "type": "orbit",
+          "label": "The Agent shopping gate",
+          "nodes": [
+            "User delegates",
+            "Agent searches",
+            "Platform filters",
+            "Order placed"
+          ]
+        },
+        "impacts": [
+          [
+            "Choice",
+            "Platform access rules may determine which products are visible"
+          ],
+          [
+            "Price",
+            "Real comparison depends on full access to products and fees"
+          ]
+        ],
+        "next": [
+          "The companies’ detailed rules for third-party Agents",
+          "How returns, member prices, and ads appear to Agents"
+        ],
+        "source": "TechCrunch AI",
+        "updated": "2026-10-21"
+      },
+      "sourceLinks": [
+        {
+          "title": "While Amazon blocks AI agents, Walmart rolls out the welcome mat",
+          "url": "https://techcrunch.com/2026/10/21/while-amazon-blocks-ai-agents-walmart-rolls-out-the-welcome-mat/",
+          "publisher": "TechCrunch AI"
+        }
+      ],
+      "eventImage": {
+        "url": "https://techcrunch.com/wp-content/uploads/2018/01/gettyimages-903923942.jpeg?resize=1200,800",
+        "credit": "TechCrunch AI",
+        "link": "https://techcrunch.com/2026/10/21/while-amazon-blocks-ai-agents-walmart-rolls-out-the-welcome-mat/",
+        "zh": {
+          "alt": "亚马逊拦Agent、沃尔玛欢迎它：购物入口的争夺已到结账前",
+          "caption": "亚马逊拦Agent、沃尔玛欢迎它：购物入口的争夺已到结账前"
+        },
+        "en": {
+          "alt": "Amazon blocks Agents while Walmart welcomes them: the fight has reached the checkout door",
+          "caption": "Amazon blocks Agents while Walmart welcomes them: the fight has reached the checkout door"
+        }
+      },
+      "termGuides": [
+        {
+          "key": "AI-shopping-agent",
+          "aliases": [
+            "AI Agent",
+            "购物Agent",
+            "AI购物智能体"
+          ],
+          "zh": {
+            "label": "购物Agent",
+            "meaning": "可按用户要求搜索商品、比较条件并尝试下单的AI程序。",
+            "relation": "亚马逊和沃尔玛正在争夺它从哪里进入购物流程。"
+          },
+          "en": {
+            "label": "Shopping Agent",
+            "meaning": "An AI program that can search products, compare terms, and try to place an order for a user.",
+            "relation": "Amazon and Walmart are contesting where it enters the shopping flow."
+          }
+        },
+        {
+          "key": "Walmart",
+          "aliases": [
+            "Walmart",
+            "沃尔玛"
+          ],
+          "zh": {
+            "label": "沃尔玛",
+            "meaning": "美国大型零售商。",
+            "relation": "它选择向AI Agent开放购物入口。"
+          },
+          "en": {
+            "label": "Walmart",
+            "meaning": "A major U.S. retailer.",
+            "relation": "It is choosing to open a shopping entry point to AI Agents."
+          }
+        }
+      ]
+    },
+    {
+      "id": "ai-uber-chatgpt-work",
+      "cat": "AI",
+      "icon": "code",
+      "title": "Uber把3万员工接入ChatGPT Work：大规模上班用AI，难题是数据别跟着外流",
+      "brief": "员工人人都有AI助手不等于人人都能少加班，先要解决哪些内部信息能喂给它。",
+      "take": "Uber 将为全部约3万名员工部署 ChatGPT Work。这让 AI 从少数试点团队的工具，变成大公司的日常办公基础设施：写文档、整理信息、辅助分析都会更顺手。可规模越大，治理越难。公司必须明确哪些乘客、司机、财务和商业信息能进入系统，哪些绝不能；也要让员工知道何时AI只是起草助手，何时不能替代人工判断。",
+      "meta": "10月22日｜企业部署",
+      "facts": [
+        [
+          "规模",
+          "Uber将覆盖约3万名员工"
+        ],
+        [
+          "工具",
+          "部署ChatGPT Work"
+        ],
+        [
+          "用途",
+          "面向日常办公和知识工作"
+        ]
+      ],
+      "visual": null,
+      "impacts": [
+        [
+          "工作",
+          "AI助手将从少数试点变成默认办公工具"
+        ],
+        [
+          "隐私",
+          "内部数据分类和使用规则决定风险高低"
+        ]
+      ],
+      "next": [
+        "Uber的敏感数据限制细则",
+        "是否公布生产率与错误率的衡量结果"
+      ],
+      "source": "TechCrunch AI",
+      "updated": "2026-10-22",
+      "en": {
+        "cat": "AI",
+        "title": "Uber gives ChatGPT Work to 30,000 staff: the challenge is keeping internal data from spilling out",
+        "brief": "Giving everyone an AI assistant does not automatically mean less overtime; first comes the question of what internal data it may see.",
+        "take": "Uber is rolling out ChatGPT Work to all roughly 30,000 employees. That turns AI from a tool for a few pilot teams into everyday office infrastructure at a large company: drafting documents, organizing information, and assisting analysis should become easier. But governance gets harder at scale. Uber must define which rider, driver, financial, and business information may enter the system and which may not. Employees also need to know when AI is merely a drafting helper and when it cannot replace human judgment.",
+        "meta": "Oct. 22 | Enterprise deployment",
+        "facts": [
+          [
+            "Scale",
+            "Uber will cover about 30,000 employees"
+          ],
+          [
+            "Tool",
+            "It is deploying ChatGPT Work"
+          ],
+          [
+            "Use",
+            "The tool is aimed at everyday office and knowledge work"
+          ]
+        ],
+        "visual": null,
+        "impacts": [
+          [
+            "Work",
+            "AI assistants move from pilots toward default office tools"
+          ],
+          [
+            "Privacy",
+            "Data classification and use rules will determine much of the risk"
+          ]
+        ],
+        "next": [
+          "Uber’s detailed limits on sensitive data",
+          "Whether it publishes productivity and error measurements"
+        ],
+        "source": "TechCrunch AI",
+        "updated": "2026-10-22"
+      },
+      "sourceLinks": [
+        {
+          "title": "Uber puts all 30,000 employees on ChatGPT Work",
+          "url": "https://techcrunch.com/2026/10/22/uber-puts-all-30000-employees-on-chatgpt-work/",
+          "publisher": "TechCrunch AI"
+        }
+      ],
+      "eventImage": {
+        "url": "https://techcrunch.com/wp-content/uploads/2026/06/wayve-uber-uk.jpg?resize=1200,800",
+        "credit": "TechCrunch AI",
+        "link": "https://techcrunch.com/2026/10/22/uber-puts-all-30000-employees-on-chatgpt-work/",
+        "zh": {
+          "alt": "Uber把3万员工接入ChatGPT Work：大规模上班用AI，难题是数据别跟着外流",
+          "caption": "Uber把3万员工接入ChatGPT Work：大规模上班用AI，难题是数据别跟着外流"
+        },
+        "en": {
+          "alt": "Uber gives ChatGPT Work to 30,000 staff: the challenge is keeping internal data from spilling out",
+          "caption": "Uber gives ChatGPT Work to 30,000 staff: the challenge is keeping internal data from spilling out"
+        }
+      },
+      "termGuides": [
+        {
+          "key": "Uber",
+          "aliases": [
+            "Uber",
+            "优步"
+          ],
+          "zh": {
+            "label": "Uber",
+            "meaning": "运营网约车等服务的科技公司。",
+            "relation": "它将让约3万名员工使用ChatGPT Work。"
+          },
+          "en": {
+            "label": "Uber",
+            "meaning": "A technology company known for ride-hailing and related services.",
+            "relation": "It is giving ChatGPT Work to roughly 30,000 employees."
+          }
+        },
+        {
+          "key": "ChatGPT-Work",
+          "aliases": [
+            "ChatGPT Work"
+          ],
+          "zh": {
+            "label": "ChatGPT Work",
+            "meaning": "面向企业员工使用的ChatGPT工作版本。",
+            "relation": "Uber把它作为全员办公工具部署。"
+          },
+          "en": {
+            "label": "ChatGPT Work",
+            "meaning": "A work-oriented version of ChatGPT for employees.",
+            "relation": "Uber is deploying it as an organization-wide work tool."
+          }
+        }
+      ]
+    },
+    {
+      "id": "ai-meta-ai-stock-class",
+      "cat": "AI",
+      "icon": "chart",
+      "title": "Meta想发新类别股票盖AI账单：连巨头也在找更便宜的烧钱方式",
+      "brief": "数据中心和芯片太贵，Meta不只靠广告现金流，开始考虑把AI投入的融资压力单独装进新工具里。",
+      "take": "Meta 据报希望通过新设的一类股票，为大规模 AI 建设筹钱。它反映的不是一个普通融资动作，而是资本开支的尺度变了：训练、推理和数据中心要长期投入，连现金流强劲的互联网巨头也在试着分摊风险。对普通用户，短期不会因此看到一个新功能；长期却可能影响广告负担、免费服务的边界，以及公司是否会优先把AI能力卖给企业来回收成本。",
+      "meta": "10月21日｜AI基础设施融资",
+      "facts": [
+        [
+          "计划",
+          "Meta据报考虑新类别股票"
+        ],
+        [
+          "用途",
+          "资金面向大规模AI建设"
+        ],
+        [
+          "背景",
+          "数据中心与芯片投入持续上升"
+        ]
+      ],
+      "visual": {
+        "type": "orbit",
+        "label": "AI建设的资金压力",
+        "nodes": [
+          "发起融资",
+          "建设机房",
+          "购买芯片",
+          "回收成本"
+        ]
+      },
+      "impacts": [
+        [
+          "服务",
+          "高昂投入可能改变免费产品与广告的平衡"
+        ],
+        [
+          "市场",
+          "AI基础设施的融资方式正成为竞争力的一部分"
+        ]
+      ],
+      "next": [
+        "新股类别的权利与风险安排",
+        "Meta会否披露更多AI资本开支"
+      ],
+      "source": "TechCrunch AI",
+      "updated": "2026-10-21",
+      "en": {
+        "cat": "AI",
+        "title": "Meta considers a new stock class to pay the AI bill: even giants are seeking cheaper fuel",
+        "brief": "Data centers and chips are so expensive that Meta is looking beyond ad cash flow for a way to fund its AI buildout.",
+        "take": "Meta reportedly wants to use a newly created class of stock to fund its broad AI buildout. This is more than an ordinary financing move: training, inference, and data centers demand long-term spending, and even a cash-rich internet giant is looking to spread the burden. Ordinary users will not see a new feature overnight. Over time, though, the cost could affect the ad load, the limits of free services, and whether Meta prioritizes selling AI capabilities to businesses to recover the bill.",
+        "meta": "Oct. 21 | AI infrastructure finance",
+        "facts": [
+          [
+            "Plan",
+            "Meta reportedly is considering a new class of stock"
+          ],
+          [
+            "Use",
+            "The funding is for broad AI buildout"
+          ],
+          [
+            "Backdrop",
+            "Data-center and chip spending keeps rising"
+          ]
+        ],
+        "visual": {
+          "type": "orbit",
+          "label": "The AI funding squeeze",
+          "nodes": [
+            "Raise capital",
+            "Build data centers",
+            "Buy chips",
+            "Recover cost"
+          ]
+        },
+        "impacts": [
+          [
+            "Services",
+            "High costs may alter the balance between free products and ads"
+          ],
+          [
+            "Market",
+            "Financing infrastructure is becoming part of AI competitiveness"
+          ]
+        ],
+        "next": [
+          "The rights and risks attached to the new stock class",
+          "Whether Meta discloses more AI capital spending"
+        ],
+        "source": "TechCrunch AI",
+        "updated": "2026-10-21"
+      },
+      "sourceLinks": [
+        {
+          "title": "Meta wants to pay for its broad AI buildout with a newly created class of stock",
+          "url": "https://techcrunch.com/2026/10/21/meta-wants-to-pay-for-its-broad-ai-buildout-with-a-newly-created-class-of-stock/",
+          "publisher": "TechCrunch AI"
+        }
+      ],
+      "eventImage": {
+        "url": "https://techcrunch.com/wp-content/uploads/2026/09/mark-zuckerberg-muse-charm-getty.jpg?resize=1200,800",
+        "credit": "TechCrunch AI",
+        "link": "https://techcrunch.com/2026/10/21/meta-wants-to-pay-for-its-broad-ai-buildout-with-a-newly-created-class-of-stock/",
+        "zh": {
+          "alt": "Meta想发新类别股票盖AI账单：连巨头也在找更便宜的烧钱方式",
+          "caption": "Meta想发新类别股票盖AI账单：连巨头也在找更便宜的烧钱方式"
+        },
+        "en": {
+          "alt": "Meta considers a new stock class to pay the AI bill: even giants are seeking cheaper fuel",
+          "caption": "Meta considers a new stock class to pay the AI bill: even giants are seeking cheaper fuel"
+        }
+      },
+      "termGuides": [
+        {
+          "key": "Meta",
+          "aliases": [
+            "Meta",
+            "Meta公司"
+          ],
+          "zh": {
+            "label": "Meta",
+            "meaning": "运营Facebook、Instagram等产品的科技公司。",
+            "relation": "它据报正寻找新融资方式支付AI基础设施投入。"
+          },
+          "en": {
+            "label": "Meta",
+            "meaning": "The technology company behind Facebook and Instagram.",
+            "relation": "It is reportedly seeking a new way to fund AI infrastructure spending."
+          }
+        },
+        {
+          "key": "inference",
+          "aliases": [
+            "推理",
+            "inference"
+          ],
+          "zh": {
+            "label": "推理",
+            "meaning": "训练完成的模型为用户生成回答或执行任务时的运行过程。",
+            "relation": "用户越多，持续推理的服务器和电力成本越高。"
+          },
+          "en": {
+            "label": "Inference",
+            "meaning": "The process of running a trained model to answer users or perform tasks.",
+            "relation": "More users mean a larger ongoing bill for servers and electricity."
+          }
+        }
+      ]
+    },
+    {
+      "id": "ai-recursive-flint",
+      "cat": "AI",
+      "icon": "code",
+      "title": "AI参与造出编程模型：Recursive想把“会写代码”装进笔记本",
+      "brief": "如果本地运行的编码模型真够用，开发者能少传代码到云端，但效果和安全仍要自己验证。",
+      "take": "Recursive 推出 Flint，一款可在笔记本电脑上使用的编码模型，并称其很大程度由 AI 协助开发。它抓住了开发者一个很实际的需求：处理私有代码时，能否少把项目上传到云端，同时获得可用的编程帮助。本地模型并不天然更安全或更准确——设备性能有限，生成代码也可能带漏洞。它是否能改变习惯，取决于在真实项目中能否稳定、省时，并让人看得懂它改了什么。",
+      "meta": "10月21日｜开发者工具",
+      "facts": [
+        [
+          "发布",
+          "Recursive推出Flint编码模型"
+        ],
+        [
+          "运行",
+          "定位为笔记本电脑上的本地使用"
+        ],
+        [
+          "开发",
+          "公司称模型很大程度由AI参与构建"
+        ]
+      ],
+      "visual": null,
+      "impacts": [
+        [
+          "隐私",
+          "私有代码可减少上传到外部云服务的需要"
+        ],
+        [
+          "质量",
+          "本地生成的代码仍需测试、审查和安全扫描"
+        ]
+      ],
+      "next": [
+        "Flint支持的硬件与编程语言",
+        "独立测试中的速度、准确率和漏洞表现"
+      ],
+      "source": "TechCrunch AI",
+      "updated": "2026-10-21",
+      "en": {
+        "cat": "AI",
+        "title": "An AI-assisted coding model built for a laptop: Recursive wants coding help closer to home",
+        "brief": "If a local coding model is genuinely useful, developers can send less code to the cloud—but still need to verify its work and security.",
+        "take": "Recursive has launched Flint, a coding model designed for laptop use, and says AI largely helped build it. It targets a practical developer need: getting useful coding assistance on private code without sending as much of a project to the cloud. A local model is not automatically safer or more accurate. Hardware is limited, and generated code can still contain flaws. Whether it changes habits depends on reliable performance in real projects, time saved, and whether people can understand what it changed.",
+        "meta": "Oct. 21 | Developer tools",
+        "facts": [
+          [
+            "Launch",
+            "Recursive launched the Flint coding model"
+          ],
+          [
+            "Runtime",
+            "It is positioned for local laptop use"
+          ],
+          [
+            "Development",
+            "The company says AI largely helped build it"
+          ]
+        ],
+        "visual": null,
+        "impacts": [
+          [
+            "Privacy",
+            "Private code may need to be sent to outside cloud services less often"
+          ],
+          [
+            "Quality",
+            "Locally generated code still needs testing, review, and security scans"
+          ]
+        ],
+        "next": [
+          "Supported hardware and programming languages",
+          "Independent results on speed, accuracy, and vulnerabilities"
+        ],
+        "source": "TechCrunch AI",
+        "updated": "2026-10-21"
+      },
+      "sourceLinks": [
+        {
+          "title": "Recursive launches Flint, a laptop coding model it says was largely built by AI",
+          "url": "https://techcrunch.com/2026/10/21/recursive-launches-flint-a-laptop-coding-model-it-says-was-largely-built-by-ai/",
+          "publisher": "TechCrunch AI"
+        }
+      ],
+      "eventImage": {
+        "url": "https://techcrunch.com/wp-content/uploads/2026/05/GettyImages-2157738833.jpg?resize=1200,800",
+        "credit": "TechCrunch AI",
+        "link": "https://techcrunch.com/2026/10/21/recursive-launches-flint-a-laptop-coding-model-it-says-was-largely-built-by-ai/",
+        "zh": {
+          "alt": "AI参与造出编程模型：Recursive想把“会写代码”装进笔记本",
+          "caption": "AI参与造出编程模型：Recursive想把“会写代码”装进笔记本"
+        },
+        "en": {
+          "alt": "An AI-assisted coding model built for a laptop: Recursive wants coding help closer to home",
+          "caption": "An AI-assisted coding model built for a laptop: Recursive wants coding help closer to home"
+        }
+      },
+      "termGuides": [
+        {
+          "key": "Recursive",
+          "aliases": [
+            "Recursive"
+          ],
+          "zh": {
+            "label": "Recursive",
+            "meaning": "推出Flint的AI创业公司。",
+            "relation": "它声称Flint的开发过程很大程度借助了AI。"
+          },
+          "en": {
+            "label": "Recursive",
+            "meaning": "The AI startup behind Flint.",
+            "relation": "It says AI substantially assisted Flint’s development."
+          }
+        },
+        {
+          "key": "Flint",
+          "aliases": [
+            "Flint"
+          ],
+          "zh": {
+            "label": "Flint",
+            "meaning": "面向笔记本电脑本地运行的编码模型。",
+            "relation": "它试图让开发者少把私有代码上传到云端。"
+          },
+          "en": {
+            "label": "Flint",
+            "meaning": "A coding model intended to run locally on laptops.",
+            "relation": "It aims to let developers send less private code to the cloud."
+          }
+        }
+      ]
+    }
+  ]
+}

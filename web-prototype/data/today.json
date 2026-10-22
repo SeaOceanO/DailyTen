@@ -1,125 +1,358 @@
 {
-  "dateKey": "2026-10-22",
-  "generatedAt": "2026-10-22T05:00:00+08:00",
-  "title": "DailyTen｜10月22日",
-  "subtitle": "从 AI 入口之争，到战争、隐私与公共卫生的硬风险",
-  "briefLabel": "今日十件事",
-  "doneLabel": "读完今日简报",
+  "dateKey": "2026-10-23",
+  "generatedAt": "2026-10-23T05:00:00+08:00",
+  "title": "DailyTen",
+  "subtitle": "10月23日｜AI开始改入口，漏洞和算力账单也跟着变大",
+  "briefLabel": "今日要点",
+  "doneLabel": "读完了",
   "readTimeMinutes": 8,
   "items": [
     {
-      "id": "anthropic-claude-duet",
+      "id": "openai-fundraise-ipo",
       "cat": "AI",
       "icon": "ai",
-      "title": "Anthropic 要把 Claude 做成“私人 Agent”，AI 开始抢你的日常入口",
-      "brief": "Claude Duet 想替你持续处理个人事务，方便之外，谁能读到你的工作和生活数据会更关键。",
-      "take": "Anthropic 预告 Claude Duet，一款面向个人使用的 AI Agent，直接瞄准 Muse、Dots 一类产品。聊天机器人回答一次问题，Agent 则试图接手一连串任务：记住上下文、调用工具、替人推进事情。真正的门槛不只是模型会不会说，而是用户愿不愿意把邮件、日程、文件和付款相关操作交出去；权限、出错后的责任和数据留存都会决定它能走多远。",
-      "meta": "AI｜10月21日",
+      "title": "OpenAI又传融资300亿美元：IPO前先把AI竞赛抬到万亿美元估值",
+      "brief": "这轮融资若成，AI公司烧钱建算力的规模会再上一个台阶，竞争对手也更难跟。",
+      "take": "TechCrunch报道称，OpenAI正洽谈一轮约300亿美元融资，估值或达1.25万亿美元，并为首次公开募股做准备。钱不会只停在账面上：训练模型、购买芯片、租用数据中心都极其昂贵。对普通用户来说，短期可能是产品功能更快上线；但长期更值得留意的是，少数资金最充裕的公司会不会把AI助手、搜索和办公入口越攥越紧。",
+      "meta": "AI｜10月22日｜融资报道",
       "facts": [
         [
-          "产品",
-          "Anthropic 预告 Claude Duet"
+          "融资规模",
+          "报道称约300亿美元"
         ],
         [
-          "定位",
-          "面向个人事务的 AI Agent"
+          "估值目标",
+          "约1.25万亿美元"
         ],
         [
-          "竞争",
-          "瞄准 Muse、Dots 等个人助手产品"
+          "所处阶段",
+          "IPO前筹资谈判"
         ]
       ],
       "visual": null,
       "impacts": [
         [
-          "日常工具",
-          "AI 可能从“问一句答一句”变成持续代办"
+          "竞争门槛",
+          "模型竞争越来越像一场需要巨额资本的基础设施竞赛"
         ],
         [
-          "隐私边界",
-          "接入越多账户，权限和数据泄露代价越高"
+          "产品选择",
+          "资金集中可能让少数平台更容易占住日常AI入口"
         ]
       ],
       "next": [
-        "Duet 何时开放、哪些地区可用",
-        "它能否实际操作账户，还是只提供建议"
+        "融资是否正式落地",
+        "IPO时间表与资金用途"
       ],
-      "source": "CNBC",
-      "updated": "2026-10-21",
+      "source": "TechCrunch AI",
+      "updated": "2026-10-22",
       "en": {
         "cat": "AI",
-        "title": "Anthropic wants Claude to become a personal Agent—and AI is fighting for your daily entry point",
-        "brief": "Claude Duet aims to handle ongoing personal tasks, making data access and permissions much more consequential.",
-        "take": "Anthropic has previewed Claude Duet, a personal AI Agent aimed at products such as Muse and Dots. A chatbot answers a question; an Agent tries to carry a task across steps, remember context and use tools. The hard part is not only whether the model sounds capable. It is whether people will hand over email, calendars, files and possibly payment-related actions—and who is accountable when it gets something wrong.",
-        "meta": "AI | Oct. 21",
+        "title": "OpenAI reportedly seeks $30B: the AI race is moving toward trillion-dollar valuations",
+        "brief": "If this round closes, the money needed to build AI infrastructure gets even bigger—and rivals have a harder race to run.",
+        "take": "TechCrunch reports that OpenAI is discussing a roughly $30 billion fundraise at a valuation of about $1.25 trillion, ahead of a possible IPO. This is not money sitting idle: training models, buying chips, and leasing data centers are enormously expensive. Users may see features arrive faster in the short term. The longer-term question is whether a handful of cash-rich firms end up controlling more of the AI, search, and work tools people use every day.",
+        "meta": "AI | Oct. 22 | Fundraising report",
         "facts": [
           [
-            "Product",
-            "Anthropic previewed Claude Duet"
+            "Raise",
+            "Reportedly about $30 billion"
           ],
           [
-            "Role",
-            "A personal-task AI Agent"
+            "Valuation",
+            "About $1.25 trillion sought"
           ],
           [
-            "Competition",
-            "It targets personal assistants including Muse and Dots"
+            "Stage",
+            "Fundraising talks before an IPO"
           ]
         ],
         "visual": null,
         "impacts": [
           [
-            "Everyday tools",
-            "AI could move from one-off answers to ongoing task handling"
+            "Barrier to entry",
+            "Model competition increasingly requires infrastructure-scale capital"
           ],
           [
-            "Privacy boundary",
-            "More connected accounts make permissions and data exposure costlier"
+            "User choice",
+            "Concentrated funding could give a few platforms more control over daily AI entry points"
           ]
         ],
         "next": [
-          "When Duet launches and where it is available",
-          "Whether it can act in accounts or only make suggestions"
+          "Whether the financing is formally completed",
+          "IPO timing and use of proceeds"
         ],
-        "source": "CNBC",
-        "updated": "2026-10-21"
+        "source": "TechCrunch AI",
+        "updated": "2026-10-22"
       },
       "sourceLinks": [
         {
-          "title": "Anthropic preview of Claude Duet, personal AI agent take on Muse, Dots",
-          "url": "https://www.cnbc.com/2026/10/21/anthropic-preview-of-claude-duet-personal-ai-agent-take-on-muse-dots.html",
-          "publisher": "CNBC"
+          "title": "OpenAI working on new $30B raise at $1.25T valuation ahead of IPO",
+          "url": "https://techcrunch.com/2026/10/22/openai-working-on-new-30b-raise-at-1-25t-valuation-ahead-of-ipo/",
+          "publisher": "TechCrunch AI"
         }
       ],
       "eventImage": {
-        "url": "https://image.cnbcfm.com/api/v1/image/108338734-1784745509530-gettyimages-2280291449-ANTHROPIC_CIRCUIT.jpeg?v=1787672726&w=1920&h=1080",
-        "credit": "CNBC",
-        "link": "https://www.cnbc.com/2026/10/21/anthropic-preview-of-claude-duet-personal-ai-agent-take-on-muse-dots.html",
+        "url": "https://techcrunch.com/wp-content/uploads/2023/11/Sam-Altman-OpenAI.jpg?resize=1200,680",
+        "credit": "TechCrunch AI",
+        "link": "https://techcrunch.com/2026/10/22/openai-working-on-new-30b-raise-at-1-25t-valuation-ahead-of-ipo/",
         "zh": {
-          "alt": "Anthropic 要把 Claude 做成“私人 Agent”，AI 开始抢你的日常入口",
-          "caption": "Anthropic 要把 Claude 做成“私人 Agent”，AI 开始抢你的日常入口"
+          "alt": "OpenAI又传融资300亿美元：IPO前先把AI竞赛抬到万亿美元估值",
+          "caption": "OpenAI又传融资300亿美元：IPO前先把AI竞赛抬到万亿美元估值"
         },
         "en": {
-          "alt": "Anthropic wants Claude to become a personal Agent—and AI is fighting for your daily entry point",
-          "caption": "Anthropic wants Claude to become a personal Agent—and AI is fighting for your daily entry point"
+          "alt": "OpenAI reportedly seeks $30B: the AI race is moving toward trillion-dollar valuations",
+          "caption": "OpenAI reportedly seeks $30B: the AI race is moving toward trillion-dollar valuations"
         }
       },
       "termGuides": [
         {
-          "key": "Claude Duet",
+          "key": "OpenAI",
           "aliases": [
-            "Claude Duet",
-            "Duet"
+            "OpenAI"
           ],
           "zh": {
-            "label": "Claude Duet",
-            "meaning": "Anthropic 预告的个人 AI Agent 产品。",
-            "relation": "这次它被定位为能持续协助个人事务，而不只是一次次聊天。"
+            "label": "OpenAI",
+            "meaning": "开发ChatGPT等产品的美国AI公司。",
+            "relation": "这家公司的新融资谈判，关系到它还能以多大规模购买算力和扩张产品。"
           },
           "en": {
-            "label": "Claude Duet",
-            "meaning": "A personal AI Agent product previewed by Anthropic.",
-            "relation": "In this story, it is positioned for ongoing personal help rather than one-off chats."
+            "label": "OpenAI",
+            "meaning": "The US AI company behind ChatGPT and related products.",
+            "relation": "Its fundraising talks affect how aggressively it can buy compute and expand its products."
+          }
+        }
+      ]
+    },
+    {
+      "id": "openai-decision-model",
+      "cat": "AI",
+      "icon": "ai",
+      "title": "OpenAI把“决策模型”推向更广用户：AI不只答题，也要替你选下一步",
+      "brief": "当模型开始帮人判断和行动，方便之外，出错由谁兜底会变成更现实的问题。",
+      "take": "TechCrunch称，OpenAI已更广泛提供一款与Jev竞争的“决策模型”。这类模型的目标不是只生成一段像样的文字，而是在多步任务里判断下一步该做什么。它有望让AI更像能执行流程的助手，但也把风险从“答错一句话”带到“做错一个动作”：涉及购买、账号、文件或工作决策时，确认机制和责任边界比演示效果更重要。",
+      "meta": "AI｜10月22日｜产品开放",
+      "facts": [
+        [
+          "产品方向",
+          "面向多步判断与行动"
+        ],
+        [
+          "开放范围",
+          "TechCrunch称已广泛可用"
+        ],
+        [
+          "竞争焦点",
+          "决策模型赛道升温"
+        ]
+      ],
+      "visual": null,
+      "impacts": [
+        [
+          "工作方式",
+          "AI助手可能从写草稿进一步参与流程判断"
+        ],
+        [
+          "安全边界",
+          "能行动的系统需要更清楚的授权和人工确认"
+        ]
+      ],
+      "next": [
+        "具体开放对象与价格",
+        "高风险任务的权限设计"
+      ],
+      "source": "TechCrunch AI",
+      "updated": "2026-10-22",
+      "en": {
+        "cat": "AI",
+        "title": "OpenAI broadens access to a decision model: AI is moving from answers to next steps",
+        "brief": "When a model helps decide and act, the practical question becomes who catches the mistake.",
+        "take": "TechCrunch says OpenAI has made a decision model, positioned against Jev, more widely available. The point is not merely to produce polished text, but to choose what to do next across a multi-step task. That could make AI more useful as a working assistant. It also changes the risk from one wrong sentence to one wrong action: for purchases, accounts, files, or work decisions, approval controls matter more than a slick demo.",
+        "meta": "AI | Oct. 22 | Product availability",
+        "facts": [
+          [
+            "Purpose",
+            "Multi-step judgment and action"
+          ],
+          [
+            "Access",
+            "Reportedly made broadly available"
+          ],
+          [
+            "Competition",
+            "Decision models are becoming a key battleground"
+          ]
+        ],
+        "visual": null,
+        "impacts": [
+          [
+            "Workflows",
+            "AI assistants may move beyond drafting into process decisions"
+          ],
+          [
+            "Safety boundary",
+            "Systems that act need clearer permissions and human approval"
+          ]
+        ],
+        "next": [
+          "Who gets access and at what price",
+          "Permission rules for high-risk tasks"
+        ],
+        "source": "TechCrunch AI",
+        "updated": "2026-10-22"
+      },
+      "sourceLinks": [
+        {
+          "title": "OpenAI makes its Jev competitor widely available as decision model competition heats up",
+          "url": "https://techcrunch.com/2026/10/22/openai-makes-its-jev-competitor-widely-available-as-decision-model-competition-heats-up/",
+          "publisher": "TechCrunch AI"
+        }
+      ],
+      "eventImage": {
+        "url": "https://techcrunch.com/wp-content/uploads/2026/10/Screenshot-2026-10-22-at-12.17.11-PM-1.png?resize=1200,988",
+        "credit": "TechCrunch AI",
+        "link": "https://techcrunch.com/2026/10/22/openai-makes-its-jev-competitor-widely-available-as-decision-model-competition-heats-up/",
+        "zh": {
+          "alt": "OpenAI把“决策模型”推向更广用户：AI不只答题，也要替你选下一步",
+          "caption": "OpenAI把“决策模型”推向更广用户：AI不只答题，也要替你选下一步"
+        },
+        "en": {
+          "alt": "OpenAI broadens access to a decision model: AI is moving from answers to next steps",
+          "caption": "OpenAI broadens access to a decision model: AI is moving from answers to next steps"
+        }
+      },
+      "termGuides": [
+        {
+          "key": "决策模型",
+          "aliases": [
+            "决策模型",
+            "decision model"
+          ],
+          "zh": {
+            "label": "决策模型",
+            "meaning": "专门处理多步任务中“下一步做什么”的AI模型。",
+            "relation": "OpenAI正把这类模型推向更广用户，竞争从聊天回答转向实际执行。"
+          },
+          "en": {
+            "label": "Decision model",
+            "meaning": "An AI model designed to choose next actions across multi-step tasks.",
+            "relation": "OpenAI is broadening access as competition shifts from chat answers toward execution."
+          }
+        }
+      ]
+    },
+    {
+      "id": "anthropic-claude-duet",
+      "cat": "AI",
+      "icon": "ai",
+      "title": "Anthropic推Claude Duet：人人都想把AI做成会干活的Agent",
+      "brief": "AI公司争的已不是聊天窗口，而是谁先成为你替你跑流程的工作入口。",
+      "take": "Anthropic推出Claude Duet应用，TechCrunch将它形容为该公司押注AI Agent的一步。Agent指的是能围绕目标调用工具、完成多步任务的AI，而不是只回答一个问题。对用户，它可能减少整理资料、切换软件和重复操作；但一旦它接触日历、文档或账号，权限给多少、过程能否看懂、出错能否撤回，都会决定它是帮手还是新麻烦。",
+      "meta": "AI｜10月22日｜Agent产品",
+      "facts": [
+        [
+          "产品",
+          "Claude Duet应用"
+        ],
+        [
+          "公司",
+          "Anthropic"
+        ],
+        [
+          "押注方向",
+          "AI Agent"
+        ]
+      ],
+      "visual": null,
+      "impacts": [
+        [
+          "入口之争",
+          "AI产品正从对话工具转向代办任务的工作界面"
+        ],
+        [
+          "隐私与控制",
+          "Agent接入个人工具后，授权范围需要更谨慎"
+        ]
+      ],
+      "next": [
+        "Duet可调用哪些工具",
+        "用户能否逐步确认和撤销操作"
+      ],
+      "source": "TechCrunch AI",
+      "updated": "2026-10-22",
+      "en": {
+        "cat": "AI",
+        "title": "Anthropic launches Claude Duet: everyone wants AI to become an agent that does the work",
+        "brief": "AI firms are no longer just fighting for the chat window; they want to be the place where work gets done.",
+        "take": "Anthropic has launched the Claude Duet app, which TechCrunch describes as a bet on AI agents. An agent is AI that can use tools and complete steps toward a goal, rather than simply answer one prompt. It could cut down on collecting information, switching apps, and repetitive work. But once it can reach calendars, documents, or accounts, the key questions are how much access it gets, whether people can follow its actions, and whether mistakes can be undone.",
+        "meta": "AI | Oct. 22 | Agent product",
+        "facts": [
+          [
+            "Product",
+            "Claude Duet app"
+          ],
+          [
+            "Company",
+            "Anthropic"
+          ],
+          [
+            "Bet",
+            "AI agents"
+          ]
+        ],
+        "visual": null,
+        "impacts": [
+          [
+            "Battle for the interface",
+            "AI products are shifting from chat tools to work-completion interfaces"
+          ],
+          [
+            "Privacy and control",
+            "Agent access to personal tools makes careful permissions essential"
+          ]
+        ],
+        "next": [
+          "Which tools Duet can access",
+          "Whether users can approve and reverse actions step by step"
+        ],
+        "source": "TechCrunch AI",
+        "updated": "2026-10-22"
+      },
+      "sourceLinks": [
+        {
+          "title": "Claude Duet app is Anthropic's bet on agents",
+          "url": "https://techcrunch.com/2026/10/22/claude-duet-app-is-anthropics-bet-on-agents/",
+          "publisher": "TechCrunch AI"
+        }
+      ],
+      "eventImage": {
+        "url": "https://techcrunch.com/wp-content/uploads/2026/10/Claude-Duet.jpg?resize=1200,675",
+        "credit": "TechCrunch AI",
+        "link": "https://techcrunch.com/2026/10/22/claude-duet-app-is-anthropics-bet-on-agents/",
+        "zh": {
+          "alt": "Anthropic推Claude Duet：人人都想把AI做成会干活的Agent",
+          "caption": "Anthropic推Claude Duet：人人都想把AI做成会干活的Agent"
+        },
+        "en": {
+          "alt": "Anthropic launches Claude Duet: everyone wants AI to become an agent that does the work",
+          "caption": "Anthropic launches Claude Duet: everyone wants AI to become an agent that does the work"
+        }
+      },
+      "termGuides": [
+        {
+          "key": "Anthropic",
+          "aliases": [
+            "Anthropic",
+            "Anthropic公司"
+          ],
+          "zh": {
+            "label": "Anthropic",
+            "meaning": "开发Claude系列模型的美国AI公司。",
+            "relation": "它用Claude Duet把Claude从聊天产品推进到Agent工具。"
+          },
+          "en": {
+            "label": "Anthropic",
+            "meaning": "The US AI company that develops the Claude model family.",
+            "relation": "It is using Claude Duet to push Claude from chat into agent-style work."
           }
         },
         {
@@ -131,748 +364,529 @@
           ],
           "zh": {
             "label": "AI Agent",
-            "meaning": "能调用工具并按步骤完成任务的 AI。",
-            "relation": "Duet 的卖点是把回答问题进一步变成代办任务。"
+            "meaning": "能调用工具、按步骤完成目标的AI系统。",
+            "relation": "Claude Duet的核心卖点，是让AI替用户处理多步任务。"
           },
           "en": {
             "label": "AI Agent",
-            "meaning": "AI that can use tools and complete tasks in steps.",
-            "relation": "Duet’s pitch is to move beyond answering questions toward doing tasks."
+            "meaning": "An AI system that can use tools and take steps toward a goal.",
+            "relation": "Claude Duet is positioned around handling multi-step tasks for users."
           }
         }
       ]
     },
     {
-      "id": "openai-google-cloud",
-      "cat": "AI",
-      "icon": "code",
-      "title": "OpenAI 把模型卖到 Google Cloud：不再只靠微软，企业选择也多了一层",
-      "brief": "公司以后可在 Google 的云上采购 OpenAI 模型，微软独家入口被进一步松动。",
-      "take": "OpenAI 将最新模型带到 Google Cloud，并延展与 Google 的合作。这不是普通的“上架一个平台”：OpenAI 长期与微软深度绑定，如今把企业销售和计算资源的入口扩到另一家云巨头。对企业客户而言，模型采购、数据部署和既有云系统可能更容易放在一起；对 OpenAI 而言，这是降低单一伙伴依赖的现实选择。至于价格、数据处理安排和各模型的可用范围，仍要看具体合同。",
-      "meta": "AI｜10月21日",
-      "facts": [
-        [
-          "合作",
-          "OpenAI 将最新模型带到 Google Cloud"
-        ],
-        [
-          "变化",
-          "企业可经 Google 云服务采购这些模型"
-        ],
-        [
-          "背景",
-          "OpenAI 此前与微软关系最为紧密"
-        ]
-      ],
-      "visual": null,
-      "impacts": [
-        [
-          "企业选择",
-          "已使用 Google Cloud 的公司少一道迁移门槛"
-        ],
-        [
-          "竞争格局",
-          "云厂商不只卖算力，也在争夺 AI 产品入口"
-        ]
-      ],
-      "next": [
-        "哪些模型和地区先开放",
-        "企业价格与数据处理条款"
-      ],
-      "source": "CNBC、Ars Technica",
-      "updated": "2026-10-21",
-      "en": {
-        "cat": "AI",
-        "title": "OpenAI is selling models through Google Cloud, loosening Microsoft’s grip on the entry point",
-        "brief": "Businesses will be able to buy OpenAI models through Google Cloud, further reducing reliance on a single Microsoft route.",
-        "take": "OpenAI is bringing its latest models to Google Cloud, expanding its relationship with Google. This is more than another marketplace listing: OpenAI has been closely tied to Microsoft, and is now widening both enterprise sales and compute options to another cloud giant. For companies already on Google Cloud, that may make deployment easier. For OpenAI, it is a practical way to reduce dependence on one partner. Pricing, data-handling terms and model availability still depend on the contracts.",
-        "meta": "AI | Oct. 21",
-        "facts": [
-          [
-            "Deal",
-            "OpenAI is bringing latest models to Google Cloud"
-          ],
-          [
-            "Change",
-            "Businesses can procure them through Google’s cloud"
-          ],
-          [
-            "Context",
-            "OpenAI has been most closely tied to Microsoft"
-          ]
-        ],
-        "visual": null,
-        "impacts": [
-          [
-            "Business choice",
-            "Google Cloud customers may face less friction deploying OpenAI models"
-          ],
-          [
-            "Competition",
-            "Cloud providers are competing for the AI product entry point, not just compute"
-          ]
-        ],
-        "next": [
-          "Which models and regions open first",
-          "Enterprise pricing and data-handling terms"
-        ],
-        "source": "CNBC and Ars Technica",
-        "updated": "2026-10-21"
-      },
-      "sourceLinks": [
-        {
-          "title": "OpenAI bring its AI models to Google cloud, expands beyond Microsoft",
-          "url": "https://www.cnbc.com/2026/10/21/openai-bring-its-ai-models-to-googles-cloud-expands-beyond-microsoft.html",
-          "publisher": "CNBC"
-        },
-        {
-          "title": "OpenAI’s latest AI models are coming to Google Cloud and Antigravity",
-          "url": "https://arstechnica.com/ai/2026/10/openais-latest-ai-models-are-coming-to-google-cloud-and-antigravity/",
-          "publisher": "Ars Technica"
-        }
-      ],
-      "eventImage": {
-        "url": "https://image.cnbcfm.com/api/v1/image/108369650-17907047662026-09-29t175655z_1984658352_rc25tna4oh81_rtrmadp_0_ai-openai.jpeg?v=1792537167&w=1920&h=1080",
-        "credit": "CNBC",
-        "link": "https://www.cnbc.com/2026/10/21/openai-bring-its-ai-models-to-googles-cloud-expands-beyond-microsoft.html",
-        "zh": {
-          "alt": "OpenAI 把模型卖到 Google Cloud：不再只靠微软，企业选择也多了一层",
-          "caption": "OpenAI 把模型卖到 Google Cloud：不再只靠微软，企业选择也多了一层"
-        },
-        "en": {
-          "alt": "OpenAI is selling models through Google Cloud, loosening Microsoft’s grip on the entry point",
-          "caption": "OpenAI is selling models through Google Cloud, loosening Microsoft’s grip on the entry point"
-        }
-      },
-      "termGuides": [
-        {
-          "key": "Google Cloud",
-          "aliases": [
-            "Google Cloud",
-            "谷歌云"
-          ],
-          "zh": {
-            "label": "Google Cloud",
-            "meaning": "Google 面向企业提供计算、存储和软件服务的云平台。",
-            "relation": "它将成为企业购买和部署 OpenAI 模型的又一个渠道。"
-          },
-          "en": {
-            "label": "Google Cloud",
-            "meaning": "Google’s cloud platform for business computing, storage and software.",
-            "relation": "It becomes another channel for companies to buy and deploy OpenAI models."
-          }
-        },
-        {
-          "key": "OpenAI",
-          "aliases": [
-            "OpenAI"
-          ],
-          "zh": {
-            "label": "OpenAI",
-            "meaning": "开发 ChatGPT 等 AI 产品的公司。",
-            "relation": "它正把模型销售入口从与微软深度绑定的模式扩向 Google。"
-          },
-          "en": {
-            "label": "OpenAI",
-            "meaning": "The company behind ChatGPT and other AI products.",
-            "relation": "It is widening model sales beyond its deeply linked Microsoft route to Google."
-          }
-        }
-      ]
-    },
-    {
-      "id": "ukraine-missiles-talks",
-      "cat": "国际局势",
-      "icon": "alert",
-      "title": "和谈电话刚恢复，基辅又遭导弹：乌克兰的停火窗口依然很窄",
-      "brief": "俄方同意恢复与美国的沟通后，导弹仍落向基辅，谈判离保护平民还很远。",
-      "take": "BBC 报道称，在俄罗斯同意响应美国、恢复乌克兰和平谈判沟通之际，导弹袭击了基辅。外交接触并不自动等于战场降温，这正是事件最刺眼的地方：只要袭击继续，居民的避难、供电和日常生活就仍要按战争状态安排。谈判能否进入具体的停火、领土和安全保障安排，而非停留在重新通话，才是下一步真正要看的。",
-      "meta": "国际局势｜10月21日",
-      "facts": [
-        [
-          "袭击",
-          "基辅遭导弹袭击"
-        ],
-        [
-          "外交",
-          "俄罗斯同意恢复与美国的沟通"
-        ],
-        [
-          "议题",
-          "沟通围绕乌克兰和平谈判"
-        ]
-      ],
-      "visual": null,
-      "impacts": [
-        [
-          "平民生活",
-          "空袭风险持续打乱出行、避难和基础设施运行"
-        ],
-        [
-          "国际风险",
-          "谈判若无实际停火，欧洲安全压力不会明显下降"
-        ]
-      ],
-      "next": [
-        "是否出现明确的停火安排",
-        "美俄乌能否就安全保障推进实质谈判"
-      ],
-      "source": "BBC News、The Guardian",
-      "updated": "2026-10-21",
-      "en": {
-        "cat": "Geopolitics",
-        "title": "Missiles hit Kyiv as talks resume: Ukraine’s opening for a ceasefire is still narrow",
-        "brief": "Russia agreed to resume contact with the US, but missiles still hit Kyiv—talks remain far from protecting civilians.",
-        "take": "The BBC reported that missiles struck Kyiv as Russia agreed to respond to a US call to resume communication on Ukraine peace talks. Diplomatic contact does not automatically cool a battlefield. That is the sharp reality here: as long as attacks continue, residents must still plan daily life, shelter and essential services around war. The next real test is whether talks produce concrete arrangements on a ceasefire, territory and security guarantees rather than simply another phone call.",
-        "meta": "Geopolitics | Oct. 21",
-        "facts": [
-          [
-            "Attack",
-            "Missiles struck Kyiv"
-          ],
-          [
-            "Diplomacy",
-            "Russia agreed to resume contact with the US"
-          ],
-          [
-            "Focus",
-            "The contact concerns Ukraine peace talks"
-          ]
-        ],
-        "visual": null,
-        "impacts": [
-          [
-            "Civilian life",
-            "Air-raid risk keeps disrupting travel, sheltering and infrastructure"
-          ],
-          [
-            "International risk",
-            "Europe’s security pressure will not ease without a real halt in fighting"
-          ]
-        ],
-        "next": [
-          "Whether a specific ceasefire arrangement emerges",
-          "Whether the US, Russia and Ukraine move on security guarantees"
-        ],
-        "source": "BBC News and The Guardian",
-        "updated": "2026-10-21"
-      },
-      "sourceLinks": [
-        {
-          "title": "Missiles hit Kyiv after Russia agrees to US call to resume Ukraine peace talks",
-          "url": "https://www.bbc.co.uk/news/articles/cq3djn5nxx12o?at_medium=RSS&at_campaign=rss",
-          "publisher": "BBC News"
-        },
-        {
-          "title": "Putin orders release of jailed American as he meets Trump envoy for Ukraine talks",
-          "url": "https://www.theguardian.com/world/2026/oct/21/putin-witkoff-russia-ukraine-trump-stephen-hubbard-release",
-          "publisher": "The Guardian"
-        }
-      ],
-      "eventImage": {
-        "url": "https://ichef.bbci.co.uk/ace/branded_news/1200/cpsprodpb/abac/live/5ed152f0-cd8f-11f1-b1e7-39558e114359.jpg",
-        "credit": "BBC News",
-        "link": "https://www.bbc.co.uk/news/articles/cq3djn5nxx12o?at_medium=RSS&at_campaign=rss",
-        "zh": {
-          "alt": "和谈电话刚恢复，基辅又遭导弹：乌克兰的停火窗口依然很窄",
-          "caption": "和谈电话刚恢复，基辅又遭导弹：乌克兰的停火窗口依然很窄"
-        },
-        "en": {
-          "alt": "Missiles hit Kyiv as talks resume: Ukraine’s opening for a ceasefire is still narrow",
-          "caption": "Missiles hit Kyiv as talks resume: Ukraine’s opening for a ceasefire is still narrow"
-        }
-      },
-      "termGuides": [
-        {
-          "key": "安全保障",
-          "aliases": [
-            "安全保障",
-            "security guarantees"
-          ],
-          "zh": {
-            "label": "安全保障",
-            "meaning": "为防止战事重启而作出的防务承诺或机制。",
-            "relation": "它是乌克兰和谈中比恢复通话更难落地的核心问题。"
-          },
-          "en": {
-            "label": "Security guarantees",
-            "meaning": "Defence commitments or mechanisms intended to deter a renewed war.",
-            "relation": "They are a harder core issue in Ukraine talks than simply restoring contact."
-          }
-        }
-      ]
-    },
-    {
-      "id": "meta-privacy-fine",
+      "id": "php-security-holes",
       "cat": "公共安全",
       "icon": "alert",
-      "title": "Meta 被罚 250 亿美元，用户数据不能再只当“免费原料”",
-      "brief": "这笔巨额隐私罚款提醒人们：点进 App 的每一次授权，背后都可能是一门大生意。",
-      "take": "BBC 报道称，Meta 因就用户数据隐私“撒谎”被处以 250 亿美元罚款。案件的完整法律程序和最终执行仍需关注，但金额本身已经把一个常被忽略的问题推到台前：平台的免费服务往往靠大量数据支撑，用户看不懂或默认勾选的权限，可能比一次订阅费更值钱。对普通人最实际的动作仍是定期检查定位、通讯录、广告追踪和第三方登录授权。",
-      "meta": "公共安全｜10月21日",
+      "title": "老PHP漏洞被重新挖出：很多网站的风险不在AI，而在没人敢碰的旧代码",
+      "brief": "看似过时的程序一旦没人维护，可能成为攻击者进入网站和企业系统的门。",
+      "take": "TechCrunch报道，OpenAI和Google旗下安全公司Wiz发现了一批存在已久的PHP安全漏洞，引发互联网运营者紧急排查。PHP仍运行在大量网站和内部系统上，问题恰恰在于它太常见、也太容易被遗忘。普通人未必知道自己访问的网站用什么语言，但一旦漏洞被利用，账户资料、支付页面和企业服务都可能受影响。现在最实际的事不是恐慌，而是网站运营方尽快更新、检查暴露服务。",
+      "meta": "公共安全｜10月21日｜网络漏洞",
       "facts": [
         [
-          "公司",
-          "Meta"
+          "涉及技术",
+          "PHP"
         ],
         [
-          "罚款",
-          "250 亿美元"
+          "发现方",
+          "OpenAI与Google旗下Wiz"
         ],
         [
-          "争议",
-          "涉及用户数据隐私说法"
+          "风险类型",
+          "长期存在的安全漏洞"
         ]
       ],
       "visual": null,
       "impacts": [
         [
-          "个人隐私",
-          "默认授权可能持续暴露位置、联系人或使用习惯"
+          "个人数据",
+          "被攻破的网站可能成为账号和资料泄露的入口"
         ],
         [
-          "平台规则",
-          "巨额处罚可能迫使平台更清楚说明数据用途"
+          "维护成本",
+          "企业需要为旧系统补课，更新和排查都会花钱"
         ]
       ],
       "next": [
-        "罚款是否进入上诉或执行阶段",
-        "Meta 是否调整隐私设置和告知方式"
+        "漏洞编号和受影响版本",
+        "修复补丁的部署范围"
       ],
-      "source": "BBC News",
+      "source": "TechCrunch AI",
       "updated": "2026-10-21",
       "en": {
         "cat": "Public Safety",
-        "title": "Meta’s $25bn fine is a reminder that user data is not just “free fuel”",
-        "brief": "The huge privacy penalty shows that every app permission can sit inside a very large business model.",
-        "take": "The BBC reported that Meta was fined $25bn over alleged lies about user-data privacy. The full legal path and final enforcement still matter, but the amount puts a neglected issue in plain view: free platforms often run on extensive data collection, and permissions people barely read or accept by default can be worth more than a subscription fee. The practical response for users is still to review location, contacts, ad tracking and third-party login permissions regularly.",
-        "meta": "Public Safety | Oct. 21",
+        "title": "Old PHP flaws are back in focus: the weak point may be forgotten code, not AI",
+        "brief": "Unmaintained old software can become the door attackers use to reach websites and company systems.",
+        "take": "TechCrunch reports that OpenAI and Google-owned security firm Wiz found long-standing PHP security flaws, prompting urgent checks by internet operators. PHP still runs a huge number of websites and internal systems. That is exactly the problem: it is common and easy to forget. Most people do not know what language a site uses, but exploitation could affect account data, payment pages, and business services. The practical response is not panic; it is prompt patching and checking exposed systems.",
+        "meta": "Public Safety | Oct. 21 | Cybersecurity flaws",
         "facts": [
           [
-            "Company",
-            "Meta"
+            "Technology",
+            "PHP"
           ],
           [
-            "Fine",
-            "$25bn"
-          ],
-          [
-            "Dispute",
-            "Claims about user-data privacy"
-          ]
-        ],
-        "visual": null,
-        "impacts": [
-          [
-            "Personal privacy",
-            "Default permissions can continually expose location, contacts or habits"
-          ],
-          [
-            "Platform rules",
-            "A penalty this large could force clearer explanations of data use"
-          ]
-        ],
-        "next": [
-          "Whether the fine moves into appeal or enforcement",
-          "Whether Meta changes privacy settings or disclosures"
-        ],
-        "source": "BBC News",
-        "updated": "2026-10-21"
-      },
-      "sourceLinks": [
-        {
-          "title": "Meta fined $25bn for 'lies' over user data privacy",
-          "url": "https://www.bbc.co.uk/news/articles/cqdr8zxrr3dxo?at_medium=RSS&at_campaign=rss",
-          "publisher": "BBC News"
-        }
-      ],
-      "eventImage": {
-        "url": "https://ichef.bbci.co.uk/ace/branded_news/1200/cpsprodpb/6026/live/1fd68c80-cd78-11f1-bc2e-018d645d8d21.jpg",
-        "credit": "BBC News",
-        "link": "https://www.bbc.co.uk/news/articles/cqdr8zxrr3dxo?at_medium=RSS&at_campaign=rss",
-        "zh": {
-          "alt": "Meta 被罚 250 亿美元，用户数据不能再只当“免费原料”",
-          "caption": "Meta 被罚 250 亿美元，用户数据不能再只当“免费原料”"
-        },
-        "en": {
-          "alt": "Meta’s $25bn fine is a reminder that user data is not just “free fuel”",
-          "caption": "Meta’s $25bn fine is a reminder that user data is not just “free fuel”"
-        }
-      },
-      "termGuides": [
-        {
-          "key": "Meta",
-          "aliases": [
-            "Meta",
-            "脸书母公司"
-          ],
-          "zh": {
-            "label": "Meta",
-            "meaning": "Facebook、Instagram 和 WhatsApp 的母公司。",
-            "relation": "该公司因涉及用户数据隐私的说法面临巨额罚款。"
-          },
-          "en": {
-            "label": "Meta",
-            "meaning": "The parent company of Facebook, Instagram and WhatsApp.",
-            "relation": "It faces a huge fine tied to claims about user-data privacy."
-          }
-        }
-      ]
-    },
-    {
-      "id": "nigeria-ebola",
-      "cat": "公共安全",
-      "icon": "alert",
-      "title": "尼日利亚确认埃博拉病例，西非要抢在跨境扩散前拦住它",
-      "brief": "病例已经确认且患者曾到访乌干达，追踪接触者的速度比恐慌更重要。",
-      "take": "尼日利亚确认首例埃博拉病例，BBC 和《卫报》均报道患者此前曾在乌干达停留。埃博拉不会因为一例病例就自动演变成大流行，但它的危险在于重症风险高，且早期防控高度依赖快速识别、隔离、检测和追踪密切接触者。对其他国家公众而言，眼下不是日常恐慌，而是看卫生部门能否及时公开传播链和防控措施；跨境旅行与医疗系统的准备都会受到检验。",
-      "meta": "公共安全｜10月21日",
-      "facts": [
-        [
-          "地点",
-          "尼日利亚确认埃博拉病例"
-        ],
-        [
-          "行程",
-          "患者此前到访乌干达"
-        ],
-        [
-          "风险",
-          "病例引发西非跨境防控关注"
-        ]
-      ],
-      "visual": null,
-      "impacts": [
-        [
-          "健康风险",
-          "快速隔离和接触者追踪决定是否能切断传播"
-        ],
-        [
-          "出行准备",
-          "跨境卫生筛查和医疗系统可能加强戒备"
-        ]
-      ],
-      "next": [
-        "是否发现更多确诊或密切接触者",
-        "尼日利亚和周边国家公布的追踪结果"
-      ],
-      "source": "BBC News、The Guardian",
-      "updated": "2026-10-21",
-      "en": {
-        "cat": "Public Safety",
-        "title": "Nigeria confirms an Ebola case; West Africa is racing to stop cross-border spread",
-        "brief": "The patient had travelled in Uganda, so contact tracing matters far more right now than panic.",
-        "take": "Nigeria has confirmed an Ebola case, and both the BBC and the Guardian reported that the patient had previously been in Uganda. One case does not automatically become a major outbreak, but Ebola is dangerous because severe illness is common and early control depends heavily on fast detection, isolation, testing and close-contact tracing. For the public elsewhere, the key question is whether health authorities quickly map and disclose the transmission chain and response measures.",
-        "meta": "Public Safety | Oct. 21",
-        "facts": [
-          [
-            "Location",
-            "Nigeria confirmed an Ebola case"
-          ],
-          [
-            "Travel",
-            "The patient had previously visited Uganda"
+            "Researchers",
+            "OpenAI and Google-owned Wiz"
           ],
           [
             "Risk",
-            "The case raises concern over cross-border control in West Africa"
+            "Long-standing security vulnerabilities"
           ]
         ],
         "visual": null,
         "impacts": [
           [
-            "Health risk",
-            "Rapid isolation and contact tracing determine whether transmission is cut off"
+            "Personal data",
+            "Breached sites can become an entry point for account and data theft"
           ],
           [
-            "Travel readiness",
-            "Cross-border health screening and medical systems may go on higher alert"
+            "Maintenance cost",
+            "Businesses may face expensive updates and audits of legacy systems"
           ]
         ],
         "next": [
-          "Whether more cases or close contacts are found",
-          "Tracing results released by Nigeria and neighbouring countries"
+          "Vulnerability IDs and affected versions",
+          "How widely fixes are deployed"
         ],
-        "source": "BBC News and The Guardian",
+        "source": "TechCrunch AI",
         "updated": "2026-10-21"
       },
       "sourceLinks": [
         {
-          "title": "Nigeria's first Ebola patient holidayed in Uganda, officials say",
-          "url": "https://www.bbc.co.uk/news/articles/c62kepvg2x9lo?at_medium=RSS&at_campaign=rss",
-          "publisher": "BBC News"
-        },
-        {
-          "title": "Nigeria confirms Ebola case as outbreak spreads into western Africa",
-          "url": "https://www.theguardian.com/world/2026/oct/21/nigeria-first-ebola-case-africa-outbreak-latest",
-          "publisher": "The Guardian"
+          "title": "PHP Armageddon: OpenAI, Google's Wiz find ancient holes, panicking the internet",
+          "url": "https://techcrunch.com/2026/10/21/php-armageddon-openai-googles-wiz-find-ancient-holes-panicking-the-internet/",
+          "publisher": "TechCrunch AI"
         }
       ],
       "eventImage": {
-        "url": "https://ichef.bbci.co.uk/ace/branded_news/1200/cpsprodpb/9bc3/live/125ed250-cd83-11f1-9a39-31b474234113.jpg",
-        "credit": "BBC News",
-        "link": "https://www.bbc.co.uk/news/articles/c62kepvg2x9lo?at_medium=RSS&at_campaign=rss",
+        "url": "https://techcrunch.com/wp-content/uploads/2021/12/GettyImages-460689215.jpg?resize=1200,801",
+        "credit": "TechCrunch AI",
+        "link": "https://techcrunch.com/2026/10/21/php-armageddon-openai-googles-wiz-find-ancient-holes-panicking-the-internet/",
         "zh": {
-          "alt": "尼日利亚确认埃博拉病例，西非要抢在跨境扩散前拦住它",
-          "caption": "尼日利亚确认埃博拉病例，西非要抢在跨境扩散前拦住它"
+          "alt": "老PHP漏洞被重新挖出：很多网站的风险不在AI，而在没人敢碰的旧代码",
+          "caption": "老PHP漏洞被重新挖出：很多网站的风险不在AI，而在没人敢碰的旧代码"
         },
         "en": {
-          "alt": "Nigeria confirms an Ebola case; West Africa is racing to stop cross-border spread",
-          "caption": "Nigeria confirms an Ebola case; West Africa is racing to stop cross-border spread"
+          "alt": "Old PHP flaws are back in focus: the weak point may be forgotten code, not AI",
+          "caption": "Old PHP flaws are back in focus: the weak point may be forgotten code, not AI"
         }
       },
       "termGuides": [
         {
-          "key": "埃博拉",
+          "key": "PHP",
           "aliases": [
-            "埃博拉",
-            "Ebola"
+            "PHP"
           ],
           "zh": {
-            "label": "埃博拉",
-            "meaning": "可引起严重出血热的病毒性疾病。",
-            "relation": "这次尼日利亚病例的控制重点是尽快查清接触者并隔离。"
+            "label": "PHP",
+            "meaning": "一种长期用于搭建网站和服务器应用的编程语言。",
+            "relation": "这次被发现的旧漏洞，可能影响仍在使用相关版本的网站和内部服务。"
           },
           "en": {
-            "label": "Ebola",
-            "meaning": "A viral disease that can cause severe haemorrhagic fever.",
-            "relation": "For this Nigeria case, the control priority is rapidly finding and isolating contacts."
+            "label": "PHP",
+            "meaning": "A programming language widely used to build websites and server-side applications.",
+            "relation": "The newly highlighted old flaws may affect sites and internal services still using vulnerable versions."
+          }
+        },
+        {
+          "key": "Wiz",
+          "aliases": [
+            "Wiz"
+          ],
+          "zh": {
+            "label": "Wiz",
+            "meaning": "Google旗下的云安全公司。",
+            "relation": "它与OpenAI共同发现并披露了这批PHP问题。"
+          },
+          "en": {
+            "label": "Wiz",
+            "meaning": "A Google-owned cloud security company.",
+            "relation": "It worked with OpenAI on finding and disclosing the PHP issues."
           }
         }
       ]
     },
     {
-      "id": "sudan-drone-attack",
-      "cat": "国际局势",
-      "icon": "drone",
-      "title": "苏丹葬礼和燃料市场遭无人机袭击，平民连躲避的地方都在缩小",
-      "brief": "消息称超过 300 人死亡，战争正把最基本的聚集和补给场所变成高危区。",
-      "take": "BBC 报道援引消息人士称，苏丹军方无人机袭击了哀悼人群和燃料市场，造成超过 300 人死亡。这一伤亡数字仍应等待独立核实，但若情况属实，目标地点本身说明了平民风险有多残酷：葬礼是人们送别亲人的地方，燃料市场关系到出行、供水和发电。无人机让攻击者可在远处发动打击，也让城市居民更难判断哪里还算相对安全。",
-      "meta": "国际局势｜10月20日",
+      "id": "connectwise-breach",
+      "cat": "公共安全",
+      "icon": "alert",
+      "title": "ConnectWise被攻破后，数千家公司遭窥探：IT外包商成了更大的单点风险",
+      "brief": "一家公司替很多企业管系统，本来省事；一旦失守，受害者就会成片出现。",
+      "take": "TechCrunch报道称，与中国有关联的黑客在攻破IT服务商ConnectWise后，监视了数千家公司。ConnectWise这类平台常被技术服务商用于远程管理客户设备，因此它一旦出问题，攻击者可能顺着一个供应商进入许多企业。普通人最先感受到的未必是新闻，而可能是公司系统异常、服务中断，或被要求重置密码。企业需要重新检查远程管理权限、日志和客户通知流程。",
+      "meta": "公共安全｜10月22日｜供应链网络攻击",
       "facts": [
         [
-          "地点",
-          "苏丹的哀悼现场和燃料市场"
+          "受害入口",
+          "ConnectWise IT服务平台"
         ],
         [
-          "手段",
-          "报道指向军方无人机袭击"
+          "报道规模",
+          "数千家公司遭监视"
         ],
         [
-          "伤亡",
-          "消息人士称死亡超过 300 人"
+          "攻击归因",
+          "报道称与中国有关联"
         ]
       ],
       "visual": null,
       "impacts": [
         [
-          "人道危机",
-          "燃料供应受打击会连带影响交通、供水和发电"
+          "连带风险",
+          "服务商被攻破会把风险同时传给大量客户"
         ],
         [
-          "平民安全",
-          "日常集会和采购地点也可能失去基本安全感"
+          "日常服务",
+          "企业系统受扰可能带来登录、订单和客服中断"
         ]
       ],
       "next": [
-        "伤亡数字能否获独立核实",
-        "是否有进一步的人道援助和停火安排"
+        "受影响客户范围",
+        "ConnectWise的修复与通知细节"
       ],
-      "source": "BBC News",
-      "updated": "2026-10-20",
+      "source": "TechCrunch AI",
+      "updated": "2026-10-22",
       "en": {
-        "cat": "Geopolitics",
-        "title": "Drone strikes hit a Sudanese funeral and fuel market, shrinking the places civilians can feel safe",
-        "brief": "Sources say more than 300 people were killed, turning basic gathering and supply points into high-risk places.",
-        "take": "The BBC, citing sources, reported that Sudanese army drones struck mourners and a fuel market, killing more than 300 people. The toll still needs independent verification. If confirmed, the locations show the cruelty of the civilian risk: funerals are where people mourn, while fuel markets underpin transport, water and electricity. Drones allow attacks from a distance and make it harder for urban residents to know which places remain relatively safe.",
-        "meta": "Geopolitics | Oct. 20",
+        "cat": "Public Safety",
+        "title": "After the ConnectWise breach, thousands of companies were reportedly watched: IT vendors are a bigger single point of failure",
+        "brief": "One provider managing systems for many firms is efficient—until one breach spreads the damage across all of them.",
+        "take": "TechCrunch reports that Chinese-linked hackers spied on thousands of companies after breaching IT services provider ConnectWise. Platforms like ConnectWise are often used by technology providers to manage customers' devices remotely. If one is compromised, attackers may be able to reach many businesses through a single vendor. People may first notice service disruptions, workplace system problems, or password reset requests rather than the breach itself. Companies need to review remote-management permissions, logs, and customer notification procedures.",
+        "meta": "Public Safety | Oct. 22 | Supply-chain cyberattack",
         "facts": [
           [
-            "Sites",
-            "A mourning gathering and a fuel market in Sudan"
+            "Entry point",
+            "ConnectWise IT services platform"
           ],
           [
-            "Method",
-            "The report points to army drone strikes"
+            "Reported scale",
+            "Thousands of companies monitored"
           ],
           [
-            "Casualties",
-            "Sources said more than 300 people were killed"
+            "Attribution",
+            "Reportedly linked to China"
           ]
         ],
         "visual": null,
         "impacts": [
           [
-            "Humanitarian crisis",
-            "Damage to fuel supply can disrupt transport, water and electricity"
+            "Spillover risk",
+            "A breach at one service provider can expose many customers at once"
           ],
           [
-            "Civilian safety",
-            "Ordinary gathering and shopping sites can lose any sense of basic safety"
+            "Everyday services",
+            "Disrupted company systems can interrupt logins, orders, and support"
           ]
         ],
         "next": [
-          "Whether the casualty toll is independently verified",
-          "Whether further aid access or ceasefire arrangements emerge"
+          "Which customers were affected",
+          "ConnectWise's remediation and notification details"
         ],
-        "source": "BBC News",
-        "updated": "2026-10-20"
+        "source": "TechCrunch AI",
+        "updated": "2026-10-22"
       },
       "sourceLinks": [
         {
-          "title": "Sudan army drones hit mourners and fuel market killing more than 300 people, sources say",
-          "url": "https://www.bbc.co.uk/news/articles/cr3el70jz1nqo?at_medium=RSS&at_campaign=rss",
-          "publisher": "BBC News"
+          "title": "Chinese hackers spied on thousands of companies after breaching IT giant ConnectWise",
+          "url": "https://techcrunch.com/2026/10/22/chinese-hackers-spied-on-thousands-of-companies-after-breaching-it-giant-connectwise/",
+          "publisher": "TechCrunch AI"
         }
       ],
       "eventImage": {
-        "url": "https://ichef.bbci.co.uk/ace/branded_news/1200/cpsprodpb/008d/live/4e35d850-cc8e-11f1-bc2e-018d645d8d21.png",
-        "credit": "BBC News",
-        "link": "https://www.bbc.co.uk/news/articles/cr3el70jz1nqo?at_medium=RSS&at_campaign=rss",
+        "url": "https://techcrunch.com/wp-content/uploads/2025/01/GettyImages-591881449.jpg?resize=1200,799",
+        "credit": "TechCrunch AI",
+        "link": "https://techcrunch.com/2026/10/22/chinese-hackers-spied-on-thousands-of-companies-after-breaching-it-giant-connectwise/",
         "zh": {
-          "alt": "苏丹葬礼和燃料市场遭无人机袭击，平民连躲避的地方都在缩小",
-          "caption": "苏丹葬礼和燃料市场遭无人机袭击，平民连躲避的地方都在缩小"
+          "alt": "ConnectWise被攻破后，数千家公司遭窥探：IT外包商成了更大的单点风险",
+          "caption": "ConnectWise被攻破后，数千家公司遭窥探：IT外包商成了更大的单点风险"
         },
         "en": {
-          "alt": "Drone strikes hit a Sudanese funeral and fuel market, shrinking the places civilians can feel safe",
-          "caption": "Drone strikes hit a Sudanese funeral and fuel market, shrinking the places civilians can feel safe"
+          "alt": "After the ConnectWise breach, thousands of companies were reportedly watched: IT vendors are a bigger single point of failure",
+          "caption": "After the ConnectWise breach, thousands of companies were reportedly watched: IT vendors are a bigger single point of failure"
         }
       },
       "termGuides": [
         {
-          "key": "无人机袭击",
+          "key": "ConnectWise",
           "aliases": [
-            "无人机",
-            "drone",
-            "drone strikes"
+            "ConnectWise"
           ],
           "zh": {
-            "label": "无人机袭击",
-            "meaning": "由远程操控或自动飞行器实施的空中打击。",
-            "relation": "报道所称袭击让苏丹平民在市场和葬礼等地点也面临风险。"
+            "label": "ConnectWise",
+            "meaning": "为IT服务商提供远程管理等工具的平台。",
+            "relation": "其平台被攻破后，攻击者据报借此监视了大量客户公司。"
           },
           "en": {
-            "label": "Drone strike",
-            "meaning": "An aerial attack carried out by a remotely operated or autonomous aircraft.",
-            "relation": "The reported strikes put Sudanese civilians at risk even at markets and funerals."
+            "label": "ConnectWise",
+            "meaning": "A platform that provides tools such as remote management for IT service providers.",
+            "relation": "After its platform was breached, attackers reportedly used that access to watch many customer companies."
+          }
+        },
+        {
+          "key": "供应链攻击",
+          "aliases": [
+            "供应链攻击",
+            "supply-chain attack"
+          ],
+          "zh": {
+            "label": "供应链攻击",
+            "meaning": "攻击者先攻破共同使用的供应商，再影响其客户。",
+            "relation": "本案的风险不只在ConnectWise本身，还在它连接的众多客户系统。"
+          },
+          "en": {
+            "label": "Supply-chain attack",
+            "meaning": "An attack that compromises a shared supplier to reach its customers.",
+            "relation": "The risk here extends beyond ConnectWise to the many customer systems connected to it."
           }
         }
       ]
     },
     {
-      "id": "china-growth-ai-exports",
-      "cat": "中国经济",
-      "icon": "chart",
-      "title": "中国增长高于预期，AI 相关出口成了拉力，但不能替代内需难题",
-      "brief": "出口被 AI 热潮带动是一针强心剂，普通人的就业和消费感受还得看国内需求。",
-      "take": "《卫报》报道，中国经济增速高于市场预期，AI 热潮带动的出口是重要因素。出口订单回暖当然能支撑制造业和供应链，但宏观数字不等于每个家庭立刻感到轻松：收入预期、就业岗位、住房和日常消费是否改善，取决于国内需求能否同步变强。对全球市场来说，中国的 AI 相关产品出口增加，也会让芯片、服务器、设备和贸易摩擦更紧密地绑在一起。",
-      "meta": "中国经济｜10月19日",
+      "id": "nvidia-europe-datacenters",
+      "cat": "科技产业",
+      "icon": "code",
+      "title": "英伟达在欧洲推“插电式”数据中心：AI扩张先卡在电力和落地速度",
+      "brief": "芯片买得到不等于AI马上跑得起来，机房、电网和审批往往更慢。",
+      "take": "Wired报道，黄仁勋在欧洲描绘的AI扩张方案，重点是可更快部署的模块化、类似“插电式”的数据中心。它反映出AI基础设施竞争已不只是抢GPU：数据中心要有土地、并网、电力和冷却，任何一环拖慢都会让昂贵芯片闲着。欧洲若想扩大本地AI能力，必须同时解决建设速度与能源约束；这也可能让电力价格、选址和电网投资更贴近日常经济。",
+      "meta": "科技产业｜10月21日｜AI基础设施",
       "facts": [
         [
-          "增速",
-          "中国经济增长高于预期"
+          "推动者",
+          "英伟达CEO黄仁勋"
         ],
         [
-          "动力",
-          "报道指 AI 热潮提振出口"
+          "地区",
+          "欧洲"
         ],
         [
-          "关联",
-          "制造业与全球科技供应链受益"
+          "方案",
+          "模块化快速部署数据中心"
         ]
       ],
       "visual": null,
       "impacts": [
         [
-          "就业消费",
-          "出口改善不必然立刻转化为家庭收入和消费信心"
+          "AI成本",
+          "算力供给不只由芯片决定，也受电力和机房限制"
         ],
         [
-          "贸易关系",
-          "AI 产品出口增长可能加剧技术供应链与贸易摩擦"
+          "能源压力",
+          "数据中心集中落地会加大当地电网与用电协调难度"
         ]
       ],
       "next": [
-        "国内消费和就业数据是否跟上",
-        "主要贸易伙伴是否调整相关限制"
+        "项目的具体地点和容量",
+        "电网接入与电力来源"
       ],
-      "source": "The Guardian",
-      "updated": "2026-10-19",
+      "source": "Wired",
+      "updated": "2026-10-21",
       "en": {
-        "cat": "China Economy",
-        "title": "China beat growth forecasts on AI-led exports, but exports cannot solve the domestic-demand problem alone",
-        "brief": "AI-related exports are a boost, but jobs and household spending still depend on demand at home.",
-        "take": "The Guardian reported that China’s economy grew faster than forecast, with the AI boom helping exports. Stronger export orders can support manufacturing and supply chains, but a headline growth number does not mean every household feels relief. Income expectations, jobs, housing and everyday spending still depend on whether domestic demand improves as well. Globally, more Chinese AI-related exports also tie chips, servers, equipment and trade tensions more tightly together.",
-        "meta": "China Economy | Oct. 19",
+        "cat": "Technology Industry",
+        "title": "Nvidia pitches plug-in data centers for Europe: AI expansion is hitting power and construction delays first",
+        "brief": "Having chips does not mean AI can run immediately; data centers, grids, and permits are often slower.",
+        "take": "Wired reports that Jensen Huang's vision for expanding AI in Europe centers on modular, faster-to-deploy, plug-in-style data centers. It shows that AI infrastructure is no longer only about securing GPUs. Data centers need land, grid connections, electricity, and cooling; delays in any one of these can leave costly chips idle. If Europe wants more local AI capacity, it must solve both build speed and energy constraints. That could bring electricity prices, site selection, and grid investment closer to everyday economic concerns.",
+        "meta": "Technology Industry | Oct. 21 | AI infrastructure",
         "facts": [
           [
-            "Growth",
-            "China’s economy grew faster than forecast"
+            "Backer",
+            "Nvidia CEO Jensen Huang"
           ],
           [
-            "Driver",
-            "The report says an AI boom lifted exports"
+            "Region",
+            "Europe"
           ],
           [
-            "Link",
-            "Manufacturing and global tech supply chains benefited"
+            "Approach",
+            "Modular, fast-deployment data centers"
           ]
         ],
         "visual": null,
         "impacts": [
           [
-            "Jobs and spending",
-            "Better exports do not automatically lift household income or confidence"
+            "AI cost",
+            "Compute supply depends on power and facilities, not chips alone"
           ],
           [
-            "Trade relations",
-            "Rising AI-product exports may intensify supply-chain and trade friction"
+            "Energy pressure",
+            "Clusters of data centers can strain local grids and power planning"
           ]
         ],
         "next": [
-          "Whether domestic consumption and jobs follow",
-          "Whether major trading partners tighten related restrictions"
+          "Specific project sites and capacity",
+          "Grid connections and electricity sources"
         ],
-        "source": "The Guardian",
-        "updated": "2026-10-19"
+        "source": "Wired",
+        "updated": "2026-10-21"
       },
       "sourceLinks": [
         {
-          "title": "China’s economy grows faster than forecast after AI boom boosts exports",
-          "url": "https://www.theguardian.com/world/2026/oct/19/china-economy-grows-faster-than-forecast-after-ai-boom-boosted-exports",
-          "publisher": "The Guardian"
+          "title": "Jensen Huang Vision for Europe Runs on Plug-In Data Centers",
+          "url": "https://www.wired.com/story/jensen-huangs-vision-for-europe-runs-on-plug-in-data-centers/",
+          "publisher": "Wired"
         }
       ],
       "eventImage": {
-        "url": "https://i.guim.co.uk/img/media/892bb878342a5fcbb68c7a85fb2b553e42c94669/495_0_4953_3962/master/4953.jpg?width=1200&height=630&quality=85&auto=format&fit=crop&precrop=40:21,offset-x50,offset-y0&overlay-align=bottom%2Cleft&overlay-width=100p&overlay-base64=L2ltZy9zdGF0aWMvb3ZlcmxheXMvdGctZGVmYXVsdC5wbmc&enable=upscale&s=4bd93bdedc7ef2dd117591adb07e0cab",
-        "credit": "The Guardian",
-        "link": "https://www.theguardian.com/world/2026/oct/19/china-economy-grows-faster-than-forecast-after-ai-boom-boosted-exports",
+        "url": "https://media.wired.com/photos/6ad8c8882adb51db52e1a235/191:100/w_1280,c_limit/GettyImages-2301295306.jpg",
+        "credit": "Wired",
+        "link": "https://www.wired.com/story/jensen-huangs-vision-for-europe-runs-on-plug-in-data-centers/",
         "zh": {
-          "alt": "中国增长高于预期，AI 相关出口成了拉力，但不能替代内需难题",
-          "caption": "中国增长高于预期，AI 相关出口成了拉力，但不能替代内需难题"
+          "alt": "英伟达在欧洲推“插电式”数据中心：AI扩张先卡在电力和落地速度",
+          "caption": "英伟达在欧洲推“插电式”数据中心：AI扩张先卡在电力和落地速度"
         },
         "en": {
-          "alt": "China beat growth forecasts on AI-led exports, but exports cannot solve the domestic-demand problem alone",
-          "caption": "China beat growth forecasts on AI-led exports, but exports cannot solve the domestic-demand problem alone"
+          "alt": "Nvidia pitches plug-in data centers for Europe: AI expansion is hitting power and construction delays first",
+          "caption": "Nvidia pitches plug-in data centers for Europe: AI expansion is hitting power and construction delays first"
         }
       },
       "termGuides": [
         {
-          "key": "AI 相关出口",
+          "key": "英伟达",
           "aliases": [
-            "AI 相关出口",
-            "AI exports",
-            "人工智能相关出口"
+            "英伟达",
+            "Nvidia"
           ],
           "zh": {
-            "label": "AI 相关出口",
-            "meaning": "与人工智能应用有关的设备、零部件或产品出口。",
-            "relation": "报道将其列为这次中国出口和增长表现的推动因素。"
+            "label": "英伟达",
+            "meaning": "主要生产AI计算芯片和相关系统的美国公司。",
+            "relation": "它正推动欧洲更快部署承载其AI芯片的数据中心。"
           },
           "en": {
-            "label": "AI-related exports",
-            "meaning": "Exports of equipment, components or products tied to artificial intelligence.",
-            "relation": "The report identifies them as a driver of China’s export and growth performance."
+            "label": "Nvidia",
+            "meaning": "A US company best known for AI computing chips and related systems.",
+            "relation": "It is pushing for faster deployment of European data centers that can run its AI chips."
+          }
+        },
+        {
+          "key": "数据中心",
+          "aliases": [
+            "数据中心",
+            "data center"
+          ],
+          "zh": {
+            "label": "数据中心",
+            "meaning": "集中放置服务器、提供计算和存储能力的设施。",
+            "relation": "AI模型运行需要大量这类设施，以及稳定的大规模供电。"
+          },
+          "en": {
+            "label": "Data center",
+            "meaning": "A facility that houses servers for computing and storage.",
+            "relation": "Running AI models requires many such facilities and large, reliable supplies of power."
+          }
+        }
+      ]
+    },
+    {
+      "id": "china-ai-plus-action",
+      "cat": "AI",
+      "icon": "ai",
+      "title": "中国全面实施“人工智能+”：AI要进更多行业，规则和责任也得跟上",
+      "brief": "政策把AI应用推得更广，先改变的可能是办事、工作软件和企业服务。",
+      "take": "多家中文媒体报道，中共中央办公厅、国务院办公厅提出全面实施“人工智能+”行动。公开报道未在候选材料中给出完整细则，因此不宜把它直接等同于某项已落地的具体服务。但方向很清楚：AI将被更系统地引入产业、公共服务和日常工具。真正影响普通人的，不是口号本身，而是哪些场景会要求使用AI、个人数据怎么用、出错后谁负责，以及是否仍保留非AI的办事选择。",
+      "meta": "AI｜10月21日｜中国政策方向",
+      "facts": [
+        [
+          "发布方",
+          "中办、国办"
+        ],
+        [
+          "行动名称",
+          "人工智能+"
+        ],
+        [
+          "覆盖方向",
+          "推动AI规模化应用"
+        ]
+      ],
+      "visual": null,
+      "impacts": [
+        [
+          "办事与工作",
+          "更多服务和软件可能默认加入AI功能"
+        ],
+        [
+          "权利保障",
+          "数据使用、人工复核和替代渠道会影响实际体验"
+        ]
+      ],
+      "next": [
+        "配套行业政策和执行细则",
+        "公共服务中的数据与人工复核规则"
+      ],
+      "source": "每日经济新闻",
+      "updated": "2026-10-21",
+      "en": {
+        "cat": "AI",
+        "title": "China moves to implement “AI+” broadly: wider use needs rules and accountability too",
+        "brief": "The policy could put AI into more work tools and public services, where data and responsibility become practical issues.",
+        "take": "Several Chinese outlets report that the General Office of the CPC Central Committee and the General Office of the State Council called for comprehensive implementation of an “AI+” action. The candidate material does not include the full detailed text, so it should not be treated as a specific service already in force. But the direction is clear: AI is to be used more systematically in industry, public services, and everyday tools. What matters to people is not the slogan but which tasks require AI, how personal data is used, who is accountable for mistakes, and whether non-AI alternatives remain available.",
+        "meta": "AI | Oct. 21 | China policy direction",
+        "facts": [
+          [
+            "Issuers",
+            "CPC Central Committee and State Council general offices"
+          ],
+          [
+            "Action",
+            "AI+"
+          ],
+          [
+            "Direction",
+            "Broader AI adoption"
+          ]
+        ],
+        "visual": null,
+        "impacts": [
+          [
+            "Services and work",
+            "More services and software may make AI features the default"
+          ],
+          [
+            "User rights",
+            "Data use, human review, and alternative channels will shape the real experience"
+          ]
+        ],
+        "next": [
+          "Supporting sector rules and implementation details",
+          "Data and human-review rules in public services"
+        ],
+        "source": "National Business Daily",
+        "updated": "2026-10-21"
+      },
+      "sourceLinks": [
+        {
+          "title": "中办、国办：全面实施“人工智能+”行动；英伟达携供应链伙伴扩产｜数智早参",
+          "url": "https://www.nbd.com.cn/articles/2026-10-21/4611685.html",
+          "publisher": "每日经济新闻"
+        }
+      ],
+      "eventImage": {
+        "url": "http://static.nbd.com.cn/images/nbd_v5/item.png",
+        "credit": "每日经济新闻",
+        "link": "https://www.nbd.com.cn/articles/2026-10-21/4611685.html",
+        "zh": {
+          "alt": "中国全面实施“人工智能+”：AI要进更多行业，规则和责任也得跟上",
+          "caption": "中国全面实施“人工智能+”：AI要进更多行业，规则和责任也得跟上"
+        },
+        "en": {
+          "alt": "China moves to implement “AI+” broadly: wider use needs rules and accountability too",
+          "caption": "China moves to implement “AI+” broadly: wider use needs rules and accountability too"
+        }
+      },
+      "termGuides": [
+        {
+          "key": "人工智能+",
+          "aliases": [
+            "人工智能+",
+            "AI+"
+          ],
+          "zh": {
+            "label": "人工智能+",
+            "meaning": "把AI技术嵌入行业、服务和工作流程的政策行动。",
+            "relation": "本次文件把更广范围使用AI列为行动方向。"
+          },
+          "en": {
+            "label": "AI+",
+            "meaning": "A policy approach to embed AI in industries, services, and work processes.",
+            "relation": "The reported action calls for AI use across a broader range of settings."
           }
         }
       ]
@@ -881,105 +895,122 @@
       "id": "tesla-spacex-merger",
       "cat": "科技产业",
       "icon": "eclipse",
-      "title": "马斯克考虑合并特斯拉与 SpaceX：汽车、火箭和资本或被装进同一台机器",
-      "brief": "合并还没定，但一旦推进，两家公司的资金、技术和风险会更难分开看。",
-      "take": "马斯克确认正考虑将特斯拉与 SpaceX 合并，BBC 报道也指出外界正在追问这笔“超级合并”的动机。两家公司业务差异很大：一边是电动车和储能，另一边是火箭、卫星和太空服务。支持者会看到工程能力和融资安排可能更集中；担忧者则会看到治理更复杂、风险传导更强。对消费者而言，短期不会让车或卫星服务立刻改变，真正影响先落在资本配置、监管审查和公司决策权上。",
-      "meta": "科技产业｜10月21日",
+      "title": "马斯克考虑合并特斯拉和SpaceX：把车、火箭和算力放进同一张资产负债表",
+      "brief": "若真推进，这不只是公司改名，而是把两家影响巨大的企业绑得更紧。",
+      "take": "《联合早报》和德国公共媒体Tagesschau报道，马斯克拟推动特斯拉与SpaceX合并的构想。候选来源没有显示交易已经签署，因此目前应视为计划或讨论，而非既成事实。若成行，电动车、卫星互联网、火箭发射和AI计算等业务会被装进同一家公司：协同空间很大，但风险也会更集中，投资者、监管者和用户面对的将不再是彼此独立的企业。",
+      "meta": "科技产业｜10月21日｜企业整合构想",
       "facts": [
         [
-          "表态",
-          "马斯克称正考虑合并"
+          "涉及公司",
+          "特斯拉与SpaceX"
         ],
         [
-          "公司",
-          "特斯拉与 SpaceX"
+          "提出者",
+          "埃隆·马斯克"
         ],
         [
-          "现状",
-          "尚未公布已完成的交易"
+          "当前状态",
+          "报道称为合并构想"
         ]
       ],
       "visual": null,
       "impacts": [
         [
-          "公司治理",
-          "两套不同业务的风险和决策可能被捆绑"
+          "集中度",
+          "多个关键技术业务可能由同一家公司更紧密控制"
         ],
         [
-          "市场选择",
-          "融资和监管结果会影响两家公司未来投入方向"
+          "监管难题",
+          "资本结构、竞争和公共基础设施责任会更复杂"
         ]
       ],
       "next": [
-        "是否提出正式交易方案",
-        "股东和监管机构如何回应"
+        "两家公司是否公布正式方案",
+        "监管与股东层面的反应"
       ],
-      "source": "BBC News",
+      "source": "联合早报",
       "updated": "2026-10-21",
       "en": {
         "cat": "Technology Industry",
-        "title": "Musk is considering a Tesla-SpaceX merger: cars, rockets and capital could enter one machine",
-        "brief": "No deal is set, but any merger would make the companies’ money, technology and risks much harder to separate.",
-        "take": "Musk has confirmed that he is considering merging Tesla and SpaceX, while the BBC has examined the rationale for such a mega-merger. The businesses are very different: electric vehicles and energy storage on one side, rockets, satellites and space services on the other. Supporters may see more concentrated engineering and financing capacity; critics may see more complicated governance and stronger risk spillovers. Consumers are unlikely to see an immediate change, but capital allocation, regulatory review and control of the companies could shift first.",
-        "meta": "Technology Industry | Oct. 21",
+        "title": "Musk considers combining Tesla and SpaceX: cars, rockets, and compute on one balance sheet",
+        "brief": "If it moves ahead, this is not just a corporate reshuffle; it would bind two major companies much more tightly.",
+        "take": "Lianhe Zaobao and Germany's Tagesschau report that Elon Musk is considering a combination of Tesla and SpaceX. The candidate sources do not show a signed transaction, so this should be treated as a proposal or discussion, not a completed deal. If it happened, electric vehicles, satellite internet, launches, and AI compute would sit inside one company. There could be real synergies, but risks would be concentrated too: investors, regulators, and users would face a less independent set of businesses.",
+        "meta": "Technology Industry | Oct. 21 | Corporate combination proposal",
         "facts": [
-          [
-            "Statement",
-            "Musk said he is considering a merger"
-          ],
           [
             "Companies",
             "Tesla and SpaceX"
           ],
           [
+            "Proponent",
+            "Elon Musk"
+          ],
+          [
             "Status",
-            "No completed transaction has been announced"
+            "Reportedly a merger concept"
           ]
         ],
         "visual": null,
         "impacts": [
           [
-            "Corporate governance",
-            "Risks and decisions across two very different businesses could be tied together"
+            "Concentration",
+            "Several important technology businesses could be controlled more closely by one company"
           ],
           [
-            "Market choice",
-            "Financing and regulatory outcomes could reshape each company’s investment priorities"
+            "Regulatory challenge",
+            "Capital structure, competition, and public-infrastructure obligations would become more complex"
           ]
         ],
         "next": [
-          "Whether a formal deal proposal appears",
-          "How shareholders and regulators respond"
+          "Whether either company announces a formal plan",
+          "Regulatory and shareholder response"
         ],
-        "source": "BBC News",
+        "source": "Lianhe Zaobao",
         "updated": "2026-10-21"
       },
       "sourceLinks": [
         {
-          "title": "Elon Musk confirms he is considering merging Tesla and SpaceX",
-          "url": "https://www.bbc.co.uk/news/articles/cmlyl09xjke4o?at_medium=RSS&at_campaign=rss",
-          "publisher": "BBC News"
+          "title": "马斯克拟合并特斯拉（Tesla）与SpaceX",
+          "url": "https://www.zaobao.com.sg/finance/world/story20261021-9873073",
+          "publisher": "联合早报"
         },
         {
-          "title": "Why is Elon Musk plotting a mega-merger of SpaceX and Tesla?",
-          "url": "https://www.bbc.co.uk/news/articles/cr93z1e87e0do?at_medium=RSS&at_campaign=rss",
-          "publisher": "BBC News"
+          "title": "Was eine Fusion von Tesla und SpaceX bedeuten würde",
+          "url": "https://www.tagesschau.de/wirtschaft/unternehmen/faq-tesla-spacex-zusammenschluss-folgen-100.html",
+          "publisher": "Tagesschau"
         }
       ],
       "eventImage": {
-        "url": "https://ichef.bbci.co.uk/ace/branded_news/1200/cpsprodpb/819f/live/f7b5d9b0-ccd0-11f1-b06b-25a52a186d15.png",
-        "credit": "BBC News",
-        "link": "https://www.bbc.co.uk/news/articles/cmlyl09xjke4o?at_medium=RSS&at_campaign=rss",
+        "url": "https://www.zaobao.com.sg/assets/facebook-icon-Dq4ktqSN.webp",
+        "credit": "联合早报",
+        "link": "https://www.zaobao.com.sg/finance/world/story20261021-9873073",
         "zh": {
-          "alt": "马斯克考虑合并特斯拉与 SpaceX：汽车、火箭和资本或被装进同一台机器",
-          "caption": "马斯克考虑合并特斯拉与 SpaceX：汽车、火箭和资本或被装进同一台机器"
+          "alt": "马斯克考虑合并特斯拉和SpaceX：把车、火箭和算力放进同一张资产负债表",
+          "caption": "马斯克考虑合并特斯拉和SpaceX：把车、火箭和算力放进同一张资产负债表"
         },
         "en": {
-          "alt": "Musk is considering a Tesla-SpaceX merger: cars, rockets and capital could enter one machine",
-          "caption": "Musk is considering a Tesla-SpaceX merger: cars, rockets and capital could enter one machine"
+          "alt": "Musk considers combining Tesla and SpaceX: cars, rockets, and compute on one balance sheet",
+          "caption": "Musk considers combining Tesla and SpaceX: cars, rockets, and compute on one balance sheet"
         }
       },
       "termGuides": [
+        {
+          "key": "Tesla",
+          "aliases": [
+            "特斯拉",
+            "Tesla"
+          ],
+          "zh": {
+            "label": "特斯拉",
+            "meaning": "生产电动车、储能产品和相关软件的美国公司。",
+            "relation": "它是这项潜在合并的一方，可能与SpaceX置于同一集团。"
+          },
+          "en": {
+            "label": "Tesla",
+            "meaning": "A US company that makes electric vehicles, energy-storage products, and related software.",
+            "relation": "It is one side of the potential combination with SpaceX."
+          }
+        },
         {
           "key": "SpaceX",
           "aliases": [
@@ -987,270 +1018,279 @@
           ],
           "zh": {
             "label": "SpaceX",
-            "meaning": "马斯克创办的火箭与卫星互联网公司。",
-            "relation": "它是拟与特斯拉合并的另一方。"
+            "meaning": "从事火箭发射和卫星互联网业务的美国航天公司。",
+            "relation": "它是拟议合并的另一方，业务将与特斯拉更紧密捆绑。"
           },
           "en": {
             "label": "SpaceX",
-            "meaning": "Musk’s rocket and satellite-internet company.",
-            "relation": "It is the other company in the proposed combination with Tesla."
-          }
-        },
-        {
-          "key": "特斯拉",
-          "aliases": [
-            "特斯拉",
-            "Tesla"
-          ],
-          "zh": {
-            "label": "特斯拉",
-            "meaning": "生产电动车和储能产品的公司。",
-            "relation": "若与 SpaceX 合并，其汽车与能源业务将和航天业务放入同一公司结构。"
-          },
-          "en": {
-            "label": "Tesla",
-            "meaning": "A company making electric vehicles and energy-storage products.",
-            "relation": "A merger would place its vehicle and energy businesses alongside SpaceX’s space operations."
+            "meaning": "A US space company involved in launches and satellite internet.",
+            "relation": "It is the other party in the proposed combination, potentially tying its businesses more closely to Tesla."
           }
         }
       ]
     },
     {
-      "id": "borneo-haze",
+      "id": "onepassword-ai-agent-login",
       "cat": "公共安全",
       "icon": "alert",
-      "title": "婆罗洲泥炭火烧出的不只是烟：有毒霾会跨国飘进城市和肺里",
-      "brief": "泥炭地一旦起火很难扑灭，烟霾会让远处居民也付出呼吸和健康代价。",
-      "take": "BBC 走访印尼，报道婆罗洲泥炭火灾前线的有毒烟霾。泥炭土像储存了大量碳的湿海绵，干燥后燃烧可能在地下延续，扑灭比普通地表火更困难；烟雾还会随风跨越边界。对普通人而言，最先感受到的是空气质量恶化、户外活动受限，以及儿童、老人和呼吸系统疾病患者的额外风险。这不只是环境新闻，也是区域公共卫生和土地管理问题。",
-      "meta": "公共安全｜10月20日",
+      "title": "1Password让AI Agent代登录，但不看密码：便利终于开始碰到最敏感的一层",
+      "brief": "让AI替你操作账号能省时间，但权限怎么收回、谁能批准，仍是关键。",
+      "take": "1Password推出一项功能，让AI Agent可以代表用户登录服务，但设计目标是不把原始密码交给Agent。这个思路很实用：如果AI要替人完成订票、报销或后台操作，它迟早会碰到登录环节；把密码直接塞给它显然不合适。不过“看不到密码”不等于没有风险，Agent拿到会话和操作权限后仍可能做错事。用户需要能限定网站、金额和动作，并随时撤销授权。",
+      "meta": "公共安全｜10月22日｜AI账号安全",
       "facts": [
         [
-          "地点",
-          "印尼婆罗洲"
+          "产品",
+          "1Password新功能"
         ],
         [
-          "火情",
-          "泥炭火灾产生有毒烟霾"
+          "使用者",
+          "AI Agent"
         ],
         [
-          "特点",
-          "烟霾可随风影响更广区域"
+          "核心设计",
+          "Agent不直接看到密码"
         ]
       ],
       "visual": null,
       "impacts": [
         [
-          "健康",
-          "颗粒污染会加重呼吸道和心肺负担"
+          "使用便利",
+          "重复登录操作有机会交给Agent处理"
         ],
         [
-          "日常生活",
-          "学校、户外工作和出行可能受空气质量限制"
+          "账号安全",
+          "权限范围和撤销能力比“免密码”本身更重要"
         ]
       ],
       "next": [
-        "当地火情和空气质量是否恶化",
-        "周边国家是否发布烟霾健康提醒"
+        "支持哪些Agent和网站",
+        "授权是否可细分到具体操作"
       ],
-      "source": "BBC News",
-      "updated": "2026-10-20",
+      "source": "TechCrunch AI",
+      "updated": "2026-10-22",
       "en": {
         "cat": "Public Safety",
-        "title": "Borneo’s peat fires produce more than flames: toxic haze can travel into cities and lungs",
-        "brief": "Once peatland burns, it is hard to put out, and people far away can pay the price through the air they breathe.",
-        "take": "The BBC reported from Indonesia on toxic haze from peat fires in Borneo. Peat soil is like a wet sponge loaded with stored carbon; when it dries, fire can keep burning underground, making it much harder to extinguish than an ordinary surface fire. Smoke can also cross borders with the wind. For people, the immediate effects are poorer air quality, curtailed outdoor activity and added risk for children, older people and those with respiratory illness.",
-        "meta": "Public Safety | Oct. 20",
+        "title": "1Password lets AI agents sign in without seeing passwords: convenience reaches the most sensitive layer",
+        "brief": "Having AI operate accounts can save time, but revocable permissions and approvals remain the real safeguard.",
+        "take": "1Password has launched a way for AI agents to sign in on a user's behalf without giving the agent the raw password. The idea is practical: if AI is to handle bookings, expenses, or back-office tasks, it will eventually face logins; handing it passwords directly would be a poor design. But not seeing a password does not erase risk. An agent with a live session and permission to act can still make a harmful mistake. Users need to limit sites, amounts, and actions, and be able to revoke access quickly.",
+        "meta": "Public Safety | Oct. 22 | AI account security",
         "facts": [
           [
-            "Location",
-            "Indonesian Borneo"
+            "Product",
+            "New 1Password capability"
           ],
           [
-            "Fire",
-            "Peat fires are producing toxic haze"
+            "User",
+            "AI agents"
           ],
           [
-            "Reach",
-            "Haze can affect wider areas as winds carry it"
+            "Core design",
+            "Agents do not directly see passwords"
           ]
         ],
         "visual": null,
         "impacts": [
           [
-            "Health",
-            "Particle pollution can worsen respiratory and heart-lung stress"
+            "Convenience",
+            "Agents may take over repetitive sign-in steps"
           ],
           [
-            "Daily life",
-            "Schools, outdoor work and travel may be constrained by air quality"
+            "Account safety",
+            "Scoped and revocable permissions matter more than password hiding alone"
           ]
         ],
         "next": [
-          "Whether fire conditions and air quality worsen",
-          "Whether neighbouring countries issue haze-health alerts"
+          "Which agents and sites are supported",
+          "Whether permission can be limited to particular actions"
         ],
-        "source": "BBC News",
-        "updated": "2026-10-20"
+        "source": "TechCrunch AI",
+        "updated": "2026-10-22"
       },
       "sourceLinks": [
         {
-          "title": "Borneo burning: Life on the frontline of South East Asia's toxic haze",
-          "url": "https://www.bbc.co.uk/news/articles/cqm2dzwdmmywo?at_medium=RSS&at_campaign=rss",
-          "publisher": "BBC News"
-        },
-        {
-          "title": "Why is a peat fire so bad? BBC is in Indonesia to find out",
-          "url": "https://www.bbc.co.uk/news/videos/cmx2302xe931o?at_medium=RSS&at_campaign=rss",
-          "publisher": "BBC News"
+          "title": "1Password launches a way for AI agents to log in on your behalf without seeing your password",
+          "url": "https://techcrunch.com/2026/10/22/1password-launches-a-way-for-ai-agents-to-log-in-on-your-behalf-without-seeing-your-password/",
+          "publisher": "TechCrunch AI"
         }
       ],
       "eventImage": {
-        "url": "https://ichef.bbci.co.uk/ace/branded_news/1200/cpsprodpb/5e48/live/4edd0c70-cc9c-11f1-9a39-31b474234113.jpg",
-        "credit": "BBC News",
-        "link": "https://www.bbc.co.uk/news/articles/cqm2dzwdmmywo?at_medium=RSS&at_campaign=rss",
+        "url": "https://techcrunch.com/wp-content/uploads/2026/10/AI-agents.jpg?resize=1200,675",
+        "credit": "TechCrunch AI",
+        "link": "https://techcrunch.com/2026/10/22/1password-launches-a-way-for-ai-agents-to-log-in-on-your-behalf-without-seeing-your-password/",
         "zh": {
-          "alt": "婆罗洲泥炭火烧出的不只是烟：有毒霾会跨国飘进城市和肺里",
-          "caption": "婆罗洲泥炭火烧出的不只是烟：有毒霾会跨国飘进城市和肺里"
+          "alt": "1Password让AI Agent代登录，但不看密码：便利终于开始碰到最敏感的一层",
+          "caption": "1Password让AI Agent代登录，但不看密码：便利终于开始碰到最敏感的一层"
         },
         "en": {
-          "alt": "Borneo’s peat fires produce more than flames: toxic haze can travel into cities and lungs",
-          "caption": "Borneo’s peat fires produce more than flames: toxic haze can travel into cities and lungs"
+          "alt": "1Password lets AI agents sign in without seeing passwords: convenience reaches the most sensitive layer",
+          "caption": "1Password lets AI agents sign in without seeing passwords: convenience reaches the most sensitive layer"
         }
       },
       "termGuides": [
         {
-          "key": "泥炭火",
+          "key": "1Password",
           "aliases": [
-            "泥炭火",
-            "peat fire",
-            "泥炭地火灾"
+            "1Password"
           ],
           "zh": {
-            "label": "泥炭火",
-            "meaning": "发生在富含未完全分解植物物质土层中的火灾。",
-            "relation": "婆罗洲的这类火可在地下持续燃烧，并制造大范围烟霾。"
+            "label": "1Password",
+            "meaning": "用于保存和管理账号密码的工具。",
+            "relation": "它推出了让Agent代登录、但不直接读取密码的机制。"
           },
           "en": {
-            "label": "Peat fire",
-            "meaning": "A fire in soil rich in partly decomposed plant material.",
-            "relation": "In Borneo, such fires can keep burning underground and generate wide-ranging haze."
+            "label": "1Password",
+            "meaning": "A tool for storing and managing account passwords.",
+            "relation": "It introduced a mechanism for agents to sign in without directly reading passwords."
+          }
+        },
+        {
+          "key": "会话权限",
+          "aliases": [
+            "会话权限",
+            "session permission"
+          ],
+          "zh": {
+            "label": "会话权限",
+            "meaning": "登录后可在账号内执行操作的临时访问权。",
+            "relation": "即便Agent看不到密码，拿到会话权限后仍可能执行错误操作。"
+          },
+          "en": {
+            "label": "Session permission",
+            "meaning": "Temporary access to take actions inside an account after sign-in.",
+            "relation": "Even without the password, an agent with a session can still take incorrect actions."
           }
         }
       ]
     },
     {
-      "id": "mars-moon-sample",
-      "cat": "科技产业",
-      "icon": "eclipse",
-      "title": "探测器奔向火星卫星取样：人类想把“火星旁边的碎片”带回地球",
-      "brief": "这次任务瞄准火星卫星的一小块样本，可能帮科学家补上太阳系早期历史的一页。",
-      "take": "BBC 报道，一项任务已发射升空，目标是从火星的一颗卫星获取样本。把岩石带回地球并不只是“太空纪念品”：实验室能用远比探测器更复杂的仪器分析成分和年龄，从而判断这颗卫星是被火星捕获的小天体，还是早期撞击留下的碎片。任务周期长、取样和返航都存在技术风险，但样本一旦安全返回，信息价值往往远高于单靠遥感观测。",
-      "meta": "科技产业｜10月19日",
+      "id": "uber-chatgpt-work",
+      "cat": "AI",
+      "icon": "ai",
+      "title": "Uber给3万员工配ChatGPT Work：AI办公从试用变成公司默认工具",
+      "brief": "当AI进了全员工作台，效率可能提升，数据边界和考核压力也会一起进来。",
+      "take": "TechCrunch报道，Uber正把ChatGPT Work提供给全部3万名员工使用。这比少数团队试点更进一步：AI会成为日常写作、分析和协作的一部分。对员工，价值在于减少重复文书和资料整理；但公司必须划清哪些客户、运营和商业数据可以输入，哪些不能输入。另一层变化也很现实：当AI成为标配，管理者可能开始重新定义“正常效率”到底该是多少。",
+      "meta": "AI｜10月22日｜企业办公AI",
       "facts": [
         [
-          "任务",
-          "探测器已发射升空"
+          "公司",
+          "Uber"
         ],
         [
-          "目标",
-          "获取火星卫星样本"
+          "覆盖人数",
+          "3万名员工"
         ],
         [
-          "方式",
-          "计划将样本带回地球分析"
+          "工具",
+          "ChatGPT Work"
         ]
       ],
       "visual": null,
       "impacts": [
         [
-          "科学价值",
-          "地面实验室可比远程观测更精细地分析样本"
+          "工作节奏",
+          "写作、汇总和分析类任务可能更快完成"
         ],
         [
-          "技术能力",
-          "取样、封装和返回是深空任务的高难度环节"
+          "管理规则",
+          "数据合规和绩效预期会随AI普及重新调整"
         ]
       ],
       "next": [
-        "探测器的飞行和交会进展",
-        "取样与返回时间表是否按计划推进"
+        "Uber的数据使用限制",
+        "员工培训与效果衡量方式"
       ],
-      "source": "BBC News",
-      "updated": "2026-10-19",
+      "source": "TechCrunch AI",
+      "updated": "2026-10-22",
       "en": {
-        "cat": "Technology Industry",
-        "title": "A mission is heading for a Martian moon: scientists want to bring a piece of Mars’s neighbourhood home",
-        "brief": "The mission targets a small sample from a Martian moon, which could fill in a missing part of early Solar System history.",
-        "take": "The BBC reported that a mission has launched to collect a sample from one of Mars’s moons. Returning rock to Earth is not just a space souvenir: laboratories can use far more capable instruments than a spacecraft to test its composition and age. That could help determine whether the moon is a captured small body or debris from an ancient impact. The mission faces long timelines and technical risks in sampling and return, but a safely returned sample can reveal much more than remote observation alone.",
-        "meta": "Technology Industry | Oct. 19",
+        "cat": "AI",
+        "title": "Uber gives ChatGPT Work to 30,000 employees: office AI is becoming the default, not a pilot",
+        "brief": "When AI enters everyone's workbench, productivity may rise—but so do data boundaries and performance pressure.",
+        "take": "TechCrunch reports that Uber is rolling out ChatGPT Work to all 30,000 employees. This goes beyond a small-team pilot: AI could become part of everyday writing, analysis, and collaboration. For employees, it may reduce repetitive paperwork and information gathering. But the company needs clear lines around which customer, operational, and commercial data can be entered and which cannot. There is another practical shift too: once AI is standard, managers may start redefining what counts as normal productivity.",
+        "meta": "AI | Oct. 22 | Workplace AI",
         "facts": [
           [
-            "Mission",
-            "A spacecraft has launched"
+            "Company",
+            "Uber"
           ],
           [
-            "Target",
-            "A sample from a Martian moon"
+            "Coverage",
+            "30,000 employees"
           ],
           [
-            "Method",
-            "The sample is intended to be returned to Earth for analysis"
+            "Tool",
+            "ChatGPT Work"
           ]
         ],
         "visual": null,
         "impacts": [
           [
-            "Scientific value",
-            "Earth laboratories can analyse a sample more precisely than remote instruments"
+            "Work pace",
+            "Writing, summarizing, and analysis tasks may be completed faster"
           ],
           [
-            "Technical capability",
-            "Sampling, sealing and return are difficult deep-space operations"
+            "Management rules",
+            "Data compliance and performance expectations may be reset as AI spreads"
           ]
         ],
         "next": [
-          "Progress on the spacecraft’s flight and rendezvous",
-          "Whether the sampling and return timetable holds"
+          "Uber's data-use restrictions",
+          "Employee training and how outcomes are measured"
         ],
-        "source": "BBC News",
-        "updated": "2026-10-19"
+        "source": "TechCrunch AI",
+        "updated": "2026-10-22"
       },
       "sourceLinks": [
         {
-          "title": "Mission blasts off for Mars to grab a piece of its moon",
-          "url": "https://www.bbc.co.uk/news/articles/cmvgxvkv54w1o?at_medium=RSS&at_campaign=rss",
-          "publisher": "BBC News"
+          "title": "Uber puts all 30,000 employees on ChatGPT Work",
+          "url": "https://techcrunch.com/2026/10/22/uber-puts-all-30000-employees-on-chatgpt-work/",
+          "publisher": "TechCrunch AI"
         }
       ],
       "eventImage": {
-        "url": "https://ichef.bbci.co.uk/ace/branded_news/1200/cpsprodpb/8f0e/live/0a4e2af0-cbff-11f1-bc2e-018d645d8d21.jpg",
-        "credit": "BBC News",
-        "link": "https://www.bbc.co.uk/news/articles/cmvgxvkv54w1o?at_medium=RSS&at_campaign=rss",
+        "url": "https://techcrunch.com/wp-content/uploads/2026/06/wayve-uber-uk.jpg?resize=1200,800",
+        "credit": "TechCrunch AI",
+        "link": "https://techcrunch.com/2026/10/22/uber-puts-all-30000-employees-on-chatgpt-work/",
         "zh": {
-          "alt": "探测器奔向火星卫星取样：人类想把“火星旁边的碎片”带回地球",
-          "caption": "探测器奔向火星卫星取样：人类想把“火星旁边的碎片”带回地球"
+          "alt": "Uber给3万员工配ChatGPT Work：AI办公从试用变成公司默认工具",
+          "caption": "Uber给3万员工配ChatGPT Work：AI办公从试用变成公司默认工具"
         },
         "en": {
-          "alt": "A mission is heading for a Martian moon: scientists want to bring a piece of Mars’s neighbourhood home",
-          "caption": "A mission is heading for a Martian moon: scientists want to bring a piece of Mars’s neighbourhood home"
+          "alt": "Uber gives ChatGPT Work to 30,000 employees: office AI is becoming the default, not a pilot",
+          "caption": "Uber gives ChatGPT Work to 30,000 employees: office AI is becoming the default, not a pilot"
         }
       },
       "termGuides": [
         {
-          "key": "样本返回",
+          "key": "ChatGPT Work",
           "aliases": [
-            "样本返回",
-            "sample return"
+            "ChatGPT Work"
           ],
           "zh": {
-            "label": "样本返回",
-            "meaning": "把天体物质采集、封存并送回地球的任务方式。",
-            "relation": "此次任务的关键不只是抵达火星卫星，还要把样本完整带回。"
+            "label": "ChatGPT Work",
+            "meaning": "面向组织使用的ChatGPT工作产品。",
+            "relation": "Uber计划让全体员工使用它处理日常办公任务。"
           },
           "en": {
-            "label": "Sample return",
-            "meaning": "A mission that collects, seals and brings extraterrestrial material back to Earth.",
-            "relation": "The key challenge here is not only reaching the Martian moon but returning the sample intact."
+            "label": "ChatGPT Work",
+            "meaning": "A work-oriented ChatGPT product for organizations.",
+            "relation": "Uber is rolling it out to its entire workforce for everyday tasks."
+          }
+        },
+        {
+          "key": "Uber",
+          "aliases": [
+            "Uber",
+            "优步"
+          ],
+          "zh": {
+            "label": "Uber",
+            "meaning": "提供网约车、配送等服务的平台公司。",
+            "relation": "它将ChatGPT Work覆盖到3万名员工，使这成为大规模企业部署案例。"
+          },
+          "en": {
+            "label": "Uber",
+            "meaning": "A platform company offering ride-hailing, delivery, and other services.",
+            "relation": "Its rollout to 30,000 employees makes this a large enterprise deployment example."
           }
         }
       ]

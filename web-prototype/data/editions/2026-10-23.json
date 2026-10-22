@@ -1,0 +1,1299 @@
+{
+  "dateKey": "2026-10-23",
+  "generatedAt": "2026-10-23T05:00:00+08:00",
+  "title": "DailyTen",
+  "subtitle": "10月23日｜AI开始改入口，漏洞和算力账单也跟着变大",
+  "briefLabel": "今日要点",
+  "doneLabel": "读完了",
+  "readTimeMinutes": 8,
+  "items": [
+    {
+      "id": "openai-fundraise-ipo",
+      "cat": "AI",
+      "icon": "ai",
+      "title": "OpenAI又传融资300亿美元：IPO前先把AI竞赛抬到万亿美元估值",
+      "brief": "这轮融资若成，AI公司烧钱建算力的规模会再上一个台阶，竞争对手也更难跟。",
+      "take": "TechCrunch报道称，OpenAI正洽谈一轮约300亿美元融资，估值或达1.25万亿美元，并为首次公开募股做准备。钱不会只停在账面上：训练模型、购买芯片、租用数据中心都极其昂贵。对普通用户来说，短期可能是产品功能更快上线；但长期更值得留意的是，少数资金最充裕的公司会不会把AI助手、搜索和办公入口越攥越紧。",
+      "meta": "AI｜10月22日｜融资报道",
+      "facts": [
+        [
+          "融资规模",
+          "报道称约300亿美元"
+        ],
+        [
+          "估值目标",
+          "约1.25万亿美元"
+        ],
+        [
+          "所处阶段",
+          "IPO前筹资谈判"
+        ]
+      ],
+      "visual": null,
+      "impacts": [
+        [
+          "竞争门槛",
+          "模型竞争越来越像一场需要巨额资本的基础设施竞赛"
+        ],
+        [
+          "产品选择",
+          "资金集中可能让少数平台更容易占住日常AI入口"
+        ]
+      ],
+      "next": [
+        "融资是否正式落地",
+        "IPO时间表与资金用途"
+      ],
+      "source": "TechCrunch AI",
+      "updated": "2026-10-22",
+      "en": {
+        "cat": "AI",
+        "title": "OpenAI reportedly seeks $30B: the AI race is moving toward trillion-dollar valuations",
+        "brief": "If this round closes, the money needed to build AI infrastructure gets even bigger—and rivals have a harder race to run.",
+        "take": "TechCrunch reports that OpenAI is discussing a roughly $30 billion fundraise at a valuation of about $1.25 trillion, ahead of a possible IPO. This is not money sitting idle: training models, buying chips, and leasing data centers are enormously expensive. Users may see features arrive faster in the short term. The longer-term question is whether a handful of cash-rich firms end up controlling more of the AI, search, and work tools people use every day.",
+        "meta": "AI | Oct. 22 | Fundraising report",
+        "facts": [
+          [
+            "Raise",
+            "Reportedly about $30 billion"
+          ],
+          [
+            "Valuation",
+            "About $1.25 trillion sought"
+          ],
+          [
+            "Stage",
+            "Fundraising talks before an IPO"
+          ]
+        ],
+        "visual": null,
+        "impacts": [
+          [
+            "Barrier to entry",
+            "Model competition increasingly requires infrastructure-scale capital"
+          ],
+          [
+            "User choice",
+            "Concentrated funding could give a few platforms more control over daily AI entry points"
+          ]
+        ],
+        "next": [
+          "Whether the financing is formally completed",
+          "IPO timing and use of proceeds"
+        ],
+        "source": "TechCrunch AI",
+        "updated": "2026-10-22"
+      },
+      "sourceLinks": [
+        {
+          "title": "OpenAI working on new $30B raise at $1.25T valuation ahead of IPO",
+          "url": "https://techcrunch.com/2026/10/22/openai-working-on-new-30b-raise-at-1-25t-valuation-ahead-of-ipo/",
+          "publisher": "TechCrunch AI"
+        }
+      ],
+      "eventImage": {
+        "url": "https://techcrunch.com/wp-content/uploads/2023/11/Sam-Altman-OpenAI.jpg?resize=1200,680",
+        "credit": "TechCrunch AI",
+        "link": "https://techcrunch.com/2026/10/22/openai-working-on-new-30b-raise-at-1-25t-valuation-ahead-of-ipo/",
+        "zh": {
+          "alt": "OpenAI又传融资300亿美元：IPO前先把AI竞赛抬到万亿美元估值",
+          "caption": "OpenAI又传融资300亿美元：IPO前先把AI竞赛抬到万亿美元估值"
+        },
+        "en": {
+          "alt": "OpenAI reportedly seeks $30B: the AI race is moving toward trillion-dollar valuations",
+          "caption": "OpenAI reportedly seeks $30B: the AI race is moving toward trillion-dollar valuations"
+        }
+      },
+      "termGuides": [
+        {
+          "key": "OpenAI",
+          "aliases": [
+            "OpenAI"
+          ],
+          "zh": {
+            "label": "OpenAI",
+            "meaning": "开发ChatGPT等产品的美国AI公司。",
+            "relation": "这家公司的新融资谈判，关系到它还能以多大规模购买算力和扩张产品。"
+          },
+          "en": {
+            "label": "OpenAI",
+            "meaning": "The US AI company behind ChatGPT and related products.",
+            "relation": "Its fundraising talks affect how aggressively it can buy compute and expand its products."
+          }
+        }
+      ]
+    },
+    {
+      "id": "openai-decision-model",
+      "cat": "AI",
+      "icon": "ai",
+      "title": "OpenAI把“决策模型”推向更广用户：AI不只答题，也要替你选下一步",
+      "brief": "当模型开始帮人判断和行动，方便之外，出错由谁兜底会变成更现实的问题。",
+      "take": "TechCrunch称，OpenAI已更广泛提供一款与Jev竞争的“决策模型”。这类模型的目标不是只生成一段像样的文字，而是在多步任务里判断下一步该做什么。它有望让AI更像能执行流程的助手，但也把风险从“答错一句话”带到“做错一个动作”：涉及购买、账号、文件或工作决策时，确认机制和责任边界比演示效果更重要。",
+      "meta": "AI｜10月22日｜产品开放",
+      "facts": [
+        [
+          "产品方向",
+          "面向多步判断与行动"
+        ],
+        [
+          "开放范围",
+          "TechCrunch称已广泛可用"
+        ],
+        [
+          "竞争焦点",
+          "决策模型赛道升温"
+        ]
+      ],
+      "visual": null,
+      "impacts": [
+        [
+          "工作方式",
+          "AI助手可能从写草稿进一步参与流程判断"
+        ],
+        [
+          "安全边界",
+          "能行动的系统需要更清楚的授权和人工确认"
+        ]
+      ],
+      "next": [
+        "具体开放对象与价格",
+        "高风险任务的权限设计"
+      ],
+      "source": "TechCrunch AI",
+      "updated": "2026-10-22",
+      "en": {
+        "cat": "AI",
+        "title": "OpenAI broadens access to a decision model: AI is moving from answers to next steps",
+        "brief": "When a model helps decide and act, the practical question becomes who catches the mistake.",
+        "take": "TechCrunch says OpenAI has made a decision model, positioned against Jev, more widely available. The point is not merely to produce polished text, but to choose what to do next across a multi-step task. That could make AI more useful as a working assistant. It also changes the risk from one wrong sentence to one wrong action: for purchases, accounts, files, or work decisions, approval controls matter more than a slick demo.",
+        "meta": "AI | Oct. 22 | Product availability",
+        "facts": [
+          [
+            "Purpose",
+            "Multi-step judgment and action"
+          ],
+          [
+            "Access",
+            "Reportedly made broadly available"
+          ],
+          [
+            "Competition",
+            "Decision models are becoming a key battleground"
+          ]
+        ],
+        "visual": null,
+        "impacts": [
+          [
+            "Workflows",
+            "AI assistants may move beyond drafting into process decisions"
+          ],
+          [
+            "Safety boundary",
+            "Systems that act need clearer permissions and human approval"
+          ]
+        ],
+        "next": [
+          "Who gets access and at what price",
+          "Permission rules for high-risk tasks"
+        ],
+        "source": "TechCrunch AI",
+        "updated": "2026-10-22"
+      },
+      "sourceLinks": [
+        {
+          "title": "OpenAI makes its Jev competitor widely available as decision model competition heats up",
+          "url": "https://techcrunch.com/2026/10/22/openai-makes-its-jev-competitor-widely-available-as-decision-model-competition-heats-up/",
+          "publisher": "TechCrunch AI"
+        }
+      ],
+      "eventImage": {
+        "url": "https://techcrunch.com/wp-content/uploads/2026/10/Screenshot-2026-10-22-at-12.17.11-PM-1.png?resize=1200,988",
+        "credit": "TechCrunch AI",
+        "link": "https://techcrunch.com/2026/10/22/openai-makes-its-jev-competitor-widely-available-as-decision-model-competition-heats-up/",
+        "zh": {
+          "alt": "OpenAI把“决策模型”推向更广用户：AI不只答题，也要替你选下一步",
+          "caption": "OpenAI把“决策模型”推向更广用户：AI不只答题，也要替你选下一步"
+        },
+        "en": {
+          "alt": "OpenAI broadens access to a decision model: AI is moving from answers to next steps",
+          "caption": "OpenAI broadens access to a decision model: AI is moving from answers to next steps"
+        }
+      },
+      "termGuides": [
+        {
+          "key": "决策模型",
+          "aliases": [
+            "决策模型",
+            "decision model"
+          ],
+          "zh": {
+            "label": "决策模型",
+            "meaning": "专门处理多步任务中“下一步做什么”的AI模型。",
+            "relation": "OpenAI正把这类模型推向更广用户，竞争从聊天回答转向实际执行。"
+          },
+          "en": {
+            "label": "Decision model",
+            "meaning": "An AI model designed to choose next actions across multi-step tasks.",
+            "relation": "OpenAI is broadening access as competition shifts from chat answers toward execution."
+          }
+        }
+      ]
+    },
+    {
+      "id": "anthropic-claude-duet",
+      "cat": "AI",
+      "icon": "ai",
+      "title": "Anthropic推Claude Duet：人人都想把AI做成会干活的Agent",
+      "brief": "AI公司争的已不是聊天窗口，而是谁先成为你替你跑流程的工作入口。",
+      "take": "Anthropic推出Claude Duet应用，TechCrunch将它形容为该公司押注AI Agent的一步。Agent指的是能围绕目标调用工具、完成多步任务的AI，而不是只回答一个问题。对用户，它可能减少整理资料、切换软件和重复操作；但一旦它接触日历、文档或账号，权限给多少、过程能否看懂、出错能否撤回，都会决定它是帮手还是新麻烦。",
+      "meta": "AI｜10月22日｜Agent产品",
+      "facts": [
+        [
+          "产品",
+          "Claude Duet应用"
+        ],
+        [
+          "公司",
+          "Anthropic"
+        ],
+        [
+          "押注方向",
+          "AI Agent"
+        ]
+      ],
+      "visual": null,
+      "impacts": [
+        [
+          "入口之争",
+          "AI产品正从对话工具转向代办任务的工作界面"
+        ],
+        [
+          "隐私与控制",
+          "Agent接入个人工具后，授权范围需要更谨慎"
+        ]
+      ],
+      "next": [
+        "Duet可调用哪些工具",
+        "用户能否逐步确认和撤销操作"
+      ],
+      "source": "TechCrunch AI",
+      "updated": "2026-10-22",
+      "en": {
+        "cat": "AI",
+        "title": "Anthropic launches Claude Duet: everyone wants AI to become an agent that does the work",
+        "brief": "AI firms are no longer just fighting for the chat window; they want to be the place where work gets done.",
+        "take": "Anthropic has launched the Claude Duet app, which TechCrunch describes as a bet on AI agents. An agent is AI that can use tools and complete steps toward a goal, rather than simply answer one prompt. It could cut down on collecting information, switching apps, and repetitive work. But once it can reach calendars, documents, or accounts, the key questions are how much access it gets, whether people can follow its actions, and whether mistakes can be undone.",
+        "meta": "AI | Oct. 22 | Agent product",
+        "facts": [
+          [
+            "Product",
+            "Claude Duet app"
+          ],
+          [
+            "Company",
+            "Anthropic"
+          ],
+          [
+            "Bet",
+            "AI agents"
+          ]
+        ],
+        "visual": null,
+        "impacts": [
+          [
+            "Battle for the interface",
+            "AI products are shifting from chat tools to work-completion interfaces"
+          ],
+          [
+            "Privacy and control",
+            "Agent access to personal tools makes careful permissions essential"
+          ]
+        ],
+        "next": [
+          "Which tools Duet can access",
+          "Whether users can approve and reverse actions step by step"
+        ],
+        "source": "TechCrunch AI",
+        "updated": "2026-10-22"
+      },
+      "sourceLinks": [
+        {
+          "title": "Claude Duet app is Anthropic's bet on agents",
+          "url": "https://techcrunch.com/2026/10/22/claude-duet-app-is-anthropics-bet-on-agents/",
+          "publisher": "TechCrunch AI"
+        }
+      ],
+      "eventImage": {
+        "url": "https://techcrunch.com/wp-content/uploads/2026/10/Claude-Duet.jpg?resize=1200,675",
+        "credit": "TechCrunch AI",
+        "link": "https://techcrunch.com/2026/10/22/claude-duet-app-is-anthropics-bet-on-agents/",
+        "zh": {
+          "alt": "Anthropic推Claude Duet：人人都想把AI做成会干活的Agent",
+          "caption": "Anthropic推Claude Duet：人人都想把AI做成会干活的Agent"
+        },
+        "en": {
+          "alt": "Anthropic launches Claude Duet: everyone wants AI to become an agent that does the work",
+          "caption": "Anthropic launches Claude Duet: everyone wants AI to become an agent that does the work"
+        }
+      },
+      "termGuides": [
+        {
+          "key": "Anthropic",
+          "aliases": [
+            "Anthropic",
+            "Anthropic公司"
+          ],
+          "zh": {
+            "label": "Anthropic",
+            "meaning": "开发Claude系列模型的美国AI公司。",
+            "relation": "它用Claude Duet把Claude从聊天产品推进到Agent工具。"
+          },
+          "en": {
+            "label": "Anthropic",
+            "meaning": "The US AI company that develops the Claude model family.",
+            "relation": "It is using Claude Duet to push Claude from chat into agent-style work."
+          }
+        },
+        {
+          "key": "AI Agent",
+          "aliases": [
+            "AI Agent",
+            "Agent",
+            "智能体"
+          ],
+          "zh": {
+            "label": "AI Agent",
+            "meaning": "能调用工具、按步骤完成目标的AI系统。",
+            "relation": "Claude Duet的核心卖点，是让AI替用户处理多步任务。"
+          },
+          "en": {
+            "label": "AI Agent",
+            "meaning": "An AI system that can use tools and take steps toward a goal.",
+            "relation": "Claude Duet is positioned around handling multi-step tasks for users."
+          }
+        }
+      ]
+    },
+    {
+      "id": "php-security-holes",
+      "cat": "公共安全",
+      "icon": "alert",
+      "title": "老PHP漏洞被重新挖出：很多网站的风险不在AI，而在没人敢碰的旧代码",
+      "brief": "看似过时的程序一旦没人维护，可能成为攻击者进入网站和企业系统的门。",
+      "take": "TechCrunch报道，OpenAI和Google旗下安全公司Wiz发现了一批存在已久的PHP安全漏洞，引发互联网运营者紧急排查。PHP仍运行在大量网站和内部系统上，问题恰恰在于它太常见、也太容易被遗忘。普通人未必知道自己访问的网站用什么语言，但一旦漏洞被利用，账户资料、支付页面和企业服务都可能受影响。现在最实际的事不是恐慌，而是网站运营方尽快更新、检查暴露服务。",
+      "meta": "公共安全｜10月21日｜网络漏洞",
+      "facts": [
+        [
+          "涉及技术",
+          "PHP"
+        ],
+        [
+          "发现方",
+          "OpenAI与Google旗下Wiz"
+        ],
+        [
+          "风险类型",
+          "长期存在的安全漏洞"
+        ]
+      ],
+      "visual": null,
+      "impacts": [
+        [
+          "个人数据",
+          "被攻破的网站可能成为账号和资料泄露的入口"
+        ],
+        [
+          "维护成本",
+          "企业需要为旧系统补课，更新和排查都会花钱"
+        ]
+      ],
+      "next": [
+        "漏洞编号和受影响版本",
+        "修复补丁的部署范围"
+      ],
+      "source": "TechCrunch AI",
+      "updated": "2026-10-21",
+      "en": {
+        "cat": "Public Safety",
+        "title": "Old PHP flaws are back in focus: the weak point may be forgotten code, not AI",
+        "brief": "Unmaintained old software can become the door attackers use to reach websites and company systems.",
+        "take": "TechCrunch reports that OpenAI and Google-owned security firm Wiz found long-standing PHP security flaws, prompting urgent checks by internet operators. PHP still runs a huge number of websites and internal systems. That is exactly the problem: it is common and easy to forget. Most people do not know what language a site uses, but exploitation could affect account data, payment pages, and business services. The practical response is not panic; it is prompt patching and checking exposed systems.",
+        "meta": "Public Safety | Oct. 21 | Cybersecurity flaws",
+        "facts": [
+          [
+            "Technology",
+            "PHP"
+          ],
+          [
+            "Researchers",
+            "OpenAI and Google-owned Wiz"
+          ],
+          [
+            "Risk",
+            "Long-standing security vulnerabilities"
+          ]
+        ],
+        "visual": null,
+        "impacts": [
+          [
+            "Personal data",
+            "Breached sites can become an entry point for account and data theft"
+          ],
+          [
+            "Maintenance cost",
+            "Businesses may face expensive updates and audits of legacy systems"
+          ]
+        ],
+        "next": [
+          "Vulnerability IDs and affected versions",
+          "How widely fixes are deployed"
+        ],
+        "source": "TechCrunch AI",
+        "updated": "2026-10-21"
+      },
+      "sourceLinks": [
+        {
+          "title": "PHP Armageddon: OpenAI, Google's Wiz find ancient holes, panicking the internet",
+          "url": "https://techcrunch.com/2026/10/21/php-armageddon-openai-googles-wiz-find-ancient-holes-panicking-the-internet/",
+          "publisher": "TechCrunch AI"
+        }
+      ],
+      "eventImage": {
+        "url": "https://techcrunch.com/wp-content/uploads/2021/12/GettyImages-460689215.jpg?resize=1200,801",
+        "credit": "TechCrunch AI",
+        "link": "https://techcrunch.com/2026/10/21/php-armageddon-openai-googles-wiz-find-ancient-holes-panicking-the-internet/",
+        "zh": {
+          "alt": "老PHP漏洞被重新挖出：很多网站的风险不在AI，而在没人敢碰的旧代码",
+          "caption": "老PHP漏洞被重新挖出：很多网站的风险不在AI，而在没人敢碰的旧代码"
+        },
+        "en": {
+          "alt": "Old PHP flaws are back in focus: the weak point may be forgotten code, not AI",
+          "caption": "Old PHP flaws are back in focus: the weak point may be forgotten code, not AI"
+        }
+      },
+      "termGuides": [
+        {
+          "key": "PHP",
+          "aliases": [
+            "PHP"
+          ],
+          "zh": {
+            "label": "PHP",
+            "meaning": "一种长期用于搭建网站和服务器应用的编程语言。",
+            "relation": "这次被发现的旧漏洞，可能影响仍在使用相关版本的网站和内部服务。"
+          },
+          "en": {
+            "label": "PHP",
+            "meaning": "A programming language widely used to build websites and server-side applications.",
+            "relation": "The newly highlighted old flaws may affect sites and internal services still using vulnerable versions."
+          }
+        },
+        {
+          "key": "Wiz",
+          "aliases": [
+            "Wiz"
+          ],
+          "zh": {
+            "label": "Wiz",
+            "meaning": "Google旗下的云安全公司。",
+            "relation": "它与OpenAI共同发现并披露了这批PHP问题。"
+          },
+          "en": {
+            "label": "Wiz",
+            "meaning": "A Google-owned cloud security company.",
+            "relation": "It worked with OpenAI on finding and disclosing the PHP issues."
+          }
+        }
+      ]
+    },
+    {
+      "id": "connectwise-breach",
+      "cat": "公共安全",
+      "icon": "alert",
+      "title": "ConnectWise被攻破后，数千家公司遭窥探：IT外包商成了更大的单点风险",
+      "brief": "一家公司替很多企业管系统，本来省事；一旦失守，受害者就会成片出现。",
+      "take": "TechCrunch报道称，与中国有关联的黑客在攻破IT服务商ConnectWise后，监视了数千家公司。ConnectWise这类平台常被技术服务商用于远程管理客户设备，因此它一旦出问题，攻击者可能顺着一个供应商进入许多企业。普通人最先感受到的未必是新闻，而可能是公司系统异常、服务中断，或被要求重置密码。企业需要重新检查远程管理权限、日志和客户通知流程。",
+      "meta": "公共安全｜10月22日｜供应链网络攻击",
+      "facts": [
+        [
+          "受害入口",
+          "ConnectWise IT服务平台"
+        ],
+        [
+          "报道规模",
+          "数千家公司遭监视"
+        ],
+        [
+          "攻击归因",
+          "报道称与中国有关联"
+        ]
+      ],
+      "visual": null,
+      "impacts": [
+        [
+          "连带风险",
+          "服务商被攻破会把风险同时传给大量客户"
+        ],
+        [
+          "日常服务",
+          "企业系统受扰可能带来登录、订单和客服中断"
+        ]
+      ],
+      "next": [
+        "受影响客户范围",
+        "ConnectWise的修复与通知细节"
+      ],
+      "source": "TechCrunch AI",
+      "updated": "2026-10-22",
+      "en": {
+        "cat": "Public Safety",
+        "title": "After the ConnectWise breach, thousands of companies were reportedly watched: IT vendors are a bigger single point of failure",
+        "brief": "One provider managing systems for many firms is efficient—until one breach spreads the damage across all of them.",
+        "take": "TechCrunch reports that Chinese-linked hackers spied on thousands of companies after breaching IT services provider ConnectWise. Platforms like ConnectWise are often used by technology providers to manage customers' devices remotely. If one is compromised, attackers may be able to reach many businesses through a single vendor. People may first notice service disruptions, workplace system problems, or password reset requests rather than the breach itself. Companies need to review remote-management permissions, logs, and customer notification procedures.",
+        "meta": "Public Safety | Oct. 22 | Supply-chain cyberattack",
+        "facts": [
+          [
+            "Entry point",
+            "ConnectWise IT services platform"
+          ],
+          [
+            "Reported scale",
+            "Thousands of companies monitored"
+          ],
+          [
+            "Attribution",
+            "Reportedly linked to China"
+          ]
+        ],
+        "visual": null,
+        "impacts": [
+          [
+            "Spillover risk",
+            "A breach at one service provider can expose many customers at once"
+          ],
+          [
+            "Everyday services",
+            "Disrupted company systems can interrupt logins, orders, and support"
+          ]
+        ],
+        "next": [
+          "Which customers were affected",
+          "ConnectWise's remediation and notification details"
+        ],
+        "source": "TechCrunch AI",
+        "updated": "2026-10-22"
+      },
+      "sourceLinks": [
+        {
+          "title": "Chinese hackers spied on thousands of companies after breaching IT giant ConnectWise",
+          "url": "https://techcrunch.com/2026/10/22/chinese-hackers-spied-on-thousands-of-companies-after-breaching-it-giant-connectwise/",
+          "publisher": "TechCrunch AI"
+        }
+      ],
+      "eventImage": {
+        "url": "https://techcrunch.com/wp-content/uploads/2025/01/GettyImages-591881449.jpg?resize=1200,799",
+        "credit": "TechCrunch AI",
+        "link": "https://techcrunch.com/2026/10/22/chinese-hackers-spied-on-thousands-of-companies-after-breaching-it-giant-connectwise/",
+        "zh": {
+          "alt": "ConnectWise被攻破后，数千家公司遭窥探：IT外包商成了更大的单点风险",
+          "caption": "ConnectWise被攻破后，数千家公司遭窥探：IT外包商成了更大的单点风险"
+        },
+        "en": {
+          "alt": "After the ConnectWise breach, thousands of companies were reportedly watched: IT vendors are a bigger single point of failure",
+          "caption": "After the ConnectWise breach, thousands of companies were reportedly watched: IT vendors are a bigger single point of failure"
+        }
+      },
+      "termGuides": [
+        {
+          "key": "ConnectWise",
+          "aliases": [
+            "ConnectWise"
+          ],
+          "zh": {
+            "label": "ConnectWise",
+            "meaning": "为IT服务商提供远程管理等工具的平台。",
+            "relation": "其平台被攻破后，攻击者据报借此监视了大量客户公司。"
+          },
+          "en": {
+            "label": "ConnectWise",
+            "meaning": "A platform that provides tools such as remote management for IT service providers.",
+            "relation": "After its platform was breached, attackers reportedly used that access to watch many customer companies."
+          }
+        },
+        {
+          "key": "供应链攻击",
+          "aliases": [
+            "供应链攻击",
+            "supply-chain attack"
+          ],
+          "zh": {
+            "label": "供应链攻击",
+            "meaning": "攻击者先攻破共同使用的供应商，再影响其客户。",
+            "relation": "本案的风险不只在ConnectWise本身，还在它连接的众多客户系统。"
+          },
+          "en": {
+            "label": "Supply-chain attack",
+            "meaning": "An attack that compromises a shared supplier to reach its customers.",
+            "relation": "The risk here extends beyond ConnectWise to the many customer systems connected to it."
+          }
+        }
+      ]
+    },
+    {
+      "id": "nvidia-europe-datacenters",
+      "cat": "科技产业",
+      "icon": "code",
+      "title": "英伟达在欧洲推“插电式”数据中心：AI扩张先卡在电力和落地速度",
+      "brief": "芯片买得到不等于AI马上跑得起来，机房、电网和审批往往更慢。",
+      "take": "Wired报道，黄仁勋在欧洲描绘的AI扩张方案，重点是可更快部署的模块化、类似“插电式”的数据中心。它反映出AI基础设施竞争已不只是抢GPU：数据中心要有土地、并网、电力和冷却，任何一环拖慢都会让昂贵芯片闲着。欧洲若想扩大本地AI能力，必须同时解决建设速度与能源约束；这也可能让电力价格、选址和电网投资更贴近日常经济。",
+      "meta": "科技产业｜10月21日｜AI基础设施",
+      "facts": [
+        [
+          "推动者",
+          "英伟达CEO黄仁勋"
+        ],
+        [
+          "地区",
+          "欧洲"
+        ],
+        [
+          "方案",
+          "模块化快速部署数据中心"
+        ]
+      ],
+      "visual": null,
+      "impacts": [
+        [
+          "AI成本",
+          "算力供给不只由芯片决定，也受电力和机房限制"
+        ],
+        [
+          "能源压力",
+          "数据中心集中落地会加大当地电网与用电协调难度"
+        ]
+      ],
+      "next": [
+        "项目的具体地点和容量",
+        "电网接入与电力来源"
+      ],
+      "source": "Wired",
+      "updated": "2026-10-21",
+      "en": {
+        "cat": "Technology Industry",
+        "title": "Nvidia pitches plug-in data centers for Europe: AI expansion is hitting power and construction delays first",
+        "brief": "Having chips does not mean AI can run immediately; data centers, grids, and permits are often slower.",
+        "take": "Wired reports that Jensen Huang's vision for expanding AI in Europe centers on modular, faster-to-deploy, plug-in-style data centers. It shows that AI infrastructure is no longer only about securing GPUs. Data centers need land, grid connections, electricity, and cooling; delays in any one of these can leave costly chips idle. If Europe wants more local AI capacity, it must solve both build speed and energy constraints. That could bring electricity prices, site selection, and grid investment closer to everyday economic concerns.",
+        "meta": "Technology Industry | Oct. 21 | AI infrastructure",
+        "facts": [
+          [
+            "Backer",
+            "Nvidia CEO Jensen Huang"
+          ],
+          [
+            "Region",
+            "Europe"
+          ],
+          [
+            "Approach",
+            "Modular, fast-deployment data centers"
+          ]
+        ],
+        "visual": null,
+        "impacts": [
+          [
+            "AI cost",
+            "Compute supply depends on power and facilities, not chips alone"
+          ],
+          [
+            "Energy pressure",
+            "Clusters of data centers can strain local grids and power planning"
+          ]
+        ],
+        "next": [
+          "Specific project sites and capacity",
+          "Grid connections and electricity sources"
+        ],
+        "source": "Wired",
+        "updated": "2026-10-21"
+      },
+      "sourceLinks": [
+        {
+          "title": "Jensen Huang Vision for Europe Runs on Plug-In Data Centers",
+          "url": "https://www.wired.com/story/jensen-huangs-vision-for-europe-runs-on-plug-in-data-centers/",
+          "publisher": "Wired"
+        }
+      ],
+      "eventImage": {
+        "url": "https://media.wired.com/photos/6ad8c8882adb51db52e1a235/191:100/w_1280,c_limit/GettyImages-2301295306.jpg",
+        "credit": "Wired",
+        "link": "https://www.wired.com/story/jensen-huangs-vision-for-europe-runs-on-plug-in-data-centers/",
+        "zh": {
+          "alt": "英伟达在欧洲推“插电式”数据中心：AI扩张先卡在电力和落地速度",
+          "caption": "英伟达在欧洲推“插电式”数据中心：AI扩张先卡在电力和落地速度"
+        },
+        "en": {
+          "alt": "Nvidia pitches plug-in data centers for Europe: AI expansion is hitting power and construction delays first",
+          "caption": "Nvidia pitches plug-in data centers for Europe: AI expansion is hitting power and construction delays first"
+        }
+      },
+      "termGuides": [
+        {
+          "key": "英伟达",
+          "aliases": [
+            "英伟达",
+            "Nvidia"
+          ],
+          "zh": {
+            "label": "英伟达",
+            "meaning": "主要生产AI计算芯片和相关系统的美国公司。",
+            "relation": "它正推动欧洲更快部署承载其AI芯片的数据中心。"
+          },
+          "en": {
+            "label": "Nvidia",
+            "meaning": "A US company best known for AI computing chips and related systems.",
+            "relation": "It is pushing for faster deployment of European data centers that can run its AI chips."
+          }
+        },
+        {
+          "key": "数据中心",
+          "aliases": [
+            "数据中心",
+            "data center"
+          ],
+          "zh": {
+            "label": "数据中心",
+            "meaning": "集中放置服务器、提供计算和存储能力的设施。",
+            "relation": "AI模型运行需要大量这类设施，以及稳定的大规模供电。"
+          },
+          "en": {
+            "label": "Data center",
+            "meaning": "A facility that houses servers for computing and storage.",
+            "relation": "Running AI models requires many such facilities and large, reliable supplies of power."
+          }
+        }
+      ]
+    },
+    {
+      "id": "china-ai-plus-action",
+      "cat": "AI",
+      "icon": "ai",
+      "title": "中国全面实施“人工智能+”：AI要进更多行业，规则和责任也得跟上",
+      "brief": "政策把AI应用推得更广，先改变的可能是办事、工作软件和企业服务。",
+      "take": "多家中文媒体报道，中共中央办公厅、国务院办公厅提出全面实施“人工智能+”行动。公开报道未在候选材料中给出完整细则，因此不宜把它直接等同于某项已落地的具体服务。但方向很清楚：AI将被更系统地引入产业、公共服务和日常工具。真正影响普通人的，不是口号本身，而是哪些场景会要求使用AI、个人数据怎么用、出错后谁负责，以及是否仍保留非AI的办事选择。",
+      "meta": "AI｜10月21日｜中国政策方向",
+      "facts": [
+        [
+          "发布方",
+          "中办、国办"
+        ],
+        [
+          "行动名称",
+          "人工智能+"
+        ],
+        [
+          "覆盖方向",
+          "推动AI规模化应用"
+        ]
+      ],
+      "visual": null,
+      "impacts": [
+        [
+          "办事与工作",
+          "更多服务和软件可能默认加入AI功能"
+        ],
+        [
+          "权利保障",
+          "数据使用、人工复核和替代渠道会影响实际体验"
+        ]
+      ],
+      "next": [
+        "配套行业政策和执行细则",
+        "公共服务中的数据与人工复核规则"
+      ],
+      "source": "每日经济新闻",
+      "updated": "2026-10-21",
+      "en": {
+        "cat": "AI",
+        "title": "China moves to implement “AI+” broadly: wider use needs rules and accountability too",
+        "brief": "The policy could put AI into more work tools and public services, where data and responsibility become practical issues.",
+        "take": "Several Chinese outlets report that the General Office of the CPC Central Committee and the General Office of the State Council called for comprehensive implementation of an “AI+” action. The candidate material does not include the full detailed text, so it should not be treated as a specific service already in force. But the direction is clear: AI is to be used more systematically in industry, public services, and everyday tools. What matters to people is not the slogan but which tasks require AI, how personal data is used, who is accountable for mistakes, and whether non-AI alternatives remain available.",
+        "meta": "AI | Oct. 21 | China policy direction",
+        "facts": [
+          [
+            "Issuers",
+            "CPC Central Committee and State Council general offices"
+          ],
+          [
+            "Action",
+            "AI+"
+          ],
+          [
+            "Direction",
+            "Broader AI adoption"
+          ]
+        ],
+        "visual": null,
+        "impacts": [
+          [
+            "Services and work",
+            "More services and software may make AI features the default"
+          ],
+          [
+            "User rights",
+            "Data use, human review, and alternative channels will shape the real experience"
+          ]
+        ],
+        "next": [
+          "Supporting sector rules and implementation details",
+          "Data and human-review rules in public services"
+        ],
+        "source": "National Business Daily",
+        "updated": "2026-10-21"
+      },
+      "sourceLinks": [
+        {
+          "title": "中办、国办：全面实施“人工智能+”行动；英伟达携供应链伙伴扩产｜数智早参",
+          "url": "https://www.nbd.com.cn/articles/2026-10-21/4611685.html",
+          "publisher": "每日经济新闻"
+        }
+      ],
+      "eventImage": {
+        "url": "http://static.nbd.com.cn/images/nbd_v5/item.png",
+        "credit": "每日经济新闻",
+        "link": "https://www.nbd.com.cn/articles/2026-10-21/4611685.html",
+        "zh": {
+          "alt": "中国全面实施“人工智能+”：AI要进更多行业，规则和责任也得跟上",
+          "caption": "中国全面实施“人工智能+”：AI要进更多行业，规则和责任也得跟上"
+        },
+        "en": {
+          "alt": "China moves to implement “AI+” broadly: wider use needs rules and accountability too",
+          "caption": "China moves to implement “AI+” broadly: wider use needs rules and accountability too"
+        }
+      },
+      "termGuides": [
+        {
+          "key": "人工智能+",
+          "aliases": [
+            "人工智能+",
+            "AI+"
+          ],
+          "zh": {
+            "label": "人工智能+",
+            "meaning": "把AI技术嵌入行业、服务和工作流程的政策行动。",
+            "relation": "本次文件把更广范围使用AI列为行动方向。"
+          },
+          "en": {
+            "label": "AI+",
+            "meaning": "A policy approach to embed AI in industries, services, and work processes.",
+            "relation": "The reported action calls for AI use across a broader range of settings."
+          }
+        }
+      ]
+    },
+    {
+      "id": "tesla-spacex-merger",
+      "cat": "科技产业",
+      "icon": "eclipse",
+      "title": "马斯克考虑合并特斯拉和SpaceX：把车、火箭和算力放进同一张资产负债表",
+      "brief": "若真推进，这不只是公司改名，而是把两家影响巨大的企业绑得更紧。",
+      "take": "《联合早报》和德国公共媒体Tagesschau报道，马斯克拟推动特斯拉与SpaceX合并的构想。候选来源没有显示交易已经签署，因此目前应视为计划或讨论，而非既成事实。若成行，电动车、卫星互联网、火箭发射和AI计算等业务会被装进同一家公司：协同空间很大，但风险也会更集中，投资者、监管者和用户面对的将不再是彼此独立的企业。",
+      "meta": "科技产业｜10月21日｜企业整合构想",
+      "facts": [
+        [
+          "涉及公司",
+          "特斯拉与SpaceX"
+        ],
+        [
+          "提出者",
+          "埃隆·马斯克"
+        ],
+        [
+          "当前状态",
+          "报道称为合并构想"
+        ]
+      ],
+      "visual": null,
+      "impacts": [
+        [
+          "集中度",
+          "多个关键技术业务可能由同一家公司更紧密控制"
+        ],
+        [
+          "监管难题",
+          "资本结构、竞争和公共基础设施责任会更复杂"
+        ]
+      ],
+      "next": [
+        "两家公司是否公布正式方案",
+        "监管与股东层面的反应"
+      ],
+      "source": "联合早报",
+      "updated": "2026-10-21",
+      "en": {
+        "cat": "Technology Industry",
+        "title": "Musk considers combining Tesla and SpaceX: cars, rockets, and compute on one balance sheet",
+        "brief": "If it moves ahead, this is not just a corporate reshuffle; it would bind two major companies much more tightly.",
+        "take": "Lianhe Zaobao and Germany's Tagesschau report that Elon Musk is considering a combination of Tesla and SpaceX. The candidate sources do not show a signed transaction, so this should be treated as a proposal or discussion, not a completed deal. If it happened, electric vehicles, satellite internet, launches, and AI compute would sit inside one company. There could be real synergies, but risks would be concentrated too: investors, regulators, and users would face a less independent set of businesses.",
+        "meta": "Technology Industry | Oct. 21 | Corporate combination proposal",
+        "facts": [
+          [
+            "Companies",
+            "Tesla and SpaceX"
+          ],
+          [
+            "Proponent",
+            "Elon Musk"
+          ],
+          [
+            "Status",
+            "Reportedly a merger concept"
+          ]
+        ],
+        "visual": null,
+        "impacts": [
+          [
+            "Concentration",
+            "Several important technology businesses could be controlled more closely by one company"
+          ],
+          [
+            "Regulatory challenge",
+            "Capital structure, competition, and public-infrastructure obligations would become more complex"
+          ]
+        ],
+        "next": [
+          "Whether either company announces a formal plan",
+          "Regulatory and shareholder response"
+        ],
+        "source": "Lianhe Zaobao",
+        "updated": "2026-10-21"
+      },
+      "sourceLinks": [
+        {
+          "title": "马斯克拟合并特斯拉（Tesla）与SpaceX",
+          "url": "https://www.zaobao.com.sg/finance/world/story20261021-9873073",
+          "publisher": "联合早报"
+        },
+        {
+          "title": "Was eine Fusion von Tesla und SpaceX bedeuten würde",
+          "url": "https://www.tagesschau.de/wirtschaft/unternehmen/faq-tesla-spacex-zusammenschluss-folgen-100.html",
+          "publisher": "Tagesschau"
+        }
+      ],
+      "eventImage": {
+        "url": "https://www.zaobao.com.sg/assets/facebook-icon-Dq4ktqSN.webp",
+        "credit": "联合早报",
+        "link": "https://www.zaobao.com.sg/finance/world/story20261021-9873073",
+        "zh": {
+          "alt": "马斯克考虑合并特斯拉和SpaceX：把车、火箭和算力放进同一张资产负债表",
+          "caption": "马斯克考虑合并特斯拉和SpaceX：把车、火箭和算力放进同一张资产负债表"
+        },
+        "en": {
+          "alt": "Musk considers combining Tesla and SpaceX: cars, rockets, and compute on one balance sheet",
+          "caption": "Musk considers combining Tesla and SpaceX: cars, rockets, and compute on one balance sheet"
+        }
+      },
+      "termGuides": [
+        {
+          "key": "Tesla",
+          "aliases": [
+            "特斯拉",
+            "Tesla"
+          ],
+          "zh": {
+            "label": "特斯拉",
+            "meaning": "生产电动车、储能产品和相关软件的美国公司。",
+            "relation": "它是这项潜在合并的一方，可能与SpaceX置于同一集团。"
+          },
+          "en": {
+            "label": "Tesla",
+            "meaning": "A US company that makes electric vehicles, energy-storage products, and related software.",
+            "relation": "It is one side of the potential combination with SpaceX."
+          }
+        },
+        {
+          "key": "SpaceX",
+          "aliases": [
+            "SpaceX"
+          ],
+          "zh": {
+            "label": "SpaceX",
+            "meaning": "从事火箭发射和卫星互联网业务的美国航天公司。",
+            "relation": "它是拟议合并的另一方，业务将与特斯拉更紧密捆绑。"
+          },
+          "en": {
+            "label": "SpaceX",
+            "meaning": "A US space company involved in launches and satellite internet.",
+            "relation": "It is the other party in the proposed combination, potentially tying its businesses more closely to Tesla."
+          }
+        }
+      ]
+    },
+    {
+      "id": "onepassword-ai-agent-login",
+      "cat": "公共安全",
+      "icon": "alert",
+      "title": "1Password让AI Agent代登录，但不看密码：便利终于开始碰到最敏感的一层",
+      "brief": "让AI替你操作账号能省时间，但权限怎么收回、谁能批准，仍是关键。",
+      "take": "1Password推出一项功能，让AI Agent可以代表用户登录服务，但设计目标是不把原始密码交给Agent。这个思路很实用：如果AI要替人完成订票、报销或后台操作，它迟早会碰到登录环节；把密码直接塞给它显然不合适。不过“看不到密码”不等于没有风险，Agent拿到会话和操作权限后仍可能做错事。用户需要能限定网站、金额和动作，并随时撤销授权。",
+      "meta": "公共安全｜10月22日｜AI账号安全",
+      "facts": [
+        [
+          "产品",
+          "1Password新功能"
+        ],
+        [
+          "使用者",
+          "AI Agent"
+        ],
+        [
+          "核心设计",
+          "Agent不直接看到密码"
+        ]
+      ],
+      "visual": null,
+      "impacts": [
+        [
+          "使用便利",
+          "重复登录操作有机会交给Agent处理"
+        ],
+        [
+          "账号安全",
+          "权限范围和撤销能力比“免密码”本身更重要"
+        ]
+      ],
+      "next": [
+        "支持哪些Agent和网站",
+        "授权是否可细分到具体操作"
+      ],
+      "source": "TechCrunch AI",
+      "updated": "2026-10-22",
+      "en": {
+        "cat": "Public Safety",
+        "title": "1Password lets AI agents sign in without seeing passwords: convenience reaches the most sensitive layer",
+        "brief": "Having AI operate accounts can save time, but revocable permissions and approvals remain the real safeguard.",
+        "take": "1Password has launched a way for AI agents to sign in on a user's behalf without giving the agent the raw password. The idea is practical: if AI is to handle bookings, expenses, or back-office tasks, it will eventually face logins; handing it passwords directly would be a poor design. But not seeing a password does not erase risk. An agent with a live session and permission to act can still make a harmful mistake. Users need to limit sites, amounts, and actions, and be able to revoke access quickly.",
+        "meta": "Public Safety | Oct. 22 | AI account security",
+        "facts": [
+          [
+            "Product",
+            "New 1Password capability"
+          ],
+          [
+            "User",
+            "AI agents"
+          ],
+          [
+            "Core design",
+            "Agents do not directly see passwords"
+          ]
+        ],
+        "visual": null,
+        "impacts": [
+          [
+            "Convenience",
+            "Agents may take over repetitive sign-in steps"
+          ],
+          [
+            "Account safety",
+            "Scoped and revocable permissions matter more than password hiding alone"
+          ]
+        ],
+        "next": [
+          "Which agents and sites are supported",
+          "Whether permission can be limited to particular actions"
+        ],
+        "source": "TechCrunch AI",
+        "updated": "2026-10-22"
+      },
+      "sourceLinks": [
+        {
+          "title": "1Password launches a way for AI agents to log in on your behalf without seeing your password",
+          "url": "https://techcrunch.com/2026/10/22/1password-launches-a-way-for-ai-agents-to-log-in-on-your-behalf-without-seeing-your-password/",
+          "publisher": "TechCrunch AI"
+        }
+      ],
+      "eventImage": {
+        "url": "https://techcrunch.com/wp-content/uploads/2026/10/AI-agents.jpg?resize=1200,675",
+        "credit": "TechCrunch AI",
+        "link": "https://techcrunch.com/2026/10/22/1password-launches-a-way-for-ai-agents-to-log-in-on-your-behalf-without-seeing-your-password/",
+        "zh": {
+          "alt": "1Password让AI Agent代登录，但不看密码：便利终于开始碰到最敏感的一层",
+          "caption": "1Password让AI Agent代登录，但不看密码：便利终于开始碰到最敏感的一层"
+        },
+        "en": {
+          "alt": "1Password lets AI agents sign in without seeing passwords: convenience reaches the most sensitive layer",
+          "caption": "1Password lets AI agents sign in without seeing passwords: convenience reaches the most sensitive layer"
+        }
+      },
+      "termGuides": [
+        {
+          "key": "1Password",
+          "aliases": [
+            "1Password"
+          ],
+          "zh": {
+            "label": "1Password",
+            "meaning": "用于保存和管理账号密码的工具。",
+            "relation": "它推出了让Agent代登录、但不直接读取密码的机制。"
+          },
+          "en": {
+            "label": "1Password",
+            "meaning": "A tool for storing and managing account passwords.",
+            "relation": "It introduced a mechanism for agents to sign in without directly reading passwords."
+          }
+        },
+        {
+          "key": "会话权限",
+          "aliases": [
+            "会话权限",
+            "session permission"
+          ],
+          "zh": {
+            "label": "会话权限",
+            "meaning": "登录后可在账号内执行操作的临时访问权。",
+            "relation": "即便Agent看不到密码，拿到会话权限后仍可能执行错误操作。"
+          },
+          "en": {
+            "label": "Session permission",
+            "meaning": "Temporary access to take actions inside an account after sign-in.",
+            "relation": "Even without the password, an agent with a session can still take incorrect actions."
+          }
+        }
+      ]
+    },
+    {
+      "id": "uber-chatgpt-work",
+      "cat": "AI",
+      "icon": "ai",
+      "title": "Uber给3万员工配ChatGPT Work：AI办公从试用变成公司默认工具",
+      "brief": "当AI进了全员工作台，效率可能提升，数据边界和考核压力也会一起进来。",
+      "take": "TechCrunch报道，Uber正把ChatGPT Work提供给全部3万名员工使用。这比少数团队试点更进一步：AI会成为日常写作、分析和协作的一部分。对员工，价值在于减少重复文书和资料整理；但公司必须划清哪些客户、运营和商业数据可以输入，哪些不能输入。另一层变化也很现实：当AI成为标配，管理者可能开始重新定义“正常效率”到底该是多少。",
+      "meta": "AI｜10月22日｜企业办公AI",
+      "facts": [
+        [
+          "公司",
+          "Uber"
+        ],
+        [
+          "覆盖人数",
+          "3万名员工"
+        ],
+        [
+          "工具",
+          "ChatGPT Work"
+        ]
+      ],
+      "visual": null,
+      "impacts": [
+        [
+          "工作节奏",
+          "写作、汇总和分析类任务可能更快完成"
+        ],
+        [
+          "管理规则",
+          "数据合规和绩效预期会随AI普及重新调整"
+        ]
+      ],
+      "next": [
+        "Uber的数据使用限制",
+        "员工培训与效果衡量方式"
+      ],
+      "source": "TechCrunch AI",
+      "updated": "2026-10-22",
+      "en": {
+        "cat": "AI",
+        "title": "Uber gives ChatGPT Work to 30,000 employees: office AI is becoming the default, not a pilot",
+        "brief": "When AI enters everyone's workbench, productivity may rise—but so do data boundaries and performance pressure.",
+        "take": "TechCrunch reports that Uber is rolling out ChatGPT Work to all 30,000 employees. This goes beyond a small-team pilot: AI could become part of everyday writing, analysis, and collaboration. For employees, it may reduce repetitive paperwork and information gathering. But the company needs clear lines around which customer, operational, and commercial data can be entered and which cannot. There is another practical shift too: once AI is standard, managers may start redefining what counts as normal productivity.",
+        "meta": "AI | Oct. 22 | Workplace AI",
+        "facts": [
+          [
+            "Company",
+            "Uber"
+          ],
+          [
+            "Coverage",
+            "30,000 employees"
+          ],
+          [
+            "Tool",
+            "ChatGPT Work"
+          ]
+        ],
+        "visual": null,
+        "impacts": [
+          [
+            "Work pace",
+            "Writing, summarizing, and analysis tasks may be completed faster"
+          ],
+          [
+            "Management rules",
+            "Data compliance and performance expectations may be reset as AI spreads"
+          ]
+        ],
+        "next": [
+          "Uber's data-use restrictions",
+          "Employee training and how outcomes are measured"
+        ],
+        "source": "TechCrunch AI",
+        "updated": "2026-10-22"
+      },
+      "sourceLinks": [
+        {
+          "title": "Uber puts all 30,000 employees on ChatGPT Work",
+          "url": "https://techcrunch.com/2026/10/22/uber-puts-all-30000-employees-on-chatgpt-work/",
+          "publisher": "TechCrunch AI"
+        }
+      ],
+      "eventImage": {
+        "url": "https://techcrunch.com/wp-content/uploads/2026/06/wayve-uber-uk.jpg?resize=1200,800",
+        "credit": "TechCrunch AI",
+        "link": "https://techcrunch.com/2026/10/22/uber-puts-all-30000-employees-on-chatgpt-work/",
+        "zh": {
+          "alt": "Uber给3万员工配ChatGPT Work：AI办公从试用变成公司默认工具",
+          "caption": "Uber给3万员工配ChatGPT Work：AI办公从试用变成公司默认工具"
+        },
+        "en": {
+          "alt": "Uber gives ChatGPT Work to 30,000 employees: office AI is becoming the default, not a pilot",
+          "caption": "Uber gives ChatGPT Work to 30,000 employees: office AI is becoming the default, not a pilot"
+        }
+      },
+      "termGuides": [
+        {
+          "key": "ChatGPT Work",
+          "aliases": [
+            "ChatGPT Work"
+          ],
+          "zh": {
+            "label": "ChatGPT Work",
+            "meaning": "面向组织使用的ChatGPT工作产品。",
+            "relation": "Uber计划让全体员工使用它处理日常办公任务。"
+          },
+          "en": {
+            "label": "ChatGPT Work",
+            "meaning": "A work-oriented ChatGPT product for organizations.",
+            "relation": "Uber is rolling it out to its entire workforce for everyday tasks."
+          }
+        },
+        {
+          "key": "Uber",
+          "aliases": [
+            "Uber",
+            "优步"
+          ],
+          "zh": {
+            "label": "Uber",
+            "meaning": "提供网约车、配送等服务的平台公司。",
+            "relation": "它将ChatGPT Work覆盖到3万名员工，使这成为大规模企业部署案例。"
+          },
+          "en": {
+            "label": "Uber",
+            "meaning": "A platform company offering ride-hailing, delivery, and other services.",
+            "relation": "Its rollout to 30,000 employees makes this a large enterprise deployment example."
+          }
+        }
+      ]
+    }
+  ]
+}
