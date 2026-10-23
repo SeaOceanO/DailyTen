@@ -1,0 +1,1375 @@
+{
+  "dateKey": "2026-10-24",
+  "generatedAt": "2026-10-24T05:00:00+08:00",
+  "title": "DailyTen 早报",
+  "subtitle": "10件值得知道的事：AI开始收紧数据入口，油价和安全风险一起抬头。",
+  "briefLabel": "今日要点",
+  "doneLabel": "读完今日十条",
+  "readTimeMinutes": 8,
+  "items": [
+    {
+      "id": "openai-live-web-training",
+      "cat": "AI",
+      "icon": "ai",
+      "title": "OpenAI 不再直接拿“活网页”训练：模型会少一条最新信息入口",
+      "brief": "以后 AI 想跟上刚发生的新闻，可能更依赖授权数据、搜索和用户主动提供的内容。",
+      "take": "OpenAI 表示将不再用实时互联网内容训练模型，理由是这种做法有“重大风险”。这不是说模型从此看不到网络信息，而是把“训练时吸收网页”与“回答时检索网页”分得更开。对用户而言，答案的新鲜度、出处和付费内容能否被使用，都会更受产品规则影响；对网站和媒体而言，谁能给 AI 喂数据、谁能获得回报，正在变成一笔更明确的生意。",
+      "meta": "10月23日｜AI 数据与版权",
+      "facts": [
+        [
+          "决定",
+          "OpenAI 称不再用实时互联网训练模型"
+        ],
+        [
+          "理由",
+          "公司提到此做法存在重大风险"
+        ],
+        [
+          "变化",
+          "训练数据与实时检索将更明显分开"
+        ]
+      ],
+      "visual": null,
+      "impacts": [
+        [
+          "用户",
+          "最新信息更可能来自搜索或授权来源，回答的出处更值得核对"
+        ],
+        [
+          "内容方",
+          "网站内容被 AI 使用的许可和付费谈判会更重要"
+        ]
+      ],
+      "next": [
+        "OpenAI 会说明哪些数据来源仍可用于训练",
+        "其他大模型公司会否跟进限制实时抓取"
+      ],
+      "source": "TechCrunch AI",
+      "updated": "2026-10-23",
+      "en": {
+        "cat": "AI",
+        "title": "OpenAI steps back from training on the live web, narrowing one route to fresh information",
+        "brief": "AI may rely more on licensed data, search, and what users provide if it needs to keep up with new events.",
+        "take": "OpenAI says it will no longer train its models on live internet content because of what it calls significant risks. That does not mean its products can never see web information; it more clearly separates training on pages from retrieving pages while answering. For users, freshness, sourcing, and access to paid material may depend more on product rules. For publishers, permission and payment for AI use of their work are becoming a much more concrete business question.",
+        "meta": "Oct. 23 | AI data and copyright",
+        "facts": [
+          [
+            "Decision",
+            "OpenAI says it will stop training on the live internet"
+          ],
+          [
+            "Reason",
+            "The company cites significant risks"
+          ],
+          [
+            "Shift",
+            "Model training and live retrieval are being separated more clearly"
+          ]
+        ],
+        "visual": null,
+        "impacts": [
+          [
+            "Users",
+            "Fresh answers may depend more on search or licensed sources, making citations more important"
+          ],
+          [
+            "Publishers",
+            "Permission and payment for AI use of web content could matter more"
+          ]
+        ],
+        "next": [
+          "How OpenAI defines the data sources it will still use",
+          "Whether other model makers curb live-web collection"
+        ],
+        "source": "TechCrunch AI",
+        "updated": "2026-10-23"
+      },
+      "sourceLinks": [
+        {
+          "title": "OpenAI says it will no longer train its AI models on the live internet, citing “significant risks”",
+          "url": "https://techcrunch.com/2026/10/23/openai-says-it-will-no-longer-train-its-ai-models-on-the-live-internet-citing-significant-risks/",
+          "publisher": "TechCrunch AI"
+        }
+      ],
+      "eventImage": {
+        "url": "https://techcrunch.com/wp-content/uploads/2026/02/TIm.jpg?w=150",
+        "credit": "TechCrunch AI",
+        "link": "https://techcrunch.com/2026/10/23/openai-says-it-will-no-longer-train-its-ai-models-on-the-live-internet-citing-significant-risks/",
+        "zh": {
+          "alt": "OpenAI 不再直接拿“活网页”训练：模型会少一条最新信息入口",
+          "caption": "OpenAI 不再直接拿“活网页”训练：模型会少一条最新信息入口"
+        },
+        "en": {
+          "alt": "OpenAI steps back from training on the live web, narrowing one route to fresh information",
+          "caption": "OpenAI steps back from training on the live web, narrowing one route to fresh information"
+        }
+      },
+      "termGuides": [
+        {
+          "key": "OpenAI",
+          "aliases": [
+            "OpenAI"
+          ],
+          "zh": {
+            "label": "OpenAI",
+            "meaning": "开发 ChatGPT 等产品的美国 AI 公司。",
+            "relation": "它这次要改变模型从公开网页吸收训练材料的方式。"
+          },
+          "en": {
+            "label": "OpenAI",
+            "meaning": "The US AI company behind products including ChatGPT.",
+            "relation": "It is changing how its models obtain training material from public webpages."
+          }
+        },
+        {
+          "key": "实时互联网训练",
+          "aliases": [
+            "实时互联网",
+            "live internet",
+            "training"
+          ],
+          "zh": {
+            "label": "实时互联网训练",
+            "meaning": "把正在变化的公开网页内容直接加入模型训练。",
+            "relation": "OpenAI 说将停止这种做法，而不是停止所有网页检索。"
+          },
+          "en": {
+            "label": "Live-internet training",
+            "meaning": "Using constantly changing public web content directly in model training.",
+            "relation": "OpenAI says it will stop this, rather than end all web retrieval."
+          }
+        }
+      ]
+    },
+    {
+      "id": "openai-decision-model",
+      "cat": "AI",
+      "icon": "ai",
+      "title": "OpenAI 把“替你做取舍”的模型推向大众，AI 竞争从会答题走向会决定",
+      "brief": "这类模型瞄准的是多步选择，不只是写一段像样的文字。",
+      "take": "OpenAI 将其对标 Jev 的决策模型更广泛开放。它主打的不是聊天更顺，而是在信息不完整、目标互相冲突时，帮人比较选项并给出行动建议。真正的门槛也在这里：一旦模型参与采购、排班、风控或个人财务取舍，错一次的代价远高于答错一道题。开放后，开发者会更容易把它接进工作流，但是否能解释理由、允许人随时接管，才决定它能走多远。",
+      "meta": "10月22日｜AI 产品",
+      "facts": [
+        [
+          "开放",
+          "OpenAI 将该决策模型更广泛提供"
+        ],
+        [
+          "定位",
+          "产品瞄准多步骤选择与行动建议"
+        ],
+        [
+          "竞争",
+          "报道将其放在 Jev 类决策模型竞争中观察"
+        ]
+      ],
+      "visual": null,
+      "impacts": [
+        [
+          "工作",
+          "采购、客服和运营工具可能更常让 AI 提出下一步，而非只生成文本"
+        ],
+        [
+          "风险",
+          "涉及钱、资格或安全的决定仍需要可追溯理由和人工复核"
+        ]
+      ],
+      "next": [
+        "开放范围、价格和使用限制",
+        "企业是否把它用于高风险决策"
+      ],
+      "source": "TechCrunch AI",
+      "updated": "2026-10-22",
+      "en": {
+        "cat": "AI",
+        "title": "OpenAI broadens access to a model built to make trade-offs, not just write well",
+        "brief": "These models target multi-step choices, not merely polished text generation.",
+        "take": "OpenAI has made its Jev competitor more widely available. The pitch is not simply smoother chat: it is comparing options and suggesting action when information is incomplete and goals conflict. That is also where the stakes rise. A bad choice in purchasing, staffing, risk control, or personal finance costs more than a wrong answer to a question. Developers may find it easier to put the model into workflows, but explainability and a clear human override will determine how far it can go.",
+        "meta": "Oct. 22 | AI product",
+        "facts": [
+          [
+            "Availability",
+            "OpenAI has made the decision model more widely available"
+          ],
+          [
+            "Focus",
+            "It is aimed at multi-step choices and action recommendations"
+          ],
+          [
+            "Competition",
+            "The report frames it in competition with Jev-style decision models"
+          ]
+        ],
+        "visual": null,
+        "impacts": [
+          [
+            "Work",
+            "Purchasing, support, and operations tools may ask AI for next steps rather than text alone"
+          ],
+          [
+            "Risk",
+            "Choices involving money, eligibility, or safety still need traceable reasoning and human review"
+          ]
+        ],
+        "next": [
+          "Its availability, price, and use limits",
+          "Whether businesses deploy it in high-stakes decisions"
+        ],
+        "source": "TechCrunch AI",
+        "updated": "2026-10-22"
+      },
+      "sourceLinks": [
+        {
+          "title": "OpenAI makes its Jev competitor widely available as decision model competition heats up",
+          "url": "https://techcrunch.com/2026/10/22/openai-makes-its-jev-competitor-widely-available-as-decision-model-competition-heats-up/",
+          "publisher": "TechCrunch AI"
+        }
+      ],
+      "eventImage": {
+        "url": "https://techcrunch.com/wp-content/uploads/2026/10/Screenshot-2026-10-22-at-12.17.11-PM-1.png?resize=1200,988",
+        "credit": "TechCrunch AI",
+        "link": "https://techcrunch.com/2026/10/22/openai-makes-its-jev-competitor-widely-available-as-decision-model-competition-heats-up/",
+        "zh": {
+          "alt": "OpenAI 把“替你做取舍”的模型推向大众，AI 竞争从会答题走向会决定",
+          "caption": "OpenAI 把“替你做取舍”的模型推向大众，AI 竞争从会答题走向会决定"
+        },
+        "en": {
+          "alt": "OpenAI broadens access to a model built to make trade-offs, not just write well",
+          "caption": "OpenAI broadens access to a model built to make trade-offs, not just write well"
+        }
+      },
+      "termGuides": [
+        {
+          "key": "决策模型",
+          "aliases": [
+            "决策模型",
+            "decision model"
+          ],
+          "zh": {
+            "label": "决策模型",
+            "meaning": "专门比较目标、约束和选项，并提出下一步做法的 AI。",
+            "relation": "OpenAI 此次扩大开放的产品属于这一类。"
+          },
+          "en": {
+            "label": "Decision model",
+            "meaning": "AI designed to compare goals, constraints, and options before suggesting a next step.",
+            "relation": "OpenAI is widening access to a product in this category."
+          }
+        },
+        {
+          "key": "Jev",
+          "aliases": [
+            "Jev"
+          ],
+          "zh": {
+            "label": "Jev",
+            "meaning": "报道中被用作对标对象的决策模型产品。",
+            "relation": "OpenAI 的新开放产品被描述为它的竞争者。"
+          },
+          "en": {
+            "label": "Jev",
+            "meaning": "A decision-model product used as the comparison point in the report.",
+            "relation": "OpenAI's newly broadened offering is described as a competitor."
+          }
+        }
+      ]
+    },
+    {
+      "id": "claude-duet-agents",
+      "cat": "AI",
+      "icon": "code",
+      "title": "Anthropic 想让 Claude 不只聊天，而是变成会干活的 Agent",
+      "brief": "Claude Duet 把重点放在让 AI 执行任务，便利和失控的边界会一起被推到用户面前。",
+      "take": "Anthropic 推出 Claude Duet 应用，把赌注押在 Agent——能替人连续完成多步任务的 AI——上。对普通用户，这类工具的吸引力很直接：少在网页、表格和应用之间来回切换。但只要 Agent 能登录账户、发消息或改文件，问题就不再只是“它答得对不对”，而是“它能动到哪里、每一步谁批准”。这场产品竞争正在把权限管理和操作记录，从企业 IT 的细节变成人人都会碰到的设置。",
+      "meta": "10月22日｜AI Agent",
+      "facts": [
+        [
+          "产品",
+          "Anthropic 推出 Claude Duet 应用"
+        ],
+        [
+          "方向",
+          "公司将其作为 Agent 战略的一部分"
+        ],
+        [
+          "能力",
+          "Agent 旨在连续完成多步骤任务"
+        ]
+      ],
+      "visual": null,
+      "impacts": [
+        [
+          "效率",
+          "重复的跨应用操作有机会被交给 AI 处理"
+        ],
+        [
+          "隐私与安全",
+          "授权范围、确认步骤和操作记录会比聊天界面更重要"
+        ]
+      ],
+      "next": [
+        "Claude Duet 能接入哪些账户和工具",
+        "是否提供细粒度审批与撤销机制"
+      ],
+      "source": "TechCrunch AI",
+      "updated": "2026-10-22",
+      "en": {
+        "cat": "AI",
+        "title": "Anthropic wants Claude to do work, not just chat—and that puts permissions in the spotlight",
+        "brief": "Claude Duet is built around agents that carry out tasks, bringing convenience and loss-of-control risks closer to users.",
+        "take": "Anthropic has launched the Claude Duet app as a bet on agents: AI systems that can complete a chain of tasks for a person. The appeal is obvious—less switching among webpages, spreadsheets, and apps. But once an agent can sign in, send messages, or edit files, the question is no longer only whether its answer is correct. It is what it can touch, and who approves each step. This product race could turn permissions and activity logs from back-office IT details into settings ordinary users need to manage.",
+        "meta": "Oct. 22 | AI agents",
+        "facts": [
+          [
+            "Product",
+            "Anthropic launched the Claude Duet app"
+          ],
+          [
+            "Strategy",
+            "The company presents it as part of its agent push"
+          ],
+          [
+            "Capability",
+            "Agents are meant to complete multi-step tasks"
+          ]
+        ],
+        "visual": null,
+        "impacts": [
+          [
+            "Efficiency",
+            "AI could take on repetitive work across apps"
+          ],
+          [
+            "Privacy and safety",
+            "Permission scope, approvals, and activity records will matter more than a chat box"
+          ]
+        ],
+        "next": [
+          "Which accounts and tools Claude Duet can access",
+          "Whether it offers granular approval and rollback controls"
+        ],
+        "source": "TechCrunch AI",
+        "updated": "2026-10-22"
+      },
+      "sourceLinks": [
+        {
+          "title": "Claude Duet app is Anthropic’s bet on agents",
+          "url": "https://techcrunch.com/2026/10/22/claude-duet-app-is-anthropics-bet-on-agents/",
+          "publisher": "TechCrunch AI"
+        }
+      ],
+      "eventImage": {
+        "url": "https://techcrunch.com/wp-content/uploads/2026/10/Claude-Duet.jpg?resize=1200,675",
+        "credit": "TechCrunch AI",
+        "link": "https://techcrunch.com/2026/10/22/claude-duet-app-is-anthropics-bet-on-agents/",
+        "zh": {
+          "alt": "Anthropic 想让 Claude 不只聊天，而是变成会干活的 Agent",
+          "caption": "Anthropic 想让 Claude 不只聊天，而是变成会干活的 Agent"
+        },
+        "en": {
+          "alt": "Anthropic wants Claude to do work, not just chat—and that puts permissions in the spotlight",
+          "caption": "Anthropic wants Claude to do work, not just chat—and that puts permissions in the spotlight"
+        }
+      },
+      "termGuides": [
+        {
+          "key": "Anthropic",
+          "aliases": [
+            "Anthropic",
+            "Anthropic 公司"
+          ],
+          "zh": {
+            "label": "Anthropic",
+            "meaning": "开发 Claude 系列 AI 产品的公司。",
+            "relation": "它推出 Claude Duet，试图把 Claude 做成可执行任务的 Agent。"
+          },
+          "en": {
+            "label": "Anthropic",
+            "meaning": "The company that develops the Claude family of AI products.",
+            "relation": "It launched Claude Duet to make Claude more of a task-performing agent."
+          }
+        },
+        {
+          "key": "Claude Duet",
+          "aliases": [
+            "Claude Duet",
+            "Duet"
+          ],
+          "zh": {
+            "label": "Claude Duet",
+            "meaning": "Anthropic 新推出的 Claude 应用。",
+            "relation": "它是该公司押注 AI Agent 的新入口。"
+          },
+          "en": {
+            "label": "Claude Duet",
+            "meaning": "A newly launched Claude app from Anthropic.",
+            "relation": "It is Anthropic's new entry point for its agent strategy."
+          }
+        },
+        {
+          "key": "Agent",
+          "aliases": [
+            "Agent",
+            "智能体",
+            "AI Agent"
+          ],
+          "zh": {
+            "label": "Agent",
+            "meaning": "能在多个步骤和工具之间执行任务的 AI，而不只是回答问题。",
+            "relation": "Claude Duet 的核心卖点正是让 AI 代为完成任务链。"
+          },
+          "en": {
+            "label": "Agent",
+            "meaning": "AI that can perform tasks across multiple steps and tools, rather than only answer questions.",
+            "relation": "This is the core promise of Claude Duet."
+          }
+        }
+      ]
+    },
+    {
+      "id": "oil-iran-risk",
+      "cat": "能源",
+      "icon": "oil",
+      "title": "油价冲上每桶117美元：中东再有一轮打击，先贵起来的可能是出行和运费",
+      "brief": "市场担心伊朗局势会卡住供应，油价已先替未来的风险买单。",
+      "take": "在美国可能恢复对伊朗打击的担忧下，油价升至每桶117美元以上。油价不是立刻原样传到加油站，但航空燃油、货运和化工原料都会先感到压力，之后才可能传到机票、物流费和部分商品价格。眼下最关键的不是一天的涨跌，而是冲突会不会持续威胁产油、运输路线和油轮安全；只要这个答案不清楚，市场就会继续给油价加一层“风险费”。",
+      "meta": "10月23日｜原油与中东风险",
+      "facts": [
+        [
+          "价格",
+          "油价升至每桶117美元以上"
+        ],
+        [
+          "触发点",
+          "市场担忧美国可能恢复对伊朗打击"
+        ],
+        [
+          "传导",
+          "能源、运输和化工成本都会受油价影响"
+        ]
+      ],
+      "visual": {
+        "type": "orbit",
+        "label": "油价风险如何传到日常开支",
+        "nodes": [
+          "中东冲突担忧",
+          "原油加价",
+          "运输燃料变贵",
+          "机票与商品承压"
+        ]
+      },
+      "impacts": [
+        [
+          "家庭",
+          "油价若高位维持，驾车、出行和网购配送成本都可能上行"
+        ],
+        [
+          "经济",
+          "高油价会让各国控制通胀变得更难"
+        ]
+      ],
+      "next": [
+        "美国与伊朗相关军事行动是否升级",
+        "主要航道和油轮运输是否受扰"
+      ],
+      "source": "The Guardian",
+      "updated": "2026-10-23",
+      "en": {
+        "cat": "Energy",
+        "title": "Oil tops $117 a barrel: another round of Middle East strikes could show up first in travel and freight costs",
+        "brief": "Markets are already pricing in the risk that the Iran crisis could disrupt supply.",
+        "take": "Oil rose above $117 a barrel amid fears that the US could renew strikes on Iran. Crude prices do not pass straight through to petrol stations overnight, but aviation fuel, shipping, and chemical inputs feel the pressure first; airfares, delivery costs, and some consumer prices can follow. The key question is not one day's move. It is whether conflict keeps threatening production, shipping routes, and tanker safety. Until that is clearer, the market is likely to keep adding a risk premium to oil.",
+        "meta": "Oct. 23 | Oil and Middle East risk",
+        "facts": [
+          [
+            "Price",
+            "Oil rose above $117 a barrel"
+          ],
+          [
+            "Trigger",
+            "Markets fear renewed US strikes on Iran"
+          ],
+          [
+            "Transmission",
+            "Energy, transport, and chemical costs are exposed to crude prices"
+          ]
+        ],
+        "visual": {
+          "type": "orbit",
+          "label": "How oil risk reaches household costs",
+          "nodes": [
+            "Middle East conflict fears",
+            "Higher crude prices",
+            "Costlier transport fuel",
+            "Pressure on fares and goods"
+          ]
+        },
+        "impacts": [
+          [
+            "Households",
+            "If high prices persist, driving, travel, and delivery costs could rise"
+          ],
+          [
+            "Economy",
+            "Expensive oil makes inflation harder for governments to contain"
+          ]
+        ],
+        "next": [
+          "Whether military action involving the US and Iran escalates",
+          "Whether key shipping routes and tanker traffic are disrupted"
+        ],
+        "source": "The Guardian",
+        "updated": "2026-10-23"
+      },
+      "sourceLinks": [
+        {
+          "title": "Oil price rises above $117 a barrel amid fears US will renew strikes on Iran",
+          "url": "https://www.theguardian.com/business/2026/oct/23/oil-five-month-high-fears-us-renews-strikes-iran",
+          "publisher": "The Guardian"
+        }
+      ],
+      "eventImage": {
+        "url": "https://i.guim.co.uk/img/media/c0f302e34e0b51e7da8489af30c4f6d217592b8a/424_0_4520_3616/master/4520.jpg?width=1200&height=630&quality=85&auto=format&fit=crop&precrop=40:21,offset-x50,offset-y0&overlay-align=bottom%2Cleft&overlay-width=100p&overlay-base64=L2ltZy9zdGF0aWMvb3ZlcmxheXMvdGctZGVmYXVsdC5wbmc&enable=upscale&s=825f9c7c09a6da45c4140957bb9ee0fc",
+        "credit": "The Guardian",
+        "link": "https://www.theguardian.com/business/2026/oct/23/oil-five-month-high-fears-us-renews-strikes-iran",
+        "zh": {
+          "alt": "油价冲上每桶117美元：中东再有一轮打击，先贵起来的可能是出行和运费",
+          "caption": "油价冲上每桶117美元：中东再有一轮打击，先贵起来的可能是出行和运费"
+        },
+        "en": {
+          "alt": "Oil tops $117 a barrel: another round of Middle East strikes could show up first in travel and freight costs",
+          "caption": "Oil tops $117 a barrel: another round of Middle East strikes could show up first in travel and freight costs"
+        }
+      },
+      "termGuides": [
+        {
+          "key": "风险溢价",
+          "aliases": [
+            "风险溢价",
+            "risk premium"
+          ],
+          "zh": {
+            "label": "风险溢价",
+            "meaning": "市场因担心未来出事，先把价格往上加的一部分。",
+            "relation": "伊朗周边的军事风险正在给油价加上这部分价格。"
+          },
+          "en": {
+            "label": "Risk premium",
+            "meaning": "The extra amount markets add to a price because they fear future disruption.",
+            "relation": "Military risk around Iran is adding this extra layer to oil prices."
+          }
+        },
+        {
+          "key": "原油",
+          "aliases": [
+            "原油",
+            "oil",
+            "crude"
+          ],
+          "zh": {
+            "label": "原油",
+            "meaning": "尚未炼成汽油、柴油等产品的石油。",
+            "relation": "其价格上涨会逐步推高燃料、运输和部分商品成本。"
+          },
+          "en": {
+            "label": "Crude oil",
+            "meaning": "Petroleum before it is refined into petrol, diesel, and other products.",
+            "relation": "A rise in crude can gradually lift fuel, transport, and some goods costs."
+          }
+        }
+      ]
+    },
+    {
+      "id": "iran-strike-warning",
+      "cat": "国际局势",
+      "icon": "alert",
+      "title": "多国劝美以别再打伊朗：真正危险的是误判把地区拖进更大冲突",
+      "brief": "这不只是外交喊话，任何新一轮打击都可能让油路、航运和周边国家一起承压。",
+      "take": "欧洲和中东官员警告美国与以色列不要对伊朗发动新的打击。公开警告本身说明，各方担心的已不只是一次军事行动，而是报复、反报复与误判连起来后难以刹车。对远离战场的人，最先可见的影响往往不是地图上的战线，而是能源价格、航班绕行、海运延误和市场波动。能否保住沟通渠道，比一句强硬表态更实际。",
+      "meta": "10月23日｜中东安全",
+      "facts": [
+        [
+          "警告",
+          "欧洲和中东官员劝阻美以发动新打击"
+        ],
+        [
+          "风险",
+          "担心行动引发连锁报复与误判"
+        ],
+        [
+          "外溢",
+          "能源、航空和航运都可能受影响"
+        ]
+      ],
+      "visual": null,
+      "impacts": [
+        [
+          "安全",
+          "地区冲突扩大将增加周边平民和航运的风险"
+        ],
+        [
+          "生活成本",
+          "若运输受阻，能源和进口商品价格可能继续承压"
+        ]
+      ],
+      "next": [
+        "各方是否恢复或维持直接沟通",
+        "是否出现新的军事部署或袭击"
+      ],
+      "source": "The Guardian",
+      "updated": "2026-10-23",
+      "en": {
+        "cat": "International affairs",
+        "title": "Officials urge the US and Israel not to strike Iran again: the danger is a miscalculation that spreads",
+        "brief": "This is more than diplomatic rhetoric; fresh strikes could put oil routes, shipping, and neighbouring states under pressure.",
+        "take": "European and Middle Eastern officials have warned the US and Israel against fresh strikes on Iran. The public warning suggests fears go beyond one operation: retaliation, counter-retaliation, and miscalculation can become hard to stop once linked together. Far from the battlefield, the first visible effects may be energy prices, rerouted flights, shipping delays, and market volatility. Keeping communication channels open is more useful than another hard-line statement.",
+        "meta": "Oct. 23 | Middle East security",
+        "facts": [
+          [
+            "Warning",
+            "European and Middle Eastern officials urged the US and Israel not to strike again"
+          ],
+          [
+            "Risk",
+            "They fear a chain of retaliation and miscalculation"
+          ],
+          [
+            "Spillover",
+            "Energy, aviation, and shipping could be affected"
+          ]
+        ],
+        "visual": null,
+        "impacts": [
+          [
+            "Safety",
+            "A wider conflict would raise risks for civilians and shipping across the region"
+          ],
+          [
+            "Living costs",
+            "Transport disruption could keep pressure on energy and imported-goods prices"
+          ]
+        ],
+        "next": [
+          "Whether direct communication channels remain open",
+          "Whether new deployments or attacks emerge"
+        ],
+        "source": "The Guardian",
+        "updated": "2026-10-23"
+      },
+      "sourceLinks": [
+        {
+          "title": "US and Israel are warned against launching fresh strikes on Iran",
+          "url": "https://www.theguardian.com/world/2026/oct/23/european-middle-eastern-ministers-summit-iran-us-israel",
+          "publisher": "The Guardian"
+        }
+      ],
+      "eventImage": {
+        "url": "https://i.guim.co.uk/img/media/6ac9cf9fbfcf811f0a3f36368ba9e219fcb7b7de/367_0_2560_2048/master/2560.jpg?width=1200&height=630&quality=85&auto=format&fit=crop&precrop=40:21,offset-x50,offset-y0&overlay-align=bottom%2Cleft&overlay-width=100p&overlay-base64=L2ltZy9zdGF0aWMvb3ZlcmxheXMvdGctZGVmYXVsdC5wbmc&enable=upscale&s=9adc5e7bb71306206b3f88525e28dd4f",
+        "credit": "The Guardian",
+        "link": "https://www.theguardian.com/world/2026/oct/23/european-middle-eastern-ministers-summit-iran-us-israel",
+        "zh": {
+          "alt": "多国劝美以别再打伊朗：真正危险的是误判把地区拖进更大冲突",
+          "caption": "多国劝美以别再打伊朗：真正危险的是误判把地区拖进更大冲突"
+        },
+        "en": {
+          "alt": "Officials urge the US and Israel not to strike Iran again: the danger is a miscalculation that spreads",
+          "caption": "Officials urge the US and Israel not to strike Iran again: the danger is a miscalculation that spreads"
+        }
+      },
+      "termGuides": [
+        {
+          "key": "误判升级",
+          "aliases": [
+            "误判升级",
+            "miscalculation"
+          ],
+          "zh": {
+            "label": "误判升级",
+            "meaning": "一方误读对方意图或反应，导致冲突被推到原本不想去的程度。",
+            "relation": "官员担心新打击会触发这种连锁过程。"
+          },
+          "en": {
+            "label": "Miscalculation",
+            "meaning": "When one side misreads another's intent or response and drives a conflict further than intended.",
+            "relation": "Officials fear fresh strikes could trigger this chain."
+          }
+        }
+      ]
+    },
+    {
+      "id": "ebola-west-africa",
+      "cat": "公共安全",
+      "icon": "alert",
+      "title": "尼日利亚出现埃博拉病例，追踪感染源比恐慌更要紧",
+      "brief": "病例跨到西非后，能否尽快找到接触链，决定它是孤立事件还是更大疫情的开头。",
+      "take": "尼日利亚确认出现埃博拉病例，报道指出感染来源仍不明，并引发对病毒扩散的担忧。埃博拉的风险不在于普通日常接触就会轻易传播，而在于患者出现症状后与体液接触、医疗防护和跨境追踪能否及时做到位。现在最重要的是找出患者的活动和接触轨迹、保护医护人员，并让邻国共享信息。对全球旅行者而言，不必自行恐慌，但应以公共卫生部门的正式提示为准。",
+      "meta": "10月23日｜传染病监测",
+      "facts": [
+        [
+          "病例",
+          "尼日利亚确认出现埃博拉病例"
+        ],
+        [
+          "未知点",
+          "感染来源仍在调查"
+        ],
+        [
+          "范围",
+          "报道担忧疫情向西非扩散"
+        ]
+      ],
+      "visual": null,
+      "impacts": [
+        [
+          "公共卫生",
+          "越早找到接触者并隔离，越有机会阻断进一步传播"
+        ],
+        [
+          "出行",
+          "跨境筛查和旅行建议可能随调查结果调整"
+        ]
+      ],
+      "next": [
+        "感染来源与密切接触者调查结果",
+        "邻国是否报告关联病例"
+      ],
+      "source": "The Guardian",
+      "updated": "2026-10-23",
+      "en": {
+        "cat": "Public safety",
+        "title": "Nigeria confirms an Ebola case; tracing the source matters more than panic",
+        "brief": "Now that a case has reached West Africa, finding the contact chain will show whether this is isolated or the start of something larger.",
+        "take": "Nigeria has confirmed an Ebola case, while the source of infection remains unclear and concern is growing about wider spread. Ebola is not easily passed through ordinary casual contact; the critical issues are exposure to bodily fluids after symptoms begin, safe medical care, and fast cross-border tracing. The immediate priorities are mapping the patient's movements and contacts, protecting health workers, and sharing information with neighbouring countries. Travellers do not need to panic, but should follow formal public-health guidance.",
+        "meta": "Oct. 23 | Disease surveillance",
+        "facts": [
+          [
+            "Case",
+            "Nigeria has confirmed an Ebola case"
+          ],
+          [
+            "Unknown",
+            "The infection source is under investigation"
+          ],
+          [
+            "Scope",
+            "The report raises concern about spread into West Africa"
+          ]
+        ],
+        "visual": null,
+        "impacts": [
+          [
+            "Public health",
+            "Finding contacts and isolating them early gives authorities the best chance to stop further spread"
+          ],
+          [
+            "Travel",
+            "Border screening and travel advice may change as the investigation develops"
+          ]
+        ],
+        "next": [
+          "Results of source and close-contact tracing",
+          "Whether neighbouring countries report linked cases"
+        ],
+        "source": "The Guardian",
+        "updated": "2026-10-23"
+      },
+      "sourceLinks": [
+        {
+          "title": "Mystery over source of Ebola infection in Nigeria fuels concern about spread of virus",
+          "url": "https://www.theguardian.com/world/2026/oct/23/ebola-swiss-patient-nigeria-dr-congo-concerns-virus-spread",
+          "publisher": "The Guardian"
+        },
+        {
+          "title": "Authorities investigating whether first Kenya and Nigeria Ebola cases crossed paths",
+          "url": "https://www.npr.org/2026/10/23/g-s1-149515/africa-ebola-outbreak",
+          "publisher": "NPR"
+        }
+      ],
+      "eventImage": {
+        "url": "https://i.guim.co.uk/img/media/795089c147661c73d9d1db1fbfb3b77cf917034c/296_0_5000_4000/master/5000.jpg?width=1200&height=630&quality=85&auto=format&fit=crop&precrop=40:21,offset-x50,offset-y0&overlay-align=bottom%2Cleft&overlay-width=100p&overlay-base64=L2ltZy9zdGF0aWMvb3ZlcmxheXMvdGctZGVmYXVsdC5wbmc&enable=upscale&s=f9841448dbfe505c41f07a973244bb4d",
+        "credit": "The Guardian",
+        "link": "https://www.theguardian.com/world/2026/oct/23/ebola-swiss-patient-nigeria-dr-congo-concerns-virus-spread",
+        "zh": {
+          "alt": "尼日利亚出现埃博拉病例，追踪感染源比恐慌更要紧",
+          "caption": "尼日利亚出现埃博拉病例，追踪感染源比恐慌更要紧"
+        },
+        "en": {
+          "alt": "Nigeria confirms an Ebola case; tracing the source matters more than panic",
+          "caption": "Nigeria confirms an Ebola case; tracing the source matters more than panic"
+        }
+      },
+      "termGuides": [
+        {
+          "key": "埃博拉",
+          "aliases": [
+            "埃博拉",
+            "Ebola"
+          ],
+          "zh": {
+            "label": "埃博拉",
+            "meaning": "可引发严重出血热的病毒性疾病。",
+            "relation": "尼日利亚已确认病例，卫生部门正追查感染源和接触链。"
+          },
+          "en": {
+            "label": "Ebola",
+            "meaning": "A viral disease that can cause severe haemorrhagic fever.",
+            "relation": "Nigeria has confirmed a case, and health authorities are tracing its source and contacts."
+          }
+        },
+        {
+          "key": "接触者追踪",
+          "aliases": [
+            "接触者追踪",
+            "contact tracing"
+          ],
+          "zh": {
+            "label": "接触者追踪",
+            "meaning": "找出患者可能接触过的人，评估风险并提供监测或隔离。",
+            "relation": "它是判断这起病例会否继续扩散的核心工作。"
+          },
+          "en": {
+            "label": "Contact tracing",
+            "meaning": "Finding people a patient may have exposed, then assessing, monitoring, or isolating them.",
+            "relation": "It is central to determining whether this case spreads further."
+          }
+        }
+      ]
+    },
+    {
+      "id": "php-security-flaws",
+      "cat": "公共安全",
+      "icon": "alert",
+      "title": "影响约七成网站的软件曝漏洞：黑客已经开始试探入口",
+      "brief": "这不是某个小网站的麻烦，修补慢的服务可能连带暴露账户、订单和个人资料。",
+      "take": "NPR 报道称，一套影响约70%网站的软件发现漏洞后，黑客尝试入侵的活动正在上升。报道未把所有网站都等同于已经失守，但覆盖面意味着风险广：许多在线商店、预约系统和企业后台都依赖相近的基础软件。普通用户最现实的做法是留意异常登录通知，不在可疑页面重复使用密码；网站运营者则需要尽快确认是否受影响并安装补丁。网络安全最怕的，往往不是漏洞刚曝光，而是大家以为别人会先修。",
+      "meta": "10月23日｜网络安全",
+      "facts": [
+        [
+          "覆盖面",
+          "报道称相关软件影响约70%网站"
+        ],
+        [
+          "现状",
+          "漏洞披露后黑客尝试活动上升"
+        ],
+        [
+          "风险",
+          "网站服务和用户数据可能成为目标"
+        ]
+      ],
+      "visual": {
+        "type": "orbit",
+        "label": "漏洞如何变成用户风险",
+        "nodes": [
+          "漏洞公开",
+          "攻击者扫描",
+          "网站未修补",
+          "账户与资料暴露"
+        ]
+      },
+      "impacts": [
+        [
+          "用户",
+          "购物、预约等常用服务若被攻破，账户和个人资料可能受影响"
+        ],
+        [
+          "运营方",
+          "补丁速度和登录防护会直接决定损失大小"
+        ]
+      ],
+      "next": [
+        "受影响软件发布的修复与缓解建议",
+        "是否出现大规模数据泄露或服务中断"
+      ],
+      "source": "NPR",
+      "updated": "2026-10-23",
+      "en": {
+        "cat": "Public safety",
+        "title": "Flaws in software used by roughly 70% of websites draw more hacker probing",
+        "brief": "This is not just a small-site problem: slow patching can expose accounts, orders, and personal data.",
+        "take": "NPR reports that hacking attempts are rising after vulnerabilities were found in software affecting about 70% of websites. The report does not say every site has been breached, but the scale makes the risk broad: online shops, booking systems, and company back ends often rely on similar underlying software. For users, watch for unusual login alerts and avoid reusing passwords on suspicious pages. Site operators need to check exposure and apply patches quickly. In security, the dangerous period is often after a flaw becomes public but before everyone fixes it.",
+        "meta": "Oct. 23 | Cybersecurity",
+        "facts": [
+          [
+            "Reach",
+            "The affected software is reported to touch about 70% of websites"
+          ],
+          [
+            "Activity",
+            "Hacking attempts are rising after the flaws were found"
+          ],
+          [
+            "Risk",
+            "Online services and user data may be targeted"
+          ]
+        ],
+        "visual": {
+          "type": "orbit",
+          "label": "How a software flaw reaches users",
+          "nodes": [
+            "Flaw disclosed",
+            "Attackers scan",
+            "Site remains unpatched",
+            "Accounts and data exposed"
+          ]
+        },
+        "impacts": [
+          [
+            "Users",
+            "Breaches at everyday shopping and booking services could affect accounts and personal details"
+          ],
+          [
+            "Operators",
+            "Patch speed and login protection can directly determine the scale of damage"
+          ]
+        ],
+        "next": [
+          "Fixes and mitigations from the affected software makers",
+          "Whether large data breaches or outages emerge"
+        ],
+        "source": "NPR",
+        "updated": "2026-10-23"
+      },
+      "sourceLinks": [
+        {
+          "title": "Hacking attempts rise after flaws found in program affecting 70% of websites",
+          "url": "https://www.npr.org/2026/10/23/g-s1-149503/hacking-php-flaws",
+          "publisher": "NPR"
+        }
+      ],
+      "eventImage": {
+        "url": "https://npr.brightspotcdn.com/dims3/default/strip/false/crop/5824x3276+0+304/resize/1400/quality/85/format/webp/?url=http%3A%2F%2Fnpr-brightspot.s3.amazonaws.com%2Fea%2F9b%2F0e0d258549c9be17fa62b3a4fa98%2Fgettyimages-2301428719.jpg",
+        "credit": "NPR",
+        "link": "https://www.npr.org/2026/10/23/g-s1-149503/hacking-php-flaws",
+        "zh": {
+          "alt": "影响约七成网站的软件曝漏洞：黑客已经开始试探入口",
+          "caption": "影响约七成网站的软件曝漏洞：黑客已经开始试探入口"
+        },
+        "en": {
+          "alt": "Flaws in software used by roughly 70% of websites draw more hacker probing",
+          "caption": "Flaws in software used by roughly 70% of websites draw more hacker probing"
+        }
+      },
+      "termGuides": [
+        {
+          "key": "PHP",
+          "aliases": [
+            "PHP"
+          ],
+          "zh": {
+            "label": "PHP",
+            "meaning": "大量网站用来运行网页和后台功能的编程语言与运行环境。",
+            "relation": "报道所说的漏洞涉及这类被广泛使用的网站基础软件。"
+          },
+          "en": {
+            "label": "PHP",
+            "meaning": "A programming language and runtime widely used to run websites and their back-end functions.",
+            "relation": "The reported flaws involve this widely used layer of web software."
+          }
+        },
+        {
+          "key": "补丁",
+          "aliases": [
+            "补丁",
+            "patch"
+          ],
+          "zh": {
+            "label": "补丁",
+            "meaning": "软件开发者发布的修复更新。",
+            "relation": "网站越晚安装，攻击者可利用漏洞的时间越长。"
+          },
+          "en": {
+            "label": "Patch",
+            "meaning": "A software update that fixes a problem or vulnerability.",
+            "relation": "The longer a site waits to install it, the longer attackers may exploit the flaw."
+          }
+        }
+      ]
+    },
+    {
+      "id": "tibet-earthquake",
+      "cat": "公共安全",
+      "icon": "quake",
+      "title": "西藏7级地震已致至少16人遇难：救援先要穿过受损道路和高海拔",
+      "brief": "灾区的难题不止房屋倒塌，偏远和高海拔会让救援、通信和安置都更难。",
+      "take": "据报道，西藏发生7级地震，至少16人死亡，数百所房屋被毁。地震发生后的伤亡数字和损失范围仍可能变化，但高海拔、分散村落和道路受损会放大救援难度。此时最需要的是余震监测、通信恢复、临时安置与对受损建筑的排查。对公众而言，转发灾情时应优先看权威部门的最新通报，避免把尚未核实的失联和伤亡数字继续放大。",
+      "meta": "10月23日｜地震救援",
+      "facts": [
+        [
+          "震级",
+          "报道为7级地震"
+        ],
+        [
+          "伤亡",
+          "至少16人死亡"
+        ],
+        [
+          "损失",
+          "数百所房屋被毁"
+        ]
+      ],
+      "visual": null,
+      "impacts": [
+        [
+          "救援",
+          "高海拔和受损交通会拉长救援物资抵达时间"
+        ],
+        [
+          "安全",
+          "余震和受损房屋会继续威胁安置人员与救援队伍"
+        ]
+      ],
+      "next": [
+        "官方伤亡和房屋损毁统计更新",
+        "道路、通信与临时安置进展"
+      ],
+      "source": "The Guardian",
+      "updated": "2026-10-23",
+      "en": {
+        "cat": "Public safety",
+        "title": "A magnitude-7 quake in Tibet has killed at least 16; rescue must contend with damaged roads and altitude",
+        "brief": "The challenge is not only collapsed homes: remoteness and high altitude make rescue, communications, and shelter harder.",
+        "take": "A magnitude-7 earthquake in Tibet has killed at least 16 people and destroyed hundreds of homes, according to reports. Casualty and damage figures may still change, but high altitude, scattered communities, and damaged roads can make relief much harder. The immediate needs are aftershock monitoring, restored communications, temporary shelter, and checks on damaged buildings. For the public, it is worth relying on the latest official updates rather than amplifying unverified casualty or missing-person figures.",
+        "meta": "Oct. 23 | Earthquake response",
+        "facts": [
+          [
+            "Magnitude",
+            "The earthquake was reported as magnitude 7"
+          ],
+          [
+            "Deaths",
+            "At least 16 people were reported dead"
+          ],
+          [
+            "Damage",
+            "Hundreds of homes were destroyed"
+          ]
+        ],
+        "visual": null,
+        "impacts": [
+          [
+            "Rescue",
+            "High altitude and damaged transport can slow the arrival of aid"
+          ],
+          [
+            "Safety",
+            "Aftershocks and weakened buildings remain threats to displaced people and responders"
+          ]
+        ],
+        "next": [
+          "Updated official casualty and building-damage totals",
+          "Progress on roads, communications, and temporary shelter"
+        ],
+        "source": "The Guardian",
+        "updated": "2026-10-23"
+      },
+      "sourceLinks": [
+        {
+          "title": "Magnitude-7 earthquake hits Tibet, killing at least 16 and destroying hundreds of homes",
+          "url": "https://www.theguardian.com/world/2026/oct/23/magnitude-7-earthquake-hits-china-tibet",
+          "publisher": "The Guardian"
+        }
+      ],
+      "eventImage": {
+        "url": "https://i.guim.co.uk/img/media/2b752e0d59c4399c02caaf09d97ac8759514aa0f/147_95_1010_808/master/1010.jpg?width=1200&height=630&quality=85&auto=format&fit=crop&precrop=40:21,offset-x50,offset-y0&overlay-align=bottom%2Cleft&overlay-width=100p&overlay-base64=L2ltZy9zdGF0aWMvb3ZlcmxheXMvdGctZGVmYXVsdC5wbmc&enable=upscale&s=d355130a931b515f2a33f2dd3dbb575f",
+        "credit": "The Guardian",
+        "link": "https://www.theguardian.com/world/2026/oct/23/magnitude-7-earthquake-hits-china-tibet",
+        "zh": {
+          "alt": "西藏7级地震已致至少16人遇难：救援先要穿过受损道路和高海拔",
+          "caption": "西藏7级地震已致至少16人遇难：救援先要穿过受损道路和高海拔"
+        },
+        "en": {
+          "alt": "A magnitude-7 quake in Tibet has killed at least 16; rescue must contend with damaged roads and altitude",
+          "caption": "A magnitude-7 quake in Tibet has killed at least 16; rescue must contend with damaged roads and altitude"
+        }
+      },
+      "termGuides": [
+        {
+          "key": "余震",
+          "aliases": [
+            "余震",
+            "aftershock"
+          ],
+          "zh": {
+            "label": "余震",
+            "meaning": "主震之后在附近发生的较小或有时仍很强的地震。",
+            "relation": "它会增加受损建筑和救援现场的后续风险。"
+          },
+          "en": {
+            "label": "Aftershock",
+            "meaning": "A smaller, though sometimes still powerful, earthquake near the main quake.",
+            "relation": "It can add danger around damaged buildings and rescue sites."
+          }
+        }
+      ]
+    },
+    {
+      "id": "india-cancer-drug-costs",
+      "cat": "全球经济",
+      "icon": "chart",
+      "title": "印度下调抗癌药价格：法院认定过高加价，病人终于可能少付一点",
+      "brief": "药价规则一改，最直接的变化是患者和家庭的治疗账单有机会降下来。",
+      "take": "印度在法院裁定部分加价属于“敲诈式”之后，下调抗癌药成本。对癌症患者来说，这类政策不是抽象的监管动作：药物能否负担，常常决定治疗是否中断、家庭是否举债。价格下调能否真正落到药房和医院账单上，仍取决于执行、供应和地区差异。它也再次提醒人们，专利、流通和零售加价这些看似遥远的环节，最后都会落到病人的付款单上。",
+      "meta": "10月23日｜药品价格",
+      "facts": [
+        [
+          "行动",
+          "印度下调抗癌药成本"
+        ],
+        [
+          "背景",
+          "法院裁定部分加价属于敲诈式行为"
+        ],
+        [
+          "对象",
+          "政策直接涉及癌症治疗用药"
+        ]
+      ],
+      "visual": null,
+      "impacts": [
+        [
+          "家庭",
+          "药费下降可减轻长期治疗带来的现金压力"
+        ],
+        [
+          "市场",
+          "药价监管会影响药企、经销商和医院的定价方式"
+        ]
+      ],
+      "next": [
+        "降价覆盖哪些药物和地区",
+        "药房与医院是否把降幅完整传给患者"
+      ],
+      "source": "The Guardian",
+      "updated": "2026-10-23",
+      "en": {
+        "cat": "Global economy",
+        "title": "India cuts cancer-drug costs after a court condemns excessive mark-ups; patients may finally pay less",
+        "brief": "When drug-pricing rules change, the immediate difference can be a lower treatment bill for patients and families.",
+        "take": "India has cut the cost of cancer drugs after a court ruled that some mark-ups were extortionate. For people with cancer, this is not an abstract regulatory move: whether treatment is affordable can decide whether it continues or leaves a family in debt. Whether the reduction fully reaches pharmacy and hospital bills will still depend on enforcement, supply, and regional differences. The move is also a reminder that patents, distribution, and retail mark-ups may look distant, but they end up on a patient's bill.",
+        "meta": "Oct. 23 | Drug pricing",
+        "facts": [
+          [
+            "Action",
+            "India cut cancer-drug costs"
+          ],
+          [
+            "Background",
+            "A court ruled that some mark-ups were extortionate"
+          ],
+          [
+            "Target",
+            "The measure concerns medicines used in cancer treatment"
+          ]
+        ],
+        "visual": null,
+        "impacts": [
+          [
+            "Families",
+            "Lower drug costs can ease the cash burden of long-term treatment"
+          ],
+          [
+            "Market",
+            "Price controls can change how drugmakers, distributors, and hospitals set prices"
+          ]
+        ],
+        "next": [
+          "Which drugs and regions the cuts cover",
+          "Whether pharmacies and hospitals pass the full reduction to patients"
+        ],
+        "source": "The Guardian",
+        "updated": "2026-10-23"
+      },
+      "sourceLinks": [
+        {
+          "title": "India slashes cost of cancer drugs after court rules mark-ups are ‘extortion’",
+          "url": "https://www.theguardian.com/global-development/2026/oct/23/india-cuts-cost-cancer-drugs",
+          "publisher": "The Guardian"
+        }
+      ],
+      "eventImage": {
+        "url": "https://i.guim.co.uk/img/media/5949b37784145f170b9a40cdf06c532b40e2925d/10_0_5000_4000/master/5000.jpg?width=1200&height=630&quality=85&auto=format&fit=crop&precrop=40:21,offset-x50,offset-y0&overlay-align=bottom%2Cleft&overlay-width=100p&overlay-base64=L2ltZy9zdGF0aWMvb3ZlcmxheXMvdGctZGVmYXVsdC5wbmc&enable=upscale&s=4d796de74babf8cb83395b8b3774f487",
+        "credit": "The Guardian",
+        "link": "https://www.theguardian.com/global-development/2026/oct/23/india-cuts-cost-cancer-drugs",
+        "zh": {
+          "alt": "印度下调抗癌药价格：法院认定过高加价，病人终于可能少付一点",
+          "caption": "印度下调抗癌药价格：法院认定过高加价，病人终于可能少付一点"
+        },
+        "en": {
+          "alt": "India cuts cancer-drug costs after a court condemns excessive mark-ups; patients may finally pay less",
+          "caption": "India cuts cancer-drug costs after a court condemns excessive mark-ups; patients may finally pay less"
+        }
+      },
+      "termGuides": [
+        {
+          "key": "药品加价",
+          "aliases": [
+            "药品加价",
+            "mark-up"
+          ],
+          "zh": {
+            "label": "药品加价",
+            "meaning": "药品在流通或零售环节中，售价高于进货成本的部分。",
+            "relation": "印度法院认为部分抗癌药加价过高，促成了这次降价。"
+          },
+          "en": {
+            "label": "Drug mark-up",
+            "meaning": "The part of a medicine's sale price added above its purchase cost during distribution or retail.",
+            "relation": "An Indian court found some cancer-drug mark-ups excessive, helping prompt the price cuts."
+          }
+        }
+      ]
+    },
+    {
+      "id": "connectwise-cyber-espionage",
+      "cat": "科技产业",
+      "icon": "code",
+      "title": "ConnectWise 被攻破后，数千家公司遭监视：供应商一失守，客户会一起暴露",
+      "brief": "企业把 IT 管理交给同一平台很省事，但攻击者也因此找到了更大的入口。",
+      "take": "报道称，中国黑客在攻破 IT 服务商 ConnectWise 后，监视了数千家公司。这类事件的棘手之处在于，攻击者不必逐家破解客户，只要进入替客户管理设备、更新软件或远程支持的供应商系统，就可能横向接触大量目标。对一般人，这类入侵未必立刻可见，却可能带来服务中断、数据泄露和账户重置。企业应重新检查外包 IT 权限、日志和多重验证，而不是只盯着自家网络大门。",
+      "meta": "10月22日｜供应链网络安全",
+      "facts": [
+        [
+          "事件",
+          "报道称 ConnectWise 遭到攻破"
+        ],
+        [
+          "范围",
+          "黑客据称监视数千家公司"
+        ],
+        [
+          "路径",
+          "IT 服务商可接触大量客户的系统与设备"
+        ]
+      ],
+      "visual": {
+        "type": "orbit",
+        "label": "供应商入侵为何波及客户",
+        "nodes": [
+          "服务商被攻破",
+          "管理权限被滥用",
+          "客户系统受触及",
+          "数据与服务受威胁"
+        ]
+      },
+      "impacts": [
+        [
+          "企业",
+          "外包 IT 平台的权限一旦过大，会把单点事故放大成供应链事件"
+        ],
+        [
+          "用户",
+          "受影响公司的客户可能面对服务中断、数据泄露或账户重置"
+        ]
+      ],
+      "next": [
+        "ConnectWise 的调查、修复和客户通知",
+        "受影响企业是否披露数据或服务损失"
+      ],
+      "source": "TechCrunch AI",
+      "updated": "2026-10-22",
+      "en": {
+        "cat": "Technology industry",
+        "title": "After ConnectWise was breached, thousands of companies were reportedly watched: one supplier can expose many customers",
+        "brief": "Centralizing IT management is convenient, but it also gives attackers a much larger doorway.",
+        "take": "Chinese hackers reportedly spied on thousands of companies after breaching IT provider ConnectWise. The problem with an incident like this is that attackers do not need to break into every customer separately. If they get into a vendor that manages devices, software updates, or remote support, they may be able to reach many targets through that trusted channel. For ordinary people, the effect may not be visible at once, but can include outages, data exposure, and account resets. Companies need to review outsourced IT permissions, logs, and multi-factor authentication—not just their own perimeter.",
+        "meta": "Oct. 22 | Supply-chain cybersecurity",
+        "facts": [
+          [
+            "Incident",
+            "ConnectWise was reportedly breached"
+          ],
+          [
+            "Scale",
+            "Hackers allegedly spied on thousands of companies"
+          ],
+          [
+            "Path",
+            "An IT provider can reach many customers' systems and devices"
+          ]
+        ],
+        "visual": {
+          "type": "orbit",
+          "label": "Why a supplier breach spreads",
+          "nodes": [
+            "Provider breached",
+            "Admin access abused",
+            "Customer systems reached",
+            "Data and services threatened"
+          ]
+        },
+        "impacts": [
+          [
+            "Businesses",
+            "Overly broad outsourced-IT permissions can turn one failure into a supply-chain incident"
+          ],
+          [
+            "Users",
+            "Customers of affected firms may face outages, exposed data, or account resets"
+          ]
+        ],
+        "next": [
+          "ConnectWise's investigation, fixes, and customer notices",
+          "Whether affected companies disclose data or service losses"
+        ],
+        "source": "TechCrunch AI",
+        "updated": "2026-10-22"
+      },
+      "sourceLinks": [
+        {
+          "title": "Chinese hackers spied on thousands of companies after breaching IT giant ConnectWise",
+          "url": "https://techcrunch.com/2026/10/22/chinese-hackers-spied-on-thousands-of-companies-after-breaching-it-giant-connectwise/",
+          "publisher": "TechCrunch AI"
+        }
+      ],
+      "eventImage": {
+        "url": "https://techcrunch.com/wp-content/uploads/2025/01/GettyImages-591881449.jpg?resize=1200,799",
+        "credit": "TechCrunch AI",
+        "link": "https://techcrunch.com/2026/10/22/chinese-hackers-spied-on-thousands-of-companies-after-breaching-it-giant-connectwise/",
+        "zh": {
+          "alt": "ConnectWise 被攻破后，数千家公司遭监视：供应商一失守，客户会一起暴露",
+          "caption": "ConnectWise 被攻破后，数千家公司遭监视：供应商一失守，客户会一起暴露"
+        },
+        "en": {
+          "alt": "After ConnectWise was breached, thousands of companies were reportedly watched: one supplier can expose many customers",
+          "caption": "After ConnectWise was breached, thousands of companies were reportedly watched: one supplier can expose many customers"
+        }
+      },
+      "termGuides": [
+        {
+          "key": "ConnectWise",
+          "aliases": [
+            "ConnectWise"
+          ],
+          "zh": {
+            "label": "ConnectWise",
+            "meaning": "为企业提供 IT 管理、远程支持等服务的平台公司。",
+            "relation": "报道称攻击者攻破它后，借其服务接触到大量客户。"
+          },
+          "en": {
+            "label": "ConnectWise",
+            "meaning": "A platform company that provides IT management and remote-support services to businesses.",
+            "relation": "The report says attackers used its breach to reach many customers."
+          }
+        },
+        {
+          "key": "供应链攻击",
+          "aliases": [
+            "供应链攻击",
+            "supply-chain attack"
+          ],
+          "zh": {
+            "label": "供应链攻击",
+            "meaning": "攻击者先攻破共同使用的供应商，再进入其客户系统。",
+            "relation": "ConnectWise 事件正体现了这种“一处失守、多家受影响”的风险。"
+          },
+          "en": {
+            "label": "Supply-chain attack",
+            "meaning": "An attack that compromises a shared supplier first, then reaches its customers.",
+            "relation": "The ConnectWise incident illustrates this one-breach, many-customers risk."
+          }
+        }
+      ]
+    }
+  ]
+}
