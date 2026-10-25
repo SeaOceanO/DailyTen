@@ -1,0 +1,1461 @@
+{
+  "dateKey": "2026-10-26",
+  "generatedAt": "2026-10-26T05:00:00+08:00",
+  "title": "DailyTen｜AI 产业十条",
+  "subtitle": "模型开始少吃“实时互联网”，Agent 正在碰到密码和网页的边界，企业则继续为算力与入口买单。",
+  "briefLabel": "今日速读",
+  "doneLabel": "读完今日 AI 十条",
+  "readTimeMinutes": 8,
+  "items": [
+    {
+      "id": "ai-openai-live-internet-training",
+      "cat": "AI",
+      "icon": "alert",
+      "title": "OpenAI 不再直接拿实时互联网训练模型：新鲜信息也成了风险",
+      "brief": "以后模型未必会边抓最新网页边学习，换来更可控的数据，也可能让“实时回答”更依赖单独的检索工具。",
+      "take": "OpenAI 表示将不再用“实时互联网”持续训练模型，理由是风险显著上升。麻烦不只是假消息：网页里可能混入恶意提示、隐私内容、版权争议和刻意操纵模型的材料。对用户来说，模型知道最新消息和模型本身吸收了最新网页，会越来越像两件事；前者可能通过搜索或检索完成，后者会被放进更慢、更严格的数据筛选流程。",
+      "meta": "训练数据与安全｜10 月 23 日",
+      "facts": [
+        [
+          "决定",
+          "不再以实时互联网持续训练模型"
+        ],
+        [
+          "理由",
+          "OpenAI 称风险“显著”"
+        ],
+        [
+          "变化",
+          "实时信息与基础训练将分开处理"
+        ]
+      ],
+      "visual": null,
+      "impacts": [
+        [
+          "普通用户",
+          "最新回答的来源和引用会更值得追问"
+        ],
+        [
+          "网站与创作者",
+          "被抓取、被训练的边界可能更清楚"
+        ],
+        [
+          "安全",
+          "恶意网页直接污染训练的机会减少"
+        ]
+      ],
+      "next": [
+        "OpenAI 会如何处理新闻、论坛和用户生成内容",
+        "是否公布更具体的数据筛选与授权规则"
+      ],
+      "source": "TechCrunch AI",
+      "updated": "2026-10-23",
+      "en": {
+        "cat": "AI",
+        "title": "OpenAI stops training on the live web: fresh information has become a safety risk",
+        "brief": "Models may no longer learn straight from the changing web, making data more controlled but pushing real-time answers toward separate retrieval tools.",
+        "take": "OpenAI says it will no longer continuously train its models on the live internet because of “significant risks.” The issue is not just misinformation: live pages can carry malicious prompts, private material, copyright disputes, and content designed to manipulate a model. For users, a model knowing current events and a model having absorbed current web pages are becoming two different things. The first may come through search or retrieval; the second is likely to move through a slower, stricter data-review process.",
+        "meta": "Training data and safety | Oct. 23",
+        "facts": [
+          [
+            "Decision",
+            "Stop continuously training on the live internet"
+          ],
+          [
+            "Reason",
+            "OpenAI cites “significant” risks"
+          ],
+          [
+            "Change",
+            "Real-time information and base training split apart"
+          ]
+        ],
+        "visual": null,
+        "impacts": [
+          [
+            "For users",
+            "It will matter more where a current answer comes from"
+          ],
+          [
+            "For websites and creators",
+            "The boundary between crawling and training could become clearer"
+          ],
+          [
+            "For safety",
+            "There is less chance of malicious pages directly contaminating training"
+          ]
+        ],
+        "next": [
+          "How OpenAI handles news, forums, and user-generated content",
+          "Whether it publishes clearer rules for data review and consent"
+        ],
+        "source": "TechCrunch AI",
+        "updated": "2026-10-23"
+      },
+      "sourceLinks": [
+        {
+          "title": "OpenAI says it will no longer train its AI models on the live internet, citing “significant risks”",
+          "url": "https://techcrunch.com/2026/10/23/openai-says-it-will-no-longer-train-its-ai-models-on-the-live-internet-citing-significant-risks/",
+          "publisher": "TechCrunch AI"
+        }
+      ],
+      "eventImage": {
+        "url": "https://techcrunch.com/wp-content/uploads/2026/02/TIm.jpg?w=150",
+        "credit": "TechCrunch AI",
+        "link": "https://techcrunch.com/2026/10/23/openai-says-it-will-no-longer-train-its-ai-models-on-the-live-internet-citing-significant-risks/",
+        "zh": {
+          "alt": "OpenAI 不再直接拿实时互联网训练模型：新鲜信息也成了风险",
+          "caption": "OpenAI 不再直接拿实时互联网训练模型：新鲜信息也成了风险"
+        },
+        "en": {
+          "alt": "OpenAI stops training on the live web: fresh information has become a safety risk",
+          "caption": "OpenAI stops training on the live web: fresh information has become a safety risk"
+        }
+      },
+      "termGuides": [
+        {
+          "key": "OpenAI",
+          "aliases": [
+            "OpenAI"
+          ],
+          "zh": {
+            "label": "OpenAI",
+            "meaning": "开发 ChatGPT 等产品的美国 AI 公司。",
+            "relation": "它正在调整模型获取新网页内容的方式。"
+          },
+          "en": {
+            "label": "OpenAI",
+            "meaning": "The U.S. AI company behind ChatGPT and other products.",
+            "relation": "It is changing how its models take in newly published web content."
+          }
+        },
+        {
+          "key": "实时互联网训练",
+          "aliases": [
+            "实时互联网",
+            "live internet",
+            "training"
+          ],
+          "zh": {
+            "label": "实时互联网训练",
+            "meaning": "让模型持续使用刚出现或刚变化的网页内容学习。",
+            "relation": "OpenAI 说将停止这种直接、持续的训练方式。"
+          },
+          "en": {
+            "label": "Live-internet training",
+            "meaning": "Continuously learning from web pages as they appear or change.",
+            "relation": "OpenAI says it will stop this direct, ongoing approach."
+          }
+        }
+      ]
+    },
+    {
+      "id": "ai-openai-decision-model",
+      "cat": "AI",
+      "icon": "ai",
+      "title": "OpenAI 把“替你做选择”的模型推向更多人：Agent 竞争开始比谁更敢动手",
+      "brief": "聊天机器人会回答不等于能替你执行任务；决策模型走向广泛可用，竞争正在转向它能否可靠地选路和行动。",
+      "take": "OpenAI 已让其与 Jev 竞争的决策模型更广泛可用。普通对话模型擅长写、说、总结；所谓决策模型，更关键的是在多步任务里判断下一步该做什么。它若被接进 Agent，就可能从“给你一份旅行建议”走向“比较选项、填表、提交操作”。这也把风险摆到台面：模型做错一步，代价通常比答错一句话大，权限、确认按钮和出错后的追责都会变成产品的一部分。",
+      "meta": "Agent 与决策模型｜10 月 22 日",
+      "facts": [
+        [
+          "动作",
+          "OpenAI 扩大该决策模型的可用范围"
+        ],
+        [
+          "对手",
+          "报道将其定位为 Jev 的竞争者"
+        ],
+        [
+          "用途",
+          "面向多步判断和任务执行"
+        ]
+      ],
+      "visual": null,
+      "impacts": [
+        [
+          "开发者",
+          "可把 Agent 从问答接到更复杂的工作流"
+        ],
+        [
+          "用户",
+          "工具可能更会“代办”，也更需要最后确认"
+        ],
+        [
+          "市场",
+          "模型比拼从生成内容转向可靠执行"
+        ]
+      ],
+      "next": [
+        "开放范围、价格和可调用权限",
+        "真实任务中的错误率与人工接管机制"
+      ],
+      "source": "TechCrunch AI",
+      "updated": "2026-10-22",
+      "en": {
+        "cat": "AI",
+        "title": "OpenAI broadens access to a model that makes choices: the Agent race is about acting, not chatting",
+        "brief": "A chatbot answering a question is not the same as an Agent doing a task; wider access to decision models shifts the contest toward reliable choices and actions.",
+        "take": "OpenAI has made its decision model, positioned as a competitor to Jev, more widely available. Ordinary conversational models are good at writing, talking, and summarizing. A decision model matters more for choosing the next step in a multi-step task. Connected to an Agent, it could move from suggesting a trip to comparing options, filling out forms, and submitting an action. That also raises the stakes: one wrong action can cost more than one wrong sentence, so permissions, confirmation screens, and accountability after failures become part of the product.",
+        "meta": "Agents and decision models | Oct. 22",
+        "facts": [
+          [
+            "Move",
+            "OpenAI broadened availability of the decision model"
+          ],
+          [
+            "Rival",
+            "The report positions it against Jev"
+          ],
+          [
+            "Use",
+            "Multi-step judgment and task execution"
+          ]
+        ],
+        "visual": null,
+        "impacts": [
+          [
+            "For developers",
+            "Agents can be connected to more complex workflows"
+          ],
+          [
+            "For users",
+            "Tools may do more on their behalf, but need final confirmation"
+          ],
+          [
+            "For the market",
+            "Competition shifts from generating content to executing reliably"
+          ]
+        ],
+        "next": [
+          "Access, pricing, and available permissions",
+          "Error rates and human-takeover rules in real tasks"
+        ],
+        "source": "TechCrunch AI",
+        "updated": "2026-10-22"
+      },
+      "sourceLinks": [
+        {
+          "title": "OpenAI makes its Jev competitor widely available as decision model competition heats up",
+          "url": "https://techcrunch.com/2026/10/22/openai-makes-its-jev-competitor-widely-available-as-decision-model-competition-heats-up/",
+          "publisher": "TechCrunch AI"
+        }
+      ],
+      "eventImage": {
+        "url": "https://techcrunch.com/wp-content/uploads/2026/10/Screenshot-2026-10-22-at-12.17.11-PM-1.png?resize=1200,988",
+        "credit": "TechCrunch AI",
+        "link": "https://techcrunch.com/2026/10/22/openai-makes-its-jev-competitor-widely-available-as-decision-model-competition-heats-up/",
+        "zh": {
+          "alt": "OpenAI 把“替你做选择”的模型推向更多人：Agent 竞争开始比谁更敢动手",
+          "caption": "OpenAI 把“替你做选择”的模型推向更多人：Agent 竞争开始比谁更敢动手"
+        },
+        "en": {
+          "alt": "OpenAI broadens access to a model that makes choices: the Agent race is about acting, not chatting",
+          "caption": "OpenAI broadens access to a model that makes choices: the Agent race is about acting, not chatting"
+        }
+      },
+      "termGuides": [
+        {
+          "key": "决策模型",
+          "aliases": [
+            "决策模型",
+            "decision model"
+          ],
+          "zh": {
+            "label": "决策模型",
+            "meaning": "重点不是续写文字，而是在任务中判断下一步怎么做的模型。",
+            "relation": "OpenAI 正扩大其决策模型的使用范围。"
+          },
+          "en": {
+            "label": "Decision model",
+            "meaning": "A model focused on deciding the next step in a task, rather than just continuing text.",
+            "relation": "OpenAI is widening access to one of these models."
+          }
+        },
+        {
+          "key": "Agent",
+          "aliases": [
+            "Agent",
+            "智能体"
+          ],
+          "zh": {
+            "label": "Agent",
+            "meaning": "能调用工具、拆分步骤并完成任务的 AI 软件。",
+            "relation": "决策模型可让 Agent 更自主地推进多步工作。"
+          },
+          "en": {
+            "label": "Agent",
+            "meaning": "AI software that can use tools, break work into steps, and complete tasks.",
+            "relation": "A decision model can make an Agent more able to carry a multi-step job forward."
+          }
+        },
+        {
+          "key": "Jev",
+          "aliases": [
+            "Jev"
+          ],
+          "zh": {
+            "label": "Jev",
+            "meaning": "报道中被列为 OpenAI 此次产品竞争对象的 AI 产品或模型。",
+            "relation": "TechCrunch 将 OpenAI 的新开放产品称为其竞争者。"
+          },
+          "en": {
+            "label": "Jev",
+            "meaning": "An AI product or model named in the report as OpenAI’s competitor.",
+            "relation": "TechCrunch describes OpenAI’s newly broadened offering as a rival to it."
+          }
+        }
+      ]
+    },
+    {
+      "id": "ai-openai-fundraise-ipo",
+      "cat": "AI",
+      "icon": "chart",
+      "title": "OpenAI 据报再筹 300 亿美元：AI 的账单已经大到像基础设施项目",
+      "brief": "这轮融资若成行，钱主要不是花在漂亮演示上，而是继续支付训练、推理和数据中心的巨额成本。",
+      "take": "据 TechCrunch 报道，OpenAI 正在 IPO 前筹备约 300 亿美元融资，估值或达 1.25 万亿美元。交易尚未官宣，数字也可能变化，但它点出了 AI 竞争最现实的一面：领先模型不是一次训练完就结束，用户每发一次请求都要消耗推理算力，数据中心、电力和芯片都得持续付款。对消费者和企业来说，最后会体现在订阅价、免费额度、产品功能和谁能拿到最强算力上。",
+      "meta": "融资与算力成本｜10 月 22 日｜报道",
+      "facts": [
+        [
+          "融资规模",
+          "据报约 300 亿美元"
+        ],
+        [
+          "估值",
+          "据报约 1.25 万亿美元"
+        ],
+        [
+          "阶段",
+          "报道称交易在 IPO 前筹备中"
+        ]
+      ],
+      "visual": null,
+      "impacts": [
+        [
+          "用户",
+          "免费额度和高阶功能的分层可能更明显"
+        ],
+        [
+          "企业客户",
+          "长期使用 AI 的价格取决于推理成本能否降下来"
+        ],
+        [
+          "行业",
+          "资本更集中流向有算力和数据中心能力的公司"
+        ]
+      ],
+      "next": [
+        "融资是否完成及投资方名单",
+        "OpenAI 的 IPO 时间表与现金消耗情况"
+      ],
+      "source": "TechCrunch AI",
+      "updated": "2026-10-22",
+      "en": {
+        "cat": "AI",
+        "title": "OpenAI is reportedly seeking another $30 billion: AI now has an infrastructure-sized bill",
+        "brief": "If the round happens, the money is not mainly for flashy demos; it helps pay the enormous recurring costs of training, inference, and data centers.",
+        "take": "TechCrunch reports that OpenAI is working on a roughly $30 billion raise ahead of an IPO, at a reported $1.25 trillion valuation. The deal has not been officially announced and the figures may change, but it highlights the hard economics of frontier AI. A leading model is not paid for once at training time: every user request consumes inference compute, while data centers, electricity, and chips require ongoing spending. For consumers and businesses, those costs can show up in subscription prices, free-use limits, product features, and who gets access to the best compute.",
+        "meta": "Funding and compute costs | Oct. 22 | Reported",
+        "facts": [
+          [
+            "Raise",
+            "Reportedly about $30 billion"
+          ],
+          [
+            "Valuation",
+            "Reportedly about $1.25 trillion"
+          ],
+          [
+            "Stage",
+            "The report says preparations are ahead of an IPO"
+          ]
+        ],
+        "visual": null,
+        "impacts": [
+          [
+            "For users",
+            "The gap between free limits and premium features may widen"
+          ],
+          [
+            "For business customers",
+            "Long-term AI pricing depends on whether inference gets cheaper"
+          ],
+          [
+            "For the industry",
+            "Capital concentrates further around companies with compute and data centers"
+          ]
+        ],
+        "next": [
+          "Whether the raise closes and who invests",
+          "OpenAI’s IPO timetable and cash burn"
+        ],
+        "source": "TechCrunch AI",
+        "updated": "2026-10-22"
+      },
+      "sourceLinks": [
+        {
+          "title": "OpenAI working on new $30B raise at $1.25T valuation ahead of IPO",
+          "url": "https://techcrunch.com/2026/10/22/openai-working-on-new-30b-raise-at-1-25t-valuation-ahead-of-ipo/",
+          "publisher": "TechCrunch AI"
+        }
+      ],
+      "eventImage": {
+        "url": "https://techcrunch.com/wp-content/uploads/2023/11/Sam-Altman-OpenAI.jpg?resize=1200,680",
+        "credit": "TechCrunch AI",
+        "link": "https://techcrunch.com/2026/10/22/openai-working-on-new-30b-raise-at-1-25t-valuation-ahead-of-ipo/",
+        "zh": {
+          "alt": "OpenAI 据报再筹 300 亿美元：AI 的账单已经大到像基础设施项目",
+          "caption": "OpenAI 据报再筹 300 亿美元：AI 的账单已经大到像基础设施项目"
+        },
+        "en": {
+          "alt": "OpenAI is reportedly seeking another $30 billion: AI now has an infrastructure-sized bill",
+          "caption": "OpenAI is reportedly seeking another $30 billion: AI now has an infrastructure-sized bill"
+        }
+      },
+      "termGuides": [
+        {
+          "key": "推理",
+          "aliases": [
+            "推理",
+            "inference"
+          ],
+          "zh": {
+            "label": "推理",
+            "meaning": "模型已训练完成后，实际回答问题或执行请求时的计算。",
+            "relation": "用户每次使用 OpenAI 的产品，都会产生这部分持续成本。"
+          },
+          "en": {
+            "label": "Inference",
+            "meaning": "The computing work done when a trained model answers a request or performs a task.",
+            "relation": "Each use of an OpenAI product adds to this ongoing cost."
+          }
+        },
+        {
+          "key": "IPO",
+          "aliases": [
+            "IPO",
+            "首次公开募股"
+          ],
+          "zh": {
+            "label": "IPO",
+            "meaning": "公司首次向公开市场出售股票并上市。",
+            "relation": "报道说此次融资在 OpenAI 上市前筹备。"
+          },
+          "en": {
+            "label": "IPO",
+            "meaning": "An initial public offering, when a company first sells shares publicly.",
+            "relation": "The reported funding effort is being prepared before an OpenAI listing."
+          }
+        }
+      ]
+    },
+    {
+      "id": "ai-claude-virtual-island-play",
+      "cat": "AI",
+      "icon": "ai",
+      "title": "Claude 被困在虚拟荒岛后开始“玩”：看似可爱，难题其实是怎么读懂 Agent 行为",
+      "brief": "研究人员不给任务后，AI Agent 自己开始活动；这不等于它有意识，却提醒人们别把复杂行为轻易当成理解或意图。",
+      "take": "MIT Technology Review 报道，研究人员把 Anthropic 的 Claude 放进一个虚拟荒岛环境，不给它明确任务，它开始表现出被描述为“玩”的行为。这个实验最值得看的不是给 AI 贴上人格标签，而是评估难题：Agent 在开放环境里会产生意料之外的行为，而旁观者很容易把熟悉的人类动机投射上去。若未来 Agent 管理客服、代码库或家庭设备，真正需要的是可复现的测试、行为记录和能随时叫停的权限设计。",
+      "meta": "Agent 安全研究｜10 月 19 日",
+      "facts": [
+        [
+          "对象",
+          "Anthropic 的 Claude"
+        ],
+        [
+          "环境",
+          "研究人员设置虚拟荒岛"
+        ],
+        [
+          "观察",
+          "无明确任务时出现被称为“玩”的行为"
+        ]
+      ],
+      "visual": null,
+      "impacts": [
+        [
+          "安全评估",
+          "开放环境比标准问答更容易暴露意外行为"
+        ],
+        [
+          "用户判断",
+          "看起来像“有想法”不等于模型真的理解"
+        ],
+        [
+          "产品设计",
+          "高权限 Agent 要留下日志并允许随时中止"
+        ]
+      ],
+      "next": [
+        "实验是否能在其他模型和环境复现",
+        "研究人员如何定义与衡量“玩”"
+      ],
+      "source": "MIT Technology Review",
+      "updated": "2026-10-19",
+      "en": {
+        "cat": "AI",
+        "title": "Claude started to “play” on a virtual desert island: the real problem is reading Agent behavior",
+        "brief": "Researchers left an AI Agent without a task and it began acting on its own; that does not prove consciousness, but it shows how easily complex behavior gets misread.",
+        "take": "MIT Technology Review reports that researchers placed Anthropic’s Claude in a virtual desert-island setting with no explicit task, where it began behavior described as “play.” The important point is not to give the AI a personality label. It is an evaluation problem: Agents can produce unexpected behavior in open environments, while observers can too easily project familiar human motives onto it. If future Agents manage customer service, codebases, or home devices, what matters is repeatable testing, behavior logs, and permissions that can be stopped quickly.",
+        "meta": "Agent safety research | Oct. 19",
+        "facts": [
+          [
+            "Subject",
+            "Anthropic’s Claude"
+          ],
+          [
+            "Setting",
+            "Researchers created a virtual desert island"
+          ],
+          [
+            "Observation",
+            "Behavior described as “play” without an explicit task"
+          ]
+        ],
+        "visual": null,
+        "impacts": [
+          [
+            "For safety testing",
+            "Open environments can reveal surprises missed by standard Q&A"
+          ],
+          [
+            "For users",
+            "Looking intentional does not mean the model understands"
+          ],
+          [
+            "For product design",
+            "High-permission Agents need logs and an immediate stop option"
+          ]
+        ],
+        "next": [
+          "Whether the result repeats across models and settings",
+          "How researchers define and measure “play”"
+        ],
+        "source": "MIT Technology Review",
+        "updated": "2026-10-19"
+      },
+      "sourceLinks": [
+        {
+          "title": "AI researchers stranded Claude on a virtual desert island. It started to “play.”",
+          "url": "https://www.technologyreview.com/2026/10/19/1147095/ai-stranded-claude-virtual-desert-island-play/",
+          "publisher": "MIT Technology Review"
+        }
+      ],
+      "eventImage": {
+        "url": "https://wp.technologyreview.com/wp-content/uploads/2026/10/261016_AgentsonIsland.jpg?resize=1200,600",
+        "credit": "MIT Technology Review",
+        "link": "https://www.technologyreview.com/2026/10/19/1147095/ai-stranded-claude-virtual-desert-island-play/",
+        "zh": {
+          "alt": "Claude 被困在虚拟荒岛后开始“玩”：看似可爱，难题其实是怎么读懂 Agent 行为",
+          "caption": "Claude 被困在虚拟荒岛后开始“玩”：看似可爱，难题其实是怎么读懂 Agent 行为"
+        },
+        "en": {
+          "alt": "Claude started to “play” on a virtual desert island: the real problem is reading Agent behavior",
+          "caption": "Claude started to “play” on a virtual desert island: the real problem is reading Agent behavior"
+        }
+      },
+      "termGuides": [
+        {
+          "key": "Claude",
+          "aliases": [
+            "Claude"
+          ],
+          "zh": {
+            "label": "Claude",
+            "meaning": "Anthropic 推出的通用 AI 模型与助手。",
+            "relation": "它是这次虚拟荒岛实验中的 Agent。"
+          },
+          "en": {
+            "label": "Claude",
+            "meaning": "Anthropic’s general-purpose AI model and assistant.",
+            "relation": "It was the Agent placed in the virtual-island experiment."
+          }
+        },
+        {
+          "key": "Anthropic",
+          "aliases": [
+            "Anthropic"
+          ],
+          "zh": {
+            "label": "Anthropic",
+            "meaning": "开发 Claude 的美国 AI 公司。",
+            "relation": "其模型的开放环境行为成为此次研究对象。"
+          },
+          "en": {
+            "label": "Anthropic",
+            "meaning": "The U.S. AI company that develops Claude.",
+            "relation": "Its model’s behavior in an open environment is the focus of this research."
+          }
+        },
+        {
+          "key": "Agent",
+          "aliases": [
+            "Agent",
+            "智能体"
+          ],
+          "zh": {
+            "label": "Agent",
+            "meaning": "能在环境中观察、选择步骤并调用工具的 AI 程序。",
+            "relation": "实验测试的是 Agent 没有明确任务时会做什么。"
+          },
+          "en": {
+            "label": "Agent",
+            "meaning": "AI software that can observe an environment, choose steps, and use tools.",
+            "relation": "The experiment tests what an Agent does when it has no clear assignment."
+          }
+        }
+      ]
+    },
+    {
+      "id": "ai-inference-storage",
+      "cat": "AI",
+      "icon": "refinery",
+      "title": "AI 的隐形账单不只在芯片：每次回答留下的数据也要占仓库",
+      "brief": "模型回答越多，日志、缓存和上下文留下的数据越多；企业买 AI 时，别只看 GPU 报价。",
+      "take": "MIT Technology Review 提醒，AI 推理——也就是模型真正回答和执行任务的过程——会留下大量存储负担。对话记录、上下文、缓存、检索材料和审计日志都可能要保存，尤其是企业为了合规、排错和追踪结果，往往不能说删就删。训练芯片的投入最醒目，但长期账单还包括存储、网络和数据管理。对正在上 AI 工具的公司，这会影响项目能否省钱，也会影响用户资料保存多久。",
+      "meta": "AI 基础设施｜10 月 22 日",
+      "facts": [
+        [
+          "环节",
+          "AI 推理会产生持续存储需求"
+        ],
+        [
+          "数据",
+          "日志、缓存、上下文和检索材料都会累积"
+        ],
+        [
+          "成本",
+          "除芯片外还要付存储、网络和管理费用"
+        ]
+      ],
+      "visual": null,
+      "impacts": [
+        [
+          "企业",
+          "采购预算不能只按 GPU 或模型调用价格算"
+        ],
+        [
+          "用户隐私",
+          "更多留存数据意味着更长的管理责任"
+        ],
+        [
+          "产品体验",
+          "上下文保留越多，个性化与泄露风险也一起上升"
+        ]
+      ],
+      "next": [
+        "企业会设定多长的数据保留期限",
+        "存储成本会不会推动更短上下文或更严格删数规则"
+      ],
+      "source": "MIT Technology Review",
+      "updated": "2026-10-22",
+      "en": {
+        "cat": "AI",
+        "title": "AI’s hidden bill is not just chips: every answer can leave data in the warehouse",
+        "brief": "The more a model answers, the more logs, caches, and context can accumulate; companies buying AI should not look only at GPU prices.",
+        "take": "MIT Technology Review points to the storage burden created by AI inference—the process of models actually answering requests and carrying out tasks. Conversation records, context, caches, retrieved materials, and audit logs can all need to be retained. Businesses often cannot simply delete them because they need compliance records, debugging, and traceability. Training chips get the attention, but the long-term bill also includes storage, networking, and data management. For companies deploying AI tools, that affects whether a project saves money and how long user information remains stored.",
+        "meta": "AI infrastructure | Oct. 22",
+        "facts": [
+          [
+            "Process",
+            "AI inference creates ongoing storage demand"
+          ],
+          [
+            "Data",
+            "Logs, caches, context, and retrieved material accumulate"
+          ],
+          [
+            "Cost",
+            "Storage, networking, and management add to chip spending"
+          ]
+        ],
+        "visual": null,
+        "impacts": [
+          [
+            "For businesses",
+            "Budgets cannot be based only on GPUs or model-call prices"
+          ],
+          [
+            "For privacy",
+            "More retained data brings a longer duty to protect it"
+          ],
+          [
+            "For products",
+            "More preserved context can improve personalization and raise leakage risk"
+          ]
+        ],
+        "next": [
+          "How long businesses keep AI-generated records",
+          "Whether storage costs lead to shorter context or stricter deletion rules"
+        ],
+        "source": "MIT Technology Review",
+        "updated": "2026-10-22"
+      },
+      "sourceLinks": [
+        {
+          "title": "AI's hidden storage bill: What inference leaves behind",
+          "url": "https://www.technologyreview.com/2026/10/22/1146948/ais-hidden-storage-bill-what-inference-leaves-behind/",
+          "publisher": "MIT Technology Review"
+        }
+      ],
+      "eventImage": {
+        "url": "https://wp.technologyreview.com/wp-content/uploads/2026/10/WD-MITTR-Infographic-Final@2x.png?resize=1200,600",
+        "credit": "MIT Technology Review",
+        "link": "https://www.technologyreview.com/2026/10/22/1146948/ais-hidden-storage-bill-what-inference-leaves-behind/",
+        "zh": {
+          "alt": "AI 的隐形账单不只在芯片：每次回答留下的数据也要占仓库",
+          "caption": "AI 的隐形账单不只在芯片：每次回答留下的数据也要占仓库"
+        },
+        "en": {
+          "alt": "AI’s hidden bill is not just chips: every answer can leave data in the warehouse",
+          "caption": "AI’s hidden bill is not just chips: every answer can leave data in the warehouse"
+        }
+      },
+      "termGuides": [
+        {
+          "key": "推理",
+          "aliases": [
+            "推理",
+            "inference"
+          ],
+          "zh": {
+            "label": "推理",
+            "meaning": "训练完成的模型在实际回答、分析或执行任务时所做的计算。",
+            "relation": "这一步会产生要保存或管理的数据。"
+          },
+          "en": {
+            "label": "Inference",
+            "meaning": "The computation a trained model performs to answer, analyze, or carry out a task.",
+            "relation": "This step creates data that may need to be stored or managed."
+          }
+        },
+        {
+          "key": "上下文",
+          "aliases": [
+            "上下文",
+            "context"
+          ],
+          "zh": {
+            "label": "上下文",
+            "meaning": "模型为理解当前任务而保留的前文、文件或资料。",
+            "relation": "保存得越多，存储费用和隐私责任都可能增加。"
+          },
+          "en": {
+            "label": "Context",
+            "meaning": "Earlier text, files, or information kept so a model can understand the current task.",
+            "relation": "Keeping more of it can increase both storage costs and privacy duties."
+          }
+        }
+      ]
+    },
+    {
+      "id": "ai-agent-friendly-web",
+      "cat": "AI",
+      "icon": "code",
+      "title": "网页若为 Agent 改造，可能先让真人更难用",
+      "brief": "让 AI 更容易读懂、比价和下单的网页，不一定也更适合人浏览；网站的入口规则正在变成一场争夺。",
+      "take": "MIT Technology Review 提出一个不太舒服的问题：为了让 AI Agent 顺利找商品、读页面和完成操作，互联网可能会被改成更适合机器而非人的样子。结构化数据、专用接口和机器可读页面能让 Agent 少走弯路，但也可能让网站优先服务能带来交易的自动化流量，而不是普通读者。真正要看的是谁控制入口、谁能收取数据或接口费用，以及用户还能不能清楚知道 Agent 代表自己做了什么。",
+      "meta": "Agent 与开放网络｜10 月 19 日",
+      "facts": [
+        [
+          "议题",
+          "网站正被要求更便于 AI Agent 读取和操作"
+        ],
+        [
+          "工具",
+          "结构化数据与接口可减少机器理解网页的障碍"
+        ],
+        [
+          "风险",
+          "面向机器的设计未必改善人的浏览体验"
+        ]
+      ],
+      "visual": null,
+      "impacts": [
+        [
+          "用户",
+          "比价、订票等可能更省事，但选择过程更不透明"
+        ],
+        [
+          "网站",
+          "流量和收入可能从页面广告转向 Agent 接口"
+        ],
+        [
+          "开放网络",
+          "少数大平台可能更容易控制 Agent 的默认入口"
+        ]
+      ],
+      "next": [
+        "网站会否限制 Agent 抓取与自动下单",
+        "是否出现统一的授权、付费和身份验证规则"
+      ],
+      "source": "MIT Technology Review",
+      "updated": "2026-10-19",
+      "en": {
+        "cat": "AI",
+        "title": "If the web is rebuilt for Agents, it may get worse for people first",
+        "brief": "Web pages that let AI read, compare, and buy more easily are not automatically better for humans; the rules for entering websites are becoming contested.",
+        "take": "MIT Technology Review raises an uncomfortable question: to let AI Agents find products, read pages, and complete actions smoothly, the internet may be redesigned for machines rather than people. Structured data, dedicated interfaces, and machine-readable pages can reduce friction for Agents, but may also lead sites to prioritize automated traffic that produces transactions over ordinary readers. The key questions are who controls the entry point, who charges for data or interfaces, and whether users can still clearly see what an Agent did for them.",
+        "meta": "Agents and the open web | Oct. 19",
+        "facts": [
+          [
+            "Issue",
+            "Sites are being pushed to become easier for AI Agents to read and operate"
+          ],
+          [
+            "Tools",
+            "Structured data and interfaces reduce machine-reading friction"
+          ],
+          [
+            "Risk",
+            "Designing for machines may not improve human browsing"
+          ]
+        ],
+        "visual": null,
+        "impacts": [
+          [
+            "For users",
+            "Comparing prices or booking may get easier but less transparent"
+          ],
+          [
+            "For websites",
+            "Traffic and revenue may shift from page ads to Agent interfaces"
+          ],
+          [
+            "For the open web",
+            "A few major platforms may gain more control over default Agent entry points"
+          ]
+        ],
+        "next": [
+          "Whether sites restrict Agent crawling and automated purchases",
+          "Whether common rules emerge for permission, payment, and identity"
+        ],
+        "source": "MIT Technology Review",
+        "updated": "2026-10-19"
+      },
+      "sourceLinks": [
+        {
+          "title": "Making the internet better for AI agents might make it worse for everyone else",
+          "url": "https://www.technologyreview.com/2026/10/19/1147186/making-the-internet-better-for-ai-agents-might-make-it-worse-for-everyone-else/",
+          "publisher": "MIT Technology Review"
+        }
+      ],
+      "eventImage": {
+        "url": "https://wp.technologyreview.com/wp-content/uploads/2026/10/261016_Algo.jpg?resize=1200,600",
+        "credit": "MIT Technology Review",
+        "link": "https://www.technologyreview.com/2026/10/19/1147186/making-the-internet-better-for-ai-agents-might-make-it-worse-for-everyone-else/",
+        "zh": {
+          "alt": "网页若为 Agent 改造，可能先让真人更难用",
+          "caption": "网页若为 Agent 改造，可能先让真人更难用"
+        },
+        "en": {
+          "alt": "If the web is rebuilt for Agents, it may get worse for people first",
+          "caption": "If the web is rebuilt for Agents, it may get worse for people first"
+        }
+      },
+      "termGuides": [
+        {
+          "key": "AI Agent",
+          "aliases": [
+            "AI Agent",
+            "Agent",
+            "智能体"
+          ],
+          "zh": {
+            "label": "AI Agent",
+            "meaning": "可读取信息、调用工具并替人完成一连串操作的 AI 软件。",
+            "relation": "它需要网页和服务提供更清晰、可操作的入口。"
+          },
+          "en": {
+            "label": "AI Agent",
+            "meaning": "AI software that can read information, use tools, and complete a sequence of actions for a person.",
+            "relation": "It needs clearer, actionable entry points into websites and services."
+          }
+        },
+        {
+          "key": "结构化数据",
+          "aliases": [
+            "结构化数据",
+            "structured data"
+          ],
+          "zh": {
+            "label": "结构化数据",
+            "meaning": "按固定字段整理的信息，机器比普通网页文字更容易读取。",
+            "relation": "它能帮助 Agent 理解商品、价格和页面操作。"
+          },
+          "en": {
+            "label": "Structured data",
+            "meaning": "Information arranged in fixed fields that machines can read more easily than ordinary page text.",
+            "relation": "It can help an Agent understand products, prices, and available page actions."
+          }
+        }
+      ]
+    },
+    {
+      "id": "ai-1password-agent-login",
+      "cat": "AI",
+      "icon": "alert",
+      "title": "让 Agent 登录但看不到密码：1Password 想把最危险的一步锁起来",
+      "brief": "AI 代你办事时最怕它拿着完整密码乱跑；1Password 推出一种不直接把密码交给 Agent 的登录办法。",
+      "take": "密码管理器 1Password 推出让 AI Agent 代为登录、但不直接看到密码的方式。这个设计抓住了 Agent 的一个现实矛盾：它若不能登录，很多代办任务做不了；若把主密码、验证码或完整凭据交出去，误操作和泄露的后果又会很重。把“能完成登录”与“能读到秘密”拆开，是 Agent 接入工作账号和个人服务时很关键的一层护栏，但它不能自动解决 Agent 点错按钮、访问错网站的问题。",
+      "meta": "Agent 身份与安全｜10 月 22 日",
+      "facts": [
+        [
+          "产品",
+          "1Password 推出面向 AI Agent 的登录方式"
+        ],
+        [
+          "设计",
+          "Agent 可代为登录而不直接看到密码"
+        ],
+        [
+          "场景",
+          "面向需要访问账户的自动化任务"
+        ]
+      ],
+      "visual": null,
+      "impacts": [
+        [
+          "用户",
+          "少一处把完整密码交给 AI 工具的必要"
+        ],
+        [
+          "企业",
+          "部署办公 Agent 时可减少凭据暴露面"
+        ],
+        [
+          "安全",
+          "仍要防范 Agent 被诱导登录钓鱼网站或执行错误操作"
+        ]
+      ],
+      "next": [
+        "支持哪些网站、浏览器和 Agent",
+        "是否提供细粒度授权、审批和撤销记录"
+      ],
+      "source": "TechCrunch AI",
+      "updated": "2026-10-22",
+      "en": {
+        "cat": "AI",
+        "title": "An Agent can log in without seeing the password: 1Password tries to lock down the riskiest step",
+        "brief": "The danger of AI doing tasks for you is handing it a full password; 1Password has launched a way for an Agent to sign in without directly seeing one.",
+        "take": "Password manager 1Password has launched a way for AI Agents to log in on a user’s behalf without directly seeing the password. It addresses a practical tension: if an Agent cannot log in, it cannot complete many delegated tasks; if it receives a master password, one-time code, or full credentials, the cost of a mistake or leak can be severe. Separating the ability to complete a login from the ability to read a secret is an important guardrail as Agents enter work accounts and personal services. It does not, however, automatically prevent an Agent from clicking the wrong button or visiting the wrong site.",
+        "meta": "Agent identity and security | Oct. 22",
+        "facts": [
+          [
+            "Product",
+            "1Password launched an AI-Agent login method"
+          ],
+          [
+            "Design",
+            "An Agent can sign in without directly seeing the password"
+          ],
+          [
+            "Use case",
+            "Automation tasks that need account access"
+          ]
+        ],
+        "visual": null,
+        "impacts": [
+          [
+            "For users",
+            "There is less need to hand a full password to an AI tool"
+          ],
+          [
+            "For businesses",
+            "Office Agents can be deployed with less credential exposure"
+          ],
+          [
+            "For security",
+            "Agents still need protection from phishing sites and wrong actions"
+          ]
+        ],
+        "next": [
+          "Which sites, browsers, and Agents are supported",
+          "Whether it offers granular permission, approval, and revocation logs"
+        ],
+        "source": "TechCrunch AI",
+        "updated": "2026-10-22"
+      },
+      "sourceLinks": [
+        {
+          "title": "1Password launches a way for AI agents to log in on your behalf without seeing your password",
+          "url": "https://techcrunch.com/2026/10/22/1password-launches-a-way-for-ai-agents-to-log-in-on-your-behalf-without-seeing-your-password/",
+          "publisher": "TechCrunch AI"
+        }
+      ],
+      "eventImage": {
+        "url": "https://techcrunch.com/wp-content/uploads/2026/10/AI-agents.jpg?resize=1200,675",
+        "credit": "TechCrunch AI",
+        "link": "https://techcrunch.com/2026/10/22/1password-launches-a-way-for-ai-agents-to-log-in-on-your-behalf-without-seeing-your-password/",
+        "zh": {
+          "alt": "让 Agent 登录但看不到密码：1Password 想把最危险的一步锁起来",
+          "caption": "让 Agent 登录但看不到密码：1Password 想把最危险的一步锁起来"
+        },
+        "en": {
+          "alt": "An Agent can log in without seeing the password: 1Password tries to lock down the riskiest step",
+          "caption": "An Agent can log in without seeing the password: 1Password tries to lock down the riskiest step"
+        }
+      },
+      "termGuides": [
+        {
+          "key": "1Password",
+          "aliases": [
+            "1Password"
+          ],
+          "zh": {
+            "label": "1Password",
+            "meaning": "保存和管理账号密码等登录凭据的软件服务。",
+            "relation": "它发布了不直接向 Agent 暴露密码的登录功能。"
+          },
+          "en": {
+            "label": "1Password",
+            "meaning": "A software service for storing and managing passwords and other login credentials.",
+            "relation": "It released a login feature that does not directly expose passwords to an Agent."
+          }
+        },
+        {
+          "key": "凭据",
+          "aliases": [
+            "凭据",
+            "credentials"
+          ],
+          "zh": {
+            "label": "凭据",
+            "meaning": "证明你有权登录的密码、密钥、验证码等信息。",
+            "relation": "新功能试图让 Agent 使用登录能力而不读取完整凭据。"
+          },
+          "en": {
+            "label": "Credentials",
+            "meaning": "Passwords, keys, codes, and other information that proves you can log in.",
+            "relation": "The new feature aims to let an Agent use login capability without reading the full credentials."
+          }
+        }
+      ]
+    },
+    {
+      "id": "ai-uber-chatgpt-work",
+      "cat": "AI",
+      "icon": "code",
+      "title": "Uber 把 3 万员工接入 ChatGPT Work：AI 从试用走到公司标配",
+      "brief": "Uber 不再只让少数团队试 AI，而是给全员配上工作版 ChatGPT；效率能否兑现，要看它能不能嵌进日常流程。",
+      "take": "Uber 宣布把全部约 3 万名员工接入 ChatGPT Work。大公司把生成式 AI 推到全员桌面，改变的不只是写邮件和做摘要，而是员工会不会开始用它处理分析、客服材料、会议准备和内部知识检索。好处是省下重复劳动；难处是公司必须管住数据、核对答案，并避免把“会写得像真的”当成“已经是真的”。这类全员部署也会给其他雇主一个压力：不提供工具，可能落后；给了工具，又要重新设计培训和审核。",
+      "meta": "企业 AI 使用｜10 月 22 日",
+      "facts": [
+        [
+          "覆盖",
+          "Uber 为约 3 万名员工提供 ChatGPT Work"
+        ],
+        [
+          "范围",
+          "从小规模试用转向全员部署"
+        ],
+        [
+          "工具",
+          "使用 OpenAI 的工作场景产品"
+        ]
+      ],
+      "visual": null,
+      "impacts": [
+        [
+          "员工",
+          "写作、检索和准备工作的默认工具可能改变"
+        ],
+        [
+          "雇主",
+          "需要同时制定数据边界和结果审核流程"
+        ],
+        [
+          "客户",
+          "内部效率若提升，可能影响响应速度和服务设计"
+        ]
+      ],
+      "next": [
+        "员工实际使用率和节省的时间",
+        "Uber 对敏感数据、人工复核和责任的具体规定"
+      ],
+      "source": "TechCrunch AI",
+      "updated": "2026-10-22",
+      "en": {
+        "cat": "AI",
+        "title": "Uber gives ChatGPT Work to 30,000 employees: AI moves from pilot to office default",
+        "brief": "Uber is no longer limiting AI to a few teams; it is giving work-focused ChatGPT to all staff, and the test is whether it fits real daily workflows.",
+        "take": "Uber says it is putting all roughly 30,000 employees on ChatGPT Work. When a large company puts generative AI on every desk, the change is not just email drafting and summaries. Employees may start using it for analysis, customer-service material, meeting preparation, and internal knowledge search. The gain is less repetitive work; the challenge is controlling data, checking answers, and not confusing something that sounds convincing with something that is true. Such broad deployments also put pressure on other employers: withholding the tools can look like falling behind, while providing them requires new training and review rules.",
+        "meta": "Enterprise AI use | Oct. 22",
+        "facts": [
+          [
+            "Coverage",
+            "Uber is providing ChatGPT Work to roughly 30,000 employees"
+          ],
+          [
+            "Scale",
+            "A shift from limited pilots to company-wide deployment"
+          ],
+          [
+            "Tool",
+            "OpenAI’s product for workplace use"
+          ]
+        ],
+        "visual": null,
+        "impacts": [
+          [
+            "For employees",
+            "The default tools for writing, searching, and preparation may change"
+          ],
+          [
+            "For employers",
+            "They need both data boundaries and answer-review processes"
+          ],
+          [
+            "For customers",
+            "If internal work speeds up, response times and service design may change"
+          ]
+        ],
+        "next": [
+          "Actual staff adoption and time saved",
+          "Uber’s detailed rules for sensitive data, human review, and accountability"
+        ],
+        "source": "TechCrunch AI",
+        "updated": "2026-10-22"
+      },
+      "sourceLinks": [
+        {
+          "title": "Uber puts all 30,000 employees on ChatGPT Work",
+          "url": "https://techcrunch.com/2026/10/22/uber-puts-all-30000-employees-on-chatgpt-work/",
+          "publisher": "TechCrunch AI"
+        }
+      ],
+      "eventImage": {
+        "url": "https://techcrunch.com/wp-content/uploads/2026/06/wayve-uber-uk.jpg?resize=1200,800",
+        "credit": "TechCrunch AI",
+        "link": "https://techcrunch.com/2026/10/22/uber-puts-all-30000-employees-on-chatgpt-work/",
+        "zh": {
+          "alt": "Uber 把 3 万员工接入 ChatGPT Work：AI 从试用走到公司标配",
+          "caption": "Uber 把 3 万员工接入 ChatGPT Work：AI 从试用走到公司标配"
+        },
+        "en": {
+          "alt": "Uber gives ChatGPT Work to 30,000 employees: AI moves from pilot to office default",
+          "caption": "Uber gives ChatGPT Work to 30,000 employees: AI moves from pilot to office default"
+        }
+      },
+      "termGuides": [
+        {
+          "key": "ChatGPT Work",
+          "aliases": [
+            "ChatGPT Work"
+          ],
+          "zh": {
+            "label": "ChatGPT Work",
+            "meaning": "OpenAI 面向工作场景提供的 ChatGPT 产品。",
+            "relation": "Uber 计划让约 3 万名员工使用它。"
+          },
+          "en": {
+            "label": "ChatGPT Work",
+            "meaning": "OpenAI’s ChatGPT product for workplace use.",
+            "relation": "Uber plans to make it available to roughly 30,000 employees."
+          }
+        },
+        {
+          "key": "生成式 AI",
+          "aliases": [
+            "生成式 AI",
+            "generative AI"
+          ],
+          "zh": {
+            "label": "生成式 AI",
+            "meaning": "能生成文字、图片、代码等新内容的 AI。",
+            "relation": "Uber 将它从少数团队试用推向全员工作工具。"
+          },
+          "en": {
+            "label": "Generative AI",
+            "meaning": "AI that creates new text, images, code, and other content.",
+            "relation": "Uber is moving it from small-team testing to a tool for all employees."
+          }
+        }
+      ]
+    },
+    {
+      "id": "ai-canva-image-model",
+      "cat": "AI",
+      "icon": "ai",
+      "title": "Canva 有了自家图像模型：设计平台不想只当别家 AI 的入口",
+      "brief": "Canva 推出首个图像生成模型，用户可能得到更贴合模板和编辑流程的工具，选择也更被平台锁住。",
+      "take": "Canva 发布其首个图像生成模型。对普通用户，这不只是多一个“文生图”按钮：如果模型与模板、品牌素材、尺寸调整和后续编辑更紧密配合，做海报、演示文稿和社交图片会少几次来回导出。另一面是，设计平台越把生成、编辑和素材库绑在一起，用户越难轻松比较外部模型或把工作流搬走。接下来比起单张图好不好看，更该看版权处理、商用规则和生成结果能否精细修改。",
+      "meta": "AI 创意工具｜10 月 22 日",
+      "facts": [
+        [
+          "发布",
+          "Canva 推出首个图像生成模型"
+        ],
+        [
+          "平台",
+          "Canva 主打在线设计与模板工具"
+        ],
+        [
+          "场景",
+          "图像生成可与设计编辑流程结合"
+        ]
+      ],
+      "visual": null,
+      "impacts": [
+        [
+          "创作者",
+          "从生成到排版的步骤可能更少"
+        ],
+        [
+          "小企业",
+          "非设计人员制作营销素材的门槛继续下降"
+        ],
+        [
+          "选择权",
+          "平台内一体化越强，迁移和比较不同模型越麻烦"
+        ]
+      ],
+      "next": [
+        "模型的商用授权与训练数据说明",
+        "是否支持局部修改、风格控制和导出兼容"
+      ],
+      "source": "TechCrunch AI",
+      "updated": "2026-10-22",
+      "en": {
+        "cat": "AI",
+        "title": "Canva gets its own image model: the design platform does not want to be just another AI doorway",
+        "brief": "Canva’s first image-generation model could fit templates and editing more closely, while tying users more tightly to the platform’s workflow.",
+        "take": "Canva has released its first image-generation model. For ordinary users, this is more than another text-to-image button. If the model works closely with templates, brand assets, resizing, and later edits, making posters, presentations, and social graphics could require fewer exports and handoffs. The other side is that as a design platform ties generation, editing, and asset libraries together, it becomes harder for users to compare outside models or move their workflow elsewhere. More important than whether a single image looks good will be copyright handling, commercial-use rules, and how precisely outputs can be edited.",
+        "meta": "AI creative tools | Oct. 22",
+        "facts": [
+          [
+            "Release",
+            "Canva launched its first image-generation model"
+          ],
+          [
+            "Platform",
+            "Canva is an online design and template service"
+          ],
+          [
+            "Use",
+            "Image generation can be integrated with design editing"
+          ]
+        ],
+        "visual": null,
+        "impacts": [
+          [
+            "For creators",
+            "There may be fewer steps from generation to layout"
+          ],
+          [
+            "For small businesses",
+            "Making marketing material gets easier for non-designers"
+          ],
+          [
+            "For choice",
+            "A stronger all-in-one platform can make switching and comparison harder"
+          ]
+        ],
+        "next": [
+          "Commercial licensing and disclosure of training data",
+          "Support for local edits, style control, and compatible exports"
+        ],
+        "source": "TechCrunch AI",
+        "updated": "2026-10-22"
+      },
+      "sourceLinks": [
+        {
+          "title": "Canva releases its first image generation model",
+          "url": "https://techcrunch.com/2026/10/22/canva-releases-its-first-image-generation-model/",
+          "publisher": "TechCrunch AI"
+        }
+      ],
+      "eventImage": {
+        "url": "https://techcrunch.com/wp-content/uploads/2026/10/Sample-Outputs.jpeg?resize=1200,675",
+        "credit": "TechCrunch AI",
+        "link": "https://techcrunch.com/2026/10/22/canva-releases-its-first-image-generation-model/",
+        "zh": {
+          "alt": "Canva 有了自家图像模型：设计平台不想只当别家 AI 的入口",
+          "caption": "Canva 有了自家图像模型：设计平台不想只当别家 AI 的入口"
+        },
+        "en": {
+          "alt": "Canva gets its own image model: the design platform does not want to be just another AI doorway",
+          "caption": "Canva gets its own image model: the design platform does not want to be just another AI doorway"
+        }
+      },
+      "termGuides": [
+        {
+          "key": "Canva",
+          "aliases": [
+            "Canva"
+          ],
+          "zh": {
+            "label": "Canva",
+            "meaning": "提供模板、排版和图片编辑的在线设计平台。",
+            "relation": "它推出自家图像模型，想把生成和设计步骤留在平台内。"
+          },
+          "en": {
+            "label": "Canva",
+            "meaning": "An online design platform for templates, layouts, and image editing.",
+            "relation": "It has launched its own image model to keep generation and design work inside the platform."
+          }
+        },
+        {
+          "key": "图像生成模型",
+          "aliases": [
+            "图像生成模型",
+            "image generation model",
+            "文生图"
+          ],
+          "zh": {
+            "label": "图像生成模型",
+            "meaning": "根据文字或其他输入创建新图片的 AI 模型。",
+            "relation": "这是 Canva 首次发布此类自有模型。"
+          },
+          "en": {
+            "label": "Image-generation model",
+            "meaning": "An AI model that creates new images from text or other inputs.",
+            "relation": "This is Canva’s first in-house model of this kind."
+          }
+        }
+      ]
+    },
+    {
+      "id": "ai-microsoft-medical-superintelligence",
+      "cat": "AI",
+      "icon": "alert",
+      "title": "微软称 AI 在疑难病例胜过医生：最该防的是把演示当诊疗",
+      "brief": "AI 若真能帮医生处理罕见难题当然是好事，但“胜过医生”的说法还不能替代临床验证和责任制度。",
+      "take": "微软 AI 负责人 Mustafa Suleyman 表示，其 AI 在困难医疗案例上的表现优于医生，并提出追求“医疗超级智能”。这类进展可能帮助医生更快梳理复杂资料、发现罕见线索，尤其在专家资源紧张的地方很有吸引力。但医疗不是答题比赛：模型是否适用于真实病人、不同医院的数据、紧急情况和最终责任，必须经独立临床研究和监管审查。普通人现在最稳妥的理解是把它当辅助意见，而不是替代诊断。",
+      "meta": "医疗 AI 与验证｜10 月 22 日｜公司表述",
+      "facts": [
+        [
+          "表述者",
+          "微软 AI 负责人 Mustafa Suleyman"
+        ],
+        [
+          "主张",
+          "称其 AI 在困难病例上优于医生"
+        ],
+        [
+          "目标",
+          "提出“医疗超级智能”方向"
+        ]
+      ],
+      "visual": null,
+      "impacts": [
+        [
+          "患者",
+          "AI 或能帮助整理复杂信息，但不能替代医生判断"
+        ],
+        [
+          "医生",
+          "工具若进入诊疗，复核与责任分工会更重要"
+        ],
+        [
+          "监管",
+          "性能主张需要独立临床验证，而非只看内部测试"
+        ]
+      ],
+      "next": [
+        "微软公布的测试方法、数据与同行评审结果",
+        "是否开展真实临床环境下的独立验证"
+      ],
+      "source": "TechCrunch AI",
+      "updated": "2026-10-22",
+      "en": {
+        "cat": "AI",
+        "title": "Microsoft says its AI beats doctors on hard cases: do not mistake a demo for medical care",
+        "brief": "AI that helps doctors with rare, difficult cases could be valuable, but a claim that it outperforms doctors cannot replace clinical validation or accountability.",
+        "take": "Microsoft AI chief Mustafa Suleyman says the company’s AI outperforms doctors on difficult medical cases and is pursuing “medical superintelligence.” Such progress could help clinicians sort through complex evidence and spot rare clues faster, which is appealing where specialist capacity is scarce. But medicine is not a quiz contest: whether a model works for real patients, across different hospitals and data, in urgent cases, and under clear responsibility must be established through independent clinical studies and regulatory review. For now, the safest framing for patients is an assistive opinion, not a replacement diagnosis.",
+        "meta": "Medical AI and validation | Oct. 22 | Company claim",
+        "facts": [
+          [
+            "Speaker",
+            "Microsoft AI chief Mustafa Suleyman"
+          ],
+          [
+            "Claim",
+            "He says its AI outperforms doctors on difficult cases"
+          ],
+          [
+            "Goal",
+            "He described a pursuit of “medical superintelligence”"
+          ]
+        ],
+        "visual": null,
+        "impacts": [
+          [
+            "For patients",
+            "AI may help organize complex information but cannot replace clinical judgment"
+          ],
+          [
+            "For clinicians",
+            "Review procedures and responsibility matter more if tools enter care"
+          ],
+          [
+            "For regulators",
+            "Performance claims need independent clinical validation, not only internal tests"
+          ]
+        ],
+        "next": [
+          "Microsoft’s published methods, data, and peer-reviewed results",
+          "Whether independent tests occur in real clinical settings"
+        ],
+        "source": "TechCrunch AI",
+        "updated": "2026-10-22"
+      },
+      "sourceLinks": [
+        {
+          "title": "Microsoft’s Mustafa Suleyman says its AI outperforms doctors on hard cases as he chases ‘medical superintelligence’",
+          "url": "https://techcrunch.com/2026/10/22/microsofts-mustafa-suleyman-says-its-ai-outperforms-doctors-on-hard-cases-as-he-chases-medical-superintelligence/",
+          "publisher": "TechCrunch AI"
+        }
+      ],
+      "eventImage": {
+        "url": "https://techcrunch.com/wp-content/uploads/2026/10/GettyImages-1935915215.jpg?w=1024",
+        "credit": "TechCrunch AI",
+        "link": "https://techcrunch.com/2026/10/22/microsofts-mustafa-suleyman-says-its-ai-outperforms-doctors-on-hard-cases-as-he-chases-medical-superintelligence/",
+        "zh": {
+          "alt": "微软称 AI 在疑难病例胜过医生：最该防的是把演示当诊疗",
+          "caption": "微软称 AI 在疑难病例胜过医生：最该防的是把演示当诊疗"
+        },
+        "en": {
+          "alt": "Microsoft says its AI beats doctors on hard cases: do not mistake a demo for medical care",
+          "caption": "Microsoft says its AI beats doctors on hard cases: do not mistake a demo for medical care"
+        }
+      },
+      "termGuides": [
+        {
+          "key": "Mustafa Suleyman",
+          "aliases": [
+            "Mustafa Suleyman",
+            "穆斯塔法·苏莱曼"
+          ],
+          "zh": {
+            "label": "Mustafa Suleyman",
+            "meaning": "微软 AI 业务负责人。",
+            "relation": "他提出了 AI 在疑难病例上优于医生的说法。"
+          },
+          "en": {
+            "label": "Mustafa Suleyman",
+            "meaning": "Microsoft’s AI chief.",
+            "relation": "He made the claim about AI outperforming doctors on difficult cases."
+          }
+        },
+        {
+          "key": "医疗超级智能",
+          "aliases": [
+            "医疗超级智能",
+            "medical superintelligence"
+          ],
+          "zh": {
+            "label": "医疗超级智能",
+            "meaning": "面向医疗领域、能力极强的 AI 系统这一设想。",
+            "relation": "这是 Suleyman 描述的研发目标，不等于已获临床验证的产品。"
+          },
+          "en": {
+            "label": "Medical superintelligence",
+            "meaning": "A proposed extremely capable AI system focused on medicine.",
+            "relation": "It is Suleyman’s stated research ambition, not a clinically validated product."
+          }
+        }
+      ]
+    }
+  ]
+}
