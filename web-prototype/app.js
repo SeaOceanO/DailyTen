@@ -85,9 +85,14 @@ const i18n = {
     facts: '三个关键事实',
     visual: '核心可视化',
     eventImage: '事件图片',
-    impact: '对个人有什么影响',
-    next: '接下来只看什么',
+    impact: '对你有什么影响',
+    next: '接下来只看两个信号',
     today: '今天',
+    listenAll: '从头播报',
+    monthPrev: '上个月',
+    monthNext: '下个月',
+    yesterday: '昨天',
+    hasEdition: '有简报',
     languageHint: '选择后会立刻保存到当前浏览器。',
     favoriteHint: '查看已收藏的十条',
     termKicker: '专业词解释',
@@ -141,8 +146,13 @@ const i18n = {
     visual: 'Core visual',
     eventImage: 'Event image',
     impact: 'What it means for you',
-    next: 'What to watch next',
+    next: 'Two signals to watch',
     today: 'Today',
+    listenAll: 'Listen from the top',
+    monthPrev: 'Previous month',
+    monthNext: 'Next month',
+    yesterday: 'Yesterday',
+    hasEdition: 'Has edition',
     languageHint: 'Your choice is saved in this browser.',
     favoriteHint: 'View saved items',
     termKicker: 'Term guide',
@@ -226,6 +236,7 @@ const state = {
   theme: readSavedTheme(),
   selectedDateKey: readSavedDateKey(),
   calendarExpanded: false,
+  calendarMonth: null,
 };
 
 const elements = {
@@ -589,7 +600,7 @@ function hydrateEdition(edition) {
   document.documentElement.lang = state.language === 'en' ? 'en' : 'zh-CN';
   document.title = `${title} · ${coalesce(t(state.channel), channel.label)}`;
   elements.eyebrow.textContent = localizedEyebrow(channel);
-  elements.title.textContent = title;
+  elements.title.textContent = title.replace(/^DailyTen\s*[｜|]\s*/i, '');
   elements.subtitle.textContent = subtitle;
   elements.progressTitle.textContent = localizedBriefLabel(edition);
   elements.progressStatus.textContent = t('progressDefault');
@@ -600,6 +611,8 @@ function hydrateEdition(edition) {
 function renderChannelTabs() {
   elements.channelTabs.hidden = true;
   const activeTab = state.channel === 'favorites' ? 'mine' : state.channel;
+  document.documentElement.dataset.channel = activeTab;
+  syncThemeColor();
 
   elements.bottomNav.innerHTML = bottomTabs.map((key) => `
     <button class="bottom-nav-item${activeTab === key ? ' is-active' : ''}" type="button" data-channel="${key}">
@@ -759,26 +772,31 @@ function renderDateModule() {
   }
 
   elements.dateModule.hidden = false;
-  const monthDate = parseDateKey(state.selectedDateKey);
+  const selectedDate = parseDateKey(state.selectedDateKey);
+  const monthDate = state.calendarMonth || startOfMonth(selectedDate);
+  const sortedKeys = [...availableDateKeys].sort();
+  const earliestMonth = startOfMonth(parseDateKey(sortedKeys[0] || state.selectedDateKey));
+  const latestMonth = startOfMonth(today);
+  const listenButton = speechState.supported
+    ? `<button class="glass-button" type="button" data-action="listen-all" aria-label="${escapeHtml(t('listenAll'))}" title="${escapeHtml(t('listenAll'))}">${speechIconSvg('speaker')}</button>`
+    : '';
   elements.dateModule.classList.toggle('is-expanded', state.calendarExpanded);
   elements.dateModule.innerHTML = `
     <div class="date-row" data-date-gesture="collapsed">
-      <button class="calendar-toggle" type="button" aria-label="${state.calendarExpanded ? '收起日历' : '展开日历'}" aria-expanded="${state.calendarExpanded}">
-        <span class="chevron-icon ${state.calendarExpanded ? 'is-up' : 'is-down'}" aria-hidden="true"><span></span><span></span></span>
+      <button class="date-capsule" type="button" aria-label="${state.calendarExpanded ? '收起日历' : '展开日历'}" aria-expanded="${state.calendarExpanded}">
+        ${calendarIconSvg()}
+        <span>${escapeHtml(shortDateLabel(selectedDate))}</span>
+        ${chevronControlHtml(state.calendarExpanded ? 'up' : 'down')}
       </button>
-      <div class="date-strip">
-        ${dateOptions.map((date) => dateChipHtml(date)).join('')}
-      </div>
+      ${listenButton}
     </div>
     <div class="calendar-panel" data-date-gesture="expanded">
       <div class="calendar-head">
-        <div>
-          <strong>${monthTitle(monthDate)}</strong>
-          <span>${state.language === 'en' ? 'Saved editions stay available here' : '已生成的日期会保存在这里'}</span>
-        </div>
-        <button class="calendar-toggle in-panel" type="button" aria-label="收起日历" aria-expanded="${state.calendarExpanded}">
-          <span class="chevron-icon is-up" aria-hidden="true"><span></span><span></span></span>
-        </button>
+        <strong>${monthTitle(monthDate)}</strong>
+        <span class="calendar-months">
+          <button class="month-button" type="button" data-month-shift="-1" aria-label="${escapeHtml(t('monthPrev'))}" ${monthDate <= earliestMonth ? 'disabled' : ''}>‹</button>
+          <button class="month-button" type="button" data-month-shift="1" aria-label="${escapeHtml(t('monthNext'))}" ${monthDate >= latestMonth ? 'disabled' : ''}>›</button>
+        </span>
       </div>
       <div class="weekday-grid">
         ${weekdayNames().map((day) => `<span>${day}</span>`).join('')}
@@ -786,17 +804,44 @@ function renderDateModule() {
       <div class="calendar-grid">
         ${calendarCellsHtml(monthDate)}
       </div>
+      <div class="calendar-foot">
+        <span class="calendar-legend"><i aria-hidden="true"></i>${escapeHtml(t('hasEdition'))}</span>
+        <span class="calendar-quick">
+          <button type="button" data-date-key="${todayKey}" ${availableDateKeys.has(todayKey) ? '' : 'disabled'}>${escapeHtml(t('today'))}</button>
+          <button type="button" data-date-key="${yesterdayKey}" ${availableDateKeys.has(yesterdayKey) ? '' : 'disabled'}>${escapeHtml(t('yesterday'))}</button>
+        </span>
+      </div>
     </div>
   `;
 
-  elements.dateModule.querySelectorAll('.calendar-toggle').forEach((button) => {
-    button.addEventListener('click', () => setCalendarExpanded(!state.calendarExpanded));
+  elements.dateModule.querySelector('.date-capsule').addEventListener('click', () => setCalendarExpanded(!state.calendarExpanded));
+
+  elements.dateModule.querySelector('[data-action="listen-all"]')?.addEventListener('click', () => {
+    if (speechState.active) {
+      toggleCurrentSpeech();
+    } else if (items.length) {
+      playSpeechItem(items[0], 0, items);
+    }
+  });
+
+  elements.dateModule.querySelectorAll('[data-month-shift]').forEach((button) => {
+    button.addEventListener('click', () => {
+      const shift = Number(button.dataset.monthShift);
+      state.calendarMonth = new Date(monthDate.getFullYear(), monthDate.getMonth() + shift, 1);
+      renderDateModule();
+    });
   });
 
   elements.dateModule.querySelectorAll('[data-date-key]').forEach((button) => {
     button.addEventListener('click', async () => {
       const dateKey = button.dataset.dateKey;
-      if (button.disabled || !dateKey || state.selectedDateKey === dateKey) return;
+      if (button.disabled || !dateKey) return;
+      state.calendarExpanded = false;
+      state.calendarMonth = null;
+      if (state.selectedDateKey === dateKey) {
+        renderDateModule();
+        return;
+      }
       state.selectedDateKey = dateKey;
       storage.setItem(storageKeys.date, dateKey);
       await loadAndRender();
@@ -804,16 +849,12 @@ function renderDateModule() {
   });
 }
 
-function dateChipHtml(date) {
-  const key = formatDateKey(date);
-  const selected = key === state.selectedDateKey;
-  return `
-    <button class="date-chip${selected ? ' is-selected' : ''}" type="button" data-date-key="${key}">
-      <span>${weekdayLabel(date)}</span>
-      <strong>${date.getDate()}</strong>
-      <em>${key === todayKey ? t('today') : shortDateLabel(date)}</em>
-    </button>
-  `;
+function calendarIconSvg() {
+  return '<svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="5" width="16" height="15" rx="3"/><path d="M4 10h16M9 3v4M15 3v4"/></svg>';
+}
+
+function startOfMonth(date) {
+  return new Date(date.getFullYear(), date.getMonth(), 1);
 }
 
 function calendarCellsHtml(monthDate) {
@@ -834,7 +875,7 @@ function calendarCellsHtml(monthDate) {
       'calendar-day',
       key === state.selectedDateKey ? 'is-selected' : '',
       key === todayKey ? 'is-today' : '',
-      !selectable || isFuture ? 'is-disabled' : '',
+      !selectable || isFuture ? 'is-disabled' : 'has-edition',
     ].filter(Boolean).join(' ');
 
     cells.push(`
@@ -868,6 +909,7 @@ function wireDateGestures() {
 
 function setCalendarExpanded(expanded) {
   state.calendarExpanded = expanded;
+  state.calendarMonth = expanded ? startOfMonth(parseDateKey(state.selectedDateKey)) : null;
   renderDateModule();
 }
 
@@ -1074,19 +1116,7 @@ function render() {
     return;
   }
 
-  let lastCategory = '';
-
   items.forEach((item, index) => {
-    const displayItem = localizedItem(item);
-
-    if (displayItem.cat !== lastCategory) {
-      const label = document.createElement('p');
-      label.className = 'category-label';
-      label.textContent = displayItem.cat;
-      elements.feed.append(label);
-      lastCategory = displayItem.cat;
-    }
-
     elements.feed.append(createCard(item, index));
   });
 
@@ -1156,19 +1186,12 @@ function createCard(item, itemIndex = 0) {
   header.setAttribute('role', 'button');
   header.setAttribute('aria-expanded', 'false');
   header.innerHTML = `
-    <span class="summary-row">
-      <span class="summary-copy">
-        <span class="card-title">${annotateTerms(displayItem.title, item)}</span>
-        <span class="card-take">${annotateTerms(brief, item)}</span>
-        <span class="card-meta">${annotateTerms(displayItem.meta, item)}</span>
-      </span>
-      <span class="summary-controls">
-        <span class="summary-tools">
-          <span class="sketch-icon">${sketchIcon(item.icon, 38)}</span>
-          ${speechState.supported ? `<button class="card-speech-button" type="button" data-action="speak" aria-label="${escapeHtml(t('listen'))}" title="${escapeHtml(t('listen'))}">${speechIconSvg('speaker')}</button>` : ''}
-        </span>
-        <span class="summary-action">${escapeHtml(t('expand'))}${chevronControlHtml('down')}</span>
-      </span>
+    <span class="card-top"><span class="card-chip">${escapeHtml(cardChip(displayItem))}</span><span class="card-time">${escapeHtml(formatItemDate(displayItem))}</span></span>
+    <span class="card-title">${escapeHtml(displayItem.title)}</span>
+    <span class="card-take" data-label="${escapeHtml(t('conclusion'))}">${escapeHtml(brief)}</span>
+    <span class="card-foot">
+      <span class="card-src"><i></i>${escapeHtml(sourceCountLabel(sourceCount(displayItem)))}</span>
+      <span class="card-more">${chevronControlHtml('down')}</span>
     </span>
   `;
 
@@ -1204,6 +1227,11 @@ function createCard(item, itemIndex = 0) {
       syncCardButtons(card, item.id);
     });
 
+    details.querySelector('[data-action="speak"]')?.addEventListener('click', (event) => {
+      event.stopPropagation();
+      toggleSpeechItem(item, itemIndex, items);
+    });
+
     details.querySelector('[data-action="mute"]').addEventListener('click', () => {
       state.muted.add(item.id);
       writeSet(storageKeys.muted, state.muted);
@@ -1212,6 +1240,7 @@ function createCard(item, itemIndex = 0) {
     });
 
     syncCardButtons(card, item.id);
+    syncSpeechUI();
   }
 
   header.addEventListener('click', (event) => {
@@ -1240,11 +1269,6 @@ function createCard(item, itemIndex = 0) {
     openTermModal(termButton.dataset.term, item);
   });
 
-  header.querySelector('[data-action="speak"]')?.addEventListener('click', (event) => {
-    event.stopPropagation();
-    toggleSpeechItem(item, itemIndex, items);
-  });
-
   function toggleCardOpen(card, header, item) {
     if (card.classList.contains('is-card-animating')) return;
 
@@ -1264,15 +1288,12 @@ function createCard(item, itemIndex = 0) {
 }
 
 function detailsHtml(item) {
+  const count = sourceCount(item);
+  const fullTake = String(item.take || '').trim();
+  const showTake = fullTake && fullTake !== String(item.brief || '').trim();
+  const updated = formatItemDate(item);
   return `
-    <div class="divider"></div>
-    <div class="takeaway-row">
-      <div class="takeaway-copy">
-        <p class="mini-label">${escapeHtml(t('conclusion'))}</p>
-        <p class="take-text">${annotateTerms(item.take, item)}</p>
-      </div>
-      <span class="sketch-icon">${sketchIcon(item.icon, 58)}</span>
-    </div>
+    ${showTake ? `<p class="take-text">${annotateTerms(fullTake, item)}</p>` : ''}
 
     ${sectionTitle(t('facts'))}
     <div class="fact-grid">
@@ -1290,10 +1311,13 @@ function detailsHtml(item) {
 
     ${sectionTitle(t('impact'))}
     <div class="impact-grid">
-      ${item.impacts.map(([label, text]) => `
+      ${item.impacts.map(([label, text], index) => `
         <div class="impact">
-          <strong>${annotateTerms(label, item)}</strong>
-          <span>${annotateTerms(text, item)}</span>
+          <span class="impact-icon is-${index % 4}">${impactIconSvg(label, index)}</span>
+          <span class="impact-copy">
+            <strong>${annotateTerms(label, item)}</strong>
+            <span>${annotateTerms(text, item)}</span>
+          </span>
         </div>
       `).join('')}
     </div>
@@ -1301,19 +1325,72 @@ function detailsHtml(item) {
     ${item.next.length ? `
       ${sectionTitle(t('next'))}
       <ol class="next-list">
-        ${item.next.map((text, index) => `<li><span>${index + 1}</span>${annotateTerms(text, item)}</li>`).join('')}
+        ${item.next.map((text, index) => `<li><span>${index + 1}</span><em>${annotateTerms(text, item)}</em></li>`).join('')}
       </ol>
     ` : ''}
 
     <div class="source-row">
-      <span class="source-text">${annotateTerms(item.source, item)} · ${escapeHtml(item.updated)}</span>
+      <span class="source-text"><b>${escapeHtml(sourceCountLabel(count))}</b> · ${annotateTerms(item.source, item)}${updated ? ` · ${escapeHtml(updated)}` : ''}</span>
       <span class="actions">
         <button class="pill-button" type="button" data-action="favorite"></button>
+        ${speechState.supported ? `<button class="pill-button is-icon" type="button" data-action="speak" aria-label="${escapeHtml(t('listen'))}" title="${escapeHtml(t('listen'))}">${speechIconSvg('speaker')}</button>` : ''}
         <button class="pill-button is-danger" type="button" data-action="mute"></button>
         <button class="pill-button is-collapse" type="button" data-action="collapse">${escapeHtml(t('collapse'))}${chevronControlHtml('up')}</button>
       </span>
     </div>
   `;
+}
+
+function cardChip(item) {
+  const first = String(item.meta || '').split(/[｜|·•]/)[0].trim();
+  return first || item.cat || '';
+}
+
+function formatItemDate(item) {
+  const raw = String(item.updated || '');
+  const match = raw.match(/^(\d{4})-(\d{2})-(\d{2})/);
+  if (!match) return raw;
+  return shortDateLabel(new Date(Number(match[1]), Number(match[2]) - 1, Number(match[3])));
+}
+
+function sourceCount(item) {
+  const parts = String(item.source || '')
+    .split(/[；;、]|,\s+/)
+    .map((part) => part.trim())
+    .filter(Boolean);
+  return Math.max(1, new Set(parts).size);
+}
+
+function sourceCountLabel(count) {
+  return state.language === 'en'
+    ? `${count} independent source${count === 1 ? '' : 's'}`
+    : `${count} 个独立来源`;
+}
+
+function impactIconSvg(label, index) {
+  const icons = {
+    shield: '<path d="M12 3l7 3v5c0 4.5-3 8-7 10-4-2-7-5.5-7-10V6z"/>',
+    heart: '<path d="M12 20s-7-4.4-7-10a4 4 0 017-2.5A4 4 0 0119 10c0 5.6-7 10-7 10z"/>',
+    cap: '<path d="M3 9l9-4 9 4-9 4z"/><path d="M7 11.5V16c2.8 2 7.2 2 10 0v-4.5"/>',
+    coins: '<ellipse cx="12" cy="7" rx="6" ry="3"/><path d="M6 7v5c0 1.7 2.7 3 6 3s6-1.3 6-3V7"/><path d="M6 12v5c0 1.7 2.7 3 6 3s6-1.3 6-3v-5"/>',
+    globe: '<circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3c3 3 3 15 0 18M12 3c-3 3-3 15 0 18"/>',
+    building: '<rect x="5" y="4" width="14" height="16" rx="2"/><path d="M9 8h2M13 8h2M9 12h2M13 12h2M10 20v-4h4v4"/>',
+    home: '<path d="M4 11l8-7 8 7"/><path d="M6 10v10h12V10"/>',
+    person: '<circle cx="12" cy="8" r="3.5"/><path d="M5 20c0-4 3-6 7-6s7 2 7 6"/>',
+  };
+  const rules = [
+    ['shield', /安全|隐私|风险|监管|法|合规|security|privacy|risk|safety|law|regulat/i],
+    ['heart', /健康|医|疾病|health|medical|care/i],
+    ['cap', /学生|教育|学校|教师|students?|school|teacher|educat/i],
+    ['coins', /价格|成本|收入|消费|投资|钱|费用|企业|公司|薪|price|cost|income|money|invest|compan|business|jobs?|work/i],
+    ['globe', /全球|国际|地区|出口|供应|global|world|trade|supply|export/i],
+    ['building', /城市|政府|公共|社区|city|government|public|communit/i],
+    ['home', /家|居民|租|房|household|home|resident|famil|parent/i],
+    ['person', /个人|用户|读者|普通人|创作|you|users?|readers?|creators?|people/i],
+  ];
+  const hit = rules.find(([, pattern]) => pattern.test(String(label)));
+  const key = hit ? hit[0] : ['person', 'coins', 'globe', 'shield'][index % 4];
+  return `<svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">${icons[key]}</svg>`;
 }
 
 async function openCard(card, header, item) {
@@ -1654,6 +1731,10 @@ function syncSpeechUI() {
   elements.audioPlayer.hidden = !visible;
   document.body.classList.toggle('has-audio-player', Boolean(visible));
 
+  document.querySelectorAll('[data-action="listen-all"]').forEach((button) => {
+    button.classList.toggle('is-active', Boolean(visible));
+  });
+
   document.querySelectorAll('.news-card').forEach((card) => {
     const isCurrent = Boolean(visible && card.dataset.id === speechState.item.id);
     const isSpeaking = isCurrent && !speechState.paused && !speechState.ended;
@@ -1690,12 +1771,8 @@ function sectionTitle(text) {
 }
 
 function visualBlock(visual) {
-  const useOrbitImage = visual.type === 'orbit'
-    || (visual.type === 'chain' && state.channel === 'ai' && state.selectedDateKey === '2026-09-06');
-  const content = useOrbitImage
-    ? orbitChainImageHtml(visual.nodes, visual.label)
-    : visual.type === 'chain'
-      ? chainDiagramHtml(visual.nodes)
+  const content = visual.type === 'chain' || visual.type === 'orbit'
+    ? chainDiagramHtml(visual.nodes)
     : visual.type === 'bars'
       ? barsSvg(visual.bars, visual.max, visual.decimal)
       : trendSvg(visual);
@@ -2286,96 +2363,6 @@ function barsSvg(bars, max, decimal = false) {
       }).join('')}
     </div>
   `;
-}
-
-function orbitChainImageHtml(nodes, label) {
-  const imageAlt = `${label}：${nodes.join(' → ')}`;
-  return orbitChainSvg(nodes, imageAlt);
-}
-
-function orbitChainSvg(nodes, imageAlt) {
-  const dark = effectiveTheme() === 'dark';
-  const palette = dark
-    ? {
-      background: '#17211D', surface: '#20312B', final: '#3A311D', border: '#416A5C',
-      finalBorder: '#8C7132', ink: '#F1F5EF', muted: '#B6C2BA', accent: '#83C9B2', gold: '#E2C36F',
-    }
-    : {
-      background: '#F5F7F2', surface: '#FFFFFF', final: '#F4EAD0', border: '#B8D2C6',
-      finalBorder: '#D6BD7B', ink: '#18201D', muted: '#66716B', accent: '#39705D', gold: '#A98232',
-    };
-  const safeNodes = nodes.slice(0, 4);
-  const positions = [
-    { x: 230, y: 22, width: 260, height: 94 },
-    { x: 474, y: 190, width: 216, height: 104 },
-    { x: 230, y: 402, width: 260, height: 94 },
-    { x: 30, y: 190, width: 216, height: 104 },
-  ];
-  const paths = [
-    'M 495 69 C 596 69 650 116 650 181',
-    'M 650 303 C 650 386 582 449 500 449',
-    'M 220 449 C 129 449 70 386 70 303',
-    'M 70 181 C 70 108 132 69 220 69',
-  ];
-  const markerId = uniqueId('orbit-arrow');
-  const arrows = paths.slice(0, safeNodes.length).map((path, index) => `
-    <path d="${path}" fill="none" stroke="${index === safeNodes.length - 1 ? palette.gold : palette.accent}" stroke-width="5" stroke-linecap="round" marker-end="url(#${markerId})" opacity="0.9" />
-  `).join('');
-  const nodeShapes = safeNodes.map((node, index) => {
-    const position = positions[index];
-    const isFinal = index === safeNodes.length - 1;
-    const lines = splitOrbitLabel(node, state.language === 'en' ? 19 : 9);
-    const firstY = position.y + position.height / 2 + 6 - ((lines.length - 1) * 12);
-    const labelX = position.x + position.width / 2 + 10;
-    return `
-      <g>
-        <rect x="${position.x}" y="${position.y}" width="${position.width}" height="${position.height}" rx="24" fill="${isFinal ? palette.final : palette.surface}" stroke="${isFinal ? palette.finalBorder : palette.border}" stroke-width="2" />
-        <circle cx="${position.x + 24}" cy="${position.y + 20}" r="13" fill="${isFinal ? palette.gold : palette.accent}" />
-        <text x="${position.x + 24}" y="${position.y + 21}" text-anchor="middle" dominant-baseline="middle" font-size="14" font-weight="800" fill="${dark ? '#101513' : '#FFFFFF'}">${index + 1}</text>
-        <text x="${labelX}" y="${firstY}" text-anchor="middle" dominant-baseline="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC','Microsoft YaHei',sans-serif" font-size="${state.language === 'en' ? 18 : 20}" font-weight="700" fill="${palette.ink}">
-          ${lines.map((line, lineIndex) => `<tspan x="${labelX}" dy="${lineIndex === 0 ? 0 : 24}">${escapeSvg(line)}</tspan>`).join('')}
-        </text>
-      </g>
-    `;
-  }).join('');
-
-  return `
-    <svg class="impact-chain-image" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 520" role="img" aria-label="${escapeHtml(imageAlt)}" preserveAspectRatio="xMidYMid meet">
-      <defs>
-        <marker id="${markerId}" markerWidth="12" markerHeight="12" refX="9" refY="6" orient="auto" markerUnits="strokeWidth">
-          <path d="M 1 1 L 10 6 L 1 11" fill="none" stroke="${palette.accent}" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" />
-        </marker>
-        <filter id="orbit-shadow" x="-20%" y="-20%" width="140%" height="150%">
-          <feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#10251D" flood-opacity="${dark ? '0.26' : '0.10'}" />
-        </filter>
-      </defs>
-      <rect width="720" height="520" rx="30" fill="${palette.background}" />
-      <g>${arrows}</g>
-      <g filter="url(#orbit-shadow)">${nodeShapes}</g>
-      <g transform="translate(360 256)">
-        <circle r="76" fill="none" stroke="${palette.border}" stroke-width="2" stroke-dasharray="5 8" />
-        <circle r="54" fill="${palette.surface}" stroke="${palette.border}" stroke-width="2" />
-        <path d="M -18 -6 C -7 -23 19 -20 24 -2 C 29 17 8 29 -8 20 C -17 15 -22 6 -18 -6 Z" fill="none" stroke="${palette.accent}" stroke-width="5" stroke-linecap="round" />
-        <path d="M 17 -15 L 27 -5 L 14 -2" fill="none" stroke="${palette.accent}" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" />
-        <text x="0" y="48" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC','Microsoft YaHei',sans-serif" font-size="16" font-weight="700" fill="${palette.muted}">${state.language === 'en' ? 'IMPACT' : '影响传导'}</text>
-      </g>
-    </svg>
-  `;
-}
-
-function splitOrbitLabel(value, maxLength) {
-  const text = String(value).trim();
-  if (!text) return [''];
-  if (/\s/.test(text)) {
-    const lines = [];
-    for (const word of text.split(/\s+/)) {
-      const current = lines[lines.length - 1] || '';
-      if (!current || `${current} ${word}`.length > maxLength) lines.push(word);
-      else lines[lines.length - 1] = `${current} ${word}`;
-    }
-    return lines.slice(0, 3);
-  }
-  return text.match(new RegExp(`.{1,${maxLength}}`, 'g')).slice(0, 3);
 }
 
 function trendSvg(visual) {
@@ -2974,10 +2961,17 @@ function effectiveTheme() {
 function applyTheme() {
   const theme = effectiveTheme();
   document.documentElement.dataset.theme = theme;
+  syncThemeColor();
+}
+
+function syncThemeColor() {
   const themeColor = document.querySelector('meta[name="theme-color"]');
-  if (themeColor) {
-    themeColor.setAttribute('content', theme === 'dark' ? '#101513' : '#f4f6f2');
-  }
+  if (!themeColor) return;
+  const channel = document.documentElement.dataset.channel || 'daily';
+  const palette = effectiveTheme() === 'dark'
+    ? { daily: '#0e1c14', ai: '#0b1b18', mine: '#000000' }
+    : { daily: '#e0f0e5', ai: '#e4f4f1', mine: '#f2f2f7' };
+  themeColor.setAttribute('content', palette[channel] || palette.daily);
 }
 
 function themeLabel(theme) {
@@ -3029,10 +3023,13 @@ function localizedEditionSubtitle(edition, channel) {
 function localizedBriefLabel(edition) {
   if (state.channel === 'mine') return '';
   if (state.channel === 'favorites') return edition.briefLabel;
+  const count = (edition.items && edition.items.length) || 10;
+  const minutes = edition.readTimeMinutes || 8;
+  const isToday = state.selectedDateKey === todayKey;
   if (state.language === 'en') {
-    return `${dateLabel(state.selectedDateKey)} · 10 items`;
+    return `${isToday ? 'Today' : dateLabel(state.selectedDateKey)} · ${count} items · about ${minutes} min`;
   }
-  return coalesce(edition.briefLabel, `${dateLabel(state.selectedDateKey)} 10 条`);
+  return `${isToday ? '今日' : dateLabel(state.selectedDateKey)} ${count} 条 · 约 ${minutes} 分钟`;
 }
 
 function readSavedDateKey() {
