@@ -1,8 +1,8 @@
 {
   "dateKey": "2026-10-26",
-  "generatedAt": "2026-10-26T05:00:00+08:00",
-  "title": "DailyTen｜十件事，先把今天看明白",
-  "subtitle": "选举、传染病、灾害与一条正在改变战争和互联网规则的卫星网络",
+  "generatedAt": "2026-10-26T05:00:00+00:00",
+  "title": "DailyTen｜今天值得知道的十件事",
+  "subtitle": "从 AI 的训练边界，到能源、选举和公共安全：变化正落到价格、服务与日常选择上。",
   "briefLabel": "今日速览",
   "doneLabel": "读完了",
   "readTimeMinutes": 8,
@@ -11,83 +11,83 @@
       "id": "openai-live-internet-training",
       "cat": "AI",
       "icon": "ai",
-      "title": "OpenAI不再直接拿“实时互联网”训练：聊天机器人会更谨慎，也可能没那么新鲜",
-      "brief": "OpenAI说实时网页风险太大，今后不再直接用它训练模型，AI回答最新消息的方式可能得重做。",
-      "take": "OpenAI表示将不再用“实时互联网”直接训练其AI模型，理由是其中存在显著风险。核心麻烦不只是错误信息：开放网页里混有恶意指令、隐私内容、版权材料和专门诱导模型失常的文本。对用户来说，模型未必马上变笨，但“刚发生的事它是否知道、知道得是否可靠”会更依赖搜索、授权数据源和产品层的核验，而不是把整张网一股脑喂进去。",
+      "title": "OpenAI 不再直接用“活着的互联网”训练：及时性要让位给安全",
+      "brief": "以后 AI 未必会立刻吸收网上的新内容，换来的是少一点被恶意网页带偏的风险。",
+      "take": "OpenAI 表示，将不再让模型直接在实时互联网内容上训练，理由是风险显著。核心麻烦不只是错误信息：公开网页可以被操纵，恶意内容也可能借训练过程影响模型行为。对用户来说，AI 回答“刚刚发生什么”时，可能更依赖检索、授权数据和后续更新，而不是把全网新页面直接吃进去。安全边界更清楚了，但信息新鲜度、开放网络与模型能力之间的取舍也会更明显。",
       "meta": "AI · 10月23日",
       "facts": [
         [
           "决定",
-          "OpenAI称不再以实时互联网直接训练模型"
+          "OpenAI称不再用实时互联网直接训练模型"
         ],
         [
           "理由",
-          "公司指向实时网页带来的“显著风险”"
+          "公司提到“显著风险”"
         ],
         [
-          "变化点",
-          "最新信息将更依赖检索与受控数据渠道"
+          "取舍",
+          "安全控制可能优先于即时吸收网络内容"
         ]
       ],
       "visual": null,
       "impacts": [
         [
-          "日常使用",
-          "问突发新闻时，要更留意答案是否标出来源和更新时间"
+          "普通用户",
+          "突发新闻和小众新信息的回答，可能更依赖检索而非模型记忆"
         ],
         [
-          "内容与安全",
-          "网页内容被自动抓取进训练集的压力可能下降"
+          "网站与创作者",
+          "网页内容被抓取和用于训练的方式，可能出现新的规则"
         ],
         [
-          "产品竞争",
-          "谁能提供可信、及时且获授权的数据，会更重要"
+          "安全",
+          "降低恶意页面借训练环节污染模型的机会"
         ]
       ],
       "next": [
-        "OpenAI会否说明哪些数据仍可用于训练",
-        "新规则会怎样影响带联网搜索的ChatGPT功能"
+        "OpenAI会如何定义“实时互联网”与可用数据来源",
+        "这一做法会不会扩展到其他主流模型公司"
       ],
       "source": "TechCrunch AI",
       "updated": "2026-10-23",
       "en": {
         "cat": "AI",
-        "title": "OpenAI steps back from training on the live web: AI may become more cautious, and less instantly current",
-        "brief": "OpenAI says the live web is too risky to use directly for training, which could change how chatbots handle breaking information.",
-        "take": "OpenAI says it will no longer train its AI models directly on the live internet because of “significant risks.” The problem is not only misinformation: open webpages can contain malicious instructions, private material, copyrighted work, and text designed to make models behave badly. Users may not see a suddenly less capable model, but answers about what just happened will depend more on search, licensed sources, and checks built into the product—not on feeding the whole web into training.",
+        "title": "OpenAI steps back from training on the live web: freshness gives way to safety",
+        "brief": "AI may no longer absorb new web content immediately, in exchange for less risk of malicious pages steering it off course.",
+        "take": "OpenAI says it will no longer train its models directly on live internet content, citing significant risks. The issue is not just misinformation: public webpages can be manipulated, and hostile content could influence model behavior through training. For users, answers about what just happened may rely more on search, licensed data, and later updates rather than a model simply ingesting the newest pages online. The safety boundary is clearer, but the trade-off between freshness, an open web, and model capability is now harder to ignore.",
         "meta": "AI · Oct 23",
         "facts": [
           [
             "Decision",
-            "OpenAI says it will not directly train models on the live internet"
+            "OpenAI says it will stop directly training on the live internet"
           ],
           [
             "Reason",
-            "The company cites significant risks in live web content"
+            "The company cited “significant risks”"
           ],
           [
-            "What changes",
-            "Fresh information will rely more on retrieval and controlled sources"
+            "Trade-off",
+            "Safety controls may take priority over instant web ingestion"
           ]
         ],
         "visual": null,
         "impacts": [
           [
-            "Everyday use",
-            "For breaking news, it matters more whether an answer shows its source and timestamp"
+            "For users",
+            "Answers on breaking or niche topics may depend more on retrieval than model memory"
           ],
           [
-            "Content and safety",
-            "There may be less pressure to automatically pull webpage content into training"
+            "For publishers",
+            "Rules around how web content is collected and used for training could change"
           ],
           [
-            "Product race",
-            "Trusted, current, licensed data becomes a more valuable advantage"
+            "For safety",
+            "It reduces the chance that malicious pages poison a model through training"
           ]
         ],
         "next": [
-          "Whether OpenAI specifies what data can still be used for training",
-          "How the rule changes ChatGPT features that search the web"
+          "How OpenAI defines the “live internet” and acceptable data sources",
+          "Whether other leading model makers follow the same approach"
         ],
         "source": "TechCrunch AI",
         "updated": "2026-10-23"
@@ -104,12 +104,12 @@
         "credit": "TechCrunch AI",
         "link": "https://techcrunch.com/2026/10/23/openai-says-it-will-no-longer-train-its-ai-models-on-the-live-internet-citing-significant-risks/",
         "zh": {
-          "alt": "OpenAI不再直接拿“实时互联网”训练：聊天机器人会更谨慎，也可能没那么新鲜",
-          "caption": "OpenAI不再直接拿“实时互联网”训练：聊天机器人会更谨慎，也可能没那么新鲜"
+          "alt": "OpenAI 不再直接用“活着的互联网”训练：及时性要让位给安全",
+          "caption": "OpenAI 不再直接用“活着的互联网”训练：及时性要让位给安全"
         },
         "en": {
-          "alt": "OpenAI steps back from training on the live web: AI may become more cautious, and less instantly current",
-          "caption": "OpenAI steps back from training on the live web: AI may become more cautious, and less instantly current"
+          "alt": "OpenAI steps back from training on the live web: freshness gives way to safety",
+          "caption": "OpenAI steps back from training on the live web: freshness gives way to safety"
         }
       },
       "termGuides": [
@@ -120,143 +120,706 @@
           ],
           "zh": {
             "label": "OpenAI",
-            "meaning": "开发ChatGPT等产品的美国AI公司。",
-            "relation": "这次是它主动调整模型训练时使用互联网内容的规则。"
+            "meaning": "开发 ChatGPT 等产品的美国人工智能公司。",
+            "relation": "这次是它宣布调整模型训练的数据来源。"
           },
           "en": {
             "label": "OpenAI",
-            "meaning": "The US AI company behind ChatGPT and related products.",
-            "relation": "It is changing the rules for using internet content in model training."
+            "meaning": "The US AI company behind ChatGPT and other products.",
+            "relation": "It is changing where its models can get training data."
           }
         },
         {
           "key": "live internet",
           "aliases": [
             "实时互联网",
-            "live internet",
-            "实时网页"
+            "活着的互联网",
+            "live internet"
           ],
           "zh": {
             "label": "实时互联网",
-            "meaning": "不断新增和变化的公开网页内容。",
-            "relation": "OpenAI称不再把这类未经过滤的内容直接用于训练。"
+            "meaning": "持续更新、任何人都能发布内容的公开网页环境。",
+            "relation": "OpenAI说不再把这类新出现的内容直接送入训练。"
           },
           "en": {
             "label": "Live internet",
-            "meaning": "Public web content that is continuously changing and expanding.",
-            "relation": "OpenAI says it will no longer use this unfiltered stream directly for training."
+            "meaning": "The constantly changing public web where anyone can publish.",
+            "relation": "OpenAI says it will no longer feed this stream directly into training."
           }
         }
       ]
     },
     {
-      "id": "serbia-election-vucic-concedes",
-      "cat": "国际局势",
-      "icon": "alert",
-      "title": "塞尔维亚执政多年的武契奇认输：学生抗议走进了投票箱",
-      "brief": "武契奇承认议会选举失利，长期街头抗议第一次真正撬动了这个巴尔干国家的权力结构。",
-      "take": "塞尔维亚总统亚历山大·武契奇承认，在竞争激烈的议会选举中输给由学生抗议力量带动的阵营。两家英国媒体均报道了这一结果。对塞尔维亚而言，这不只是换一届议会：多年由同一政治力量主导的局面可能松动。对欧洲来说，这个处在欧盟、俄罗斯与巴尔干地区利益交会处的国家，接下来会怎么处理法治、媒体空间和对外关系，都可能变得更难预测。",
-      "meta": "国际局势 · 10月25日",
+      "id": "openai-decision-model",
+      "cat": "AI",
+      "icon": "ai",
+      "title": "OpenAI 把“会做决定”的模型推向大众：AI 不只聊天，开始替你选下一步",
+      "brief": "更会规划的 AI 可能让复杂任务少点来回，但它做错一步，后面的连锁错误也会更贵。",
+      "take": "OpenAI 据报道已更广泛提供一款与 Jev 竞争的决策模型。与只生成一段回答的聊天模型相比，决策模型更强调在多步任务中判断先后、权衡选项和持续执行。它的吸引力很直接：写代码、整理工作流、处理客服或安排事务时，用户少盯几步。但当模型被允许替人作选择，错误也不再只是“一句答错”，而可能变成下错订单、改错设置或把任务带偏。真正的竞争将是能力、价格和权限控制谁先做稳。",
+      "meta": "AI · 10月22日",
       "facts": [
         [
-          "结果",
-          "武契奇承认议会选举失利"
+          "发布",
+          "OpenAI据报道扩大一款决策模型的可用范围"
         ],
         [
-          "对手",
-          "胜方由学生主导的抗议运动推动"
+          "能力",
+          "重点是多步判断与任务规划"
         ],
         [
-          "位置",
-          "塞尔维亚位于巴尔干地区的地缘政治交界处"
+          "竞争",
+          "报道将其置于与 Jev 的决策模型竞争中"
         ]
       ],
       "visual": null,
       "impacts": [
         [
-          "国内",
-          "抗议力量要从街头走到治理，考验才刚开始"
+          "工作工具",
+          "AI更可能从写建议走向实际编排任务"
         ],
         [
-          "欧洲",
-          "塞尔维亚的对欧盟、俄罗斯政策可能出现重新拉扯"
+          "风险",
+          "多步自动化会放大早期一个错误的后果"
         ],
         [
-          "普通人",
-          "媒体、司法与公共服务是否改变，比庆祝场面更关键"
+          "开发者",
+          "权限、审计记录和人工确认会变得更重要"
         ]
       ],
       "next": [
-        "正式组阁能否顺利完成",
-        "新多数派是否能在对外政策上维持一致"
+        "普通用户和企业账户的开放范围与定价",
+        "模型在真实任务中能否提供可复核的决策过程"
       ],
-      "source": "BBC News；The Guardian",
-      "updated": "2026-10-25",
+      "source": "TechCrunch AI",
+      "updated": "2026-10-22",
       "en": {
-        "cat": "Geopolitics",
-        "title": "Serbia’s Vučić concedes: a student protest movement has made it from the street to the ballot box",
-        "brief": "Vučić has conceded the parliamentary election, giving years of protest a real chance to alter Serbia’s power structure.",
-        "take": "Serbian President Aleksandar Vučić has conceded defeat in a closely fought parliamentary election to a camp propelled by student-led protests. Both BBC News and the Guardian reported the result. This is more than a change of seats: a political order long dominated by the same forces may be loosening. For Europe, Serbia sits where EU, Russian, and Balkan interests meet. Its choices on rule of law, media freedom, and foreign policy may now become less predictable.",
-        "meta": "Geopolitics · Oct 25",
+        "cat": "AI",
+        "title": "OpenAI broadens access to a decision model: AI is moving from chat to choosing the next step",
+        "brief": "Better-planning AI could cut the back-and-forth in complex work, but one bad move can make every later mistake costlier.",
+        "take": "OpenAI has reportedly made a decision model, positioned against Jev, more widely available. Unlike a chat model that mainly produces an answer, a decision model is meant to choose an order of actions, weigh options, and continue through a multi-step task. The appeal is obvious in coding, workflow management, customer service, and scheduling: people may need to supervise fewer steps. But once a model is allowed to make choices, failure is no longer just a wrong sentence; it can mean a wrong order, a changed setting, or an entire task sent in the wrong direction. The real contest will be over capability, price, and reliable permission controls.",
+        "meta": "AI · Oct 22",
         "facts": [
           [
-            "Result",
-            "Vučić conceded defeat in the parliamentary election"
+            "Release",
+            "OpenAI reportedly broadened availability of a decision model"
           ],
           [
-            "Challenger",
-            "The winning camp was driven by a student-led protest movement"
+            "Capability",
+            "It focuses on multi-step judgement and task planning"
           ],
           [
-            "Location",
-            "Serbia sits at a geopolitical crossroads in the Balkans"
+            "Competition",
+            "The report places it in competition with Jev-style decision models"
           ]
         ],
         "visual": null,
         "impacts": [
           [
-            "At home",
-            "Turning a protest movement into a government will be the harder test"
+            "Work tools",
+            "AI may move from drafting suggestions to actively arranging tasks"
           ],
           [
-            "For Europe",
-            "Serbia may revisit the balance in its relations with the EU and Russia"
+            "Risk",
+            "Multi-step automation magnifies the cost of an early mistake"
           ],
           [
-            "For people",
-            "Changes to media, courts, and public services matter more than election-night celebrations"
+            "Developers",
+            "Permissions, audit trails, and human approval become more important"
           ]
         ],
         "next": [
-          "Whether a new government can be formed smoothly",
-          "Whether the new majority can stay united on foreign policy"
+          "Access tiers and pricing for consumers and businesses",
+          "Whether users can review how the model reached key decisions"
         ],
-        "source": "BBC News; The Guardian",
+        "source": "TechCrunch AI",
+        "updated": "2026-10-22"
+      },
+      "sourceLinks": [
+        {
+          "title": "OpenAI makes its Jev competitor widely available as decision model competition heats up",
+          "url": "https://techcrunch.com/2026/10/22/openai-makes-its-jev-competitor-widely-available-as-decision-model-competition-heats-up/",
+          "publisher": "TechCrunch AI"
+        }
+      ],
+      "eventImage": {
+        "url": "https://techcrunch.com/wp-content/uploads/2026/10/Screenshot-2026-10-22-at-12.17.11-PM-1.png?resize=1200,988",
+        "credit": "TechCrunch AI",
+        "link": "https://techcrunch.com/2026/10/22/openai-makes-its-jev-competitor-widely-available-as-decision-model-competition-heats-up/",
+        "zh": {
+          "alt": "OpenAI 把“会做决定”的模型推向大众：AI 不只聊天，开始替你选下一步",
+          "caption": "OpenAI 把“会做决定”的模型推向大众：AI 不只聊天，开始替你选下一步"
+        },
+        "en": {
+          "alt": "OpenAI broadens access to a decision model: AI is moving from chat to choosing the next step",
+          "caption": "OpenAI broadens access to a decision model: AI is moving from chat to choosing the next step"
+        }
+      },
+      "termGuides": [
+        {
+          "key": "decision model",
+          "aliases": [
+            "决策模型",
+            "decision model"
+          ],
+          "zh": {
+            "label": "决策模型",
+            "meaning": "专门处理多步骤选择、规划和执行顺序的 AI 模型。",
+            "relation": "报道中的新产品主打让 AI 在任务途中继续判断下一步。"
+          },
+          "en": {
+            "label": "Decision model",
+            "meaning": "An AI model designed to choose actions and plan across multiple steps.",
+            "relation": "The reported product is aimed at deciding what to do next during a task."
+          }
+        },
+        {
+          "key": "Jev",
+          "aliases": [
+            "Jev"
+          ],
+          "zh": {
+            "label": "Jev",
+            "meaning": "报道中被用作比较对象的决策模型产品。",
+            "relation": "OpenAI的新模型被描述为与它争夺这一类 AI 使用场景。"
+          },
+          "en": {
+            "label": "Jev",
+            "meaning": "A decision-model product used as the comparison point in the report.",
+            "relation": "OpenAI’s model is described as competing for the same kind of AI tasks."
+          }
+        }
+      ]
+    },
+    {
+      "id": "data-centre-backlash",
+      "cat": "科技产业",
+      "icon": "code",
+      "title": "数据中心越建越大，附近居民先看到的是噪音、电网和水费压力",
+      "brief": "AI 服务看起来在云端，账单和施工却可能先落在数据中心周边社区。",
+      "take": "BBC 报道称，围绕大型数据中心的反对声音正在增长。对科技公司而言，它们是训练和运行 AI 的基础设施；对附近居民而言，感受更具体：施工、柴油备用发电机噪音、用水需求，以及电网容量是否被优先占用。数据中心不必然是坏事，也会带来投资和部分岗位，但它们常被宣传为“无形的云”，实际却是高耗电的大型工业设施。未来项目能否拿到许可，越来越取决于能否公开说明电力、水和社区补偿怎么安排。",
+      "meta": "科技产业 · 10月25日",
+      "facts": [
+        [
+          "趋势",
+          "BBC报道多地反对大型数据中心的声音上升"
+        ],
+        [
+          "资源",
+          "数据中心需要大量电力，部分项目也需要大量用水"
+        ],
+        [
+          "用途",
+          "它们支撑云服务及 AI 训练和推理"
+        ]
+      ],
+      "visual": null,
+      "impacts": [
+        [
+          "居民",
+          "噪音、施工和公共资源分配会直接影响周边生活"
+        ],
+        [
+          "电价",
+          "新增大负荷若需扩网，成本最终可能由更多用户承担"
+        ],
+        [
+          "AI服务",
+          "选址和审批受阻会影响算力扩张速度"
+        ]
+      ],
+      "next": [
+        "地方政府是否要求项目披露用电、用水和备用电源方案",
+        "运营商是否承担更多电网扩容与社区补偿成本"
+      ],
+      "source": "BBC News",
+      "updated": "2026-10-25",
+      "en": {
+        "cat": "Technology",
+        "title": "Data centers keep growing; nearby residents get the noise, grid strain, and water worries",
+        "brief": "AI may feel like it lives in the cloud, but construction and utility costs can land first in communities near data centers.",
+        "take": "The BBC reports growing pushback against large data centers. For technology companies, they are the physical base for training and running AI. For nearby residents, the effects are more tangible: construction, noise from diesel backup generators, water demand, and concern that grid capacity is being claimed first. Data centers can bring investment and some jobs, but the supposedly weightless cloud is in fact a power-hungry industrial facility. Whether new projects win approval will increasingly depend on clear answers about electricity, water, and what communities receive in return.",
+        "meta": "Technology · Oct 25",
+        "facts": [
+          [
+            "Trend",
+            "The BBC reports growing opposition to large data centers"
+          ],
+          [
+            "Resources",
+            "Data centers need major power supply, and some use substantial water"
+          ],
+          [
+            "Role",
+            "They support cloud services plus AI training and inference"
+          ]
+        ],
+        "visual": null,
+        "impacts": [
+          [
+            "Residents",
+            "Noise, construction, and shared-resource choices affect daily life nearby"
+          ],
+          [
+            "Electricity bills",
+            "If grid upgrades are needed, costs may eventually be spread more widely"
+          ],
+          [
+            "AI services",
+            "Siting and permit delays can slow the build-out of compute capacity"
+          ]
+        ],
+        "next": [
+          "Whether local authorities require disclosure of power, water, and backup plans",
+          "Whether operators pay more of the grid-upgrade and community-compensation bill"
+        ],
+        "source": "BBC News",
         "updated": "2026-10-25"
       },
       "sourceLinks": [
         {
-          "title": "Serbia's veteran ruler Vučić concedes election to student-led protest movement",
+          "title": "Big, noisy and coming to a town near you - why the data centre backlash is growing",
+          "url": "https://www.bbc.co.uk/news/articles/cq2e9we7w2ejo?at_medium=RSS&at_campaign=rss",
+          "publisher": "BBC News"
+        }
+      ],
+      "eventImage": {
+        "url": "https://ichef.bbci.co.uk/ace/branded_news/1200/cpsprodpb/68b2/live/52453c80-cc82-11f1-bc2e-018d645d8d21.png",
+        "credit": "BBC News",
+        "link": "https://www.bbc.co.uk/news/articles/cq2e9we7w2ejo?at_medium=RSS&at_campaign=rss",
+        "zh": {
+          "alt": "数据中心越建越大，附近居民先看到的是噪音、电网和水费压力",
+          "caption": "数据中心越建越大，附近居民先看到的是噪音、电网和水费压力"
+        },
+        "en": {
+          "alt": "Data centers keep growing; nearby residents get the noise, grid strain, and water worries",
+          "caption": "Data centers keep growing; nearby residents get the noise, grid strain, and water worries"
+        }
+      },
+      "termGuides": [
+        {
+          "key": "data center",
+          "aliases": [
+            "数据中心",
+            "data centre",
+            "data center"
+          ],
+          "zh": {
+            "label": "数据中心",
+            "meaning": "装满服务器、为网站、云服务和 AI 提供计算能力的设施。",
+            "relation": "报道讨论的是这类设施扩建给周边社区带来的资源压力。"
+          },
+          "en": {
+            "label": "Data center",
+            "meaning": "A facility full of servers that provides computing for websites, cloud services, and AI.",
+            "relation": "The story is about the local resource costs of expanding these facilities."
+          }
+        },
+        {
+          "key": "inference",
+          "aliases": [
+            "推理",
+            "inference"
+          ],
+          "zh": {
+            "label": "推理",
+            "meaning": "已训练好的 AI 接到提问后，实际生成答案或执行任务的计算过程。",
+            "relation": "数据中心不仅训练模型，也要持续承担用户使用时的推理负载。"
+          },
+          "en": {
+            "label": "Inference",
+            "meaning": "The computing done when a trained AI answers a prompt or performs a task.",
+            "relation": "Data centers must handle this ongoing demand as well as model training."
+          }
+        }
+      ]
+    },
+    {
+      "id": "europe-gas-price",
+      "cat": "能源",
+      "icon": "oil",
+      "title": "欧洲天然气升至四年高位：冬天还没到，取暖和工业成本已在抬头",
+      "brief": "中东供应担忧推高欧洲气价，家庭账单未必立刻上涨，但冬季缓冲变薄了。",
+      "take": "欧洲天然气价格因冬季供应忧虑升至四年高位，报道将中东局势带来的风险列为重要背景。天然气价格不是每个家庭账单的即时复制品，零售合同、政府补贴和库存都会缓冲一段时间；但如果高价持续，供暖、发电和高耗能制造业都会感到压力。欧洲这些年努力减少对单一来源的依赖，却仍会被全球液化天然气货运和地缘冲突牵动。真正要看的是冬季库存能撑多久，以及是否再出现运输中断。",
+      "meta": "能源 · 10月26日",
+      "facts": [
+        [
+          "价格",
+          "欧洲天然气价格升至四年高位"
+        ],
+        [
+          "担忧",
+          "市场聚焦冬季供应与中东风险"
+        ],
+        [
+          "传导",
+          "天然气同时影响供暖、发电和工业成本"
+        ]
+      ],
+      "visual": null,
+      "impacts": [
+        [
+          "家庭",
+          "若高价持续，下一轮供暖与电力账单的压力会增加"
+        ],
+        [
+          "企业",
+          "化工、玻璃和金属等高耗能行业更难消化成本"
+        ],
+        [
+          "全球市场",
+          "欧洲抢购液化天然气会影响其他进口国的价格"
+        ]
+      ],
+      "next": [
+        "欧洲储气水平与冬季天气",
+        "中东航运和液化天然气供应是否出现实质中断"
+      ],
+      "source": "The Guardian",
+      "updated": "2026-10-26",
+      "en": {
+        "cat": "Energy",
+        "title": "European gas hits a four-year high: winter heating and factory costs are already under pressure",
+        "brief": "Middle East supply fears have lifted European gas prices; household bills may not jump today, but the winter cushion is thinner.",
+        "take": "European gas prices have reached a four-year high amid worries about winter supply, with Middle East risk a major backdrop in the report. Wholesale gas prices do not instantly become household bills: retail contracts, subsidies, and storage can soften the first blow. But if elevated prices persist, heating, electricity generation, and energy-intensive manufacturing all face pressure. Europe has worked to reduce reliance on any one supplier, yet it remains exposed to global liquefied natural gas cargoes and geopolitical disruption. The key question is how long storage lasts through winter and whether transport is interrupted again.",
+        "meta": "Energy · Oct 26",
+        "facts": [
+          [
+            "Price",
+            "European gas prices reached a four-year high"
+          ],
+          [
+            "Concern",
+            "Markets are focused on winter supply and Middle East risk"
+          ],
+          [
+            "Pass-through",
+            "Gas affects heating, power generation, and industrial costs"
+          ]
+        ],
+        "visual": null,
+        "impacts": [
+          [
+            "Households",
+            "Sustained high prices can raise pressure on later heating and power bills"
+          ],
+          [
+            "Businesses",
+            "Chemicals, glass, and metals are among sectors that struggle to absorb the cost"
+          ],
+          [
+            "Global markets",
+            "European competition for LNG can lift prices for other importing countries"
+          ]
+        ],
+        "next": [
+          "European storage levels and winter weather",
+          "Whether Middle East shipping and LNG supply suffer real disruption"
+        ],
+        "source": "The Guardian",
+        "updated": "2026-10-26"
+      },
+      "sourceLinks": [
+        {
+          "title": "European gas prices soar to four-year high over winter supply fears",
+          "url": "https://www.theguardian.com/business/2026/oct/26/european-gas-prices-four-year-high-winter-supply-fears-middle-east",
+          "publisher": "The Guardian"
+        }
+      ],
+      "eventImage": {
+        "url": "https://i.guim.co.uk/img/media/275f98d8c2bcb343ced7e3b49bd547734a4db6f9/865_0_6406_5124/master/6406.jpg?width=1200&height=630&quality=85&auto=format&fit=crop&precrop=40:21,offset-x50,offset-y0&overlay-align=bottom%2Cleft&overlay-width=100p&overlay-base64=L2ltZy9zdGF0aWMvb3ZlcmxheXMvdGctZGVmYXVsdC5wbmc&enable=upscale&s=6b0adcf5d25c6e29635767a3f548ea0e",
+        "credit": "The Guardian",
+        "link": "https://www.theguardian.com/business/2026/oct/26/european-gas-prices-four-year-high-winter-supply-fears-middle-east",
+        "zh": {
+          "alt": "欧洲天然气升至四年高位：冬天还没到，取暖和工业成本已在抬头",
+          "caption": "欧洲天然气升至四年高位：冬天还没到，取暖和工业成本已在抬头"
+        },
+        "en": {
+          "alt": "European gas hits a four-year high: winter heating and factory costs are already under pressure",
+          "caption": "European gas hits a four-year high: winter heating and factory costs are already under pressure"
+        }
+      },
+      "termGuides": [
+        {
+          "key": "LNG",
+          "aliases": [
+            "液化天然气",
+            "LNG",
+            "liquefied natural gas"
+          ],
+          "zh": {
+            "label": "液化天然气",
+            "meaning": "把天然气冷却成液体后，用船跨国运输的燃料。",
+            "relation": "欧洲的补给很大程度依赖全球 LNG 船货，因而容易受航运风险影响。"
+          },
+          "en": {
+            "label": "LNG",
+            "meaning": "Natural gas chilled into liquid form so it can be shipped internationally.",
+            "relation": "Europe relies heavily on global LNG cargoes, making shipping disruption important."
+          }
+        }
+      ]
+    },
+    {
+      "id": "brazil-lula-fourth-term",
+      "cat": "国际局势",
+      "icon": "chart",
+      "title": "卢拉赢得巴西第四任期：拉美最大经济体没有向极右转弯",
+      "brief": "巴西选民让卢拉继续执政，接下来市场和盟友都要看他能否把胜选变成稳定治理。",
+      "take": "多家媒体报道，卢拉在巴西总统选举中击败弗拉维奥·博索纳罗，赢得历史性的第四个任期。这不仅是一场国内政党轮替：巴西是拉美最大经济体，也是农业、矿产、气候谈判和金砖合作的重要参与者。选举结果让左翼路线延续，但并不等于政策可以畅通无阻；国会力量、财政空间和社会分裂仍会限制新政府。对外界而言，接下来要看的不是庆祝场面，而是亚马孙保护、贸易立场和经济治理会怎么落地。",
+      "meta": "国际局势 · 10月26日",
+      "facts": [
+        [
+          "结果",
+          "卢拉击败弗拉维奥·博索纳罗并赢得第四任期"
+        ],
+        [
+          "地位",
+          "巴西是拉丁美洲最大经济体"
+        ],
+        [
+          "挑战",
+          "国会、财政约束和社会分裂仍会影响施政"
+        ]
+      ],
+      "visual": null,
+      "impacts": [
+        [
+          "全球市场",
+          "巴西的农业、矿产和汇率政策会影响跨国贸易与价格"
+        ],
+        [
+          "气候",
+          "亚马孙保护政策关系到全球减排谈判的可信度"
+        ],
+        [
+          "地区政治",
+          "结果会影响拉美左右翼政治力量的判断"
+        ]
+      ],
+      "next": [
+        "新政府的财政与内阁安排",
+        "亚马孙、贸易和对外关系的具体政策"
+      ],
+      "source": "BBC News / NPR / The Guardian",
+      "updated": "2026-10-26",
+      "en": {
+        "cat": "International affairs",
+        "title": "Lula wins a fourth term: Latin America’s biggest economy has not turned to the far right",
+        "brief": "Brazilian voters kept Lula in office; markets and allies now need to see whether victory becomes stable government.",
+        "take": "Multiple outlets report that Lula defeated Flávio Bolsonaro in Brazil’s presidential election, winning a historic fourth term. This is more than a domestic contest: Brazil is Latin America’s largest economy and a major player in agriculture, minerals, climate talks, and BRICS cooperation. The result keeps a left-wing course in place, but it does not guarantee easy governing. Congressional power, fiscal limits, and social division will still constrain the new administration. The next test is not the celebration but the details of Amazon protection, trade policy, and economic management.",
+        "meta": "International affairs · Oct 26",
+        "facts": [
+          [
+            "Result",
+            "Lula defeated Flávio Bolsonaro for a fourth term"
+          ],
+          [
+            "Scale",
+            "Brazil is Latin America’s largest economy"
+          ],
+          [
+            "Constraint",
+            "Congress, fiscal limits, and social division will still shape governing"
+          ]
+        ],
+        "visual": null,
+        "impacts": [
+          [
+            "Global markets",
+            "Brazil’s farm, mineral, and currency policies affect trade and prices across borders"
+          ],
+          [
+            "Climate",
+            "Amazon policy matters to the credibility of global emissions efforts"
+          ],
+          [
+            "Regional politics",
+            "The outcome will shape calculations by left- and right-wing movements across Latin America"
+          ]
+        ],
+        "next": [
+          "The new government’s fiscal plan and cabinet",
+          "Specific policy on the Amazon, trade, and foreign relations"
+        ],
+        "source": "BBC News / NPR / The Guardian",
+        "updated": "2026-10-26"
+      },
+      "sourceLinks": [
+        {
+          "title": "Brazil keeps left: what Lula’s victory means for his country and beyond",
+          "url": "https://www.theguardian.com/world/2026/oct/26/brazil-presidential-elections-luiz-inacio-lula-da-silva-flavio-bolsonaro",
+          "publisher": "The Guardian"
+        },
+        {
+          "title": "Brazil's left-wing President Lula elected for fourth term",
+          "url": "https://www.npr.org/2026/10/25/nx-s1-6016299/brazil-lula-bolsonaro-election",
+          "publisher": "NPR"
+        },
+        {
+          "title": "Watch: How President Lula turned it around to beat Flávio Bolsonaro",
+          "url": "https://www.bbc.co.uk/news/videos/cmp8g0x4l11yo?at_medium=RSS&at_campaign=rss",
+          "publisher": "BBC News"
+        }
+      ],
+      "eventImage": {
+        "url": "https://i.guim.co.uk/img/media/1106bb4a8ba03a7902cd91e87de8ac9bf5fd7fb3/540_0_4164_3333/master/4164.jpg?width=1200&height=630&quality=85&auto=format&fit=crop&precrop=40:21,offset-x50,offset-y0&overlay-align=bottom%2Cleft&overlay-width=100p&overlay-base64=L2ltZy9zdGF0aWMvb3ZlcmxheXMvdGctZGVmYXVsdC5wbmc&enable=upscale&s=e171376467444730d04b1b0ca5e86a6a",
+        "credit": "The Guardian",
+        "link": "https://www.theguardian.com/world/2026/oct/26/brazil-presidential-elections-luiz-inacio-lula-da-silva-flavio-bolsonaro",
+        "zh": {
+          "alt": "卢拉赢得巴西第四任期：拉美最大经济体没有向极右转弯",
+          "caption": "卢拉赢得巴西第四任期：拉美最大经济体没有向极右转弯"
+        },
+        "en": {
+          "alt": "Lula wins a fourth term: Latin America’s biggest economy has not turned to the far right",
+          "caption": "Lula wins a fourth term: Latin America’s biggest economy has not turned to the far right"
+        }
+      },
+      "termGuides": [
+        {
+          "key": "Lula",
+          "aliases": [
+            "卢拉",
+            "Luiz Inácio Lula da Silva",
+            "Lula"
+          ],
+          "zh": {
+            "label": "卢拉",
+            "meaning": "巴西左翼政治人物、当选连任总统。",
+            "relation": "他赢得第四个总统任期，决定巴西未来数年的政策方向。"
+          },
+          "en": {
+            "label": "Lula",
+            "meaning": "Brazil’s left-wing political leader and president-elect for another term.",
+            "relation": "His fourth presidential term will set Brazil’s policy direction for years."
+          }
+        },
+        {
+          "key": "BRICS",
+          "aliases": [
+            "金砖",
+            "BRICS"
+          ],
+          "zh": {
+            "label": "金砖",
+            "meaning": "由巴西等新兴经济体参与的国际合作机制。",
+            "relation": "巴西领导层变化会影响这一机制内部的协调与对外立场。"
+          },
+          "en": {
+            "label": "BRICS",
+            "meaning": "An international grouping that includes Brazil and other major emerging economies.",
+            "relation": "Brazil’s leadership affects its internal coordination and external stance."
+          }
+        }
+      ]
+    },
+    {
+      "id": "serbia-vucic-election",
+      "cat": "国际局势",
+      "icon": "alert",
+      "title": "塞尔维亚学生运动把武契奇拉下台：巴尔干的政治平衡要重算",
+      "brief": "长期抗议变成选票结果，新政府与欧盟、俄罗斯之间怎么站队，会影响整个巴尔干。",
+      "take": "BBC 和《卫报》报道，塞尔维亚总统武契奇在激烈的议会选举后败给由学生抗议运动带动的力量。对一个候选人或政党而言，这是一场失利；对巴尔干地区而言，它可能改变更复杂的平衡。塞尔维亚长期在寻求欧盟接近与维持同俄罗斯关系之间周旋，新政府的组成和路线将决定这种模糊空间还能否维持。学生主导的抗议能够转化为选举胜利，也说明生活成本、腐败指控和制度信任的积累，终于变成了实际政治压力。",
+      "meta": "国际局势 · 10月26日",
+      "facts": [
+        [
+          "结果",
+          "报道指武契奇在议会选举后承认落败"
+        ],
+        [
+          "推动力",
+          "学生主导的抗议运动成为关键政治力量"
+        ],
+        [
+          "位置",
+          "塞尔维亚处在欧盟与俄罗斯影响力的交叉处"
+        ]
+      ],
+      "visual": null,
+      "impacts": [
+        [
+          "地区安全",
+          "塞尔维亚的外交选择会影响巴尔干紧张关系"
+        ],
+        [
+          "欧盟",
+          "入盟谈判与法治改革可能出现新的窗口或摩擦"
+        ],
+        [
+          "民主政治",
+          "抗议能否转为有效治理，将影响类似运动的信心"
+        ]
+      ],
+      "next": [
+        "新议会能否形成稳定多数",
+        "新政府对欧盟入盟和对俄关系的具体表态"
+      ],
+      "source": "BBC News / The Guardian",
+      "updated": "2026-10-26",
+      "en": {
+        "cat": "International affairs",
+        "title": "Serbia’s student movement unseats Vučić: the Balkan balance must be recalculated",
+        "brief": "Long-running protest has become an election result; the new government’s stance between the EU and Russia matters beyond Serbia.",
+        "take": "The BBC and The Guardian report that Serbian leader Aleksandar Vučić lost a fiercely contested parliamentary election to forces energized by a student-led protest movement. It is a defeat for one leader, but it may shift a more complicated Balkan balance. Serbia has long tried to move closer to the EU while maintaining ties with Russia; the makeup and direction of the new government will show whether that room for ambiguity survives. The fact that student protests became an electoral force also shows how accumulated pressure over living costs, corruption allegations, and trust in institutions can turn into political change.",
+        "meta": "International affairs · Oct 26",
+        "facts": [
+          [
+            "Result",
+            "Reports say Vučić conceded defeat after the parliamentary election"
+          ],
+          [
+            "Driver",
+            "A student-led protest movement became a key political force"
+          ],
+          [
+            "Position",
+            "Serbia sits between EU and Russian influence"
+          ]
+        ],
+        "visual": null,
+        "impacts": [
+          [
+            "Regional security",
+            "Serbia’s foreign-policy choices affect tensions across the Balkans"
+          ],
+          [
+            "European Union",
+            "Accession talks and rule-of-law reform may see new momentum or new friction"
+          ],
+          [
+            "Democracy",
+            "Whether protests become effective government will matter to similar movements elsewhere"
+          ]
+        ],
+        "next": [
+          "Whether the new parliament can form a stable majority",
+          "The new government’s specific position on EU membership and Russia"
+        ],
+        "source": "BBC News / The Guardian",
+        "updated": "2026-10-26"
+      },
+      "sourceLinks": [
+        {
+          "title": "Celebrations in Serbia after veteran ruler Vučić loses election to student-led protest movement",
           "url": "https://www.bbc.co.uk/news/articles/cw5yn3xlprpmo?at_medium=RSS&at_campaign=rss",
           "publisher": "BBC News"
         },
         {
-          "title": "Serbian leader Aleksandar Vučić concedes defeat in fiercely contested parliamentary election",
+          "title": "Serbian leader Aleksandar Vučić ousted by student movement in seismic election",
           "url": "https://www.theguardian.com/world/2026/oct/25/serbian-leader-aleksandar-vucic-concedes-defeat-in-fiercely-contested-parliamentary-election",
           "publisher": "The Guardian"
         }
       ],
       "eventImage": {
-        "url": "https://ichef.bbci.co.uk/ace/branded_news/1200/cpsprodpb/84b8/live/fb5fd620-d0c6-11f1-a701-fddedf244c16.jpg",
+        "url": "https://ichef.bbci.co.uk/ace/branded_news/1200/cpsprodpb/f0c7/live/712973e0-d110-11f1-b441-2b33b063138f.jpg",
         "credit": "BBC News",
         "link": "https://www.bbc.co.uk/news/articles/cw5yn3xlprpmo?at_medium=RSS&at_campaign=rss",
         "zh": {
-          "alt": "塞尔维亚执政多年的武契奇认输：学生抗议走进了投票箱",
-          "caption": "塞尔维亚执政多年的武契奇认输：学生抗议走进了投票箱"
+          "alt": "塞尔维亚学生运动把武契奇拉下台：巴尔干的政治平衡要重算",
+          "caption": "塞尔维亚学生运动把武契奇拉下台：巴尔干的政治平衡要重算"
         },
         "en": {
-          "alt": "Serbia’s Vučić concedes: a student protest movement has made it from the street to the ballot box",
-          "caption": "Serbia’s Vučić concedes: a student protest movement has made it from the street to the ballot box"
+          "alt": "Serbia’s student movement unseats Vučić: the Balkan balance must be recalculated",
+          "caption": "Serbia’s student movement unseats Vučić: the Balkan balance must be recalculated"
         }
       },
       "termGuides": [
@@ -268,637 +831,301 @@
             "Vučić"
           ],
           "zh": {
-            "label": "亚历山大·武契奇",
-            "meaning": "塞尔维亚长期执政的总统。",
-            "relation": "他已承认其阵营在本次议会选举中失利。"
+            "label": "武契奇",
+            "meaning": "塞尔维亚长期执政的政治领袖。",
+            "relation": "报道称他在本次议会选举后承认失败。"
           },
           "en": {
             "label": "Aleksandar Vučić",
-            "meaning": "Serbia’s long-serving president.",
-            "relation": "He has conceded that his side lost this parliamentary election."
+            "meaning": "Serbia’s long-serving political leader.",
+            "relation": "He reportedly conceded defeat after this parliamentary election."
           }
         },
         {
-          "key": "student-led protest movement",
+          "key": "Balkans",
           "aliases": [
-            "学生抗议运动",
-            "student-led protest movement"
+            "巴尔干",
+            "Balkans"
           ],
           "zh": {
-            "label": "学生主导抗议运动",
-            "meaning": "由学生推动、吸引更广泛民众参与的政治抗议力量。",
-            "relation": "它把街头动员转成了本次选举中的关键政治力量。"
+            "label": "巴尔干",
+            "meaning": "欧洲东南部多个国家所在的地区，历史和安全关系复杂。",
+            "relation": "塞尔维亚政局变化会牵动该地区的外交与安全平衡。"
           },
           "en": {
-            "label": "Student-led protest movement",
-            "meaning": "A political protest force led by students and joined by wider parts of society.",
-            "relation": "It turned street mobilization into a decisive force in this election."
+            "label": "Balkans",
+            "meaning": "A region in southeastern Europe with complex historical and security ties.",
+            "relation": "Political change in Serbia can affect its diplomatic and security balance."
           }
         }
       ]
     },
     {
-      "id": "brazil-runoff",
+      "id": "sudan-drone-power-cuts",
       "cat": "国际局势",
-      "icon": "chart",
-      "title": "巴西总统决选开票：拉美最大经济体又站在路线选择前",
-      "brief": "卢拉与博索纳罗阵营的对决不只决定巴西政府，也会影响亚马孙保护、贸易和地区政治。",
-      "take": "巴西举行总统选举第二轮投票，左翼的卢拉与极右翼对手弗拉维奥·博索纳罗展开决战。巴西是拉丁美洲最大的经济体，也是重要粮食、矿产和能源出口国，因此选举结果不会只停留在国内。新政府对亚马孙雨林、财政支出、对华和对美关系的取向，都可能改变农产品供应、气候谈判和整个南美的政治气氛。最终结果及败选一方是否平静接受，仍是眼下的重点。",
-      "meta": "国际局势 · 10月25日",
+      "icon": "drone",
+      "title": "苏丹无人机袭击打向电力设施：战火先让普通人失去照明和供水",
+      "brief": "东部多州大范围停电，冲突的伤害正从前线延伸到医院、水泵和家庭生活。",
+      "take": "《卫报》报道，苏丹准军事组织的无人机袭击造成东部多个州大面积停电。电网成为攻击目标时，受影响的不只是工业：医院的备用电源、家庭照明、冷藏药品、通信和供水系统都可能随之承压。无人机让武装组织能以较低门槛打到远离前线的基础设施，也让修复人员面对持续风险。苏丹的人道危机本已严重，停电若拉长，会让流离失所者和依赖公共服务的人先承受代价。",
+      "meta": "国际局势 · 10月26日",
       "facts": [
         [
-          "投票",
-          "巴西举行总统选举第二轮"
-        ],
-        [
-          "对阵",
-          "卢拉对阵弗拉维奥·博索纳罗"
-        ],
-        [
-          "体量",
-          "巴西是拉丁美洲最大经济体"
-        ]
-      ],
-      "visual": null,
-      "impacts": [
-        [
-          "商品与贸易",
-          "巴西政策会影响粮食、矿产和能源出口预期"
-        ],
-        [
-          "气候",
-          "亚马孙保护力度关系到全球气候谈判信誉"
-        ],
-        [
-          "政治风险",
-          "结果能否被各方接受，决定短期社会紧张度"
-        ]
-      ],
-      "next": [
-        "最终计票结果",
-        "败选阵营对结果的回应"
-      ],
-      "source": "The Guardian",
-      "updated": "2026-10-25",
-      "en": {
-        "cat": "Geopolitics",
-        "title": "Brazil’s presidential runoff puts Latin America’s largest economy back at a crossroads",
-        "brief": "The Lula–Bolsonaro camp contest will shape more than Brazil: trade, Amazon protection, and regional politics are all in play.",
-        "take": "Brazil held the second round of its presidential election, with left-wing leader Lula facing far-right challenger Flávio Bolsonaro. Brazil is Latin America’s biggest economy and a major exporter of food, minerals, and energy, so the choice does not stop at its border. The next government’s approach to the Amazon, public spending, and ties with China and the United States could affect commodity supply, climate negotiations, and the political mood across South America. The final count—and whether the losing side accepts it calmly—are the immediate questions.",
-        "meta": "Geopolitics · Oct 25",
-        "facts": [
-          [
-            "Vote",
-            "Brazil held the second round of its presidential election"
-          ],
-          [
-            "Contest",
-            "Lula faced Flávio Bolsonaro"
-          ],
-          [
-            "Scale",
-            "Brazil is Latin America’s largest economy"
-          ]
-        ],
-        "visual": null,
-        "impacts": [
-          [
-            "Trade and commodities",
-            "Brazilian policy can shift expectations for food, mineral, and energy exports"
-          ],
-          [
-            "Climate",
-            "Amazon protection affects the credibility of global climate talks"
-          ],
-          [
-            "Political risk",
-            "Acceptance of the result will shape near-term social tension"
-          ]
-        ],
-        "next": [
-          "The final count",
-          "How the losing camp responds"
-        ],
-        "source": "The Guardian",
-        "updated": "2026-10-25"
-      },
-      "sourceLinks": [
-        {
-          "title": "Brazilians vote in presidential election runoff pitting leftist Lula against far-right Bolsonaro",
-          "url": "https://www.theguardian.com/world/2026/oct/25/lula-da-silva-flavio-bolsonaro-brazil-presidential-election",
-          "publisher": "The Guardian"
-        },
-        {
-          "title": "Brazil election 2026: Live second round results",
-          "url": "https://www.theguardian.com/world/ng-interactive/2026/oct/25/brazil-election-2026-live-second-round-results",
-          "publisher": "The Guardian"
-        }
-      ],
-      "eventImage": {
-        "url": "https://i.guim.co.uk/img/media/d1353a7e5254aa2f3a8330bdb3468e28a934e47d/391_195_3258_2605/master/3258.jpg?width=1200&height=630&quality=85&auto=format&fit=crop&precrop=40:21,offset-x50,offset-y0&overlay-align=bottom%2Cleft&overlay-width=100p&overlay-base64=L2ltZy9zdGF0aWMvb3ZlcmxheXMvdGctZGVmYXVsdC5wbmc&enable=upscale&s=f885a14feea16757d1ab8043ffe4d83a",
-        "credit": "The Guardian",
-        "link": "https://www.theguardian.com/world/2026/oct/25/lula-da-silva-flavio-bolsonaro-brazil-presidential-election",
-        "zh": {
-          "alt": "巴西总统决选开票：拉美最大经济体又站在路线选择前",
-          "caption": "巴西总统决选开票：拉美最大经济体又站在路线选择前"
-        },
-        "en": {
-          "alt": "Brazil’s presidential runoff puts Latin America’s largest economy back at a crossroads",
-          "caption": "Brazil’s presidential runoff puts Latin America’s largest economy back at a crossroads"
-        }
-      },
-      "termGuides": [
-        {
-          "key": "Lula",
-          "aliases": [
-            "卢拉",
-            "Lula",
-            "Luiz Inácio Lula da Silva"
-          ],
-          "zh": {
-            "label": "卢拉",
-            "meaning": "巴西左翼政治人物和总统候选人。",
-            "relation": "他在本轮投票中与博索纳罗阵营的候选人争夺总统职位。"
-          },
-          "en": {
-            "label": "Lula",
-            "meaning": "A Brazilian left-wing political leader and presidential candidate.",
-            "relation": "He is contesting the presidency against the Bolsonaro camp’s candidate."
-          }
-        },
-        {
-          "key": "Flávio Bolsonaro",
-          "aliases": [
-            "弗拉维奥·博索纳罗",
-            "Flávio Bolsonaro",
-            "Bolsonaro"
-          ],
-          "zh": {
-            "label": "弗拉维奥·博索纳罗",
-            "meaning": "巴西极右翼政治阵营的总统候选人。",
-            "relation": "他是本次决选中卢拉的对手。"
-          },
-          "en": {
-            "label": "Flávio Bolsonaro",
-            "meaning": "The presidential candidate from Brazil’s far-right Bolsonaro political camp.",
-            "relation": "He is Lula’s opponent in the runoff."
-          }
-        }
-      ]
-    },
-    {
-      "id": "israel-election",
-      "cat": "国际局势",
-      "icon": "alert",
-      "title": "以色列在战争阴影下投票：谁来执政，先看能不能缝合撕裂",
-      "brief": "以色列选举碰上战争、兵役和社会对立，投票之后未必立刻更稳定。",
-      "take": "以色列正迎来一场被BBC称为具有关键意义的选举。战争造成的安全焦虑、对总理内塔尼亚胡领导力的分歧，以及超正统派兵役问题，都把社会拉得更开。选举会影响政府能否形成稳定多数，也会影响加沙和约旦河西岸政策的走向。对当地家庭而言，最直接的是亲人是否服役、生活成本和安全感；对周边国家而言，任何强硬或妥协路线都可能迅速外溢。",
-      "meta": "国际局势 · 10月25日",
-      "facts": [
-        [
-          "背景",
-          "选举在战争与深刻社会分歧中进行"
-        ],
-        [
-          "争议",
-          "超正统派兵役是核心政治矛盾之一"
+          "袭击",
+          "报道指准军事组织发动无人机袭击"
         ],
         [
           "影响",
-          "结果将左右政府稳定和巴以政策"
+          "苏丹东部多个州出现大范围停电"
+        ],
+        [
+          "目标",
+          "电力基础设施成为冲突中的脆弱环节"
         ]
       ],
       "visual": null,
       "impacts": [
         [
-          "家庭",
-          "兵役安排直接影响许多家庭的工作与生活"
+          "公共服务",
+          "医院、供水和通信依赖稳定供电，停电会放大人道风险"
         ],
         [
-          "地区安全",
-          "新政府的政策可能加剧或缓和周边风险"
+          "平民",
+          "家庭照明、食品冷藏和手机通信都会受影响"
         ],
         [
-          "治理",
-          "若无稳定多数，以色列可能继续陷入政治僵局"
+          "战争形态",
+          "低成本无人机让远距离攻击关键设施更容易"
         ]
       ],
       "next": [
-        "选后能否组成稳定执政联盟",
-        "兵役争议是否会成为组阁条件"
+        "电网修复速度及医院备用电力是否足够",
+        "袭击是否继续扩展至其他基础设施"
       ],
-      "source": "BBC News；NPR",
-      "updated": "2026-10-25",
+      "source": "The Guardian",
+      "updated": "2026-10-26",
       "en": {
-        "cat": "Geopolitics",
-        "title": "Israel votes under the shadow of war: the harder task may be stitching a divided society together",
-        "brief": "Israel’s election comes amid war, a draft dispute, and deep social division; voting may not quickly bring stability.",
-        "take": "Israel is heading into an election the BBC calls pivotal. The war has sharpened security fears, arguments over Prime Minister Benjamin Netanyahu’s leadership, and a dispute over military service for ultra-Orthodox communities. The vote will shape whether a stable governing majority is possible and where policy on Gaza and the West Bank goes next. For families, the immediate stakes include military service, living costs, and a sense of safety. For the region, a harder or more conciliatory course could quickly spill across borders.",
-        "meta": "Geopolitics · Oct 25",
+        "cat": "International affairs",
+        "title": "Drone strikes hit Sudan’s power system: war first takes away light, water, and basic services",
+        "brief": "Wide outages in eastern states show how conflict is spreading from the front line into hospitals, pumps, and homes.",
+        "take": "The Guardian reports that drone strikes by a Sudanese paramilitary force caused mass power cuts across eastern states. When the grid is hit, the damage is not confined to industry: hospital backup power, household lighting, refrigerated medicines, communications, and water systems all come under strain. Drones give armed groups a relatively accessible way to strike infrastructure far from the front line, while making repairs riskier. Sudan’s humanitarian crisis was already severe; prolonged outages will hit displaced people and those reliant on public services first.",
+        "meta": "International affairs · Oct 26",
         "facts": [
           [
-            "Context",
-            "The election is taking place amid war and deep social division"
-          ],
-          [
-            "Dispute",
-            "Military service for ultra-Orthodox communities is a central fault line"
+            "Attack",
+            "The report says a paramilitary force launched drone strikes"
           ],
           [
             "Impact",
-            "The result will shape government stability and Israeli-Palestinian policy"
+            "Multiple eastern Sudanese states suffered mass power cuts"
+          ],
+          [
+            "Target",
+            "Power infrastructure has become a vulnerable part of the conflict"
           ]
         ],
         "visual": null,
         "impacts": [
           [
-            "Families",
-            "Draft arrangements directly affect work and family life"
+            "Public services",
+            "Hospitals, water systems, and communications rely on electricity, multiplying humanitarian risk"
           ],
           [
-            "Regional security",
-            "The next government’s choices could raise or lower risks beyond Israel"
+            "Civilians",
+            "Lighting, food refrigeration, and phone access are all affected"
           ],
           [
-            "Governance",
-            "Without a stable majority, political gridlock may continue"
+            "Warfare",
+            "Lower-cost drones make long-distance attacks on vital infrastructure easier"
           ]
         ],
         "next": [
-          "Whether a durable governing coalition can be formed",
-          "Whether the draft dispute becomes a condition for coalition talks"
+          "How quickly the grid can be repaired and whether hospitals have enough backup power",
+          "Whether attacks spread to other infrastructure"
         ],
-        "source": "BBC News; NPR",
-        "updated": "2026-10-25"
+        "source": "The Guardian",
+        "updated": "2026-10-26"
       },
       "sourceLinks": [
         {
-          "title": "Deeply divided Israel braces for pivotal election",
-          "url": "https://www.bbc.co.uk/news/articles/ckpdgy6pl7xlo?at_medium=RSS&at_campaign=rss",
-          "publisher": "BBC News"
-        },
-        {
-          "title": "Israelis have changed. Will they change their leadership?",
-          "url": "https://www.npr.org/2026/10/25/g-s1-149563/israel-election-war-netanyahu",
-          "publisher": "NPR"
+          "title": "Sudan paramilitary drone strikes cause mass power cuts in eastern states",
+          "url": "https://www.theguardian.com/world/2026/oct/26/sudan-paramilitary-drone-strikes-rapid-support-forces-power-cuts-eastern-states",
+          "publisher": "The Guardian"
         }
       ],
       "eventImage": {
-        "url": "https://ichef.bbci.co.uk/ace/branded_news/1200/cpsprodpb/c38d/live/19e08ff0-d0a3-11f1-adbe-cd0eaeb0fff9.jpg",
-        "credit": "BBC News",
-        "link": "https://www.bbc.co.uk/news/articles/ckpdgy6pl7xlo?at_medium=RSS&at_campaign=rss",
+        "url": "https://i.guim.co.uk/img/media/01da2c62d76761f8f011d8881a3751607009102c/216_0_2446_1957/master/2446.jpg?width=1200&height=630&quality=85&auto=format&fit=crop&precrop=40:21,offset-x50,offset-y0&overlay-align=bottom%2Cleft&overlay-width=100p&overlay-base64=L2ltZy9zdGF0aWMvb3ZlcmxheXMvdGctZGVmYXVsdC5wbmc&enable=upscale&s=c4d14d68de750a36fa187a53b87cfded",
+        "credit": "The Guardian",
+        "link": "https://www.theguardian.com/world/2026/oct/26/sudan-paramilitary-drone-strikes-rapid-support-forces-power-cuts-eastern-states",
         "zh": {
-          "alt": "以色列在战争阴影下投票：谁来执政，先看能不能缝合撕裂",
-          "caption": "以色列在战争阴影下投票：谁来执政，先看能不能缝合撕裂"
+          "alt": "苏丹无人机袭击打向电力设施：战火先让普通人失去照明和供水",
+          "caption": "苏丹无人机袭击打向电力设施：战火先让普通人失去照明和供水"
         },
         "en": {
-          "alt": "Israel votes under the shadow of war: the harder task may be stitching a divided society together",
-          "caption": "Israel votes under the shadow of war: the harder task may be stitching a divided society together"
+          "alt": "Drone strikes hit Sudan’s power system: war first takes away light, water, and basic services",
+          "caption": "Drone strikes hit Sudan’s power system: war first takes away light, water, and basic services"
         }
       },
       "termGuides": [
         {
-          "key": "ultra-Orthodox military service",
+          "key": "RSF",
           "aliases": [
-            "超正统派兵役",
-            "ultra-Orthodox military service",
-            "兵役争议"
+            "快速支援部队",
+            "RSF",
+            "Rapid Support Forces"
           ],
           "zh": {
-            "label": "超正统派兵役",
-            "meaning": "以色列国内围绕超正统犹太教群体是否应服兵役的长期争议。",
-            "relation": "它在本次选举中影响政党结盟和政府能否组建。"
+            "label": "快速支援部队",
+            "meaning": "苏丹冲突中的一支准军事武装力量。",
+            "relation": "报道将此次造成大规模停电的无人机袭击归因于该组织。"
           },
           "en": {
-            "label": "Ultra-Orthodox military service",
-            "meaning": "Israel’s long-running dispute over whether ultra-Orthodox Jewish communities should serve in the military.",
-            "relation": "It affects coalition bargaining and whether a government can be formed after the election."
-          }
-        },
-        {
-          "key": "Benjamin Netanyahu",
-          "aliases": [
-            "内塔尼亚胡",
-            "Benjamin Netanyahu",
-            "Netanyahu"
-          ],
-          "zh": {
-            "label": "内塔尼亚胡",
-            "meaning": "以色列总理和重要政治人物。",
-            "relation": "他的领导方式和战争处理是选举争论的焦点之一。"
-          },
-          "en": {
-            "label": "Benjamin Netanyahu",
-            "meaning": "Israel’s prime minister and a central political figure.",
-            "relation": "His leadership and handling of the war are among the election’s major arguments."
+            "label": "Rapid Support Forces",
+            "meaning": "A paramilitary force in Sudan’s conflict.",
+            "relation": "The report attributes the drone strikes causing the outages to this group."
           }
         }
       ]
     },
     {
-      "id": "starlink-ukraine-restriction",
-      "cat": "国际局势",
-      "icon": "ship",
-      "title": "乌克兰网络一度受限，马斯克承认Starlink设过边界：战场通信握在谁手里？",
-      "brief": "Starlink恢复服务前曾限制乌克兰连接，提醒人们关键通信能被一家私企随时改规则。",
-      "take": "马斯克表示，在服务恢复前，SpaceX曾限制乌克兰的Starlink连接。乌克兰在战场通信、无人机联络和偏远地区上网方面高度依赖这套卫星网络。风险不在于Starlink是否有价值，而在于它已像一项关键基础设施，却由一家企业决定覆盖范围和使用边界。欧洲正在讨论替代方案，但短期内要补上同等覆盖和终端规模并不容易。",
-      "meta": "国际局势 · 10月25日",
-      "facts": [
-        [
-          "确认",
-          "马斯克称SpaceX曾限制乌克兰Starlink连接"
-        ],
-        [
-          "依赖",
-          "乌克兰大量使用Starlink维持通信"
-        ],
-        [
-          "替代",
-          "欧洲正讨论补足卫星通信能力"
-        ]
-      ],
-      "visual": {
-        "type": "orbit",
-        "label": "一条连接被改规则后的连锁反应",
-        "nodes": [
-          "企业设限",
-          "通信受扰",
-          "战场受影响",
-          "欧洲找替代"
-        ]
-      },
-      "impacts": [
-        [
-          "安全",
-          "通信中断会直接影响前线协调和无人机使用"
-        ],
-        [
-          "主权",
-          "政府把关键网络交给单一企业，议价空间很小"
-        ],
-        [
-          "民用启示",
-          "灾害和偏远地区也会面对同样的基础设施依赖"
-        ]
-      ],
-      "next": [
-        "限制的具体范围和条件是否披露",
-        "欧洲替代卫星服务能否及时部署"
-      ],
-      "source": "BBC News",
-      "updated": "2026-10-25",
-      "en": {
-        "cat": "Geopolitics",
-        "title": "Ukraine’s connection was restricted before service returned: who gets to set the rules for battlefield internet?",
-        "brief": "Starlink was restricted before service resumed in Ukraine, showing how a private company can alter rules for critical communications.",
-        "take": "Elon Musk says SpaceX restricted Ukraine’s Starlink connection before service was restored. Ukraine relies heavily on the satellite network for battlefield communications, drone links, and internet access in remote areas. The issue is not whether Starlink is useful; it is that it now functions like critical infrastructure while one company decides its coverage and operating limits. Europe is discussing alternatives, but matching Starlink’s coverage and installed base will not be easy in the near term.",
-        "meta": "Geopolitics · Oct 25",
-        "facts": [
-          [
-            "Confirmation",
-            "Musk says SpaceX restricted Starlink connections in Ukraine"
-          ],
-          [
-            "Reliance",
-            "Ukraine uses Starlink extensively to maintain communications"
-          ],
-          [
-            "Alternative",
-            "Europe is discussing ways to build substitute satellite capacity"
-          ]
-        ],
-        "visual": {
-          "type": "orbit",
-          "label": "What happens when a connection’s rules change",
-          "nodes": [
-            "Company limits service",
-            "Communications disrupted",
-            "Battlefield affected",
-            "Europe seeks alternatives"
-          ]
-        },
-        "impacts": [
-          [
-            "Security",
-            "A communications break can directly affect frontline coordination and drones"
-          ],
-          [
-            "Sovereignty",
-            "Governments have little bargaining power when critical networks depend on one company"
-          ],
-          [
-            "Civilian lesson",
-            "Disasters and remote communities can face the same infrastructure dependency"
-          ]
-        ],
-        "next": [
-          "Whether the scope and terms of the restriction are disclosed",
-          "Whether European alternatives can be deployed quickly"
-        ],
-        "source": "BBC News",
-        "updated": "2026-10-25"
-      },
-      "sourceLinks": [
-        {
-          "title": "Musk says SpaceX restricted Ukraine's Starlink connection as service restored",
-          "url": "https://www.bbc.co.uk/news/articles/cvx28ljp8n4xo?at_medium=RSS&at_campaign=rss",
-          "publisher": "BBC News"
-        },
-        {
-          "title": "Why is Ukraine so reliant on Starlink and can Europe plug the gap?",
-          "url": "https://www.bbc.co.uk/news/articles/c65yn97xe7ypo?at_medium=RSS&at_campaign=rss",
-          "publisher": "BBC News"
-        }
-      ],
-      "eventImage": {
-        "url": "https://ichef.bbci.co.uk/ace/branded_news/1200/cpsprodpb/5b53/live/c94ca0d0-d041-11f1-950a-2dcbf5245e34.jpg",
-        "credit": "BBC News",
-        "link": "https://www.bbc.co.uk/news/articles/cvx28ljp8n4xo?at_medium=RSS&at_campaign=rss",
-        "zh": {
-          "alt": "乌克兰网络一度受限，马斯克承认Starlink设过边界：战场通信握在谁手里？",
-          "caption": "乌克兰网络一度受限，马斯克承认Starlink设过边界：战场通信握在谁手里？"
-        },
-        "en": {
-          "alt": "Ukraine’s connection was restricted before service returned: who gets to set the rules for battlefield internet?",
-          "caption": "Ukraine’s connection was restricted before service returned: who gets to set the rules for battlefield internet?"
-        }
-      },
-      "termGuides": [
-        {
-          "key": "Starlink",
-          "aliases": [
-            "Starlink",
-            "星链"
-          ],
-          "zh": {
-            "label": "Starlink",
-            "meaning": "SpaceX运营的低轨卫星互联网服务。",
-            "relation": "乌克兰依赖它通信，但服务范围和使用条件可由运营方限制。"
-          },
-          "en": {
-            "label": "Starlink",
-            "meaning": "SpaceX’s low-Earth-orbit satellite internet service.",
-            "relation": "Ukraine relies on it for communications, but the operator can limit its availability and use."
-          }
-        },
-        {
-          "key": "SpaceX",
-          "aliases": [
-            "SpaceX"
-          ],
-          "zh": {
-            "label": "SpaceX",
-            "meaning": "马斯克旗下的美国航天与卫星通信公司。",
-            "relation": "它运营Starlink，并掌握本次服务限制的技术和商业决定权。"
-          },
-          "en": {
-            "label": "SpaceX",
-            "meaning": "Elon Musk’s US space and satellite communications company.",
-            "relation": "It operates Starlink and controls the technical and commercial decision to restrict service."
-          }
-        }
-      ]
-    },
-    {
-      "id": "us-canada-tariffs",
-      "cat": "全球经济",
-      "icon": "chart",
-      "title": "美国给部分加拿大商品撤关税：跨境生意松一口气，但规则仍看选情",
-      "brief": "部分加拿大商品获免美国关税，价格压力会缓一点，但这更像临时改道，不是贸易争端结束。",
-      "take": "白宫宣布取消对部分加拿大商品加征的关税，时间点临近美国中期选举。关税最终常会落到进口商、零售商和消费者身上，因此这一调整有助于缓解部分跨境供应链的成本压力。可它只覆盖“部分”商品，且由选举前的政治环境推动，企业仍难据此放心签下长期采购合同。美加两国供应链高度交织，规则频繁变动时，最先增加的是库存、合规和定价成本。",
-      "meta": "全球经济 · 10月24日",
+      "id": "uganda-drc-quarantine",
+      "cat": "公共安全",
+      "icon": "alert",
+      "title": "乌干达对刚果（金）返国者隔离21天：防疫把边境流动按下暂停键",
+      "brief": "为防止风险跨境扩散，返国人员要隔离三周，家庭、工作和货运都会被拖慢。",
+      "take": "BBC 报道，乌干达要求从刚果民主共和国返回的本国公民接受21天隔离。隔离是防止潜在传染风险在早期进入社区的直接办法，但代价也很现实：跨境家庭团聚、临时工作、贸易和运输都会被打断。三周的长度通常对应对高风险传染病的观察窗口，但这项措施能否有效，不只看边境是否严格，也取决于隔离期间的生活保障、检测能力和信息透明度。对边境居民来说，公共卫生措施往往就是一笔突然增加的时间和收入成本。",
+      "meta": "公共安全 · 10月26日",
       "facts": [
         [
           "措施",
-          "白宫取消部分加拿大商品的关税"
+          "乌干达对自刚果（金）返国公民实施21天隔离"
         ],
         [
-          "时点",
-          "调整发生在美国中期选举前"
+          "目的",
+          "降低潜在传染风险跨境进入社区的机会"
         ],
         [
-          "范围",
-          "并非所有加拿大进口商品都获豁免"
+          "影响范围",
+          "人员流动、家庭安排和边境贸易都会受影响"
         ]
       ],
       "visual": null,
       "impacts": [
         [
-          "价格",
-          "相关进口商品的成本压力可能减轻"
+          "返国者",
+          "需要安排三周隔离，工作和照护计划可能被打乱"
         ],
         [
-          "企业",
-          "采购商仍要为政策反复预留库存和预算"
+          "边境经济",
+          "小额贸易和运输的时间成本会上升"
         ],
         [
-          "贸易关系",
-          "美加供应链互相嵌套，局部关税也会传导到两边"
+          "防疫",
+          "措施是否可信，取决于检测、支持和执行质量"
         ]
       ],
       "next": [
-        "哪些商品被纳入豁免清单",
-        "豁免是临时安排还是更长期的政策转向"
+        "隔离是否扩展至更多旅行者或边境口岸",
+        "当地是否公布检测结果和配套支持措施"
       ],
       "source": "BBC News",
-      "updated": "2026-10-24",
+      "updated": "2026-10-26",
       "en": {
-        "cat": "Global Economy",
-        "title": "The US removes tariffs on some Canadian goods: cross-border business gets relief, but the rules still look political",
-        "brief": "Some Canadian goods are no longer subject to US tariffs, easing cost pressure—but this looks more like a detour than the end of the dispute.",
-        "take": "The White House has lifted tariffs on some Canadian goods shortly before US midterm elections. Tariffs often end up in the costs paid by importers, retailers, and consumers, so the move can ease pressure on parts of the cross-border supply chain. But it covers only some products and arrives in an election-driven political moment. Companies still cannot safely treat it as a basis for long-term purchasing plans. Because US and Canadian supply chains are deeply intertwined, changing rules first raise inventory, compliance, and pricing costs.",
-        "meta": "Global Economy · Oct 24",
+        "cat": "Public safety",
+        "title": "Uganda imposes 21-day quarantine for returnees from DR Congo: public health puts border travel on pause",
+        "brief": "To curb cross-border risk, returnees face three weeks in quarantine, slowing family life, work, and freight.",
+        "take": "The BBC reports that Uganda has ordered a 21-day quarantine for its citizens returning from the Democratic Republic of Congo. Quarantine is a direct way to stop a potential infectious threat reaching communities early, but the costs are concrete: family reunions, temporary work, trade, and transport can all be interrupted. Three weeks commonly reflects an observation window for high-risk infectious disease, yet success depends not only on border enforcement but also on living support during isolation, testing capacity, and transparent information. For border communities, a public-health rule can quickly become a sharp cost in time and income.",
+        "meta": "Public safety · Oct 26",
         "facts": [
           [
             "Measure",
-            "The White House lifted tariffs on some Canadian goods"
+            "Uganda requires 21 days of quarantine for citizens returning from DR Congo"
           ],
           [
-            "Timing",
-            "The change came before US midterm elections"
+            "Purpose",
+            "To reduce the chance of a potential infectious threat entering communities"
           ],
           [
             "Scope",
-            "Not all Canadian imports received an exemption"
+            "Travel, family arrangements, and border trade are affected"
           ]
         ],
         "visual": null,
         "impacts": [
           [
-            "Prices",
-            "Cost pressure may ease for affected imported products"
+            "Returnees",
+            "Three weeks of isolation can disrupt work and care arrangements"
           ],
           [
-            "Business",
-            "Buyers still need budget and inventory room for policy reversals"
+            "Border economy",
+            "Small-scale trade and transport face higher time costs"
           ],
           [
-            "Trade ties",
-            "Even narrow tariffs spread across tightly linked US-Canada supply chains"
+            "Health response",
+            "Trust depends on testing, support, and quality of enforcement"
           ]
         ],
         "next": [
-          "Which products are included in the exemption list",
-          "Whether the exemption is temporary or a longer policy shift"
+          "Whether quarantine expands to more travelers or crossings",
+          "Whether authorities publish test results and support measures"
         ],
         "source": "BBC News",
-        "updated": "2026-10-24"
+        "updated": "2026-10-26"
       },
       "sourceLinks": [
         {
-          "title": "White House lifts tariffs on some Canadian goods as midterm elections loom",
-          "url": "https://www.bbc.co.uk/news/articles/c60qk573yzz8o?at_medium=RSS&at_campaign=rss",
+          "title": "Uganda imposes 21-day quarantine on citizens returning from DR Congo",
+          "url": "https://www.bbc.co.uk/news/articles/crx2dyd24188o?at_medium=RSS&at_campaign=rss",
           "publisher": "BBC News"
         }
       ],
       "eventImage": {
-        "url": "https://ichef.bbci.co.uk/ace/branded_news/1200/cpsprodpb/1860/live/f6b62750-cf1d-11f1-9796-954775b3a434.jpg",
+        "url": "https://ichef.bbci.co.uk/ace/branded_news/1200/cpsprodpb/1265/live/b5d85d90-d10a-11f1-ac54-9f7716f7b702.jpg",
         "credit": "BBC News",
-        "link": "https://www.bbc.co.uk/news/articles/c60qk573yzz8o?at_medium=RSS&at_campaign=rss",
+        "link": "https://www.bbc.co.uk/news/articles/crx2dyd24188o?at_medium=RSS&at_campaign=rss",
         "zh": {
-          "alt": "美国给部分加拿大商品撤关税：跨境生意松一口气，但规则仍看选情",
-          "caption": "美国给部分加拿大商品撤关税：跨境生意松一口气，但规则仍看选情"
+          "alt": "乌干达对刚果（金）返国者隔离21天：防疫把边境流动按下暂停键",
+          "caption": "乌干达对刚果（金）返国者隔离21天：防疫把边境流动按下暂停键"
         },
         "en": {
-          "alt": "The US removes tariffs on some Canadian goods: cross-border business gets relief, but the rules still look political",
-          "caption": "The US removes tariffs on some Canadian goods: cross-border business gets relief, but the rules still look political"
+          "alt": "Uganda imposes 21-day quarantine for returnees from DR Congo: public health puts border travel on pause",
+          "caption": "Uganda imposes 21-day quarantine for returnees from DR Congo: public health puts border travel on pause"
         }
       },
       "termGuides": [
         {
-          "key": "tariff",
+          "key": "DR Congo",
           "aliases": [
-            "关税",
-            "tariff",
-            "tariffs"
+            "刚果（金）",
+            "刚果民主共和国",
+            "DR Congo",
+            "Democratic Republic of Congo"
           ],
           "zh": {
-            "label": "关税",
-            "meaning": "进口商品过关时征收的税。",
-            "relation": "美国取消了对部分加拿大商品征收的这项成本。"
+            "label": "刚果（金）",
+            "meaning": "位于中非的大国，与乌干达接壤。",
+            "relation": "乌干达此次隔离要求针对从该国返回的本国公民。"
           },
           "en": {
-            "label": "Tariff",
-            "meaning": "A tax charged on imported goods at the border.",
-            "relation": "The US has removed this cost for some goods from Canada."
+            "label": "DR Congo",
+            "meaning": "The Democratic Republic of Congo, a large Central African country bordering Uganda.",
+            "relation": "Uganda’s quarantine rule applies to citizens returning from there."
           }
         },
         {
-          "key": "US midterm elections",
+          "key": "quarantine",
           "aliases": [
-            "美国中期选举",
-            "US midterm elections",
-            "midterm elections"
+            "隔离",
+            "quarantine"
           ],
           "zh": {
-            "label": "美国中期选举",
-            "meaning": "美国总统任期中段举行的国会等选举。",
-            "relation": "关税调整发生在选举临近之时，增加了政策考量的意味。"
+            "label": "隔离",
+            "meaning": "在可能暴露于传染风险后，暂时减少与他人接触的防疫措施。",
+            "relation": "这次规定的隔离期为21天。"
           },
           "en": {
-            "label": "US midterm elections",
-            "meaning": "US congressional and other elections held midway through a president’s term.",
-            "relation": "The tariff change came as the elections approached, giving it a political dimension."
+            "label": "Quarantine",
+            "meaning": "A public-health measure that limits contact after possible exposure to infection.",
+            "relation": "The required isolation period in this case is 21 days."
           }
         }
       ]
@@ -907,83 +1134,83 @@
       "id": "us-measles-cases",
       "cat": "公共安全",
       "icon": "alert",
-      "title": "美国麻疹病例同比翻倍：这种本该能挡住的病又沿着免疫缺口扩散",
-      "brief": "美国麻疹病例已超过去年两倍，问题不只是医院忙起来，而是局部接种缺口正在变成传播通道。",
-      "take": "NPR报道，美国麻疹病例数已超过去年的两倍，疫情仍在扩散。麻疹传染性极强，但疫苗本可以有效阻断大多数传播链；病例反弹往往说明部分社区接种覆盖不足，或旅行和聚集活动让病毒找到了入口。对普通家庭，风险最高的是未完成接种的儿童、孕妇和免疫功能较弱者。真正值得盯住的不是全国总数，而是病例是否持续在学校和社区里形成连续传播。",
+      "title": "美国麻疹病例超过去年两倍：本可预防的病又在靠漏洞扩散",
+      "brief": "病例翻倍不是普通的季节波动，疫苗覆盖不够的社区最容易先出现连锁感染。",
+      "take": "NPR 报道，美国麻疹病例已超过去年同期的两倍，疫情仍在扩散。麻疹传染性极强，麻烦在于它并不是“只影响不打疫苗的人”：婴儿、因疾病无法接种者和免疫力较弱的人，都依赖社区整体的高接种率获得保护。病例上升会带来学校通知、接触者追踪和医疗资源压力，也可能打乱旅行及育儿安排。控制它的办法其实很老派——及时接种和快速追踪——但一旦出现免疫缺口，补起来往往比守住更难。",
       "meta": "公共安全 · 10月25日",
       "facts": [
         [
-          "规模",
-          "美国麻疹病例已超过去年同期两倍"
+          "病例",
+          "NPR报道美国麻疹病例已超过去年两倍"
         ],
         [
-          "趋势",
-          "疫情仍在扩散"
+          "特性",
+          "麻疹具有很强传染性"
         ],
         [
           "防护",
-          "疫苗接种可有效降低麻疹传播风险"
+          "高疫苗接种率能保护不能接种的人群"
         ]
       ],
       "visual": null,
       "impacts": [
         [
           "家庭",
-          "未完成接种的儿童和免疫力较弱者风险更高"
+          "学校暴露通知和隔离安排可能影响上学与照护"
         ],
         [
-          "学校",
-          "出现病例后可能需要追踪密接者并调整上课安排"
+          "脆弱人群",
+          "婴儿和免疫功能较弱者更依赖周围人的接种保护"
         ],
         [
-          "医疗",
-          "局部暴发会挤占门诊、检验和公共卫生资源"
+          "医疗系统",
+          "追踪接触者和处置暴发会占用公共卫生资源"
         ]
       ],
       "next": [
-        "新增病例是否出现持续社区传播",
-        "高风险地区的接种覆盖率是否回升"
+        "病例是否继续向更多州和学校传播",
+        "受影响社区的疫苗接种和补种安排"
       ],
       "source": "NPR",
       "updated": "2026-10-25",
       "en": {
-        "cat": "Public Safety",
-        "title": "US measles cases have more than doubled: a preventable disease is finding gaps in immunity again",
-        "brief": "US measles cases are now more than double last year’s level, turning local vaccination gaps into routes for spread.",
-        "take": "NPR reports that US measles cases have more than doubled from last year and the outbreak is still spreading. Measles is extremely contagious, yet vaccines can block most transmission chains; a rebound often means that some communities have insufficient coverage, or that travel and gatherings have given the virus an opening. The highest risks are for children who have not completed vaccination, pregnant people, and those with weakened immune systems. The key question is not only the national total, but whether cases keep spreading through schools and communities.",
-        "meta": "Public Safety · Oct 25",
+        "cat": "Public safety",
+        "title": "US measles cases are more than double last year’s: a preventable disease is spreading through gaps",
+        "brief": "This is not ordinary seasonal movement; communities with weak vaccination coverage are most exposed to chains of infection.",
+        "take": "NPR reports that US measles cases are more than double last year’s level and the outbreak is spreading. Measles is highly infectious, and it does not affect only people who skip vaccination: babies, people unable to be vaccinated for medical reasons, and those with weakened immune systems depend on high community coverage too. Rising cases bring school notices, contact tracing, and pressure on health services, and can disrupt travel and childcare plans. The solution is old-fashioned—timely vaccination and rapid tracing—but once immunity gaps open, closing them is much harder than maintaining them.",
+        "meta": "Public safety · Oct 25",
         "facts": [
           [
-            "Scale",
-            "US measles cases are more than double last year’s level"
+            "Cases",
+            "NPR reports US measles cases are more than double last year’s level"
           ],
           [
-            "Trend",
-            "The outbreak is still spreading"
+            "Property",
+            "Measles is highly contagious"
           ],
           [
             "Protection",
-            "Vaccination can sharply reduce measles transmission"
+            "High vaccination coverage protects people who cannot be vaccinated"
           ]
         ],
         "visual": null,
         "impacts": [
           [
             "Families",
-            "Children without full vaccination and immunocompromised people face higher risk"
+            "School exposure notices and isolation can disrupt classes and care"
           ],
           [
-            "Schools",
-            "Cases can trigger contact tracing and disrupt normal school arrangements"
+            "Vulnerable people",
+            "Babies and immunocompromised people rely heavily on others being vaccinated"
           ],
           [
-            "Healthcare",
-            "Local outbreaks strain clinics, labs, and public-health teams"
+            "Health system",
+            "Tracing contacts and managing outbreaks consume public-health capacity"
           ]
         ],
         "next": [
-          "Whether new cases show sustained community transmission",
-          "Whether vaccination coverage rises in high-risk areas"
+          "Whether cases spread into more states and schools",
+          "Vaccination and catch-up plans in affected communities"
         ],
         "source": "NPR",
         "updated": "2026-10-25"
@@ -1000,12 +1227,12 @@
         "credit": "NPR",
         "link": "https://www.npr.org/2026/10/25/nx-s1-6016205/measles-outbreak-pennsylvania",
         "zh": {
-          "alt": "美国麻疹病例同比翻倍：这种本该能挡住的病又沿着免疫缺口扩散",
-          "caption": "美国麻疹病例同比翻倍：这种本该能挡住的病又沿着免疫缺口扩散"
+          "alt": "美国麻疹病例超过去年两倍：本可预防的病又在靠漏洞扩散",
+          "caption": "美国麻疹病例超过去年两倍：本可预防的病又在靠漏洞扩散"
         },
         "en": {
-          "alt": "US measles cases have more than doubled: a preventable disease is finding gaps in immunity again",
-          "caption": "US measles cases have more than doubled: a preventable disease is finding gaps in immunity again"
+          "alt": "US measles cases are more than double last year’s: a preventable disease is spreading through gaps",
+          "caption": "US measles cases are more than double last year’s: a preventable disease is spreading through gaps"
         }
       },
       "termGuides": [
@@ -1017,430 +1244,116 @@
           ],
           "zh": {
             "label": "麻疹",
-            "meaning": "一种传染性很强的病毒性疾病。",
-            "relation": "美国病例数同比已超过两倍，且仍在扩散。"
+            "meaning": "一种传染性很强的病毒性疾病，可通过疫苗有效预防。",
+            "relation": "美国病例增加，说明部分社区的免疫保护出现了缺口。"
           },
           "en": {
             "label": "Measles",
-            "meaning": "A highly contagious viral disease.",
-            "relation": "US cases are more than double last year’s level and are still spreading."
+            "meaning": "A highly contagious viral disease that vaccines can effectively prevent.",
+            "relation": "Rising US cases point to gaps in protection in some communities."
           }
         },
         {
-          "key": "vaccination coverage",
+          "key": "community immunity",
           "aliases": [
-            "接种覆盖率",
-            "vaccination coverage"
+            "社区免疫",
+            "群体免疫",
+            "community immunity"
           ],
           "zh": {
-            "label": "接种覆盖率",
-            "meaning": "一个社区中完成疫苗接种的人所占比例。",
-            "relation": "覆盖率不足会让麻疹更容易在学校和社区传播。"
+            "label": "社区免疫",
+            "meaning": "足够多人有免疫力后，病毒较难持续传播的保护效果。",
+            "relation": "它尤其保护因年龄或疾病无法接种的人。"
           },
           "en": {
-            "label": "Vaccination coverage",
-            "meaning": "The share of people in a community who have been vaccinated.",
-            "relation": "Low coverage makes it easier for measles to spread through schools and communities."
+            "label": "Community immunity",
+            "meaning": "Protection created when enough people are immune that a virus struggles to keep spreading.",
+            "relation": "It is especially important for people unable to receive vaccination."
           }
         }
       ]
     },
     {
-      "id": "ebola-nigeria-kenya",
+      "id": "taiwan-typhoon-champi",
       "cat": "公共安全",
       "icon": "alert",
-      "title": "西非再现埃博拉，肯尼亚已有第二名死者：先要查清病毒从哪里来",
-      "brief": "尼日利亚确认病例、肯尼亚出现第二名死亡者，卫生部门最急的是追踪传播链而不是等病例自己消失。",
-      "take": "尼日利亚已确认埃博拉病例，报道同时显示肯尼亚出现第二名死亡患者；关于感染源和是否存在更广泛传播，仍有未解问题。埃博拉不容易像呼吸道病毒那样随空气大规模扩散，但一旦在医疗机构、家庭照护或跨境流动中漏掉接触者追踪，代价很高。眼下最关键的是快速检测、隔离、追踪密切接触者，并向公众清楚说明风险，避免恐慌和隐瞒同时发生。",
-      "meta": "公共安全 · 10月24日",
-      "facts": [
-        [
-          "病例",
-          "尼日利亚确认埃博拉病例"
-        ],
-        [
-          "死亡",
-          "肯尼亚报告第二名埃博拉死亡患者"
-        ],
-        [
-          "不确定性",
-          "感染源和传播范围仍待厘清"
-        ]
-      ],
-      "visual": {
-        "type": "orbit",
-        "label": "控制暴发靠抢时间",
-        "nodes": [
-          "尽早检测",
-          "隔离病例",
-          "追踪接触者",
-          "切断传播"
-        ]
-      },
-      "impacts": [
-        [
-          "公共卫生",
-          "越早找到接触者，越可能把暴发锁在较小范围"
-        ],
-        [
-          "出行",
-          "跨境流动地区可能加强健康筛查和通报"
-        ],
-        [
-          "信任",
-          "公开透明比含糊消息更能减少恐慌和延误就医"
-        ]
-      ],
-      "next": [
-        "感染源能否被确认",
-        "是否发现更多关联病例或跨境传播"
-      ],
-      "source": "BBC News；The Guardian",
-      "updated": "2026-10-24",
-      "en": {
-        "cat": "Public Safety",
-        "title": "Ebola returns to West Africa while Kenya records a second death: finding the source is now urgent",
-        "brief": "Nigeria has confirmed an Ebola case and Kenya reports a second death; health teams need to trace the chain, not wait for it to fade.",
-        "take": "Nigeria has confirmed an Ebola case, while reporting also points to a second Ebola death in Kenya. The source of infection and the extent of wider spread remain unclear. Ebola does not spread through the air at scale like a respiratory virus, but missed contact tracing in clinics, family care, or cross-border travel can be costly. The immediate job is rapid testing, isolation, contact tracing, and clear public communication—so that panic and delayed care do not reinforce each other.",
-        "meta": "Public Safety · Oct 24",
-        "facts": [
-          [
-            "Cases",
-            "Nigeria has confirmed an Ebola case"
-          ],
-          [
-            "Deaths",
-            "Kenya has reported a second Ebola death"
-          ],
-          [
-            "Unknowns",
-            "The infection source and extent of spread are still unclear"
-          ]
-        ],
-        "visual": {
-          "type": "orbit",
-          "label": "Containing an outbreak is a race against time",
-          "nodes": [
-            "Test early",
-            "Isolate cases",
-            "Trace contacts",
-            "Break transmission"
-          ]
-        },
-        "impacts": [
-          [
-            "Public health",
-            "Finding contacts early gives the best chance of keeping an outbreak small"
-          ],
-          [
-            "Travel",
-            "Cross-border areas may tighten health screening and reporting"
-          ],
-          [
-            "Trust",
-            "Clear information reduces panic and delays in seeking care"
-          ]
-        ],
-        "next": [
-          "Whether the infection source is identified",
-          "Whether more linked or cross-border cases are found"
-        ],
-        "source": "BBC News; The Guardian",
-        "updated": "2026-10-24"
-      },
-      "sourceLinks": [
-        {
-          "title": "Woman, 65, becomes second patient to die of Ebola in Kenya",
-          "url": "https://www.bbc.co.uk/news/articles/c6x2355448eyo?at_medium=RSS&at_campaign=rss",
-          "publisher": "BBC News"
-        },
-        {
-          "title": "Nigeria confirms Ebola case as outbreak spreads into western Africa",
-          "url": "https://www.theguardian.com/world/2026/oct/21/nigeria-first-ebola-case-africa-outbreak-latest",
-          "publisher": "The Guardian"
-        },
-        {
-          "title": "Mystery over source of Ebola infection in Nigeria fuels concern about spread of virus",
-          "url": "https://www.theguardian.com/world/2026/oct/23/ebola-swiss-patient-nigeria-dr-congo-concerns-virus-spread",
-          "publisher": "The Guardian"
-        }
-      ],
-      "eventImage": {
-        "url": "https://ichef.bbci.co.uk/ace/branded_news/1200/cpsprodpb/8d0b/live/15946bd0-cf39-11f1-a003-d5e5a8cb108b.jpg",
-        "credit": "BBC News",
-        "link": "https://www.bbc.co.uk/news/articles/c6x2355448eyo?at_medium=RSS&at_campaign=rss",
-        "zh": {
-          "alt": "西非再现埃博拉，肯尼亚已有第二名死者：先要查清病毒从哪里来",
-          "caption": "西非再现埃博拉，肯尼亚已有第二名死者：先要查清病毒从哪里来"
-        },
-        "en": {
-          "alt": "Ebola returns to West Africa while Kenya records a second death: finding the source is now urgent",
-          "caption": "Ebola returns to West Africa while Kenya records a second death: finding the source is now urgent"
-        }
-      },
-      "termGuides": [
-        {
-          "key": "Ebola",
-          "aliases": [
-            "埃博拉",
-            "Ebola"
-          ],
-          "zh": {
-            "label": "埃博拉",
-            "meaning": "可导致严重出血热的病毒性疾病。",
-            "relation": "尼日利亚确认病例，肯尼亚报告第二名死亡患者。"
-          },
-          "en": {
-            "label": "Ebola",
-            "meaning": "A viral disease that can cause severe hemorrhagic fever.",
-            "relation": "Nigeria has confirmed a case and Kenya has reported a second death."
-          }
-        },
-        {
-          "key": "contact tracing",
-          "aliases": [
-            "接触者追踪",
-            "contact tracing",
-            "追踪密切接触者"
-          ],
-          "zh": {
-            "label": "接触者追踪",
-            "meaning": "找出并监测曾与患者接触的人。",
-            "relation": "它是当前防止病例继续外溢的关键手段。"
-          },
-          "en": {
-            "label": "Contact tracing",
-            "meaning": "Finding and monitoring people who may have been exposed to a patient.",
-            "relation": "It is central to preventing further spread in this outbreak."
-          }
-        }
-      ]
-    },
-    {
-      "id": "tibet-earthquake",
-      "cat": "公共安全",
-      "icon": "quake",
-      "title": "西藏7级地震致至少16人遇难：救援之后，安置和余震才是硬仗",
-      "brief": "地震毁坏数百所房屋，受灾家庭眼下最需要的是保暖住处、医疗和稳定的通信。",
-      "take": "西藏发生7级地震，已造成至少16人死亡，并毁坏数百所房屋。地震新闻最容易被最初的伤亡数字占满，但高海拔和偏远地区的难点往往在后面：道路是否通畅、通信能否维持、伤者能否及时转运，以及失去住所的人如何熬过低温。救援阶段之外，还需警惕余震和受损建筑带来的二次风险。",
-      "meta": "公共安全 · 10月23日",
-      "facts": [
-        [
-          "震级",
-          "西藏发生7级地震"
-        ],
-        [
-          "伤亡",
-          "至少16人死亡"
-        ],
-        [
-          "损失",
-          "数百所房屋被毁"
-        ]
-      ],
-      "visual": null,
-      "impacts": [
-        [
-          "安置",
-          "失去住房的人需要保暖、饮水、医疗和稳定通信"
-        ],
-        [
-          "救援",
-          "偏远高海拔地区让道路和转运成为难题"
-        ],
-        [
-          "安全",
-          "余震与受损房屋可能造成二次伤害"
-        ]
-      ],
-      "next": [
-        "受灾地区道路、通信和医疗转运情况",
-        "是否有余震及新增灾情报告"
-      ],
-      "source": "The Guardian",
-      "updated": "2026-10-23",
-      "en": {
-        "cat": "Public Safety",
-        "title": "A magnitude-7 quake in Tibet kills at least 16: after rescue comes the harder work of shelter and aftershocks",
-        "brief": "Hundreds of homes were destroyed; affected families now need warm shelter, medical care, and reliable communications.",
-        "take": "A magnitude-7 earthquake struck Tibet, killing at least 16 people and destroying hundreds of homes. Initial casualty figures can dominate quake coverage, but the harder problems in high-altitude, remote areas often come next: whether roads remain open, communications hold, injured people can be moved, and those without homes can cope with cold conditions. Beyond the rescue phase, aftershocks and damaged buildings remain serious secondary risks.",
-        "meta": "Public Safety · Oct 23",
-        "facts": [
-          [
-            "Magnitude",
-            "A magnitude-7 earthquake struck Tibet"
-          ],
-          [
-            "Deaths",
-            "At least 16 people were killed"
-          ],
-          [
-            "Damage",
-            "Hundreds of homes were destroyed"
-          ]
-        ],
-        "visual": null,
-        "impacts": [
-          [
-            "Shelter",
-            "People who lost homes need warmth, water, medical care, and communications"
-          ],
-          [
-            "Rescue",
-            "Remote high-altitude terrain makes roads and medical evacuation difficult"
-          ],
-          [
-            "Safety",
-            "Aftershocks and damaged buildings can cause further injuries"
-          ]
-        ],
-        "next": [
-          "Conditions on roads, communications, and medical evacuation",
-          "Whether aftershocks or additional damage are reported"
-        ],
-        "source": "The Guardian",
-        "updated": "2026-10-23"
-      },
-      "sourceLinks": [
-        {
-          "title": "Magnitude-7 earthquake hits Tibet, killing at least 16 and destroying hundreds of homes",
-          "url": "https://www.theguardian.com/world/2026/oct/23/magnitude-7-earthquake-hits-china-tibet",
-          "publisher": "The Guardian"
-        }
-      ],
-      "eventImage": {
-        "url": "https://i.guim.co.uk/img/media/2b752e0d59c4399c02caaf09d97ac8759514aa0f/147_95_1010_808/master/1010.jpg?width=1200&height=630&quality=85&auto=format&fit=crop&precrop=40:21,offset-x50,offset-y0&overlay-align=bottom%2Cleft&overlay-width=100p&overlay-base64=L2ltZy9zdGF0aWMvb3ZlcmxheXMvdGctZGVmYXVsdC5wbmc&enable=upscale&s=d355130a931b515f2a33f2dd3dbb575f",
-        "credit": "The Guardian",
-        "link": "https://www.theguardian.com/world/2026/oct/23/magnitude-7-earthquake-hits-china-tibet",
-        "zh": {
-          "alt": "西藏7级地震致至少16人遇难：救援之后，安置和余震才是硬仗",
-          "caption": "西藏7级地震致至少16人遇难：救援之后，安置和余震才是硬仗"
-        },
-        "en": {
-          "alt": "A magnitude-7 quake in Tibet kills at least 16: after rescue comes the harder work of shelter and aftershocks",
-          "caption": "A magnitude-7 quake in Tibet kills at least 16: after rescue comes the harder work of shelter and aftershocks"
-        }
-      },
-      "termGuides": [
-        {
-          "key": "magnitude 7 earthquake",
-          "aliases": [
-            "7级地震",
-            "magnitude-7 earthquake",
-            "7.0级地震"
-          ],
-          "zh": {
-            "label": "7级地震",
-            "meaning": "能造成严重破坏的强震等级。",
-            "relation": "这场地震已致至少16人死亡、数百所房屋受损。"
-          },
-          "en": {
-            "label": "Magnitude-7 earthquake",
-            "meaning": "A major earthquake capable of causing severe damage.",
-            "relation": "This quake has killed at least 16 people and destroyed hundreds of homes."
-          }
-        },
-        {
-          "key": "aftershock",
-          "aliases": [
-            "余震",
-            "aftershock",
-            "aftershocks"
-          ],
-          "zh": {
-            "label": "余震",
-            "meaning": "主震后在同一地区发生的后续地震。",
-            "relation": "它会增加救援人员和受损房屋中居民的风险。"
-          },
-          "en": {
-            "label": "Aftershock",
-            "meaning": "A later earthquake in the same area following the main quake.",
-            "relation": "It adds risk for rescuers and people near damaged buildings."
-          }
-        }
-      ]
-    },
-    {
-      "id": "typhoon-champi",
-      "cat": "公共安全",
-      "icon": "alert",
-      "title": "台风“昌皮”重创台湾后转向中国：500多人受伤，别把风停当成风险结束",
-      "brief": "“昌皮”已造成1人死亡、500多人受伤，台风转向中国后，强风暴雨和交通中断仍要防。",
-      "take": "台风“昌皮”在台湾造成1人死亡、500多人受伤，随后向中国方向移动。对沿海地区来说，危险并不只在登陆那一刻：强降雨可能造成内涝和山体滑坡，海上风浪会扰乱航运，航班、铁路和配送也可能连续几天受影响。普通人最实用的准备仍然很朴素：留意本地预警，不冒险涉水或靠近海岸，并为停电和交通延误预留余地。",
+      "title": "台风“尚帕”已致台湾逾500人受伤，正向中国沿海移动",
+      "brief": "风暴的危险不只在登陆点，停电、积水和交通中断往往在雨带经过后才集中出现。",
+      "take": "《卫报》报道，台风“尚帕”在台湾已造成1人死亡、500多人受伤，随后向中国方向移动。台风灾害最容易被低估的部分，是风雨最强时过后仍会持续的影响：山区和城市内涝、断电、道路受损，以及救援资源被分散。对准备经过区域的人来说，最实际的决定是不要只盯“是否登陆”，还要看降雨、风暴潮和地方交通管制。随着台风移动，风险并不会消失，而是转移到下一片人口与基础设施更密集的区域。",
       "meta": "公共安全 · 10月24日",
       "facts": [
         [
           "伤亡",
-          "台风已造成1人死亡、500多人受伤"
+          "报道指台湾1人死亡、逾500人受伤"
         ],
         [
           "路径",
-          "昌皮离开台湾后正向中国移动"
+          "台风尚帕正向中国方向移动"
         ],
         [
-          "风险",
-          "强风、暴雨、风浪和交通中断仍可能持续"
+          "主要风险",
+          "强风、暴雨、内涝和交通中断可持续多日"
         ]
       ],
       "visual": null,
       "impacts": [
         [
           "出行",
-          "航班、轮渡、铁路和道路安排可能反复调整"
+          "航班、铁路和道路安排可能在风暴过后仍受影响"
         ],
         [
-          "居家",
-          "低洼地区要防内涝，沿海地区要避开大浪"
+          "家庭",
+          "停电、积水和通信不稳会影响基本生活准备"
         ],
         [
-          "供应",
-          "港口和物流受阻会影响短期配送与生鲜供给"
+          "救援",
+          "伤者众多会增加医疗和地方应急系统压力"
         ]
       ],
       "next": [
-        "台风登陆或最接近中国沿海的地点与时间",
-        "各地暴雨、滑坡和停航预警"
+        "台风登陆路径及地方预警级别",
+        "降雨是否引发次生洪水和山体滑坡"
       ],
       "source": "The Guardian",
       "updated": "2026-10-24",
       "en": {
-        "cat": "Public Safety",
-        "title": "Typhoon Champi heads toward China after hitting Taiwan: 500-plus injuries show the danger does not end when winds ease",
-        "brief": "Champi has killed one person and injured more than 500; as it moves toward China, rain, waves, and travel disruption remain risks.",
-        "take": "Typhoon Champi killed one person and injured more than 500 in Taiwan before moving toward China. For coastal communities, danger does not end at landfall: heavy rain can bring flooding and landslides, rough seas can disrupt shipping, and flights, rail services, and deliveries may be affected for days. The useful basics remain simple: follow local alerts, do not drive or walk through floodwater or go near the coast, and leave room for power cuts and travel delays.",
-        "meta": "Public Safety · Oct 24",
+        "cat": "Public safety",
+        "title": "Typhoon Champi has injured more than 500 in Taiwan and is moving toward China",
+        "brief": "The danger is not limited to landfall: outages, flooding, and transport disruption often peak after the rain bands pass through.",
+        "take": "The Guardian reports that Typhoon Champi has killed one person and injured more than 500 in Taiwan before moving toward China. The most underestimated part of a typhoon is what continues after the strongest winds: urban and mountain flooding, power cuts, damaged roads, and stretched emergency services. For people in its path, the practical decision is not to watch only for landfall, but also rainfall, storm surge, and local transport restrictions. As the storm moves, the danger does not vanish; it shifts to the next area of people and infrastructure.",
+        "meta": "Public safety · Oct 24",
         "facts": [
           [
             "Casualties",
-            "The typhoon has killed one person and injured more than 500"
+            "The report says one person died and more than 500 were injured in Taiwan"
           ],
           [
             "Track",
-            "Champi is moving toward China after leaving Taiwan"
+            "Typhoon Champi is moving toward China"
           ],
           [
-            "Risks",
-            "High winds, heavy rain, rough seas, and transport disruption may continue"
+            "Main risks",
+            "High winds, heavy rain, flooding, and transport disruption can last for days"
           ]
         ],
         "visual": null,
         "impacts": [
           [
             "Travel",
-            "Flight, ferry, rail, and road plans may change repeatedly"
+            "Flights, rail, and roads may remain disrupted after the main storm passes"
           ],
           [
-            "Home safety",
-            "Low-lying areas face flooding; coastal areas should avoid large waves"
+            "Households",
+            "Outages, flooding, and patchy communications affect basic preparation"
           ],
           [
-            "Supply",
-            "Port and logistics disruption can affect short-term deliveries and fresh food supply"
+            "Emergency response",
+            "A high number of injuries adds pressure to medical and local response systems"
           ]
         ],
         "next": [
-          "Where and when the storm will make landfall or pass closest to China’s coast",
-          "Local warnings for rain, landslides, and service cancellations"
+          "Landfall track and local warning levels",
+          "Whether rainfall triggers secondary flooding and landslides"
         ],
         "source": "The Guardian",
         "updated": "2026-10-24"
@@ -1457,50 +1370,49 @@
         "credit": "The Guardian",
         "link": "https://www.theguardian.com/world/2026/oct/24/typhoon-champi-kills-one-and-injures-more-than-500-in-taiwan-as-it-heads-to-china",
         "zh": {
-          "alt": "台风“昌皮”重创台湾后转向中国：500多人受伤，别把风停当成风险结束",
-          "caption": "台风“昌皮”重创台湾后转向中国：500多人受伤，别把风停当成风险结束"
+          "alt": "台风“尚帕”已致台湾逾500人受伤，正向中国沿海移动",
+          "caption": "台风“尚帕”已致台湾逾500人受伤，正向中国沿海移动"
         },
         "en": {
-          "alt": "Typhoon Champi heads toward China after hitting Taiwan: 500-plus injuries show the danger does not end when winds ease",
-          "caption": "Typhoon Champi heads toward China after hitting Taiwan: 500-plus injuries show the danger does not end when winds ease"
+          "alt": "Typhoon Champi has injured more than 500 in Taiwan and is moving toward China",
+          "caption": "Typhoon Champi has injured more than 500 in Taiwan and is moving toward China"
         }
       },
       "termGuides": [
         {
           "key": "Typhoon Champi",
           "aliases": [
-            "昌皮",
-            "台风昌皮",
+            "台风尚帕",
+            "尚帕",
             "Typhoon Champi",
             "Champi"
           ],
           "zh": {
-            "label": "台风“昌皮”",
-            "meaning": "本轮影响台湾并继续向中国移动的热带气旋。",
-            "relation": "它已造成大量伤者，后续雨风和海况仍可能影响中国沿海。"
+            "label": "台风尚帕",
+            "meaning": "正在影响台湾并向中国方向移动的热带气旋。",
+            "relation": "报道指它已在台湾造成大量伤者，后续雨风风险仍在移动。"
           },
           "en": {
             "label": "Typhoon Champi",
-            "meaning": "The tropical cyclone that hit Taiwan and is moving toward China.",
-            "relation": "It has caused many injuries, and its rain, wind, and sea conditions may still affect China’s coast."
+            "meaning": "A tropical cyclone affecting Taiwan and moving toward China.",
+            "relation": "It has already caused many injuries in Taiwan, with wind and rain risks still moving onward."
           }
         },
         {
           "key": "storm surge",
           "aliases": [
             "风暴潮",
-            "storm surge",
-            "风暴增水"
+            "storm surge"
           ],
           "zh": {
             "label": "风暴潮",
-            "meaning": "台风风力和低气压把海水推高、推向岸边的现象。",
-            "relation": "沿海地区除强风外还要防海浪和海水倒灌。"
+            "meaning": "强风和低气压把海水推高、灌入沿海地区的现象。",
+            "relation": "它是沿海台风预警中不能只看降雨的原因之一。"
           },
           "en": {
             "label": "Storm surge",
-            "meaning": "An abnormal rise of seawater pushed toward shore by a storm’s winds and low pressure.",
-            "relation": "It is why coastal areas must watch for waves and seawater flooding as well as wind."
+            "meaning": "An abnormal rise of sea water pushed ashore by strong winds and low pressure.",
+            "relation": "It is one reason coastal typhoon risk cannot be judged by rainfall alone."
           }
         }
       ]
