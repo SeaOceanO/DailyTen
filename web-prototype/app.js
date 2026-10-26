@@ -1126,6 +1126,7 @@ function render() {
   items.forEach((item, index) => {
     elements.feed.append(createCard(item, index));
   });
+  pickHeroCard();
 
   updateProgress();
 }
@@ -1192,15 +1193,36 @@ function createCard(item, itemIndex = 0) {
   header.tabIndex = 0;
   header.setAttribute('role', 'button');
   header.setAttribute('aria-expanded', 'false');
+  const photo = cardImageUrl(displayItem);
+  const layout = photo ? 'has-thumb' : '';
+  if (layout) card.classList.add(layout);
+  const media = photo
+    ? `<span class="card-media"><img src="${escapeHtml(photo)}" alt="" loading="${itemIndex < 3 ? 'eager' : 'lazy'}" decoding="async" referrerpolicy="no-referrer" />${photo ? '<span class="hero-shade"></span>' : ''}</span>`
+    : '';
   header.innerHTML = `
-    <span class="card-top"><span class="card-chip">${escapeHtml(cardChip(displayItem))}</span><span class="card-time">${escapeHtml(formatItemDate(displayItem))}</span></span>
-    <span class="card-title">${escapeHtml(displayItem.title)}</span>
-    <span class="card-take" data-label="${escapeHtml(t('conclusion'))}">${escapeHtml(brief)}</span>
-    <span class="card-foot">
-      <span class="card-src"><i></i>${escapeHtml(sourceCountLabel(sourceCount(displayItem)))}</span>
-      <span class="card-more">${chevronControlHtml('down')}</span>
+    ${media}
+    <span class="card-body">
+      <span class="card-top"><span class="card-chip">${escapeHtml(cardChip(displayItem))}</span><span class="card-time">${escapeHtml(formatItemDate(displayItem))}</span></span>
+      <span class="card-title">${escapeHtml(displayItem.title)}</span>
+      <span class="card-take" data-label="${escapeHtml(t('conclusion'))}">${escapeHtml(brief)}</span>
+      <span class="card-foot">
+        <span class="card-src"><i></i>${escapeHtml(sourceCountLabel(sourceCount(displayItem)))}</span>
+        <span class="card-more">${chevronControlHtml('down')}</span>
+      </span>
     </span>
   `;
+  const cardImg = header.querySelector('.card-media img');
+  cardImg?.addEventListener('error', () => {
+    card.classList.remove('is-hero', 'has-thumb');
+    header.querySelector('.card-media')?.remove();
+    pickHeroCard();
+  }, { once: true });
+  const recordSize = () => {
+    card.dataset.imgw = String(cardImg.naturalWidth || 0);
+    pickHeroCard();
+  };
+  if (cardImg?.complete && cardImg.naturalWidth) recordSize();
+  else cardImg?.addEventListener('load', recordSize, { once: true });
 
   const details = document.createElement('div');
   details.className = 'details';
@@ -1312,7 +1334,7 @@ function detailsHtml(item) {
       `).join('')}
     </div>
 
-    ${eventImageHtml(item)}
+    ${cardImageUrl(item) ? '' : eventImageHtml(item)}
 
     ${item.visual ? `${sectionTitle(t('visual'))}${visualBlock(item.visual)}` : ''}
 
@@ -1346,6 +1368,25 @@ function detailsHtml(item) {
       </span>
     </div>
   `;
+}
+
+// The top story leads as the hero only when its photo is sharp; otherwise no hero at all.
+function pickHeroCard() {
+  const cards = [...elements.feed.querySelectorAll('.news-card')];
+  const first = cards[0];
+  const sharp = Boolean(first)
+    && (first.classList.contains('has-thumb') || first.classList.contains('is-hero'))
+    && Number(first.dataset.imgw || 0) >= 1000;
+  cards.forEach((el) => {
+    if (!el.classList.contains('has-thumb') && !el.classList.contains('is-hero')) return;
+    el.classList.toggle('is-hero', sharp && el === first);
+    el.classList.toggle('has-thumb', !(sharp && el === first));
+  });
+}
+
+function cardImageUrl(item) {
+  const image = localizedEventImage(item.eventImage);
+  return image && typeof image.url === 'string' && /^https?:\/\//.test(image.url) ? image.url : '';
 }
 
 function cardChip(item) {
