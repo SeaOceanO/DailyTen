@@ -1192,15 +1192,28 @@ function createCard(item, itemIndex = 0) {
   header.tabIndex = 0;
   header.setAttribute('role', 'button');
   header.setAttribute('aria-expanded', 'false');
+  const photo = cardImageUrl(displayItem);
+  const layout = photo ? (itemIndex === 0 ? 'is-hero' : 'has-thumb') : '';
+  if (layout) card.classList.add(layout);
+  const media = photo
+    ? `<span class="card-media"><img src="${escapeHtml(photo)}" alt="" loading="${itemIndex < 3 ? 'eager' : 'lazy'}" decoding="async" referrerpolicy="no-referrer" />${layout === 'is-hero' ? '<span class="hero-shade"></span>' : ''}</span>`
+    : '';
   header.innerHTML = `
-    <span class="card-top"><span class="card-chip">${escapeHtml(cardChip(displayItem))}</span><span class="card-time">${escapeHtml(formatItemDate(displayItem))}</span></span>
-    <span class="card-title">${escapeHtml(displayItem.title)}</span>
-    <span class="card-take" data-label="${escapeHtml(t('conclusion'))}">${escapeHtml(brief)}</span>
-    <span class="card-foot">
-      <span class="card-src"><i></i>${escapeHtml(sourceCountLabel(sourceCount(displayItem)))}</span>
-      <span class="card-more">${chevronControlHtml('down')}</span>
+    ${media}
+    <span class="card-body">
+      <span class="card-top"><span class="card-chip">${escapeHtml(cardChip(displayItem))}</span><span class="card-time">${escapeHtml(formatItemDate(displayItem))}</span></span>
+      <span class="card-title">${escapeHtml(displayItem.title)}</span>
+      <span class="card-take" data-label="${escapeHtml(t('conclusion'))}">${escapeHtml(brief)}</span>
+      <span class="card-foot">
+        <span class="card-src"><i></i>${escapeHtml(sourceCountLabel(sourceCount(displayItem)))}</span>
+        <span class="card-more">${chevronControlHtml('down')}</span>
+      </span>
     </span>
   `;
+  header.querySelector('.card-media img')?.addEventListener('error', () => {
+    card.classList.remove('is-hero', 'has-thumb');
+    header.querySelector('.card-media')?.remove();
+  }, { once: true });
 
   const details = document.createElement('div');
   details.className = 'details';
@@ -1312,7 +1325,7 @@ function detailsHtml(item) {
       `).join('')}
     </div>
 
-    ${eventImageHtml(item)}
+    ${cardImageUrl(item) ? '' : eventImageHtml(item)}
 
     ${item.visual ? `${sectionTitle(t('visual'))}${visualBlock(item.visual)}` : ''}
 
@@ -1346,6 +1359,11 @@ function detailsHtml(item) {
       </span>
     </div>
   `;
+}
+
+function cardImageUrl(item) {
+  const image = localizedEventImage(item.eventImage);
+  return image && typeof image.url === 'string' && /^https?:\/\//.test(image.url) ? image.url : '';
 }
 
 function cardChip(item) {

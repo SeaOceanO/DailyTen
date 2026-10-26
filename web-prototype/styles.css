@@ -2729,3 +2729,188 @@ body.has-audio-player {
     padding-bottom: calc(150px + env(safe-area-inset-bottom, 0px));
   }
 }
+
+/* ---- Photo cards: first story is a hero image, the rest get a small thumbnail ---- */
+.card-body {
+  display: block;
+}
+
+.card-media {
+  display: block;
+  overflow: hidden;
+}
+
+.card-media img {
+  display: block;
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
+}
+
+.news-card.has-thumb .card-button {
+  align-items: start;
+  display: grid;
+  gap: 0 12px;
+  grid-template-columns: 92px minmax(0, 1fr);
+  padding: 12px 14px 10px 12px;
+}
+
+.news-card.has-thumb .card-media {
+  aspect-ratio: 1;
+  border-radius: 18px;
+  margin-top: 2px;
+}
+
+.news-card.has-thumb .card-title {
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  display: -webkit-box;
+  font-size: 15.5px;
+  line-height: 1.35;
+  margin: 5px 0 3px;
+  overflow: hidden;
+}
+
+.news-card.has-thumb .card-take {
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  display: -webkit-box;
+  font-size: 13px;
+  line-height: 1.45;
+  overflow: hidden;
+}
+
+.news-card.has-thumb .card-chip {
+  font-size: 12px;
+  padding: 2px 9px;
+}
+
+.news-card.has-thumb .card-top {
+  font-size: 12px;
+}
+
+.news-card.has-thumb .card-foot {
+  margin-top: 7px;
+}
+
+.news-card.has-thumb .card-more {
+  height: 28px;
+  width: 28px;
+}
+
+/* opening a thumbnail card turns the thumbnail into a banner photo */
+.news-card.has-thumb.is-open .card-button {
+  display: block;
+  padding: 12px 14px 14px;
+}
+
+.news-card.has-thumb.is-open .card-media {
+  aspect-ratio: 16 / 9;
+  border-radius: 18px;
+  margin: 0 0 10px;
+}
+
+.news-card.has-thumb.is-open .card-title {
+  -webkit-line-clamp: unset;
+  display: block;
+  font-size: 18px;
+}
+
+.news-card.has-thumb.is-open .card-take {
+  -webkit-line-clamp: unset;
+  display: block;
+  font-size: 16px;
+}
+
+/* hero */
+.news-card.is-hero .card-button {
+  padding: 0;
+  position: relative;
+}
+
+.news-card.is-hero .card-media {
+  aspect-ratio: 16 / 10;
+  border-radius: 26px 26px 0 0;
+  position: relative;
+}
+
+.news-card.is-hero:not(.is-open) .card-media {
+  border-radius: 26px;
+}
+
+.hero-shade {
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.05) 30%, rgba(0, 0, 0, 0.78));
+  inset: 0;
+  position: absolute;
+}
+
+.news-card.is-hero:not(.is-open) .card-body {
+  bottom: 0;
+  color: #ffffff;
+  left: 0;
+  padding: 14px 16px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.news-card.is-hero:not(.is-open) .card-top {
+  color: rgba(255, 255, 255, 0.85);
+  left: 14px;
+  position: absolute;
+  right: 14px;
+  top: 14px;
+}
+
+.news-card.is-hero:not(.is-open) .card-chip {
+  background: rgba(255, 255, 255, 0.22);
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  color: #ffffff;
+}
+
+.news-card.is-hero:not(.is-open) .card-title {
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  color: #ffffff;
+  display: -webkit-box;
+  font-size: 19px;
+  margin: 0 0 4px;
+  overflow: hidden;
+}
+
+.news-card.is-hero:not(.is-open) .card-take {
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  color: rgba(255, 255, 255, 0.88);
+  display: -webkit-box;
+  font-size: 13.5px;
+  overflow: hidden;
+}
+
+.news-card.is-hero:not(.is-open) .card-src {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.news-card.is-hero:not(.is-open) .card-src i {
+  background: #ffffff;
+}
+
+.news-card.is-hero:not(.is-open) .card-more {
+  background: rgba(255, 255, 255, 0.22);
+  color: #ffffff;
+  height: 28px;
+  width: 28px;
+}
+
+.news-card.is-hero:not(.is-open) .card-foot {
+  margin-top: 8px;
+}
+
+.news-card.is-hero.is-open .card-body {
+  display: block;
+  padding: 12px 16px 0;
+}
