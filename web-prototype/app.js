@@ -1126,6 +1126,7 @@ function render() {
   items.forEach((item, index) => {
     elements.feed.append(createCard(item, index));
   });
+  pickHeroCard();
 
   updateProgress();
 }
@@ -1193,10 +1194,10 @@ function createCard(item, itemIndex = 0) {
   header.setAttribute('role', 'button');
   header.setAttribute('aria-expanded', 'false');
   const photo = cardImageUrl(displayItem);
-  const layout = photo ? (itemIndex === 0 ? 'is-hero' : 'has-thumb') : '';
+  const layout = photo ? 'has-thumb' : '';
   if (layout) card.classList.add(layout);
   const media = photo
-    ? `<span class="card-media"><img src="${escapeHtml(photo)}" alt="" loading="${itemIndex < 3 ? 'eager' : 'lazy'}" decoding="async" referrerpolicy="no-referrer" />${layout === 'is-hero' ? '<span class="hero-shade"></span>' : ''}</span>`
+    ? `<span class="card-media"><img src="${escapeHtml(photo)}" alt="" loading="${itemIndex < 3 ? 'eager' : 'lazy'}" decoding="async" referrerpolicy="no-referrer" />${photo ? '<span class="hero-shade"></span>' : ''}</span>`
     : '';
   header.innerHTML = `
     ${media}
@@ -1210,10 +1211,18 @@ function createCard(item, itemIndex = 0) {
       </span>
     </span>
   `;
-  header.querySelector('.card-media img')?.addEventListener('error', () => {
+  const cardImg = header.querySelector('.card-media img');
+  cardImg?.addEventListener('error', () => {
     card.classList.remove('is-hero', 'has-thumb');
     header.querySelector('.card-media')?.remove();
+    pickHeroCard();
   }, { once: true });
+  const recordSize = () => {
+    card.dataset.imgw = String(cardImg.naturalWidth || 0);
+    pickHeroCard();
+  };
+  if (cardImg?.complete && cardImg.naturalWidth) recordSize();
+  else cardImg?.addEventListener('load', recordSize, { once: true });
 
   const details = document.createElement('div');
   details.className = 'details';
@@ -1359,6 +1368,18 @@ function detailsHtml(item) {
       </span>
     </div>
   `;
+}
+
+// Only a sharp photo may lead as the hero; blurry or small ones stay thumbnails.
+function pickHeroCard() {
+  const cards = [...elements.feed.querySelectorAll('.news-card')];
+  const hero = cards.find((el) => el.classList.contains('has-thumb') || el.classList.contains('is-hero')
+    ? Number(el.dataset.imgw || 0) >= 1000 : false);
+  cards.forEach((el) => {
+    if (!el.classList.contains('has-thumb') && !el.classList.contains('is-hero')) return;
+    el.classList.toggle('is-hero', el === hero);
+    el.classList.toggle('has-thumb', el !== hero);
+  });
 }
 
 function cardImageUrl(item) {
