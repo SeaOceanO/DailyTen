@@ -1332,7 +1332,7 @@ function detailsHtml(item) {
     <div class="source-row">
       <span class="source-text"><b>${escapeHtml(sourceCountLabel(count))}</b> · ${annotateTerms(item.source, item)}${updated ? ` · ${escapeHtml(updated)}` : ''}</span>
       <span class="actions">
-        <button class="pill-button" type="button" data-action="favorite"></button>
+        <button class="pill-button is-icon" type="button" data-action="favorite"></button>
         ${speechState.supported ? `<button class="pill-button is-icon" type="button" data-action="speak" aria-label="${escapeHtml(t('listen'))}" title="${escapeHtml(t('listen'))}">${speechIconSvg('speaker')}</button>` : ''}
         <button class="pill-button is-danger" type="button" data-action="mute"></button>
         <button class="pill-button is-collapse" type="button" data-action="collapse">${escapeHtml(t('collapse'))}${chevronControlHtml('up')}</button>
@@ -1549,10 +1549,14 @@ function chevronControlHtml(direction) {
   return `<span class="inline-chevron is-${direction}" aria-hidden="true"><span></span><span></span></span>`;
 }
 
+function bookmarkIconSvg(filled) {
+  return `<svg class="audio-icon" viewBox="0 0 24 24" aria-hidden="true" fill="${filled ? 'currentColor' : 'none'}" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M7 4h10a1 1 0 011 1v15l-6-4-6 4V5a1 1 0 011-1z"/></svg>`;
+}
+
 function speechIconSvg(type) {
   const paths = {
-    speaker: '<path d="M5 10h4l5-4v12l-5-4H5z"/><path d="M17 9c1.4 1.7 1.4 4.3 0 6"/><path d="M20 6c3 3.3 3 8.7 0 12"/>',
-    pause: '<rect x="7" y="5" width="4" height="14" rx="1"/><rect x="15" y="5" width="4" height="14" rx="1"/>',
+    speaker: '<path d="M3 10h4l5-4v12l-5-4H3z"/><path d="M15 9c1.4 1.7 1.4 4.3 0 6"/><path d="M18 6c3 3.3 3 8.7 0 12"/>',
+    pause: '<rect x="6" y="5" width="4" height="14" rx="1"/><rect x="14" y="5" width="4" height="14" rx="1"/>',
     previous: '<path d="M7 5v14"/><path d="M19 6l-9 6 9 6z"/>',
     next: '<path d="M19 5v14"/><path d="M5 6l9 6-9 6z"/>',
     close: '<circle cx="12" cy="12" r="9"/><path d="M9 9l6 6M15 9l-6 6"/>',
@@ -2413,7 +2417,11 @@ function syncCardButtons(card, id) {
   const muted = state.muted.has(id);
 
   if (favoriteButton) {
-    favoriteButton.textContent = favorite ? t('favoriteOn') : t('favoriteOff');
+    const favoriteLabel = favorite ? t('favoriteOn') : t('favoriteOff');
+    favoriteButton.innerHTML = bookmarkIconSvg(favorite);
+    favoriteButton.setAttribute('aria-label', favoriteLabel);
+    favoriteButton.setAttribute('title', favoriteLabel);
+    favoriteButton.setAttribute('aria-pressed', favorite ? 'true' : 'false');
     favoriteButton.classList.toggle('is-active', favorite);
   }
 
