@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5, user-scalable=yes, viewport-fit=cover" />
-    <meta name="theme-color" content="#efe7d6" />
+    <meta name="theme-color" content="#e0f0e5" />
     <meta name="application-name" content="DailyTen" />
     <meta name="apple-mobile-web-app-title" content="DailyTen" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -19,15 +19,19 @@
           const saved = hasCurrentThemeChoice ? localStorage.getItem('dailyten-web:theme') || 'light' : 'light';
           const dark = saved === 'dark' || (saved === 'system' && matchMedia('(prefers-color-scheme: dark)').matches);
           document.documentElement.dataset.theme = dark ? 'dark' : 'light';
+          const channel = localStorage.getItem('dailyten-web:channel');
+          document.documentElement.dataset.channel = channel === 'ai' ? 'ai' : (channel === 'mine' || channel === 'favorites' ? 'mine' : 'daily');
         } catch {
           document.documentElement.dataset.theme = 'light';
         }
       })();
     </script>
-    <link rel="stylesheet" href="./styles.css?v=20260906-vertical-card-tools" />
+    <link rel="stylesheet" href="./styles.css?v=20261026-ios" />
   </head>
   <body>
     <main class="shell" aria-labelledby="page-title">
+      <section class="date-module" id="date-module" aria-label="日期选择"></section>
+
       <header class="topbar">
         <p class="eyebrow">DAILYTEN · 今日简报</p>
         <h1 id="page-title">每日十条</h1>
@@ -35,8 +39,6 @@
       </header>
 
       <nav class="channel-tabs" id="channel-tabs" aria-label="内容频道"></nav>
-
-      <section class="date-module" id="date-module" aria-label="日期选择"></section>
 
       <section class="progress-card" aria-label="阅读进度">
         <div>
@@ -107,7 +109,7 @@
     </div>
 
     <script
-      src="./app.js?v=20260906-audio-player"
+      src="./app.js?v=20261026-ios"
       onerror="document.getElementById('feed').innerHTML='<article class=&quot;state-card is-error&quot;><strong>页面脚本加载失败</strong><span>请刷新页面后重试。</span></article>'"
     ></script>
   </body>
