@@ -1370,15 +1370,17 @@ function detailsHtml(item) {
   `;
 }
 
-// Only a sharp photo may lead as the hero; blurry or small ones stay thumbnails.
+// The top story leads as the hero only when its photo is sharp; otherwise no hero at all.
 function pickHeroCard() {
   const cards = [...elements.feed.querySelectorAll('.news-card')];
-  const hero = cards.find((el) => el.classList.contains('has-thumb') || el.classList.contains('is-hero')
-    ? Number(el.dataset.imgw || 0) >= 1000 : false);
+  const first = cards[0];
+  const sharp = Boolean(first)
+    && (first.classList.contains('has-thumb') || first.classList.contains('is-hero'))
+    && Number(first.dataset.imgw || 0) >= 1000;
   cards.forEach((el) => {
     if (!el.classList.contains('has-thumb') && !el.classList.contains('is-hero')) return;
-    el.classList.toggle('is-hero', el === hero);
-    el.classList.toggle('has-thumb', el !== hero);
+    el.classList.toggle('is-hero', sharp && el === first);
+    el.classList.toggle('has-thumb', !(sharp && el === first));
   });
 }
 
