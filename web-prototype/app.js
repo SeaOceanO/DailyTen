@@ -100,6 +100,7 @@ const i18n = {
     termRelation: '和这条新闻的关系',
     themeHint: '选择后会立刻应用并保存在当前浏览器。',
     listen: '播报本条',
+    speechFailed: '这台设备没能发出声音，请检查音量或系统语音',
     pauseAudio: '暂停播报',
     resumeAudio: '继续播报',
     previousStory: '上一条',
@@ -160,6 +161,7 @@ const i18n = {
     termRelation: 'Why it matters here',
     themeHint: 'Your choice applies immediately and is saved in this browser.',
     listen: 'Listen',
+    speechFailed: 'This device could not play speech. Check volume or system voices.',
     pauseAudio: 'Pause narration',
     resumeAudio: 'Resume narration',
     previousStory: 'Previous story',
@@ -289,6 +291,7 @@ const speechState = {
   active: false,
   paused: false,
   ended: false,
+  failed: false,
   item: null,
   index: -1,
   sourceItems: [],
@@ -1618,8 +1621,9 @@ function toggleCurrentSpeech() {
   syncSpeechUI();
 }
 
-function playSpeechItem(item, itemIndex, sourceItems) {
+function playSpeechItem(item, itemIndex, sourceItems, attempt = 0) {
   if (!speechState.supported || !item) return;
+  const synth = window.speechSynthesis;
   const source = Array.isArray(sourceItems) && sourceItems.length ? [...sourceItems] : [item];
   const resolvedIndex = Math.max(0, source.findIndex((entry) => entry.id === item.id));
   const index = resolvedIndex >= 0 ? resolvedIndex : Math.max(0, itemIndex);
@@ -1629,22 +1633,38 @@ function playSpeechItem(item, itemIndex, sourceItems) {
   speechState.active = true;
   speechState.paused = false;
   speechState.ended = false;
+  speechState.failed = false;
   speechState.item = item;
   speechState.index = index;
   speechState.sourceItems = source;
-  window.speechSynthesis.cancel();
 
-  const utterance = new SpeechSynthesisUtterance(buildSpeechParagraph(item, index));
+  const text = buildSpeechParagraph(item, index);
+  const utterance = new SpeechSynthesisUtterance(text);
   utterance.lang = state.language === 'en' ? 'en-US' : 'zh-CN';
   utterance.rate = speechState.rate;
   utterance.pitch = 1;
-  const voice = preferredSpeechVoice(utterance.lang);
+  // 第二次尝试不指定声音，让系统用默认声音；有些 iPhone 上选中的声音没下载，会静默地立刻结束
+  const voice = attempt === 0 ? preferredSpeechVoice(utterance.lang) : null;
   if (voice) utterance.voice = voice;
+
+  let startedAt = 0;
+  utterance.onstart = () => {
+    startedAt = performance.now();
+  };
   utterance.onend = () => {
     if (speechState.session !== session) return;
+    // 真的读完至少要花一段时间；立刻结束说明根本没发出声音，不能当成读完去切下一条
+    const elapsed = startedAt ? performance.now() - startedAt : 0;
+    const minimum = Math.min(4000, (text.length * 40) / speechState.rate);
+    if (elapsed < minimum) {
+      failSpeech(item, index, source, attempt);
+      return;
+    }
     const nextItem = speechState.sourceItems[index + 1];
     if (nextItem) {
-      window.setTimeout(() => playSpeechItem(nextItem, index + 1, speechState.sourceItems), 180);
+      window.setTimeout(() => {
+        if (speechState.session === session) playSpeechItem(nextItem, index + 1, speechState.sourceItems);
+      }, 180);
       return;
     }
     speechState.paused = true;
@@ -1653,13 +1673,30 @@ function playSpeechItem(item, itemIndex, sourceItems) {
   };
   utterance.onerror = (event) => {
     if (speechState.session !== session || event.error === 'canceled' || event.error === 'interrupted') return;
-    speechState.paused = true;
-    speechState.ended = true;
-    syncSpeechUI();
+    failSpeech(item, index, source, attempt);
   };
   speechState.utterance = utterance;
   syncSpeechUI();
-  window.speechSynthesis.speak(utterance);
+
+  // 没在播的时候不要 cancel；cancel 后立刻 speak 在 iOS Safari 上可能被吞掉
+  const wasBusy = synth.speaking || synth.pending;
+  if (wasBusy) synth.cancel();
+  window.setTimeout(() => {
+    if (speechState.session !== session) return;
+    if (synth.paused) synth.resume();
+    synth.speak(utterance);
+  }, wasBusy ? 80 : 0);
+}
+
+function failSpeech(item, index, source, attempt) {
+  if (attempt === 0) {
+    playSpeechItem(item, index, source, 1);
+    return;
+  }
+  speechState.paused = true;
+  speechState.ended = true;
+  speechState.failed = true;
+  syncSpeechUI();
 }
 
 function preferredSpeechVoice(language) {
@@ -1754,7 +1791,7 @@ function syncSpeechUI() {
   if (!visible) return;
   const total = speechState.sourceItems.length;
   const prefix = state.language === 'en' ? `Story ${speechState.index + 1} / ${total}` : `热点 ${speechState.index + 1} / ${total}`;
-  elements.audioPlayerLabel.textContent = speechState.paused ? `${prefix} · ${t('paused')}` : prefix;
+  elements.audioPlayerLabel.textContent = speechState.failed ? t('speechFailed') : (speechState.paused ? `${prefix} · ${t('paused')}` : prefix);
   elements.audioPlayerTitle.textContent = localizedItem(speechState.item).title;
   elements.audioPrevious.disabled = speechState.index <= 0;
   elements.audioNext.disabled = speechState.index >= total - 1;
