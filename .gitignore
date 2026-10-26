@@ -41,3 +41,6 @@ example
 # generated native folders
 /ios
 /android
+
+# generated natural-voice audio (deployed, not committed)
+web-prototype/audio/
