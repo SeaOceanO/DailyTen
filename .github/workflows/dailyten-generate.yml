@@ -3,8 +3,8 @@ name: Generate DailyTen Edition
 on:
   workflow_dispatch:
   schedule:
-    # 21:00 UTC is 05:00 the next day in Asia/Shanghai.
-    - cron: '0 21 * * *'
+    # 05:00 UTC is 05:00 in the UK during winter time (06:00 during British Summer Time).
+    - cron: '0 5 * * *'
 
 permissions:
   contents: write
