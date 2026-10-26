@@ -2,9 +2,11 @@ name: Generate DailyTen Edition
 
 on:
   workflow_dispatch:
-  schedule:
-    # 05:00 UTC is 05:00 in the UK during winter time (06:00 during British Summer Time).
-    - cron: '0 5 * * *'
+  # Paused on request: the daily schedule is off until the owner asks to resume.
+  # To resume, uncomment the three lines below.
+  # schedule:
+  #   # 05:00 UTC is 05:00 in the UK during winter time (06:00 during British Summer Time).
+  #   - cron: '0 5 * * *'
 
 permissions:
   contents: write
