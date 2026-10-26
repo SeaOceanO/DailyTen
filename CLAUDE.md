@@ -5,7 +5,7 @@
 ## 架构
 
 - **线上产品 = `web-prototype/`**：纯静态页，`index.html` + `app.js` + `styles.css`，无构建步骤。本地预览：在 `web-prototype/` 里跑 `python -m http.server 8101`。
-- **每日生成**：`.github/workflows/dailyten-generate.yml` 每天 21:00 UTC（北京时间 05:00）运行 `node web-prototype/scripts/generate-dailyten.mjs`，生成两版（综合 daily + AI 专版）各 10 条新闻，提交到 `web-prototype/data/`，再部署到 GitHub Pages。
+- **每日生成**：`.github/workflows/dailyten-generate.yml` 每天 05:00 UTC（英国冬令时 05:00，夏令时 06:00；日期按 Europe/London 计算）运行 `node web-prototype/scripts/generate-dailyten.mjs`，生成两版（综合 daily + AI 专版）各 10 条新闻，提交到 `web-prototype/data/`，再部署到 GitHub Pages。
 - **`web-prototype/data/` 是自动生成的，不要读，也不要改。** 数据结构看 `web-prototype/schema/`。
 - **`src/`** 是 Expo App，用 `src/data/mockNews.ts` 假数据，暂不维护，除非明确要求。
 
