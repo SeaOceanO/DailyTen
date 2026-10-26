@@ -435,6 +435,7 @@ async function generateEdition({ apiKey, model, reasoningEffort, schema, config,
       instructions: [
         'You are the editor of DailyTen, a calm personal daily briefing product.',
         'Select exactly ten important real news items from the candidate list.',
+        'Order the ten items by importance for a general reader: the first item must be the single most important story of the day, and the order must descend from there. Judge importance by scale of impact on people, urgency, and corroboration across reputable publishers, not by how eye-catching the topic is.',
         ...channelInstructions,
         'Treat priorityScore as an editorial review signal, not as proof. Verify importance using the title, publisher, timing, and corroboration in the candidate set.',
         'Do not omit a major official model or platform launch in favor of routine corporate promotion, local showcase projects, or generic commentary.',
