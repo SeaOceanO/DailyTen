@@ -27,6 +27,15 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      # Keep the natural-voice audio from the live site; a code-only deploy must not drop it.
+      - name: Carry over existing audio
+        continue-on-error: true
+        run: node web-prototype/scripts/carry-over-audio.mjs
+
       - uses: actions/configure-pages@v5
 
       - uses: actions/upload-pages-artifact@v3

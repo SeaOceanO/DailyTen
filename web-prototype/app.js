@@ -287,7 +287,10 @@ const pagePanes = new Map();
 let pageViewport = null;
 let pageTrack = null;
 const speechState = {
-  supported: 'speechSynthesis' in window && 'SpeechSynthesisUtterance' in window,
+  systemSupported: 'speechSynthesis' in window && 'SpeechSynthesisUtterance' in window,
+  supported: 'Audio' in window || ('speechSynthesis' in window && 'SpeechSynthesisUtterance' in window),
+  usingAudio: false,
+  audio: null,
   active: false,
   paused: false,
   ended: false,
@@ -324,6 +327,7 @@ async function init() {
   safeSetup(wireDateGestures);
   safeSetup(wireNavigationGestures);
   safeSetup(wireSpeechPlayer);
+  loadAudioManifest();
 
   try {
     const [latestEdition, loadedIndex] = await Promise.all([
@@ -1582,16 +1586,19 @@ function wireSpeechPlayer() {
   elements.audioSpeed.addEventListener('change', () => {
     speechState.rate = normalizeSpeechRate(Number(elements.audioSpeed.value));
     storage.setItem(storageKeys.speechRate, speechState.rate);
-    if (speechState.active && !speechState.paused && !speechState.ended) {
+    if (speechState.usingAudio && speechState.audio) {
+      speechState.audio.defaultPlaybackRate = speechState.rate;
+      speechState.audio.playbackRate = speechState.rate;
+    } else if (speechState.active && !speechState.paused && !speechState.ended) {
       playSpeechItem(speechState.item, speechState.index, speechState.sourceItems);
     } else if (speechState.active) {
       speechState.session += 1;
-      window.speechSynthesis.cancel();
+      window.speechSynthesis?.cancel();
       speechState.ended = true;
       syncSpeechUI();
     }
   });
-  window.addEventListener('beforeunload', () => window.speechSynthesis.cancel());
+  window.addEventListener('beforeunload', () => window.speechSynthesis?.cancel());
   syncSpeechUI();
 }
 
@@ -1611,6 +1618,17 @@ function toggleCurrentSpeech() {
     playSpeechItem(speechState.item, speechState.index, speechState.sourceItems);
     return;
   }
+  if (speechState.usingAudio && speechState.audio) {
+    if (speechState.paused) {
+      speechState.audio.play().catch(() => {});
+      speechState.paused = false;
+    } else {
+      speechState.audio.pause();
+      speechState.paused = true;
+    }
+    syncSpeechUI();
+    return;
+  }
   if (speechState.paused) {
     window.speechSynthesis.resume();
     speechState.paused = false;
@@ -1621,9 +1639,115 @@ function toggleCurrentSpeech() {
   syncSpeechUI();
 }
 
-function playSpeechItem(item, itemIndex, sourceItems, attempt = 0) {
+// Pre-generated natural-voice audio (see scripts/generate-audio.mjs). The manifest is optional:
+// when it is missing, or has no file for a story, we fall back to the system voice.
+let audioManifest = null;
+
+async function loadAudioManifest() {
+  try {
+    const response = await fetch('./audio/manifest.json', { cache: 'no-store' });
+    if (response.ok) audioManifest = await response.json();
+  } catch {
+    audioManifest = null;
+  }
+}
+
+function audioUrlFor(item) {
+  if (state.channel !== 'daily' && state.channel !== 'ai') return '';
+  const files = audioManifest && audioManifest.files;
+  const url = files && files[state.selectedDateKey] && files[state.selectedDateKey][state.channel]
+    && files[state.selectedDateKey][state.channel][item.id];
+  return typeof url === 'string' ? url : '';
+}
+
+function getSpeechAudio() {
+  // One element is reused so that iOS keeps allowing playback after the first tap.
+  if (!speechState.audio) speechState.audio = new Audio();
+  return speechState.audio;
+}
+
+function playSpeechItem(item, itemIndex, sourceItems) {
   if (!speechState.supported || !item) return;
+  const url = state.language === 'en' ? '' : audioUrlFor(item);
+  if (url) {
+    playAudioItem(item, itemIndex, sourceItems, url);
+    return;
+  }
+  playSystemSpeech(item, itemIndex, sourceItems);
+}
+
+function playAudioItem(item, itemIndex, sourceItems, url) {
+  const source = Array.isArray(sourceItems) && sourceItems.length ? [...sourceItems] : [item];
+  const resolvedIndex = Math.max(0, source.findIndex((entry) => entry.id === item.id));
+  const index = resolvedIndex >= 0 ? resolvedIndex : Math.max(0, itemIndex);
+  const session = speechState.session + 1;
+  const audio = getSpeechAudio();
+
+  speechState.session = session;
+  speechState.active = true;
+  speechState.paused = false;
+  speechState.ended = false;
+  speechState.failed = false;
+  speechState.usingAudio = true;
+  speechState.item = item;
+  speechState.index = index;
+  speechState.sourceItems = source;
+  if (speechState.systemSupported) window.speechSynthesis.cancel();
+
+  audio.onended = null;
+  audio.onerror = null;
+  audio.pause();
+  audio.src = url;
+  audio.defaultPlaybackRate = speechState.rate;
+  audio.playbackRate = speechState.rate;
+  audio.preservesPitch = true;
+  audio.webkitPreservesPitch = true;
+  audio.onended = () => {
+    if (speechState.session !== session) return;
+    const nextItem = speechState.sourceItems[index + 1];
+    if (nextItem) {
+      playSpeechItem(nextItem, index + 1, speechState.sourceItems);
+      return;
+    }
+    speechState.paused = true;
+    speechState.ended = true;
+    syncSpeechUI();
+  };
+  const fallback = () => {
+    if (speechState.session !== session) return;
+    speechState.usingAudio = false;
+    if (speechState.systemSupported) {
+      playSystemSpeech(item, index, source);
+    } else {
+      speechState.paused = true;
+      speechState.ended = true;
+      speechState.failed = true;
+      syncSpeechUI();
+    }
+  };
+  audio.onerror = fallback;
+  syncSpeechUI();
+  const started = audio.play();
+  if (started && started.catch) started.catch(fallback);
+}
+
+function playSystemSpeech(item, itemIndex, sourceItems, attempt = 0) {
+  if (!speechState.systemSupported || !item) {
+    speechState.active = true;
+    speechState.item = item;
+    speechState.paused = true;
+    speechState.ended = true;
+    speechState.failed = true;
+    syncSpeechUI();
+    return;
+  }
   const synth = window.speechSynthesis;
+  if (speechState.audio) {
+    speechState.audio.onended = null;
+    speechState.audio.onerror = null;
+    speechState.audio.pause();
+  }
+  speechState.usingAudio = false;
   const source = Array.isArray(sourceItems) && sourceItems.length ? [...sourceItems] : [item];
   const resolvedIndex = Math.max(0, source.findIndex((entry) => entry.id === item.id));
   const index = resolvedIndex >= 0 ? resolvedIndex : Math.max(0, itemIndex);
@@ -1690,7 +1814,7 @@ function playSpeechItem(item, itemIndex, sourceItems, attempt = 0) {
 
 function failSpeech(item, index, source, attempt) {
   if (attempt === 0) {
-    playSpeechItem(item, index, source, 1);
+    playSystemSpeech(item, index, source, 1);
     return;
   }
   speechState.paused = true;
@@ -1716,6 +1840,12 @@ function moveSpeechItem(direction) {
 function closeSpeechPlayer() {
   speechState.session += 1;
   window.speechSynthesis?.cancel();
+  if (speechState.audio) {
+    speechState.audio.onended = null;
+    speechState.audio.onerror = null;
+    speechState.audio.pause();
+  }
+  speechState.usingAudio = false;
   speechState.active = false;
   speechState.paused = false;
   speechState.ended = false;

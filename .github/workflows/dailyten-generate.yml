@@ -25,6 +25,8 @@ jobs:
       OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
       OPENAI_MODEL: ${{ vars.OPENAI_MODEL }}
       OPENAI_REASONING_EFFORT: ${{ vars.OPENAI_REASONING_EFFORT }}
+      OPENAI_TTS_MODEL: ${{ vars.OPENAI_TTS_MODEL }}
+      OPENAI_TTS_VOICE: ${{ vars.OPENAI_TTS_VOICE }}
     steps:
       - uses: actions/checkout@v4
 
@@ -46,6 +48,12 @@ jobs:
             git commit -m "Update DailyTen daily edition"
             git push
           fi
+
+      # Audio is deployed with the site but not committed. A failure here must not block the deploy;
+      # the page falls back to the system voice.
+      - name: Generate natural-voice audio
+        continue-on-error: true
+        run: node web-prototype/scripts/generate-audio.mjs
 
       - uses: actions/configure-pages@v5
 
