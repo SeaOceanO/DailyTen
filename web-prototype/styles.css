@@ -2709,3 +2709,23 @@ body::after {
 .done-card[hidden] {
   display: none;
 }
+
+/* 手机底部：只留出底栏高度，不再多留空白 */
+body,
+body.has-audio-player {
+  padding-bottom: calc(92px + env(safe-area-inset-bottom, 0px));
+}
+
+body.has-audio-player {
+  padding-bottom: calc(150px + env(safe-area-inset-bottom, 0px));
+}
+
+@media (max-width: 520px) {
+  body {
+    padding-bottom: calc(92px + env(safe-area-inset-bottom, 0px));
+  }
+
+  body.has-audio-player {
+    padding-bottom: calc(150px + env(safe-area-inset-bottom, 0px));
+  }
+}
