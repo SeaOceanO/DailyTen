@@ -2729,3 +2729,32 @@ body.has-audio-player {
     padding-bottom: calc(150px + env(safe-area-inset-bottom, 0px));
   }
 }
+
+/* The long explanation is folded away by default so the expanded card stays short. */
+.take-more {
+  margin: 10px 2px 0;
+}
+
+.take-more summary {
+  color: var(--acc-ink);
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 600;
+  list-style: none;
+}
+
+.take-more summary::-webkit-details-marker {
+  display: none;
+}
+
+.take-more summary::after {
+  content: " ›";
+}
+
+.take-more[open] summary::after {
+  content: " ⌃";
+}
+
+.take-more .take-text {
+  margin: 6px 0 0;
+}

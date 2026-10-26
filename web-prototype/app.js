@@ -82,6 +82,7 @@ const i18n = {
     muteOn: '已记录偏好',
     muteOff: '少看这类',
     conclusion: '一句话结论',
+    moreDetail: '详细说明',
     facts: '三个关键事实',
     visual: '核心可视化',
     eventImage: '事件图片',
@@ -143,6 +144,7 @@ const i18n = {
     muteOn: 'Preference saved',
     muteOff: 'Show less',
     conclusion: 'Bottom line',
+    moreDetail: 'More detail',
     facts: 'Three key facts',
     visual: 'Core visual',
     eventImage: 'Event image',
@@ -1300,7 +1302,7 @@ function detailsHtml(item) {
   const showTake = fullTake && fullTake !== String(item.brief || '').trim();
   const updated = formatItemDate(item);
   return `
-    ${showTake ? `<p class="take-text">${annotateTerms(fullTake, item)}</p>` : ''}
+    ${showTake ? `<details class="take-more"><summary>${escapeHtml(t('moreDetail'))}</summary><p class="take-text">${annotateTerms(fullTake, item)}</p></details>` : ''}
 
     ${sectionTitle(t('facts'))}
     <div class="fact-grid">
