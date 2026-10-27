@@ -1698,12 +1698,33 @@ function impactIconSvg(label, index) {
   return `<svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">${icons[key]}</svg>`;
 }
 
+const CARD_EASING = 'cubic-bezier(0.32, 0.72, 0, 1)';
+
+// The photo-card header changes layout (thumbnail <-> banner) when `is-open` toggles.
+// Animate its height alongside the details so the card never jumps in a single frame.
+function animateHeaderHeight(header, from, to, duration) {
+  if (!header.animate || Math.abs(from - to) < 1) return null;
+  header.style.overflow = 'hidden';
+  return header.animate(
+    [{ height: `${from}px` }, { height: `${to}px` }],
+    { duration, easing: CARD_EASING, fill: 'both' },
+  );
+}
+
+function finishHeaderAnimation(header, animation) {
+  if (!animation) return;
+  animation.cancel();
+  header.style.overflow = '';
+}
+
 async function openCard(card, header, item) {
   const details = card.querySelector('.details');
   if (!details) return;
 
   const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const headerFrom = header.getBoundingClientRect().height;
   card.classList.add('is-open');
+  const headerTo = header.getBoundingClientRect().height;
   header.setAttribute('aria-expanded', 'true');
   state.read.add(item.id);
   writeSet(storageKeys.read, state.read);
@@ -1712,6 +1733,7 @@ async function openCard(card, header, item) {
   if (reduceMotion || !details.animate) return;
 
   card.classList.add('is-card-animating', 'is-opening');
+  const headerAnimation = animateHeaderHeight(header, headerFrom, headerTo, 300);
   const targetHeight = details.scrollHeight;
   const animation = details.animate([
     {
@@ -1732,7 +1754,7 @@ async function openCard(card, header, item) {
     },
   ], {
     duration: 300,
-    easing: 'cubic-bezier(0.32, 0.72, 0, 1)',
+    easing: CARD_EASING,
     fill: 'both',
   });
 
@@ -1742,6 +1764,7 @@ async function openCard(card, header, item) {
     // A page change can intentionally interrupt this animation.
   } finally {
     animation.cancel();
+    finishHeaderAnimation(header, headerAnimation);
     card.classList.remove('is-card-animating', 'is-opening');
   }
 }
@@ -1753,101 +1776,82 @@ async function collapseCard(card, header, anchor) {
   if (!details) return;
 
   const detailsHeight = details.getBoundingClientRect().height;
+  const startCardHeight = card.getBoundingClientRect().height;
   const startScroll = getPageScrollTop();
   const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   const keepBottomStable = anchor === 'bottom';
+  const root = document.documentElement;
 
-  if (keepBottomStable) {
-    document.documentElement.classList.add('is-card-collapsing');
-  }
+  // Measure the closed header height without painting the intermediate state.
+  const headerFrom = header.getBoundingClientRect().height;
+  card.classList.remove('is-open');
+  const headerTo = header.getBoundingClientRect().height;
+  card.classList.add('is-open');
 
+  if (keepBottomStable) root.classList.add('is-card-collapsing');
   header.setAttribute('aria-expanded', 'false');
 
   if (reduceMotion || !details.animate || detailsHeight <= 0) {
     card.classList.remove('is-open');
     if (keepBottomStable) {
-      setPageScrollTop(Math.max(0, startScroll - detailsHeight));
+      setPageScrollTop(Math.max(0, startScroll - (startCardHeight - card.getBoundingClientRect().height)));
     }
-    document.documentElement.classList.remove('is-card-collapsing');
+    root.classList.remove('is-card-collapsing');
     return;
   }
 
+  const duration = 280;
   card.classList.add('is-card-animating', keepBottomStable ? 'is-collapsing-bottom' : 'is-collapsing-top');
-  const keyframes = keepBottomStable
-    ? [
-      { clipPath: 'inset(0 0 0 0)', opacity: 1, transform: 'translateY(0)' },
-      { clipPath: 'inset(100% 0 0 0)', opacity: 0.18, transform: 'translateY(8px)' },
-    ]
-    : [
-      {
-        clipPath: 'inset(0 0 0 0)',
-        height: `${detailsHeight}px`,
-        opacity: 1,
-        paddingTop: '2px',
-        paddingBottom: '16px',
-        transform: 'translateY(0)',
-      },
-      {
-        clipPath: 'inset(0 0 100% 0)',
-        height: '0px',
-        opacity: 0,
-        paddingTop: '0px',
-        paddingBottom: '0px',
-        transform: 'translateY(-6px)',
-      },
-    ];
-  const animation = details.animate(keyframes, {
-    duration: keepBottomStable ? 280 : 260,
-    easing: 'cubic-bezier(0.32, 0.72, 0, 1)',
+  const headerAnimation = animateHeaderHeight(header, headerFrom, headerTo, duration);
+  const animation = details.animate([
+    {
+      clipPath: 'inset(0 0 0 0)',
+      height: `${detailsHeight}px`,
+      opacity: 1,
+      paddingTop: '2px',
+      paddingBottom: '16px',
+      transform: 'translateY(0)',
+    },
+    {
+      clipPath: 'inset(0 0 100% 0)',
+      height: '0px',
+      opacity: 0,
+      paddingTop: '0px',
+      paddingBottom: '0px',
+      transform: 'translateY(-6px)',
+    },
+  ], {
+    duration,
+    easing: CARD_EASING,
     fill: 'both',
   });
+
+  // Keep the card's bottom edge under the finger while it shrinks, in the same frames.
+  let compensating = keepBottomStable;
+  const compensate = () => {
+    if (!compensating) return;
+    const shrunk = startCardHeight - card.getBoundingClientRect().height;
+    setPageScrollTop(Math.max(0, startScroll - shrunk));
+    requestAnimationFrame(compensate);
+  };
+  if (keepBottomStable) requestAnimationFrame(compensate);
 
   try {
     await animation.finished;
   } catch {
     // A page change can intentionally interrupt this animation.
   } finally {
-    if (keepBottomStable) {
-      const spacer = document.createElement('div');
-      spacer.className = 'collapse-layout-spacer';
-      spacer.style.height = `${detailsHeight}px`;
-      card.insertAdjacentElement('afterend', spacer);
-      card.classList.remove('is-open');
-      animation.cancel();
-      card.classList.remove('is-card-animating', 'is-collapsing-bottom');
-      await animateCollapseSpacer(spacer, startScroll, detailsHeight);
-      spacer.remove();
-      setPageScrollTop(Math.max(0, startScroll - detailsHeight));
-      document.documentElement.classList.remove('is-card-collapsing');
-      return;
-    }
-
+    compensating = false;
     card.classList.remove('is-open');
     animation.cancel();
-    card.classList.remove('is-card-animating', 'is-collapsing-top');
+    finishHeaderAnimation(header, headerAnimation);
+    card.classList.remove('is-card-animating', 'is-collapsing-top', 'is-collapsing-bottom');
+    if (keepBottomStable) {
+      const shrunk = startCardHeight - card.getBoundingClientRect().height;
+      setPageScrollTop(Math.max(0, startScroll - shrunk));
+      root.classList.remove('is-card-collapsing');
+    }
   }
-}
-
-function animateCollapseSpacer(spacer, startScroll, height) {
-  const duration = 210;
-  return new Promise((resolve) => {
-    const startedAt = performance.now();
-
-    const step = (now) => {
-      const progress = Math.min(1, (now - startedAt) / duration);
-      const eased = 1 - Math.pow(1 - progress, 3);
-      spacer.style.height = `${height * (1 - eased)}px`;
-      setPageScrollTop(Math.max(0, startScroll - height * eased));
-
-      if (progress < 1) {
-        requestAnimationFrame(step);
-      } else {
-        resolve();
-      }
-    };
-
-    requestAnimationFrame(step);
-  });
 }
 
 function chevronControlHtml(direction) {

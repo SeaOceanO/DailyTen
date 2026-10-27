@@ -1244,17 +1244,6 @@ h1 {
   transform-origin: top;
 }
 
-.news-card.is-collapsing-bottom .details {
-  transform-origin: bottom;
-}
-
-.collapse-layout-spacer {
-  height: 0;
-  margin: 0;
-  overflow: hidden;
-  pointer-events: none;
-}
-
 .event-image {
   background: var(--frame);
   border: 1px solid var(--line);
