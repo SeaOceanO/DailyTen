@@ -15,6 +15,8 @@ const editionIndexPath = path.join(editionsDir, 'index.json');
 const validateOnly = process.argv.includes('--validate-only');
 const testSourcesOnly = process.argv.includes('--test-sources');
 
+// AI and robotics stories live only in the AI edition; the daily edition never carries them.
+const aiOnlyCategories = new Set(['AI', '机器人与具身智能']);
 const allowedIcons = new Set(['oil', 'chart', 'drone', 'quake', 'ai', 'alert', 'code', 'refinery', 'ship', 'eclipse']);
 const allowedVisuals = new Set(['chain', 'orbit', 'bars', 'trend']);
 const rssFeeds = [
@@ -79,6 +81,7 @@ async function main() {
   const edition = await generateEdition({ apiKey, model, reasoningEffort, schema, config, candidates: candidatePools.daily, channel: 'daily' });
   normalizeEdition(edition, 'daily');
   validateEdition(edition);
+  warnAboutAiItemsInDaily(edition);
 
   const aiEdition = await generateEdition({ apiKey, model, reasoningEffort, schema, config, candidates: candidatePools.ai, channel: 'ai' });
   normalizeEdition(aiEdition, 'ai');
@@ -222,7 +225,7 @@ async function fetchNewsCandidates(config) {
 
   const rankedAi = rankCandidates(dedupeCandidates(aiCandidates), 'ai');
   const rankedDaily = rankCandidates(
-    dedupeCandidates([...dailyCandidates, ...rankedAi.slice(0, 30)]),
+    dedupeCandidates(dailyCandidates.filter((candidate) => !isCoreAiCandidate(candidate))),
     'daily',
   );
 
@@ -286,6 +289,10 @@ function dedupeCandidates(candidates) {
 
 function isAiCandidate(candidate) {
   return /\b(ai|artificial intelligence|openai|gpt|anthropic|claude|gemini|agent|mcp|robot|robotics|humanoid|inference|compute|chip|data cent(?:er|re))\b/i.test(candidate.title || '');
+}
+
+function isCoreAiCandidate(candidate) {
+  return /\b(ai|artificial intelligence|openai|chatgpt|gpt|llm|anthropic|claude|gemini|deepmind|ai agents?|mcp|robots?|robotics|humanoid|embodied ai)\b|人工智能|大模型|机器人|具身智能/i.test(candidate.title || '');
 }
 
 function rankCandidates(candidates, channel) {
@@ -418,7 +425,9 @@ async function generateEdition({ apiKey, model, reasoningEffort, schema, config,
     ]
     : [
       'This is the broad DailyTen edition covering the reader interests in the preferences.',
-      'A globally significant verified AI launch can enter DailyTen, but keep the overall set balanced across major interests.',
+      'Do not include any AI or robotics story: AI models, AI products, AI companies, AI chips, AI regulation, AI labor impact, robotics, and embodied AI all belong only to the separate AI Industry edition.',
+      'If a candidate is mainly about AI or robotics, skip it, even when it is the biggest story of the day. Fill all ten slots with other important news.',
+      'Never use the categories AI or 机器人与具身智能 in this edition.',
     ];
 
   const response = await fetchWithContext('https://api.openai.com/v1/responses', {
@@ -481,7 +490,7 @@ async function generateEdition({ apiKey, model, reasoningEffort, schema, config,
       input: JSON.stringify({
         dateKey: todayInTimezone(config.timezone),
         channel,
-        preferences: config,
+        preferences: channel === 'ai' ? config : dailyPreferences(config),
         candidates,
         outputNotes: [
           'facts must contain exactly three short label/text pairs.',
@@ -531,6 +540,24 @@ async function generateEdition({ apiKey, model, reasoningEffort, schema, config,
   }
 
   return parseJson(text, 'OpenAI edition output');
+}
+
+function warnAboutAiItemsInDaily(edition) {
+  const leaked = (edition.items ?? []).filter((item) => aiOnlyCategories.has(item.cat));
+  if (leaked.length) {
+    console.warn(`Daily edition still contains ${leaked.length} AI item(s); the page hides them: ${leaked.map((item) => item.title).join(' / ')}`);
+  }
+}
+
+function dailyPreferences(config) {
+  return {
+    ...config,
+    interests: (config.interests ?? []).filter((interest) => !aiOnlyCategories.has(interest)),
+    categoryRules: Object.fromEntries(
+      Object.entries(config.categoryRules ?? {}).filter(([category]) => !aiOnlyCategories.has(category)),
+    ),
+    aiSourceQuery: undefined,
+  };
 }
 
 function normalizeEdition(edition, channel) {
