@@ -86,7 +86,6 @@ const i18n = {
     mutedCatsEmpty: '还没有。展开新闻后点“少看这类”即可添加。',
     restore: '恢复',
     wallpaper: '壁纸',
-    wallpaperHint: '换一个背景，只在这台设备上生效',
     wallpaperNone: '无',
     wallpaperPick: '相册',
     wallpaperGlass: '毛玻璃卡片',
@@ -158,7 +157,6 @@ const i18n = {
     mutedCatsEmpty: 'None yet. Open a story and tap “Show less” to add one.',
     restore: 'Restore',
     wallpaper: 'Wallpaper',
-    wallpaperHint: 'Change the background. Applies on this device only',
     wallpaperNone: 'None',
     wallpaperPick: 'Photos',
     wallpaperGlass: 'Frosted cards',
@@ -1407,7 +1405,6 @@ function renderMine() {
       <button class="settings-row" type="button" data-settings-action="wallpaper" aria-expanded="false">
         <span>
           <strong>${escapeHtml(t('wallpaper'))}</strong>
-          <em>${escapeHtml(t('wallpaperHint'))}</em>
         </span>
         <b data-wallpaper-badge></b>
       </button>
