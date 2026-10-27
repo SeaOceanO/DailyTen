@@ -291,6 +291,12 @@ let items = [];
 let touchStartY = 0;
 let navigationLocked = false;
 let suppressNextClick = false;
+let silentPaneRender = false;
+let warmTimer = null;
+let pagerDrag = null;
+let navPill = null;
+let navProgress = 0;
+const PAGER_EASING = 'cubic-bezier(0.22, 1, 0.36, 1)';
 const channelScrollPositions = new Map();
 const pagePanes = new Map();
 let pageViewport = null;
@@ -349,6 +355,7 @@ async function init() {
     state.selectedDateKey = readSavedDateKey();
     renderDateModule();
     await loadAndRender(latestEdition);
+    await warmOtherPanes();
   } catch (error) {
     renderDateModule();
     showErrorState(error);
@@ -395,7 +402,10 @@ function setupPagePanes() {
   activateElementsForChannel(state.channel);
   updatePaneAccessibility();
   positionPageTrack(false);
-  window.addEventListener('resize', () => positionPageTrack(false));
+  window.addEventListener('resize', () => {
+    positionPageTrack(false);
+    placeNavPill(navProgress, false);
+  });
 }
 
 function namespacePaneIds(shell, channel) {
@@ -433,6 +443,7 @@ function activateElementsForChannel(channel) {
 }
 
 function updatePaneAccessibility() {
+  if (silentPaneRender) return;
   const activeChannel = pageChannelFor(state.channel);
   pagePanes.forEach((pane, channel) => {
     const isActive = channel === activeChannel;
@@ -485,6 +496,7 @@ async function loadAndRender(preloadedLatestEdition = null, reusePane = false) {
       pane.edition = edition;
       pane.renderKey = renderKey;
     }
+    scheduleWarmOtherPanes();
   } catch (error) {
     showErrorState(error);
   }
@@ -629,16 +641,25 @@ function hydrateEdition(edition) {
 let lastNavTapAt = 0;
 
 function renderChannelTabs() {
+  if (silentPaneRender) return;
   elements.channelTabs.hidden = true;
   const activeTab = state.channel === 'favorites' ? 'mine' : state.channel;
   document.documentElement.dataset.channel = activeTab;
   syncThemeColor();
 
-  elements.bottomNav.innerHTML = bottomTabs.map((key) => `
+  elements.bottomNav.querySelectorAll('.bottom-nav-item').forEach((button) => button.remove());
+  elements.bottomNav.insertAdjacentHTML('beforeend', bottomTabs.map((key) => `
     <button class="bottom-nav-item${activeTab === key ? ' is-active' : ''}" type="button" data-channel="${key}">
       ${escapeHtml(t(key))}
     </button>
-  `).join('');
+  `).join(''));
+  if (!navPill) {
+    navPill = document.createElement('span');
+    navPill.className = 'nav-pill';
+    navPill.setAttribute('aria-hidden', 'true');
+  }
+  if (!navPill.isConnected) elements.bottomNav.prepend(navPill);
+  placeNavPill(bottomTabs.indexOf(activeTab), false);
 
   elements.bottomNav.querySelectorAll('[data-channel]').forEach((button) => {
     button.addEventListener('click', async () => {
@@ -660,26 +681,201 @@ function renderChannelTabs() {
   });
 }
 
+// The sliding highlight behind the bottom tabs; progress is a fractional tab index.
+function placeNavPill(progress, animate) {
+  if (!navPill) return;
+  const buttons = [...elements.bottomNav.querySelectorAll('.bottom-nav-item')];
+  if (!buttons.length) return;
+  const clamped = Math.min(buttons.length - 1, Math.max(0, progress));
+  navProgress = clamped;
+  const index = Math.floor(clamped);
+  const from = buttons[index];
+  const to = buttons[Math.min(index + 1, buttons.length - 1)];
+  const left = from.offsetLeft + (to.offsetLeft - from.offsetLeft) * (clamped - index);
+  navPill.style.width = `${from.offsetWidth}px`;
+  navPill.style.height = `${from.offsetHeight}px`;
+  navPill.style.top = `${from.offsetTop}px`;
+  navPill.style.transition = animate && !reducedMotion() ? `transform 340ms ${PAGER_EASING}` : 'none';
+  navPill.style.transform = `translate3d(${left}px, 0, 0)`;
+  buttons.forEach((button, buttonIndex) => {
+    button.classList.toggle('is-active', buttonIndex === Math.round(clamped));
+  });
+}
+
+function reducedMotion() {
+  return window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+}
+
 async function setActiveChannel(nextChannel, transitionOptions = {}) {
   if (!channels[nextChannel] || state.channel === nextChannel || navigationLocked) return;
   navigationLocked = true;
   const currentChannel = state.channel;
-  const currentPage = pageChannelFor(currentChannel);
-  const nextPage = pageChannelFor(nextChannel);
-  const currentIndex = swipeChannels.indexOf(currentPage);
-  const nextIndex = swipeChannels.indexOf(nextPage);
+  const currentIndex = swipeChannels.indexOf(pageChannelFor(currentChannel));
+  const nextIndex = swipeChannels.indexOf(pageChannelFor(nextChannel));
   channelScrollPositions.set(currentChannel, getPageScrollTop());
+  channelScrollPositions.set(pageChannelFor(currentChannel), getPageScrollTop());
 
   try {
+    const slide = nextIndex !== currentIndex && pagerCanUse(nextIndex);
+    let pager = null;
+    if (slide) {
+      pager = transitionOptions.pager || { baseIndex: currentIndex, neighborIndex: nextIndex, offset: 0, velocity: 0 };
+      if (pagerDrag?.neighborIndex !== pager.neighborIndex) pagerPrepareNeighbor(pager.neighborIndex);
+      pagerDrag = { baseIndex: pager.baseIndex, neighborIndex: pager.neighborIndex };
+      await pagerSettle(pager, true);
+    }
+
     state.channel = nextChannel;
     storage.setItem(storageKeys.channel, state.channel);
     renderChannelTabs();
+    activateElementsForChannel(state.channel);
+    updatePaneAccessibility();
+    pagerCleanup();
+    setPageScrollTop(channelScrollPositions.get(pageChannelFor(nextChannel)) || 0);
     await loadAndRender(null, true);
-    await transitionPageTrack(currentIndex, nextIndex, {
-      ...transitionOptions,
-      targetScroll: channelScrollPositions.get(nextChannel) || 0,
-    });
+    setPageScrollTop(channelScrollPositions.get(pageChannelFor(nextChannel)) || 0);
   } finally {
+    pagerCleanup();
+    navigationLocked = false;
+  }
+}
+
+// ---- Interactive page pager: panes follow the finger and settle with a spring-like ease ----
+function paneShell(index) {
+  return pagePanes.get(swipeChannels[index])?.shell || null;
+}
+
+function pagerCanUse(index) {
+  const pane = pagePanes.get(swipeChannels[index]);
+  return Boolean(pane && pane.edition && pageViewport);
+}
+
+function pagerPrepareNeighbor(index) {
+  const shell = paneShell(index);
+  if (!shell) return;
+  const saved = channelScrollPositions.get(swipeChannels[index]) || 0;
+  const scrollTop = getPageScrollTop();
+  shell.hidden = false;
+  shell.classList.add('is-pager-neighbor');
+  shell.style.top = `${scrollTop - saved}px`;
+  pageViewport.style.minHeight = `${scrollTop + window.innerHeight}px`;
+}
+
+function pagerReleaseNeighbor(index) {
+  const shell = paneShell(index);
+  if (!shell) return;
+  shell.getAnimations().forEach((animation) => animation.cancel());
+  shell.classList.remove('is-pager-neighbor');
+  shell.style.top = '';
+  shell.style.transform = '';
+  if (index !== currentPageIndex()) shell.hidden = true;
+}
+
+function pagerMove(baseIndex, deltaX) {
+  const width = pageViewport.clientWidth || window.innerWidth;
+  const direction = deltaX < 0 ? 1 : -1;
+  const neighborIndex = baseIndex + direction;
+  const usable = deltaX !== 0 && neighborIndex >= 0 && neighborIndex < swipeChannels.length && pagerCanUse(neighborIndex);
+  const nextNeighbor = usable ? neighborIndex : null;
+
+  if (pagerDrag && pagerDrag.neighborIndex !== null && pagerDrag.neighborIndex !== nextNeighbor) {
+    pagerReleaseNeighbor(pagerDrag.neighborIndex);
+  }
+  if (nextNeighbor !== null && pagerDrag?.neighborIndex !== nextNeighbor) {
+    pagerPrepareNeighbor(nextNeighbor);
+  }
+  pagerDrag = { baseIndex, neighborIndex: nextNeighbor };
+
+  const offset = usable ? deltaX : deltaX * 0.16;
+  paneShell(baseIndex).style.transform = `translate3d(${offset}px, 0, 0)`;
+  if (usable) {
+    paneShell(neighborIndex).style.transform = `translate3d(${offset + direction * width}px, 0, 0)`;
+  }
+  placeNavPill(baseIndex - offset / width, false);
+  return offset;
+}
+
+async function pagerSettle({ baseIndex, neighborIndex, offset, velocity }, commit) {
+  const width = pageViewport.clientWidth || window.innerWidth;
+  const current = paneShell(baseIndex);
+  const neighbor = neighborIndex === null ? null : paneShell(neighborIndex);
+  const direction = neighborIndex === null ? 0 : (neighborIndex > baseIndex ? 1 : -1);
+  const currentTo = commit ? -direction * width : 0;
+  const neighborTo = commit ? 0 : direction * width;
+  const distance = Math.abs(currentTo - offset);
+  const duration = reducedMotion()
+    ? 0
+    : Math.min(420, Math.max(200, distance / Math.max(Math.abs(velocity || 0), 1.2)));
+  const move = (element, from, to) => element.animate(
+    [{ transform: `translate3d(${from}px, 0, 0)` }, { transform: `translate3d(${to}px, 0, 0)` }],
+    { duration, easing: PAGER_EASING, fill: 'forwards' },
+  );
+  const animations = [move(current, offset, currentTo)];
+  if (neighbor) animations.push(move(neighbor, offset + direction * width, neighborTo));
+  placeNavPill(commit && neighborIndex !== null ? neighborIndex : baseIndex, true);
+  await Promise.all(animations.map((animation) => animation.finished.catch(() => {})));
+}
+
+function pagerCleanup() {
+  if (!pageViewport) return;
+  pagePanes.forEach((pane) => {
+    pane.shell.getAnimations().forEach((animation) => animation.cancel());
+    pane.shell.classList.remove('is-pager-neighbor');
+    pane.shell.style.top = '';
+    pane.shell.style.transform = '';
+  });
+  pageViewport.style.minHeight = '';
+  pagerDrag = null;
+  updatePaneAccessibility();
+}
+
+async function pagerCancel(drag) {
+  navigationLocked = true;
+  try {
+    await pagerSettle(drag, false);
+  } finally {
+    pagerCleanup();
+    navigationLocked = false;
+  }
+}
+
+// Render the other two pages in the background so a swipe can show real content right away.
+function scheduleWarmOtherPanes() {
+  if (silentPaneRender) return;
+  window.clearTimeout(warmTimer);
+  warmTimer = window.setTimeout(warmOtherPanes, 160);
+}
+
+async function warmOtherPanes() {
+  if (silentPaneRender) return;
+  if (navigationLocked) {
+    scheduleWarmOtherPanes();
+    return;
+  }
+  navigationLocked = true;
+  const originalChannel = state.channel;
+  const originalItems = items;
+  const originalTitle = document.title;
+  silentPaneRender = true;
+  try {
+    for (const channel of swipeChannels) {
+      if (channel === pageChannelFor(originalChannel)) continue;
+      state.channel = channel;
+      const pane = pagePanes.get(channel);
+      if (pane?.edition && pane.renderKey === paneRenderKey()) continue;
+      await loadAndRender(null, false);
+    }
+  } catch (error) {
+    console.warn(error);
+  } finally {
+    silentPaneRender = false;
+    state.channel = originalChannel;
+    items = originalItems;
+    document.title = originalTitle;
+    activateElementsForChannel(state.channel);
+    updatePaneAccessibility();
+    renderChannelTabs();
+    syncSpeechUI();
     navigationLocked = false;
   }
 }
@@ -1025,7 +1221,7 @@ function wireNavigationGestures() {
     gesture.lastX = event.clientX;
     gesture.lastTime = now;
     gesture.targetChannel = swipeTargetForDelta(deltaX);
-    gesture.offsetX = gesture.targetChannel ? deltaX : deltaX * 0.16;
+    gesture.offsetX = pagerMove(gesture.baseIndex, deltaX);
   }, { passive: false });
 
   const finishGesture = async (event, cancelled = false) => {
@@ -1046,12 +1242,19 @@ function wireNavigationGestures() {
       && finishedGesture.targetChannel
       && (distanceEnough || velocityEnough);
 
-    if (shouldChange) {
-      await setActiveChannel(finishedGesture.targetChannel, {
-        initialOffset: finishedGesture.offsetX,
-      });
+    const pager = {
+      baseIndex: finishedGesture.baseIndex,
+      neighborIndex: pagerDrag?.neighborIndex ?? null,
+      offset: finishedGesture.offsetX,
+      velocity: finishedGesture.velocityX,
+    };
+
+    if (shouldChange && pager.neighborIndex !== null) {
+      await setActiveChannel(finishedGesture.targetChannel, { pager });
       return;
     }
+
+    if (pagerDrag) await pagerCancel(pager);
 
   };
 
@@ -1232,8 +1435,9 @@ function renderMine() {
     elements.themeModal.hidden = false;
   });
 
+  const mineFeed = elements.feed;
   syncDisplayableFavorites().then((favoriteItems) => {
-    const count = elements.feed.querySelector('[data-favorite-count]');
+    const count = mineFeed.querySelector('[data-favorite-count]');
     if (count) count.textContent = String(favoriteItems.length);
   });
 }

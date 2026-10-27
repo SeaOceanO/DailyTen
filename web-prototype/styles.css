@@ -2969,6 +2969,39 @@ html[data-channel="mine"] body {
   padding: 14px 0;
 }
 
+/* Interactive page pager */
+.page-viewport {
+  position: relative;
+}
+
+.page-pane.is-pager-neighbor {
+  left: 0;
+  pointer-events: none;
+  position: absolute;
+  right: 0;
+  will-change: transform;
+}
+
+.nav-pill {
+  background: var(--tint);
+  border-radius: 999px;
+  left: 0;
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  will-change: transform;
+  z-index: 0;
+}
+
+.bottom-nav .bottom-nav-item {
+  position: relative;
+  transition: color 200ms ease;
+  z-index: 1;
+}
+
+.bottom-nav .bottom-nav-item.is-active {
+  background: transparent;
+
 .muted-item span i {
   background: var(--sage);
   border-radius: 999px;
