@@ -2968,3 +2968,14 @@ html[data-channel="mine"] body {
   margin: 0;
   padding: 14px 0;
 }
+
+.muted-item span i {
+  background: var(--sage);
+  border-radius: 999px;
+  color: var(--olive);
+  font-size: 11px;
+  font-style: normal;
+  font-weight: 700;
+  margin-left: 8px;
+  padding: 2px 8px;
+}

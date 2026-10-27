@@ -240,7 +240,7 @@ const editionCache = new Map();
 
 const state = {
   favorites: readSet(storageKeys.favorites),
-  mutedCats: readMap(storageKeys.mutedCats),
+  mutedCats: migrateMutedCats(readMap(storageKeys.mutedCats)),
   read: readSet(storageKeys.read),
   channel: channels[storage.getItem(storageKeys.channel)] ? storage.getItem(storageKeys.channel) : 'daily',
   language: readSavedLanguage(),
@@ -1200,7 +1200,7 @@ function renderMine() {
     const keys = Object.keys(state.mutedCats);
     elements.feed.querySelector('[data-muted-count]').textContent = String(keys.length);
     mutedList.innerHTML = keys.length
-      ? keys.map((key) => `<div class="muted-item"><span>${escapeHtml(state.language === 'en' ? (state.mutedCats[key].label || key) : key)}</span><button type="button" data-restore="${escapeHtml(key)}">${escapeHtml(t('restore'))}</button></div>`).join('')
+      ? keys.map((key) => `<div class="muted-item"><span>${escapeHtml(state.language === 'en' ? (state.mutedCats[key].label || state.mutedCats[key].zh || key) : (state.mutedCats[key].zh || key))}<i>${escapeHtml(t(key.split('|')[0]))}</i></span><button type="button" data-restore="${escapeHtml(key)}">${escapeHtml(t('restore'))}</button></div>`).join('')
       : `<p class="muted-empty">${escapeHtml(t('mutedCatsEmpty'))}</p>`;
   };
   renderMutedList();
@@ -3332,13 +3332,31 @@ function readMap(key) {
 }
 
 // Categories the reader wants less of, kept per device in local storage.
+// Preferences are scoped to the page they were set on: "daily|<category>" or "ai|<category>".
+// Favorites share the Home scope. Keys saved before scoping existed belong to Home.
+function mutedScope() {
+  return state.channel === 'ai' ? 'ai' : 'daily';
+}
+
+function mutedKey(item) {
+  return `${mutedScope()}|${cardChip(item)}`;
+}
+
+function migrateMutedCats(saved) {
+  const migrated = {};
+  Object.keys(saved).forEach((key) => {
+    migrated[key.includes('|') ? key : `daily|${key}`] = saved[key];
+  });
+  return migrated;
+}
+
 function isCategoryMuted(item) {
-  return Object.prototype.hasOwnProperty.call(state.mutedCats, cardChip(item));
+  return Object.prototype.hasOwnProperty.call(state.mutedCats, mutedKey(item));
 }
 
 function toggleCategoryMuted(item) {
-  const key = cardChip(item);
-  if (!key) return;
+  if (!cardChip(item)) return;
+  const key = mutedKey(item);
   if (isCategoryMuted(item)) {
     delete state.mutedCats[key];
   } else {
@@ -3347,7 +3365,7 @@ function toggleCategoryMuted(item) {
   storage.setItem(storageKeys.mutedCats, JSON.stringify(state.mutedCats));
   elements.feed.querySelectorAll('.news-card').forEach((card) => {
     const same = items.find((entry) => entry.id === card.dataset.id);
-    if (!same || cardChip(same) !== key) return;
+    if (!same || mutedKey(same) !== key) return;
     card.classList.toggle('is-muted', isCategoryMuted(same));
     syncCardButtons(card, same.id);
   });
