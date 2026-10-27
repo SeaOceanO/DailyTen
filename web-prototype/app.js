@@ -79,8 +79,12 @@ const i18n = {
     favoriteOff: '收藏',
     expand: '展开',
     collapse: '收起',
-    muteOn: '已记录偏好',
+    muteOn: '已少看这类 · 点此撤销',
     muteOff: '少看这类',
+    mutedCats: '少看的分类',
+    mutedCatsHint: '这些分类的新闻会排到最后并变淡',
+    mutedCatsEmpty: '还没有。展开新闻后点“少看这类”即可添加。',
+    restore: '恢复',
     conclusion: '一句话结论',
     facts: '三个关键事实',
     visual: '核心可视化',
@@ -140,8 +144,12 @@ const i18n = {
     favoriteOff: 'Favorite',
     expand: 'Open',
     collapse: 'Collapse',
-    muteOn: 'Preference saved',
+    muteOn: 'Showing less · tap to undo',
     muteOff: 'Show less',
+    mutedCats: 'Shown less',
+    mutedCatsHint: 'These categories sink to the bottom and fade',
+    mutedCatsEmpty: 'None yet. Open a story and tap “Show less” to add one.',
+    restore: 'Restore',
     conclusion: 'Bottom line',
     facts: 'Three key facts',
     visual: 'Core visual',
@@ -175,6 +183,7 @@ const i18n = {
 const storageKeys = {
   favorites: 'dailyten-web:favorites',
   muted: 'dailyten-web:muted',
+  mutedCats: 'dailyten-web:muted-cats',
   read: 'dailyten-web:read',
   channel: 'dailyten-web:channel',
   date: 'dailyten-web:date',
@@ -231,7 +240,7 @@ const editionCache = new Map();
 
 const state = {
   favorites: readSet(storageKeys.favorites),
-  muted: readSet(storageKeys.muted),
+  mutedCats: readMap(storageKeys.mutedCats),
   read: readSet(storageKeys.read),
   channel: channels[storage.getItem(storageKeys.channel)] ? storage.getItem(storageKeys.channel) : 'daily',
   language: readSavedLanguage(),
@@ -435,7 +444,7 @@ function updatePaneAccessibility() {
 
 function paneRenderKey() {
   return JSON.stringify([state.channel, state.selectedDateKey, state.language, state.theme,
-    state.calendarExpanded, [...state.favorites], [...state.muted], [...state.read]]);
+    state.calendarExpanded, [...state.favorites], state.mutedCats, [...state.read]]);
 }
 
 async function loadAndRender(preloadedLatestEdition = null, reusePane = false) {
@@ -444,7 +453,7 @@ async function loadAndRender(preloadedLatestEdition = null, reusePane = false) {
   const pane = pagePanes.get(pageChannelFor(state.channel));
   const renderKey = paneRenderKey();
   if (reusePane && pane?.renderKey === renderKey && pane.edition) {
-    items = pane.edition.items;
+    items = displayOrder(pane.edition.items);
     hydrateEdition(pane.edition);
     renderChannelTabs();
     updateProgress();
@@ -465,7 +474,7 @@ async function loadAndRender(preloadedLatestEdition = null, reusePane = false) {
     if (state.channel === 'daily' && state.selectedDateKey === todayKey) {
       latestDailyEdition = edition;
     }
-    items = edition.items;
+    items = displayOrder(edition.items);
     hydrateEdition(edition);
     renderChannelTabs();
     renderDateModule();
@@ -1160,7 +1169,39 @@ function renderMine() {
         <b>${escapeHtml(themeBadge(state.theme))}</b>
       </button>
     </section>
+    <section class="settings-list" aria-label="${escapeHtml(t('mutedCats'))}">
+      <button class="settings-row" type="button" data-settings-action="muted-cats" aria-expanded="false">
+        <span>
+          <strong>${escapeHtml(t('mutedCats'))}</strong>
+          <em>${escapeHtml(t('mutedCatsHint'))}</em>
+        </span>
+        <b data-muted-count>${Object.keys(state.mutedCats).length}</b>
+      </button>
+      <div class="muted-list" data-muted-list hidden></div>
+    </section>
   `;
+
+  const mutedList = elements.feed.querySelector('[data-muted-list]');
+  const renderMutedList = () => {
+    const keys = Object.keys(state.mutedCats);
+    elements.feed.querySelector('[data-muted-count]').textContent = String(keys.length);
+    mutedList.innerHTML = keys.length
+      ? keys.map((key) => `<div class="muted-item"><span>${escapeHtml(state.language === 'en' ? (state.mutedCats[key].label || key) : key)}</span><button type="button" data-restore="${escapeHtml(key)}">${escapeHtml(t('restore'))}</button></div>`).join('')
+      : `<p class="muted-empty">${escapeHtml(t('mutedCatsEmpty'))}</p>`;
+  };
+  renderMutedList();
+  mutedList.addEventListener('click', (event) => {
+    const key = event.target.closest('[data-restore]')?.dataset.restore;
+    if (!key) return;
+    delete state.mutedCats[key];
+    storage.setItem(storageKeys.mutedCats, JSON.stringify(state.mutedCats));
+    renderMutedList();
+  });
+  const mutedToggle = elements.feed.querySelector('[data-settings-action="muted-cats"]');
+  mutedToggle.addEventListener('click', () => {
+    mutedList.hidden = !mutedList.hidden;
+    mutedToggle.setAttribute('aria-expanded', String(!mutedList.hidden));
+  });
 
   elements.feed.querySelector('[data-settings-action="favorites"]').addEventListener('click', async () => {
     state.channel = 'favorites';
@@ -1187,7 +1228,7 @@ function createCard(item, itemIndex = 0) {
   const displayItem = localizedItem(item);
   const brief = summaryBrief(displayItem);
   const card = document.createElement('article');
-  card.className = `news-card${state.muted.has(item.id) ? ' is-muted' : ''}`;
+  card.className = `news-card${isCategoryMuted(item) ? ' is-muted' : ''}`;
   card.dataset.id = item.id;
 
   const header = document.createElement('div');
@@ -1264,10 +1305,7 @@ function createCard(item, itemIndex = 0) {
     });
 
     details.querySelector('[data-action="mute"]').addEventListener('click', () => {
-      state.muted.add(item.id);
-      writeSet(storageKeys.muted, state.muted);
-      card.classList.add('is-muted');
-      syncCardButtons(card, item.id);
+      toggleCategoryMuted(item);
     });
 
     syncCardButtons(card, item.id);
@@ -2624,7 +2662,7 @@ function syncCardButtons(card, id) {
   const favoriteButton = card.querySelector('[data-action="favorite"]');
   const muteButton = card.querySelector('[data-action="mute"]');
   const favorite = state.favorites.has(id);
-  const muted = state.muted.has(id);
+  const muted = Boolean(card.classList.contains('is-muted'));
 
   if (favoriteButton) {
     const favoriteLabel = favorite ? t('favoriteOn') : t('favoriteOff');
@@ -3268,6 +3306,42 @@ function readSavedTheme() {
 
   const saved = storage.getItem(storageKeys.theme);
   return saved === 'dark' || saved === 'light' || saved === 'system' ? saved : 'light';
+}
+
+function readMap(key) {
+  try {
+    const value = JSON.parse(coalesce(storage.getItem(key), '{}'));
+    return value && typeof value === 'object' && !Array.isArray(value) ? value : {};
+  } catch {
+    return {};
+  }
+}
+
+// Categories the reader wants less of, kept per device in local storage.
+function isCategoryMuted(item) {
+  return Object.prototype.hasOwnProperty.call(state.mutedCats, cardChip(item));
+}
+
+function toggleCategoryMuted(item) {
+  const key = cardChip(item);
+  if (!key) return;
+  if (isCategoryMuted(item)) {
+    delete state.mutedCats[key];
+  } else {
+    state.mutedCats[key] = { zh: cardChip(item), label: cardChip(localizedItem(item)) };
+  }
+  storage.setItem(storageKeys.mutedCats, JSON.stringify(state.mutedCats));
+  elements.feed.querySelectorAll('.news-card').forEach((card) => {
+    const same = items.find((entry) => entry.id === card.dataset.id);
+    if (!same || cardChip(same) !== key) return;
+    card.classList.toggle('is-muted', isCategoryMuted(same));
+    syncCardButtons(card, same.id);
+  });
+}
+
+// Stable partition: muted categories sink to the bottom, everything else keeps its order.
+function displayOrder(list) {
+  return [...list.filter((item) => !isCategoryMuted(item)), ...list.filter(isCategoryMuted)];
 }
 
 function readSet(key) {

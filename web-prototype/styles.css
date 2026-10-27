@@ -965,7 +965,7 @@ h1 {
 }
 
 .news-card.is-muted {
-  opacity: 0.46;
+  opacity: 0.6;
 }
 
 .card-button {
@@ -2925,4 +2925,46 @@ body.has-audio-player {
 html[data-channel="mine"] body {
   min-height: calc(100vh + 1px);
   min-height: calc(100dvh + 1px);
+}
+
+.muted-list {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 4px 16px;
+}
+
+.muted-item {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  min-height: 48px;
+}
+
+.muted-item + .muted-item {
+  border-top: 1px solid var(--line);
+}
+
+.muted-item span {
+  color: var(--ink);
+  font-size: 15px;
+}
+
+.muted-item button {
+  background: var(--sage);
+  border: 1px solid var(--sage-border);
+  border-radius: 999px;
+  color: var(--olive);
+  cursor: pointer;
+  font: inherit;
+  font-size: 13px;
+  font-weight: 700;
+  padding: 6px 14px;
+}
+
+.muted-empty {
+  color: var(--muted);
+  font-size: 13px;
+  margin: 0;
+  padding: 14px 0;
 }
