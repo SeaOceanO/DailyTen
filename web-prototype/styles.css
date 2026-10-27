@@ -2919,3 +2919,10 @@ body.has-audio-player {
 .news-card.is-hero .hero-shade {
   display: block;
 }
+
+/* Short pages (Mine) keep the document just taller than the viewport, so the
+   fixed bottom nav sits where it does on the long pages in mobile browsers. */
+html[data-channel="mine"] body {
+  min-height: calc(100vh + 1px);
+  min-height: calc(100dvh + 1px);
+}
