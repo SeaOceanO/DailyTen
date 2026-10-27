@@ -242,7 +242,7 @@ const state = {
   favorites: readSet(storageKeys.favorites),
   mutedCats: migrateMutedCats(readMap(storageKeys.mutedCats)),
   read: readSet(storageKeys.read),
-  channel: channels[storage.getItem(storageKeys.channel)] ? storage.getItem(storageKeys.channel) : 'daily',
+  channel: 'daily',
   language: readSavedLanguage(),
   theme: readSavedTheme(),
   selectedDateKey: readSavedDateKey(),
@@ -726,7 +726,6 @@ async function setActiveChannel(nextChannel, transitionOptions = {}) {
     }
 
     state.channel = nextChannel;
-    storage.setItem(storageKeys.channel, state.channel);
     renderChannelTabs();
     activateElementsForChannel(state.channel);
     updatePaneAccessibility();
