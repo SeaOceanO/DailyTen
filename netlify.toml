@@ -1,2 +1,5 @@
 [build]
   publish = "web-prototype"
+
+[functions]
+  directory = "netlify/functions"

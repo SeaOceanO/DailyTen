@@ -86,6 +86,11 @@ const i18n = {
     mutedCatsEmpty: '还没有。展开新闻后点“少看这类”即可添加。',
     restore: '恢复',
     wallpaper: '壁纸',
+    voice: '朗读声音',
+    voiceFemale: '女声',
+    voiceMale: '男声',
+    voiceSystem: '系统',
+    voiceHint: '女声和男声需要联网，播放前会稍等一下',
     wallpaperNone: '无',
     wallpaperPick: '相册',
     wallpaperApply: '应用',
@@ -162,6 +167,11 @@ const i18n = {
     mutedCatsEmpty: 'None yet. Open a story and tap “Show less” to add one.',
     restore: 'Restore',
     wallpaper: 'Wallpaper',
+    voice: 'Read-aloud voice',
+    voiceFemale: 'Female',
+    voiceMale: 'Male',
+    voiceSystem: 'System',
+    voiceHint: 'Female and male voices need a connection and may take a moment to start',
     wallpaperNone: 'None',
     wallpaperPick: 'Photos',
     wallpaperApply: 'Apply',
@@ -213,6 +223,7 @@ const storageKeys = {
   theme: 'dailyten-web:theme',
   themeVersion: 'dailyten-web:theme-version',
   speechRate: 'dailyten-web:speech-rate',
+  speechVoice: 'dailyten-web:speech-voice',
   wallpaper: 'dailyten-web:wallpaper',
   wallpaperImage: 'dailyten-web:wallpaper-image',
   wallpaperTop: 'dailyten-web:wallpaper-top',
@@ -346,6 +357,13 @@ const channelScrollPositions = new Map();
 const pagePanes = new Map();
 let pageViewport = null;
 let pageTrack = null;
+// Natural voices come from a small Netlify function (the Google key lives only there).
+// Previews call their own origin; GitHub Pages calls the Netlify site.
+const TTS_ENDPOINT = /\.netlify\.app$/.test(location.hostname)
+  ? '/.netlify/functions/tts'
+  : 'https://ornate-cactus-877d93.netlify.app/.netlify/functions/tts';
+const TTS_MAX_CHARS = 1200;
+
 const speechState = {
   systemSupported: 'speechSynthesis' in window && 'SpeechSynthesisUtterance' in window,
   supported: 'Audio' in window || ('speechSynthesis' in window && 'SpeechSynthesisUtterance' in window),
@@ -361,6 +379,7 @@ const speechState = {
   utterance: null,
   session: 0,
   rate: normalizeSpeechRate(Number(storage.getItem(storageKeys.speechRate))),
+  voice: normalizeSpeechVoice(storage.getItem(storageKeys.speechVoice)),
 };
 
 window.addEventListener('error', (event) => {
@@ -1442,6 +1461,17 @@ function renderMine() {
         <b>${escapeHtml(themeBadge(state.theme))}</b>
       </button>
     </section>
+    <section class="settings-list" aria-label="${escapeHtml(t('voice'))}">
+      <div class="settings-row voice-row">
+        <span>
+          <strong>${escapeHtml(t('voice'))}</strong>
+          <em>${escapeHtml(t('voiceHint'))}</em>
+        </span>
+        <div class="voice-choice" role="group" aria-label="${escapeHtml(t('voice'))}">
+          ${[['female', 'voiceFemale'], ['male', 'voiceMale'], ['system', 'voiceSystem']].map(([id, key]) => `<button type="button" data-voice="${id}" aria-pressed="${speechState.voice === id}">${escapeHtml(t(key))}</button>`).join('')}
+        </div>
+      </div>
+    </section>
     <section class="settings-list" aria-label="${escapeHtml(t('wallpaper'))}">
       <button class="settings-row" type="button" data-settings-action="wallpaper" aria-expanded="false">
         <span>
@@ -1494,6 +1524,15 @@ function renderMine() {
   mutedToggle.addEventListener('click', () => {
     mutedList.hidden = !mutedList.hidden;
     mutedToggle.setAttribute('aria-expanded', String(!mutedList.hidden));
+  });
+
+  elements.feed.querySelectorAll('[data-voice]').forEach((button) => {
+    button.addEventListener('click', () => {
+      speechState.voice = normalizeSpeechVoice(button.dataset.voice);
+      storage.setItem(storageKeys.speechVoice, speechState.voice);
+      elements.feed.querySelectorAll('[data-voice]').forEach((other) => other.setAttribute('aria-pressed', String(other === button)));
+      if (speechState.active && !speechState.ended) playSpeechItem(speechState.item, speechState.index, speechState.sourceItems);
+    });
   });
 
   wireWallpaperSettings(elements.feed);
@@ -2019,6 +2058,18 @@ function speechIconSvg(type) {
   return `<svg class="audio-icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">${paths[type]}</svg>`;
 }
 
+function normalizeSpeechVoice(value) {
+  return ['female', 'male', 'system'].includes(value) ? value : 'female';
+}
+
+function cloudVoiceUrlFor(item, itemIndex) {
+  if (speechState.voice === 'system') return '';
+  const text = buildSpeechParagraph(item, itemIndex);
+  if (!text || text.length > TTS_MAX_CHARS) return '';
+  const params = new URLSearchParams({ lang: state.language === 'en' ? 'en' : 'zh', voice: speechState.voice, text });
+  return `${TTS_ENDPOINT}?${params}`;
+}
+
 function normalizeSpeechRate(value) {
   return [0.8, 1, 1.2, 1.5].includes(value) ? value : 1;
 }
@@ -2116,7 +2167,9 @@ function getSpeechAudio() {
 
 function playSpeechItem(item, itemIndex, sourceItems) {
   if (!speechState.supported || !item) return;
-  const url = state.language === 'en' ? '' : audioUrlFor(item);
+  const sourceIndex = Array.isArray(sourceItems) ? sourceItems.findIndex((entry) => entry.id === item.id) : -1;
+  const cloudUrl = cloudVoiceUrlFor(item, sourceIndex >= 0 ? sourceIndex : Math.max(0, itemIndex));
+  const url = cloudUrl || (speechState.voice === 'system' || state.language === 'en' ? '' : audioUrlFor(item));
   if (url) {
     playAudioItem(item, itemIndex, sourceItems, url);
     return;
