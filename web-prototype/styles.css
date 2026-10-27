@@ -3001,4 +3001,14 @@ html[data-channel="mine"] body {
 
 .bottom-nav .bottom-nav-item.is-active {
   background: transparent;
+
+.muted-item span i {
+  background: var(--sage);
+  border-radius: 999px;
+  color: var(--olive);
+  font-size: 11px;
+  font-style: normal;
+  font-weight: 700;
+  margin-left: 8px;
+  padding: 2px 8px;
 }
