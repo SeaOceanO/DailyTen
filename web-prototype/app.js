@@ -359,7 +359,7 @@ let pageViewport = null;
 let pageTrack = null;
 // Natural voices come from a small Cloudflare Worker (cloudflare/tts-worker.js); the Google key lives only there.
 // Leave the address empty to turn the female/male voices off (the system voice is used instead).
-const TTS_ENDPOINT = '';
+const TTS_ENDPOINT = 'https://dailyten-tts.00seaocean00.workers.dev';
 const TTS_MAX_CHARS = 1200;
 
 const speechState = {
