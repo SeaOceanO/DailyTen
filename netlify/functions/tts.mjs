@@ -70,20 +70,6 @@ async function synthesize(key, locale, voice, text) {
 }
 
 export default async (request) => {
-  // TEMPORARY diagnostics, removed before merge: /tts?check=1 reports whether the key is set and what Google answers.
-  if (new URL(request.url).searchParams.get('check') === '1') {
-    const key = process.env.GOOGLE_TTS_API_KEY;
-    const report = { keyConfigured: Boolean(key), keyLength: key ? key.length : 0 };
-    if (key) {
-      const probeText = new URL(request.url).searchParams.get('text') || '你好。';
-      report.textLength = probeText.length;
-      const probe = await synthesize(key, 'cmn-CN', 'Aoede', probeText);
-      report.googleStatus = probe.status;
-      report.pieces = probe.pieces;
-      if (!probe.ok) report.googleError = probe.error;
-    }
-    return new Response(JSON.stringify(report, null, 2), { headers: { 'Content-Type': 'application/json', 'Cache-Control': 'no-store' } });
-  }
   const referer = request.headers.get('origin') || request.headers.get('referer') || '';
   const headers = cors(referer);
   const fail = (status, message) => new Response(message, { status, headers: { ...headers, 'Cache-Control': 'no-store' } });
