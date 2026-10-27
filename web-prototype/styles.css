@@ -3144,8 +3144,8 @@ html[data-wallpaper] body::after {
   flex-direction: column;
   gap: 8px;
   inset: 0;
-  justify-content: center;
-  padding: 8px;
+  justify-content: flex-end;
+  padding: 10px;
   position: absolute;
 }
 
@@ -3169,13 +3169,13 @@ html[data-wallpaper] body::after {
   background: rgba(255, 255, 255, 0.9);
   border-radius: 50%;
   color: #d2554a;
-  font-size: 18px;
-  height: 26px;
+  font-size: 20px;
+  height: 30px;
   line-height: 1;
   position: absolute;
   right: 6px;
   top: 6px;
-  width: 26px;
+  width: 30px;
 }
 
 
@@ -3225,4 +3225,28 @@ html[data-wallpaper] body::after {
 .confirm-delete {
   background: #d2554a;
   color: #ffffff;
+}
+
+html[data-wallpaper] {
+  background-color: var(--wallpaper-top, var(--bg));
+}
+
+/* imported photo keeps the normal tile size: delete at the top, apply at the bottom */
+.wallpaper-actions {
+  align-items: center;
+  justify-content: flex-end;
+  padding: 8px;
+}
+
+.wallpaper-apply {
+  font-size: 13px;
+  padding: 6px 12px;
+  white-space: nowrap;
+}
+
+.wallpaper-delete {
+  height: 30px;
+  right: 6px;
+  top: 6px;
+  width: 30px;
 }

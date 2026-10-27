@@ -215,6 +215,7 @@ const storageKeys = {
   speechRate: 'dailyten-web:speech-rate',
   wallpaper: 'dailyten-web:wallpaper',
   wallpaperImage: 'dailyten-web:wallpaper-image',
+  wallpaperTop: 'dailyten-web:wallpaper-top',
 };
 
 const memoryStorage = new Map();
@@ -261,6 +262,25 @@ let availableDateKeys = new Set([todayKey, yesterdayKey]);
 let editionPathByDate = new Map();
 let aiEditionPathByDate = new Map();
 const editionCache = new Map();
+
+const wallpaperPresets = {
+  dawn: 'linear-gradient(160deg, #ffb48a 0%, #f58fb0 45%, #7e6fd0 100%)',
+  ocean: 'linear-gradient(170deg, #9fe3f0 0%, #4aa0d8 50%, #1f4e8c 100%)',
+  forest: 'linear-gradient(165deg, #cfe9b8 0%, #6fb98a 50%, #1f5e46 100%)',
+  lavender: 'linear-gradient(160deg, #e9ddff 0%, #b9a4ee 55%, #7d6bc4 100%)',
+  sand: 'linear-gradient(170deg, #fbf1dc 0%, #ecd2a0 55%, #c9a068 100%)',
+  night: 'linear-gradient(175deg, #1b2a52 0%, #0f1a38 55%, #070c1d 100%)',
+};
+
+// Top edge colour of each preset: iOS tints the status bar from the page colour behind it.
+const wallpaperPresetTop = {
+  dawn: '#ffb48a',
+  ocean: '#9fe3f0',
+  forest: '#cfe9b8',
+  lavender: '#e9ddff',
+  sand: '#fbf1dc',
+  night: '#1b2a52',
+};
 
 const state = {
   favorites: readSet(storageKeys.favorites),
@@ -3550,15 +3570,6 @@ function effectiveTheme() {
   return themeMedia.matches ? 'dark' : 'light';
 }
 
-const wallpaperPresets = {
-  dawn: 'linear-gradient(160deg, #ffb48a 0%, #f58fb0 45%, #7e6fd0 100%)',
-  ocean: 'linear-gradient(170deg, #9fe3f0 0%, #4aa0d8 50%, #1f4e8c 100%)',
-  forest: 'linear-gradient(165deg, #cfe9b8 0%, #6fb98a 50%, #1f5e46 100%)',
-  lavender: 'linear-gradient(160deg, #e9ddff 0%, #b9a4ee 55%, #7d6bc4 100%)',
-  sand: 'linear-gradient(170deg, #fbf1dc 0%, #ecd2a0 55%, #c9a068 100%)',
-  night: 'linear-gradient(175deg, #1b2a52 0%, #0f1a38 55%, #070c1d 100%)',
-};
-
 function readSavedWallpaper() {
   try {
     const saved = JSON.parse(storage.getItem(storageKeys.wallpaper) || '{}');
@@ -3581,6 +3592,48 @@ function wallpaperBackground(id) {
   return wallpaperPresets[id] || '';
 }
 
+// iOS 26 tints the status bar from the page colour at the top edge; match it to the photo
+// so the bar blends in instead of showing the pale page background as a white haze.
+function setWallpaperTopColor() {
+  const root = document.documentElement;
+  if (state.wallpaper.id !== 'custom') {
+    root.style.setProperty('--wallpaper-top', wallpaperPresetTop[state.wallpaper.id] || '');
+    return;
+  }
+  const saved = storage.getItem(storageKeys.wallpaperTop);
+  if (saved) {
+    root.style.setProperty('--wallpaper-top', saved);
+    return;
+  }
+  const image = new Image();
+  image.onload = () => {
+    const color = topEdgeColor(image);
+    storage.setItem(storageKeys.wallpaperTop, color);
+    if (state.wallpaper.id === 'custom') root.style.setProperty('--wallpaper-top', color);
+  };
+  image.src = storage.getItem(storageKeys.wallpaperImage) || '';
+}
+
+function topEdgeColor(image) {
+  const canvas = document.createElement('canvas');
+  canvas.width = 16;
+  canvas.height = 4;
+  const context = canvas.getContext('2d');
+  const stripHeight = Math.max(1, image.naturalHeight * 0.06);
+  context.drawImage(image, 0, 0, image.naturalWidth, stripHeight, 0, 0, canvas.width, canvas.height);
+  const { data } = context.getImageData(0, 0, canvas.width, canvas.height);
+  let r = 0;
+  let g = 0;
+  let b = 0;
+  const count = data.length / 4;
+  for (let i = 0; i < data.length; i += 4) {
+    r += data[i];
+    g += data[i + 1];
+    b += data[i + 2];
+  }
+  return `rgb(${Math.round(r / count)}, ${Math.round(g / count)}, ${Math.round(b / count)})`;
+}
+
 function applyWallpaper() {
   const root = document.documentElement;
   let layer = document.getElementById('wallpaper');
@@ -3589,8 +3642,10 @@ function applyWallpaper() {
     layer?.remove();
     delete root.dataset.wallpaper;
     delete root.dataset.glass;
+    root.style.removeProperty('--wallpaper-top');
     return;
   }
+  setWallpaperTopColor();
   if (!layer) {
     layer = document.createElement('div');
     layer.id = 'wallpaper';
@@ -3709,6 +3764,7 @@ function wireWallpaperSettings(root) {
     if (target.closest('[data-wp-delete]')) {
       confirmDeleteWallpaper(() => {
         storage.setItem(storageKeys.wallpaperImage, '');
+        storage.setItem(storageKeys.wallpaperTop, '');
         if (state.wallpaper.id === 'custom') state.wallpaper.id = 'none';
         customState = 'idle';
         saveWallpaper();
@@ -3744,6 +3800,7 @@ function wireWallpaperSettings(root) {
     error.hidden = true;
     try {
       storage.setItem(storageKeys.wallpaperImage, await downscaleImage(file));
+      storage.setItem(storageKeys.wallpaperTop, '');
       state.wallpaper.id = 'custom';
       saveWallpaper();
       applyWallpaper();
