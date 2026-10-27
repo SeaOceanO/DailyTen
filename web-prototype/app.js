@@ -88,6 +88,10 @@ const i18n = {
     wallpaper: '壁纸',
     wallpaperNone: '无',
     wallpaperPick: '相册',
+    wallpaperApply: '应用',
+    wallpaperDelete: '删除',
+    wallpaperDeleteAsk: '删除这张图片？',
+    wallpaperCancel: '取消',
     wallpaperGlass: '毛玻璃卡片',
     wallpaperGlassHint: '卡片半透明，壁纸会透出来；壁纸太花时文字可能不好读',
     wallpaperFailed: '这张图片读取失败，请换一张',
@@ -159,6 +163,10 @@ const i18n = {
     wallpaper: 'Wallpaper',
     wallpaperNone: 'None',
     wallpaperPick: 'Photos',
+    wallpaperApply: 'Apply',
+    wallpaperDelete: 'Delete',
+    wallpaperDeleteAsk: 'Delete this image?',
+    wallpaperCancel: 'Cancel',
     wallpaperGlass: 'Frosted cards',
     wallpaperGlassHint: 'Cards turn translucent and show the wallpaper; busy images can hurt readability',
     wallpaperFailed: 'Could not read that image. Try another one',
@@ -3625,15 +3633,29 @@ function wireWallpaperSettings(root) {
   const error = root.querySelector('[data-wallpaper-error]');
   if (!toggle || !panel) return;
 
+  // idle -> actions (apply / delete) -> confirm (delete?) for the imported photo
+  let customState = 'idle';
   const renderGrid = () => {
     const hasCustom = Boolean(storage.getItem(storageKeys.wallpaperImage));
-    const swatch = (id, style, label, extra = '') => `<button type="button" class="wallpaper-swatch${state.wallpaper.id === id ? ' is-selected' : ''}${extra}" data-wallpaper="${id}" aria-label="${escapeHtml(label)}" aria-pressed="${state.wallpaper.id === id}" style="${style}">${id === 'none' ? `<span>${escapeHtml(t('wallpaperNone'))}</span>` : ''}</button>`;
+    if (!hasCustom) customState = 'idle';
+    const swatch = (id, style, label) => `<button type="button" class="wallpaper-swatch${state.wallpaper.id === id ? ' is-selected' : ''}" data-wallpaper="${id}" aria-label="${escapeHtml(label)}" aria-pressed="${state.wallpaper.id === id}" style="${style}">${id === 'none' ? `<span>${escapeHtml(t('wallpaperNone'))}</span>` : ''}</button>`;
+    const customOverlay = customState === 'actions'
+      ? `<span class="wallpaper-actions"><button type="button" class="wallpaper-delete" data-wp-delete aria-label="${escapeHtml(t('wallpaperDelete'))}">×</button><button type="button" class="wallpaper-apply" data-wp-apply>${escapeHtml(t('wallpaperApply'))}</button></span>`
+      : customState === 'confirm'
+        ? `<span class="wallpaper-actions"><span class="wallpaper-ask">${escapeHtml(t('wallpaperDeleteAsk'))}</span><button type="button" class="wallpaper-apply" data-wp-cancel>${escapeHtml(t('wallpaperCancel'))}</button><button type="button" class="wallpaper-apply is-danger" data-wp-confirm>${escapeHtml(t('wallpaperDelete'))}</button></span>`
+        : '';
+    const custom = hasCustom
+      ? `<div class="wallpaper-swatch is-custom${state.wallpaper.id === 'custom' ? ' is-selected' : ''}" data-wallpaper-custom role="button" tabindex="0" aria-label="${escapeHtml(t('wallpaperPick'))}">${customOverlay}</div>`
+      : '';
     grid.innerHTML = [
       swatch('none', '', t('wallpaperNone')),
       ...Object.keys(wallpaperPresets).map((id) => swatch(id, `background:${wallpaperPresets[id]}`, id)),
-      hasCustom ? swatch('custom', `background:${wallpaperBackground('custom')} center/cover`, t('wallpaperPick')) : '',
+      custom,
       `<button type="button" class="wallpaper-swatch is-upload" data-wallpaper-upload aria-label="${escapeHtml(t('wallpaperPick'))}"><span>+ ${escapeHtml(t('wallpaperPick'))}</span></button>`,
     ].join('');
+    // The photo is a data: URL, so set it from script instead of an inline style attribute.
+    const customSwatch = grid.querySelector('[data-wallpaper-custom]');
+    if (customSwatch) customSwatch.style.backgroundImage = wallpaperBackground('custom');
     badge.textContent = state.wallpaper.id === 'none' ? (state.language === 'en' ? 'OFF' : '关') : (state.language === 'en' ? 'ON' : '开');
     glass.checked = state.wallpaper.glass;
   };
@@ -3645,12 +3667,46 @@ function wireWallpaperSettings(root) {
   });
 
   grid.addEventListener('click', (event) => {
-    if (event.target.closest('[data-wallpaper-upload]')) {
+    const target = event.target;
+    if (target.closest('[data-wallpaper-upload]')) {
       fileInput.click();
       return;
     }
-    const id = event.target.closest('[data-wallpaper]')?.dataset.wallpaper;
+    if (target.closest('[data-wp-apply]')) {
+      state.wallpaper.id = 'custom';
+      customState = 'idle';
+      saveWallpaper();
+      applyWallpaper();
+      renderGrid();
+      return;
+    }
+    if (target.closest('[data-wp-delete]')) {
+      customState = 'confirm';
+      renderGrid();
+      return;
+    }
+    if (target.closest('[data-wp-cancel]')) {
+      customState = 'actions';
+      renderGrid();
+      return;
+    }
+    if (target.closest('[data-wp-confirm]')) {
+      storage.setItem(storageKeys.wallpaperImage, '');
+      if (state.wallpaper.id === 'custom') state.wallpaper.id = 'none';
+      customState = 'idle';
+      saveWallpaper();
+      applyWallpaper();
+      renderGrid();
+      return;
+    }
+    if (target.closest('[data-wallpaper-custom]')) {
+      customState = customState === 'idle' ? 'actions' : 'idle';
+      renderGrid();
+      return;
+    }
+    const id = target.closest('[data-wallpaper]')?.dataset.wallpaper;
     if (!id) return;
+    customState = 'idle';
     state.wallpaper.id = id;
     saveWallpaper();
     applyWallpaper();
