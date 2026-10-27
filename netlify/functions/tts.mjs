@@ -16,12 +16,14 @@ async function synthesize(key, locale, voice, text) {
     audioConfig: { audioEncoding: 'MP3' },
   });
   let last;
-  // Google occasionally rejects a valid request with a transient 400; one retry is enough.
-  for (let attempt = 0; attempt < 2; attempt += 1) {
+  // Google occasionally rejects a valid request with a transient 400 ("sentence too long").
+  // Retry as is, then with every comma turned into a sentence break.
+  const bodies = [body, body, JSON.stringify({ ...JSON.parse(body), input: { text: text.replace(/[，,、；;：:]/g, '。') } })];
+  for (const attempt of bodies) {
     last = await fetch(`https://texttospeech.googleapis.com/v1/text:synthesize?key=${encodeURIComponent(key)}`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body,
+      body: attempt,
     });
     if (last.ok) return last;
   }
@@ -34,7 +36,9 @@ export default async (request) => {
     const key = process.env.GOOGLE_TTS_API_KEY;
     const report = { keyConfigured: Boolean(key), keyLength: key ? key.length : 0 };
     if (key) {
-      const probe = await synthesize(key, 'cmn-CN', 'Aoede', '你好。');
+      const probeText = new URL(request.url).searchParams.get('text') || '你好。';
+      report.textLength = probeText.length;
+      const probe = await synthesize(key, 'cmn-CN', 'Aoede', probeText);
       report.googleStatus = probe.status;
       if (!probe.ok) report.googleError = (await probe.text()).slice(0, 400);
     }
