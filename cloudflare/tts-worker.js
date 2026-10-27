@@ -1,5 +1,5 @@
-// Read-aloud voice proxy: GET /.netlify/functions/tts?lang=zh|en&voice=female|male&text=...
-// The Google key lives only in the GOOGLE_TTS_API_KEY environment variable of the Netlify site.
+// Read-aloud voice proxy (Cloudflare Worker): GET /?lang=zh|en&voice=female|male&text=...
+// The Google key lives only in the GOOGLE_TTS_API_KEY secret of the Worker.
 const VOICES = { female: 'Aoede', male: 'Charon' };
 const LOCALES = { zh: 'cmn-CN', en: 'en-US' };
 const MAX_CHARS = 1200;
@@ -69,14 +69,14 @@ async function synthesize(key, locale, voice, text) {
   return { ok: true, status: 200, audio, pieces: results.length };
 }
 
-export default async (request) => {
+async function handle(request, env) {
   const referer = request.headers.get('origin') || request.headers.get('referer') || '';
   const headers = cors(referer);
   const fail = (status, message) => new Response(message, { status, headers: { ...headers, 'Cache-Control': 'no-store' } });
 
   // Only our own pages may spend the quota (the Referer can be forged, so the length cap below is the real limit).
   if (!ALLOWED_ORIGIN.test(referer)) return fail(403, 'forbidden');
-  const key = process.env.GOOGLE_TTS_API_KEY;
+  const key = env.GOOGLE_TTS_API_KEY;
   if (!key) return fail(503, 'voice service not configured');
 
   const url = new URL(request.url);
@@ -96,4 +96,6 @@ export default async (request) => {
       Vary: 'Origin',
     },
   });
-};
+}
+
+export default { fetch: handle };
