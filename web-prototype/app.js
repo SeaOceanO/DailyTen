@@ -706,7 +706,7 @@ function hydrateEdition(edition) {
   elements.subtitle.textContent = subtitle;
   elements.progressTitle.textContent = localizedBriefLabel(edition);
   elements.progressStatus.textContent = t('progressDefault');
-  elements.doneCard.textContent = coalesce(edition.doneLabel, t('readComplete'));
+  elements.doneCard.textContent = state.language === 'en' ? t('readComplete') : coalesce(edition.doneLabel, t('readComplete'));
   // An empty favorites page already shows its own empty-state card; skip the progress card there.
   elements.progressCard.hidden = state.channel === 'mine'
     || (state.channel === 'favorites' && !(edition.items || []).length);
@@ -2434,6 +2434,8 @@ function syncSpeechUI() {
   elements.audioClose.setAttribute('aria-label', t('closePlayer'));
   elements.audioSpeed.setAttribute('aria-label', t('speechSpeed'));
   elements.audioSpeed.closest('label')?.setAttribute('title', t('speechSpeed'));
+  const speedCaption = elements.audioSpeed.closest('label')?.querySelector('.sr-only');
+  if (speedCaption) speedCaption.textContent = t('speechSpeed');
 }
 
 function sectionTitle(text) {
@@ -2485,9 +2487,7 @@ async function buildFavoritesEdition() {
     dateKey: 'favorites',
     generatedAt: new Date().toISOString(),
     title: t('favoritesTitle'),
-    subtitle: favoriteItems.length
-      ? t('favoritesSubtitle')
-      : channels.favorites.fallbackSubtitle,
+    subtitle: t('favoritesSubtitle'),
     briefLabel: favoriteItems.length
       ? (state.language === 'en' ? `${favoriteItems.length} saved` : `已收藏 ${favoriteItems.length} 条`)
       : t('favoritesEmptyTitle'),
@@ -3926,7 +3926,7 @@ function localizedEditionTitle(edition, channel) {
 
 function localizedEditionSubtitle(edition, channel) {
   if (state.channel === 'mine') return t('mineSubtitle');
-  if (state.channel === 'favorites') return coalesce(edition.subtitle, t('favoritesSubtitle'));
+  if (state.channel === 'favorites') return t('favoritesSubtitle');
   if (state.language === 'en') {
     return state.channel === 'ai'
       ? 'Models, agents, compute, chips, products, and governance in one quiet briefing.'
