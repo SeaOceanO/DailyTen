@@ -38,6 +38,14 @@ function splitText(text) {
   return merged;
 }
 
+// A plain loop keeps CPU time low; the free Workers plan allows only a few milliseconds per request.
+function decodeBase64(base64) {
+  const binary = atob(base64);
+  const bytes = new Uint8Array(binary.length);
+  for (let i = 0; i < binary.length; i += 1) bytes[i] = binary.charCodeAt(i);
+  return bytes;
+}
+
 async function synthesizePiece(key, locale, voice, text) {
   const body = JSON.stringify({
     input: { text },
@@ -51,7 +59,7 @@ async function synthesizePiece(key, locale, voice, text) {
       headers: { 'Content-Type': 'application/json' },
       body,
     });
-    if (last.ok) return { ok: true, status: 200, audio: Uint8Array.from(atob((await last.json()).audioContent), (char) => char.charCodeAt(0)) };
+    if (last.ok) return { ok: true, status: 200, audio: decodeBase64((await last.json()).audioContent) };
   }
   return { ok: false, status: last.status, error: (await last.text()).slice(0, 400) };
 }
@@ -91,7 +99,7 @@ async function handle(request, env) {
     headers: {
       ...headers,
       'Content-Type': 'audio/mpeg',
-      // Same text + voice always gives the same audio, so browsers and Netlify's CDN may keep it.
+      // Same text + voice always gives the same audio, so browsers may keep it.
       'Cache-Control': 'public, max-age=31536000, immutable',
       Vary: 'Origin',
     },
