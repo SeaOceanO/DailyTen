@@ -357,11 +357,9 @@ const channelScrollPositions = new Map();
 const pagePanes = new Map();
 let pageViewport = null;
 let pageTrack = null;
-// Natural voices come from a small Netlify function (the Google key lives only there).
-// Previews call their own origin; GitHub Pages calls the Netlify site.
-const TTS_ENDPOINT = /\.netlify\.app$/.test(location.hostname)
-  ? '/.netlify/functions/tts'
-  : 'https://ornate-cactus-877d93.netlify.app/.netlify/functions/tts';
+// Natural voices come from a small Cloudflare Worker (cloudflare/tts-worker.js); the Google key lives only there.
+// Leave the address empty to turn the female/male voices off (the system voice is used instead).
+const TTS_ENDPOINT = 'https://dailyten-tts.00seaocean00.workers.dev';
 const TTS_MAX_CHARS = 1200;
 
 const speechState = {
@@ -2063,11 +2061,11 @@ function normalizeSpeechVoice(value) {
 }
 
 function cloudVoiceUrlFor(item, itemIndex) {
-  if (speechState.voice === 'system') return '';
+  if (speechState.voice === 'system' || !TTS_ENDPOINT) return '';
   const text = buildSpeechParagraph(item, itemIndex);
   if (!text || text.length > TTS_MAX_CHARS) return '';
   const params = new URLSearchParams({ lang: state.language === 'en' ? 'en' : 'zh', voice: speechState.voice, text });
-  return `${TTS_ENDPOINT}?${params}`;
+  return `${TTS_ENDPOINT}/?${params}`;
 }
 
 function normalizeSpeechRate(value) {

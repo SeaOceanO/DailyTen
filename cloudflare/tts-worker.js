@@ -1,5 +1,5 @@
-// Read-aloud voice proxy: GET /.netlify/functions/tts?lang=zh|en&voice=female|male&text=...
-// The Google key lives only in the GOOGLE_TTS_API_KEY environment variable of the Netlify site.
+// Read-aloud voice proxy (Cloudflare Worker): GET /?lang=zh|en&voice=female|male&text=...
+// The Google key lives only in the GOOGLE_TTS_API_KEY secret of the Worker.
 const VOICES = { female: 'Aoede', male: 'Charon' };
 const LOCALES = { zh: 'cmn-CN', en: 'en-US' };
 const MAX_CHARS = 1200;
@@ -38,6 +38,14 @@ function splitText(text) {
   return merged;
 }
 
+// A plain loop keeps CPU time low; the free Workers plan allows only a few milliseconds per request.
+function decodeBase64(base64) {
+  const binary = atob(base64);
+  const bytes = new Uint8Array(binary.length);
+  for (let i = 0; i < binary.length; i += 1) bytes[i] = binary.charCodeAt(i);
+  return bytes;
+}
+
 async function synthesizePiece(key, locale, voice, text) {
   const body = JSON.stringify({
     input: { text },
@@ -51,7 +59,7 @@ async function synthesizePiece(key, locale, voice, text) {
       headers: { 'Content-Type': 'application/json' },
       body,
     });
-    if (last.ok) return { ok: true, status: 200, audio: Uint8Array.from(atob((await last.json()).audioContent), (char) => char.charCodeAt(0)) };
+    if (last.ok) return { ok: true, status: 200, audio: decodeBase64((await last.json()).audioContent) };
   }
   return { ok: false, status: last.status, error: (await last.text()).slice(0, 400) };
 }
@@ -69,14 +77,14 @@ async function synthesize(key, locale, voice, text) {
   return { ok: true, status: 200, audio, pieces: results.length };
 }
 
-export default async (request) => {
+async function handle(request, env) {
   const referer = request.headers.get('origin') || request.headers.get('referer') || '';
   const headers = cors(referer);
   const fail = (status, message) => new Response(message, { status, headers: { ...headers, 'Cache-Control': 'no-store' } });
 
   // Only our own pages may spend the quota (the Referer can be forged, so the length cap below is the real limit).
   if (!ALLOWED_ORIGIN.test(referer)) return fail(403, 'forbidden');
-  const key = process.env.GOOGLE_TTS_API_KEY;
+  const key = env.GOOGLE_TTS_API_KEY;
   if (!key) return fail(503, 'voice service not configured');
 
   const url = new URL(request.url);
@@ -91,9 +99,11 @@ export default async (request) => {
     headers: {
       ...headers,
       'Content-Type': 'audio/mpeg',
-      // Same text + voice always gives the same audio, so browsers and Netlify's CDN may keep it.
+      // Same text + voice always gives the same audio, so browsers may keep it.
       'Cache-Control': 'public, max-age=31536000, immutable',
       Vary: 'Origin',
     },
   });
-};
+}
+
+export default { fetch: handle };
