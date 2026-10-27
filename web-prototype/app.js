@@ -1700,21 +1700,94 @@ function impactIconSvg(label, index) {
 
 const CARD_EASING = 'cubic-bezier(0.32, 0.72, 0, 1)';
 
-// The photo-card header changes layout (thumbnail <-> banner) when `is-open` toggles.
-// Animate its height alongside the details so the card never jumps in a single frame.
-function animateHeaderHeight(header, from, to, duration) {
-  if (!header.animate || Math.abs(from - to) < 1) return null;
-  header.style.overflow = 'hidden';
-  return header.animate(
-    [{ height: `${from}px` }, { height: `${to}px` }],
-    { duration, easing: CARD_EASING, fill: 'both' },
-  );
-}
+// The card header restyles when `is-open` toggles (thumbnail <-> banner, overlay text <-> plain text).
+// FLIP it: toggle the class, then animate the photo's size, the text block's position and the
+// header height from the old layout to the new one, so nothing jumps in a single frame.
+function flipHeaderLayout(card, header, toggle, duration) {
+  const media = header.querySelector('.card-media');
+  const body = header.querySelector('.card-body');
+  const rect = (el) => (el ? el.getBoundingClientRect() : null);
+  const mediaStyle = (el) => {
+    if (!el) return null;
+    const cs = getComputedStyle(el);
+    return { mt: parseFloat(cs.marginTop) || 0, mb: parseFloat(cs.marginBottom) || 0, radius: cs.borderRadius };
+  };
 
-function finishHeaderAnimation(header, animation) {
-  if (!animation) return;
-  animation.cancel();
-  header.style.overflow = '';
+  const headerFirst = rect(header).height;
+  const mediaFirst = rect(media);
+  const bodyFirst = rect(body);
+  const mediaFirstStyle = mediaStyle(media);
+
+  toggle();
+
+  const headerLast = rect(header).height;
+  const mediaLast = rect(media);
+  const mediaLastStyle = mediaStyle(media);
+  const animations = [];
+  const options = { duration, easing: CARD_EASING, fill: 'both' };
+
+  if (!header.animate || Math.abs(headerFirst - headerLast) < 1 && !media) {
+    return { headerFrom: headerFirst, headerTo: headerLast, finish() {} };
+  }
+
+  let startOffset = { x: 0, y: 0 };
+  if (media && mediaFirst && mediaLast) {
+    // Where would the text block sit if the photo already had its starting size?
+    const prev = media.style.cssText;
+    media.style.width = `${mediaFirst.width}px`;
+    media.style.height = `${mediaFirst.height}px`;
+    media.style.marginTop = `${mediaFirstStyle.mt}px`;
+    media.style.marginBottom = `${mediaFirstStyle.mb}px`;
+    const bodyNatural = rect(body);
+    media.style.cssText = prev;
+    if (bodyFirst && bodyNatural) {
+      startOffset = { x: bodyFirst.left - bodyNatural.left, y: bodyFirst.top - bodyNatural.top };
+    }
+    animations.push(media.animate([
+      {
+        width: `${mediaFirst.width}px`,
+        height: `${mediaFirst.height}px`,
+        marginTop: `${mediaFirstStyle.mt}px`,
+        marginBottom: `${mediaFirstStyle.mb}px`,
+        borderRadius: mediaFirstStyle.radius,
+        transform: `translate(${mediaFirst.left - mediaLast.left}px, ${mediaFirst.top - mediaLast.top - (mediaFirstStyle.mt - mediaLastStyle.mt)}px)`,
+      },
+      {
+        width: `${mediaLast.width}px`,
+        height: `${mediaLast.height}px`,
+        marginTop: `${mediaLastStyle.mt}px`,
+        marginBottom: `${mediaLastStyle.mb}px`,
+        borderRadius: mediaLastStyle.radius,
+        transform: 'translate(0, 0)',
+      },
+    ], options));
+  } else if (body && bodyFirst) {
+    const bodyLast = rect(body);
+    startOffset = { x: bodyFirst.left - bodyLast.left, y: bodyFirst.top - bodyLast.top };
+  }
+
+  if (body) {
+    animations.push(body.animate([
+      { opacity: 0.15, transform: `translate(${startOffset.x}px, ${startOffset.y}px)` },
+      { opacity: 1, offset: 0.5 },
+      { opacity: 1, transform: 'translate(0, 0)' },
+    ], options));
+  }
+
+  header.style.overflow = 'hidden';
+  animations.push(header.animate(
+    [{ height: `${headerFirst}px` }, { height: `${headerLast}px` }],
+    options,
+  ));
+
+  return {
+    headerFrom: headerFirst,
+    headerTo: headerLast,
+    finish() {
+      animations.forEach((animation) => animation.cancel());
+      header.style.overflow = '';
+    },
+  };
 }
 
 async function openCard(card, header, item) {
@@ -1722,18 +1795,18 @@ async function openCard(card, header, item) {
   if (!details) return;
 
   const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  const headerFrom = header.getBoundingClientRect().height;
-  card.classList.add('is-open');
-  const headerTo = header.getBoundingClientRect().height;
   header.setAttribute('aria-expanded', 'true');
   state.read.add(item.id);
   writeSet(storageKeys.read, state.read);
   updateProgress();
 
-  if (reduceMotion || !details.animate) return;
+  if (reduceMotion || !details.animate) {
+    card.classList.add('is-open');
+    return;
+  }
 
   card.classList.add('is-card-animating', 'is-opening');
-  const headerAnimation = animateHeaderHeight(header, headerFrom, headerTo, 300);
+  const headerFlip = flipHeaderLayout(card, header, () => card.classList.add('is-open'), 300);
   const targetHeight = details.scrollHeight;
   const animation = details.animate([
     {
@@ -1764,7 +1837,7 @@ async function openCard(card, header, item) {
     // A page change can intentionally interrupt this animation.
   } finally {
     animation.cancel();
-    finishHeaderAnimation(header, headerAnimation);
+    headerFlip.finish();
     card.classList.remove('is-card-animating', 'is-opening');
   }
 }
@@ -1782,12 +1855,6 @@ async function collapseCard(card, header, anchor) {
   const keepBottomStable = anchor === 'bottom';
   const root = document.documentElement;
 
-  // Measure the closed header height without painting the intermediate state.
-  const headerFrom = header.getBoundingClientRect().height;
-  card.classList.remove('is-open');
-  const headerTo = header.getBoundingClientRect().height;
-  card.classList.add('is-open');
-
   if (keepBottomStable) root.classList.add('is-card-collapsing');
   header.setAttribute('aria-expanded', 'false');
 
@@ -1802,7 +1869,7 @@ async function collapseCard(card, header, anchor) {
 
   const duration = 280;
   card.classList.add('is-card-animating', keepBottomStable ? 'is-collapsing-bottom' : 'is-collapsing-top');
-  const headerAnimation = animateHeaderHeight(header, headerFrom, headerTo, duration);
+  const headerFlip = flipHeaderLayout(card, header, () => card.classList.remove('is-open'), duration);
   const animation = details.animate([
     {
       clipPath: 'inset(0 0 0 0)',
@@ -1844,7 +1911,7 @@ async function collapseCard(card, header, anchor) {
     compensating = false;
     card.classList.remove('is-open');
     animation.cancel();
-    finishHeaderAnimation(header, headerAnimation);
+    headerFlip.finish();
     card.classList.remove('is-card-animating', 'is-collapsing-top', 'is-collapsing-bottom');
     if (keepBottomStable) {
       const shrunk = startCardHeight - card.getBoundingClientRect().height;
