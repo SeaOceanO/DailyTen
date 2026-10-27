@@ -3250,3 +3250,40 @@ html[data-wallpaper] {
   top: 6px;
   width: 30px;
 }
+
+.voice-row {
+  cursor: default;
+  flex-wrap: wrap;
+}
+
+.voice-row:hover {
+  border-color: var(--line);
+  box-shadow: none;
+}
+
+.voice-row:active {
+  transform: none;
+}
+
+.voice-choice {
+  background: var(--sage);
+  border: 1px solid var(--sage-border);
+  border-radius: 999px;
+  display: inline-flex;
+  padding: 3px;
+}
+
+.voice-choice button {
+  all: unset;
+  border-radius: 999px;
+  color: var(--olive);
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 800;
+  padding: 7px 13px;
+}
+
+.voice-choice button[aria-pressed="true"] {
+  background: var(--olive);
+  color: var(--card);
+}
