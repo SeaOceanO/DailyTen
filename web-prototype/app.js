@@ -91,6 +91,7 @@ const i18n = {
     wallpaperApply: '应用',
     wallpaperDelete: '删除',
     wallpaperDeleteAsk: '删除这张图片？',
+    wallpaperDeleteNote: '删除后无法恢复，需要重新从相册导入。',
     wallpaperCancel: '取消',
     wallpaperGlass: '毛玻璃卡片',
     wallpaperGlassHint: '卡片半透明，壁纸会透出来；壁纸太花时文字可能不好读',
@@ -166,6 +167,7 @@ const i18n = {
     wallpaperApply: 'Apply',
     wallpaperDelete: 'Delete',
     wallpaperDeleteAsk: 'Delete this image?',
+    wallpaperDeleteNote: 'This cannot be undone. You would need to import it again.',
     wallpaperCancel: 'Cancel',
     wallpaperGlass: 'Frosted cards',
     wallpaperGlassHint: 'Cards turn translucent and show the wallpaper; busy images can hurt readability',
@@ -3623,6 +3625,32 @@ function downscaleImage(file, maxSide = 1280) {
   });
 }
 
+// Centered confirm dialog: the thumbnail is too small to hold a readable prompt.
+function confirmDeleteWallpaper(onConfirm) {
+  const backdrop = document.createElement('div');
+  backdrop.className = 'modal-backdrop';
+  backdrop.innerHTML = `
+    <section class="choice-modal confirm-modal" role="alertdialog" aria-modal="true" aria-label="${escapeHtml(t('wallpaperDeleteAsk'))}">
+      <h2>${escapeHtml(t('wallpaperDeleteAsk'))}</h2>
+      <p>${escapeHtml(t('wallpaperDeleteNote'))}</p>
+      <div class="confirm-actions">
+        <button type="button" class="confirm-cancel" data-confirm-cancel>${escapeHtml(t('wallpaperCancel'))}</button>
+        <button type="button" class="confirm-delete" data-confirm-ok>${escapeHtml(t('wallpaperDelete'))}</button>
+      </div>
+    </section>
+  `;
+  const close = () => backdrop.remove();
+  backdrop.addEventListener('click', (event) => {
+    if (event.target === backdrop || event.target.closest('[data-confirm-cancel]')) close();
+    else if (event.target.closest('[data-confirm-ok]')) {
+      close();
+      onConfirm();
+    }
+  });
+  document.body.appendChild(backdrop);
+  backdrop.querySelector('[data-confirm-cancel]').focus();
+}
+
 function wireWallpaperSettings(root) {
   const toggle = root.querySelector('[data-settings-action="wallpaper"]');
   const panel = root.querySelector('[data-wallpaper-panel]');
@@ -3641,9 +3669,7 @@ function wireWallpaperSettings(root) {
     const swatch = (id, style, label) => `<button type="button" class="wallpaper-swatch${state.wallpaper.id === id ? ' is-selected' : ''}" data-wallpaper="${id}" aria-label="${escapeHtml(label)}" aria-pressed="${state.wallpaper.id === id}" style="${style}">${id === 'none' ? `<span>${escapeHtml(t('wallpaperNone'))}</span>` : ''}</button>`;
     const customOverlay = customState === 'actions'
       ? `<span class="wallpaper-actions"><button type="button" class="wallpaper-delete" data-wp-delete aria-label="${escapeHtml(t('wallpaperDelete'))}">×</button><button type="button" class="wallpaper-apply" data-wp-apply>${escapeHtml(t('wallpaperApply'))}</button></span>`
-      : customState === 'confirm'
-        ? `<span class="wallpaper-actions"><span class="wallpaper-ask">${escapeHtml(t('wallpaperDeleteAsk'))}</span><button type="button" class="wallpaper-apply" data-wp-cancel>${escapeHtml(t('wallpaperCancel'))}</button><button type="button" class="wallpaper-apply is-danger" data-wp-confirm>${escapeHtml(t('wallpaperDelete'))}</button></span>`
-        : '';
+      : '';
     const custom = hasCustom
       ? `<div class="wallpaper-swatch is-custom${state.wallpaper.id === 'custom' ? ' is-selected' : ''}" data-wallpaper-custom role="button" tabindex="0" aria-label="${escapeHtml(t('wallpaperPick'))}">${customOverlay}</div>`
       : '';
@@ -3681,22 +3707,14 @@ function wireWallpaperSettings(root) {
       return;
     }
     if (target.closest('[data-wp-delete]')) {
-      customState = 'confirm';
-      renderGrid();
-      return;
-    }
-    if (target.closest('[data-wp-cancel]')) {
-      customState = 'actions';
-      renderGrid();
-      return;
-    }
-    if (target.closest('[data-wp-confirm]')) {
-      storage.setItem(storageKeys.wallpaperImage, '');
-      if (state.wallpaper.id === 'custom') state.wallpaper.id = 'none';
-      customState = 'idle';
-      saveWallpaper();
-      applyWallpaper();
-      renderGrid();
+      confirmDeleteWallpaper(() => {
+        storage.setItem(storageKeys.wallpaperImage, '');
+        if (state.wallpaper.id === 'custom') state.wallpaper.id = 'none';
+        customState = 'idle';
+        saveWallpaper();
+        applyWallpaper();
+        renderGrid();
+      });
       return;
     }
     if (target.closest('[data-wallpaper-custom]')) {

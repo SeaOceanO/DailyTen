@@ -3165,11 +3165,6 @@ html[data-wallpaper] body::after {
   padding: 6px 14px;
 }
 
-.wallpaper-apply.is-danger {
-  background: #d2554a;
-  color: #ffffff;
-}
-
 .wallpaper-delete {
   background: rgba(255, 255, 255, 0.9);
   border-radius: 50%;
@@ -3183,24 +3178,51 @@ html[data-wallpaper] body::after {
   width: 26px;
 }
 
-.wallpaper-ask {
-  color: #ffffff;
-  font-size: 12.5px;
-  font-weight: 600;
+
+
+
+/* centered delete confirmation */
+.confirm-modal {
+  max-width: 320px;
   text-align: center;
 }
 
-.wallpaper-actions:has(.wallpaper-ask) {
-  gap: 5px;
-  padding: 6px;
+.confirm-modal h2 {
+  color: var(--ink);
+  font-size: 18px;
+  margin: 4px 0 8px;
 }
 
-.wallpaper-actions:has(.wallpaper-ask) .wallpaper-apply {
-  font-size: 12px;
-  padding: 4px 12px;
+.confirm-modal p {
+  color: var(--secondary);
+  font-size: 14px;
+  line-height: 1.5;
+  margin: 0 0 16px;
 }
 
-.wallpaper-ask {
-  font-size: 12px;
-  line-height: 1.25;
+.confirm-actions {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: 1fr 1fr;
+}
+
+.confirm-actions button {
+  appearance: none;
+  border: 0;
+  border-radius: 999px;
+  cursor: pointer;
+  font: inherit;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 12px 0;
+}
+
+.confirm-cancel {
+  background: var(--inset);
+  color: var(--ink);
+}
+
+.confirm-delete {
+  background: #d2554a;
+  color: #ffffff;
 }
