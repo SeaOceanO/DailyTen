@@ -626,6 +626,8 @@ function hydrateEdition(edition) {
     || (state.channel === 'favorites' && !(edition.items || []).length);
 }
 
+let lastNavTapAt = 0;
+
 function renderChannelTabs() {
   elements.channelTabs.hidden = true;
   const activeTab = state.channel === 'favorites' ? 'mine' : state.channel;
@@ -641,6 +643,18 @@ function renderChannelTabs() {
   elements.bottomNav.querySelectorAll('[data-channel]').forEach((button) => {
     button.addEventListener('click', async () => {
       const nextChannel = button.dataset.channel;
+      // Double-tapping the active Home / AI tab scrolls its page back to the top.
+      if (nextChannel === state.channel && nextChannel !== 'mine') {
+        const now = Date.now();
+        if (now - lastNavTapAt < 450) {
+          lastNavTapAt = 0;
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        } else {
+          lastNavTapAt = now;
+        }
+        return;
+      }
+      lastNavTapAt = 0;
       await setActiveChannel(nextChannel);
     });
   });
