@@ -525,11 +525,14 @@ async function loadAndRender(preloadedLatestEdition = null, reusePane = false) {
     const canUsePreloaded = preloadedLatestEdition
       && state.channel === 'daily'
       && state.selectedDateKey === todayKey;
-    const edition = canUsePreloaded
+    let edition = canUsePreloaded
       ? preloadedLatestEdition
       : await loadEdition(state.channel, state.selectedDateKey);
     if (state.channel === 'daily' && state.selectedDateKey === todayKey) {
       latestDailyEdition = edition;
+    }
+    if (state.channel === 'daily') {
+      edition = withoutAiItems(edition);
     }
     items = displayOrder(edition.items);
     hydrateEdition(edition);
@@ -606,6 +609,14 @@ async function loadEdition(channel, dateKey) {
   }
 
   return buildLocalEdition(channel, dateKey);
+}
+
+// AI and robotics news belongs on the AI page only, including in older daily archives.
+const aiOnlyCategories = new Set(['AI', '机器人与具身智能']);
+
+function withoutAiItems(edition) {
+  const kept = (edition.items || []).filter((item) => !aiOnlyCategories.has(item.cat));
+  return kept.length === (edition.items || []).length ? edition : { ...edition, items: kept };
 }
 
 function adaptArchivedEditionForAi(edition) {
