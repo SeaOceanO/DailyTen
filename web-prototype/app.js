@@ -612,7 +612,9 @@ function hydrateEdition(edition) {
   elements.progressTitle.textContent = localizedBriefLabel(edition);
   elements.progressStatus.textContent = t('progressDefault');
   elements.doneCard.textContent = coalesce(edition.doneLabel, t('readComplete'));
-  elements.progressCard.hidden = state.channel === 'mine';
+  // An empty favorites page already shows its own empty-state card; skip the progress card there.
+  elements.progressCard.hidden = state.channel === 'mine'
+    || (state.channel === 'favorites' && !(edition.items || []).length);
 }
 
 function renderChannelTabs() {
