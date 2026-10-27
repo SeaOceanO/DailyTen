@@ -3231,28 +3231,22 @@ html[data-wallpaper] {
   background-color: var(--wallpaper-top, var(--bg));
 }
 
-/* wider imported-photo tile so apply and delete sit well apart */
-.wallpaper-grid {
-  grid-auto-flow: dense;
-}
-
-.wallpaper-swatch.is-custom {
-  aspect-ratio: 3 / 2;
-  grid-column: span 2;
-}
-
+/* imported photo keeps the normal tile size: delete at the top, apply at the bottom */
 .wallpaper-actions {
-  align-items: flex-start;
-  padding: 12px;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 8px;
 }
 
 .wallpaper-apply {
+  font-size: 13px;
+  padding: 6px 12px;
   white-space: nowrap;
 }
 
 .wallpaper-delete {
-  height: 34px;
-  right: 8px;
-  top: 8px;
-  width: 34px;
+  height: 30px;
+  right: 6px;
+  top: 6px;
+  width: 30px;
 }
