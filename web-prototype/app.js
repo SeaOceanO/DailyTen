@@ -85,6 +85,16 @@ const i18n = {
     mutedCatsHint: '这些分类的新闻会排到最后并变淡',
     mutedCatsEmpty: '还没有。展开新闻后点“少看这类”即可添加。',
     restore: '恢复',
+    wallpaper: '壁纸',
+    wallpaperNone: '无',
+    wallpaperPick: '相册',
+    wallpaperApply: '应用',
+    wallpaperDelete: '删除',
+    wallpaperDeleteAsk: '删除这张图片？',
+    wallpaperCancel: '取消',
+    wallpaperGlass: '毛玻璃卡片',
+    wallpaperGlassHint: '卡片半透明，壁纸会透出来；壁纸太花时文字可能不好读',
+    wallpaperFailed: '这张图片读取失败，请换一张',
     conclusion: '一句话结论',
     facts: '三个关键事实',
     visual: '核心可视化',
@@ -150,6 +160,16 @@ const i18n = {
     mutedCatsHint: 'These categories sink to the bottom and fade',
     mutedCatsEmpty: 'None yet. Open a story and tap “Show less” to add one.',
     restore: 'Restore',
+    wallpaper: 'Wallpaper',
+    wallpaperNone: 'None',
+    wallpaperPick: 'Photos',
+    wallpaperApply: 'Apply',
+    wallpaperDelete: 'Delete',
+    wallpaperDeleteAsk: 'Delete this image?',
+    wallpaperCancel: 'Cancel',
+    wallpaperGlass: 'Frosted cards',
+    wallpaperGlassHint: 'Cards turn translucent and show the wallpaper; busy images can hurt readability',
+    wallpaperFailed: 'Could not read that image. Try another one',
     conclusion: 'Bottom line',
     facts: 'Three key facts',
     visual: 'Core visual',
@@ -191,6 +211,8 @@ const storageKeys = {
   theme: 'dailyten-web:theme',
   themeVersion: 'dailyten-web:theme-version',
   speechRate: 'dailyten-web:speech-rate',
+  wallpaper: 'dailyten-web:wallpaper',
+  wallpaperImage: 'dailyten-web:wallpaper-image',
 };
 
 const memoryStorage = new Map();
@@ -245,6 +267,7 @@ const state = {
   channel: 'daily',
   language: readSavedLanguage(),
   theme: readSavedTheme(),
+  wallpaper: readSavedWallpaper(),
   selectedDateKey: readSavedDateKey(),
   calendarExpanded: false,
   calendarMonth: null,
@@ -332,6 +355,7 @@ async function init() {
   showLoadingState('正在读取这一天的十条...');
   safeSetup(setupPagePanes);
   safeSetup(applyTheme);
+  safeSetup(applyWallpaper);
   safeSetup(renderChannelTabs);
   safeSetup(renderLanguageModal);
   safeSetup(renderThemeModal);
@@ -1385,6 +1409,26 @@ function renderMine() {
         <b>${escapeHtml(themeBadge(state.theme))}</b>
       </button>
     </section>
+    <section class="settings-list" aria-label="${escapeHtml(t('wallpaper'))}">
+      <button class="settings-row" type="button" data-settings-action="wallpaper" aria-expanded="false">
+        <span>
+          <strong>${escapeHtml(t('wallpaper'))}</strong>
+        </span>
+        <b data-wallpaper-badge></b>
+      </button>
+      <div class="wallpaper-panel" data-wallpaper-panel hidden>
+        <div class="wallpaper-grid" data-wallpaper-grid></div>
+        <label class="wallpaper-toggle">
+          <span>
+            <strong>${escapeHtml(t('wallpaperGlass'))}</strong>
+            <em>${escapeHtml(t('wallpaperGlassHint'))}</em>
+          </span>
+          <input type="checkbox" role="switch" data-wallpaper-glass />
+        </label>
+        <p class="wallpaper-error" data-wallpaper-error hidden>${escapeHtml(t('wallpaperFailed'))}</p>
+        <input type="file" accept="image/*" data-wallpaper-file hidden />
+      </div>
+    </section>
     <section class="settings-list" aria-label="${escapeHtml(t('mutedCats'))}">
       <button class="settings-row" type="button" data-settings-action="muted-cats" aria-expanded="false">
         <span>
@@ -1418,6 +1462,8 @@ function renderMine() {
     mutedList.hidden = !mutedList.hidden;
     mutedToggle.setAttribute('aria-expanded', String(!mutedList.hidden));
   });
+
+  wireWallpaperSettings(elements.feed);
 
   elements.feed.querySelector('[data-settings-action="favorites"]').addEventListener('click', async () => {
     state.channel = 'favorites';
@@ -3500,6 +3546,194 @@ function effectiveTheme() {
   if (state.theme === 'dark') return 'dark';
   if (state.theme === 'light') return 'light';
   return themeMedia.matches ? 'dark' : 'light';
+}
+
+const wallpaperPresets = {
+  dawn: 'linear-gradient(160deg, #ffb48a 0%, #f58fb0 45%, #7e6fd0 100%)',
+  ocean: 'linear-gradient(170deg, #9fe3f0 0%, #4aa0d8 50%, #1f4e8c 100%)',
+  forest: 'linear-gradient(165deg, #cfe9b8 0%, #6fb98a 50%, #1f5e46 100%)',
+  lavender: 'linear-gradient(160deg, #e9ddff 0%, #b9a4ee 55%, #7d6bc4 100%)',
+  sand: 'linear-gradient(170deg, #fbf1dc 0%, #ecd2a0 55%, #c9a068 100%)',
+  night: 'linear-gradient(175deg, #1b2a52 0%, #0f1a38 55%, #070c1d 100%)',
+};
+
+function readSavedWallpaper() {
+  try {
+    const saved = JSON.parse(storage.getItem(storageKeys.wallpaper) || '{}');
+    const id = saved.id === 'custom' || wallpaperPresets[saved.id] ? saved.id : 'none';
+    return { id, glass: Boolean(saved.glass) };
+  } catch {
+    return { id: 'none', glass: false };
+  }
+}
+
+function saveWallpaper() {
+  storage.setItem(storageKeys.wallpaper, JSON.stringify(state.wallpaper));
+}
+
+function wallpaperBackground(id) {
+  if (id === 'custom') {
+    const image = storage.getItem(storageKeys.wallpaperImage);
+    return image ? `url("${image}")` : '';
+  }
+  return wallpaperPresets[id] || '';
+}
+
+function applyWallpaper() {
+  const root = document.documentElement;
+  let layer = document.getElementById('wallpaper');
+  const background = wallpaperBackground(state.wallpaper.id);
+  if (!background) {
+    layer?.remove();
+    delete root.dataset.wallpaper;
+    delete root.dataset.glass;
+    return;
+  }
+  if (!layer) {
+    layer = document.createElement('div');
+    layer.id = 'wallpaper';
+    layer.setAttribute('aria-hidden', 'true');
+    document.body.prepend(layer);
+  }
+  layer.style.backgroundImage = background;
+  root.dataset.wallpaper = 'on';
+  if (state.wallpaper.glass) root.dataset.glass = 'on';
+  else delete root.dataset.glass;
+}
+
+// Keep the stored photo small: it lives in this device's localStorage.
+function downscaleImage(file, maxSide = 1280) {
+  return new Promise((resolve, reject) => {
+    const url = URL.createObjectURL(file);
+    const image = new Image();
+    image.onload = () => {
+      const scale = Math.min(1, maxSide / Math.max(image.naturalWidth, image.naturalHeight));
+      const canvas = document.createElement('canvas');
+      canvas.width = Math.max(1, Math.round(image.naturalWidth * scale));
+      canvas.height = Math.max(1, Math.round(image.naturalHeight * scale));
+      canvas.getContext('2d').drawImage(image, 0, 0, canvas.width, canvas.height);
+      URL.revokeObjectURL(url);
+      resolve(canvas.toDataURL('image/jpeg', 0.78));
+    };
+    image.onerror = () => {
+      URL.revokeObjectURL(url);
+      reject(new Error('image-load-failed'));
+    };
+    image.src = url;
+  });
+}
+
+function wireWallpaperSettings(root) {
+  const toggle = root.querySelector('[data-settings-action="wallpaper"]');
+  const panel = root.querySelector('[data-wallpaper-panel]');
+  const grid = root.querySelector('[data-wallpaper-grid]');
+  const badge = root.querySelector('[data-wallpaper-badge]');
+  const glass = root.querySelector('[data-wallpaper-glass]');
+  const fileInput = root.querySelector('[data-wallpaper-file]');
+  const error = root.querySelector('[data-wallpaper-error]');
+  if (!toggle || !panel) return;
+
+  // idle -> actions (apply / delete) -> confirm (delete?) for the imported photo
+  let customState = 'idle';
+  const renderGrid = () => {
+    const hasCustom = Boolean(storage.getItem(storageKeys.wallpaperImage));
+    if (!hasCustom) customState = 'idle';
+    const swatch = (id, style, label) => `<button type="button" class="wallpaper-swatch${state.wallpaper.id === id ? ' is-selected' : ''}" data-wallpaper="${id}" aria-label="${escapeHtml(label)}" aria-pressed="${state.wallpaper.id === id}" style="${style}">${id === 'none' ? `<span>${escapeHtml(t('wallpaperNone'))}</span>` : ''}</button>`;
+    const customOverlay = customState === 'actions'
+      ? `<span class="wallpaper-actions"><button type="button" class="wallpaper-delete" data-wp-delete aria-label="${escapeHtml(t('wallpaperDelete'))}">×</button><button type="button" class="wallpaper-apply" data-wp-apply>${escapeHtml(t('wallpaperApply'))}</button></span>`
+      : customState === 'confirm'
+        ? `<span class="wallpaper-actions"><span class="wallpaper-ask">${escapeHtml(t('wallpaperDeleteAsk'))}</span><button type="button" class="wallpaper-apply" data-wp-cancel>${escapeHtml(t('wallpaperCancel'))}</button><button type="button" class="wallpaper-apply is-danger" data-wp-confirm>${escapeHtml(t('wallpaperDelete'))}</button></span>`
+        : '';
+    const custom = hasCustom
+      ? `<div class="wallpaper-swatch is-custom${state.wallpaper.id === 'custom' ? ' is-selected' : ''}" data-wallpaper-custom role="button" tabindex="0" aria-label="${escapeHtml(t('wallpaperPick'))}">${customOverlay}</div>`
+      : '';
+    grid.innerHTML = [
+      swatch('none', '', t('wallpaperNone')),
+      ...Object.keys(wallpaperPresets).map((id) => swatch(id, `background:${wallpaperPresets[id]}`, id)),
+      custom,
+      `<button type="button" class="wallpaper-swatch is-upload" data-wallpaper-upload aria-label="${escapeHtml(t('wallpaperPick'))}"><span>+ ${escapeHtml(t('wallpaperPick'))}</span></button>`,
+    ].join('');
+    // The photo is a data: URL, so set it from script instead of an inline style attribute.
+    const customSwatch = grid.querySelector('[data-wallpaper-custom]');
+    if (customSwatch) customSwatch.style.backgroundImage = wallpaperBackground('custom');
+    badge.textContent = state.wallpaper.id === 'none' ? (state.language === 'en' ? 'OFF' : '关') : (state.language === 'en' ? 'ON' : '开');
+    glass.checked = state.wallpaper.glass;
+  };
+  renderGrid();
+
+  toggle.addEventListener('click', () => {
+    panel.hidden = !panel.hidden;
+    toggle.setAttribute('aria-expanded', String(!panel.hidden));
+  });
+
+  grid.addEventListener('click', (event) => {
+    const target = event.target;
+    if (target.closest('[data-wallpaper-upload]')) {
+      fileInput.click();
+      return;
+    }
+    if (target.closest('[data-wp-apply]')) {
+      state.wallpaper.id = 'custom';
+      customState = 'idle';
+      saveWallpaper();
+      applyWallpaper();
+      renderGrid();
+      return;
+    }
+    if (target.closest('[data-wp-delete]')) {
+      customState = 'confirm';
+      renderGrid();
+      return;
+    }
+    if (target.closest('[data-wp-cancel]')) {
+      customState = 'actions';
+      renderGrid();
+      return;
+    }
+    if (target.closest('[data-wp-confirm]')) {
+      storage.setItem(storageKeys.wallpaperImage, '');
+      if (state.wallpaper.id === 'custom') state.wallpaper.id = 'none';
+      customState = 'idle';
+      saveWallpaper();
+      applyWallpaper();
+      renderGrid();
+      return;
+    }
+    if (target.closest('[data-wallpaper-custom]')) {
+      customState = customState === 'idle' ? 'actions' : 'idle';
+      renderGrid();
+      return;
+    }
+    const id = target.closest('[data-wallpaper]')?.dataset.wallpaper;
+    if (!id) return;
+    customState = 'idle';
+    state.wallpaper.id = id;
+    saveWallpaper();
+    applyWallpaper();
+    renderGrid();
+  });
+
+  glass.addEventListener('change', () => {
+    state.wallpaper.glass = glass.checked;
+    saveWallpaper();
+    applyWallpaper();
+  });
+
+  fileInput.addEventListener('change', async () => {
+    const file = fileInput.files?.[0];
+    fileInput.value = '';
+    if (!file) return;
+    error.hidden = true;
+    try {
+      storage.setItem(storageKeys.wallpaperImage, await downscaleImage(file));
+      state.wallpaper.id = 'custom';
+      saveWallpaper();
+      applyWallpaper();
+      renderGrid();
+    } catch {
+      error.hidden = false;
+    }
+  });
 }
 
 function applyTheme() {

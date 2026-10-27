@@ -2990,6 +2990,7 @@ html[data-channel="mine"] body {
 
 .bottom-nav .bottom-nav-item.is-active {
   background: transparent;
+}
 
 .muted-item span i {
   background: var(--sage);
@@ -3000,4 +3001,206 @@ html[data-channel="mine"] body {
   font-weight: 700;
   margin-left: 8px;
   padding: 2px 8px;
+}
+
+/* ---- 自定义壁纸：固定在最底层，不随页面滑动 ---- */
+#wallpaper {
+  background-position: center;
+  background-size: cover;
+  inset: 0;
+  pointer-events: none;
+  position: fixed;
+  z-index: -1;
+}
+
+#wallpaper::after {
+  background: rgba(255, 255, 255, 0.12);
+  content: "";
+  inset: 0;
+  position: absolute;
+}
+
+:root[data-theme="dark"] #wallpaper::after {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+html[data-wallpaper] body,
+html[data-wallpaper] .page-pane {
+  background: transparent;
+}
+
+/* header text sits straight on the photo, so give it a glass panel */
+html[data-wallpaper] .topbar {
+  -webkit-backdrop-filter: blur(18px);
+  backdrop-filter: blur(18px);
+  background: var(--glass);
+  border: 1px solid var(--glass-line);
+  border-radius: 22px;
+  padding: 12px 16px 14px;
+}
+
+html[data-wallpaper] .progress-card {
+  -webkit-backdrop-filter: blur(18px);
+  backdrop-filter: blur(18px);
+  background: var(--glass);
+}
+
+html[data-glass] .news-card:not(.is-hero),
+html[data-glass] .settings-list {
+  -webkit-backdrop-filter: blur(22px) saturate(1.4);
+  backdrop-filter: blur(22px) saturate(1.4);
+  background: color-mix(in srgb, var(--card) 62%, transparent);
+}
+
+.wallpaper-panel {
+  border-top: 1px solid var(--line);
+  padding: 14px 16px 6px;
+}
+
+.wallpaper-grid {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.wallpaper-swatch {
+  align-items: center;
+  appearance: none;
+  background: var(--inset);
+  border: 2px solid transparent;
+  border-radius: 14px;
+  color: var(--secondary);
+  cursor: pointer;
+  display: flex;
+  font: inherit;
+  font-size: 12px;
+  justify-content: center;
+  padding: 0;
+  aspect-ratio: 3 / 4;
+}
+
+.wallpaper-swatch.is-selected {
+  border-color: var(--acc);
+  box-shadow: 0 0 0 2px var(--card) inset;
+}
+
+.wallpaper-swatch.is-upload {
+  border: 1.5px dashed var(--muted);
+}
+
+.wallpaper-toggle {
+  align-items: center;
+  display: flex;
+  gap: 14px;
+  justify-content: space-between;
+  padding: 14px 0 10px;
+}
+
+.wallpaper-toggle strong {
+  display: block;
+  font-size: 15px;
+}
+
+.wallpaper-toggle em {
+  color: var(--muted);
+  display: block;
+  font-size: 12.5px;
+  font-style: normal;
+  line-height: 1.4;
+  margin-top: 2px;
+}
+
+.wallpaper-toggle input {
+  accent-color: var(--acc);
+  flex: none;
+  height: 22px;
+  width: 44px;
+}
+
+.wallpaper-error {
+  color: #d2554a;
+  font-size: 13px;
+  margin: 0 0 10px;
+}
+
+/* the solid fade under the nav would show as a colored band over a wallpaper */
+html[data-wallpaper] body::after {
+  display: none;
+}
+
+/* imported photo: tap to reveal apply / delete */
+.wallpaper-swatch.is-custom {
+  background-position: center;
+  background-size: cover;
+  cursor: pointer;
+  overflow: hidden;
+  position: relative;
+}
+
+.wallpaper-actions {
+  align-items: center;
+  background: rgba(0, 0, 0, 0.45);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  inset: 0;
+  justify-content: center;
+  padding: 8px;
+  position: absolute;
+}
+
+.wallpaper-actions button {
+  appearance: none;
+  border: 0;
+  cursor: pointer;
+  font: inherit;
+}
+
+.wallpaper-apply {
+  background: #ffffff;
+  border-radius: 999px;
+  color: #111111;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 6px 14px;
+}
+
+.wallpaper-apply.is-danger {
+  background: #d2554a;
+  color: #ffffff;
+}
+
+.wallpaper-delete {
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 50%;
+  color: #d2554a;
+  font-size: 18px;
+  height: 26px;
+  line-height: 1;
+  position: absolute;
+  right: 6px;
+  top: 6px;
+  width: 26px;
+}
+
+.wallpaper-ask {
+  color: #ffffff;
+  font-size: 12.5px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.wallpaper-actions:has(.wallpaper-ask) {
+  gap: 5px;
+  padding: 6px;
+}
+
+.wallpaper-actions:has(.wallpaper-ask) .wallpaper-apply {
+  font-size: 12px;
+  padding: 4px 12px;
+}
+
+.wallpaper-ask {
+  font-size: 12px;
+  line-height: 1.25;
 }
