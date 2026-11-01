@@ -1,56 +1,34 @@
-# Welcome to your Expo app 👋
+# DailyTen · 每日十条
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+**每天 10 条新闻，读完就结束。**
+**Ten stories a day. Then you're done.**
 
-## Get started
+👉 [打开 DailyTen / Open DailyTen](https://seaoceano.github.io/DailyTen/)
 
-1. Install dependencies
+---
 
-   ```bash
-   npm install
-   ```
+## 中文
 
-2. Start the app
+刷短视频、刷社交媒体，一不小心一两个小时就没了，信息看了一堆，却记不住几条。
 
-   ```bash
-   npx expo start
-   ```
+DailyTen 反过来：每天只挑 **10 条**真正值得知道的新闻，用大白话讲清楚发生了什么、跟你有什么关系。没有无限下拉，没有推荐算法拽着你往下刷。**大约 8 分钟读完，然后放下手机。**
 
-In the output, you'll find options to open the app in a
+- 📰 **两个版本**：综合版看天下大事，AI 版专看人工智能行业
+- 💬 **说人话**：一句话结论 + 三个关键事实，不绕弯子
+- 🎧 **能听**：每条都可以朗读，男声、女声任选，通勤做饭都能听
+- ✅ **有终点**：10 条读完就是读完了，今天的功课做完了
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+## English
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+Scroll a feed for "just a minute" and an hour is gone, and you barely remember what you saw.
 
-## Get a fresh project
+DailyTen does the opposite. Every day it picks **10 news stories** worth knowing and explains each one in plain language: what happened and why it matters to you. No infinite feed, no algorithm pulling you down the rabbit hole. **About 8 minutes, then put your phone down.**
 
-When you're ready, run:
+- 📰 **Two editions**: a daily general edition, and one just for the AI industry
+- 💬 **Plain language**: one-line takeaway plus three key facts, no fluff
+- 🎧 **Listen instead**: every story can be read aloud, in a male or female voice
+- ✅ **A real finish line**: when you've read ten, you're done for the day
 
-```bash
-npm run reset-project
-```
+---
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
-
-### Other setup steps
-
-- To set up ESLint for linting, run `npx expo lint`, or follow our guide on ["Using ESLint and Prettier"](https://docs.expo.dev/guides/using-eslint/)
-- If you'd like to set up unit testing, follow our guide on ["Unit Testing with Jest"](https://docs.expo.dev/develop/unit-testing/)
-- Learn more about the TypeScript setup in this template in our guide on ["Using TypeScript"](https://docs.expo.dev/guides/typescript/)
-
-## Learn more
-
-To learn more about developing your project with Expo, look at the following resources:
-
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+<sub>The live site lives in [`web-prototype/`](web-prototype/) (plain static HTML/CSS/JS, deployed to GitHub Pages).</sub>
