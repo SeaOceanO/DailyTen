@@ -1,24 +1,16 @@
-# DailyTen · 每日十条
+<div align="center">
 
-**每天 10 条新闻，读完就结束。**
+# DailyTen
+
+**English** | [简体中文](README.zh-CN.md)
+
 **Ten stories a day. Then you're done.**
 
-👉 [打开 DailyTen / Open DailyTen](https://seaoceano.github.io/DailyTen/)
+👉 [Open DailyTen](https://seaoceano.github.io/DailyTen/)
+
+</div>
 
 ---
-
-## 中文
-
-刷短视频、刷社交媒体，一不小心一两个小时就没了，信息看了一堆，却记不住几条。
-
-DailyTen 反过来：每天只挑 **10 条**真正值得知道的新闻，用大白话讲清楚发生了什么、跟你有什么关系。没有无限下拉，没有推荐算法拽着你往下刷。**大约 8 分钟读完，然后放下手机。**
-
-- 📰 **两个版本**：综合版看天下大事，AI 版专看人工智能行业
-- 💬 **说人话**：一句话结论 + 三个关键事实，不绕弯子
-- 🎧 **能听**：每条都可以朗读，男声、女声任选，通勤做饭都能听
-- ✅ **有终点**：10 条读完就是读完了，今天的功课做完了
-
-## English
 
 Scroll a feed for "just a minute" and an hour is gone, and you barely remember what you saw.
 
